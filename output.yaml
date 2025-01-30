@@ -1,0 +1,279 @@
+nct_id: NCT04589845
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: Entrectinib
+  - drug_name: Entrectinib
+  - drug_name: Alectinib
+  - drug_name: Atezolizumab
+  - drug_name: Ipatasertib
+  - drug_name: Trastuzumab emtansine
+  - drug_name: Idasanutlin
+  - drug_name: Inavolisib
+  - drug_name: Belvarafenib
+  - drug_name: Pralsetinib
+  - drug_name: GDC-6036
+  - drug_name: Camonsertib
+long_title: Tumor-Agnostic Precision Immunooncology and Somatic Targeting Rational
+  for You (TAPISTRY) Phase II Platform Trial
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: ''
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: ''
+principal_investigator: ''
+principal_investigator_institution: Hoffmann-La Roche
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 920
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- ''
+- '* Histologically or cytologically confirmed diagnosis of advanced and unresectable
+  or metastatic solid malignancy'
+- '* Measurable disease as defined by Response Evaluation Criteria in Solid Tumors,
+  Version 1.1 (RECIST v1.1), Response Assessment in Neuro-Oncology (RANO) criteria,
+  or International Neuroblastoma Response Criteria (INRC)'
+- '* Performance status as follows: Participantss aged \>= 18 years: Eastern Cooperative
+  Oncology Group (ECOG) Performance Status 0-2; Participantss aged 16 to \< 18 years:
+  Karnofsky score \>= 50%; Participants aged \< 16 years: Lansky score \>= 50%'
+- '* For participants aged \>= 18 and \<18 years: adequate hematologic and end-organ
+  function'
+- '* Disease progression on prior treatment, or previously untreated disease with
+  no available acceptable treatment'
+- '* Adequate recovery from most recent systemic or local treatment for cancer'
+- '* Life expectancy \>= 8 weeks'
+- '* Ability to comply with the study protocol, in the investigator''s judgment'
+- '* For female participants of childbearing potential: Negative serum pregnancy test
+  \<= 14 days prior to initiating study treatment; agreement to remain abstinent or
+  use single or combined contraception methods that result in a failure rate of \<
+  1% per year for the period defined in the cohort-specific inclusion criteria; and
+  agreement to refrain from donating eggs during the same period'
+- '* For male participants: Willingness to remain abstinent or use acceptable methods
+  of contraception as defined in the cohort-specific inclusion criteria'
+- '* In addition to the general inclusion criteria above, participants must meet all
+  of the cohort-specific inclusion criteria for the respective cohort'
+- ''
+- 'Exclude - Exclusion Criteria:'
+- 'Exclude - '
+- Exclude - * Current participation or enrollment in another therapeutic clinical
+  trial
+- Exclude - * Any anticancer treatment within 2 weeks or 5 half-lives prior to start
+  of study treatment
+- Exclude - * Whole brain radiotherapy within 14 days prior to start of study treatment
+- Exclude - * Stereotactic radiosurgery within 7 days prior to start of study treatment
+- Exclude - * Pregnant or breastfeeding, or intending to become pregnant during the
+  study
+- Exclude - * History of or concurrent serious medical condition or abnormality in
+  clinical laboratory tests that, in the investigator's judgment, precludes the participant's
+  safe participation in and completion of the study or confounds the ability to interpret
+  data from the study
+- Exclude - * Incomplete recovery from any surgery prior to the start of study treatment
+  that would interfere with the determination of safety or efficacy of study treatment
+- Exclude - * Significant cardiovascular disease, such as New York Heart Association
+  cardiac disease (Class II or higher), myocardial infarction, or cerebrovascular
+  accident within 3 months prior to enrollment, unstable arrhythmias, or unstable
+  angina
+- Exclude - * History of another active cancer within 5 years prior to screening that
+  may interfere with the determination of safety or efficacy of study treatment with
+  respect to the qualifying solid tumor malignancy
+- Exclude - * In addition to the general exclusion criteria above, in order to be
+  enrolled in a treatment cohort of the study, participants must not meet any of the
+  cohort-specific exclusion criteria
+short_title: Tumor-Agnostic Precision Immuno-Oncology and Somatic Targeting Rational
+  for You (TAPISTRY) Platform Study
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: Hoffmann-La Roche
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: TAPISTRY is a Phase II, global, multicenter, open-label, multi-cohort study
+  designed to evaluate the safety and efficacy of targeted therapies or immunotherapy
+  as single agents or in rational, specified combinations in participants with unresectable,
+  locally advanced or metastatic solid tumors determined to harbor specific oncogenic
+  genomic alterations or who are tumor mutational burden (TMB)-high as identified
+  by a validated next-generation sequencing (NGS) assay. Participants with solid tumors
+  will be treated with a drug or drug regimen tailored to their NGS assay results
+  at screening. Participants will be assigned to the appropriate cohort based on their
+  genetic alteration(s). Treatment will be assigned on the basis of relevant oncogenotype,
+  will have cohort-specific inclusion/exclusion criteria, and, unless otherwise specified,
+  will continue until disease progression, loss of clinical benefit, unacceptable
+  toxicity, participant or physician decision to discontinue, or death, whichever
+  occurs first.
+treatment_list:
+  step:
+  - step_code: '1'
+    step_type: Registration
+    step_internal_id: 1111
+    arm:
+    - arm_code: Arm A
+      arm_internal_id: 1111
+      arm_description: ''
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: ''
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: Arm B
+      arm_internal_id: 2222
+      arm_description: ''
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: ''
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort A: ROS1 Fusion-positive tumors (excluding NSCLC)'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Entrectinib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Entrectinib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort B: NTRK1/2/3 fusion-positive tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Entrectinib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Entrectinib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort C: ALK fusion-positive tumors (excluding NSCLC)'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Alectinib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Alectinib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort D: TMB-high tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Atezolizumab
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Atezolizumab'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort E: AKT1/2/3 mutant-positive tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Ipatasertib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Ipatasertib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort F: HER2 mutant-positive tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Trastuzumab emtansine
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Trastuzumab emtansine'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort G: MDM2-amplified, TP53 wild-type tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Idasanutlin
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Idasanutlin'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort H: PIK3CA multiple mutant-positive tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Inavolisib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Inavolisib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort I: BRAF class II mutant or fusion-positive tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Belvarafenib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Belvarafenib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort J: BRAF class III mutant-positive tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Belvarafenib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Belvarafenib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort K: RET fusion-positive tumors (excluding NSCLC)'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Pralsetinib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Pralsetinib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort L: KRAS G12C-positive tumors (excluding NSCLC and CRC)'
+      arm_internal_id: 1111
+      arm_description: Participants will receive GDC-6036
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: GDC-6036'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort M: ATM Loss of Function tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Camonsertib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Camonsertib'
+        level_internal_id: 1
+        level_suspended: N
+    - arm_code: 'Cohort N: SETD2 Loss of Function tumors'
+      arm_internal_id: 1111
+      arm_description: Participants will receive Camonsertib
+      arm_suspended: N
+      dose_level:
+      - level_code: '1'
+        level_description: 'Drug: Camonsertib'
+        level_internal_id: 1
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

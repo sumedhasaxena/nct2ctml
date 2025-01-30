@@ -1,8 +1,8 @@
-from clinical_trials_gov import get_nct_data
-from trial_data_formatter import format_trial_data, check_if_recruiting_in_HK
+from clinical_trials_gov import get_nct_data, map_clinical_trial_data
+from trial_data_formatter import format_trial_data, check_if_recruiting_in_HK, convert_to_yaml
 
 def main():
-    nct_id = "NCT06225765"
+    nct_id = "NCT04589845"
     res = get_nct_data(nct_id)
 
     #check if recruiting in HK
@@ -13,7 +13,11 @@ def main():
     
     #shorten trial data dictionary
     trial_data = format_trial_data(res)
-    print(trial_data)
+    #print(trial_data)
+
+    mapped_data = map_clinical_trial_data(trial_data)
+    convert_to_yaml(mapped_data)
+
 
     #map json fields to yaml schema
 

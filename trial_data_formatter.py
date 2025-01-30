@@ -1,4 +1,5 @@
 import json
+import yaml
 
 def format_trial_data(trial_data: dict):
     del trial_data["protocolSection"]["statusModule"]
@@ -20,3 +21,10 @@ def check_if_recruiting_in_HK(trial_data: dict) -> bool:
     else:
         return False
 
+def convert_to_yaml(mapped_data):
+    yaml_data = yaml.dump(mapped_data, sort_keys=False)
+    print(yaml_data)
+    print(type(mapped_data))
+
+    with open('output.yaml', 'w') as file:
+        file.write(yaml_data)
