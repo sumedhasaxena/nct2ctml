@@ -14,7 +14,7 @@ def get_trial_schema():
     'management_group': [
       {
         'is_primary': 'Y',
-        'management_group_name': ''
+        'management_group_name': 'Group1'
       }
     ]
   },
@@ -56,40 +56,8 @@ def get_trial_schema():
   'summary': '',
   'treatment_list': {
     'step': [
-      {
-        'step_code': '1',
-        'step_type': 'Registration',
-        'step_internal_id': 1111,
-        'arm': [
-          {
-            'arm_code': 'Arm A',
-            'arm_internal_id': 1111,
-            'arm_description': '',
-            'arm_suspended': 'N',
-            'dose_level': [
-              {
-                'level_code': '1',
-                'level_description': '',
-                'level_internal_id': 1,
-                'level_suspended': 'N'
-              }
-            ]
-          },
-          {
-            'arm_code': 'Arm B',
-            'arm_internal_id': 2222,
-            'arm_description': '',
-            'arm_suspended': 'N',
-            'dose_level': [
-              {
-                'level_code': '1',
-                'level_description': '',
-                'level_internal_id': 1,
-                'level_suspended': 'N'
-              }
-            ]
-          }
-        ],
+      {        
+        'arm': [],
         'match': [
           {
             'and': [

@@ -21,10 +21,16 @@ def check_if_recruiting_in_HK(trial_data: dict) -> bool:
     else:
         return False
 
-def convert_to_yaml(mapped_data):
-    yaml_data = yaml.dump(mapped_data, sort_keys=False)
-    print(yaml_data)
-    print(type(mapped_data))
+def save_to_file(mapped_data, format):
+    nct_id = mapped_data["nct_id"]
+    if format == "yaml":
+        yaml_data = yaml.dump(mapped_data, sort_keys=False)
+        print(yaml_data)
+        print(type(mapped_data))
 
-    with open('output.yaml', 'w') as file:
-        file.write(yaml_data)
+        with open(f'{nct_id}.yaml', 'w') as yaml_file:
+            yaml_file.write(yaml_data)
+    elif format == "json":
+        with open(f'{nct_id}.json', "w") as json_file: 
+            json.dump(mapped_data, json_file)
+

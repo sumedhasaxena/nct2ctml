@@ -1,5 +1,5 @@
 from clinical_trials_gov import get_nct_data, map_clinical_trial_data
-from trial_data_formatter import format_trial_data, check_if_recruiting_in_HK, convert_to_yaml
+from trial_data_formatter import format_trial_data, check_if_recruiting_in_HK, save_to_file
 
 def main():
     nct_id = "NCT04589845"
@@ -16,7 +16,9 @@ def main():
     #print(trial_data)
 
     mapped_data = map_clinical_trial_data(trial_data)
-    convert_to_yaml(mapped_data)
+    save_to_file(mapped_data, 'yaml')
+    save_to_file(mapped_data, 'json')
+    
 
 
     #map json fields to yaml schema
