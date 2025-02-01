@@ -4,6 +4,35 @@ import clinical_trial_schema
 
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
 
+def get_all_studies():
+    ALL_STUDIES_ENDPOINT = "studies"
+    condition = "cancer"
+    location = "Hong Kong"
+    status = "RECRUITING"
+
+    params = {'query.cond': condition,
+              'query.locn': location,
+              'filter.overallStatus' : status,
+              'pageSize': 50}    
+    nctIds = []
+    while True:        
+        endpoint_url = f'{urllib.parse.urljoin(API_BASE_URL, ALL_STUDIES_ENDPOINT)}?{urllib.parse.urlencode(params)}'
+        print(endpoint_url)
+        response = requests.get(endpoint_url)
+        response.raise_for_status()
+
+        json_response = response.json()
+        for study in json_response['studies']:
+            nctIds.append(study['protocolSection']['identificationModule']['nctId'])
+        if 'nextPageToken' not in json_response:
+            break
+        nextPageToken = json_response['nextPageToken']
+        if not nextPageToken:
+            break
+        params['pageToken'] = nextPageToken
+    return nctIds
+
+
 def get_nct_data(nct_id:str):
     NCT_STUDY_ENDPOINT = "studies/{0}".format(nct_id)
     endpoint_url = urllib.parse.urljoin(API_BASE_URL, NCT_STUDY_ENDPOINT)
@@ -17,7 +46,7 @@ def map_clinical_trial_data(trial_data) -> dict:
     trial_schema['nct_id'] = trial_data['protocolSection']['identificationModule']['nctId']
     trial_schema['long_title'] = trial_data['protocolSection']['identificationModule']['officialTitle']
     trial_schema['principal_investigator_institution'] = trial_data['protocolSection']['identificationModule']['organization']['fullName']
-    
+
     phases = trial_data['protocolSection']['designModule']['phases']
     trial_schema['phase'] = phases[0] if len(phases) > 0 else ''
     trial_schema['short_title'] = trial_data['protocolSection']['identificationModule']['briefTitle']
