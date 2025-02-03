@@ -4,30 +4,29 @@ cancer_center_accrual_goal_upper: 0
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: Entrectinib
-  - drug_name: Entrectinib
-  - drug_name: Alectinib
-  - drug_name: Atezolizumab
-  - drug_name: Ipatasertib
-  - drug_name: Trastuzumab emtansine
-  - drug_name: Idasanutlin
-  - drug_name: Inavolisib
-  - drug_name: Belvarafenib
-  - drug_name: Pralsetinib
-  - drug_name: GDC-6036
-  - drug_name: Camonsertib
+  - drug_name: 'Drug: Ipatasertib'
+  - drug_name: 'Drug: Alectinib'
+  - drug_name: 'Drug: Idasanutlin'
+  - drug_name: 'Drug: Inavolisib'
+  - drug_name: 'Drug: Belvarafenib'
+  - drug_name: 'Drug: Camonsertib'
+  - drug_name: 'Drug: Pralsetinib'
+  - drug_name: 'Drug: Atezolizumab'
+  - drug_name: 'Drug: GDC-6036'
+  - drug_name: 'Drug: Entrectinib'
+  - drug_name: 'Drug: Trastuzumab emtansine'
 long_title: Tumor-Agnostic Precision Immunooncology and Somatic Targeting Rational
   for You (TAPISTRY) Phase II Platform Trial
 management_group_list:
   management_group:
   - is_primary: Y
-    management_group_name: ''
+    management_group_name: Group1
 oncology_group_list:
   oncology_group:
   - group_name: Group1
     is_primary: N
-phase: ''
-principal_investigator: ''
+phase: PHASE2
+principal_investigator: Clinical Trials
 principal_investigator_institution: Hoffmann-La Roche
 program_area_list:
   program_area:
@@ -39,7 +38,6 @@ protocol_target_accrual: 920
 protocol_type: INTERVENTIONAL
 prior_treatment_requirements:
 - 'Inclusion Criteria:'
-- ''
 - '* Histologically or cytologically confirmed diagnosis of advanced and unresectable
   or metastatic solid malignancy'
 - '* Measurable disease as defined by Response Evaluation Criteria in Solid Tumors,
@@ -64,9 +62,7 @@ prior_treatment_requirements:
   of contraception as defined in the cohort-specific inclusion criteria'
 - '* In addition to the general inclusion criteria above, participants must meet all
   of the cohort-specific inclusion criteria for the respective cohort'
-- ''
 - 'Exclude - Exclusion Criteria:'
-- 'Exclude - '
 - Exclude - * Current participation or enrollment in another therapeutic clinical
   trial
 - Exclude - * Any anticancer treatment within 2 weeks or 5 half-lives prior to start
@@ -119,153 +115,190 @@ summary: TAPISTRY is a Phase II, global, multicenter, open-label, multi-cohort s
   occurs first.
 treatment_list:
   step:
-  - step_code: '1'
-    step_type: Registration
-    step_internal_id: 1111
-    arm:
-    - arm_code: Arm A
-      arm_internal_id: 1111
-      arm_description: ''
-      arm_suspended: N
-      dose_level:
-      - level_code: '1'
-        level_description: ''
-        level_internal_id: 1
-        level_suspended: N
-    - arm_code: Arm B
-      arm_internal_id: 2222
-      arm_description: ''
-      arm_suspended: N
-      dose_level:
-      - level_code: '1'
-        level_description: ''
-        level_internal_id: 1
-        level_suspended: N
+  - arm:
     - arm_code: 'Cohort A: ROS1 Fusion-positive tumors (excluding NSCLC)'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Entrectinib
+      arm_internal_id: 0
+      arm_description: Participants with metastatic or advanced solid tumors, with
+        the exception of NSCLC will receive entrectinib once daily in repeated 28-day
+        cycles at a dose of 600 milligram per day (mg/day) for adults and pediatric
+        participants with a body surface area (BSA) \>/= 1.51 squaremeter (m2). The
+        total dose of daily entrectinib administration for pediatric participants
+        with BSA\<1.51 m2 will be lower.
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Entrectinib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort B: NTRK1/2/3 fusion-positive tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Entrectinib
+      arm_internal_id: 1
+      arm_description: Participants with metastatic or advanced solid tumors will
+        receive entrectinib once daily in repeated 28-day cycles at a dose of 600
+        mg/day for adults and pediatric participants with a BSA \>/= 1.51 m2. The
+        total dose of daily entrectinib administration for pediatric participants
+        with BSA\<1.51 m2 will be lower.
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Entrectinib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort C: ALK fusion-positive tumors (excluding NSCLC)'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Alectinib
+      arm_internal_id: 2
+      arm_description: Participants with metastatic or advanced solid tumors, with
+        the exception of NSCLC, will receive alectinib at a dosage of 600 mg orally
+        twice a day (BID), taken with food, in repeated 28-day cycles.
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Alectinib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort D: TMB-high tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Atezolizumab
+      arm_internal_id: 3
+      arm_description: 'Participants with metastatic or advanced solid tumors will
+        receive atezolizumab intravenously (IV) at a fixed dose for participants aged
+        \>/= 18 years, and 15 mg/kg (maximum 1200 mg) for participants aged \< 18
+        years on Day 1 of each 21-day cycle.
+
+
+        Note: Cohort D has been closed for enrollment'
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Atezolizumab'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort E: AKT1/2/3 mutant-positive tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Ipatasertib
+      arm_internal_id: 4
+      arm_description: 'Participants with metastatic or advanced solid tumors will
+        receive ipatasertib orally once daily (QD) at the starting dose of 400 mg
+        in repeated 28-day cycles until the participant experiences disease progression,
+        intolerable toxicity, or withdraws consent. For participants 12-17 years of
+        age, ipatasertib will be administered at the starting dose of 200 mg for participants
+        \<35 kg, 300 mg for participants \>/= 35 and \<45 kg, 400 mg for those \>/=45
+        kg orally QD in repeated 28-day cycles until the participant experiences disease
+        progression, intolerable toxicity, or withdraws consent.
+
+
+        Note: Cohort E has been closed for enrollment'
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Ipatasertib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort F: HER2 mutant-positive tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Trastuzumab emtansine
+      arm_internal_id: 5
+      arm_description: 'Participants with metastatic or advanced solid tumors will
+        receive trastuzumab emtansine IV at a dose of 3.6 mg/kg every 21 days.
+
+
+        Note: Cohort F has been closed for enrollment'
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Trastuzumab emtansine'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort G: MDM2-amplified, TP53 wild-type tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Idasanutlin
+      arm_internal_id: 6
+      arm_description: 'Participants with metastatic or advanced solid tumors will
+        receive idasanutlin at a dose of 250 mg orally QD on Days 1-5 of each 28-day
+        cycle.
+
+
+        Note: Cohort G has been closed for enrollment'
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Idasanutlin'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort H: PIK3CA multiple mutant-positive tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Inavolisib
+      arm_internal_id: 7
+      arm_description: 'Participants with metastatic or advanced solid tumors will
+        receive GDC-0077 QD at a starting dose of 9 mg by mouth (PO) in repeated 28-day
+        cycles.
+
+
+        Note: Cohort H has been closed for enrollment'
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Inavolisib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort I: BRAF class II mutant or fusion-positive tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Belvarafenib
+      arm_internal_id: 8
+      arm_description: "Participants with BRAF class II mutant/fusion-positive tumors\
+        \ (adults and adolescents \u2265 40 kg) will receive 400 mg belvarafenib by\
+        \ mouth (PO) BID (twice a day) with adequate water (more than 200 mL). One\
+        \ cycle consists of 28 days. Administration of belvarafenib should occur BID\
+        \ on every day of each 28-day cycle.\n\nNote: Cohort I has been closed for\
+        \ enrollment"
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Belvarafenib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort J: BRAF class III mutant-positive tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Belvarafenib
+      arm_internal_id: 9
+      arm_description: "Participants with BRAF class III mutant-positive tumors(adults\
+        \ and adolescents \u2265 40 kg) will receive 400 mg belvarafenib by mouth\
+        \ (PO) BID (twice a day) with adequate water (more than 200 mL). One cycle\
+        \ consists of 28 days. Administration of belvarafenib should occur BID on\
+        \ every day of each 28-day cycle.\n\nNote: Cohort J has been closed for enrollment"
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Belvarafenib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort K: RET fusion-positive tumors (excluding NSCLC)'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Pralsetinib
+      arm_internal_id: 10
+      arm_description: "Participants with RET fusion-positive tumors will self-administer\
+        \ Pralsetinib orally at home (except on clinic days) on a continuous daily\
+        \ dosing regimen at a dose of 400 mg/day (four 100-mg capsules per day) for\
+        \ adult and pediatric patients \u2265 12 and \\< 18 years of age. A treatment\
+        \ cycle consists of 4 weeks (28 days).\n\nNote: Cohort K has been closed for\
+        \ enrollment"
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Pralsetinib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort L: KRAS G12C-positive tumors (excluding NSCLC and CRC)'
-      arm_internal_id: 1111
-      arm_description: Participants will receive GDC-6036
+      arm_internal_id: 11
+      arm_description: Participants with KRAS G12C-positive tumors will self-administer
+        GDC-6036 orally at home (except on clinic days).
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: GDC-6036'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort M: ATM Loss of Function tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Camonsertib
+      arm_internal_id: 12
+      arm_description: Participants with ATM Loss of Function tumors will self-administer
+        Camonsertib orally at home (except on clinic days).
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Camonsertib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     - arm_code: 'Cohort N: SETD2 Loss of Function tumors'
-      arm_internal_id: 1111
-      arm_description: Participants will receive Camonsertib
+      arm_internal_id: 13
+      arm_description: Participants with SETD2 Loss of Function tumors will self-administer
+        Camonsertib orally at home (except on clinic days).
       arm_suspended: N
       dose_level:
-      - level_code: '1'
+      - level_code: '0'
         level_description: 'Drug: Camonsertib'
-        level_internal_id: 1
+        level_internal_id: 0
         level_suspended: N
     match:
     - and:

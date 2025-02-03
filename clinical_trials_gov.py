@@ -1,10 +1,26 @@
+"""
+This script contains methods that deal with extraction and manpipulation
+of data from clinicaltrials.gov
+"""
+
 import requests
 import urllib.parse
 import clinical_trial_schema
 
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
 
+
 def get_all_studies():
+    """
+    Queries https://clinicaltrials.gov/api to get all studies filtered by params specified below.
+    Extracts the NCT_ID from each study
+
+    Returns
+    -------
+    nctIds: list
+        list of NCT_IDS
+    """
+
     ALL_STUDIES_ENDPOINT = "studies"
     condition = "cancer"
     location = "Hong Kong"
@@ -32,8 +48,15 @@ def get_all_studies():
         params['pageToken'] = nextPageToken
     return nctIds
 
-
 def get_nct_data(nct_id:str):
+    """
+    Queries a single study with eteh nct_id param
+
+    Returns
+    -------
+    JSON response body for the queried trial
+    """
+
     NCT_STUDY_ENDPOINT = "studies/{0}".format(nct_id)
     endpoint_url = urllib.parse.urljoin(API_BASE_URL, NCT_STUDY_ENDPOINT)
     response = requests.get(endpoint_url)
@@ -41,6 +64,19 @@ def get_nct_data(nct_id:str):
     return response.json()
 
 def map_clinical_trial_data(trial_data) -> dict:
+    """
+    Logic to map the fields from https://clinicaltrials.gov/ API response to the clinical trial schema required by matchminer
+    Parameters
+    ----------
+    trial_data: dict
+        Dictionary containing the response from https://clinicaltrials.gov/ API for a particular trial
+
+    Returns
+    -------
+    trial_schema: dict
+        Dictionary containing the keys and values for a trial as per the clinical trial schema for matchminer
+    """
+
     trial_schema = clinical_trial_schema.get_trial_schema()
 
     trial_schema['nct_id'] = trial_data['protocolSection']['identificationModule']['nctId']
@@ -100,6 +136,17 @@ def map_clinical_trial_data(trial_data) -> dict:
     return trial_schema
 
 def map_prior_treatment_requirements(trial_schema, trial_data):
+    """
+    Special logic to map the inclusion and exclusion criteria, along with prefixing the exclusion criteria with 'Exclude -'
+    Updates the incoming trial_schema to add 'prior_treatment_requirements' key
+
+    Parameters
+    ----------
+    trial_schema: dict
+        Dictionary containing the keys and values for a trial as per the clinical trial schema for matchminer
+    trial_data: dict
+        Dictionary containing the response from https://clinicaltrials.gov/ API for a particular trial
+    """
     eligibility_criteria = trial_data['protocolSection']['eligibilityModule']['eligibilityCriteria']
     lines = eligibility_criteria.split('\n')
     
