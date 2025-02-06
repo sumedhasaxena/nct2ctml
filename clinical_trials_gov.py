@@ -6,6 +6,7 @@ of data from clinicaltrials.gov
 import requests
 import urllib.parse
 import clinical_trial_schema
+from trial_data_formatter import check_if_recruiting_in_HK, is_study_interventional
 
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
 
@@ -22,15 +23,26 @@ def get_all_studies():
     """
 
     ALL_STUDIES_ENDPOINT = "studies"
+
+    # filters
     condition = "cancer"
     location = "Hong Kong"
     status = "RECRUITING"
+    study_type = "AREA[StudyType]INTERVENTIONAL"
+
+    # fields to return
+    fields_to_return = "NCTId|ConditionsModule|StatusModule|ContactsLocationsModule|StudyType"
+
+    sortBy = "LastUpdatePostDate"
 
     params = {'query.cond': condition,
               'query.locn': location,
               'filter.overallStatus' : status,
-              'pageSize': 50}    
-    nctIds = []
+              'query.term': study_type,
+              'fields': fields_to_return,
+              'pageSize': 50,
+              'sort': sortBy}    
+    nct_data = []
     while True:        
         endpoint_url = f'{urllib.parse.urljoin(API_BASE_URL, ALL_STUDIES_ENDPOINT)}?{urllib.parse.urlencode(params)}'
         print(endpoint_url)
@@ -39,18 +51,22 @@ def get_all_studies():
 
         json_response = response.json()
         for study in json_response['studies']:
-            nctIds.append(study['protocolSection']['identificationModule']['nctId'])
+            if check_if_recruiting_in_HK(study):
+                nctid = study['protocolSection']['identificationModule']['nctId']
+                conditions = ','.join(study['protocolSection']['conditionsModule']['conditions'])
+                lastUpdatedDate = study['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
+                nct_data.append((nctid, conditions, lastUpdatedDate))
         if 'nextPageToken' not in json_response:
             break
         nextPageToken = json_response['nextPageToken']
         if not nextPageToken:
             break
         params['pageToken'] = nextPageToken
-    return nctIds
+    return nct_data
 
 def get_nct_data(nct_id:str):
     """
-    Queries a single study with eteh nct_id param
+    Queries a single study with the nct_id param
 
     Returns
     -------
@@ -110,7 +126,7 @@ def map_clinical_trial_data(trial_data) -> dict:
     for trial_data_arm in trial_data['protocolSection']['armsInterventionsModule']['armGroups']:
         schema_arm = {
                 'arm_code': trial_data_arm['label'],
-                'arm_internal_id': arm_internal_id,  # You might want to adjust this
+                'arm_internal_id': arm_internal_id,
                 'arm_description': trial_data_arm['description'],
                 'arm_suspended': 'N',
                 'dose_level': []            

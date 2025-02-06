@@ -8,12 +8,12 @@ import clinical_trials_gov
 import csv
 
 def main():
-    all_nctIds = clinical_trials_gov.get_all_studies()
+    nct_data = clinical_trials_gov.get_all_studies()
 
-    with open('results/nct_ids.csv', mode='w', newline='') as file:
+    with open('results/nct_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
-        for nct_id in all_nctIds:
-            writer.writerow([nct_id])
+        writer.writerow(['NCT ID', 'Conditions', 'Last Updated Date'])
+        writer.writerows(nct_data)
 
 
 if __name__ == "__main__":

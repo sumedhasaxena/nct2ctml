@@ -34,6 +34,13 @@ def check_if_recruiting_in_HK(trial_data: dict) -> bool:
         return True
     else:
         return False
+    
+def is_study_interventional(trial_data: dict) -> bool:
+    studyType = trial_data["protocolSection"]["designModule"]["studyType"]    
+    if studyType.lower() == "interventional":
+        return True
+    else:
+        return False
 
 def save_to_file(mapped_data, format):
     nct_id = mapped_data["nct_id"]
