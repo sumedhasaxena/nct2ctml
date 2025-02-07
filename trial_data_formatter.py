@@ -16,11 +16,12 @@ def remove_unused_keys(trial_data: dict):
     trial_data: dict
         Shortened dictionary 
     """
-    del trial_data["protocolSection"]["statusModule"]
-    del trial_data["protocolSection"]["oversightModule"]
-    del trial_data["protocolSection"]["contactsLocationsModule"]["locations"]
-    del trial_data["protocolSection"]["ipdSharingStatementModule"]
-    del trial_data["derivedSection"]
+    trial_data["protocolSection"].pop("statusModule", None)
+    trial_data["protocolSection"].pop("oversightModule", None)
+    trial_data["protocolSection"]["contactsLocationsModule"].pop("locations", None)
+    trial_data["protocolSection"].pop("outcomesModule", None)
+    trial_data["protocolSection"].pop("ipdSharingStatementModule", None)
+    trial_data.pop("derivedSection", None)
     return trial_data
 
 def check_if_recruiting_in_HK(trial_data: dict) -> bool:
@@ -41,16 +42,31 @@ def is_study_interventional(trial_data: dict) -> bool:
         return True
     else:
         return False
+        
+def read_from_file(path: str, file_name :str, format:str) -> dict:    
+    if format == "json":
+        with open(f'{path}/{file_name}.json', 'r') as json_file:
+            data = json.load(json_file)
+            return data
+    else:
+        print('No implementation for formats other than json')
 
-def save_to_file(mapped_data, format):
-    nct_id = mapped_data["nct_id"]
+
+def save_to_file(data: dict, path: str, file_name :str, format:str):
+    
     if format == "yaml":
-        yaml_data = yaml.dump(mapped_data, sort_keys=False)
+        yaml_data = yaml.dump(data, sort_keys=False)
         print(yaml_data)
 
-        with open(f'results/{nct_id}.yaml', 'w') as yaml_file:
+        with open(f'{path}/{file_name}.yaml', 'w') as yaml_file:
             yaml_file.write(yaml_data)
     elif format == "json":
-        with open(f'results/{nct_id}.json', "w") as json_file: 
-            json.dump(mapped_data, json_file)
+        with open(f'{path}/{file_name}.json', "w") as json_file: 
+            json.dump(data, json_file)
+
+def safe_get(trial_data, keys):
+    for key in keys:
+        trial_data = trial_data.get(key, {})
+    return trial_data
+
 

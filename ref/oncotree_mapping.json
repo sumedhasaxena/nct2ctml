@@ -1,0 +1,5331 @@
+{
+  "ALK Positive Large B-Cell Lymphoma": [
+    "ALK Positive Large B-Cell Lymphoma"
+  ],
+  "AML": [
+    "AML"
+  ],
+  "AML with BCR-ABL1": [
+    "AML with BCR-ABL1"
+  ],
+  "AML with Biallelic Mutations of CEBPA": [
+    "AML with Biallelic Mutations of CEBPA"
+  ],
+  "AML with Maturation": [
+    "AML with Maturation"
+  ],
+  "AML with Minimal Differentiation": [
+    "AML with Minimal Differentiation"
+  ],
+  "AML with Mutated NPM1": [
+    "AML with Mutated NPM1"
+  ],
+  "AML with Mutated RUNX1": [
+    "AML with Mutated RUNX1"
+  ],
+  "AML with Myelodysplasia-Related Changes": [
+    "AML with Myelodysplasia-Related Changes"
+  ],
+  "AML with Recurrent Genetic Abnormalities": [
+    "AML",
+    "AML with t",
+    "APL with PML-RARA",
+    "AML with Mutated NPM1",
+    "AML with Mutated RUNX1",
+    "AML with BCR-ABL1",
+    "AML with inv",
+    "AML with Variant RARA translocation",
+    "AML with Biallelic Mutations of CEBPA",
+    "AML with Recurrent Genetic Abnormalities"
+  ],
+  "AML with Variant RARA translocation": [
+    "AML with Variant RARA translocation"
+  ],
+  "AML with inv": [
+    "AML with inv"
+  ],
+  "AML with t": [
+    "AML with t"
+  ],
+  "AML without Maturation": [
+    "AML without Maturation"
+  ],
+  "AML, NOS": [
+    "Acute Basophilic Leukemia",
+    "AML, NOS",
+    "Acute Monoblastic/Monocytic Leukemia",
+    "Pure Erythroid Leukemia",
+    "AML with Minimal Differentiation",
+    "Acute Myelomonocytic Leukemia",
+    "Acute Panmyelosis with Myelofibrosis",
+    "AML with Maturation",
+    "AML without Maturation",
+    "Acute Megakaryoblastic Leukemia"
+  ],
+  "APL with PML-RARA": [
+    "APL with PML-RARA"
+  ],
+  "Acinar Cell Carcinoma of the Pancreas": [
+    "Acinar Cell Carcinoma of the Pancreas"
+  ],
+  "Acinar Cell Carcinoma, NOS": [
+    "Acinar Cell Carcinoma, NOS"
+  ],
+  "Acinic Cell Carcinoma": [
+    "Acinic Cell Carcinoma"
+  ],
+  "Acral Melanoma": [
+    "Acral Melanoma"
+  ],
+  "Activated B-cell Type": [
+    "Activated B-cell Type"
+  ],
+  "Acute Basophilic Leukemia": [
+    "Acute Basophilic Leukemia"
+  ],
+  "Acute Leukemias of Ambiguous Lineage": [
+    "Mixed Phenotype Acute Leukemia with t",
+    "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS",
+    "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS",
+    "Acute Undifferentiated Leukemia",
+    "Acute Leukemias of Ambiguous Lineage"
+  ],
+  "Acute Megakaryoblastic Leukemia": [
+    "Acute Megakaryoblastic Leukemia"
+  ],
+  "Acute Monoblastic/Monocytic Leukemia": [
+    "Acute Monoblastic/Monocytic Leukemia"
+  ],
+  "Acute Myeloid Leukemia": [
+    "Acute Basophilic Leukemia",
+    "Myeloid Proliferations Related to Down Syndrome",
+    "AML with t",
+    "AML with Minimal Differentiation",
+    "AML with Mutated NPM1",
+    "AML with Mutated RUNX1",
+    "AML with BCR-ABL1",
+    "AML with inv",
+    "AML with Maturation",
+    "Acute Myelomonocytic Leukemia",
+    "AML without Maturation",
+    "Acute Panmyelosis with Myelofibrosis",
+    "Therapy-Related Myeloid Neoplasms",
+    "Therapy-Related Myelodysplastic Syndrome",
+    "Therapy-Related Acute Myeloid Leukemia",
+    "AML with Biallelic Mutations of CEBPA",
+    "AML with Recurrent Genetic Abnormalities",
+    "Myeloid Leukemia Associated with Down Syndrome",
+    "AML, NOS",
+    "Acute Myeloid Leukemia",
+    "AML",
+    "Acute Monoblastic/Monocytic Leukemia",
+    "Pure Erythroid Leukemia",
+    "Transient Abnormal Myelopoiesis",
+    "AML with Myelodysplasia-Related Changes",
+    "AML with Variant RARA translocation",
+    "APL with PML-RARA",
+    "Myeloid Sarcoma",
+    "Acute Megakaryoblastic Leukemia"
+  ],
+  "Acute Myelomonocytic Leukemia": [
+    "Acute Myelomonocytic Leukemia"
+  ],
+  "Acute Panmyelosis with Myelofibrosis": [
+    "Acute Panmyelosis with Myelofibrosis"
+  ],
+  "Acute Undifferentiated Leukemia": [
+    "Acute Undifferentiated Leukemia"
+  ],
+  "Adamantinoma": [
+    "Adamantinoma"
+  ],
+  "Adenocarcinoma In Situ": [
+    "Adenocarcinoma In Situ"
+  ],
+  "Adenocarcinoma of the Gastroesophageal Junction": [
+    "Adenocarcinoma of the Gastroesophageal Junction"
+  ],
+  "Adenocarcinoma, NOS": [
+    "Adenocarcinoma, NOS"
+  ],
+  "Adenoid Cystic Breast Cancer": [
+    "Adenoid Cystic Breast Cancer"
+  ],
+  "Adenoid Cystic Carcinoma": [
+    "Adenoid Cystic Carcinoma"
+  ],
+  "Adenoid Cystic Carcinoma of the Lacrimal Gland": [
+    "Adenoid Cystic Carcinoma of the Lacrimal Gland"
+  ],
+  "Adenoid Cystic Carcinoma of the Lung": [
+    "Adenoid Cystic Carcinoma of the Lung"
+  ],
+  "Adenomyoepithelioma of the Breast": [
+    "Adenomyoepithelioma of the Breast"
+  ],
+  "Adenosquamous Carcinoma of the Gallbladder": [
+    "Adenosquamous Carcinoma of the Gallbladder"
+  ],
+  "Adenosquamous Carcinoma of the Pancreas": [
+    "Adenosquamous Carcinoma of the Pancreas"
+  ],
+  "Adenosquamous Carcinoma of the Stomach": [
+    "Adenosquamous Carcinoma of the Stomach"
+  ],
+  "Adenosquamous Carcinoma of the Tongue": [
+    "Adenosquamous Carcinoma of the Tongue"
+  ],
+  "Adrenal Gland": [
+    "Adrenal Gland",
+    "Adrenocortical Carcinoma",
+    "Pheochromocytoma",
+    "Adrenocortical Adenoma"
+  ],
+  "Adrenocortical Adenoma": [
+    "Adrenocortical Adenoma"
+  ],
+  "Adrenocortical Carcinoma": [
+    "Adrenocortical Carcinoma"
+  ],
+  "Adult T-Cell Leukemia/Lymphoma": [
+    "Adult T-Cell Leukemia/Lymphoma"
+  ],
+  "Aggressive Angiomyxoma": [
+    "Aggressive Angiomyxoma"
+  ],
+  "Aggressive Digital Papillary Adenocarcinoma": [
+    "Aggressive Digital Papillary Adenocarcinoma"
+  ],
+  "Aggressive NK-Cell Leukemia": [
+    "Aggressive NK-Cell Leukemia"
+  ],
+  "Aggressive Systemic Mastocytosis": [
+    "Aggressive Systemic Mastocytosis"
+  ],
+  "Alpha Heavy-Chain Disease": [
+    "Alpha Heavy-Chain Disease"
+  ],
+  "Alveolar Rhabdomyosarcoma": [
+    "Alveolar Rhabdomyosarcoma"
+  ],
+  "Alveolar Soft Part Sarcoma": [
+    "Alveolar Soft Part Sarcoma"
+  ],
+  "Ampulla of Vater": [
+    "Ampullary Carcinoma",
+    "Pancreatobiliary Ampullary Carcinoma",
+    "Ampulla of Vater",
+    "Intestinal Ampullary Carcinoma",
+    "Mixed Ampullary Carcinoma"
+  ],
+  "Ampullary Carcinoma": [
+    "Ampullary Carcinoma",
+    "Intestinal Ampullary Carcinoma",
+    "Mixed Ampullary Carcinoma",
+    "Pancreatobiliary Ampullary Carcinoma"
+  ],
+  "Amyloidosis": [
+    "Amyloidosis"
+  ],
+  "Anal Gland Adenocarcinoma": [
+    "Anal Gland Adenocarcinoma"
+  ],
+  "Anal Squamous Cell Carcinoma": [
+    "Anal Squamous Cell Carcinoma"
+  ],
+  "Anaplastic Astrocytoma": [
+    "Anaplastic Astrocytoma"
+  ],
+  "Anaplastic Ependymoma": [
+    "Anaplastic Ependymoma"
+  ],
+  "Anaplastic Ganglioglioma": [
+    "Anaplastic Ganglioglioma"
+  ],
+  "Anaplastic Large Cell Lymphoma": [
+    "Anaplastic Large-Cell Lymphoma ALK Positive",
+    "Anaplastic Large Cell Lymphoma",
+    "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+    "Anaplastic Large-Cell Lymphoma ALK Negative"
+  ],
+  "Anaplastic Large-Cell Lymphoma ALK Negative": [
+    "Anaplastic Large-Cell Lymphoma ALK Negative"
+  ],
+  "Anaplastic Large-Cell Lymphoma ALK Positive": [
+    "Anaplastic Large-Cell Lymphoma ALK Positive"
+  ],
+  "Anaplastic Medulloblastoma, Group 3": [
+    "Anaplastic Medulloblastoma, Group 3"
+  ],
+  "Anaplastic Medulloblastoma, Group 4": [
+    "Anaplastic Medulloblastoma, Group 4"
+  ],
+  "Anaplastic Medulloblastoma, NOS": [
+    "Anaplastic Medulloblastoma, NOS"
+  ],
+  "Anaplastic Medulloblastoma, Non-WNT, Non-SHH": [
+    "Anaplastic Medulloblastoma, Group 4",
+    "Anaplastic Medulloblastoma, Group 3",
+    "Anaplastic Medulloblastoma, Non-WNT, Non-SHH"
+  ],
+  "Anaplastic Medulloblastoma, SHH Subtype": [
+    "Anaplastic Medulloblastoma, SHH Subtype"
+  ],
+  "Anaplastic Meningioma": [
+    "Anaplastic Meningioma"
+  ],
+  "Anaplastic Oligoastrocytoma": [
+    "Anaplastic Oligoastrocytoma"
+  ],
+  "Anaplastic Oligodendroglioma": [
+    "Anaplastic Oligodendroglioma"
+  ],
+  "Anaplastic Pleomorphic Xanthoastrocytoma": [
+    "Anaplastic Pleomorphic Xanthoastrocytoma"
+  ],
+  "Anaplastic Thyroid Cancer": [
+    "Anaplastic Thyroid Cancer"
+  ],
+  "Angiocentric Glioma": [
+    "Angiocentric Glioma"
+  ],
+  "Angioimmunoblastic T-Cell Lymphoma": [
+    "Angioimmunoblastic T-Cell Lymphoma"
+  ],
+  "Angiomatoid Fibrous Histiocytoma": [
+    "Angiomatoid Fibrous Histiocytoma"
+  ],
+  "Angiosarcoma": [
+    "Angiosarcoma"
+  ],
+  "Anorectal Mucosal Melanoma": [
+    "Anorectal Mucosal Melanoma"
+  ],
+  "Appendiceal Adenocarcinoma": [
+    "Mucinous Adenocarcinoma of the Appendix",
+    "Appendiceal Adenocarcinoma",
+    "Goblet Cell Adenocarcinoma of the Appendix",
+    "Signet Ring Cell Type of the Appendix",
+    "Colonic Type Adenocarcinoma of the Appendix"
+  ],
+  "Astroblastoma": [
+    "Astroblastoma"
+  ],
+  "Astrocytoma": [
+    "Astrocytoma"
+  ],
+  "Atypical Choroid Plexus Papilloma": [
+    "Atypical Choroid Plexus Papilloma"
+  ],
+  "Atypical Chronic Myeloid Leukemia, BCR-ABL1-": [
+    "Atypical Chronic Myeloid Leukemia, BCR-ABL1-"
+  ],
+  "Atypical Fibroxanthoma": [
+    "Atypical Fibroxanthoma"
+  ],
+  "Atypical Lipomatous Tumor": [
+    "Atypical Lipomatous Tumor"
+  ],
+  "Atypical Lung Carcinoid": [
+    "Atypical Lung Carcinoid"
+  ],
+  "Atypical Meningioma": [
+    "Atypical Meningioma"
+  ],
+  "Atypical Nevus": [
+    "Atypical Nevus"
+  ],
+  "Atypical Pituitary Adenoma": [
+    "Atypical Pituitary Adenoma"
+  ],
+  "Atypical Teratoid/Rhabdoid Tumor": [
+    "Atypical Teratoid/Rhabdoid Tumor"
+  ],
+  "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma": [
+    "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma"
+  ],
+  "B-Cell Prolymphocytic Leukemia": [
+    "B-Cell Prolymphocytic Leukemia"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma": [
+    "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+    "B-Lymphoblastic Leukemia/Lymphoma, NOS",
+    "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+    "B-Lymphoblastic Leukemia/Lymphoma with t",
+    "B-Lymphoblastic Leukemia/Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy": [
+    "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy": [
+    "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities": [
+    "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+    "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy",
+    "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+    "B-Lymphoblastic Leukemia/Lymphoma with t"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma with iAMP21": [
+    "B-Lymphoblastic Leukemia/Lymphoma with iAMP21"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma with t": [
+    "B-Lymphoblastic Leukemia/Lymphoma with t"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like": [
+    "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like"
+  ],
+  "B-Lymphoblastic Leukemia/Lymphoma, NOS": [
+    "B-Lymphoblastic Leukemia/Lymphoma, NOS"
+  ],
+  "Basal Cell Adenocarcinoma": [
+    "Basal Cell Adenocarcinoma"
+  ],
+  "Basal Cell Carcinoma": [
+    "Basal Cell Carcinoma"
+  ],
+  "Basal Cell Carcinoma of Prostate": [
+    "Basal Cell Carcinoma of Prostate"
+  ],
+  "Basaloid Large Cell Carcinoma of the Lung": [
+    "Basaloid Large Cell Carcinoma of the Lung"
+  ],
+  "Basaloid Penile Squamous Cell Carcinoma": [
+    "Basaloid Penile Squamous Cell Carcinoma"
+  ],
+  "Benign Phyllodes Tumor of the Breast": [
+    "Benign Phyllodes Tumor of the Breast"
+  ],
+  "Biliary Tract": [
+    "Perihilar Cholangiocarcinoma",
+    "Intracholecystic Papillary Neoplasm",
+    "Cholangiocarcinoma",
+    "Adenosquamous Carcinoma of the Gallbladder",
+    "Intrahepatic Cholangiocarcinoma",
+    "Biliary Tract",
+    "Intraductal Papillary Neoplasm of the Bile Duct",
+    "Extrahepatic Cholangiocarcinoma",
+    "Small Cell Gallbladder Carcinoma",
+    "Gallbladder Adenocarcinoma, NOS",
+    "Gallbladder Cancer"
+  ],
+  "Bladder Adenocarcinoma": [
+    "Bladder Adenocarcinoma"
+  ],
+  "Bladder Squamous Cell Carcinoma": [
+    "Bladder Squamous Cell Carcinoma"
+  ],
+  "Bladder Urothelial Carcinoma": [
+    "Bladder Urothelial Carcinoma"
+  ],
+  "Bladder/Urinary Tract": [
+    "Mucosal Melanoma of the Urethra",
+    "Inverted Urothelial Papilloma",
+    "Urethral Urothelial Carcinoma",
+    "Bladder Adenocarcinoma",
+    "Upper Tract Urothelial Carcinoma",
+    "Urachal Adenocarcinoma",
+    "Urothelial Papilloma",
+    "Urethral Adenocarcinoma",
+    "Urethral Squamous Cell Carcinoma",
+    "Small Cell Bladder Cancer",
+    "Bladder Urothelial Carcinoma",
+    "Urachal Carcinoma",
+    "Inflammatory Myofibroblastic Bladder Tumor",
+    "Sarcomatoid Carcinoma of the Urinary Bladder",
+    "Urethral Cancer",
+    "Bladder/Urinary Tract",
+    "Bladder Squamous Cell Carcinoma",
+    "Plasmacytoid/Signet Ring Cell Bladder Carcinoma"
+  ],
+  "Blastic Plasmacytoid Dendritic Cell Neoplasm": [
+    "Blastic Plasmacytoid Dendritic Cell Neoplasm"
+  ],
+  "Blood": [],
+  "Bone": [
+    "Adamantinoma",
+    "Extraskeletal Myxoid Chondrosarcoma",
+    "Conventional Type Chordoma",
+    "Chondroblastic Osteosarcoma",
+    "Bone",
+    "Low-Grade Central Osteosarcoma",
+    "Giant Cell Tumor of Bone",
+    "Parosteal Osteosarcoma",
+    "Chondroblastoma",
+    "Telangiectatic Osteosarcoma",
+    "Ewing Sarcoma",
+    "Osteosarcoma",
+    "Osteoblastic Osteosarcoma",
+    "Chondrosarcoma",
+    "Periosteal Osteosarcoma",
+    "Fibroblastic Osteosarcoma",
+    "Secondary Osteosarcoma",
+    "Mesenchymal Chondrosarcoma",
+    "Myxoid Chondrosarcoma",
+    "Dedifferentiated Chondrosarcoma",
+    "Chordoma",
+    "Dedifferentiated Chordoma",
+    "Small Cell Osteosarcoma",
+    "High-Grade Surface Osteosarcoma"
+  ],
+  "Borderline Phyllodes Tumor of the Breast": [
+    "Borderline Phyllodes Tumor of the Breast"
+  ],
+  "Bowel": [
+    "Colorectal Adenocarcinoma",
+    "Duodenal Adenocarcinoma",
+    "Bowel",
+    "Tubular Adenoma of the Colon",
+    "Signet Ring Cell Type of the Appendix",
+    "Mucinous Adenocarcinoma of the Appendix",
+    "Low-grade Appendiceal Mucinous Neoplasm",
+    "Signet Ring Cell Adenocarcinoma of the Colon and Rectum",
+    "Colon Adenocarcinoma",
+    "Small Bowel Cancer",
+    "Goblet Cell Adenocarcinoma of the Appendix",
+    "Mucinous Adenocarcinoma of the Colon and Rectum",
+    "Anorectal Mucosal Melanoma",
+    "Small Bowel Well-Differentiated Neuroendocrine Tumor",
+    "Well-Differentiated Neuroendocrine Tumor of the Appendix",
+    "Colon Adenocarcinoma In Situ",
+    "Medullary Carcinoma of the Colon",
+    "Appendiceal Adenocarcinoma",
+    "Anal Gland Adenocarcinoma",
+    "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum",
+    "Small Intestinal Carcinoma",
+    "Anal Squamous Cell Carcinoma",
+    "Gastrointestinal Neuroendocrine Tumors",
+    "Well-Differentiated Neuroendocrine Tumor of the Rectum",
+    "Rectal Adenocarcinoma",
+    "Colonic Type Adenocarcinoma of the Appendix"
+  ],
+  "Breast": [
+    "Borderline Phyllodes Tumor of the Breast",
+    "Juvenile Secretory Carcinoma of the Breast",
+    "Metaplastic Breast Cancer",
+    "Fibroadenoma",
+    "Breast Invasive Cancer, NOS",
+    "Breast Fibroepithelial Neoplasms",
+    "Invasive Breast Carcinoma",
+    "Adenoid Cystic Breast Cancer",
+    "Paget Disease of the Nipple",
+    "Malignant Phyllodes Tumor of the Breast",
+    "Breast Invasive Carcinosarcoma, NOS",
+    "Breast Invasive Ductal Carcinoma",
+    "Metaplastic Carcinosarcoma",
+    "Breast Invasive Mixed Mucinous Carcinoma",
+    "Breast Ductal Carcinoma In Situ",
+    "Phyllodes Tumor of the Breast",
+    "Breast Mixed Ductal and Lobular Carcinoma",
+    "Epithelial Type Metaplastic Breast Cancer",
+    "Metaplastic Adenosquamous Carcinoma",
+    "Carcinoma with Chondroid Metaplasia",
+    "Benign Phyllodes Tumor of the Breast",
+    "Breast Carcinoma with Signet Ring",
+    "Breast Angiosarcoma",
+    "Breast",
+    "Breast Invasive Carcinoma, NOS",
+    "Breast Lobular Carcinoma In Situ",
+    "Adenomyoepithelioma of the Breast",
+    "Breast Sarcoma",
+    "Metaplastic Squamous Cell Carcinoma",
+    "Breast Invasive Lobular Carcinoma",
+    "Solid Papillary Carcinoma of the Breast",
+    "Metaplastic Adenocarcinoma with Spindle Cell Differentiation",
+    "Inflammatory Breast Cancer",
+    "Mixed Type Metaplastic Breast Cancer",
+    "Carcinoma with Osseous Metaplasia",
+    "Breast Neoplasm, NOS"
+  ],
+  "Breast Angiosarcoma": [
+    "Breast Angiosarcoma"
+  ],
+  "Breast Carcinoma with Signet Ring": [
+    "Breast Carcinoma with Signet Ring"
+  ],
+  "Breast Ductal Carcinoma In Situ": [
+    "Breast Ductal Carcinoma In Situ",
+    "Paget Disease of the Nipple"
+  ],
+  "Breast Fibroepithelial Neoplasms": [
+    "Breast Fibroepithelial Neoplasms",
+    "Phyllodes Tumor of the Breast",
+    "Benign Phyllodes Tumor of the Breast",
+    "Malignant Phyllodes Tumor of the Breast",
+    "Borderline Phyllodes Tumor of the Breast",
+    "Fibroadenoma"
+  ],
+  "Breast Implant-Associated Anaplastic Large-Cell Lymphoma": [
+    "Breast Implant-Associated Anaplastic Large-Cell Lymphoma"
+  ],
+  "Breast Invasive Cancer, NOS": [
+    "Breast Invasive Cancer, NOS"
+  ],
+  "Breast Invasive Carcinoma, NOS": [
+    "Breast Invasive Carcinoma, NOS"
+  ],
+  "Breast Invasive Carcinosarcoma, NOS": [
+    "Breast Invasive Carcinosarcoma, NOS"
+  ],
+  "Breast Invasive Ductal Carcinoma": [
+    "Breast Invasive Ductal Carcinoma"
+  ],
+  "Breast Invasive Lobular Carcinoma": [
+    "Breast Invasive Lobular Carcinoma"
+  ],
+  "Breast Invasive Mixed Mucinous Carcinoma": [
+    "Breast Invasive Mixed Mucinous Carcinoma"
+  ],
+  "Breast Lobular Carcinoma In Situ": [
+    "Breast Lobular Carcinoma In Situ"
+  ],
+  "Breast Mixed Ductal and Lobular Carcinoma": [
+    "Breast Mixed Ductal and Lobular Carcinoma"
+  ],
+  "Breast Neoplasm, NOS": [
+    "Breast Neoplasm, NOS"
+  ],
+  "Breast Sarcoma": [
+    "Breast Sarcoma",
+    "Breast Angiosarcoma"
+  ],
+  "Brenner Tumor": [
+    "Brenner Tumor, Borderline",
+    "Brenner Tumor, Malignant",
+    "Brenner Tumor, Benign",
+    "Brenner Tumor"
+  ],
+  "Brenner Tumor, Benign": [
+    "Brenner Tumor, Benign"
+  ],
+  "Brenner Tumor, Borderline": [
+    "Brenner Tumor, Borderline"
+  ],
+  "Brenner Tumor, Malignant": [
+    "Brenner Tumor, Malignant"
+  ],
+  "Burkitt Lymphoma": [
+    "Burkitt Lymphoma"
+  ],
+  "Burkitt-Like Lymphoma with 11q Aberration": [
+    "Burkitt-Like Lymphoma with 11q Aberration"
+  ],
+  "CNS/Brain": [
+    "Ependymomal Tumor",
+    "Germ Cell Tumor, Brain",
+    "Astroblastoma",
+    "Granular Cell Tumor",
+    "Clear Cell Ependymoma",
+    "Anaplastic Medulloblastoma, Non-WNT, Non-SHH",
+    "Malignant Lymphoma",
+    "Myxopapillary Ependymoma",
+    "Olfactory Neuroblastoma",
+    "Meningioma",
+    "High-Grade Neuroepithelial Tumor",
+    "Diffuse Astrocytoma",
+    "Anaplastic Astrocytoma",
+    "Mature Teratoma",
+    "Ependymoma",
+    "Yolk Sac Tumor",
+    "Choriocarcinoma",
+    "Small Cell Glioblastoma",
+    "Melanocytoma",
+    "Anaplastic Pleomorphic Xanthoastrocytoma",
+    "Diffuse Glioma",
+    "Anaplastic Oligodendroglioma",
+    "Choroid Plexus Papilloma",
+    "Medulloblastoma with Extensive Nodularity",
+    "Central Neurocytoma",
+    "Pineal Tumor",
+    "Anaplastic Meningioma",
+    "Subependymoma",
+    "Miscellaneous Brain Tumor",
+    "Low-Grade Neuroepithelial Tumor",
+    "Anaplastic Ependymoma",
+    "Primary CNS Melanoma",
+    "Medulloblastoma, Group 3",
+    "Desmoplastic/Nodular Medulloblastoma",
+    "Anaplastic Medulloblastoma, Group 3",
+    "Medulloblastoma",
+    "Hemangiopericytoma of the Central Nervous System",
+    "Solitary Fibrous Tumor of the Central Nervous System",
+    "Melanotic Medulloblastoma",
+    "Immature Teratoma",
+    "Cerebellar Liponeurocytoma",
+    "Pituitary Adenoma",
+    "CNS/Brain",
+    "Medulloepithelioma",
+    "Chordoid Meningioma",
+    "Embryonal Tumor",
+    "Desmoplastic Infantile Ganglioglioma",
+    "Papillary Glioneuronal Tumor",
+    "Embryonal Carcinoma",
+    "Pituitary Carcinoma",
+    "Pineal Parenchymal Tumor of Intermediate Differentiation",
+    "Primary Brain Tumor",
+    "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle",
+    "Rhabdoid Meningioma",
+    "Medulloblastoma, SHH Subtype",
+    "Choroid Plexus Carcinoma",
+    "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease",
+    "Anaplastic Ganglioglioma",
+    "Miscellaneous Neuroepithelial Tumor",
+    "Medulloblastoma with Extensive Nodularity, NOS",
+    "Clear cell Meningioma",
+    "Craniopharyngioma, Adamantinomatous Type",
+    "Diffuse Intrinsic Pontine Glioma",
+    "High-Grade Glioma, NOS",
+    "Primitive Neuroectodermal Tumor",
+    "Encapsulated Glioma",
+    "Atypical Meningioma",
+    "Anaplastic Oligoastrocytoma",
+    "Chordoid Glioma of the Third Ventricle",
+    "Desmoplastic/Nodular Medulloblastoma, NOS",
+    "Glioblastoma Multiforme",
+    "Angiocentric Glioma",
+    "Craniopharyngioma, Papillary Type",
+    "Sellar Tumor",
+    "Choroid Plexus Tumor",
+    "Germinoma",
+    "Mixed Germ Cell Tumor",
+    "Extraventricular Neurocytoma",
+    "Astrocytoma",
+    "Medulloblastoma, Non-WNT, Non-SHH",
+    "Glioblastoma",
+    "Anaplastic Medulloblastoma, SHH Subtype",
+    "Desmoplastic Infantile Astrocytoma",
+    "Desmoplastic/Nodular Medulloblastoma, SHH Subtype",
+    "Large Cell/Anaplastic Medulloblastoma",
+    "Gangliocytoma",
+    "Dysembryoplastic Neuroepithelial Tumor",
+    "Malignant Tumor",
+    "Medulloblastoma, Group 4",
+    "Anaplastic Medulloblastoma, NOS",
+    "Pilocytic Astrocytoma",
+    "Oligoastrocytoma",
+    "Anaplastic Medulloblastoma, Group 4",
+    "Mesenchymal Chondrosarcoma of the CNS",
+    "Papillary Tumor of the Pineal Region",
+    "Atypical Choroid Plexus Papilloma",
+    "Oligodendroglioma",
+    "Low-Grade Glioma, NOS",
+    "Pilomyxoid Astrocytoma",
+    "Pineoblastoma",
+    "Atypical Pituitary Adenoma",
+    "Pituicytoma",
+    "Spindle Cell Oncocytoma of the Adenohypophysis",
+    "Medulloblastoma, WNT Subtype",
+    "Atypical Teratoid/Rhabdoid Tumor",
+    "Medulloblastoma with Extensive Nodularity, SHH Subtype",
+    "Medullomyoblastoma",
+    "Malignant Teratoma",
+    "Meningothelial Tumor",
+    "Pineocytoma",
+    "Papillary Meningioma",
+    "Gliosarcoma",
+    "Medulloblastoma, NOS",
+    "Glioma, NOS",
+    "Pleomorphic Xanthoastrocytoma",
+    "Hemangioblastoma",
+    "Primary CNS Melanocytic Tumors",
+    "Ganglioglioma",
+    "Embryonal Tumor with Abundant Neuropil and True Rosettes",
+    "Primary Neuroepithelial Tumor"
+  ],
+  "Cancer of Unknown Primary": [
+    "Adenocarcinoma, NOS",
+    "Neuroendocrine Carcinoma, NOS",
+    "Cancer of Unknown Primary, NOS",
+    "Neuroendocrine Tumor, NOS",
+    "Small Cell Carcinoma of Unknown Primary",
+    "Acinar Cell Carcinoma, NOS",
+    "Cancer of Unknown Primary",
+    "Undifferentiated Malignant Neoplasm",
+    "Poorly Differentiated Carcinoma, NOS",
+    "Squamous Cell Carcinoma, NOS"
+  ],
+  "Cancer of Unknown Primary, NOS": [
+    "Cancer of Unknown Primary, NOS"
+  ],
+  "Carcinoma ex Pleomorphic Adenoma": [
+    "Carcinoma ex Pleomorphic Adenoma"
+  ],
+  "Carcinoma with Chondroid Metaplasia": [
+    "Carcinoma with Chondroid Metaplasia"
+  ],
+  "Carcinoma with Osseous Metaplasia": [
+    "Carcinoma with Osseous Metaplasia"
+  ],
+  "Cellular Schwannoma": [
+    "Cellular Schwannoma"
+  ],
+  "Central Neurocytoma": [
+    "Central Neurocytoma"
+  ],
+  "Cerebellar Liponeurocytoma": [
+    "Cerebellar Liponeurocytoma"
+  ],
+  "Cervical Adenocarcinoma": [
+    "Cervical Adenocarcinoma",
+    "Mesonephric Carcinoma",
+    "Villoglandular Carcinoma",
+    "Cervical Clear Cell Carcinoma",
+    "Mucinous Carcinoma",
+    "Gastric Type Mucinous Carcinoma",
+    "Endocervical Adenocarcinoma",
+    "Cervical Endometrioid Carcinoma",
+    "Signet Ring Mucinous Carcinoma",
+    "Cervical Serous Carcinoma",
+    "Intestinal Type Mucinous Carcinoma"
+  ],
+  "Cervical Adenocarcinoma In Situ": [
+    "Cervical Adenocarcinoma In Situ"
+  ],
+  "Cervical Adenoid Basal Carcinoma": [
+    "Cervical Adenoid Basal Carcinoma"
+  ],
+  "Cervical Adenoid Cystic Carcinoma": [
+    "Cervical Adenoid Cystic Carcinoma"
+  ],
+  "Cervical Adenosquamous Carcinoma": [
+    "Cervical Adenosquamous Carcinoma"
+  ],
+  "Cervical Clear Cell Carcinoma": [
+    "Cervical Clear Cell Carcinoma"
+  ],
+  "Cervical Endometrioid Carcinoma": [
+    "Cervical Endometrioid Carcinoma"
+  ],
+  "Cervical Leiomyosarcoma": [
+    "Cervical Leiomyosarcoma"
+  ],
+  "Cervical Neuroendocrine Tumor": [
+    "Cervical Neuroendocrine Tumor"
+  ],
+  "Cervical Rhabdomyosarcoma": [
+    "Cervical Rhabdomyosarcoma"
+  ],
+  "Cervical Serous Carcinoma": [
+    "Cervical Serous Carcinoma"
+  ],
+  "Cervical Squamous Cell Carcinoma": [
+    "Cervical Squamous Cell Carcinoma"
+  ],
+  "Cervix": [
+    "Cervical Adenocarcinoma",
+    "Cervical Neuroendocrine Tumor",
+    "Cervical Leiomyosarcoma",
+    "Mesonephric Carcinoma",
+    "Cervical Rhabdomyosarcoma",
+    "Villoglandular Adenocarcinoma of the Cervix",
+    "Villoglandular Carcinoma",
+    "Cervical Adenoid Cystic Carcinoma",
+    "Mixed Cervical Carcinoma",
+    "Mucinous Carcinoma",
+    "Gastric Type Mucinous Carcinoma",
+    "Endocervical Adenocarcinoma",
+    "Cervical Endometrioid Carcinoma",
+    "Cervical Serous Carcinoma",
+    "Cervical Adenoid Basal Carcinoma",
+    "Small Cell Carcinoma of the Cervix",
+    "Cervical Adenocarcinoma In Situ",
+    "Cervical Adenosquamous Carcinoma",
+    "Glassy Cell Carcinoma of the Cervix",
+    "Cervical Clear Cell Carcinoma",
+    "Cervical Squamous Cell Carcinoma",
+    "Signet Ring Mucinous Carcinoma",
+    "Cervix",
+    "Intestinal Type Mucinous Carcinoma"
+  ],
+  "Cholangiocarcinoma": [
+    "Perihilar Cholangiocarcinoma",
+    "Cholangiocarcinoma",
+    "Extrahepatic Cholangiocarcinoma",
+    "Intrahepatic Cholangiocarcinoma"
+  ],
+  "Chondroblastic Osteosarcoma": [
+    "Chondroblastic Osteosarcoma"
+  ],
+  "Chondroblastoma": [
+    "Chondroblastoma"
+  ],
+  "Chondrosarcoma": [
+    "Extraskeletal Myxoid Chondrosarcoma",
+    "Chondrosarcoma",
+    "Mesenchymal Chondrosarcoma",
+    "Dedifferentiated Chondrosarcoma",
+    "Myxoid Chondrosarcoma"
+  ],
+  "Chordoid Glioma of the Third Ventricle": [
+    "Chordoid Glioma of the Third Ventricle"
+  ],
+  "Chordoid Meningioma": [
+    "Chordoid Meningioma"
+  ],
+  "Chordoma": [
+    "Conventional Type Chordoma",
+    "Chordoma",
+    "Dedifferentiated Chordoma"
+  ],
+  "Choriocarcinoma": [
+    "Choriocarcinoma"
+  ],
+  "Choroid Plexus Carcinoma": [
+    "Choroid Plexus Carcinoma"
+  ],
+  "Choroid Plexus Papilloma": [
+    "Choroid Plexus Papilloma"
+  ],
+  "Choroid Plexus Tumor": [
+    "Choroid Plexus Tumor",
+    "Atypical Choroid Plexus Papilloma",
+    "Choroid Plexus Carcinoma",
+    "Choroid Plexus Papilloma"
+  ],
+  "Chromophobe Renal Cell Carcinoma": [
+    "Chromophobe Renal Cell Carcinoma"
+  ],
+  "Chronic Eosinophilic Leukemia, NOS": [
+    "Chronic Eosinophilic Leukemia, NOS"
+  ],
+  "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma": [
+    "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma"
+  ],
+  "Chronic Lymphoproliferative Disorder of NK Cells": [
+    "Chronic Lymphoproliferative Disorder of NK Cells"
+  ],
+  "Chronic Myelogenous Leukemia": [
+    "Chronic Myelogenous Leukemia",
+    "Chronic Myeloid Leukemia, BCR-ABL1+"
+  ],
+  "Chronic Myeloid Leukemia, BCR-ABL1+": [
+    "Chronic Myeloid Leukemia, BCR-ABL1+"
+  ],
+  "Chronic Myelomonocytic Leukemia": [
+    "Chronic Myelomonocytic Leukemia-1",
+    "Chronic Myelomonocytic Leukemia-0",
+    "Chronic Myelomonocytic Leukemia-2",
+    "Chronic Myelomonocytic Leukemia"
+  ],
+  "Chronic Myelomonocytic Leukemia-0": [
+    "Chronic Myelomonocytic Leukemia-0"
+  ],
+  "Chronic Myelomonocytic Leukemia-1": [
+    "Chronic Myelomonocytic Leukemia-1"
+  ],
+  "Chronic Myelomonocytic Leukemia-2": [
+    "Chronic Myelomonocytic Leukemia-2"
+  ],
+  "Chronic Neutrophilic Leukemia": [
+    "Chronic Neutrophilic Leukemia"
+  ],
+  "Ciliated Muconodular Papillary Tumor of the Lung": [
+    "Ciliated Muconodular Papillary Tumor of the Lung"
+  ],
+  "Classical Hodgkin Lymphoma": [
+    "Classical Hodgkin Lymphoma",
+    "Lymphocyte-Depleted Classical Hodgkin Lymphoma",
+    "Lymphocyte-Rich Classical Hodgkin Lymphoma",
+    "Mixed Cellularity Classical Hodgkin Lymphoma",
+    "Nodular Sclerosis Classical Hodgkin Lymphoma"
+  ],
+  "Classical Hodgkin Lymphoma PTLD": [
+    "Classical Hodgkin Lymphoma PTLD"
+  ],
+  "Clear Cell Borderline Ovarian Tumor": [
+    "Clear Cell Borderline Ovarian Tumor"
+  ],
+  "Clear Cell Carcinoma of the Lung": [
+    "Clear Cell Carcinoma of the Lung"
+  ],
+  "Clear Cell Ependymoma": [
+    "Clear Cell Ependymoma"
+  ],
+  "Clear Cell Odontogenic Carcinoma": [
+    "Clear Cell Odontogenic Carcinoma"
+  ],
+  "Clear Cell Ovarian Cancer": [
+    "Clear Cell Ovarian Cancer"
+  ],
+  "Clear Cell Papillary Renal Cell Carcinoma": [
+    "Clear Cell Papillary Renal Cell Carcinoma"
+  ],
+  "Clear Cell Sarcoma": [
+    "Clear Cell Sarcoma"
+  ],
+  "Clear Cell Sarcoma of Kidney": [
+    "Clear Cell Sarcoma of Kidney"
+  ],
+  "Clear cell Meningioma": [
+    "Clear cell Meningioma"
+  ],
+  "Collecting Duct Renal Cell Carcinoma": [
+    "Collecting Duct Renal Cell Carcinoma"
+  ],
+  "Colon Adenocarcinoma": [
+    "Colon Adenocarcinoma"
+  ],
+  "Colon Adenocarcinoma In Situ": [
+    "Colon Adenocarcinoma In Situ"
+  ],
+  "Colonic Type Adenocarcinoma of the Appendix": [
+    "Colonic Type Adenocarcinoma of the Appendix"
+  ],
+  "Colorectal Adenocarcinoma": [
+    "Colon Adenocarcinoma In Situ",
+    "Colorectal Adenocarcinoma",
+    "Signet Ring Cell Adenocarcinoma of the Colon and Rectum",
+    "Colon Adenocarcinoma",
+    "Mucinous Adenocarcinoma of the Colon and Rectum",
+    "Rectal Adenocarcinoma"
+  ],
+  "Combined Small Cell Lung Carcinoma": [
+    "Combined Small Cell Lung Carcinoma"
+  ],
+  "Complete Hydatidiform Mole": [
+    "Complete Hydatidiform Mole"
+  ],
+  "Congenital Nevus": [
+    "Congenital Nevus"
+  ],
+  "Conjunctival Melanoma": [
+    "Conjunctival Melanoma"
+  ],
+  "Conventional Type Chordoma": [
+    "Conventional Type Chordoma"
+  ],
+  "Craniopharyngioma, Adamantinomatous Type": [
+    "Craniopharyngioma, Adamantinomatous Type"
+  ],
+  "Craniopharyngioma, Papillary Type": [
+    "Craniopharyngioma, Papillary Type"
+  ],
+  "Cutaneous Mastocytosis": [
+    "Cutaneous Mastocytosis"
+  ],
+  "Cutaneous Melanoma": [
+    "Cutaneous Melanoma"
+  ],
+  "Cutaneous Squamous Cell Carcinoma": [
+    "Cutaneous Squamous Cell Carcinoma"
+  ],
+  "Cystic Tumor of the Pancreas": [
+    "Intraductal Tubulopapillary Neoplasm",
+    "Intraductal Oncocytic Papillary Neoplasm",
+    "Intraductal Papillary Mucinous Neoplasm",
+    "Serous Cystadenoma of the Pancreas",
+    "Cystic Tumor of the Pancreas",
+    "Mucinous Cystic Neoplasm"
+  ],
+  "DLBCL Associated with Chronic Inflammation": [
+    "DLBCL Associated with Chronic Inflammation"
+  ],
+  "Dedifferentiated Chondrosarcoma": [
+    "Dedifferentiated Chondrosarcoma"
+  ],
+  "Dedifferentiated Chordoma": [
+    "Dedifferentiated Chordoma"
+  ],
+  "Dedifferentiated Liposarcoma": [
+    "Dedifferentiated Liposarcoma"
+  ],
+  "Dendritic Cell Sarcoma": [
+    "Histiocytic Dendritic Cell Sarcoma",
+    "Dendritic Cell Sarcoma"
+  ],
+  "Dermatofibroma": [
+    "Dermatofibroma"
+  ],
+  "Dermatofibrosarcoma Protuberans": [
+    "Dermatofibrosarcoma Protuberans"
+  ],
+  "Desmoid/Aggressive Fibromatosis": [
+    "Desmoid/Aggressive Fibromatosis"
+  ],
+  "Desmoplastic Infantile Astrocytoma": [
+    "Desmoplastic Infantile Astrocytoma"
+  ],
+  "Desmoplastic Infantile Ganglioglioma": [
+    "Desmoplastic Infantile Ganglioglioma"
+  ],
+  "Desmoplastic Melanoma": [
+    "Desmoplastic Melanoma"
+  ],
+  "Desmoplastic Small-Round-Cell Tumor": [
+    "Desmoplastic Small-Round-Cell Tumor"
+  ],
+  "Desmoplastic Trichoepithelioma": [
+    "Desmoplastic Trichoepithelioma"
+  ],
+  "Desmoplastic/Nodular Medulloblastoma": [
+    "Desmoplastic/Nodular Medulloblastoma",
+    "Desmoplastic/Nodular Medulloblastoma, SHH Subtype",
+    "Desmoplastic/Nodular Medulloblastoma, NOS"
+  ],
+  "Desmoplastic/Nodular Medulloblastoma, NOS": [
+    "Desmoplastic/Nodular Medulloblastoma, NOS"
+  ],
+  "Desmoplastic/Nodular Medulloblastoma, SHH Subtype": [
+    "Desmoplastic/Nodular Medulloblastoma, SHH Subtype"
+  ],
+  "Diffuse Astrocytoma": [
+    "Diffuse Astrocytoma"
+  ],
+  "Diffuse Glioma": [
+    "Glioblastoma Multiforme",
+    "Small Cell Glioblastoma",
+    "Oligoastrocytoma",
+    "Diffuse Intrinsic Pontine Glioma",
+    "High-Grade Glioma, NOS",
+    "Diffuse Glioma",
+    "Anaplastic Oligodendroglioma",
+    "Gliosarcoma",
+    "Oligodendroglioma",
+    "Glioma, NOS",
+    "Astrocytoma",
+    "Anaplastic Oligoastrocytoma",
+    "Glioblastoma",
+    "Diffuse Astrocytoma",
+    "Anaplastic Astrocytoma"
+  ],
+  "Diffuse Intrinsic Pontine Glioma": [
+    "Diffuse Intrinsic Pontine Glioma"
+  ],
+  "Diffuse Large B-Cell Lymphoma, NOS": [
+    "Germinal Center B-Cell Type",
+    "Diffuse Large B-Cell Lymphoma, NOS",
+    "Activated B-cell Type"
+  ],
+  "Diffuse Type Stomach Adenocarcinoma": [
+    "Diffuse Type Stomach Adenocarcinoma"
+  ],
+  "Disseminated Juvenile Xanthogranuloma": [
+    "Disseminated Juvenile Xanthogranuloma"
+  ],
+  "Duodenal Adenocarcinoma": [
+    "Duodenal Adenocarcinoma"
+  ],
+  "Duodenal-Type Follicular Lymphoma": [
+    "Duodenal-Type Follicular Lymphoma"
+  ],
+  "Dysembryoplastic Neuroepithelial Tumor": [
+    "Dysembryoplastic Neuroepithelial Tumor"
+  ],
+  "Dysgerminoma": [
+    "Dysgerminoma"
+  ],
+  "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease": [
+    "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease"
+  ],
+  "EBV Positive DLBCL, NOS": [
+    "EBV Positive DLBCL, NOS"
+  ],
+  "EBV Positive Mucocutaneous Ulcer": [
+    "EBV Positive Mucocutaneous Ulcer"
+  ],
+  "Early T-Cell Precursor Lymphoblastic Leukemia": [
+    "Early T-Cell Precursor Lymphoblastic Leukemia"
+  ],
+  "Embryonal Carcinoma": [
+    "Embryonal Carcinoma"
+  ],
+  "Embryonal Rhabdomyosarcoma": [
+    "Embryonal Rhabdomyosarcoma"
+  ],
+  "Embryonal Tumor": [
+    "Medulloblastoma with Extensive Nodularity, NOS",
+    "Medulloblastoma, Group 4",
+    "Anaplastic Medulloblastoma, NOS",
+    "Anaplastic Medulloblastoma, Group 4",
+    "Medulloblastoma, Group 3",
+    "Desmoplastic/Nodular Medulloblastoma",
+    "Anaplastic Medulloblastoma, Group 3",
+    "Medulloblastoma",
+    "Anaplastic Medulloblastoma, Non-WNT, Non-SHH",
+    "Primitive Neuroectodermal Tumor",
+    "Olfactory Neuroblastoma",
+    "Melanotic Medulloblastoma",
+    "Desmoplastic/Nodular Medulloblastoma, SHH Subtype",
+    "Medulloblastoma, WNT Subtype",
+    "Atypical Teratoid/Rhabdoid Tumor",
+    "Medulloblastoma with Extensive Nodularity, SHH Subtype",
+    "Medulloepithelioma",
+    "Desmoplastic/Nodular Medulloblastoma, NOS",
+    "Embryonal Tumor",
+    "Medullomyoblastoma",
+    "Medulloblastoma, SHH Subtype",
+    "Medulloblastoma with Extensive Nodularity",
+    "Medulloblastoma, NOS",
+    "Medulloblastoma, Non-WNT, Non-SHH",
+    "Anaplastic Medulloblastoma, SHH Subtype",
+    "Embryonal Tumor with Abundant Neuropil and True Rosettes",
+    "Large Cell/Anaplastic Medulloblastoma"
+  ],
+  "Embryonal Tumor with Abundant Neuropil and True Rosettes": [
+    "Embryonal Tumor with Abundant Neuropil and True Rosettes"
+  ],
+  "Encapsulated Glioma": [
+    "Dysembryoplastic Neuroepithelial Tumor",
+    "Pilocytic Astrocytoma",
+    "Anaplastic Ganglioglioma",
+    "Anaplastic Pleomorphic Xanthoastrocytoma",
+    "Low-Grade Glioma, NOS",
+    "Pilomyxoid Astrocytoma",
+    "Encapsulated Glioma",
+    "Pleomorphic Xanthoastrocytoma",
+    "Ganglioglioma",
+    "Gangliocytoma"
+  ],
+  "Endocervical Adenocarcinoma": [
+    "Endocervical Adenocarcinoma"
+  ],
+  "Endocrine Mucin Producing Sweat Gland Carcinoma": [
+    "Endocrine Mucin Producing Sweat Gland Carcinoma"
+  ],
+  "Endometrial Carcinoma": [
+    "Uterine Endometrioid Carcinoma",
+    "Uterine Dedifferentiated Carcinoma",
+    "Uterine Undifferentiated Carcinoma",
+    "Endometrial Carcinoma",
+    "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
+    "Uterine Mixed Endometrial Carcinoma",
+    "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
+    "Uterine Adenosquamous Carcinoma",
+    "Uterine Mucinous Carcinoma",
+    "Uterine Neuroendocrine Carcinoma",
+    "Uterine Mesonephric Carcinoma",
+    "Uterine Clear Cell Carcinoma",
+    "Poorly Differentiated Carcinoma of the Uterus"
+  ],
+  "Endometrial Stromal Sarcoma": [
+    "High-Grade Endometrial Stromal Sarcoma",
+    "Endometrial Stromal Sarcoma",
+    "Low-Grade Endometrial Stromal Sarcoma"
+  ],
+  "Endometrioid Borderlin Ovarian Tumor": [
+    "Endometrioid Borderlin Ovarian Tumor"
+  ],
+  "Endometrioid Ovarian Cancer": [
+    "Endometrioid Ovarian Cancer"
+  ],
+  "Enteropathy-Associated T-Cell Lymphoma": [
+    "Enteropathy-Associated T-Cell Lymphoma"
+  ],
+  "Ependymoma": [
+    "Ependymoma"
+  ],
+  "Ependymomal Tumor": [
+    "Ependymomal Tumor",
+    "Ependymoma",
+    "Anaplastic Ependymoma",
+    "Clear Cell Ependymoma",
+    "Myxopapillary Ependymoma",
+    "Subependymoma"
+  ],
+  "Epithelial Type Metaplastic Breast Cancer": [
+    "Metaplastic Squamous Cell Carcinoma",
+    "Epithelial Type Metaplastic Breast Cancer",
+    "Metaplastic Adenosquamous Carcinoma",
+    "Metaplastic Adenocarcinoma with Spindle Cell Differentiation"
+  ],
+  "Epithelial-Myoepithelial Carcinoma": [
+    "Epithelial-Myoepithelial Carcinoma"
+  ],
+  "Epithelioid Hemangioendothelioma": [
+    "Epithelioid Hemangioendothelioma"
+  ],
+  "Epithelioid Sarcoma": [
+    "Proximal-Type Epithelioid Sarcoma",
+    "Epithelioid Sarcoma"
+  ],
+  "Epithelioid Trophoblastic Tumor": [
+    "Epithelioid Trophoblastic Tumor"
+  ],
+  "Erdheim-Chester Disease": [
+    "Erdheim-Chester Disease"
+  ],
+  "Esophageal Adenocarcinoma": [
+    "Esophageal Adenocarcinoma"
+  ],
+  "Esophageal Poorly Differentiated Carcinoma": [
+    "Esophageal Poorly Differentiated Carcinoma"
+  ],
+  "Esophageal Squamous Cell Carcinoma": [
+    "Esophageal Squamous Cell Carcinoma"
+  ],
+  "Esophagogastric Adenocarcinoma": [
+    "Esophageal Adenocarcinoma",
+    "Papillary Stomach Adenocarcinoma",
+    "Intestinal Type Stomach Adenocarcinoma",
+    "Stomach Adenocarcinoma",
+    "Esophagogastric Adenocarcinoma",
+    "Small Cell Carcinoma of the Stomach",
+    "Poorly Differentiated Carcinoma of the Stomach",
+    "Signet Ring Cell Carcinoma of the Stomach",
+    "Tubular Stomach Adenocarcinoma",
+    "Adenocarcinoma of the Gastroesophageal Junction",
+    "Gastric Remnant Adenocarcinoma",
+    "Mucinous Stomach Adenocarcinoma",
+    "Adenosquamous Carcinoma of the Stomach",
+    "Diffuse Type Stomach Adenocarcinoma",
+    "Undifferentiated Stomach Adenocarcinoma"
+  ],
+  "Esophagus/Stomach": [
+    "High-Grade Neuroendocrine Carcinoma of the Esophagus",
+    "Smooth Muscle Neoplasm, NOS",
+    "Esophageal Adenocarcinoma",
+    "Papillary Stomach Adenocarcinoma",
+    "Intestinal Type Stomach Adenocarcinoma",
+    "Esophageal Squamous Cell Carcinoma",
+    "Stomach Adenocarcinoma",
+    "Esophagogastric Adenocarcinoma",
+    "Mucosal Melanoma of the Esophagus",
+    "Esophagus/Stomach",
+    "Small Cell Carcinoma of the Stomach",
+    "Poorly Differentiated Carcinoma of the Stomach",
+    "Signet Ring Cell Carcinoma of the Stomach",
+    "Well-Differentiated Neuroendocrine Tumors of the Stomach",
+    "Tubular Stomach Adenocarcinoma",
+    "Esophageal Poorly Differentiated Carcinoma",
+    "Adenocarcinoma of the Gastroesophageal Junction",
+    "High-Grade Neuroendocrine Carcinoma of the Stomach",
+    "Gastric Remnant Adenocarcinoma",
+    "Mucinous Stomach Adenocarcinoma",
+    "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+    "Adenosquamous Carcinoma of the Stomach",
+    "Diffuse Type Stomach Adenocarcinoma",
+    "Undifferentiated Stomach Adenocarcinoma"
+  ],
+  "Essential Thrombocythemia": [
+    "Essential Thrombocythemia",
+    "Essential Thrombocythemia Myelofibrosis"
+  ],
+  "Essential Thrombocythemia Myelofibrosis": [
+    "Essential Thrombocythemia Myelofibrosis"
+  ],
+  "Ewing Sarcoma": [
+    "Ewing Sarcoma"
+  ],
+  "Ewing Sarcoma of Soft Tissue": [
+    "Ewing Sarcoma of Soft Tissue"
+  ],
+  "Extra Gonadal Germ Cell Tumor": [
+    "Extra Gonadal Germ Cell Tumor"
+  ],
+  "Extrahepatic Cholangiocarcinoma": [
+    "Extrahepatic Cholangiocarcinoma"
+  ],
+  "Extramammary Paget Disease": [
+    "Extramammary Paget Disease"
+  ],
+  "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue": [
+    "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue"
+  ],
+  "Extranodal NK-/T-Cell Lymphoma, Nasal Type": [
+    "Extranodal NK-/T-Cell Lymphoma, Nasal Type"
+  ],
+  "Extraosseous Plasmacytoma": [
+    "Extraosseous Plasmacytoma"
+  ],
+  "Extraskeletal Myxoid Chondrosarcoma": [
+    "Extraskeletal Myxoid Chondrosarcoma"
+  ],
+  "Extraventricular Neurocytoma": [
+    "Extraventricular Neurocytoma"
+  ],
+  "Eye": [
+    "Conjunctival Melanoma",
+    "Eye",
+    "Lacrimal Gland Tumor",
+    "Ocular Melanoma",
+    "Squamous Cell Carcinoma of the Lacrimal Gland",
+    "Adenoid Cystic Carcinoma of the Lacrimal Gland",
+    "Uveal Melanoma",
+    "Retinoblastoma"
+  ],
+  "FH-Deficient Renal Cell Carcinoma": [
+    "FH-Deficient Renal Cell Carcinoma"
+  ],
+  "Fibroadenoma": [
+    "Fibroadenoma"
+  ],
+  "Fibroblastic Osteosarcoma": [
+    "Fibroblastic Osteosarcoma"
+  ],
+  "Fibroblastic Reticular Cell Tumor": [
+    "Fibroblastic Reticular Cell Tumor"
+  ],
+  "Fibrolamellar Carcinoma": [
+    "Fibrolamellar Carcinoma"
+  ],
+  "Fibrosarcoma": [
+    "Sclerosing Epithelioid Fibrosarcoma",
+    "Fibrosarcoma"
+  ],
+  "Fibrothecoma": [
+    "Fibrothecoma"
+  ],
+  "Florid Follicular Hyperplasia PTLD": [
+    "Florid Follicular Hyperplasia PTLD"
+  ],
+  "Follicular Dendritic Cell Sarcoma": [
+    "Follicular Dendritic Cell Sarcoma"
+  ],
+  "Follicular Lymphoma": [
+    "Follicular Lymphoma",
+    "In Situ Follicular Neoplasia",
+    "Duodenal-Type Follicular Lymphoma"
+  ],
+  "Follicular T-Cell Lymphoma": [
+    "Follicular T-Cell Lymphoma"
+  ],
+  "Follicular Thyroid Cancer": [
+    "Follicular Thyroid Cancer"
+  ],
+  "Gallbladder Adenocarcinoma, NOS": [
+    "Gallbladder Adenocarcinoma, NOS"
+  ],
+  "Gallbladder Cancer": [
+    "Adenosquamous Carcinoma of the Gallbladder",
+    "Small Cell Gallbladder Carcinoma",
+    "Gallbladder Adenocarcinoma, NOS",
+    "Gallbladder Cancer"
+  ],
+  "Gamma Heavy-Chain Disease": [
+    "Gamma Heavy-Chain Disease"
+  ],
+  "Gangliocytoma": [
+    "Gangliocytoma"
+  ],
+  "Ganglioglioma": [
+    "Ganglioglioma"
+  ],
+  "Ganglioneuroblastoma": [
+    "Ganglioneuroblastoma"
+  ],
+  "Ganglioneuroma": [
+    "Ganglioneuroma"
+  ],
+  "Gastric Remnant Adenocarcinoma": [
+    "Gastric Remnant Adenocarcinoma"
+  ],
+  "Gastric Type Mucinous Carcinoma": [
+    "Gastric Type Mucinous Carcinoma"
+  ],
+  "Gastrointestinal Neuroendocrine Tumors": [
+    "Well-Differentiated Neuroendocrine Tumor of the Appendix",
+    "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum",
+    "Gastrointestinal Neuroendocrine Tumors",
+    "Well-Differentiated Neuroendocrine Tumor of the Rectum",
+    "Small Bowel Well-Differentiated Neuroendocrine Tumor"
+  ],
+  "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach": [
+    "High-Grade Neuroendocrine Carcinoma of the Esophagus",
+    "High-Grade Neuroendocrine Carcinoma of the Stomach",
+    "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+    "Well-Differentiated Neuroendocrine Tumors of the Stomach"
+  ],
+  "Gastrointestinal Stromal Tumor": [
+    "Gastrointestinal Stromal Tumor"
+  ],
+  "Germ Cell Tumor of the Vulva": [
+    "Mature Teratoma",
+    "Yolk Sac Tumor",
+    "Embryonal Carcinoma",
+    "Germ Cell Tumor of the Vulva",
+    "Dysgerminoma",
+    "Mixed Germ Cell Tumor",
+    "Polyembryoma",
+    "Immature Teratoma"
+  ],
+  "Germ Cell Tumor with Somatic-Type Malignancy": [
+    "Germ Cell Tumor with Somatic-Type Malignancy"
+  ],
+  "Germ Cell Tumor, Brain": [
+    "Mature Teratoma",
+    "Malignant Teratoma",
+    "Yolk Sac Tumor",
+    "Choriocarcinoma",
+    "Embryonal Carcinoma",
+    "Germ Cell Tumor, Brain",
+    "Germinoma",
+    "Mixed Germ Cell Tumor",
+    "Immature Teratoma"
+  ],
+  "Germinal Center B-Cell Type": [
+    "Germinal Center B-Cell Type"
+  ],
+  "Germinoma": [
+    "Germinoma"
+  ],
+  "Gestational Trophoblastic Disease": [
+    "Placental Site Trophoblastic Tumor",
+    "Choriocarcinoma",
+    "Gestational Trophoblastic Disease",
+    "Molar Pregnancy",
+    "Complete Hydatidiform Mole",
+    "Partial Hydatidiform Mole",
+    "Epithelioid Trophoblastic Tumor",
+    "Invasive Hydatidiform Mole"
+  ],
+  "Giant Cell Carcinoma of the Lung": [
+    "Giant Cell Carcinoma of the Lung"
+  ],
+  "Giant Cell Tumor of Bone": [
+    "Giant Cell Tumor of Bone"
+  ],
+  "Glassy Cell Carcinoma of the Cervix": [
+    "Glassy Cell Carcinoma of the Cervix"
+  ],
+  "Glioblastoma": [
+    "Glioblastoma Multiforme",
+    "Small Cell Glioblastoma",
+    "Glioblastoma",
+    "Gliosarcoma"
+  ],
+  "Glioblastoma Multiforme": [
+    "Glioblastoma Multiforme"
+  ],
+  "Glioma, NOS": [
+    "Glioma, NOS"
+  ],
+  "Gliosarcoma": [
+    "Gliosarcoma"
+  ],
+  "Glomangiosarcoma": [
+    "Glomangiosarcoma"
+  ],
+  "Goblet Cell Adenocarcinoma of the Appendix": [
+    "Goblet Cell Adenocarcinoma of the Appendix"
+  ],
+  "Gonadoblastoma": [
+    "Gonadoblastoma"
+  ],
+  "Granular Cell Tumor": [
+    "Granular Cell Tumor"
+  ],
+  "Granulosa Cell Tumor": [
+    "Granulosa Cell Tumor"
+  ],
+  "HHV8 Positive DLBCL, NOS": [
+    "HHV8 Positive DLBCL, NOS"
+  ],
+  "Hairy Cell Leukemia": [
+    "Hairy Cell Leukemia"
+  ],
+  "Hairy Cell Leukemia-Variant": [
+    "Hairy Cell Leukemia-Variant"
+  ],
+  "Head and Neck": [
+    "Odontogenic Carcinoma",
+    "Nasopharyngeal Carcinoma",
+    "Oral Cavity Squamous Cell Carcinoma",
+    "Hypopharynx Squamous Cell Carcinoma",
+    "Epithelial-Myoepithelial Carcinoma",
+    "Adenoid Cystic Carcinoma",
+    "Clear Cell Odontogenic Carcinoma",
+    "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin",
+    "Acinic Cell Carcinoma",
+    "Adenosquamous Carcinoma of the Tongue",
+    "Sialoblastoma",
+    "Myoepithelial Carcinoma",
+    "Mucoepidermoid Carcinoma",
+    "Salivary Gland Oncocytoma",
+    "Salivary Duct Carcinoma",
+    "Sinonasal Undifferentiated Carcinoma",
+    "Polymorphous Adenocarcinoma",
+    "Oropharynx Squamous Cell Carcinoma",
+    "NUT Midline Carcinoma of the Head and Neck",
+    "Head and Neck Squamous Cell Carcinoma of Unknown Primary",
+    "Head and Neck",
+    "Basal Cell Adenocarcinoma",
+    "Parathyroid Carcinoma",
+    "Head and Neck Mucosal Melanoma",
+    "Salivary Carcinoma, Other",
+    "Sinonasal Squamous Cell Carcinoma",
+    "Salivary Adenocarcinoma",
+    "Sinonasal Adenocarcinoma",
+    "Head and Neck Carcinoma, Other",
+    "Larynx Squamous Cell Carcinoma",
+    "Carcinoma ex Pleomorphic Adenoma",
+    "Parathyroid Cancer",
+    "Salivary Carcinoma",
+    "Head and Neck Neuroendocrine Carcinoma",
+    "Pleomorphic Adenoma",
+    "Head and Neck Squamous Cell Carcinoma"
+  ],
+  "Head and Neck Carcinoma, Other": [
+    "Odontogenic Carcinoma",
+    "NUT Midline Carcinoma of the Head and Neck",
+    "Sinonasal Adenocarcinoma",
+    "Adenosquamous Carcinoma of the Tongue",
+    "Head and Neck Carcinoma, Other",
+    "Epithelial-Myoepithelial Carcinoma",
+    "Head and Neck Neuroendocrine Carcinoma",
+    "Sinonasal Undifferentiated Carcinoma",
+    "Clear Cell Odontogenic Carcinoma"
+  ],
+  "Head and Neck Mucosal Melanoma": [
+    "Head and Neck Mucosal Melanoma"
+  ],
+  "Head and Neck Neuroendocrine Carcinoma": [
+    "Head and Neck Neuroendocrine Carcinoma"
+  ],
+  "Head and Neck Squamous Cell Carcinoma": [
+    "Sinonasal Squamous Cell Carcinoma",
+    "Oropharynx Squamous Cell Carcinoma",
+    "Oral Cavity Squamous Cell Carcinoma",
+    "Hypopharynx Squamous Cell Carcinoma",
+    "Larynx Squamous Cell Carcinoma",
+    "Head and Neck Squamous Cell Carcinoma of Unknown Primary",
+    "Head and Neck Squamous Cell Carcinoma"
+  ],
+  "Head and Neck Squamous Cell Carcinoma of Unknown Primary": [
+    "Head and Neck Squamous Cell Carcinoma of Unknown Primary"
+  ],
+  "Hemangioblastoma": [
+    "Hemangioblastoma"
+  ],
+  "Hemangioma": [
+    "Hemangioma"
+  ],
+  "Hemangiopericytoma of the Central Nervous System": [
+    "Hemangiopericytoma of the Central Nervous System"
+  ],
+  "Hepatoblastoma": [
+    "Hepatoblastoma"
+  ],
+  "Hepatocellular Adenoma": [
+    "Hepatocellular Adenoma"
+  ],
+  "Hepatocellular Carcinoma": [
+    "Hepatocellular Carcinoma"
+  ],
+  "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma": [
+    "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma"
+  ],
+  "Hepatosplenic T-cell Lymphoma": [
+    "Hepatosplenic T-cell Lymphoma"
+  ],
+  "High-Grade B-Cell Lymphoma, NOS": [
+    "High-Grade B-Cell Lymphoma, NOS"
+  ],
+  "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements": [
+    "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements"
+  ],
+  "High-Grade Endometrial Stromal Sarcoma": [
+    "High-Grade Endometrial Stromal Sarcoma"
+  ],
+  "High-Grade Glioma, NOS": [
+    "High-Grade Glioma, NOS"
+  ],
+  "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum": [
+    "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum"
+  ],
+  "High-Grade Neuroendocrine Carcinoma of the Esophagus": [
+    "High-Grade Neuroendocrine Carcinoma of the Esophagus"
+  ],
+  "High-Grade Neuroendocrine Carcinoma of the Ovary": [
+    "High-Grade Neuroendocrine Carcinoma of the Ovary"
+  ],
+  "High-Grade Neuroendocrine Carcinoma of the Stomach": [
+    "High-Grade Neuroendocrine Carcinoma of the Stomach"
+  ],
+  "High-Grade Neuroepithelial Tumor": [
+    "High-Grade Neuroepithelial Tumor"
+  ],
+  "High-Grade Serous Fallopian Tube Cancer": [
+    "High-Grade Serous Fallopian Tube Cancer"
+  ],
+  "High-Grade Serous Ovarian Cancer": [
+    "High-Grade Serous Ovarian Cancer"
+  ],
+  "High-Grade Surface Osteosarcoma": [
+    "High-Grade Surface Osteosarcoma"
+  ],
+  "Histiocytic Dendritic Cell Sarcoma": [
+    "Histiocytic Dendritic Cell Sarcoma"
+  ],
+  "Histiocytic Sarcoma": [
+    "Histiocytic Sarcoma"
+  ],
+  "Histiocytic and Dendritic Cell Neoplasms": [
+    "Erdheim-Chester Disease",
+    "Histiocytic and Dendritic Cell Neoplasms",
+    "Rosai-Dorfman Disease",
+    "Langerhans Cell Histiocytosis",
+    "Indeterminate Dendritic Cell Tumor",
+    "Disseminated Juvenile Xanthogranuloma",
+    "Interdigitating Dendritic Cell Sarcoma",
+    "Histiocytic Sarcoma",
+    "Follicular Dendritic Cell Sarcoma",
+    "Langerhans Cell Sarcoma",
+    "Fibroblastic Reticular Cell Tumor"
+  ],
+  "Hodgkin Lymphoma": [
+    "Lymphocyte-Depleted Classical Hodgkin Lymphoma",
+    "Mixed Cellularity Classical Hodgkin Lymphoma",
+    "Nodular Lymphocyte-Predominant Hodgkin Lymphoma",
+    "Classical Hodgkin Lymphoma",
+    "Lymphocyte-Rich Classical Hodgkin Lymphoma",
+    "Nodular Sclerosis Classical Hodgkin Lymphoma",
+    "Hodgkin Lymphoma"
+  ],
+  "Hurthle Cell Thyroid Cancer": [
+    "Hurthle Cell Thyroid Cancer"
+  ],
+  "Hyalinizing Trabecular Adenoma of the Thyroid": [
+    "Hyalinizing Trabecular Adenoma of the Thyroid"
+  ],
+  "Hydroa Vacciniforme Like Lymphoproliferative Disorder": [
+    "Hydroa Vacciniforme Like Lymphoproliferative Disorder"
+  ],
+  "Hypopharynx Squamous Cell Carcinoma": [
+    "Hypopharynx Squamous Cell Carcinoma"
+  ],
+  "IgA": [
+    "IgA"
+  ],
+  "IgG": [
+    "IgG"
+  ],
+  "IgM": [
+    "IgM"
+  ],
+  "Immature Teratoma": [
+    "Immature Teratoma"
+  ],
+  "In Situ Follicular Neoplasia": [
+    "In Situ Follicular Neoplasia"
+  ],
+  "In Situ Mantle Cell Neoplasia": [
+    "In Situ Mantle Cell Neoplasia"
+  ],
+  "Indeterminate Dendritic Cell Tumor": [
+    "Indeterminate Dendritic Cell Tumor"
+  ],
+  "Indolent Systemic Mastocytosis": [
+    "Indolent Systemic Mastocytosis"
+  ],
+  "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract": [
+    "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract"
+  ],
+  "Infantile Fibrosarcoma": [
+    "Infantile Fibrosarcoma"
+  ],
+  "Infectious Mononucleosis PTLD": [
+    "Infectious Mononucleosis PTLD"
+  ],
+  "Inflammatory Breast Cancer": [
+    "Inflammatory Breast Cancer"
+  ],
+  "Inflammatory Myofibroblastic Bladder Tumor": [
+    "Inflammatory Myofibroblastic Bladder Tumor"
+  ],
+  "Inflammatory Myofibroblastic Lung Tumor": [
+    "Inflammatory Myofibroblastic Lung Tumor"
+  ],
+  "Inflammatory Myofibroblastic Tumor": [
+    "Inflammatory Myofibroblastic Tumor"
+  ],
+  "Interdigitating Dendritic Cell Sarcoma": [
+    "Interdigitating Dendritic Cell Sarcoma"
+  ],
+  "Intestinal Ampullary Carcinoma": [
+    "Intestinal Ampullary Carcinoma"
+  ],
+  "Intestinal Type Mucinous Carcinoma": [
+    "Intestinal Type Mucinous Carcinoma"
+  ],
+  "Intestinal Type Stomach Adenocarcinoma": [
+    "Intestinal Type Stomach Adenocarcinoma"
+  ],
+  "Intimal Sarcoma": [
+    "Intimal Sarcoma"
+  ],
+  "Intracholecystic Papillary Neoplasm": [
+    "Intracholecystic Papillary Neoplasm",
+    "Adenosquamous Carcinoma of the Gallbladder",
+    "Small Cell Gallbladder Carcinoma",
+    "Gallbladder Adenocarcinoma, NOS",
+    "Gallbladder Cancer"
+  ],
+  "Intraductal Oncocytic Papillary Neoplasm": [
+    "Intraductal Oncocytic Papillary Neoplasm"
+  ],
+  "Intraductal Papillary Mucinous Neoplasm": [
+    "Intraductal Papillary Mucinous Neoplasm"
+  ],
+  "Intraductal Papillary Neoplasm of the Bile Duct": [
+    "Perihilar Cholangiocarcinoma",
+    "Cholangiocarcinoma",
+    "Intrahepatic Cholangiocarcinoma",
+    "Intraductal Papillary Neoplasm of the Bile Duct",
+    "Extrahepatic Cholangiocarcinoma"
+  ],
+  "Intraductal Tubulopapillary Neoplasm": [
+    "Intraductal Tubulopapillary Neoplasm"
+  ],
+  "Intrahepatic Cholangiocarcinoma": [
+    "Intrahepatic Cholangiocarcinoma"
+  ],
+  "Intravascular Large B-Cell Lymphoma": [
+    "Intravascular Large B-Cell Lymphoma"
+  ],
+  "Invasive Breast Carcinoma": [
+    "Breast Invasive Cancer, NOS",
+    "Breast Invasive Mixed Mucinous Carcinoma",
+    "Invasive Breast Carcinoma",
+    "Breast Invasive Lobular Carcinoma",
+    "Breast Mixed Ductal and Lobular Carcinoma",
+    "Adenoid Cystic Breast Cancer",
+    "Solid Papillary Carcinoma of the Breast",
+    "Breast Invasive Carcinosarcoma, NOS",
+    "Breast Carcinoma with Signet Ring",
+    "Breast Invasive Ductal Carcinoma",
+    "Breast Invasive Carcinoma, NOS"
+  ],
+  "Invasive Hydatidiform Mole": [
+    "Invasive Hydatidiform Mole"
+  ],
+  "Inverted Urothelial Papilloma": [
+    "Inverted Urothelial Papilloma"
+  ],
+  "Juvenile Myelomonocytic Leukemia": [
+    "Juvenile Myelomonocytic Leukemia"
+  ],
+  "Juvenile Secretory Carcinoma of the Breast": [
+    "Juvenile Secretory Carcinoma of the Breast"
+  ],
+  "Kidney": [
+    "Renal Mucinous Tubular Spindle Cell Carcinoma",
+    "Renal Clear Cell Carcinoma with Sarcomatoid Features",
+    "Renal Angiomyolipoma",
+    "Renal Cell Carcinoma",
+    "Renal Clear Cell Carcinoma",
+    "Sarcomatoid Renal Cell Carcinoma",
+    "FH-Deficient Renal Cell Carcinoma",
+    "Renal Small Cell Carcinoma",
+    "Translocation-Associated Renal Cell Carcinoma",
+    "Chromophobe Renal Cell Carcinoma",
+    "Rhabdoid Cancer",
+    "Papillary Renal Cell Carcinoma",
+    "Renal Non-Clear Cell Carcinoma",
+    "Renal Medullary Carcinoma",
+    "Renal Neuroendocrine Tumor",
+    "Renal Oncocytoma",
+    "Wilms' Tumor",
+    "Clear Cell Sarcoma of Kidney",
+    "Kidney",
+    "Collecting Duct Renal Cell Carcinoma",
+    "Unclassified Renal Cell Carcinoma",
+    "Clear Cell Papillary Renal Cell Carcinoma"
+  ],
+  "Lacrimal Gland Tumor": [
+    "Adenoid Cystic Carcinoma of the Lacrimal Gland",
+    "Lacrimal Gland Tumor",
+    "Squamous Cell Carcinoma of the Lacrimal Gland"
+  ],
+  "Langerhans Cell Histiocytosis": [
+    "Langerhans Cell Histiocytosis"
+  ],
+  "Langerhans Cell Sarcoma": [
+    "Langerhans Cell Sarcoma"
+  ],
+  "Large B-Cell Lymphoma with IRF4 Rearrangement": [
+    "Large B-Cell Lymphoma with IRF4 Rearrangement"
+  ],
+  "Large Cell Lung Carcinoma": [
+    "Basaloid Large Cell Carcinoma of the Lung",
+    "Large Cell Lung Carcinoma With Rhabdoid Phenotype",
+    "Lymphoepithelioma-like Carcinoma of the Lung",
+    "Clear Cell Carcinoma of the Lung",
+    "Large Cell Lung Carcinoma",
+    "Giant Cell Carcinoma of the Lung"
+  ],
+  "Large Cell Lung Carcinoma With Rhabdoid Phenotype": [
+    "Large Cell Lung Carcinoma With Rhabdoid Phenotype"
+  ],
+  "Large Cell Neuroendocrine Carcinoma": [
+    "Large Cell Neuroendocrine Carcinoma"
+  ],
+  "Large Cell/Anaplastic Medulloblastoma": [
+    "Anaplastic Medulloblastoma, NOS",
+    "Anaplastic Medulloblastoma, Group 4",
+    "Anaplastic Medulloblastoma, Group 3",
+    "Anaplastic Medulloblastoma, Non-WNT, Non-SHH",
+    "Anaplastic Medulloblastoma, SHH Subtype",
+    "Large Cell/Anaplastic Medulloblastoma"
+  ],
+  "Larynx Squamous Cell Carcinoma": [
+    "Larynx Squamous Cell Carcinoma"
+  ],
+  "Leiomyoma": [
+    "Leiomyoma"
+  ],
+  "Leiomyosarcoma": [
+    "Leiomyosarcoma"
+  ],
+  "Lentigo Maligna Melanoma": [
+    "Lentigo Maligna Melanoma"
+  ],
+  "Liposarcoma": [
+    "Well-Differentiated Liposarcoma",
+    "Liposarcoma",
+    "Dedifferentiated Liposarcoma",
+    "Myxoid/Round-Cell Liposarcoma",
+    "Pleomorphic Liposarcoma"
+  ],
+  "Liver": [
+    "Hepatocellular Carcinoma",
+    "Malignant Nonepithelial Tumor of the Liver",
+    "Undifferentiated Embryonal Sarcoma of the Liver",
+    "Malignant Rhabdoid Tumor of the Liver",
+    "Hepatoblastoma",
+    "Fibrolamellar Carcinoma",
+    "Hepatocellular Adenoma",
+    "Liver Angiosarcoma",
+    "Liver",
+    "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma"
+  ],
+  "Liver Angiosarcoma": [
+    "Liver Angiosarcoma"
+  ],
+  "Low-Grade Central Osteosarcoma": [
+    "Low-Grade Central Osteosarcoma"
+  ],
+  "Low-Grade Endometrial Stromal Sarcoma": [
+    "Low-Grade Endometrial Stromal Sarcoma"
+  ],
+  "Low-Grade Fibromyxoid Sarcoma": [
+    "Low-Grade Fibromyxoid Sarcoma"
+  ],
+  "Low-Grade Glioma, NOS": [
+    "Low-Grade Glioma, NOS"
+  ],
+  "Low-Grade Neuroepithelial Tumor": [
+    "Low-Grade Neuroepithelial Tumor"
+  ],
+  "Low-Grade Serous Ovarian Cancer": [
+    "Low-Grade Serous Ovarian Cancer"
+  ],
+  "Low-grade Appendiceal Mucinous Neoplasm": [
+    "Low-grade Appendiceal Mucinous Neoplasm"
+  ],
+  "Lung": [
+    "Spindle Cell Carcinoma of the Lung",
+    "Lung Neuroendocrine Tumor",
+    "Lung Adenocarcinoma",
+    "Pleuropulmonary Blastoma",
+    "Inflammatory Myofibroblastic Lung Tumor",
+    "Small Cell Lung Cancer",
+    "Large Cell Lung Carcinoma With Rhabdoid Phenotype",
+    "Lung Squamous Cell Carcinoma",
+    "Pleomorphic Carcinoma of the Lung",
+    "Combined Small Cell Lung Carcinoma",
+    "Mucoepidermoid Carcinoma of the Lung",
+    "Lung Adenosquamous Carcinoma",
+    "Lung Adenocarcinoma In Situ",
+    "Sarcomatoid Carcinoma of the Lung",
+    "Poorly Differentiated Non-Small Cell Lung Cancer",
+    "Basaloid Large Cell Carcinoma of the Lung",
+    "Large Cell Lung Carcinoma",
+    "Salivary Gland-Type Tumor of the Lung",
+    "Ciliated Muconodular Papillary Tumor of the Lung",
+    "Non-Small Cell Lung Cancer",
+    "Pulmonary Lymphangiomyomatosis",
+    "Lung",
+    "Adenoid Cystic Carcinoma of the Lung",
+    "Atypical Lung Carcinoid",
+    "Lymphoepithelioma-like Carcinoma of the Lung",
+    "Lung Carcinoid",
+    "Clear Cell Carcinoma of the Lung",
+    "Large Cell Neuroendocrine Carcinoma",
+    "NUT Carcinoma of the Lung",
+    "Giant Cell Carcinoma of the Lung"
+  ],
+  "Lung Adenocarcinoma": [
+    "Lung Adenocarcinoma"
+  ],
+  "Lung Adenocarcinoma In Situ": [
+    "Lung Adenocarcinoma In Situ"
+  ],
+  "Lung Adenosquamous Carcinoma": [
+    "Lung Adenosquamous Carcinoma"
+  ],
+  "Lung Carcinoid": [
+    "Lung Carcinoid"
+  ],
+  "Lung Neuroendocrine Tumor": [
+    "Lung Carcinoid",
+    "Lung Neuroendocrine Tumor",
+    "Large Cell Neuroendocrine Carcinoma",
+    "Small Cell Lung Cancer",
+    "Atypical Lung Carcinoid"
+  ],
+  "Lung Squamous Cell Carcinoma": [
+    "Lung Squamous Cell Carcinoma"
+  ],
+  "Lymph": [],
+  "Lymphocyte-Depleted Classical Hodgkin Lymphoma": [
+    "Lymphocyte-Depleted Classical Hodgkin Lymphoma"
+  ],
+  "Lymphocyte-Rich Classical Hodgkin Lymphoma": [
+    "Lymphocyte-Rich Classical Hodgkin Lymphoma"
+  ],
+  "Lymphoepithelioma-like Carcinoma of the Lung": [
+    "Lymphoepithelioma-like Carcinoma of the Lung"
+  ],
+  "Lymphoid": [
+    "Lymphocyte-Depleted Classical Hodgkin Lymphoma",
+    "Hairy Cell Leukemia",
+    "Lymphoid",
+    "In Situ Mantle Cell Neoplasia",
+    "Mu Heavy-Chain Disease",
+    "Alpha Heavy-Chain Disease",
+    "Lymphoplasmacytic Lymphoma",
+    "Hairy Cell Leukemia-Variant",
+    "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+    "Amyloidosis",
+    "Plasma Cell Myeloma",
+    "Infectious Mononucleosis PTLD",
+    "Monoclonal Gammopathy of Undetermined Significance",
+    "Non-Hodgkin Lymphoma",
+    "Burkitt-Like Lymphoma with 11q Aberration",
+    "Extraosseous Plasmacytoma",
+    "Hydroa Vacciniforme Like Lymphoproliferative Disorder",
+    "Peripheral T-Cell lymphoma, NOS",
+    "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+    "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+    "Germinal Center B-Cell Type",
+    "T-Cell Prolymphocytic Leukemia",
+    "Marginal Zone Lymphoma",
+    "IgM",
+    "Monomorphic PTLD",
+    "Polymorphic PTLD",
+    "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+    "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue",
+    "T-Lymphoblastic Leukemia/Lymphoma",
+    "Diffuse Large B-Cell Lymphoma, NOS",
+    "Plasmablastic Lymphoma",
+    "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+    "Chronic Lymphoproliferative Disorder of NK Cells",
+    "Lymphoid Benign",
+    "Hepatosplenic T-cell Lymphoma",
+    "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+    "Plasmacytic Hyperplasia PTLD",
+    "Gamma Heavy-Chain Disease",
+    "Lymphoid Atypical",
+    "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma, NOS",
+    "Burkitt Lymphoma",
+    "Classical Hodgkin Lymphoma",
+    "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+    "Follicular Lymphoma",
+    "In Situ Follicular Neoplasia",
+    "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+    "DLBCL Associated with Chronic Inflammation",
+    "Solitary Plasmacytoma of Bone",
+    "Adult T-Cell Leukemia/Lymphoma",
+    "Florid Follicular Hyperplasia PTLD",
+    "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+    "HHV8 Positive DLBCL, NOS",
+    "Pediatric-Type Follicular Lymphoma",
+    "T-Cell Large Granular Lymphocytic Leukemia",
+    "Primary Cutaneous Follicle Center Lymphoma",
+    "Primary Cutaneous DLBCL, Leg Type",
+    "Mantle Cell Lymphoma",
+    "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+    "IgG",
+    "Primary Effusion Lymphoma",
+    "Nodular Sclerosis Classical Hodgkin Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy",
+    "ALK Positive Large B-Cell Lymphoma",
+    "IgA",
+    "B-Cell Prolymphocytic Leukemia",
+    "Monoclonal Immunoglobulin Deposition Diseases",
+    "Enteropathy-Associated T-Cell Lymphoma",
+    "Follicular T-Cell Lymphoma",
+    "Posttransplant Lymphoproliferative Disorders",
+    "Early T-Cell Precursor Lymphoblastic Leukemia",
+    "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+    "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+    "Anaplastic Large-Cell Lymphoma ALK Positive",
+    "Nodular Lymphocyte-Predominant Hodgkin Lymphoma",
+    "Lymphoid Neoplasm",
+    "Anaplastic Large-Cell Lymphoma ALK Negative",
+    "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+    "Mature B-Cell Neoplasms",
+    "EBV Positive Mucocutaneous Ulcer",
+    "Natural Killer",
+    "B-Lymphoblastic Leukemia/Lymphoma with t",
+    "Anaplastic Large Cell Lymphoma",
+    "Mature T and NK Neoplasms",
+    "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+    "Primary Mediastinal",
+    "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+    "Lymphocyte-Rich Classical Hodgkin Lymphoma",
+    "Large B-Cell Lymphoma with IRF4 Rearrangement",
+    "Classical Hodgkin Lymphoma PTLD",
+    "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+    "Activated B-cell Type",
+    "Nodal Marginal Zone Lymphoma",
+    "Intravascular Large B-Cell Lymphoma",
+    "Lymphomatoid Granulomatosis",
+    "Monoclonal B-Cell Lymphocytosis",
+    "Sezary Syndrome",
+    "Waldenstrom Macroglobulinemia",
+    "Splenic Marginal Zone Lymphoma",
+    "Monoclonal Immunoglobulin Deposition Diseases, Other",
+    "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract",
+    "Mixed Cellularity Classical Hodgkin Lymphoma",
+    "Angioimmunoblastic T-Cell Lymphoma",
+    "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma",
+    "Primary DLBCL of the central nervous system",
+    "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+    "Aggressive NK-Cell Leukemia",
+    "High-Grade B-Cell Lymphoma, NOS",
+    "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+    "Lymphomatoid Papulosis",
+    "Duodenal-Type Follicular Lymphoma",
+    "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+    "EBV Positive DLBCL, NOS",
+    "Hodgkin Lymphoma",
+    "Mycosis Fungoides"
+  ],
+  "Lymphoid Atypical": [
+    "Lymphoid Atypical"
+  ],
+  "Lymphoid Benign": [
+    "Lymphoid Benign"
+  ],
+  "Lymphoid Neoplasm": [
+    "Lymphocyte-Depleted Classical Hodgkin Lymphoma",
+    "Hairy Cell Leukemia",
+    "In Situ Mantle Cell Neoplasia",
+    "Mu Heavy-Chain Disease",
+    "Alpha Heavy-Chain Disease",
+    "Lymphoplasmacytic Lymphoma",
+    "Hairy Cell Leukemia-Variant",
+    "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+    "Amyloidosis",
+    "Plasma Cell Myeloma",
+    "Infectious Mononucleosis PTLD",
+    "Monoclonal Gammopathy of Undetermined Significance",
+    "Non-Hodgkin Lymphoma",
+    "Burkitt-Like Lymphoma with 11q Aberration",
+    "Extraosseous Plasmacytoma",
+    "Hydroa Vacciniforme Like Lymphoproliferative Disorder",
+    "Peripheral T-Cell lymphoma, NOS",
+    "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+    "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+    "Germinal Center B-Cell Type",
+    "T-Cell Prolymphocytic Leukemia",
+    "Marginal Zone Lymphoma",
+    "IgM",
+    "Monomorphic PTLD",
+    "Polymorphic PTLD",
+    "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+    "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue",
+    "T-Lymphoblastic Leukemia/Lymphoma",
+    "Diffuse Large B-Cell Lymphoma, NOS",
+    "Plasmablastic Lymphoma",
+    "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+    "Chronic Lymphoproliferative Disorder of NK Cells",
+    "Hodgkin Lymphoma",
+    "Hepatosplenic T-cell Lymphoma",
+    "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+    "Plasmacytic Hyperplasia PTLD",
+    "Gamma Heavy-Chain Disease",
+    "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma, NOS",
+    "Burkitt Lymphoma",
+    "Classical Hodgkin Lymphoma",
+    "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+    "Follicular Lymphoma",
+    "In Situ Follicular Neoplasia",
+    "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+    "DLBCL Associated with Chronic Inflammation",
+    "Adult T-Cell Leukemia/Lymphoma",
+    "Florid Follicular Hyperplasia PTLD",
+    "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+    "HHV8 Positive DLBCL, NOS",
+    "Pediatric-Type Follicular Lymphoma",
+    "T-Cell Large Granular Lymphocytic Leukemia",
+    "Primary Cutaneous Follicle Center Lymphoma",
+    "Primary Cutaneous DLBCL, Leg Type",
+    "Mantle Cell Lymphoma",
+    "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+    "IgG",
+    "Primary Effusion Lymphoma",
+    "Nodular Sclerosis Classical Hodgkin Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy",
+    "ALK Positive Large B-Cell Lymphoma",
+    "IgA",
+    "B-Cell Prolymphocytic Leukemia",
+    "Monoclonal Immunoglobulin Deposition Diseases",
+    "Enteropathy-Associated T-Cell Lymphoma",
+    "Follicular T-Cell Lymphoma",
+    "Posttransplant Lymphoproliferative Disorders",
+    "Early T-Cell Precursor Lymphoblastic Leukemia",
+    "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+    "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+    "Anaplastic Large-Cell Lymphoma ALK Positive",
+    "Nodular Lymphocyte-Predominant Hodgkin Lymphoma",
+    "Lymphoid Neoplasm",
+    "Anaplastic Large-Cell Lymphoma ALK Negative",
+    "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+    "Mature B-Cell Neoplasms",
+    "EBV Positive Mucocutaneous Ulcer",
+    "Natural Killer",
+    "B-Lymphoblastic Leukemia/Lymphoma with t",
+    "Anaplastic Large Cell Lymphoma",
+    "Mature T and NK Neoplasms",
+    "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+    "Primary Mediastinal",
+    "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+    "Lymphocyte-Rich Classical Hodgkin Lymphoma",
+    "Large B-Cell Lymphoma with IRF4 Rearrangement",
+    "Classical Hodgkin Lymphoma PTLD",
+    "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+    "Activated B-cell Type",
+    "Nodal Marginal Zone Lymphoma",
+    "Intravascular Large B-Cell Lymphoma",
+    "Lymphomatoid Granulomatosis",
+    "Monoclonal B-Cell Lymphocytosis",
+    "Sezary Syndrome",
+    "Waldenstrom Macroglobulinemia",
+    "Splenic Marginal Zone Lymphoma",
+    "Monoclonal Immunoglobulin Deposition Diseases, Other",
+    "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract",
+    "Mixed Cellularity Classical Hodgkin Lymphoma",
+    "Angioimmunoblastic T-Cell Lymphoma",
+    "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma",
+    "Primary DLBCL of the central nervous system",
+    "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+    "Aggressive NK-Cell Leukemia",
+    "High-Grade B-Cell Lymphoma, NOS",
+    "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+    "Lymphomatoid Papulosis",
+    "Duodenal-Type Follicular Lymphoma",
+    "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+    "EBV Positive DLBCL, NOS",
+    "Solitary Plasmacytoma of Bone",
+    "Mycosis Fungoides"
+  ],
+  "Lymphomatoid Granulomatosis": [
+    "Lymphomatoid Granulomatosis"
+  ],
+  "Lymphomatoid Papulosis": [
+    "Lymphomatoid Papulosis"
+  ],
+  "Lymphoplasmacytic Lymphoma": [
+    "Waldenstrom Macroglobulinemia",
+    "Lymphoplasmacytic Lymphoma"
+  ],
+  "MDS with Excess Blasts": [
+    "MDS with excess blasts-2",
+    "MDS with excess blasts-1",
+    "MDS with Excess Blasts"
+  ],
+  "MDS with Isolated Del": [
+    "MDS with Isolated Del"
+  ],
+  "MDS with Multilineage Dysplasia": [
+    "MDS with Multilineage Dysplasia"
+  ],
+  "MDS with Ring Sideroblasts": [
+    "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+    "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+    "MDS with Ring Sideroblasts"
+  ],
+  "MDS with Ring Sideroblasts and Multilineage Dysplasia": [
+    "MDS with Ring Sideroblasts and Multilineage Dysplasia"
+  ],
+  "MDS with Ring Sideroblasts and Single Lineage Dysplasia": [
+    "MDS with Ring Sideroblasts and Single Lineage Dysplasia"
+  ],
+  "MDS with Single Lineage Dysplasia": [
+    "MDS with Single Lineage Dysplasia"
+  ],
+  "MDS with excess blasts-1": [
+    "MDS with excess blasts-1"
+  ],
+  "MDS with excess blasts-2": [
+    "MDS with excess blasts-2"
+  ],
+  "MDS, Unclassifiable": [
+    "MDS, Unclassifiable"
+  ],
+  "MDS/MPN with Ring Sideroblasts and Thrombocytosis": [
+    "MDS/MPN with Ring Sideroblasts and Thrombocytosis"
+  ],
+  "MDS/MPN, Unclassifiable": [
+    "MDS/MPN, Unclassifiable"
+  ],
+  "Malignant Glomus Tumor": [
+    "Malignant Glomus Tumor"
+  ],
+  "Malignant Lymphoma": [
+    "Malignant Lymphoma"
+  ],
+  "Malignant Nonepithelial Tumor of the Liver": [
+    "Malignant Nonepithelial Tumor of the Liver"
+  ],
+  "Malignant Peripheral Nerve Sheath Tumor": [
+    "Malignant Peripheral Nerve Sheath Tumor"
+  ],
+  "Malignant Phyllodes Tumor of the Breast": [
+    "Malignant Phyllodes Tumor of the Breast"
+  ],
+  "Malignant Rhabdoid Tumor of the Liver": [
+    "Malignant Rhabdoid Tumor of the Liver"
+  ],
+  "Malignant Teratoma": [
+    "Malignant Teratoma"
+  ],
+  "Malignant Tumor": [
+    "Malignant Tumor"
+  ],
+  "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin": [
+    "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin"
+  ],
+  "Mantle Cell Lymphoma": [
+    "In Situ Mantle Cell Neoplasia",
+    "Mantle Cell Lymphoma"
+  ],
+  "Marginal Zone Lymphoma": [
+    "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue",
+    "Splenic Marginal Zone Lymphoma",
+    "Marginal Zone Lymphoma",
+    "Nodal Marginal Zone Lymphoma"
+  ],
+  "Mast Cell Leukemia": [
+    "Mast Cell Leukemia"
+  ],
+  "Mast Cell Sarcoma": [
+    "Mast Cell Sarcoma"
+  ],
+  "Mastocytosis": [
+    "Mastocytosis",
+    "Systemic Mastocytosis",
+    "Smoldering Systemic Mastocytosis",
+    "Mast Cell Sarcoma",
+    "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+    "Mast Cell Leukemia",
+    "Aggressive Systemic Mastocytosis",
+    "Cutaneous Mastocytosis",
+    "Indolent Systemic Mastocytosis"
+  ],
+  "Mature B-Cell Neoplasms": [
+    "Hairy Cell Leukemia",
+    "In Situ Mantle Cell Neoplasia",
+    "DLBCL Associated with Chronic Inflammation",
+    "Mu Heavy-Chain Disease",
+    "Pediatric-Type Follicular Lymphoma",
+    "Alpha Heavy-Chain Disease",
+    "Primary Cutaneous DLBCL, Leg Type",
+    "Lymphoplasmacytic Lymphoma",
+    "Mantle Cell Lymphoma",
+    "Primary Cutaneous Follicle Center Lymphoma",
+    "Hairy Cell Leukemia-Variant",
+    "IgG",
+    "Amyloidosis",
+    "Primary Effusion Lymphoma",
+    "Plasma Cell Myeloma",
+    "ALK Positive Large B-Cell Lymphoma",
+    "IgA",
+    "Monoclonal Immunoglobulin Deposition Diseases",
+    "B-Cell Prolymphocytic Leukemia",
+    "Monoclonal Gammopathy of Undetermined Significance",
+    "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+    "Burkitt-Like Lymphoma with 11q Aberration",
+    "Extraosseous Plasmacytoma",
+    "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+    "Mature B-Cell Neoplasms",
+    "Germinal Center B-Cell Type",
+    "EBV Positive Mucocutaneous Ulcer",
+    "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+    "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+    "Marginal Zone Lymphoma",
+    "IgM",
+    "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue",
+    "Diffuse Large B-Cell Lymphoma, NOS",
+    "Plasmablastic Lymphoma",
+    "Primary Mediastinal",
+    "Large B-Cell Lymphoma with IRF4 Rearrangement",
+    "Activated B-cell Type",
+    "Nodal Marginal Zone Lymphoma",
+    "Intravascular Large B-Cell Lymphoma",
+    "Lymphomatoid Granulomatosis",
+    "Monoclonal B-Cell Lymphocytosis",
+    "Waldenstrom Macroglobulinemia",
+    "Splenic Marginal Zone Lymphoma",
+    "Monoclonal Immunoglobulin Deposition Diseases, Other",
+    "Gamma Heavy-Chain Disease",
+    "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+    "Burkitt Lymphoma",
+    "Primary DLBCL of the central nervous system",
+    "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+    "Follicular Lymphoma",
+    "In Situ Follicular Neoplasia",
+    "High-Grade B-Cell Lymphoma, NOS",
+    "Duodenal-Type Follicular Lymphoma",
+    "Solitary Plasmacytoma of Bone",
+    "EBV Positive DLBCL, NOS",
+    "HHV8 Positive DLBCL, NOS"
+  ],
+  "Mature T and NK Neoplasms": [
+    "T-Cell Large Granular Lymphocytic Leukemia",
+    "Mature T and NK Neoplasms",
+    "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+    "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+    "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+    "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+    "Chronic Lymphoproliferative Disorder of NK Cells",
+    "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma",
+    "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+    "Sezary Syndrome",
+    "Hepatosplenic T-cell Lymphoma",
+    "Enteropathy-Associated T-Cell Lymphoma",
+    "Follicular T-Cell Lymphoma",
+    "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+    "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract",
+    "Anaplastic Large-Cell Lymphoma ALK Positive",
+    "Angioimmunoblastic T-Cell Lymphoma",
+    "Hydroa Vacciniforme Like Lymphoproliferative Disorder",
+    "Peripheral T-Cell lymphoma, NOS",
+    "Anaplastic Large-Cell Lymphoma ALK Negative",
+    "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+    "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+    "Aggressive NK-Cell Leukemia",
+    "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+    "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+    "Lymphomatoid Papulosis",
+    "T-Cell Prolymphocytic Leukemia",
+    "Adult T-Cell Leukemia/Lymphoma",
+    "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+    "Anaplastic Large Cell Lymphoma",
+    "Mycosis Fungoides"
+  ],
+  "Mature Teratoma": [
+    "Mature Teratoma"
+  ],
+  "Medullary Carcinoma of the Colon": [
+    "Medullary Carcinoma of the Colon"
+  ],
+  "Medullary Thyroid Cancer": [
+    "Medullary Thyroid Cancer"
+  ],
+  "Medulloblastoma": [
+    "Medulloblastoma, Group 4",
+    "Medulloblastoma, Group 3",
+    "Medulloblastoma",
+    "Medulloblastoma, SHH Subtype",
+    "Medulloblastoma, NOS",
+    "Medulloblastoma, Non-WNT, Non-SHH",
+    "Medulloblastoma, WNT Subtype"
+  ],
+  "Medulloblastoma with Extensive Nodularity": [
+    "Medulloblastoma with Extensive Nodularity, NOS",
+    "Medulloblastoma with Extensive Nodularity, SHH Subtype",
+    "Medulloblastoma with Extensive Nodularity"
+  ],
+  "Medulloblastoma with Extensive Nodularity, NOS": [
+    "Medulloblastoma with Extensive Nodularity, NOS"
+  ],
+  "Medulloblastoma with Extensive Nodularity, SHH Subtype": [
+    "Medulloblastoma with Extensive Nodularity, SHH Subtype"
+  ],
+  "Medulloblastoma, Group 3": [
+    "Medulloblastoma, Group 3"
+  ],
+  "Medulloblastoma, Group 4": [
+    "Medulloblastoma, Group 4"
+  ],
+  "Medulloblastoma, NOS": [
+    "Medulloblastoma, NOS"
+  ],
+  "Medulloblastoma, Non-WNT, Non-SHH": [
+    "Medulloblastoma, Group 4",
+    "Medulloblastoma, Non-WNT, Non-SHH",
+    "Medulloblastoma, Group 3"
+  ],
+  "Medulloblastoma, SHH Subtype": [
+    "Medulloblastoma, SHH Subtype"
+  ],
+  "Medulloblastoma, WNT Subtype": [
+    "Medulloblastoma, WNT Subtype"
+  ],
+  "Medulloepithelioma": [
+    "Medulloepithelioma"
+  ],
+  "Medullomyoblastoma": [
+    "Medullomyoblastoma"
+  ],
+  "Melanocytoma": [
+    "Melanocytoma"
+  ],
+  "Melanoma": [
+    "Congenital Nevus",
+    "Spitzoid Melanoma",
+    "Melanoma",
+    "Cutaneous Melanoma",
+    "Lentigo Maligna Melanoma",
+    "Acral Melanoma",
+    "Melanoma of Unknown Primary",
+    "Desmoplastic Melanoma"
+  ],
+  "Melanoma of Unknown Primary": [
+    "Melanoma of Unknown Primary"
+  ],
+  "Melanotic Medulloblastoma": [
+    "Melanotic Medulloblastoma"
+  ],
+  "Melanotic Schwannoma": [
+    "Melanotic Schwannoma"
+  ],
+  "Meningioma": [
+    "Meningioma"
+  ],
+  "Meningothelial Tumor": [
+    "Clear cell Meningioma",
+    "Meningothelial Tumor",
+    "Papillary Meningioma",
+    "Rhabdoid Meningioma",
+    "Hemangiopericytoma of the Central Nervous System",
+    "Solitary Fibrous Tumor of the Central Nervous System",
+    "Atypical Meningioma",
+    "Meningioma",
+    "Anaplastic Meningioma",
+    "Chordoid Meningioma"
+  ],
+  "Merkel Cell Carcinoma": [
+    "Merkel Cell Carcinoma"
+  ],
+  "Mesenchymal Chondrosarcoma": [
+    "Mesenchymal Chondrosarcoma"
+  ],
+  "Mesenchymal Chondrosarcoma of the CNS": [
+    "Mesenchymal Chondrosarcoma of the CNS"
+  ],
+  "Mesonephric Carcinoma": [
+    "Mesonephric Carcinoma"
+  ],
+  "Metaplastic Adenocarcinoma with Spindle Cell Differentiation": [
+    "Metaplastic Adenocarcinoma with Spindle Cell Differentiation"
+  ],
+  "Metaplastic Adenosquamous Carcinoma": [
+    "Metaplastic Adenosquamous Carcinoma"
+  ],
+  "Metaplastic Breast Cancer": [
+    "Carcinoma with Osseous Metaplasia",
+    "Metaplastic Squamous Cell Carcinoma",
+    "Epithelial Type Metaplastic Breast Cancer",
+    "Metaplastic Adenosquamous Carcinoma",
+    "Carcinoma with Chondroid Metaplasia",
+    "Metaplastic Adenocarcinoma with Spindle Cell Differentiation",
+    "Mixed Type Metaplastic Breast Cancer",
+    "Metaplastic Breast Cancer",
+    "Metaplastic Carcinosarcoma"
+  ],
+  "Metaplastic Carcinosarcoma": [
+    "Metaplastic Carcinosarcoma"
+  ],
+  "Metaplastic Squamous Cell Carcinoma": [
+    "Metaplastic Squamous Cell Carcinoma"
+  ],
+  "Microcystic Adnexal Carcinoma": [
+    "Microcystic Adnexal Carcinoma"
+  ],
+  "Miscellaneous Brain Tumor": [
+    "Malignant Tumor",
+    "Low-Grade Neuroepithelial Tumor",
+    "Mesenchymal Chondrosarcoma of the CNS",
+    "Primary Brain Tumor",
+    "Primary Neuroepithelial Tumor",
+    "Malignant Lymphoma",
+    "Hemangioblastoma",
+    "High-Grade Neuroepithelial Tumor",
+    "Miscellaneous Brain Tumor"
+  ],
+  "Miscellaneous Neuroepithelial Tumor": [
+    "Miscellaneous Neuroepithelial Tumor",
+    "Desmoplastic Infantile Ganglioglioma",
+    "Papillary Glioneuronal Tumor",
+    "Angiocentric Glioma",
+    "Astroblastoma",
+    "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle",
+    "Central Neurocytoma",
+    "Extraventricular Neurocytoma",
+    "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease",
+    "Chordoid Glioma of the Third Ventricle",
+    "Cerebellar Liponeurocytoma",
+    "Desmoplastic Infantile Astrocytoma"
+  ],
+  "Mixed Ampullary Carcinoma": [
+    "Mixed Ampullary Carcinoma"
+  ],
+  "Mixed Cancer Types": [
+    "Mixed Cancer Types"
+  ],
+  "Mixed Cellularity Classical Hodgkin Lymphoma": [
+    "Mixed Cellularity Classical Hodgkin Lymphoma"
+  ],
+  "Mixed Cervical Carcinoma": [
+    "Mixed Cervical Carcinoma"
+  ],
+  "Mixed Germ Cell Tumor": [
+    "Mixed Germ Cell Tumor"
+  ],
+  "Mixed Ovarian Carcinoma": [
+    "Mixed Ovarian Carcinoma"
+  ],
+  "Mixed Phenotype Acute Leukemia with t": [
+    "Mixed Phenotype Acute Leukemia with t"
+  ],
+  "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS": [
+    "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS"
+  ],
+  "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS": [
+    "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS"
+  ],
+  "Mixed Type Metaplastic Breast Cancer": [
+    "Carcinoma with Osseous Metaplasia",
+    "Mixed Type Metaplastic Breast Cancer",
+    "Carcinoma with Chondroid Metaplasia",
+    "Metaplastic Carcinosarcoma"
+  ],
+  "Molar Pregnancy": [
+    "Invasive Hydatidiform Mole",
+    "Molar Pregnancy",
+    "Complete Hydatidiform Mole",
+    "Partial Hydatidiform Mole"
+  ],
+  "Monoclonal B-Cell Lymphocytosis": [
+    "Monoclonal B-Cell Lymphocytosis"
+  ],
+  "Monoclonal Gammopathy of Undetermined Significance": [
+    "Monoclonal Gammopathy of Undetermined Significance",
+    "IgM",
+    "IgG",
+    "IgA"
+  ],
+  "Monoclonal Immunoglobulin Deposition Diseases": [
+    "Monoclonal Immunoglobulin Deposition Diseases, Other",
+    "Amyloidosis",
+    "Monoclonal Immunoglobulin Deposition Diseases"
+  ],
+  "Monoclonal Immunoglobulin Deposition Diseases, Other": [
+    "Monoclonal Immunoglobulin Deposition Diseases, Other"
+  ],
+  "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma": [
+    "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma"
+  ],
+  "Monomorphic PTLD": [
+    "Monomorphic PTLD"
+  ],
+  "Mu Heavy-Chain Disease": [
+    "Mu Heavy-Chain Disease"
+  ],
+  "Mucinous Adenocarcinoma of the Appendix": [
+    "Mucinous Adenocarcinoma of the Appendix"
+  ],
+  "Mucinous Adenocarcinoma of the Colon and Rectum": [
+    "Mucinous Adenocarcinoma of the Colon and Rectum"
+  ],
+  "Mucinous Adenocarcinoma of the Vulva/Vagina": [
+    "Mucinous Adenocarcinoma of the Vulva/Vagina"
+  ],
+  "Mucinous Borderline Ovarian Tumor": [
+    "Mucinous Borderline Ovarian Tumor"
+  ],
+  "Mucinous Carcinoma": [
+    "Mucinous Carcinoma",
+    "Gastric Type Mucinous Carcinoma",
+    "Signet Ring Mucinous Carcinoma",
+    "Intestinal Type Mucinous Carcinoma"
+  ],
+  "Mucinous Cystic Neoplasm": [
+    "Mucinous Cystic Neoplasm"
+  ],
+  "Mucinous Ovarian Cancer": [
+    "Mucinous Ovarian Cancer"
+  ],
+  "Mucinous Stomach Adenocarcinoma": [
+    "Mucinous Stomach Adenocarcinoma"
+  ],
+  "Mucoepidermoid Carcinoma": [
+    "Mucoepidermoid Carcinoma"
+  ],
+  "Mucoepidermoid Carcinoma of the Lung": [
+    "Mucoepidermoid Carcinoma of the Lung"
+  ],
+  "Mucosal Melanoma of the Esophagus": [
+    "Mucosal Melanoma of the Esophagus"
+  ],
+  "Mucosal Melanoma of the Urethra": [
+    "Mucosal Melanoma of the Urethra"
+  ],
+  "Mucosal Melanoma of the Vulva/Vagina": [
+    "Mucosal Melanoma of the Vulva/Vagina"
+  ],
+  "Mycosis Fungoides": [
+    "Mycosis Fungoides"
+  ],
+  "Myelodysplastic Syndromes": [
+    "Myelodysplastic Syndromes",
+    "Refractory Cytopenia of Childhood",
+    "MDS with excess blasts-1",
+    "MDS with Isolated Del",
+    "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+    "MDS with Single Lineage Dysplasia",
+    "MDS, Unclassifiable",
+    "MDS with Ring Sideroblasts",
+    "MDS with excess blasts-2",
+    "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+    "MDS with Excess Blasts",
+    "MDS with Multilineage Dysplasia"
+  ],
+  "Myelodysplastic/Myeloproliferative Neoplasms": [
+    "Juvenile Myelomonocytic Leukemia",
+    "Chronic Myelomonocytic Leukemia",
+    "Atypical Chronic Myeloid Leukemia, BCR-ABL1-",
+    "MDS/MPN, Unclassifiable",
+    "Chronic Myelomonocytic Leukemia-1",
+    "Chronic Myelomonocytic Leukemia-0",
+    "Myelodysplastic/Myeloproliferative Neoplasms",
+    "Chronic Myelomonocytic Leukemia-2",
+    "MDS/MPN with Ring Sideroblasts and Thrombocytosis"
+  ],
+  "Myeloid": [
+    "Acute Basophilic Leukemia",
+    "Chronic Eosinophilic Leukemia, NOS",
+    "Mast Cell Sarcoma",
+    "Refractory Cytopenia of Childhood",
+    "AML with Mutated RUNX1",
+    "Therapy-Related Myelodysplastic Syndrome",
+    "Mast Cell Leukemia",
+    "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement",
+    "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement",
+    "Myeloproliferative Neoplasms, Unclassifiable",
+    "Systemic Mastocytosis",
+    "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+    "Acute Monoblastic/Monocytic Leukemia",
+    "Disseminated Juvenile Xanthogranuloma",
+    "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+    "Myeloid Sarcoma",
+    "AML with Variant RARA translocation",
+    "Myeloid Neoplasm",
+    "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+    "Myelodysplastic/Myeloproliferative Neoplasms",
+    "Acute Megakaryoblastic Leukemia",
+    "Myeloid Benign",
+    "Fibroblastic Reticular Cell Tumor",
+    "Indolent Systemic Mastocytosis",
+    "MDS with Multilineage Dysplasia",
+    "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS",
+    "Myelodysplastic Syndromes",
+    "Langerhans Cell Histiocytosis",
+    "Smoldering Systemic Mastocytosis",
+    "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+    "Chronic Myelomonocytic Leukemia",
+    "Atypical Chronic Myeloid Leukemia, BCR-ABL1-",
+    "AML with Mutated NPM1",
+    "Chronic Myelomonocytic Leukemia-1",
+    "AML with BCR-ABL1",
+    "AML without Maturation",
+    "Aggressive Systemic Mastocytosis",
+    "AML with Recurrent Genetic Abnormalities",
+    "Mixed Phenotype Acute Leukemia with t",
+    "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2",
+    "Rosai-Dorfman Disease",
+    "Acute Myeloid Leukemia",
+    "MDS with excess blasts-1",
+    "Juvenile Myelomonocytic Leukemia",
+    "Chronic Myeloid Leukemia, BCR-ABL1+",
+    "Chronic Neutrophilic Leukemia",
+    "APL with PML-RARA",
+    "MDS/MPN with Ring Sideroblasts and Thrombocytosis",
+    "Primary Myelofibrosis,Overt Fibrotic Stage",
+    "Histiocytic and Dendritic Cell Neoplasms",
+    "Chronic Myelogenous Leukemia",
+    "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS",
+    "MDS, Unclassifiable",
+    "Histiocytic Sarcoma",
+    "Therapy-Related Myeloid Neoplasms",
+    "MDS/MPN, Unclassifiable",
+    "Acute Panmyelosis with Myelofibrosis",
+    "AML with Maturation",
+    "Myeloid Atypical",
+    "Primary Myelofibrosis",
+    "AML with Biallelic Mutations of CEBPA",
+    "Myeloid",
+    "Myeloid Neoplasms with Germ Line Predisposition",
+    "Erdheim-Chester Disease",
+    "Essential Thrombocythemia",
+    "AML, NOS",
+    "AML",
+    "Pure Erythroid Leukemia",
+    "Acute Undifferentiated Leukemia",
+    "Interdigitating Dendritic Cell Sarcoma",
+    "Follicular Dendritic Cell Sarcoma",
+    "Mastocytosis",
+    "Myeloid Proliferations Related to Down Syndrome",
+    "Myeloproliferative Neoplasms",
+    "MDS with Isolated Del",
+    "AML with t",
+    "AML with Minimal Differentiation",
+    "AML with inv",
+    "Acute Myelomonocytic Leukemia",
+    "Primary Myelofibrosis, Prefibrotic/Early Stage",
+    "MDS with Single Lineage Dysplasia",
+    "Chronic Myelomonocytic Leukemia-2",
+    "Polycythemia Vera",
+    "Therapy-Related Acute Myeloid Leukemia",
+    "Langerhans Cell Sarcoma",
+    "Polycythaemia Vera Myelofibrosis",
+    "Myeloid Leukemia Associated with Down Syndrome",
+    "Indeterminate Dendritic Cell Tumor",
+    "Acute Leukemias of Ambiguous Lineage",
+    "MDS with Ring Sideroblasts",
+    "Transient Abnormal Myelopoiesis",
+    "MDS with excess blasts-2",
+    "AML with Myelodysplasia-Related Changes",
+    "Chronic Myelomonocytic Leukemia-0",
+    "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement",
+    "Myeloid/Lymphoid Neoplasms with PCM1-JAK2",
+    "Essential Thrombocythemia Myelofibrosis",
+    "Cutaneous Mastocytosis",
+    "MDS with Excess Blasts"
+  ],
+  "Myeloid Atypical": [
+    "Myeloid Atypical"
+  ],
+  "Myeloid Benign": [
+    "Myeloid Benign"
+  ],
+  "Myeloid Leukemia Associated with Down Syndrome": [
+    "Myeloid Leukemia Associated with Down Syndrome"
+  ],
+  "Myeloid Neoplasm": [
+    "Acute Basophilic Leukemia",
+    "Chronic Eosinophilic Leukemia, NOS",
+    "Mast Cell Sarcoma",
+    "Refractory Cytopenia of Childhood",
+    "AML with Mutated RUNX1",
+    "Therapy-Related Myelodysplastic Syndrome",
+    "Mast Cell Leukemia",
+    "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement",
+    "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement",
+    "Myeloproliferative Neoplasms, Unclassifiable",
+    "Systemic Mastocytosis",
+    "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+    "Acute Monoblastic/Monocytic Leukemia",
+    "Disseminated Juvenile Xanthogranuloma",
+    "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+    "Myeloid Sarcoma",
+    "AML with Variant RARA translocation",
+    "Myeloid Neoplasm",
+    "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+    "Myelodysplastic/Myeloproliferative Neoplasms",
+    "Acute Megakaryoblastic Leukemia",
+    "Fibroblastic Reticular Cell Tumor",
+    "Indolent Systemic Mastocytosis",
+    "MDS with Multilineage Dysplasia",
+    "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS",
+    "Myelodysplastic Syndromes",
+    "Langerhans Cell Histiocytosis",
+    "Smoldering Systemic Mastocytosis",
+    "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+    "Chronic Myelomonocytic Leukemia",
+    "Atypical Chronic Myeloid Leukemia, BCR-ABL1-",
+    "AML with Mutated NPM1",
+    "Chronic Myelomonocytic Leukemia-1",
+    "AML with BCR-ABL1",
+    "AML without Maturation",
+    "Aggressive Systemic Mastocytosis",
+    "AML with Recurrent Genetic Abnormalities",
+    "Mixed Phenotype Acute Leukemia with t",
+    "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2",
+    "Rosai-Dorfman Disease",
+    "Acute Myeloid Leukemia",
+    "MDS with excess blasts-1",
+    "Juvenile Myelomonocytic Leukemia",
+    "Chronic Myeloid Leukemia, BCR-ABL1+",
+    "Chronic Neutrophilic Leukemia",
+    "APL with PML-RARA",
+    "MDS/MPN with Ring Sideroblasts and Thrombocytosis",
+    "Primary Myelofibrosis,Overt Fibrotic Stage",
+    "Histiocytic and Dendritic Cell Neoplasms",
+    "Chronic Myelogenous Leukemia",
+    "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS",
+    "MDS, Unclassifiable",
+    "Histiocytic Sarcoma",
+    "Therapy-Related Myeloid Neoplasms",
+    "MDS/MPN, Unclassifiable",
+    "Acute Panmyelosis with Myelofibrosis",
+    "AML with Maturation",
+    "Primary Myelofibrosis",
+    "AML with Biallelic Mutations of CEBPA",
+    "Myeloid Neoplasms with Germ Line Predisposition",
+    "Erdheim-Chester Disease",
+    "Essential Thrombocythemia",
+    "AML, NOS",
+    "AML",
+    "Pure Erythroid Leukemia",
+    "Acute Undifferentiated Leukemia",
+    "Interdigitating Dendritic Cell Sarcoma",
+    "Follicular Dendritic Cell Sarcoma",
+    "Mastocytosis",
+    "Myeloid Proliferations Related to Down Syndrome",
+    "Myeloproliferative Neoplasms",
+    "MDS with Isolated Del",
+    "AML with t",
+    "AML with Minimal Differentiation",
+    "AML with inv",
+    "Acute Myelomonocytic Leukemia",
+    "Primary Myelofibrosis, Prefibrotic/Early Stage",
+    "MDS with Single Lineage Dysplasia",
+    "Chronic Myelomonocytic Leukemia-2",
+    "Polycythemia Vera",
+    "Therapy-Related Acute Myeloid Leukemia",
+    "Langerhans Cell Sarcoma",
+    "Polycythaemia Vera Myelofibrosis",
+    "Myeloid Leukemia Associated with Down Syndrome",
+    "Indeterminate Dendritic Cell Tumor",
+    "Acute Leukemias of Ambiguous Lineage",
+    "MDS with Ring Sideroblasts",
+    "Transient Abnormal Myelopoiesis",
+    "MDS with excess blasts-2",
+    "AML with Myelodysplasia-Related Changes",
+    "Chronic Myelomonocytic Leukemia-0",
+    "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement",
+    "Myeloid/Lymphoid Neoplasms with PCM1-JAK2",
+    "Essential Thrombocythemia Myelofibrosis",
+    "Cutaneous Mastocytosis",
+    "MDS with Excess Blasts"
+  ],
+  "Myeloid Neoplasms with Germ Line Predisposition": [
+    "Myeloid Neoplasms with Germ Line Predisposition"
+  ],
+  "Myeloid Proliferations Related to Down Syndrome": [
+    "Myeloid Proliferations Related to Down Syndrome",
+    "Transient Abnormal Myelopoiesis",
+    "Myeloid Leukemia Associated with Down Syndrome"
+  ],
+  "Myeloid Sarcoma": [
+    "Myeloid Sarcoma"
+  ],
+  "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2": [
+    "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement",
+    "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2",
+    "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement",
+    "Myeloid/Lymphoid Neoplasms with PCM1-JAK2",
+    "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement"
+  ],
+  "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement": [
+    "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement"
+  ],
+  "Myeloid/Lymphoid Neoplasms with PCM1-JAK2": [
+    "Myeloid/Lymphoid Neoplasms with PCM1-JAK2"
+  ],
+  "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement": [
+    "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement"
+  ],
+  "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement": [
+    "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement"
+  ],
+  "Myeloproliferative Neoplasms": [
+    "Polycythaemia Vera Myelofibrosis",
+    "Essential Thrombocythemia",
+    "Myeloproliferative Neoplasms",
+    "Chronic Eosinophilic Leukemia, NOS",
+    "Chronic Myelogenous Leukemia",
+    "Chronic Myeloid Leukemia, BCR-ABL1+",
+    "Primary Myelofibrosis",
+    "Chronic Neutrophilic Leukemia",
+    "Primary Myelofibrosis, Prefibrotic/Early Stage",
+    "Primary Myelofibrosis,Overt Fibrotic Stage",
+    "Polycythemia Vera",
+    "Essential Thrombocythemia Myelofibrosis",
+    "Myeloproliferative Neoplasms, Unclassifiable"
+  ],
+  "Myeloproliferative Neoplasms, Unclassifiable": [
+    "Myeloproliferative Neoplasms, Unclassifiable"
+  ],
+  "Myoepithelial Carcinoma": [
+    "Myoepithelial Carcinoma"
+  ],
+  "Myofibroma": [
+    "Myofibroma"
+  ],
+  "Myofibromatosis": [
+    "Myofibromatosis"
+  ],
+  "Myopericytoma": [
+    "Myopericytoma"
+  ],
+  "Myxofibrosarcoma": [
+    "Myxofibrosarcoma"
+  ],
+  "Myxoid Chondrosarcoma": [
+    "Myxoid Chondrosarcoma"
+  ],
+  "Myxoid/Round-Cell Liposarcoma": [
+    "Myxoid/Round-Cell Liposarcoma"
+  ],
+  "Myxoma": [
+    "Myxoma",
+    "Ossifying Fibromyxoid Tumor"
+  ],
+  "Myxopapillary Ependymoma": [
+    "Myxopapillary Ependymoma"
+  ],
+  "NUT Carcinoma of the Lung": [
+    "NUT Carcinoma of the Lung"
+  ],
+  "NUT Midline Carcinoma of the Head and Neck": [
+    "NUT Midline Carcinoma of the Head and Neck"
+  ],
+  "Nasopharyngeal Carcinoma": [
+    "Nasopharyngeal Carcinoma"
+  ],
+  "Natural Killer": [
+    "Natural Killer"
+  ],
+  "Nerve Sheath Tumor": [
+    "Cellular Schwannoma",
+    "Malignant Peripheral Nerve Sheath Tumor",
+    "Melanotic Schwannoma",
+    "Schwannoma",
+    "Neurofibroma",
+    "Nerve Sheath Tumor"
+  ],
+  "Neuroblastoma": [
+    "Neuroblastoma"
+  ],
+  "Neuroendocrine Carcinoma, NOS": [
+    "Neuroendocrine Carcinoma, NOS"
+  ],
+  "Neuroendocrine Tumor, NOS": [
+    "Neuroendocrine Tumor, NOS"
+  ],
+  "Neurofibroma": [
+    "Neurofibroma"
+  ],
+  "Nodal Marginal Zone Lymphoma": [
+    "Nodal Marginal Zone Lymphoma"
+  ],
+  "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype": [
+    "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype"
+  ],
+  "Nodular Lymphocyte-Predominant Hodgkin Lymphoma": [
+    "Nodular Lymphocyte-Predominant Hodgkin Lymphoma"
+  ],
+  "Nodular Sclerosis Classical Hodgkin Lymphoma": [
+    "Nodular Sclerosis Classical Hodgkin Lymphoma"
+  ],
+  "Non-Hodgkin Lymphoma": [
+    "Hairy Cell Leukemia",
+    "In Situ Mantle Cell Neoplasia",
+    "Mu Heavy-Chain Disease",
+    "Alpha Heavy-Chain Disease",
+    "Lymphoplasmacytic Lymphoma",
+    "Hairy Cell Leukemia-Variant",
+    "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+    "Amyloidosis",
+    "Plasma Cell Myeloma",
+    "Monoclonal Gammopathy of Undetermined Significance",
+    "Non-Hodgkin Lymphoma",
+    "Burkitt-Like Lymphoma with 11q Aberration",
+    "Extraosseous Plasmacytoma",
+    "Hydroa Vacciniforme Like Lymphoproliferative Disorder",
+    "Peripheral T-Cell lymphoma, NOS",
+    "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+    "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+    "Germinal Center B-Cell Type",
+    "T-Cell Prolymphocytic Leukemia",
+    "Marginal Zone Lymphoma",
+    "IgM",
+    "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+    "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue",
+    "Diffuse Large B-Cell Lymphoma, NOS",
+    "Plasmablastic Lymphoma",
+    "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+    "Chronic Lymphoproliferative Disorder of NK Cells",
+    "Hepatosplenic T-cell Lymphoma",
+    "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+    "Gamma Heavy-Chain Disease",
+    "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+    "Burkitt Lymphoma",
+    "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+    "Follicular Lymphoma",
+    "In Situ Follicular Neoplasia",
+    "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+    "DLBCL Associated with Chronic Inflammation",
+    "Adult T-Cell Leukemia/Lymphoma",
+    "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+    "HHV8 Positive DLBCL, NOS",
+    "Pediatric-Type Follicular Lymphoma",
+    "T-Cell Large Granular Lymphocytic Leukemia",
+    "Primary Cutaneous Follicle Center Lymphoma",
+    "Primary Cutaneous DLBCL, Leg Type",
+    "Mantle Cell Lymphoma",
+    "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma",
+    "IgG",
+    "Primary Effusion Lymphoma",
+    "ALK Positive Large B-Cell Lymphoma",
+    "IgA",
+    "Monoclonal Immunoglobulin Deposition Diseases",
+    "B-Cell Prolymphocytic Leukemia",
+    "Enteropathy-Associated T-Cell Lymphoma",
+    "Follicular T-Cell Lymphoma",
+    "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+    "Anaplastic Large-Cell Lymphoma ALK Positive",
+    "Anaplastic Large-Cell Lymphoma ALK Negative",
+    "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+    "Mature B-Cell Neoplasms",
+    "EBV Positive Mucocutaneous Ulcer",
+    "Anaplastic Large Cell Lymphoma",
+    "Mature T and NK Neoplasms",
+    "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+    "Primary Mediastinal",
+    "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+    "Large B-Cell Lymphoma with IRF4 Rearrangement",
+    "Activated B-cell Type",
+    "Nodal Marginal Zone Lymphoma",
+    "Intravascular Large B-Cell Lymphoma",
+    "Lymphomatoid Granulomatosis",
+    "Monoclonal B-Cell Lymphocytosis",
+    "Sezary Syndrome",
+    "Waldenstrom Macroglobulinemia",
+    "Splenic Marginal Zone Lymphoma",
+    "Monoclonal Immunoglobulin Deposition Diseases, Other",
+    "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract",
+    "Angioimmunoblastic T-Cell Lymphoma",
+    "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+    "Primary DLBCL of the central nervous system",
+    "Aggressive NK-Cell Leukemia",
+    "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+    "High-Grade B-Cell Lymphoma, NOS",
+    "Lymphomatoid Papulosis",
+    "Duodenal-Type Follicular Lymphoma",
+    "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+    "EBV Positive DLBCL, NOS",
+    "Solitary Plasmacytoma of Bone",
+    "Mycosis Fungoides"
+  ],
+  "Non-Seminomatous Germ Cell Tumor": [
+    "Yolk Sac Tumor",
+    "Choriocarcinoma",
+    "Embryonal Carcinoma",
+    "Germ Cell Tumor with Somatic-Type Malignancy",
+    "Teratoma",
+    "Mixed Germ Cell Tumor",
+    "Non-Seminomatous Germ Cell Tumor"
+  ],
+  "Non-Small Cell Lung Cancer": [
+    "Spindle Cell Carcinoma of the Lung",
+    "Lung Adenocarcinoma",
+    "Lung Squamous Cell Carcinoma",
+    "Large Cell Lung Carcinoma With Rhabdoid Phenotype",
+    "Pleomorphic Carcinoma of the Lung",
+    "Mucoepidermoid Carcinoma of the Lung",
+    "Lung Adenosquamous Carcinoma",
+    "Poorly Differentiated Non-Small Cell Lung Cancer",
+    "Salivary Gland-Type Tumor of the Lung",
+    "Large Cell Lung Carcinoma",
+    "Basaloid Large Cell Carcinoma of the Lung",
+    "Ciliated Muconodular Papillary Tumor of the Lung",
+    "Non-Small Cell Lung Cancer",
+    "Adenoid Cystic Carcinoma of the Lung",
+    "Lymphoepithelioma-like Carcinoma of the Lung",
+    "Clear Cell Carcinoma of the Lung",
+    "NUT Carcinoma of the Lung",
+    "Giant Cell Carcinoma of the Lung"
+  ],
+  "Ocular Melanoma": [
+    "Conjunctival Melanoma",
+    "Uveal Melanoma",
+    "Ocular Melanoma"
+  ],
+  "Odontogenic Carcinoma": [
+    "Odontogenic Carcinoma",
+    "Clear Cell Odontogenic Carcinoma"
+  ],
+  "Olfactory Neuroblastoma": [
+    "Olfactory Neuroblastoma"
+  ],
+  "Oligoastrocytoma": [
+    "Oligoastrocytoma"
+  ],
+  "Oligodendroglioma": [
+    "Oligodendroglioma"
+  ],
+  "Oncocytic Adenoma of the Thyroid": [
+    "Oncocytic Adenoma of the Thyroid"
+  ],
+  "Oral Cavity Squamous Cell Carcinoma": [
+    "Oral Cavity Squamous Cell Carcinoma"
+  ],
+  "Oropharynx Squamous Cell Carcinoma": [
+    "Oropharynx Squamous Cell Carcinoma"
+  ],
+  "Ossifying Fibromyxoid Tumor": [
+    "Ossifying Fibromyxoid Tumor"
+  ],
+  "Osteoblastic Osteosarcoma": [
+    "Osteoblastic Osteosarcoma"
+  ],
+  "Osteoclastic Giant Cell Tumor": [
+    "Osteoclastic Giant Cell Tumor"
+  ],
+  "Osteosarcoma": [
+    "Fibroblastic Osteosarcoma",
+    "Chondroblastic Osteosarcoma",
+    "Secondary Osteosarcoma",
+    "Low-Grade Central Osteosarcoma",
+    "Parosteal Osteosarcoma",
+    "Periosteal Osteosarcoma",
+    "Telangiectatic Osteosarcoma",
+    "Osteosarcoma",
+    "Osteoblastic Osteosarcoma",
+    "Small Cell Osteosarcoma",
+    "High-Grade Surface Osteosarcoma"
+  ],
+  "Other": [
+    "Adenocarcinoma, NOS",
+    "Neuroendocrine Carcinoma, NOS",
+    "Cancer of Unknown Primary, NOS",
+    "Neuroendocrine Tumor, NOS",
+    "Small Cell Carcinoma of Unknown Primary",
+    "Acinar Cell Carcinoma, NOS",
+    "Cancer of Unknown Primary",
+    "Extra Gonadal Germ Cell Tumor",
+    "Other",
+    "Mixed Cancer Types",
+    "Undifferentiated Malignant Neoplasm",
+    "Poorly Differentiated Carcinoma, NOS",
+    "Adenocarcinoma In Situ",
+    "Squamous Cell Carcinoma, NOS"
+  ],
+  "Other Uterine Tumor": [
+    "Other Uterine Tumor"
+  ],
+  "Ovarian Cancer, Other": [
+    "High-Grade Serous Fallopian Tube Cancer",
+    "High-Grade Neuroendocrine Carcinoma of the Ovary",
+    "Ovarian Cancer, Other",
+    "Ovarian Choriocarcinoma, NOS"
+  ],
+  "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor": [
+    "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor"
+  ],
+  "Ovarian Choriocarcinoma, NOS": [
+    "Ovarian Choriocarcinoma, NOS"
+  ],
+  "Ovarian Epithelial Tumor": [
+    "Serous Borderline Ovarian Tumor, Micropapillary",
+    "Brenner Tumor, Malignant",
+    "Serous Borderline Ovarian Tumor",
+    "Ovarian Seromucinous Borderline Tumor",
+    "Serous Ovarian Cancer",
+    "Ovarian Epithelial Tumor",
+    "Brenner Tumor, Borderline",
+    "Mixed Ovarian Carcinoma",
+    "Ovarian Seromucinous Carcinoma",
+    "Brenner Tumor",
+    "Brenner Tumor, Benign",
+    "Endometrioid Ovarian Cancer",
+    "Ovarian Seromucinous Adenoma",
+    "Clear Cell Borderline Ovarian Tumor",
+    "Mucinous Borderline Ovarian Tumor",
+    "Endometrioid Borderlin Ovarian Tumor",
+    "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor",
+    "Mucinous Ovarian Cancer",
+    "High-Grade Serous Ovarian Cancer",
+    "Clear Cell Ovarian Cancer",
+    "Small Cell Carcinoma of the Ovary",
+    "Low-Grade Serous Ovarian Cancer"
+  ],
+  "Ovarian Germ Cell Tumor": [
+    "Mature Teratoma",
+    "Yolk Sac Tumor",
+    "Ovarian Germ Cell Tumor",
+    "Embryonal Carcinoma",
+    "Dysgerminoma",
+    "Mixed Germ Cell Tumor",
+    "Polyembryoma",
+    "Immature Teratoma"
+  ],
+  "Ovarian Seromucinous Adenoma": [
+    "Ovarian Seromucinous Adenoma"
+  ],
+  "Ovarian Seromucinous Borderline Tumor": [
+    "Ovarian Seromucinous Borderline Tumor"
+  ],
+  "Ovarian Seromucinous Carcinoma": [
+    "Ovarian Seromucinous Carcinoma"
+  ],
+  "Ovary/Fallopian Tube": [
+    "Serous Borderline Ovarian Tumor, Micropapillary",
+    "Ovarian Germ Cell Tumor",
+    "Granulosa Cell Tumor",
+    "Brenner Tumor, Benign",
+    "Brenner Tumor",
+    "Mature Teratoma",
+    "Sex Cord Stromal Tumor",
+    "Yolk Sac Tumor",
+    "Clear Cell Borderline Ovarian Tumor",
+    "High-Grade Neuroendocrine Carcinoma of the Ovary",
+    "Endometrioid Borderlin Ovarian Tumor",
+    "Dysgerminoma",
+    "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor",
+    "Mixed Germ Cell Tumor",
+    "Mucinous Ovarian Cancer",
+    "High-Grade Serous Ovarian Cancer",
+    "Clear Cell Ovarian Cancer",
+    "Low-Grade Serous Ovarian Cancer",
+    "High-Grade Serous Fallopian Tube Cancer",
+    "Ovarian Cancer, Other",
+    "Brenner Tumor, Malignant",
+    "Ovarian Choriocarcinoma, NOS",
+    "Serous Borderline Ovarian Tumor",
+    "Ovarian Seromucinous Borderline Tumor",
+    "Serous Ovarian Cancer",
+    "Ovarian Epithelial Tumor",
+    "Brenner Tumor, Borderline",
+    "Mixed Ovarian Carcinoma",
+    "Immature Teratoma",
+    "Ovarian Seromucinous Carcinoma",
+    "Endometrioid Ovarian Cancer",
+    "Fibrothecoma",
+    "Ovarian Seromucinous Adenoma",
+    "Embryonal Carcinoma",
+    "Mucinous Borderline Ovarian Tumor",
+    "Ovary/Fallopian Tube",
+    "Polyembryoma",
+    "Sertoli-Leydig Cell Tumor",
+    "Small Cell Carcinoma of the Ovary",
+    "Gonadoblastoma",
+    "Steroid Cell Tumor, NOS"
+  ],
+  "Paget Disease of the Nipple": [
+    "Paget Disease of the Nipple"
+  ],
+  "Pancreas": [
+    "Pancreatic Neuroendocrine Tumor",
+    "Intraductal Oncocytic Papillary Neoplasm",
+    "Intraductal Papillary Mucinous Neoplasm",
+    "Serous Cystadenoma of the Pancreas",
+    "Osteoclastic Giant Cell Tumor",
+    "Cystic Tumor of the Pancreas",
+    "Mucinous Cystic Neoplasm",
+    "Pancreatoblastoma",
+    "Solid Pseudopapillary Neoplasm of the Pancreas",
+    "Pancreatic Neuroendocrine Carcinoma",
+    "Acinar Cell Carcinoma of the Pancreas",
+    "Intraductal Tubulopapillary Neoplasm",
+    "Pancreatic Adenocarcinoma",
+    "Adenosquamous Carcinoma of the Pancreas",
+    "Pancreas",
+    "Undifferentiated Carcinoma of the Pancreas"
+  ],
+  "Pancreatic Adenocarcinoma": [
+    "Pancreatic Adenocarcinoma"
+  ],
+  "Pancreatic Neuroendocrine Carcinoma": [
+    "Pancreatic Neuroendocrine Carcinoma"
+  ],
+  "Pancreatic Neuroendocrine Tumor": [
+    "Pancreatic Neuroendocrine Tumor"
+  ],
+  "Pancreatobiliary Ampullary Carcinoma": [
+    "Pancreatobiliary Ampullary Carcinoma"
+  ],
+  "Pancreatoblastoma": [
+    "Pancreatoblastoma"
+  ],
+  "Papillary Glioneuronal Tumor": [
+    "Papillary Glioneuronal Tumor"
+  ],
+  "Papillary Meningioma": [
+    "Papillary Meningioma"
+  ],
+  "Papillary Renal Cell Carcinoma": [
+    "Papillary Renal Cell Carcinoma"
+  ],
+  "Papillary Stomach Adenocarcinoma": [
+    "Papillary Stomach Adenocarcinoma"
+  ],
+  "Papillary Thyroid Cancer": [
+    "Papillary Thyroid Cancer"
+  ],
+  "Papillary Tumor of the Pineal Region": [
+    "Papillary Tumor of the Pineal Region"
+  ],
+  "Paraganglioma": [
+    "Paraganglioma"
+  ],
+  "Parathyroid Cancer": [
+    "Parathyroid Cancer",
+    "Parathyroid Carcinoma"
+  ],
+  "Parathyroid Carcinoma": [
+    "Parathyroid Carcinoma"
+  ],
+  "Parosteal Osteosarcoma": [
+    "Parosteal Osteosarcoma"
+  ],
+  "Partial Hydatidiform Mole": [
+    "Partial Hydatidiform Mole"
+  ],
+  "Pediatric-Type Follicular Lymphoma": [
+    "Pediatric-Type Follicular Lymphoma"
+  ],
+  "Penile Squamous Cell Carcinoma": [
+    "Warty Penile Squamous Cell Carcinoma",
+    "Verrucous Penile Squamous Cell Carcinoma",
+    "Penile Squamous Cell Carcinoma",
+    "Basaloid Penile Squamous Cell Carcinoma"
+  ],
+  "Penis": [
+    "Penis",
+    "Verrucous Penile Squamous Cell Carcinoma",
+    "Penile Squamous Cell Carcinoma",
+    "Basaloid Penile Squamous Cell Carcinoma",
+    "Warty Penile Squamous Cell Carcinoma"
+  ],
+  "Perihilar Cholangiocarcinoma": [
+    "Perihilar Cholangiocarcinoma"
+  ],
+  "Periosteal Osteosarcoma": [
+    "Periosteal Osteosarcoma"
+  ],
+  "Peripheral Nervous System": [
+    "Neuroblastoma",
+    "Cellular Schwannoma",
+    "Malignant Peripheral Nerve Sheath Tumor",
+    "Ganglioneuroma",
+    "Neurofibroma",
+    "Ganglioneuroblastoma",
+    "Melanotic Schwannoma",
+    "Schwannoma",
+    "Peripheral Nervous System",
+    "Nerve Sheath Tumor"
+  ],
+  "Peripheral T-Cell lymphoma, NOS": [
+    "Peripheral T-Cell lymphoma, NOS"
+  ],
+  "Peritoneal Mesothelioma": [
+    "Peritoneal Mesothelioma"
+  ],
+  "Peritoneal Serous Carcinoma": [
+    "Peritoneal Serous Carcinoma"
+  ],
+  "Peritoneum": [
+    "Peritoneal Mesothelioma",
+    "Peritoneal Serous Carcinoma",
+    "Peritoneum"
+  ],
+  "Perivascular Epithelioid Cell Tumor": [
+    "Perivascular Epithelioid Cell Tumor"
+  ],
+  "Pheochromocytoma": [
+    "Pheochromocytoma"
+  ],
+  "Phyllodes Tumor of the Breast": [
+    "Benign Phyllodes Tumor of the Breast",
+    "Borderline Phyllodes Tumor of the Breast",
+    "Malignant Phyllodes Tumor of the Breast",
+    "Phyllodes Tumor of the Breast"
+  ],
+  "Pilocytic Astrocytoma": [
+    "Pilocytic Astrocytoma"
+  ],
+  "Pilomyxoid Astrocytoma": [
+    "Pilomyxoid Astrocytoma"
+  ],
+  "Pineal Parenchymal Tumor of Intermediate Differentiation": [
+    "Pineal Parenchymal Tumor of Intermediate Differentiation"
+  ],
+  "Pineal Tumor": [
+    "Pineoblastoma",
+    "Pineal Tumor",
+    "Pineocytoma",
+    "Pineal Parenchymal Tumor of Intermediate Differentiation",
+    "Papillary Tumor of the Pineal Region"
+  ],
+  "Pineoblastoma": [
+    "Pineoblastoma"
+  ],
+  "Pineocytoma": [
+    "Pineocytoma"
+  ],
+  "Pituicytoma": [
+    "Pituicytoma"
+  ],
+  "Pituitary Adenoma": [
+    "Pituitary Adenoma"
+  ],
+  "Pituitary Carcinoma": [
+    "Pituitary Carcinoma"
+  ],
+  "Placental Site Trophoblastic Tumor": [
+    "Placental Site Trophoblastic Tumor"
+  ],
+  "Plasma Cell Myeloma": [
+    "Plasma Cell Myeloma"
+  ],
+  "Plasmablastic Lymphoma": [
+    "Plasmablastic Lymphoma"
+  ],
+  "Plasmacytic Hyperplasia PTLD": [
+    "Plasmacytic Hyperplasia PTLD"
+  ],
+  "Plasmacytoid/Signet Ring Cell Bladder Carcinoma": [
+    "Plasmacytoid/Signet Ring Cell Bladder Carcinoma"
+  ],
+  "Pleomorphic Adenoma": [
+    "Pleomorphic Adenoma"
+  ],
+  "Pleomorphic Carcinoma of the Lung": [
+    "Pleomorphic Carcinoma of the Lung"
+  ],
+  "Pleomorphic Liposarcoma": [
+    "Pleomorphic Liposarcoma"
+  ],
+  "Pleomorphic Rhabdomyosarcoma": [
+    "Pleomorphic Rhabdomyosarcoma"
+  ],
+  "Pleomorphic Xanthoastrocytoma": [
+    "Pleomorphic Xanthoastrocytoma"
+  ],
+  "Pleura": [
+    "Pleural Mesothelioma, Sarcomatoid Type",
+    "Pleural Mesothelioma, Biphasic Type",
+    "Pleura",
+    "Pleural Mesothelioma, Epithelioid Type",
+    "Pleural Mesothelioma"
+  ],
+  "Pleural Mesothelioma": [
+    "Pleural Mesothelioma, Epithelioid Type",
+    "Pleural Mesothelioma",
+    "Pleural Mesothelioma, Sarcomatoid Type",
+    "Pleural Mesothelioma, Biphasic Type"
+  ],
+  "Pleural Mesothelioma, Biphasic Type": [
+    "Pleural Mesothelioma, Biphasic Type"
+  ],
+  "Pleural Mesothelioma, Epithelioid Type": [
+    "Pleural Mesothelioma, Epithelioid Type"
+  ],
+  "Pleural Mesothelioma, Sarcomatoid Type": [
+    "Pleural Mesothelioma, Sarcomatoid Type"
+  ],
+  "Pleuropulmonary Blastoma": [
+    "Pleuropulmonary Blastoma"
+  ],
+  "Polycythaemia Vera Myelofibrosis": [
+    "Polycythaemia Vera Myelofibrosis"
+  ],
+  "Polycythemia Vera": [
+    "Polycythaemia Vera Myelofibrosis",
+    "Polycythemia Vera"
+  ],
+  "Polyembryoma": [
+    "Polyembryoma"
+  ],
+  "Polymorphic PTLD": [
+    "Polymorphic PTLD"
+  ],
+  "Polymorphous Adenocarcinoma": [
+    "Polymorphous Adenocarcinoma"
+  ],
+  "Poorly Differentiated Carcinoma of the Stomach": [
+    "Poorly Differentiated Carcinoma of the Stomach"
+  ],
+  "Poorly Differentiated Carcinoma of the Uterus": [
+    "Poorly Differentiated Carcinoma of the Uterus"
+  ],
+  "Poorly Differentiated Carcinoma, NOS": [
+    "Poorly Differentiated Carcinoma, NOS"
+  ],
+  "Poorly Differentiated Non-Small Cell Lung Cancer": [
+    "Poorly Differentiated Non-Small Cell Lung Cancer"
+  ],
+  "Poorly Differentiated Thyroid Cancer": [
+    "Poorly Differentiated Thyroid Cancer"
+  ],
+  "Poorly Differentiated Vaginal Carcinoma": [
+    "Poorly Differentiated Vaginal Carcinoma"
+  ],
+  "Porocarcinoma/Spiroadenocarcinoma": [
+    "Porocarcinoma/Spiroadenocarcinoma"
+  ],
+  "Poroma/Acrospiroma": [
+    "Poroma/Acrospiroma"
+  ],
+  "Posttransplant Lymphoproliferative Disorders": [
+    "Posttransplant Lymphoproliferative Disorders",
+    "Infectious Mononucleosis PTLD",
+    "Classical Hodgkin Lymphoma PTLD",
+    "Monomorphic PTLD",
+    "Polymorphic PTLD",
+    "Florid Follicular Hyperplasia PTLD",
+    "Plasmacytic Hyperplasia PTLD"
+  ],
+  "Primary Brain Tumor": [
+    "Primary Brain Tumor"
+  ],
+  "Primary CNS Melanocytic Tumors": [
+    "Primary CNS Melanocytic Tumors",
+    "Primary CNS Melanoma",
+    "Melanocytoma"
+  ],
+  "Primary CNS Melanoma": [
+    "Primary CNS Melanoma"
+  ],
+  "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma": [
+    "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma"
+  ],
+  "Primary Cutaneous Anaplastic Large Cell Lymphoma": [
+    "Primary Cutaneous Anaplastic Large Cell Lymphoma"
+  ],
+  "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders": [
+    "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+    "Lymphomatoid Papulosis",
+    "Primary Cutaneous Anaplastic Large Cell Lymphoma"
+  ],
+  "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder": [
+    "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder"
+  ],
+  "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma": [
+    "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma"
+  ],
+  "Primary Cutaneous DLBCL, Leg Type": [
+    "Primary Cutaneous DLBCL, Leg Type"
+  ],
+  "Primary Cutaneous Follicle Center Lymphoma": [
+    "Primary Cutaneous Follicle Center Lymphoma"
+  ],
+  "Primary Cutaneous Gamma Delta T-Cell Lymphoma": [
+    "Primary Cutaneous Gamma Delta T-Cell Lymphoma"
+  ],
+  "Primary DLBCL of the central nervous system": [
+    "Primary DLBCL of the central nervous system"
+  ],
+  "Primary Effusion Lymphoma": [
+    "Primary Effusion Lymphoma"
+  ],
+  "Primary Mediastinal": [
+    "Primary Mediastinal"
+  ],
+  "Primary Myelofibrosis": [
+    "Primary Myelofibrosis",
+    "Primary Myelofibrosis, Prefibrotic/Early Stage",
+    "Primary Myelofibrosis,Overt Fibrotic Stage"
+  ],
+  "Primary Myelofibrosis, Prefibrotic/Early Stage": [
+    "Primary Myelofibrosis, Prefibrotic/Early Stage"
+  ],
+  "Primary Myelofibrosis,Overt Fibrotic Stage": [
+    "Primary Myelofibrosis,Overt Fibrotic Stage"
+  ],
+  "Primary Neuroepithelial Tumor": [
+    "Primary Neuroepithelial Tumor"
+  ],
+  "Primitive Neuroectodermal Tumor": [
+    "Primitive Neuroectodermal Tumor"
+  ],
+  "Proliferating Pilar Cystic Tumor": [
+    "Proliferating Pilar Cystic Tumor"
+  ],
+  "Prostate": [
+    "Basal Cell Carcinoma of Prostate",
+    "Prostate Adenocarcinoma",
+    "Prostate Neuroendocrine Carcinoma",
+    "Prostate",
+    "Prostate Squamous Cell Carcinoma",
+    "Prostate Small Cell Carcinoma"
+  ],
+  "Prostate Adenocarcinoma": [
+    "Prostate Adenocarcinoma"
+  ],
+  "Prostate Neuroendocrine Carcinoma": [
+    "Prostate Neuroendocrine Carcinoma"
+  ],
+  "Prostate Small Cell Carcinoma": [
+    "Prostate Small Cell Carcinoma"
+  ],
+  "Prostate Squamous Cell Carcinoma": [
+    "Prostate Squamous Cell Carcinoma"
+  ],
+  "Proximal-Type Epithelioid Sarcoma": [
+    "Proximal-Type Epithelioid Sarcoma"
+  ],
+  "Pseudomyogenic Hemangioendothelioma": [
+    "Pseudomyogenic Hemangioendothelioma"
+  ],
+  "Pulmonary Lymphangiomyomatosis": [
+    "Pulmonary Lymphangiomyomatosis"
+  ],
+  "Pure Erythroid Leukemia": [
+    "Pure Erythroid Leukemia"
+  ],
+  "Radiation-Associated Sarcoma": [
+    "Radiation-Associated Sarcoma"
+  ],
+  "Rectal Adenocarcinoma": [
+    "Rectal Adenocarcinoma"
+  ],
+  "Refractory Cytopenia of Childhood": [
+    "Refractory Cytopenia of Childhood"
+  ],
+  "Renal Angiomyolipoma": [
+    "Renal Angiomyolipoma"
+  ],
+  "Renal Cell Carcinoma": [
+    "Renal Mucinous Tubular Spindle Cell Carcinoma",
+    "Renal Clear Cell Carcinoma with Sarcomatoid Features",
+    "Renal Angiomyolipoma",
+    "Renal Cell Carcinoma",
+    "Renal Clear Cell Carcinoma",
+    "Sarcomatoid Renal Cell Carcinoma",
+    "FH-Deficient Renal Cell Carcinoma",
+    "Renal Small Cell Carcinoma",
+    "Translocation-Associated Renal Cell Carcinoma",
+    "Chromophobe Renal Cell Carcinoma",
+    "Papillary Renal Cell Carcinoma",
+    "Renal Non-Clear Cell Carcinoma",
+    "Renal Medullary Carcinoma",
+    "Renal Oncocytoma",
+    "Collecting Duct Renal Cell Carcinoma",
+    "Unclassified Renal Cell Carcinoma",
+    "Clear Cell Papillary Renal Cell Carcinoma"
+  ],
+  "Renal Clear Cell Carcinoma": [
+    "Renal Clear Cell Carcinoma with Sarcomatoid Features",
+    "Renal Clear Cell Carcinoma"
+  ],
+  "Renal Clear Cell Carcinoma with Sarcomatoid Features": [
+    "Renal Clear Cell Carcinoma with Sarcomatoid Features"
+  ],
+  "Renal Medullary Carcinoma": [
+    "Renal Medullary Carcinoma"
+  ],
+  "Renal Mucinous Tubular Spindle Cell Carcinoma": [
+    "Renal Mucinous Tubular Spindle Cell Carcinoma"
+  ],
+  "Renal Neuroendocrine Tumor": [
+    "Renal Neuroendocrine Tumor"
+  ],
+  "Renal Non-Clear Cell Carcinoma": [
+    "Renal Mucinous Tubular Spindle Cell Carcinoma",
+    "Renal Small Cell Carcinoma",
+    "Collecting Duct Renal Cell Carcinoma",
+    "Translocation-Associated Renal Cell Carcinoma",
+    "Chromophobe Renal Cell Carcinoma",
+    "Papillary Renal Cell Carcinoma",
+    "Renal Non-Clear Cell Carcinoma",
+    "Renal Angiomyolipoma",
+    "Renal Medullary Carcinoma",
+    "Renal Oncocytoma",
+    "Sarcomatoid Renal Cell Carcinoma",
+    "FH-Deficient Renal Cell Carcinoma",
+    "Unclassified Renal Cell Carcinoma",
+    "Clear Cell Papillary Renal Cell Carcinoma"
+  ],
+  "Renal Oncocytoma": [
+    "Renal Oncocytoma"
+  ],
+  "Renal Small Cell Carcinoma": [
+    "Renal Small Cell Carcinoma"
+  ],
+  "Retinoblastoma": [
+    "Retinoblastoma"
+  ],
+  "Rhabdoid Cancer": [
+    "Rhabdoid Cancer"
+  ],
+  "Rhabdoid Meningioma": [
+    "Rhabdoid Meningioma"
+  ],
+  "Rhabdomyosarcoma": [
+    "Pleomorphic Rhabdomyosarcoma",
+    "Embryonal Rhabdomyosarcoma",
+    "Alveolar Rhabdomyosarcoma",
+    "Spindle Cell/Sclerosing Rhabdomyosarcoma",
+    "Spindle Cell Rhabdomyosarcoma",
+    "Rhabdomyosarcoma"
+  ],
+  "Rosai-Dorfman Disease": [
+    "Rosai-Dorfman Disease"
+  ],
+  "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle": [
+    "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle"
+  ],
+  "Round Cell Sarcoma, NOS": [
+    "Round Cell Sarcoma, NOS"
+  ],
+  "Salivary Adenocarcinoma": [
+    "Salivary Adenocarcinoma"
+  ],
+  "Salivary Carcinoma": [
+    "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin",
+    "Acinic Cell Carcinoma",
+    "Salivary Adenocarcinoma",
+    "Myoepithelial Carcinoma",
+    "Carcinoma ex Pleomorphic Adenoma",
+    "Mucoepidermoid Carcinoma",
+    "Salivary Gland Oncocytoma",
+    "Salivary Carcinoma",
+    "Pleomorphic Adenoma",
+    "Salivary Duct Carcinoma",
+    "Basal Cell Adenocarcinoma",
+    "Polymorphous Adenocarcinoma",
+    "Adenoid Cystic Carcinoma",
+    "Salivary Carcinoma, Other"
+  ],
+  "Salivary Carcinoma, Other": [
+    "Salivary Carcinoma, Other"
+  ],
+  "Salivary Duct Carcinoma": [
+    "Salivary Duct Carcinoma"
+  ],
+  "Salivary Gland Oncocytoma": [
+    "Salivary Gland Oncocytoma"
+  ],
+  "Salivary Gland-Type Tumor of the Lung": [
+    "Mucoepidermoid Carcinoma of the Lung",
+    "Adenoid Cystic Carcinoma of the Lung",
+    "Salivary Gland-Type Tumor of the Lung"
+  ],
+  "Sarcoma, NOS": [
+    "Sarcoma, NOS"
+  ],
+  "Sarcomatoid Carcinoma of the Lung": [
+    "Sarcomatoid Carcinoma of the Lung"
+  ],
+  "Sarcomatoid Carcinoma of the Urinary Bladder": [
+    "Sarcomatoid Carcinoma of the Urinary Bladder"
+  ],
+  "Sarcomatoid Renal Cell Carcinoma": [
+    "Sarcomatoid Renal Cell Carcinoma"
+  ],
+  "Schwannoma": [
+    "Melanotic Schwannoma",
+    "Cellular Schwannoma",
+    "Schwannoma"
+  ],
+  "Sclerosing Epithelioid Fibrosarcoma": [
+    "Sclerosing Epithelioid Fibrosarcoma"
+  ],
+  "Sebaceous Carcinoma": [
+    "Sebaceous Carcinoma"
+  ],
+  "Secondary Osteosarcoma": [
+    "Secondary Osteosarcoma"
+  ],
+  "Sellar Tumor": [
+    "Pituitary Carcinoma",
+    "Craniopharyngioma, Adamantinomatous Type",
+    "Sellar Tumor",
+    "Craniopharyngioma, Papillary Type",
+    "Granular Cell Tumor",
+    "Atypical Pituitary Adenoma",
+    "Spindle Cell Oncocytoma of the Adenohypophysis",
+    "Pituitary Adenoma",
+    "Pituicytoma"
+  ],
+  "Seminoma": [
+    "Seminoma"
+  ],
+  "Serous Borderline Ovarian Tumor": [
+    "Serous Borderline Ovarian Tumor"
+  ],
+  "Serous Borderline Ovarian Tumor, Micropapillary": [
+    "Serous Borderline Ovarian Tumor, Micropapillary"
+  ],
+  "Serous Cystadenoma of the Pancreas": [
+    "Serous Cystadenoma of the Pancreas"
+  ],
+  "Serous Ovarian Cancer": [
+    "High-Grade Serous Ovarian Cancer",
+    "Low-Grade Serous Ovarian Cancer",
+    "Serous Ovarian Cancer"
+  ],
+  "Sertoli-Leydig Cell Tumor": [
+    "Sertoli-Leydig Cell Tumor"
+  ],
+  "Sex Cord Stromal Tumor": [
+    "Sex Cord Stromal Tumor",
+    "Fibrothecoma",
+    "Granulosa Cell Tumor",
+    "Sertoli-Leydig Cell Tumor",
+    "Gonadoblastoma",
+    "Steroid Cell Tumor, NOS"
+  ],
+  "Sezary Syndrome": [
+    "Sezary Syndrome"
+  ],
+  "Sialoblastoma": [
+    "Sialoblastoma"
+  ],
+  "Signet Ring Cell Adenocarcinoma of the Colon and Rectum": [
+    "Signet Ring Cell Adenocarcinoma of the Colon and Rectum"
+  ],
+  "Signet Ring Cell Carcinoma of the Stomach": [
+    "Signet Ring Cell Carcinoma of the Stomach"
+  ],
+  "Signet Ring Cell Type of the Appendix": [
+    "Signet Ring Cell Type of the Appendix"
+  ],
+  "Signet Ring Mucinous Carcinoma": [
+    "Signet Ring Mucinous Carcinoma"
+  ],
+  "Sinonasal Adenocarcinoma": [
+    "Sinonasal Adenocarcinoma"
+  ],
+  "Sinonasal Squamous Cell Carcinoma": [
+    "Sinonasal Squamous Cell Carcinoma"
+  ],
+  "Sinonasal Undifferentiated Carcinoma": [
+    "Sinonasal Undifferentiated Carcinoma"
+  ],
+  "Skin": [
+    "Congenital Nevus",
+    "Merkel Cell Carcinoma",
+    "Spitzoid Melanoma",
+    "Proliferating Pilar Cystic Tumor",
+    "Melanoma",
+    "Porocarcinoma/Spiroadenocarcinoma",
+    "Dermatofibroma",
+    "Lentigo Maligna Melanoma",
+    "Extramammary Paget Disease",
+    "Endocrine Mucin Producing Sweat Gland Carcinoma",
+    "Sweat Gland Adenocarcinoma",
+    "Spiroma/Spiradenoma",
+    "Acral Melanoma",
+    "Microcystic Adnexal Carcinoma",
+    "Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma",
+    "Atypical Nevus",
+    "Poroma/Acrospiroma",
+    "Skin",
+    "Sebaceous Carcinoma",
+    "Aggressive Digital Papillary Adenocarcinoma",
+    "Desmoplastic Trichoepithelioma",
+    "Cutaneous Melanoma",
+    "Skin Adnexal Carcinoma",
+    "Basal Cell Carcinoma",
+    "Atypical Fibroxanthoma",
+    "Cutaneous Squamous Cell Carcinoma",
+    "Melanoma of Unknown Primary",
+    "Dermatofibrosarcoma Protuberans",
+    "Desmoplastic Melanoma"
+  ],
+  "Skin Adnexal Carcinoma": [
+    "Skin Adnexal Carcinoma"
+  ],
+  "Small Bowel Cancer": [
+    "Duodenal Adenocarcinoma",
+    "Small Bowel Cancer"
+  ],
+  "Small Bowel Well-Differentiated Neuroendocrine Tumor": [
+    "Small Bowel Well-Differentiated Neuroendocrine Tumor"
+  ],
+  "Small Cell Bladder Cancer": [
+    "Small Cell Bladder Cancer"
+  ],
+  "Small Cell Carcinoma of Unknown Primary": [
+    "Small Cell Carcinoma of Unknown Primary"
+  ],
+  "Small Cell Carcinoma of the Cervix": [
+    "Small Cell Carcinoma of the Cervix"
+  ],
+  "Small Cell Carcinoma of the Ovary": [
+    "Small Cell Carcinoma of the Ovary"
+  ],
+  "Small Cell Carcinoma of the Stomach": [
+    "Small Cell Carcinoma of the Stomach"
+  ],
+  "Small Cell Gallbladder Carcinoma": [
+    "Small Cell Gallbladder Carcinoma"
+  ],
+  "Small Cell Glioblastoma": [
+    "Small Cell Glioblastoma"
+  ],
+  "Small Cell Lung Cancer": [
+    "Small Cell Lung Cancer"
+  ],
+  "Small Cell Osteosarcoma": [
+    "Small Cell Osteosarcoma"
+  ],
+  "Small Intestinal Carcinoma": [
+    "Small Intestinal Carcinoma"
+  ],
+  "Smoldering Systemic Mastocytosis": [
+    "Smoldering Systemic Mastocytosis"
+  ],
+  "Smooth Muscle Neoplasm, NOS": [
+    "Smooth Muscle Neoplasm, NOS"
+  ],
+  "Soft Tissue": [
+    "Pleomorphic Rhabdomyosarcoma",
+    "Inflammatory Myofibroblastic Tumor",
+    "Low-Grade Fibromyxoid Sarcoma",
+    "Sarcoma, NOS",
+    "Aggressive Angiomyxoma",
+    "Spindle Cell/Sclerosing Rhabdomyosarcoma",
+    "Round Cell Sarcoma, NOS",
+    "Liposarcoma",
+    "Gastrointestinal Stromal Tumor",
+    "Sclerosing Epithelioid Fibrosarcoma",
+    "Ewing Sarcoma of Soft Tissue",
+    "Tenosynovial Giant Cell Tumor Diffuse Type",
+    "Fibrosarcoma",
+    "Radiation-Associated Sarcoma",
+    "Histiocytic Dendritic Cell Sarcoma",
+    "Perivascular Epithelioid Cell Tumor",
+    "Proximal-Type Epithelioid Sarcoma",
+    "Pseudomyogenic Hemangioendothelioma",
+    "Hemangioma",
+    "Myofibroma",
+    "Alveolar Rhabdomyosarcoma",
+    "Solitary Fibrous Tumor/Hemangiopericytoma",
+    "Dedifferentiated Liposarcoma",
+    "Paraganglioma",
+    "Myxoid/Round-Cell Liposarcoma",
+    "Myofibromatosis",
+    "Angiosarcoma",
+    "Soft Tissue",
+    "Rhabdomyosarcoma",
+    "Well-Differentiated Liposarcoma",
+    "Embryonal Rhabdomyosarcoma",
+    "Synovial Sarcoma",
+    "Intimal Sarcoma",
+    "Dendritic Cell Sarcoma",
+    "Pleomorphic Liposarcoma",
+    "Spindle Cell Rhabdomyosarcoma",
+    "Myxofibrosarcoma",
+    "Clear Cell Sarcoma",
+    "Leiomyoma",
+    "Infantile Fibrosarcoma",
+    "Soft Tissue Myoepithelial Carcinoma",
+    "Epithelioid Sarcoma",
+    "Leiomyosarcoma",
+    "Myopericytoma",
+    "Desmoplastic Small-Round-Cell Tumor",
+    "Desmoid/Aggressive Fibromatosis",
+    "Angiomatoid Fibrous Histiocytoma",
+    "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma",
+    "Malignant Glomus Tumor",
+    "Glomangiosarcoma",
+    "Alveolar Soft Part Sarcoma",
+    "Myxoma",
+    "Epithelioid Hemangioendothelioma",
+    "Atypical Lipomatous Tumor",
+    "Ossifying Fibromyxoid Tumor"
+  ],
+  "Soft Tissue Myoepithelial Carcinoma": [
+    "Soft Tissue Myoepithelial Carcinoma"
+  ],
+  "Solid Papillary Carcinoma of the Breast": [
+    "Solid Papillary Carcinoma of the Breast"
+  ],
+  "Solid Pseudopapillary Neoplasm of the Pancreas": [
+    "Solid Pseudopapillary Neoplasm of the Pancreas"
+  ],
+  "Solitary Fibrous Tumor of the Central Nervous System": [
+    "Solitary Fibrous Tumor of the Central Nervous System"
+  ],
+  "Solitary Fibrous Tumor/Hemangiopericytoma": [
+    "Solitary Fibrous Tumor/Hemangiopericytoma"
+  ],
+  "Solitary Plasmacytoma of Bone": [
+    "Solitary Plasmacytoma of Bone"
+  ],
+  "Spindle Cell Carcinoma of the Lung": [
+    "Spindle Cell Carcinoma of the Lung"
+  ],
+  "Spindle Cell Oncocytoma of the Adenohypophysis": [
+    "Spindle Cell Oncocytoma of the Adenohypophysis"
+  ],
+  "Spindle Cell Rhabdomyosarcoma": [
+    "Spindle Cell Rhabdomyosarcoma"
+  ],
+  "Spindle Cell/Sclerosing Rhabdomyosarcoma": [
+    "Spindle Cell/Sclerosing Rhabdomyosarcoma"
+  ],
+  "Spiroma/Spiradenoma": [
+    "Spiroma/Spiradenoma"
+  ],
+  "Spitzoid Melanoma": [
+    "Spitzoid Melanoma"
+  ],
+  "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable": [
+    "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+    "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+    "Hairy Cell Leukemia-Variant"
+  ],
+  "Splenic Diffuse Red Pulp Small B-Cell Lymphoma": [
+    "Splenic Diffuse Red Pulp Small B-Cell Lymphoma"
+  ],
+  "Splenic Marginal Zone Lymphoma": [
+    "Splenic Marginal Zone Lymphoma"
+  ],
+  "Squamous Cell Carcinoma of the Lacrimal Gland": [
+    "Squamous Cell Carcinoma of the Lacrimal Gland"
+  ],
+  "Squamous Cell Carcinoma of the Vulva/Vagina": [
+    "Squamous Cell Carcinoma of the Vulva/Vagina"
+  ],
+  "Squamous Cell Carcinoma, NOS": [
+    "Squamous Cell Carcinoma, NOS"
+  ],
+  "Steroid Cell Tumor, NOS": [
+    "Steroid Cell Tumor, NOS"
+  ],
+  "Stomach Adenocarcinoma": [
+    "Papillary Stomach Adenocarcinoma",
+    "Tubular Stomach Adenocarcinoma",
+    "Intestinal Type Stomach Adenocarcinoma",
+    "Mucinous Stomach Adenocarcinoma",
+    "Stomach Adenocarcinoma",
+    "Diffuse Type Stomach Adenocarcinoma"
+  ],
+  "Subcutaneous Panniculitis-Like T-Cell Lymphoma": [
+    "Subcutaneous Panniculitis-Like T-Cell Lymphoma"
+  ],
+  "Subependymoma": [
+    "Subependymoma"
+  ],
+  "Sweat Gland Adenocarcinoma": [
+    "Sweat Gland Adenocarcinoma"
+  ],
+  "Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma": [
+    "Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma"
+  ],
+  "Synovial Sarcoma": [
+    "Synovial Sarcoma"
+  ],
+  "Systemic EBV Positive T-Cell Lymphoma of Childhood": [
+    "Systemic EBV Positive T-Cell Lymphoma of Childhood"
+  ],
+  "Systemic Mastocytosis": [
+    "Systemic Mastocytosis",
+    "Smoldering Systemic Mastocytosis",
+    "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+    "Mast Cell Leukemia",
+    "Aggressive Systemic Mastocytosis",
+    "Indolent Systemic Mastocytosis"
+  ],
+  "Systemic Mastocytosis with an Associated Hematological Neoplasm": [
+    "Systemic Mastocytosis with an Associated Hematological Neoplasm"
+  ],
+  "T-Cell Large Granular Lymphocytic Leukemia": [
+    "T-Cell Large Granular Lymphocytic Leukemia"
+  ],
+  "T-Cell Prolymphocytic Leukemia": [
+    "T-Cell Prolymphocytic Leukemia"
+  ],
+  "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma": [
+    "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma"
+  ],
+  "T-Lymphoblastic Leukemia/Lymphoma": [
+    "T-Lymphoblastic Leukemia/Lymphoma",
+    "Natural Killer",
+    "Early T-Cell Precursor Lymphoblastic Leukemia"
+  ],
+  "Telangiectatic Osteosarcoma": [
+    "Telangiectatic Osteosarcoma"
+  ],
+  "Tenosynovial Giant Cell Tumor Diffuse Type": [
+    "Tenosynovial Giant Cell Tumor Diffuse Type"
+  ],
+  "Teratoma": [
+    "Teratoma"
+  ],
+  "Testicular Lymphoma": [
+    "Testicular Lymphoma"
+  ],
+  "Testicular Mesothelioma": [
+    "Testicular Mesothelioma"
+  ],
+  "Testis": [
+    "Sex Cord Stromal Tumor",
+    "Testis",
+    "Yolk Sac Tumor",
+    "Choriocarcinoma",
+    "Embryonal Carcinoma",
+    "Germ Cell Tumor with Somatic-Type Malignancy",
+    "Teratoma",
+    "Mixed Germ Cell Tumor",
+    "Testicular Mesothelioma",
+    "Seminoma",
+    "Testicular Lymphoma",
+    "Non-Seminomatous Germ Cell Tumor"
+  ],
+  "Therapy-Related Acute Myeloid Leukemia": [
+    "Therapy-Related Acute Myeloid Leukemia"
+  ],
+  "Therapy-Related Myelodysplastic Syndrome": [
+    "Therapy-Related Myelodysplastic Syndrome"
+  ],
+  "Therapy-Related Myeloid Neoplasms": [
+    "Therapy-Related Myeloid Neoplasms",
+    "Therapy-Related Myelodysplastic Syndrome",
+    "Therapy-Related Acute Myeloid Leukemia"
+  ],
+  "Thymic Carcinoma": [
+    "Thymic Carcinoma"
+  ],
+  "Thymic Epithelial Tumor": [
+    "Thymoma",
+    "Thymic Epithelial Tumor",
+    "Thymic Carcinoma"
+  ],
+  "Thymic Neuroendocrine Tumor": [
+    "Thymic Neuroendocrine Tumor"
+  ],
+  "Thymoma": [
+    "Thymoma"
+  ],
+  "Thymus": [
+    "Thymoma",
+    "Thymus",
+    "Thymic Neuroendocrine Tumor",
+    "Thymic Epithelial Tumor",
+    "Thymic Carcinoma"
+  ],
+  "Thyroid": [
+    "Medullary Thyroid Cancer",
+    "Hyalinizing Trabecular Adenoma of the Thyroid",
+    "Thyroid",
+    "Oncocytic Adenoma of the Thyroid",
+    "Follicular Thyroid Cancer",
+    "Well-Differentiated Thyroid Cancer",
+    "Papillary Thyroid Cancer",
+    "Anaplastic Thyroid Cancer",
+    "Hurthle Cell Thyroid Cancer",
+    "Poorly Differentiated Thyroid Cancer"
+  ],
+  "Transient Abnormal Myelopoiesis": [
+    "Transient Abnormal Myelopoiesis"
+  ],
+  "Translocation-Associated Renal Cell Carcinoma": [
+    "Translocation-Associated Renal Cell Carcinoma"
+  ],
+  "Tubular Adenoma of the Colon": [
+    "Tubular Adenoma of the Colon"
+  ],
+  "Tubular Stomach Adenocarcinoma": [
+    "Tubular Stomach Adenocarcinoma"
+  ],
+  "Unclassified Renal Cell Carcinoma": [
+    "Unclassified Renal Cell Carcinoma"
+  ],
+  "Undifferentiated Carcinoma of the Pancreas": [
+    "Osteoclastic Giant Cell Tumor",
+    "Undifferentiated Carcinoma of the Pancreas"
+  ],
+  "Undifferentiated Embryonal Sarcoma of the Liver": [
+    "Undifferentiated Embryonal Sarcoma of the Liver"
+  ],
+  "Undifferentiated Malignant Neoplasm": [
+    "Undifferentiated Malignant Neoplasm"
+  ],
+  "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma": [
+    "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma"
+  ],
+  "Undifferentiated Stomach Adenocarcinoma": [
+    "Poorly Differentiated Carcinoma of the Stomach",
+    "Signet Ring Cell Carcinoma of the Stomach",
+    "Undifferentiated Stomach Adenocarcinoma"
+  ],
+  "Undifferentiated Uterine Sarcoma": [
+    "Undifferentiated Uterine Sarcoma"
+  ],
+  "Upper Tract Urothelial Carcinoma": [
+    "Upper Tract Urothelial Carcinoma"
+  ],
+  "Urachal Adenocarcinoma": [
+    "Urachal Adenocarcinoma"
+  ],
+  "Urachal Carcinoma": [
+    "Urachal Adenocarcinoma",
+    "Urachal Carcinoma"
+  ],
+  "Urethral Adenocarcinoma": [
+    "Urethral Adenocarcinoma"
+  ],
+  "Urethral Cancer": [
+    "Urethral Adenocarcinoma",
+    "Urethral Squamous Cell Carcinoma",
+    "Urethral Cancer",
+    "Urethral Urothelial Carcinoma"
+  ],
+  "Urethral Squamous Cell Carcinoma": [
+    "Urethral Squamous Cell Carcinoma"
+  ],
+  "Urethral Urothelial Carcinoma": [
+    "Urethral Urothelial Carcinoma"
+  ],
+  "Urothelial Papilloma": [
+    "Urothelial Papilloma"
+  ],
+  "Uterine Adenosarcoma": [
+    "Uterine Adenosarcoma"
+  ],
+  "Uterine Adenosquamous Carcinoma": [
+    "Uterine Adenosquamous Carcinoma"
+  ],
+  "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor": [
+    "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor"
+  ],
+  "Uterine Clear Cell Carcinoma": [
+    "Uterine Clear Cell Carcinoma"
+  ],
+  "Uterine Dedifferentiated Carcinoma": [
+    "Uterine Dedifferentiated Carcinoma"
+  ],
+  "Uterine Endometrioid Carcinoma": [
+    "Uterine Endometrioid Carcinoma"
+  ],
+  "Uterine Epithelioid Leiomyosarcoma": [
+    "Uterine Epithelioid Leiomyosarcoma"
+  ],
+  "Uterine Leiomyoma": [
+    "Uterine Leiomyoma"
+  ],
+  "Uterine Leiomyosarcoma": [
+    "Uterine Leiomyosarcoma"
+  ],
+  "Uterine Mesonephric Carcinoma": [
+    "Uterine Mesonephric Carcinoma"
+  ],
+  "Uterine Mixed Endometrial Carcinoma": [
+    "Uterine Mixed Endometrial Carcinoma"
+  ],
+  "Uterine Mucinous Carcinoma": [
+    "Uterine Mucinous Carcinoma"
+  ],
+  "Uterine Myxoid Leiomyosarcoma": [
+    "Uterine Myxoid Leiomyosarcoma"
+  ],
+  "Uterine Neuroendocrine Carcinoma": [
+    "Uterine Neuroendocrine Carcinoma"
+  ],
+  "Uterine Perivascular Epithelioid Cell Tumor": [
+    "Uterine Perivascular Epithelioid Cell Tumor"
+  ],
+  "Uterine Sarcoma, Other": [
+    "Uterine Sarcoma, Other"
+  ],
+  "Uterine Sarcoma/Mesenchymal": [
+    "Uterine Sarcoma/Mesenchymal",
+    "Uterine Adenosarcoma",
+    "Uterine Sarcoma, Other",
+    "Uterine Smooth Muscle Tumor",
+    "High-Grade Endometrial Stromal Sarcoma",
+    "Uterine Leiomyosarcoma",
+    "Undifferentiated Uterine Sarcoma",
+    "Low-Grade Endometrial Stromal Sarcoma",
+    "Uterine Perivascular Epithelioid Cell Tumor",
+    "Uterine Myxoid Leiomyosarcoma",
+    "Uterine Leiomyoma",
+    "Uterine Epithelioid Leiomyosarcoma",
+    "Endometrial Stromal Sarcoma",
+    "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential"
+  ],
+  "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma": [
+    "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma"
+  ],
+  "Uterine Smooth Muscle Tumor": [
+    "Uterine Smooth Muscle Tumor",
+    "Uterine Leiomyosarcoma",
+    "Uterine Myxoid Leiomyosarcoma",
+    "Uterine Leiomyoma",
+    "Uterine Epithelioid Leiomyosarcoma",
+    "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential"
+  ],
+  "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential": [
+    "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential"
+  ],
+  "Uterine Undifferentiated Carcinoma": [
+    "Uterine Undifferentiated Carcinoma"
+  ],
+  "Uterus": [
+    "Uterine Sarcoma/Mesenchymal",
+    "High-Grade Endometrial Stromal Sarcoma",
+    "Low-Grade Endometrial Stromal Sarcoma",
+    "Endometrial Carcinoma",
+    "Uterine Myxoid Leiomyosarcoma",
+    "Complete Hydatidiform Mole",
+    "Uterine Mesonephric Carcinoma",
+    "Placental Site Trophoblastic Tumor",
+    "Uterus",
+    "Uterine Endometrioid Carcinoma",
+    "Uterine Leiomyosarcoma",
+    "Choriocarcinoma",
+    "Molar Pregnancy",
+    "Uterine Mucinous Carcinoma",
+    "Uterine Epithelioid Leiomyosarcoma",
+    "Endometrial Stromal Sarcoma",
+    "Poorly Differentiated Carcinoma of the Uterus",
+    "Uterine Sarcoma, Other",
+    "Uterine Smooth Muscle Tumor",
+    "Uterine Dedifferentiated Carcinoma",
+    "Undifferentiated Uterine Sarcoma",
+    "Uterine Perivascular Epithelioid Cell Tumor",
+    "Uterine Adenosquamous Carcinoma",
+    "Other Uterine Tumor",
+    "Uterine Clear Cell Carcinoma",
+    "Epithelioid Trophoblastic Tumor",
+    "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential",
+    "Uterine Adenosarcoma",
+    "Gestational Trophoblastic Disease",
+    "Uterine Undifferentiated Carcinoma",
+    "Uterine Mixed Endometrial Carcinoma",
+    "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
+    "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
+    "Partial Hydatidiform Mole",
+    "Uterine Neuroendocrine Carcinoma",
+    "Uterine Leiomyoma",
+    "Invasive Hydatidiform Mole"
+  ],
+  "Uveal Melanoma": [
+    "Uveal Melanoma"
+  ],
+  "Vaginal Adenocarcinoma": [
+    "Vaginal Adenocarcinoma"
+  ],
+  "Verrucous Penile Squamous Cell Carcinoma": [
+    "Verrucous Penile Squamous Cell Carcinoma"
+  ],
+  "Villoglandular Adenocarcinoma of the Cervix": [
+    "Villoglandular Adenocarcinoma of the Cervix"
+  ],
+  "Villoglandular Carcinoma": [
+    "Villoglandular Carcinoma"
+  ],
+  "Vulva/Vagina": [
+    "Mature Teratoma",
+    "Mucinous Adenocarcinoma of the Vulva/Vagina",
+    "Yolk Sac Tumor",
+    "Embryonal Carcinoma",
+    "Mucosal Melanoma of the Vulva/Vagina",
+    "Germ Cell Tumor of the Vulva",
+    "Squamous Cell Carcinoma of the Vulva/Vagina",
+    "Dysgerminoma",
+    "Mixed Germ Cell Tumor",
+    "Polyembryoma",
+    "Poorly Differentiated Vaginal Carcinoma",
+    "Immature Teratoma",
+    "Vaginal Adenocarcinoma",
+    "Vulva/Vagina"
+  ],
+  "Waldenstrom Macroglobulinemia": [
+    "Waldenstrom Macroglobulinemia"
+  ],
+  "Warty Penile Squamous Cell Carcinoma": [
+    "Warty Penile Squamous Cell Carcinoma"
+  ],
+  "Well-Differentiated Liposarcoma": [
+    "Well-Differentiated Liposarcoma"
+  ],
+  "Well-Differentiated Neuroendocrine Tumor of the Appendix": [
+    "Well-Differentiated Neuroendocrine Tumor of the Appendix"
+  ],
+  "Well-Differentiated Neuroendocrine Tumor of the Rectum": [
+    "Well-Differentiated Neuroendocrine Tumor of the Rectum"
+  ],
+  "Well-Differentiated Neuroendocrine Tumors of the Stomach": [
+    "Well-Differentiated Neuroendocrine Tumors of the Stomach"
+  ],
+  "Well-Differentiated Thyroid Cancer": [
+    "Follicular Thyroid Cancer",
+    "Papillary Thyroid Cancer",
+    "Well-Differentiated Thyroid Cancer"
+  ],
+  "Wilms' Tumor": [
+    "Wilms' Tumor"
+  ],
+  "Yolk Sac Tumor": [
+    "Yolk Sac Tumor"
+  ],
+  "_LIQUID_": [],
+  "_SOLID_": [
+    "Malignant Nonepithelial Tumor of the Liver",
+    "Hepatocellular Carcinoma",
+    "Lymphoid",
+    "Lung Adenocarcinoma",
+    "Small Cell Carcinoma of Unknown Primary",
+    "Oral Cavity Squamous Cell Carcinoma",
+    "Granular Cell Tumor",
+    "Lymphoplasmacytic Lymphoma",
+    "Spitzoid Melanoma",
+    "Lung Squamous Cell Carcinoma",
+    "Aggressive Angiomyxoma",
+    "Solid Pseudopapillary Neoplasm of the Pancreas",
+    "Borderline Phyllodes Tumor of the Breast",
+    "Intestinal Type Stomach Adenocarcinoma",
+    "High-Grade Neuroepithelial Tumor",
+    "Liver",
+    "Well-Differentiated Thyroid Cancer",
+    "Aggressive Digital Papillary Adenocarcinoma",
+    "Myoepithelial Carcinoma",
+    "Medulloblastoma with Extensive Nodularity",
+    "Mucoepidermoid Carcinoma",
+    "High-Grade Serous Ovarian Cancer",
+    "Pineal Tumor",
+    "Myelodysplastic/Myeloproliferative Neoplasms",
+    "Low-Grade Serous Ovarian Cancer",
+    "Anaplastic Meningioma",
+    "Polymorphic PTLD",
+    "Mixed Ampullary Carcinoma",
+    "Fibroblastic Reticular Cell Tumor",
+    "T-Lymphoblastic Leukemia/Lymphoma",
+    "Hyalinizing Trabecular Adenoma of the Thyroid",
+    "Pheochromocytoma",
+    "Diffuse Large B-Cell Lymphoma, NOS",
+    "Smoldering Systemic Mastocytosis",
+    "Brenner Tumor, Malignant",
+    "Desmoplastic/Nodular Medulloblastoma",
+    "Pleomorphic Liposarcoma",
+    "AML with Mutated NPM1",
+    "Osteosarcoma",
+    "Chondrosarcoma",
+    "AML without Maturation",
+    "Basal Cell Adenocarcinoma",
+    "Head and Neck Mucosal Melanoma",
+    "Embryonal Tumor",
+    "Mucinous Borderline Ovarian Tumor",
+    "MDS with excess blasts-1",
+    "Rhabdoid Meningioma",
+    "Larynx Squamous Cell Carcinoma",
+    "Partial Hydatidiform Mole",
+    "Glassy Cell Carcinoma of the Cervix",
+    "Follicular Lymphoma",
+    "Chronic Neutrophilic Leukemia",
+    "Lung Carcinoid",
+    "Collecting Duct Renal Cell Carcinoma",
+    "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease",
+    "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+    "Intestinal Type Mucinous Carcinoma",
+    "Ossifying Fibromyxoid Tumor",
+    "Spindle Cell Carcinoma of the Lung",
+    "Perihilar Cholangiocarcinoma",
+    "T-Cell Large Granular Lymphocytic Leukemia",
+    "Cancer of Unknown Primary",
+    "Pancreatobiliary Ampullary Carcinoma",
+    "Telangiectatic Osteosarcoma",
+    "Therapy-Related Myeloid Neoplasms",
+    "Encapsulated Glioma",
+    "Myeloid Atypical",
+    "Spiroma/Spiradenoma",
+    "Anaplastic Oligoastrocytoma",
+    "Adenocarcinoma In Situ",
+    "Enteropathy-Associated T-Cell Lymphoma",
+    "Erdheim-Chester Disease",
+    "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin",
+    "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+    "High-Grade Neuroendocrine Carcinoma of the Ovary",
+    "Choroid Plexus Tumor",
+    "Germinoma",
+    "Mucinous Ovarian Cancer",
+    "Pleural Mesothelioma",
+    "Cutaneous Squamous Cell Carcinoma",
+    "Follicular Dendritic Cell Sarcoma",
+    "Anaplastic Large Cell Lymphoma",
+    "Poorly Differentiated Carcinoma of the Uterus",
+    "Myeloproliferative Neoplasms",
+    "Oropharynx Squamous Cell Carcinoma",
+    "Renal Angiomyolipoma",
+    "Primary Mediastinal",
+    "Urothelial Papilloma",
+    "Endocrine Mucin Producing Sweat Gland Carcinoma",
+    "Soft Tissue Myoepithelial Carcinoma",
+    "MDS with Single Lineage Dysplasia",
+    "Atypical Teratoid/Rhabdoid Tumor",
+    "Intravascular Large B-Cell Lymphoma",
+    "Adrenocortical Adenoma",
+    "Small Bowel Well-Differentiated Neuroendocrine Tumor",
+    "Endometrioid Ovarian Cancer",
+    "Signet Ring Cell Carcinoma of the Stomach",
+    "Conjunctival Melanoma",
+    "Head and Neck Carcinoma, Other",
+    "Metaplastic Adenocarcinoma with Spindle Cell Differentiation",
+    "Aggressive NK-Cell Leukemia",
+    "Glioma, NOS",
+    "Primary CNS Melanocytic Tumors",
+    "Hemangioblastoma",
+    "Pleomorphic Adenoma",
+    "Wilms' Tumor",
+    "AML with Myelodysplasia-Related Changes",
+    "Gastrointestinal Neuroendocrine Tumors",
+    "Dermatofibrosarcoma Protuberans",
+    "Solitary Plasmacytoma of Bone",
+    "Cutaneous Mastocytosis",
+    "Colonic Type Adenocarcinoma of the Appendix",
+    "Acute Basophilic Leukemia",
+    "Prostate Small Cell Carcinoma",
+    "Pleomorphic Rhabdomyosarcoma",
+    "Chronic Eosinophilic Leukemia, NOS",
+    "Germ Cell Tumor, Brain",
+    "Low-Grade Endometrial Stromal Sarcoma",
+    "Squamous Cell Carcinoma of the Vulva/Vagina",
+    "Complete Hydatidiform Mole",
+    "Anaplastic Medulloblastoma, Non-WNT, Non-SHH",
+    "Olfactory Neuroblastoma",
+    "Sarcomatoid Carcinoma of the Lung",
+    "Mucinous Adenocarcinoma of the Colon and Rectum",
+    "Endocervical Adenocarcinoma",
+    "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement",
+    "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement",
+    "Adenoid Cystic Carcinoma",
+    "Fibroblastic Osteosarcoma",
+    "Ependymoma",
+    "Histiocytic Dendritic Cell Sarcoma",
+    "Squamous Cell Carcinoma of the Lacrimal Gland",
+    "Pulmonary Lymphangiomyomatosis",
+    "Central Neurocytoma",
+    "Atypical Lung Carcinoid",
+    "Uterine Mucinous Carcinoma",
+    "Malignant Phyllodes Tumor of the Breast",
+    "Oncocytic Adenoma of the Thyroid",
+    "Monomorphic PTLD",
+    "Small Cell Gallbladder Carcinoma",
+    "Metaplastic Carcinosarcoma",
+    "Miscellaneous Brain Tumor",
+    "Low-Grade Neuroepithelial Tumor",
+    "Chondroblastic Osteosarcoma",
+    "Mesonephric Carcinoma",
+    "Epithelial Type Metaplastic Breast Cancer",
+    "Myelodysplastic Syndromes",
+    "Tubular Adenoma of the Colon",
+    "Penile Squamous Cell Carcinoma",
+    "Ovarian Epithelial Tumor",
+    "Chronic Lymphoproliferative Disorder of NK Cells",
+    "Schwannoma",
+    "Breast",
+    "Sinonasal Squamous Cell Carcinoma",
+    "Thymoma",
+    "Adenomyoepithelioma of the Breast",
+    "Papillary Glioneuronal Tumor",
+    "Embryonal Carcinoma",
+    "Ovarian Seromucinous Adenoma",
+    "Thymic Epithelial Tumor",
+    "Desmoplastic Trichoepithelioma",
+    "Alveolar Soft Part Sarcoma",
+    "Glomangiosarcoma",
+    "Renal Medullary Carcinoma",
+    "Undifferentiated Carcinoma of the Pancreas",
+    "Blood",
+    "MDS/MPN with Ring Sideroblasts and Thrombocytosis",
+    "Papillary Thyroid Cancer",
+    "Clear Cell Papillary Renal Cell Carcinoma",
+    "Testis",
+    "Basal Cell Carcinoma of Prostate",
+    "Nasopharyngeal Carcinoma",
+    "Spindle Cell/Sclerosing Rhabdomyosarcoma",
+    "Uveal Melanoma",
+    "Liver Angiosarcoma",
+    "Lung Adenocarcinoma In Situ",
+    "Myeloid Neoplasms with Germ Line Predisposition",
+    "Fibrosarcoma",
+    "Small Cell Carcinoma of the Stomach",
+    "Essential Thrombocythemia",
+    "Perivascular Epithelioid Cell Tumor",
+    "Anaplastic Large-Cell Lymphoma ALK Positive",
+    "Myofibroma",
+    "Lung",
+    "Sialoblastoma",
+    "Anaplastic Large-Cell Lymphoma ALK Negative",
+    "Inflammatory Myofibroblastic Bladder Tumor",
+    "Cervical Clear Cell Carcinoma",
+    "_LIQUID_",
+    "Salivary Duct Carcinoma",
+    "Bladder Squamous Cell Carcinoma",
+    "Gangliocytoma",
+    "High-Grade Serous Fallopian Tube Cancer",
+    "Dysembryoplastic Neuroepithelial Tumor",
+    "Cervical Neuroendocrine Tumor",
+    "Oligoastrocytoma",
+    "Papillary Tumor of the Pineal Region",
+    "Atypical Choroid Plexus Papilloma",
+    "Porocarcinoma/Spiroadenocarcinoma",
+    "Pleural Mesothelioma, Biphasic Type",
+    "Lentigo Maligna Melanoma",
+    "Prostate Squamous Cell Carcinoma",
+    "Extramammary Paget Disease",
+    "Large B-Cell Lymphoma with IRF4 Rearrangement",
+    "Stomach Adenocarcinoma",
+    "Lung Adenosquamous Carcinoma",
+    "Ampulla of Vater",
+    "Langerhans Cell Sarcoma",
+    "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential",
+    "Angiomatoid Fibrous Histiocytoma",
+    "Basaloid Large Cell Carcinoma of the Lung",
+    "Polycythaemia Vera Myelofibrosis",
+    "Colon Adenocarcinoma In Situ",
+    "Urachal Carcinoma",
+    "Primary DLBCL of the central nervous system",
+    "Medulloblastoma, NOS",
+    "Mixed Type Metaplastic Breast Cancer",
+    "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+    "Ganglioglioma",
+    "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+    "Atypical Lipomatous Tumor",
+    "Breast Neoplasm, NOS",
+    "Conventional Type Chordoma",
+    "Ependymomal Tumor",
+    "Head and Neck Squamous Cell Carcinoma",
+    "Renal Clear Cell Carcinoma with Sarcomatoid Features",
+    "Hairy Cell Leukemia",
+    "Parosteal Osteosarcoma",
+    "Clear Cell Ependymoma",
+    "Myxopapillary Ependymoma",
+    "Meningioma",
+    "Sclerosing Epithelioid Fibrosarcoma",
+    "Myeloproliferative Neoplasms, Unclassifiable",
+    "Breast Invasive Cancer, NOS",
+    "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+    "Extraosseous Plasmacytoma",
+    "Skin Adnexal Carcinoma",
+    "Choroid Plexus Papilloma",
+    "Myxoid/Round-Cell Liposarcoma",
+    "Small Cell Osteosarcoma",
+    "IgM",
+    "Large Cell Neuroendocrine Carcinoma",
+    "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+    "Rhabdomyosarcoma",
+    "Acute Megakaryoblastic Leukemia",
+    "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+    "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue",
+    "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS",
+    "Duodenal Adenocarcinoma",
+    "Uterine Smooth Muscle Tumor",
+    "Anaplastic Ependymoma",
+    "Primary CNS Melanoma",
+    "Langerhans Cell Histiocytosis",
+    "Villoglandular Adenocarcinoma of the Cervix",
+    "Dendritic Cell Sarcoma",
+    "Anaplastic Medulloblastoma, Group 3",
+    "Signet Ring Cell Type of the Appendix",
+    "Cervical Adenoid Cystic Carcinoma",
+    "Chronic Myelomonocytic Leukemia-1",
+    "Aggressive Systemic Mastocytosis",
+    "Gastric Type Mucinous Carcinoma",
+    "Microcystic Adnexal Carcinoma",
+    "Myopericytoma",
+    "Testicular Lymphoma",
+    "Pituitary Adenoma",
+    "Mixed Phenotype Acute Leukemia with t",
+    "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma",
+    "Appendiceal Adenocarcinoma",
+    "Cholangiocarcinoma",
+    "Lymphoid Atypical",
+    "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle",
+    "Juvenile Myelomonocytic Leukemia",
+    "Epithelioid Hemangioendothelioma",
+    "Carcinoma ex Pleomorphic Adenoma",
+    "Follicular Thyroid Cancer",
+    "Unclassified Renal Cell Carcinoma",
+    "Florid Follicular Hyperplasia PTLD",
+    "Odontogenic Carcinoma",
+    "Uterine Myxoid Leiomyosarcoma",
+    "Bladder Adenocarcinoma",
+    "Extra Gonadal Germ Cell Tumor",
+    "Fibrolamellar Carcinoma",
+    "Chondroblastoma",
+    "Pleural Mesothelioma, Epithelioid Type",
+    "AML with Maturation",
+    "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma",
+    "Peritoneal Mesothelioma",
+    "IgG",
+    "Nodular Sclerosis Classical Hodgkin Lymphoma",
+    "Myeloid",
+    "Brenner Tumor",
+    "Angiocentric Glioma",
+    "AML",
+    "Breast Invasive Carcinosarcoma, NOS",
+    "Mucinous Stomach Adenocarcinoma",
+    "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+    "Glioblastoma",
+    "Cervical Squamous Cell Carcinoma",
+    "Sinonasal Undifferentiated Carcinoma",
+    "Undifferentiated Stomach Adenocarcinoma",
+    "High-Grade Surface Osteosarcoma",
+    "Mastocytosis",
+    "Mucinous Adenocarcinoma of the Vulva/Vagina",
+    "Anaplastic Medulloblastoma, NOS",
+    "Prostate Adenocarcinoma",
+    "Pineoblastoma",
+    "Mucinous Adenocarcinoma of the Appendix",
+    "Classical Hodgkin Lymphoma PTLD",
+    "Sweat Gland Adenocarcinoma",
+    "Medulloblastoma, WNT Subtype",
+    "Desmoplastic Small-Round-Cell Tumor",
+    "Small Cell Carcinoma of the Cervix",
+    "Fibrothecoma",
+    "Meningothelial Tumor",
+    "Angioimmunoblastic T-Cell Lymphoma",
+    "Uterine Mixed Endometrial Carcinoma",
+    "Myxoma",
+    "Acute Leukemias of Ambiguous Lineage",
+    "Gliosarcoma",
+    "Renal Non-Clear Cell Carcinoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+    "Lymphomatoid Papulosis",
+    "Pleomorphic Xanthoastrocytoma",
+    "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement",
+    "B-Lymphoblastic Leukemia/Lymphoma",
+    "Myeloid/Lymphoid Neoplasms with PCM1-JAK2",
+    "Gallbladder Adenocarcinoma, NOS",
+    "EBV Positive DLBCL, NOS",
+    "Primary Neuroepithelial Tumor",
+    "Pituicytoma",
+    "Mixed Cervical Carcinoma",
+    "Giant Cell Carcinoma of the Lung",
+    "Cellular Schwannoma",
+    "Hairy Cell Leukemia-Variant",
+    "Intraductal Papillary Mucinous Neoplasm",
+    "AML with Mutated RUNX1",
+    "Therapy-Related Myelodysplastic Syndrome",
+    "Testicular Mesothelioma",
+    "Sarcomatoid Renal Cell Carcinoma",
+    "Fibroadenoma",
+    "Brenner Tumor, Benign",
+    "Monoclonal Gammopathy of Undetermined Significance",
+    "Proximal-Type Epithelioid Sarcoma",
+    "Melanocytoma",
+    "Adenosquamous Carcinoma of the Tongue",
+    "Disseminated Juvenile Xanthogranuloma",
+    "Anaplastic Oligodendroglioma",
+    "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+    "Esophageal Poorly Differentiated Carcinoma",
+    "Salivary Gland Oncocytoma",
+    "Clear Cell Carcinoma of the Lung",
+    "Mixed Cancer Types",
+    "Breast Invasive Ductal Carcinoma",
+    "NUT Carcinoma of the Lung",
+    "Indolent Systemic Mastocytosis",
+    "MDS with Multilineage Dysplasia",
+    "Uterine Sarcoma, Other",
+    "Synovial Sarcoma",
+    "Breast Mixed Ductal and Lobular Carcinoma",
+    "Urethral Urothelial Carcinoma",
+    "Intimal Sarcoma",
+    "Bone",
+    "Pleuropulmonary Blastoma",
+    "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+    "Melanoma",
+    "Spindle Cell Rhabdomyosarcoma",
+    "Villoglandular Carcinoma",
+    "Papillary Stomach Adenocarcinoma",
+    "Benign Phyllodes Tumor of the Breast",
+    "Solitary Fibrous Tumor of the Central Nervous System",
+    "Pleomorphic Carcinoma of the Lung",
+    "Mixed Ovarian Carcinoma",
+    "Mucinous Cystic Neoplasm",
+    "Infantile Fibrosarcoma",
+    "Immature Teratoma",
+    "Undifferentiated Malignant Neoplasm",
+    "Anaplastic Thyroid Cancer",
+    "Cervical Serous Carcinoma",
+    "Medulloepithelioma",
+    "Esophagus/Stomach",
+    "Large Cell Lung Carcinoma",
+    "Squamous Cell Carcinoma, NOS",
+    "Penis",
+    "Uterine Adenosarcoma",
+    "Prostate Neuroendocrine Carcinoma",
+    "Uterine Leiomyoma",
+    "APL with PML-RARA",
+    "Vaginal Adenocarcinoma",
+    "Lymph",
+    "Clear cell Meningioma",
+    "Primary Cutaneous Follicle Center Lymphoma",
+    "Primary Cutaneous DLBCL, Leg Type",
+    "Hepatoblastoma",
+    "Endometrial Carcinoma",
+    "Pleural Mesothelioma, Sarcomatoid Type",
+    "Intrahepatic Cholangiocarcinoma",
+    "Basaloid Penile Squamous Cell Carcinoma",
+    "Urethral Squamous Cell Carcinoma",
+    "Hepatocellular Adenoma",
+    "Seminoma",
+    "Tenosynovial Giant Cell Tumor Diffuse Type",
+    "Ewing Sarcoma of Soft Tissue",
+    "IgA",
+    "Poorly Differentiated Carcinoma of the Stomach",
+    "Uterus",
+    "Ocular Melanoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+    "Alveolar Rhabdomyosarcoma",
+    "Pure Erythroid Leukemia",
+    "Molar Pregnancy",
+    "Paget Disease of the Nipple",
+    "Renal Neuroendocrine Tumor",
+    "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+    "Adenoid Cystic Carcinoma of the Lacrimal Gland",
+    "EBV Positive Mucocutaneous Ulcer",
+    "Medulloblastoma, Non-WNT, Non-SHH",
+    "Anaplastic Medulloblastoma, SHH Subtype",
+    "Polymorphous Adenocarcinoma",
+    "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma",
+    "Cervical Adenocarcinoma",
+    "Pilocytic Astrocytoma",
+    "MDS with Isolated Del",
+    "Uterine Perivascular Epithelioid Cell Tumor",
+    "Oligodendroglioma",
+    "Low-Grade Glioma, NOS",
+    "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+    "Ovarian Seromucinous Borderline Tumor",
+    "Lymphocyte-Rich Classical Hodgkin Lymphoma",
+    "Colon Adenocarcinoma",
+    "Epithelioid Trophoblastic Tumor",
+    "Polycythemia Vera",
+    "Ovarian Seromucinous Carcinoma",
+    "Waldenstrom Macroglobulinemia",
+    "Medullary Carcinoma of the Colon",
+    "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract",
+    "Malignant Rhabdoid Tumor of the Liver",
+    "Mesenchymal Chondrosarcoma",
+    "Adenosquamous Carcinoma of the Pancreas",
+    "Inflammatory Breast Cancer",
+    "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+    "Other",
+    "Basal Cell Carcinoma",
+    "Transient Abnormal Myelopoiesis",
+    "MDS with excess blasts-2",
+    "High-Grade B-Cell Lymphoma, NOS",
+    "Small Cell Carcinoma of the Ovary",
+    "Intestinal Ampullary Carcinoma",
+    "Essential Thrombocythemia Myelofibrosis",
+    "Desmoplastic Melanoma",
+    "Mast Cell Sarcoma",
+    "Epithelial-Myoepithelial Carcinoma",
+    "Poorly Differentiated Vaginal Carcinoma",
+    "Osteoblastic Osteosarcoma",
+    "Renal Cell Carcinoma",
+    "Juvenile Secretory Carcinoma of the Breast",
+    "Amyloidosis",
+    "Metaplastic Breast Cancer",
+    "Plasma Cell Myeloma",
+    "Mucosal Melanoma of the Esophagus",
+    "Infectious Mononucleosis PTLD",
+    "Well-Differentiated Neuroendocrine Tumor of the Appendix",
+    "Mature Teratoma",
+    "Radiation-Associated Sarcoma",
+    "Choriocarcinoma",
+    "Acinic Cell Carcinoma",
+    "Adenoid Cystic Breast Cancer",
+    "Hydroa Vacciniforme Like Lymphoproliferative Disorder",
+    "Paraganglioma",
+    "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor",
+    "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+    "Germinal Center B-Cell Type",
+    "Angiosarcoma",
+    "T-Cell Prolymphocytic Leukemia",
+    "Soft Tissue",
+    "AML with Variant RARA translocation",
+    "Poorly Differentiated Carcinoma, NOS",
+    "Well-Differentiated Neuroendocrine Tumor of the Rectum",
+    "Neuroendocrine Tumor, NOS",
+    "Medulloblastoma, Group 3",
+    "Chronic Myelomonocytic Leukemia",
+    "Head and Neck",
+    "Pancreatic Neuroendocrine Carcinoma",
+    "Cerebellar Liponeurocytoma",
+    "CNS/Brain",
+    "Chordoid Meningioma",
+    "AML with Recurrent Genetic Abnormalities",
+    "Metaplastic Squamous Cell Carcinoma",
+    "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2",
+    "Rosai-Dorfman Disease",
+    "Cancer of Unknown Primary, NOS",
+    "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
+    "Solid Papillary Carcinoma of the Breast",
+    "Chronic Myeloid Leukemia, BCR-ABL1+",
+    "Medulloblastoma, SHH Subtype",
+    "Ovary/Fallopian Tube",
+    "Polyembryoma",
+    "Classical Hodgkin Lymphoma",
+    "Adenocarcinoma of the Gastroesophageal Junction",
+    "Cutaneous Melanoma",
+    "High-Grade Neuroendocrine Carcinoma of the Stomach",
+    "In Situ Follicular Neoplasia",
+    "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+    "Adult T-Cell Leukemia/Lymphoma",
+    "Gonadoblastoma",
+    "Peritoneum",
+    "Miscellaneous Neuroepithelial Tumor",
+    "Chronic Myelogenous Leukemia",
+    "Granulosa Cell Tumor",
+    "Dermatofibroma",
+    "Extrahepatic Cholangiocarcinoma",
+    "Mucoepidermoid Carcinoma of the Lung",
+    "Chordoid Glioma of the Third Ventricle",
+    "Primary Effusion Lymphoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy",
+    "Clear Cell Odontogenic Carcinoma",
+    "Desmoplastic/Nodular Medulloblastoma, NOS",
+    "Glioblastoma Multiforme",
+    "ALK Positive Large B-Cell Lymphoma",
+    "Posttransplant Lymphoproliferative Disorders",
+    "Uterine Endometrioid Carcinoma",
+    "Clear Cell Borderline Ovarian Tumor",
+    "Dedifferentiated Liposarcoma",
+    "Sarcomatoid Carcinoma of the Urinary Bladder",
+    "Dedifferentiated Chordoma",
+    "Signet Ring Mucinous Carcinoma",
+    "Desmoplastic/Nodular Medulloblastoma, SHH Subtype",
+    "B-Lymphoblastic Leukemia/Lymphoma with t",
+    "Malignant Tumor",
+    "Cervical Leiomyosarcoma",
+    "Cervical Rhabdomyosarcoma",
+    "Ovarian Cancer, Other",
+    "AML with t",
+    "Uterine Adenosquamous Carcinoma",
+    "AML with inv",
+    "Acute Myelomonocytic Leukemia",
+    "Brenner Tumor, Borderline",
+    "Other Uterine Tumor",
+    "Breast Carcinoma with Signet Ring",
+    "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+    "Chronic Myelomonocytic Leukemia-2",
+    "Leiomyosarcoma",
+    "Sezary Syndrome",
+    "Salivary Carcinoma, Other",
+    "Medullomyoblastoma",
+    "Adrenal Gland",
+    "Renal Small Cell Carcinoma",
+    "Monoclonal Immunoglobulin Deposition Diseases, Other",
+    "Bladder Urothelial Carcinoma",
+    "Translocation-Associated Renal Cell Carcinoma",
+    "Secondary Osteosarcoma",
+    "Pancreatic Adenocarcinoma",
+    "Papillary Renal Cell Carcinoma",
+    "Atypical Fibroxanthoma",
+    "Adenosquamous Carcinoma of the Stomach",
+    "Duodenal-Type Follicular Lymphoma",
+    "Neuroblastoma",
+    "Retinoblastoma",
+    "Embryonal Tumor with Abundant Neuropil and True Rosettes",
+    "Hodgkin Lymphoma",
+    "Merkel Cell Carcinoma",
+    "Inflammatory Myofibroblastic Tumor",
+    "Mast Cell Leukemia",
+    "Urethral Adenocarcinoma",
+    "Cervical Endometrioid Carcinoma",
+    "Atypical Nevus",
+    "Hemangioma",
+    "Chromophobe Renal Cell Carcinoma",
+    "Anaplastic Pleomorphic Xanthoastrocytoma",
+    "Burkitt-Like Lymphoma with 11q Aberration",
+    "Acute Monoblastic/Monocytic Leukemia",
+    "Myofibromatosis",
+    "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+    "Endometrial Stromal Sarcoma",
+    "Esophageal Adenocarcinoma",
+    "Diffuse Type Stomach Adenocarcinoma",
+    "Smooth Muscle Neoplasm, NOS",
+    "NUT Midline Carcinoma of the Head and Neck",
+    "Bowel",
+    "Proliferating Pilar Cystic Tumor",
+    "Medulloblastoma",
+    "Head and Neck Squamous Cell Carcinoma of Unknown Primary",
+    "Upper Tract Urothelial Carcinoma",
+    "Pancreatoblastoma",
+    "Uterine Clear Cell Carcinoma",
+    "Lymphoid Benign",
+    "Anorectal Mucosal Melanoma",
+    "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+    "Desmoplastic Infantile Ganglioglioma",
+    "Neuroendocrine Carcinoma, NOS",
+    "Pituitary Carcinoma",
+    "Gestational Trophoblastic Disease",
+    "Acute Myeloid Leukemia",
+    "Germ Cell Tumor with Somatic-Type Malignancy",
+    "Primary Brain Tumor",
+    "Sertoli-Leydig Cell Tumor",
+    "Plasmacytoid/Signet Ring Cell Bladder Carcinoma",
+    "DLBCL Associated with Chronic Inflammation",
+    "Primary Myelofibrosis,Overt Fibrotic Stage",
+    "Steroid Cell Tumor, NOS",
+    "Anaplastic Ganglioglioma",
+    "Serous Borderline Ovarian Tumor, Micropapillary",
+    "Medulloblastoma with Extensive Nodularity, NOS",
+    "Congenital Nevus",
+    "Craniopharyngioma, Adamantinomatous Type",
+    "Mantle Cell Lymphoma",
+    "Inflammatory Myofibroblastic Lung Tumor",
+    "MDS, Unclassifiable",
+    "Histiocytic Sarcoma",
+    "Prostate",
+    "MDS/MPN, Unclassifiable",
+    "Ewing Sarcoma",
+    "Primitive Neuroectodermal Tumor",
+    "Atypical Meningioma",
+    "Primary Myelofibrosis",
+    "Gastrointestinal Stromal Tumor",
+    "Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma",
+    "AML with Biallelic Mutations of CEBPA",
+    "Monoclonal Immunoglobulin Deposition Diseases",
+    "Follicular T-Cell Lymphoma",
+    "Cervical Adenoid Basal Carcinoma",
+    "Adenocarcinoma, NOS",
+    "Thymic Neuroendocrine Tumor",
+    "Uterine Leiomyosarcoma",
+    "Mucosal Melanoma of the Vulva/Vagina",
+    "Solitary Fibrous Tumor/Hemangiopericytoma",
+    "Acinar Cell Carcinoma, NOS",
+    "Cervical Adenosquamous Carcinoma",
+    "Lymphoid Neoplasm",
+    "Verrucous Penile Squamous Cell Carcinoma",
+    "Melanoma of Unknown Primary",
+    "Pancreatic Neuroendocrine Tumor",
+    "Uterine Dedifferentiated Carcinoma",
+    "Mesenchymal Chondrosarcoma of the CNS",
+    "Undifferentiated Uterine Sarcoma",
+    "Small Cell Lung Cancer",
+    "Large Cell Lung Carcinoma With Rhabdoid Phenotype",
+    "Warty Penile Squamous Cell Carcinoma",
+    "Primary Myelofibrosis, Prefibrotic/Early Stage",
+    "Small Bowel Cancer",
+    "Intraductal Papillary Neoplasm of the Bile Duct",
+    "Activated B-cell Type",
+    "Epithelioid Sarcoma",
+    "Gallbladder Cancer",
+    "Breast Lobular Carcinoma In Situ",
+    "Lacrimal Gland Tumor",
+    "Lymphoepithelioma-like Carcinoma of the Lung",
+    "Gastric Remnant Adenocarcinoma",
+    "Head and Neck Neuroendocrine Carcinoma",
+    "Clear Cell Sarcoma of Kidney",
+    "MDS with Excess Blasts",
+    "High-Grade Neuroendocrine Carcinoma of the Esophagus",
+    "Lymphocyte-Depleted Classical Hodgkin Lymphoma",
+    "Intracholecystic Papillary Neoplasm",
+    "Sarcoma, NOS",
+    "Low-Grade Central Osteosarcoma",
+    "Hypopharynx Squamous Cell Carcinoma",
+    "Germ Cell Tumor of the Vulva",
+    "Malignant Lymphoma",
+    "Uterine Mesonephric Carcinoma",
+    "Vulva/Vagina",
+    "Anaplastic Astrocytoma",
+    "Intraductal Tubulopapillary Neoplasm",
+    "Sex Cord Stromal Tumor",
+    "Poroma/Acrospiroma",
+    "Well-Differentiated Neuroendocrine Tumors of the Stomach",
+    "Renal Oncocytoma",
+    "Uterine Epithelioid Leiomyosarcoma",
+    "Urethral Cancer",
+    "Anal Squamous Cell Carcinoma",
+    "Myeloid Neoplasm",
+    "Subependymoma",
+    "Inverted Urothelial Papilloma",
+    "Plasmablastic Lymphoma",
+    "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+    "Atypical Chronic Myeloid Leukemia, BCR-ABL1-",
+    "Cystic Tumor of the Pancreas",
+    "AML with BCR-ABL1",
+    "Clear Cell Sarcoma",
+    "Signet Ring Cell Adenocarcinoma of the Colon and Rectum",
+    "Combined Small Cell Lung Carcinoma",
+    "Breast Angiosarcoma",
+    "Acral Melanoma",
+    "Hepatosplenic T-cell Lymphoma",
+    "Plasmacytic Hyperplasia PTLD",
+    "Ampullary Carcinoma",
+    "Breast Sarcoma",
+    "Breast Invasive Lobular Carcinoma",
+    "Cervical Adenocarcinoma In Situ",
+    "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum",
+    "Sinonasal Adenocarcinoma",
+    "Non-Small Cell Lung Cancer",
+    "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+    "Uterine Undifferentiated Carcinoma",
+    "Burkitt Lymphoma",
+    "Uterine Neuroendocrine Carcinoma",
+    "Melanotic Schwannoma",
+    "Chordoma",
+    "Parathyroid Cancer",
+    "Salivary Carcinoma",
+    "Small Intestinal Carcinoma",
+    "Choroid Plexus Carcinoma",
+    "Rectal Adenocarcinoma",
+    "Invasive Hydatidiform Mole",
+    "Renal Mucinous Tubular Spindle Cell Carcinoma",
+    "Mucosal Melanoma of the Urethra",
+    "Medullary Thyroid Cancer",
+    "Ovarian Germ Cell Tumor",
+    "Diffuse Intrinsic Pontine Glioma",
+    "High-Grade Glioma, NOS",
+    "Round Cell Sarcoma, NOS",
+    "Acute Panmyelosis with Myelofibrosis",
+    "Liposarcoma",
+    "Esophagogastric Adenocarcinoma",
+    "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+    "Goblet Cell Adenocarcinoma of the Appendix",
+    "Renal Clear Cell Carcinoma",
+    "FH-Deficient Renal Cell Carcinoma",
+    "Early T-Cell Precursor Lymphoblastic Leukemia",
+    "Salivary Gland-Type Tumor of the Lung",
+    "B-Cell Prolymphocytic Leukemia",
+    "Placental Site Trophoblastic Tumor",
+    "Breast Fibroepithelial Neoplasms",
+    "Peritoneal Serous Carcinoma",
+    "AML, NOS",
+    "Craniopharyngioma, Papillary Type",
+    "Sellar Tumor",
+    "Thymic Carcinoma",
+    "Acute Undifferentiated Leukemia",
+    "Mixed Germ Cell Tumor",
+    "Dysgerminoma",
+    "Extraventricular Neurocytoma",
+    "Astrocytoma",
+    "Natural Killer",
+    "Peripheral Nervous System",
+    "Desmoplastic Infantile Astrocytoma",
+    "Poorly Differentiated Thyroid Cancer",
+    "Breast Invasive Mixed Mucinous Carcinoma",
+    "Breast Ductal Carcinoma In Situ",
+    "Undifferentiated Embryonal Sarcoma of the Liver",
+    "Medulloblastoma, Group 4",
+    "Mature T and NK Neoplasms",
+    "Eye",
+    "Phyllodes Tumor of the Breast",
+    "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+    "Anaplastic Medulloblastoma, Group 4",
+    "Myeloid Proliferations Related to Down Syndrome",
+    "Serous Borderline Ovarian Tumor",
+    "Intraductal Oncocytic Papillary Neoplasm",
+    "Serous Cystadenoma of the Pancreas",
+    "Atypical Pituitary Adenoma",
+    "Teratoma",
+    "Myxofibrosarcoma",
+    "Mucinous Carcinoma",
+    "Medulloblastoma with Extensive Nodularity, SHH Subtype",
+    "Breast Invasive Carcinoma, NOS",
+    "Lymphomatoid Granulomatosis",
+    "Therapy-Related Acute Myeloid Leukemia",
+    "Splenic Marginal Zone Lymphoma",
+    "Malignant Glomus Tumor",
+    "Malignant Teratoma",
+    "Thymus",
+    "Myeloid Leukemia Associated with Down Syndrome",
+    "Salivary Adenocarcinoma",
+    "Papillary Meningioma",
+    "Ciliated Muconodular Papillary Tumor of the Lung",
+    "Dedifferentiated Chondrosarcoma",
+    "Neurofibroma",
+    "Bladder/Urinary Tract",
+    "Non-Seminomatous Germ Cell Tumor",
+    "Uterine Sarcoma/Mesenchymal",
+    "In Situ Mantle Cell Neoplasia",
+    "Mu Heavy-Chain Disease",
+    "Alpha Heavy-Chain Disease",
+    "Astroblastoma",
+    "Refractory Cytopenia of Childhood",
+    "Esophageal Squamous Cell Carcinoma",
+    "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+    "Diffuse Astrocytoma",
+    "Periosteal Osteosarcoma",
+    "Yolk Sac Tumor",
+    "Non-Hodgkin Lymphoma",
+    "Small Cell Glioblastoma",
+    "Rhabdoid Cancer",
+    "Systemic Mastocytosis",
+    "Pseudomyogenic Hemangioendothelioma",
+    "Peripheral T-Cell lymphoma, NOS",
+    "Diffuse Glioma",
+    "Pleura",
+    "Biliary Tract",
+    "Myeloid Sarcoma",
+    "Marginal Zone Lymphoma",
+    "Clear Cell Ovarian Cancer",
+    "Myeloid Benign",
+    "Cervix",
+    "Colorectal Adenocarcinoma",
+    "Carcinoma with Chondroid Metaplasia",
+    "Serous Ovarian Cancer",
+    "Low-grade Appendiceal Mucinous Neoplasm",
+    "Hemangiopericytoma of the Central Nervous System",
+    "Leiomyoma",
+    "Melanotic Medulloblastoma",
+    "Acinar Cell Carcinoma of the Pancreas",
+    "Nerve Sheath Tumor",
+    "Anal Gland Adenocarcinoma",
+    "Gamma Heavy-Chain Disease",
+    "B-Lymphoblastic Leukemia/Lymphoma, NOS",
+    "Myxoid Chondrosarcoma",
+    "Pineal Parenchymal Tumor of Intermediate Differentiation",
+    "Tubular Stomach Adenocarcinoma",
+    "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+    "Urachal Adenocarcinoma",
+    "Sebaceous Carcinoma",
+    "HHV8 Positive DLBCL, NOS",
+    "Adamantinoma",
+    "Histiocytic and Dendritic Cell Neoplasms",
+    "Pediatric-Type Follicular Lymphoma",
+    "High-Grade Endometrial Stromal Sarcoma",
+    "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS",
+    "Adenosquamous Carcinoma of the Gallbladder",
+    "Low-Grade Fibromyxoid Sarcoma",
+    "Osteoclastic Giant Cell Tumor",
+    "Adrenocortical Carcinoma",
+    "Hurthle Cell Thyroid Cancer",
+    "Skin",
+    "Small Cell Bladder Cancer",
+    "Invasive Breast Carcinoma",
+    "Interdigitating Dendritic Cell Sarcoma",
+    "Nodular Lymphocyte-Predominant Hodgkin Lymphoma",
+    "Pancreas",
+    "Endometrioid Borderlin Ovarian Tumor",
+    "Mature B-Cell Neoplasms",
+    "Kidney",
+    "Large Cell/Anaplastic Medulloblastoma",
+    "Well-Differentiated Liposarcoma",
+    "Extraskeletal Myxoid Chondrosarcoma",
+    "Embryonal Rhabdomyosarcoma",
+    "Metaplastic Adenosquamous Carcinoma",
+    "Lung Neuroendocrine Tumor",
+    "Giant Cell Tumor of Bone",
+    "AML with Minimal Differentiation",
+    "Ovarian Choriocarcinoma, NOS",
+    "Ganglioneuroma",
+    "Pilomyxoid Astrocytoma",
+    "Malignant Peripheral Nerve Sheath Tumor",
+    "Spindle Cell Oncocytoma of the Adenohypophysis",
+    "Ganglioneuroblastoma",
+    "Thyroid",
+    "Nodal Marginal Zone Lymphoma",
+    "Parathyroid Carcinoma",
+    "Poorly Differentiated Non-Small Cell Lung Cancer",
+    "Monoclonal B-Cell Lymphocytosis",
+    "Desmoid/Aggressive Fibromatosis",
+    "Pineocytoma",
+    "Mixed Cellularity Classical Hodgkin Lymphoma",
+    "Indeterminate Dendritic Cell Tumor",
+    "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
+    "Adenoid Cystic Carcinoma of the Lung",
+    "MDS with Ring Sideroblasts",
+    "Chronic Myelomonocytic Leukemia-0",
+    "Carcinoma with Osseous Metaplasia",
+    "Mycosis Fungoides"
+  ]
+}

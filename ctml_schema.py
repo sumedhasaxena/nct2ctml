@@ -2,7 +2,7 @@
 This script contains defines the clinical trial schema as requied by Matchminer app
 """
 
-def get_trial_schema():
+def get_ctml_schema():
     return {
   'nct_id': '',
   'age': 'Adults',

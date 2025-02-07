@@ -10,7 +10,7 @@ import csv
 def main():
     nct_data = clinical_trials_gov.get_all_studies()
 
-    with open('results/nct_data.csv', mode='w', newline='') as file:
+    with open('results/nct/nct_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['NCT ID', 'Conditions', 'Last Updated Date'])
         writer.writerows(nct_data)

@@ -5,8 +5,9 @@ of data from clinicaltrials.gov
 
 import requests
 import urllib.parse
-import clinical_trial_schema
-from trial_data_formatter import check_if_recruiting_in_HK, is_study_interventional
+import ctml_schema
+import trial_data_formatter as tdf
+import config
 
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
 
@@ -14,7 +15,8 @@ API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
 def get_all_studies():
     """
     Queries https://clinicaltrials.gov/api to get all studies filtered by params specified below.
-    Extracts the NCT_ID from each study
+    Extracts certain fields from each study and adds to a list
+    Saves each study in a json file
 
     Returns
     -------
@@ -30,16 +32,12 @@ def get_all_studies():
     status = "RECRUITING"
     study_type = "AREA[StudyType]INTERVENTIONAL"
 
-    # fields to return
-    fields_to_return = "NCTId|ConditionsModule|StatusModule|ContactsLocationsModule|StudyType"
-
     sortBy = "LastUpdatePostDate"
 
     params = {'query.cond': condition,
               'query.locn': location,
               'filter.overallStatus' : status,
               'query.term': study_type,
-              'fields': fields_to_return,
               'pageSize': 50,
               'sort': sortBy}    
     nct_data = []
@@ -51,11 +49,20 @@ def get_all_studies():
 
         json_response = response.json()
         for study in json_response['studies']:
-            if check_if_recruiting_in_HK(study):
-                nctid = study['protocolSection']['identificationModule']['nctId']
+            nct_id = study['protocolSection']['identificationModule']['nctId']
+            is_recruiting_in_hk = tdf.check_if_recruiting_in_HK(study)
+            if is_recruiting_in_hk == True:                
+                # consolidate info to be saved in a CSV file
                 conditions = ','.join(study['protocolSection']['conditionsModule']['conditions'])
                 lastUpdatedDate = study['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
-                nct_data.append((nctid, conditions, lastUpdatedDate))
+                nct_data.append((nct_id, conditions, lastUpdatedDate))
+
+                # save each study as a separate json file after removing unnecessary sections
+                tdf.remove_unused_keys(study)
+                tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
+            else:
+                print(f"Study {nct_id} is not recruiting actively in HK. Skipping")
+
         if 'nextPageToken' not in json_response:
             break
         nextPageToken = json_response['nextPageToken']
@@ -64,22 +71,25 @@ def get_all_studies():
         params['pageToken'] = nextPageToken
     return nct_data
 
-def get_nct_data(nct_id:str):
+def get_nct_study(nct_id:str):
     """
-    Queries a single study with the nct_id param
-
-    Returns
-    -------
-    JSON response body for the queried trial
+    Queries a single study with the nct_id param and saves the response to a file
     """
 
     NCT_STUDY_ENDPOINT = "studies/{0}".format(nct_id)
     endpoint_url = urllib.parse.urljoin(API_BASE_URL, NCT_STUDY_ENDPOINT)
     response = requests.get(endpoint_url)
     response.raise_for_status()
-    return response.json()
+    study = response.json()
+    is_recruiting_in_hk =tdf.check_if_recruiting_in_HK(study)
+    if is_recruiting_in_hk == True:
+        tdf.remove_unused_keys(study)
+        tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
+        print(f"Study {nct_id} saved at results/nct/{nct_id}.json")
+    else:
+        print(f"Study {nct_id} is not recruiting actively in HK. Skipping")
 
-def map_clinical_trial_data(trial_data) -> dict:
+def map_nct_to_ctml(trial_data: dict) -> dict:
     """
     Logic to map the fields from https://clinicaltrials.gov/ API response to the clinical trial schema required by matchminer
     Parameters
@@ -93,7 +103,7 @@ def map_clinical_trial_data(trial_data) -> dict:
         Dictionary containing the keys and values for a trial as per the clinical trial schema for matchminer
     """
 
-    trial_schema = clinical_trial_schema.get_trial_schema()
+    trial_schema = ctml_schema.get_ctml_schema()
 
     trial_schema['nct_id'] = trial_data['protocolSection']['identificationModule']['nctId']
     trial_schema['long_title'] = trial_data['protocolSection']['identificationModule']['officialTitle']
@@ -150,6 +160,25 @@ def map_clinical_trial_data(trial_data) -> dict:
     map_prior_treatment_requirements(trial_schema, trial_data)
 
     return trial_schema
+
+def map_nct_to_ctml_AI(trial_data: dict) -> dict:
+    conditions_list = tdf.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
+    # Split the sentence into a list of keywords
+    all_keywords = set()
+    for cond in conditions_list:
+        keywords = [keyword.strip() for keyword in cond.split(',')]
+        # Filter out unwanted entries
+        filtered_keywords = [keyword for keyword in keywords if not any(word.lower() in keyword.lower() for word in config.keywords_to_remove)]
+        all_keywords.add(filtered_keywords)
+    
+    # TODO
+    
+    # get level1 list from maintype list from oncotree.py
+    # serach for entries with any word from 'all_keywords'
+    # The resulting entries and subenties will be passed to AI for further getting the accurate oncotree condition
+
+
+    return
 
 def map_prior_treatment_requirements(trial_schema, trial_data):
     """
