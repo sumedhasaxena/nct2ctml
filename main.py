@@ -16,7 +16,7 @@ import json
 import sys
 import all_studies
 
-from clinical_trials_gov import get_nct_study, map_nct_to_ctml
+from clinical_trials_gov import get_nct_study, map_nct_to_ctml, map_nct_to_ctml_with_AI
 import trial_data_formatter as tdf
 
 def main():
@@ -53,15 +53,18 @@ def main():
                 return
             
             # map all sections outside of 'match' section programatically
-            mapped_data = map_nct_to_ctml(trial_data)
+            #mapped_data = map_nct_to_ctml(trial_data)
 
             # map 'match' section using AI model
+            map_nct_to_ctml_with_AI(trial_data)
+
+            
 
             file_name = nct_id
             path = "results/ctml/"
 
-            tdf.save_to_file(mapped_data, path, file_name, 'yaml')
-            tdf.save_to_file(mapped_data, path, file_name, 'json')
+            # tdf.save_to_file(mapped_data, path, file_name, 'yaml')
+            # tdf.save_to_file(mapped_data, path, file_name, 'json')
 
 if __name__ == "__main__":
     main()

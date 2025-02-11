@@ -3,11 +3,15 @@ This script contains methods that deal with extraction and manpipulation
 of data from clinicaltrials.gov
 """
 
+import json
 import requests
 import urllib.parse
 import ctml_schema
+import ai_helper as ai
 import trial_data_formatter as tdf
-import config
+import oncotree
+import match_criteria_mapper as mcm
+
 
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
 
@@ -161,24 +165,47 @@ def map_nct_to_ctml(trial_data: dict) -> dict:
 
     return trial_schema
 
-def map_nct_to_ctml_AI(trial_data: dict) -> dict:
+def map_nct_to_ctml_with_AI(trial_data: dict) -> dict:
+    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
     conditions_list = tdf.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
-    # Split the sentence into a list of keywords
-    all_keywords = set()
-    for cond in conditions_list:
-        keywords = [keyword.strip() for keyword in cond.split(',')]
-        # Filter out unwanted entries
-        filtered_keywords = [keyword for keyword in keywords if not any(word.lower() in keyword.lower() for word in config.keywords_to_remove)]
-        all_keywords.add(filtered_keywords)
     
-    # TODO
+    level_1_list, main_type_list, level1_mapping = oncotree.get_oncotree_data()
     
-    # get level1 list from maintype list from oncotree.py
-    # serach for entries with any word from 'all_keywords'
-    # The resulting entries and subenties will be passed to AI for further getting the accurate oncotree condition
+    # stage 1 - Extract Keywords
+    keywords = mcm.get_keywords_from_conditions(conditions_list)
+    print("Stage 1 - Condition keywords:", keywords)    
 
+    # stage 2 - Map keywords to Level 1 oncotree diagnoses
+    level1_oncotree_values_dict = ai.get_level1_diagnosis_from_condition_keywords(nct_id, keywords, level_1_list)
+    print("Stage 2 - Mapped keywords to Level 1:", level1_oncotree_values_dict) 
+    # create a dictionary to map level1 diagnoses back to original condition (not keywords)
+    level1_oncotree_value_to_nct_condition = {}
 
+    for item in level1_oncotree_values_dict["oncotree_diagnoses"]:        
+        cancer_condition_keyword = item['cancer_condition_keyword']
+        oncotree_value = item['oncotree_value']
+        for condition in conditions_list:
+            if cancer_condition_keyword in condition:                
+                level1_oncotree_value_to_nct_condition[oncotree_value] = condition
+                continue
+    
+    print("Level1 to nct_condition map: ", level1_oncotree_value_to_nct_condition) #{'Bowel': 'Colorectal Cancer', 'Liver': 'Hepatocellular Carcinoma'}
+
+    for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
+        # stage 3: Get the child values for Level 1 oncotree diagnoses
+        child_values = level1_mapping[item['oncotree_value']]
+        nct_condition = level1_oncotree_value_to_nct_condition[item['oncotree_value']]
+        print(f"Stage 3 - Condition = {nct_condition}. Child values = {child_values}")
+        if len(child_values) > 0:
+            # stage 4: Pass the child values to AI and the conditions to map to a child value
+            oncotree_diagnoses = ai.get_child_level_diagnoses_from_condition(nct_id, child_values, nct_condition)
+            print(f"Stage 4 - Condition = {nct_condition}. Oncotree_diagnoses = {oncotree_diagnoses}")     
+
+    # Stage 6
+    # Add all possible diagnoses returned by AI in a list and format them witn an 'or' condition
     return
+
+
 
 def map_prior_treatment_requirements(trial_schema, trial_data):
     """
