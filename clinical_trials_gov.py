@@ -165,7 +165,45 @@ def map_nct_to_ctml(trial_data: dict) -> dict:
 
     return trial_schema
 
-def map_nct_to_ctml_with_AI(trial_data: dict) -> dict:
+def map_ctml_match_clinical_criteria(trial_data: dict):
+    map_oncotree_primary_diagnosis(trial_data)
+    res = map_age_numerical(trial_data)
+    print(res)
+    # map_tmb_numerical(trial_data)
+    res = map_gender(trial_data)
+    print(res)
+
+    res = map_her2_er_pr_status(trial_data)
+    print(res)
+
+    # map_pdl1_status(trial_data)	
+    # map_muscle_invasion(trial_data)
+    # map_disease_status(trial_data)
+    return
+
+def map_age_numerical(trial_data: dict):
+    minimum_age = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','minimumAge'])
+    min_age_components = minimum_age.split()
+    if len(min_age_components) > 1 and min_age_components[1].lower() == "years":
+        min_age = f"<={min_age_components[0]}"
+        return {"age_numerical": min_age}
+    return {}
+
+def map_her2_er_pr_status(trial_data: dict):
+    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    ai.get_her2_er_pr_status(eligibilityCriteria)
+    return {}
+
+def map_gender(trial_data: dict):
+    gender = tdf.safe_get(trial_data, ['protocolSection', 'eligibilityModule', 'sex'])
+    gender_mapping = {
+        "male": {"gender": "Male"},
+        "female": {"gender": "Female"}
+    }
+    result = gender_mapping.get(gender.lower(), {})
+    return result
+
+def map_oncotree_primary_diagnosis(trial_data: dict) -> dict:
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
     conditions_list = tdf.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
     
@@ -199,13 +237,11 @@ def map_nct_to_ctml_with_AI(trial_data: dict) -> dict:
         if len(child_values) > 0:
             # stage 4: Pass the child values to AI and the conditions to map to a child value
             oncotree_diagnoses = ai.get_child_level_diagnoses_from_condition(nct_id, child_values, nct_condition)
-            print(f"Stage 4 - Condition = {nct_condition}. Oncotree_diagnoses = {oncotree_diagnoses}")     
+            print(f"Stage 4 Oncotree_diagnoses = {oncotree_diagnoses}")     
 
     # Stage 6
     # Add all possible diagnoses returned by AI in a list and format them witn an 'or' condition
     return
-
-
 
 def map_prior_treatment_requirements(trial_schema, trial_data):
     """
@@ -235,7 +271,5 @@ def map_prior_treatment_requirements(trial_schema, trial_data):
             else:
                 # Add inclusion criteria lines directly
                 trial_schema['prior_treatment_requirements'].append(stripped_line)
-
-
-    
+ 
 

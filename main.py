@@ -15,8 +15,7 @@ map {nct_id} -> read pre-saved nct data file for specific id and map to ctml sch
 import json
 import sys
 import all_studies
-
-from clinical_trials_gov import get_nct_study, map_nct_to_ctml, map_nct_to_ctml_with_AI
+import clinical_trials_gov as ctg
 import trial_data_formatter as tdf
 
 def main():
@@ -31,7 +30,7 @@ def main():
             all_studies.main()
         else:
             nct_id = arg2
-            get_nct_study(nct_id)
+            ctg.get_nct_study(nct_id)
             
     elif arg1 == 'map':
         arg2 = sys.argv[2]
@@ -53,10 +52,10 @@ def main():
                 return
             
             # map all sections outside of 'match' section programatically
-            #mapped_data = map_nct_to_ctml(trial_data)
+            #mapped_data = ctg.map_nct_to_ctml(trial_data)
 
             # map 'match' section using AI model
-            map_nct_to_ctml_with_AI(trial_data)
+            ctg.map_ctml_match_clinical_criteria(trial_data)
 
             
 
