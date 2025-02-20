@@ -1,1 +1,220 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT06312176", "orgStudyIdInfo": {"id": "2870-010"}, "secondaryIdInfos": [{"id": "MK-2870-010", "type": "OTHER", "domain": "MSD"}, {"id": "2023-504918-29", "type": "REGISTRY", "domain": "EU CT"}, {"id": "U1111-1289-8119", "type": "OTHER", "domain": "UTN"}, {"id": "jRCT2031240476", "type": "REGISTRY", "domain": "Japan Registry of Clinical Trials (jRCT)"}], "organization": {"fullName": "Merck Sharp & Dohme LLC", "class": "INDUSTRY"}, "briefTitle": "A Study of Sacituzumab Tirumotecan (MK-2870) as a Single Agent and in Combination With Pembrolizumab (MK-3475) Versus Treatment of Physician's Choice in Participants With HR+/HER2- Unresectable Locally Advanced or Metastatic Breast Cancer (MK-2870-010)", "officialTitle": "An Open-label, Randomized Phase 3 Study of MK-2870 as a Single Agent and in Combination With Pembrolizumab Versus Treatment of Physician's Choice in Participants With HR+/HER2- Unresectable Locally Advanced or Metastatic Breast Cancer"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "SPONSOR"}, "leadSponsor": {"name": "Merck Sharp & Dohme LLC", "class": "INDUSTRY"}}, "descriptionModule": {"briefSummary": "The purpose of this study is to compare sacituzumab tirumotecan as a single agent, and in combination with pembrolizumab, versus Treatment of Physician's Choice (TPC) in participants with hormone receptor positive/human epidermal growth factor receptor-2 negative (HR+/HER2-) unresectable locally advanced, or metastatic, breast cancer.\n\nThe primary hypotheses are that sacituzumab tirumotecan as a single agent and sacituzumab tirumotecan plus pembrolizumab are superior to TPC with respect to progression-free survival (PFS) per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST 1.1) by blinded independent central review (BICR) in all participants."}, "conditionsModule": {"conditions": ["Breast Neoplasms"], "keywords": ["Programmed Cell Death-1 (PD1, PD-1)", "Programmed Cell Death 1 Ligand 1 (PDL1, PD-L1)", "Programmed Cell Death 1 Ligand 2 (PDL2, PD-L2)"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["PHASE3"], "designInfo": {"allocation": "RANDOMIZED", "interventionModel": "PARALLEL", "primaryPurpose": "TREATMENT", "maskingInfo": {"masking": "NONE"}}, "enrollmentInfo": {"count": 1200, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "Arm A: Sacituzumab tirumotecan", "type": "EXPERIMENTAL", "description": "Participants receive 4 mg/kg of sacituzumab tirumotecan once every 2 weeks (Q2W) via intravenous (IV) infusion until progressive disease or discontinuation.", "interventionNames": ["Drug: Sacituzumab tirumotecan"]}, {"label": "Arm B:Pembrolizumab + Sacituzumab tirumotecan", "type": "EXPERIMENTAL", "description": "Participants receive 4 mg/kg of sacituzumab tirumotecan Q2W via IV infusion until progressive disease or discontinuation PLUS 400 mg of pembrolizumab once every 6 weeks (Q6W) via IV infusion for up to 18 administrations (up to \\~2 years).", "interventionNames": ["Drug: Sacituzumab tirumotecan", "Biological: Pembrolizumab"]}, {"label": "Arm C: Treatment of Physician's Choice (TPC)", "type": "ACTIVE_COMPARATOR", "description": "At the physician's discretion, participants receive chemotherapy of 80 mg/m\\^2 of paclitaxel once every week (Q1W) via IV infusion OR 90 mg/m\\^2 of paclitaxel once every 4 weeks (Q4W) via IV infusion OR 100 mg/m\\^2 of nab-paclitaxel Q4W via IV infusion OR 1000 mg/m\\^2 of capecitabine every 3 weeks (Q3W) orally OR 50 mg/m\\^2 of liposomal doxorubicin once every 4 weeks (Q4W) via IV infusion, until progressive disease or discontinuation.", "interventionNames": ["Drug: Paclitaxel", "Drug: Nab-paclitaxel", "Drug: Capecitabine", "Drug: Liposomal doxorubicin"]}], "interventions": [{"type": "DRUG", "name": "Sacituzumab tirumotecan", "description": "IV infusion", "armGroupLabels": ["Arm A: Sacituzumab tirumotecan", "Arm B:Pembrolizumab + Sacituzumab tirumotecan"], "otherNames": ["MK-2870"]}, {"type": "BIOLOGICAL", "name": "Pembrolizumab", "description": "IV infusion", "armGroupLabels": ["Arm B:Pembrolizumab + Sacituzumab tirumotecan"], "otherNames": ["MK-3475", "KEYTRUDA\u00ae"]}, {"type": "DRUG", "name": "Paclitaxel", "description": "IV infusion", "armGroupLabels": ["Arm C: Treatment of Physician's Choice (TPC)"], "otherNames": ["TAXOL\u00ae"]}, {"type": "DRUG", "name": "Nab-paclitaxel", "description": "IV infusion", "armGroupLabels": ["Arm C: Treatment of Physician's Choice (TPC)"], "otherNames": ["ABRAXANE\u00ae"]}, {"type": "DRUG", "name": "Capecitabine", "description": "oral tablet", "armGroupLabels": ["Arm C: Treatment of Physician's Choice (TPC)"], "otherNames": ["XELODA\u00ae"]}, {"type": "DRUG", "name": "Liposomal doxorubicin", "description": "IV infusion", "armGroupLabels": ["Arm C: Treatment of Physician's Choice (TPC)"], "otherNames": ["DOXIL\u00ae"]}]}, "eligibilityModule": {"eligibilityCriteria": "Inclusion Criteria:\n\n* Has unresectable locally advanced or metastatic centrally-confirmed hormone receptor positive (HR+)/human epidermal growth factor receptor 2 negative (HER2-) breast cancer\n* Has radiographic disease progression on one or more lines of endocrine therapy for unresectable locally advanced/metastatic HR+/HER2- breast cancer, with one in combination with a CDK4/6 inhibitor\n* Is a chemotherapy candidate\n* Has an eastern cooperative oncology group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization\n* Has adequate organ function\n* Human immunodeficiency virus (HIV)-infected participants must have well controlled HIV on antiretroviral therapy\n* Participants who are Hepatitis B surface antigen (HBsAg) positive are eligible if they have received HBV antiviral therapy for at least 4 weeks, and have undetectable HBV viral load\n* Participants with a history of Hepatitis C virus (HCV) infection are eligible if HCV viral load is undetectable\n\nExclusion Criteria:\n\n* Has breast cancer amenable to treatment with curative intent\n* Has experienced an early recurrence (\\<6 months after completing adjuvant/neoadjuvant chemotherapy) and therefore is eligible to receive second-line (2L) treatment\n* Has symptomatic advanced/metastatic visceral spread at risk of rapidly evolving into life-threatening complications\n* Has received prior chemotherapy for unresectable locally advanced or metastatic breast cancer\n* Active autoimmune disease that has required systemic treatment in the past 2 years\n* History of (noninfectious) pneumonitis/interstitial lung disease that requires steroids, or has current pneumonitis/interstitial lung disease\n* Has an active infection requiring systemic therapy", "healthyVolunteers": false, "sex": "ALL", "minimumAge": "18 Years", "stdAges": ["ADULT", "OLDER_ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "Toll Free Number", "role": "CONTACT", "phone": "1-888-577-8839", "email": "Trialsites@msd.com"}], "overallOfficials": [{"name": "Medical Director", "affiliation": "Merck Sharp & Dohme LLC", "role": "STUDY_DIRECTOR"}]}, "referencesModule": {"seeAlsoLinks": [{"label": "Merck Clinical Trials Information", "url": "https://www.merckclinicaltrials.com/"}, {"label": "Plain Language Summary", "url": "https://msd.trialsummaries.com/Study/StudyDetails?id=26170&tenant=MT_MSD_9011"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT06312176",
+            "orgStudyIdInfo": {
+                "id": "2870-010"
+            },
+            "secondaryIdInfos": [
+                {
+                    "id": "MK-2870-010",
+                    "type": "OTHER",
+                    "domain": "MSD"
+                },
+                {
+                    "id": "2023-504918-29",
+                    "type": "REGISTRY",
+                    "domain": "EU CT"
+                },
+                {
+                    "id": "U1111-1289-8119",
+                    "type": "OTHER",
+                    "domain": "UTN"
+                },
+                {
+                    "id": "jRCT2031240476",
+                    "type": "REGISTRY",
+                    "domain": "Japan Registry of Clinical Trials (jRCT)"
+                }
+            ],
+            "organization": {
+                "fullName": "Merck Sharp & Dohme LLC",
+                "class": "INDUSTRY"
+            },
+            "briefTitle": "A Study of Sacituzumab Tirumotecan (MK-2870) as a Single Agent and in Combination With Pembrolizumab (MK-3475) Versus Treatment of Physician's Choice in Participants With HR+/HER2- Unresectable Locally Advanced or Metastatic Breast Cancer (MK-2870-010)",
+            "officialTitle": "An Open-label, Randomized Phase 3 Study of MK-2870 as a Single Agent and in Combination With Pembrolizumab Versus Treatment of Physician's Choice in Participants With HR+/HER2- Unresectable Locally Advanced or Metastatic Breast Cancer"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "Merck Sharp & Dohme LLC",
+                "class": "INDUSTRY"
+            }
+        },
+        "descriptionModule": {
+            "briefSummary": "The purpose of this study is to compare sacituzumab tirumotecan as a single agent, and in combination with pembrolizumab, versus Treatment of Physician's Choice (TPC) in participants with hormone receptor positive/human epidermal growth factor receptor-2 negative (HR+/HER2-) unresectable locally advanced, or metastatic, breast cancer.\n\nThe primary hypotheses are that sacituzumab tirumotecan as a single agent and sacituzumab tirumotecan plus pembrolizumab are superior to TPC with respect to progression-free survival (PFS) per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST 1.1) by blinded independent central review (BICR) in all participants."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Breast Neoplasms"
+            ],
+            "keywords": [
+                "Programmed Cell Death-1 (PD1, PD-1)",
+                "Programmed Cell Death 1 Ligand 1 (PDL1, PD-L1)",
+                "Programmed Cell Death 1 Ligand 2 (PDL2, PD-L2)"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE3"
+            ],
+            "designInfo": {
+                "allocation": "RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 1200,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Arm A: Sacituzumab tirumotecan",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants receive 4 mg/kg of sacituzumab tirumotecan once every 2 weeks (Q2W) via intravenous (IV) infusion until progressive disease or discontinuation.",
+                    "interventionNames": [
+                        "Drug: Sacituzumab tirumotecan"
+                    ]
+                },
+                {
+                    "label": "Arm B:Pembrolizumab + Sacituzumab tirumotecan",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants receive 4 mg/kg of sacituzumab tirumotecan Q2W via IV infusion until progressive disease or discontinuation PLUS 400 mg of pembrolizumab once every 6 weeks (Q6W) via IV infusion for up to 18 administrations (up to \\~2 years).",
+                    "interventionNames": [
+                        "Drug: Sacituzumab tirumotecan",
+                        "Biological: Pembrolizumab"
+                    ]
+                },
+                {
+                    "label": "Arm C: Treatment of Physician's Choice (TPC)",
+                    "type": "ACTIVE_COMPARATOR",
+                    "description": "At the physician's discretion, participants receive chemotherapy of 80 mg/m\\^2 of paclitaxel once every week (Q1W) via IV infusion OR 90 mg/m\\^2 of paclitaxel once every 4 weeks (Q4W) via IV infusion OR 100 mg/m\\^2 of nab-paclitaxel Q4W via IV infusion OR 1000 mg/m\\^2 of capecitabine every 3 weeks (Q3W) orally OR 50 mg/m\\^2 of liposomal doxorubicin once every 4 weeks (Q4W) via IV infusion, until progressive disease or discontinuation.",
+                    "interventionNames": [
+                        "Drug: Paclitaxel",
+                        "Drug: Nab-paclitaxel",
+                        "Drug: Capecitabine",
+                        "Drug: Liposomal doxorubicin"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DRUG",
+                    "name": "Sacituzumab tirumotecan",
+                    "description": "IV infusion",
+                    "armGroupLabels": [
+                        "Arm A: Sacituzumab tirumotecan",
+                        "Arm B:Pembrolizumab + Sacituzumab tirumotecan"
+                    ],
+                    "otherNames": [
+                        "MK-2870"
+                    ]
+                },
+                {
+                    "type": "BIOLOGICAL",
+                    "name": "Pembrolizumab",
+                    "description": "IV infusion",
+                    "armGroupLabels": [
+                        "Arm B:Pembrolizumab + Sacituzumab tirumotecan"
+                    ],
+                    "otherNames": [
+                        "MK-3475",
+                        "KEYTRUDA\u00ae"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Paclitaxel",
+                    "description": "IV infusion",
+                    "armGroupLabels": [
+                        "Arm C: Treatment of Physician's Choice (TPC)"
+                    ],
+                    "otherNames": [
+                        "TAXOL\u00ae"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Nab-paclitaxel",
+                    "description": "IV infusion",
+                    "armGroupLabels": [
+                        "Arm C: Treatment of Physician's Choice (TPC)"
+                    ],
+                    "otherNames": [
+                        "ABRAXANE\u00ae"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Capecitabine",
+                    "description": "oral tablet",
+                    "armGroupLabels": [
+                        "Arm C: Treatment of Physician's Choice (TPC)"
+                    ],
+                    "otherNames": [
+                        "XELODA\u00ae"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Liposomal doxorubicin",
+                    "description": "IV infusion",
+                    "armGroupLabels": [
+                        "Arm C: Treatment of Physician's Choice (TPC)"
+                    ],
+                    "otherNames": [
+                        "DOXIL\u00ae"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Has unresectable locally advanced or metastatic centrally-confirmed hormone receptor positive (HR+)/human epidermal growth factor receptor 2 negative (HER2-) breast cancer\n* Has radiographic disease progression on one or more lines of endocrine therapy for unresectable locally advanced/metastatic HR+/HER2- breast cancer, with one in combination with a CDK4/6 inhibitor\n* Is a chemotherapy candidate\n* Has an eastern cooperative oncology group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization\n* Has adequate organ function\n* Human immunodeficiency virus (HIV)-infected participants must have well controlled HIV on antiretroviral therapy\n* Participants who are Hepatitis B surface antigen (HBsAg) positive are eligible if they have received HBV antiviral therapy for at least 4 weeks, and have undetectable HBV viral load\n* Participants with a history of Hepatitis C virus (HCV) infection are eligible if HCV viral load is undetectable\n\nExclusion Criteria:\n\n* Has breast cancer amenable to treatment with curative intent\n* Has experienced an early recurrence (\\<6 months after completing adjuvant/neoadjuvant chemotherapy) and therefore is eligible to receive second-line (2L) treatment\n* Has symptomatic advanced/metastatic visceral spread at risk of rapidly evolving into life-threatening complications\n* Has received prior chemotherapy for unresectable locally advanced or metastatic breast cancer\n* Active autoimmune disease that has required systemic treatment in the past 2 years\n* History of (noninfectious) pneumonitis/interstitial lung disease that requires steroids, or has current pneumonitis/interstitial lung disease\n* Has an active infection requiring systemic therapy",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "minimumAge": "18 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Toll Free Number",
+                    "role": "CONTACT",
+                    "phone": "1-888-577-8839",
+                    "email": "Trialsites@msd.com"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Medical Director",
+                    "affiliation": "Merck Sharp & Dohme LLC",
+                    "role": "STUDY_DIRECTOR"
+                }
+            ]
+        },
+        "referencesModule": {
+            "seeAlsoLinks": [
+                {
+                    "label": "Merck Clinical Trials Information",
+                    "url": "https://www.merckclinicaltrials.com/"
+                },
+                {
+                    "label": "Plain Language Summary",
+                    "url": "https://msd.trialsummaries.com/Study/StudyDetails?id=26170&tenant=MT_MSD_9011"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

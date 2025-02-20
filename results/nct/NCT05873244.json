@@ -1,1 +1,120 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT05873244", "orgStudyIdInfo": {"id": "HCC074"}, "organization": {"fullName": "Chinese University of Hong Kong", "class": "OTHER"}, "briefTitle": "CXD101 in Immunotherapy-related Liver Cancer", "officialTitle": "Epigenetic Therapeutics to Overcome Resistance Against Immune Checkpoint Inhibitors in Hepatocellular Carcinoma: A Proof-of-concept Clinical Trial"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "SPONSOR_INVESTIGATOR", "investigatorFullName": "Stephen Chan Lam", "investigatorTitle": "Professor", "investigatorAffiliation": "Chinese University of Hong Kong"}, "leadSponsor": {"name": "Stephen Chan Lam", "class": "OTHER"}}, "descriptionModule": {"briefSummary": "For hepatocellular carcinoma (HCC), durable responses and improved survivals have been reported in clinical trials on immune checkpoint inhibitor (ICI)-based treatment. However, resistance to ICI is increasingly encountered in clinical practice in HCC patients.\n\nVarious approaches are currently evaluated in clinical setting to tackle acquired resistance during treatment of ICIs in HCC.\n\nOur group has a track record of studying the role of histone deacetylases (HDACs) in mediating resistance to ICI in HCC. First, based on single-cell sequencing data of serial biopsy of tumor in our phase II clinical trial on pembrolizumab in HCC (NCT03419481), the investigators reveal an upregulation of class 1 HDAC in patients with acquired resistance to pembrolizumab, which was associated with reduced lymphoid/myeloid cellular ratio in the tumor. Further, the investigators showed that HDAC8, a class 1 HDAC, could diminish the efficacy of anti-programmed cell death (ligand)-1 (PD\\[L\\]-1) by the mechanism of T-cell exclusion from the tumor environment (SciTranl Med. 2021;13:online). Finally, the investigators combine CXD101, a potent selective class I HDAC inhibitor, with anti-PD(L)-1 in orthotopic immunocompetent HCC mouse model with resistance to anti-PD(L)-1 treatment and find that the combination regimen could reverse the resistance phenotype and significantly improve survivals of mice than either CXD101 or anti-PD(L)-1 alone.", "detailedDescription": "To move from bench to clinic, it is crucial to validate the above in HCC patients demonstrating resistance to ICI-based treatment. In this grant, the investigators propose a randomized phase II clinical trial in patients with HCC who developed progressive disease to prior regimen containing anti-PD(L)-1. The investigators have already secured support of study medications from two pharmaceuticals to provide class 1 HDAC inhibitor and anti-PD1, respectively. Patients were randomized 1:1 to two study arms: the experiment arm consists of CXD101 20mg twice daily Day 1-5 every 3 weeks and an anti-PD1, geptanolimab at 3mg/kg Day 1 every 2 weeks. The dose of CXD101 has already been confirmed to be safe to combine with anti-PD1 in phase I/II studies in cancer patients. The control arm consists of investigators' choice of lenvatinib or sorafenib which are both considered standard treatment after failure with first-line atezolizumab-bevacizumab or other anti-PD(L)-1-based treatment. The primary endpoint is progress-free survival. Along the clinical trial, tumor biopsy will also be conducted at baseline and 6-week post-treatment to explore potential predictive biomarkers. Results of the study not only act as proof-of-concept but also potentially develop a novel treatment combination to tackle resistance to anti-PD(L)-1 treatment in HCC."}, "conditionsModule": {"conditions": ["HCC"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["PHASE2"], "designInfo": {"allocation": "RANDOMIZED", "interventionModel": "PARALLEL", "primaryPurpose": "TREATMENT", "maskingInfo": {"masking": "NONE"}}, "enrollmentInfo": {"count": 44, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "Experiment arm", "type": "EXPERIMENTAL", "description": "* Zabadinostat (CXD101) at 20mg twice daily per orally Day 1-5 every 3 weeks\n* Geptanolimab at 3mg/kg given intravenously every 2 weeks", "interventionNames": ["Drug: Zabadinostat (CXD101) and Geptanolimab"]}, {"label": "Control arm", "type": "OTHER", "description": "Clinicians' choice of TKI at corresponding recommended dosage:\n\n* Lenvatinib at 8mg daily for patients with body weight \\<60kg or 12mg daily with body weight \u2265 60kg\n* Sorafenib at 400mg twice daily", "interventionNames": ["Drug: Lenvatinib and Sorafenib"]}], "interventions": [{"type": "DRUG", "name": "Zabadinostat (CXD101) and Geptanolimab", "description": "* Zabadinostat (CXD101) at 20mg twice daily per orally Day 1-5 every 3 weeks\n* Geptanolimab at 3mg/kg given intravenously every 2 weeks", "armGroupLabels": ["Experiment arm"]}, {"type": "DRUG", "name": "Lenvatinib and Sorafenib", "description": "Clinicians' choice of TKI at corresponding recommended dosage:\n\n* Lenvatinib at 8mg daily for patients with body weight \\<60kg or 12mg daily with body weight \u2265 60kg\n* Sorafenib at 400mg twice daily", "armGroupLabels": ["Control arm"]}]}, "eligibilityModule": {"eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis of HCC according to the AASLD guideline20\n* Prior treatment with systemic treatment consisting of immune checkpoint inhibitors (anti-PD1, anti-PDL1 or anti-CTLA4)\n* The duration of previous ICI must be 6 weeks or longer to avoid chance of pseudo-progression\n* Eastern Cooperative Oncology Group (ECOG) Performance status of 0-1\n* Adequate hematological function:\n* Absolute neutrophil count (ANC) \u2265 1.5 x109/L; Platelets \u2265 100 x 109/L and Hemoglobin \u2265 8g/dL\n* Adequate renal function:\n* Urine protein/creatinine ratio \u2264 1 mg/mg (\u2264 113.1 mg/mmol) or 24-hour urine protein \\< 1g\n* Serum creatinine \u2264 1.5 \u00d7 upper limit of normal or calculated creatinine clearance \u2265 40 mL/min (according to the Cockcroft-Gault equation)\n* Adequate hepatic function parameters:\n* Total bilirubin \u2264 2 mg/dL (\u2264 34.2 \u03bcmol/L)\n* Serum albumin \u2265 2.8 g/dL (\u2265 28 g/L)\n* Alanine aminotransferase (ALT) \\< 3.0 upper limit of normal (ULN)\n\nExclusion Criteria:\n\n* Previous development of severe autoimmune complications from immune checkpoint inhibitors\n* History of moderate to sever autoimmune disease requiring steroid use\n* History of organ transplant\n* Prior use of lenvatinib or sorafenib\n* Disease involvement/thrombosis of major vessels (including main trunk of portal vein, inferior vena cava or pulmonary artery)\n* More than two lines of systemic therapy (i.e., study treatment must be second-line or third-line treatment)\n* Clinically significant bleeding events (eg.. esophageal varices) within 3 months\n* Moderate or severe ascites\n* Child-pugh B or C hepatic function\n* Systolic blood pressure of 200mmHg or higher\n* Pregnant or lactating females", "healthyVolunteers": false, "sex": "ALL", "minimumAge": "18 Years", "stdAges": ["ADULT", "OLDER_ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "Stephen Chan, MD, FRCP", "role": "CONTACT", "phone": "3505 2166", "email": "chanlam_stephen@cuhk.edu.hk"}, {"name": "Nicole Yim, RN", "role": "CONTACT", "phone": "3505 1046", "email": "nicole@clo.cuhk.edu.hk"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT05873244",
+            "orgStudyIdInfo": {
+                "id": "HCC074"
+            },
+            "organization": {
+                "fullName": "Chinese University of Hong Kong",
+                "class": "OTHER"
+            },
+            "briefTitle": "CXD101 in Immunotherapy-related Liver Cancer",
+            "officialTitle": "Epigenetic Therapeutics to Overcome Resistance Against Immune Checkpoint Inhibitors in Hepatocellular Carcinoma: A Proof-of-concept Clinical Trial"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR_INVESTIGATOR",
+                "investigatorFullName": "Stephen Chan Lam",
+                "investigatorTitle": "Professor",
+                "investigatorAffiliation": "Chinese University of Hong Kong"
+            },
+            "leadSponsor": {
+                "name": "Stephen Chan Lam",
+                "class": "OTHER"
+            }
+        },
+        "descriptionModule": {
+            "briefSummary": "For hepatocellular carcinoma (HCC), durable responses and improved survivals have been reported in clinical trials on immune checkpoint inhibitor (ICI)-based treatment. However, resistance to ICI is increasingly encountered in clinical practice in HCC patients.\n\nVarious approaches are currently evaluated in clinical setting to tackle acquired resistance during treatment of ICIs in HCC.\n\nOur group has a track record of studying the role of histone deacetylases (HDACs) in mediating resistance to ICI in HCC. First, based on single-cell sequencing data of serial biopsy of tumor in our phase II clinical trial on pembrolizumab in HCC (NCT03419481), the investigators reveal an upregulation of class 1 HDAC in patients with acquired resistance to pembrolizumab, which was associated with reduced lymphoid/myeloid cellular ratio in the tumor. Further, the investigators showed that HDAC8, a class 1 HDAC, could diminish the efficacy of anti-programmed cell death (ligand)-1 (PD\\[L\\]-1) by the mechanism of T-cell exclusion from the tumor environment (SciTranl Med. 2021;13:online). Finally, the investigators combine CXD101, a potent selective class I HDAC inhibitor, with anti-PD(L)-1 in orthotopic immunocompetent HCC mouse model with resistance to anti-PD(L)-1 treatment and find that the combination regimen could reverse the resistance phenotype and significantly improve survivals of mice than either CXD101 or anti-PD(L)-1 alone.",
+            "detailedDescription": "To move from bench to clinic, it is crucial to validate the above in HCC patients demonstrating resistance to ICI-based treatment. In this grant, the investigators propose a randomized phase II clinical trial in patients with HCC who developed progressive disease to prior regimen containing anti-PD(L)-1. The investigators have already secured support of study medications from two pharmaceuticals to provide class 1 HDAC inhibitor and anti-PD1, respectively. Patients were randomized 1:1 to two study arms: the experiment arm consists of CXD101 20mg twice daily Day 1-5 every 3 weeks and an anti-PD1, geptanolimab at 3mg/kg Day 1 every 2 weeks. The dose of CXD101 has already been confirmed to be safe to combine with anti-PD1 in phase I/II studies in cancer patients. The control arm consists of investigators' choice of lenvatinib or sorafenib which are both considered standard treatment after failure with first-line atezolizumab-bevacizumab or other anti-PD(L)-1-based treatment. The primary endpoint is progress-free survival. Along the clinical trial, tumor biopsy will also be conducted at baseline and 6-week post-treatment to explore potential predictive biomarkers. Results of the study not only act as proof-of-concept but also potentially develop a novel treatment combination to tackle resistance to anti-PD(L)-1 treatment in HCC."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "HCC"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE2"
+            ],
+            "designInfo": {
+                "allocation": "RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 44,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Experiment arm",
+                    "type": "EXPERIMENTAL",
+                    "description": "* Zabadinostat (CXD101) at 20mg twice daily per orally Day 1-5 every 3 weeks\n* Geptanolimab at 3mg/kg given intravenously every 2 weeks",
+                    "interventionNames": [
+                        "Drug: Zabadinostat (CXD101) and Geptanolimab"
+                    ]
+                },
+                {
+                    "label": "Control arm",
+                    "type": "OTHER",
+                    "description": "Clinicians' choice of TKI at corresponding recommended dosage:\n\n* Lenvatinib at 8mg daily for patients with body weight \\<60kg or 12mg daily with body weight \u2265 60kg\n* Sorafenib at 400mg twice daily",
+                    "interventionNames": [
+                        "Drug: Lenvatinib and Sorafenib"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DRUG",
+                    "name": "Zabadinostat (CXD101) and Geptanolimab",
+                    "description": "* Zabadinostat (CXD101) at 20mg twice daily per orally Day 1-5 every 3 weeks\n* Geptanolimab at 3mg/kg given intravenously every 2 weeks",
+                    "armGroupLabels": [
+                        "Experiment arm"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Lenvatinib and Sorafenib",
+                    "description": "Clinicians' choice of TKI at corresponding recommended dosage:\n\n* Lenvatinib at 8mg daily for patients with body weight \\<60kg or 12mg daily with body weight \u2265 60kg\n* Sorafenib at 400mg twice daily",
+                    "armGroupLabels": [
+                        "Control arm"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis of HCC according to the AASLD guideline20\n* Prior treatment with systemic treatment consisting of immune checkpoint inhibitors (anti-PD1, anti-PDL1 or anti-CTLA4)\n* The duration of previous ICI must be 6 weeks or longer to avoid chance of pseudo-progression\n* Eastern Cooperative Oncology Group (ECOG) Performance status of 0-1\n* Adequate hematological function:\n* Absolute neutrophil count (ANC) \u2265 1.5 x109/L; Platelets \u2265 100 x 109/L and Hemoglobin \u2265 8g/dL\n* Adequate renal function:\n* Urine protein/creatinine ratio \u2264 1 mg/mg (\u2264 113.1 mg/mmol) or 24-hour urine protein \\< 1g\n* Serum creatinine \u2264 1.5 \u00d7 upper limit of normal or calculated creatinine clearance \u2265 40 mL/min (according to the Cockcroft-Gault equation)\n* Adequate hepatic function parameters:\n* Total bilirubin \u2264 2 mg/dL (\u2264 34.2 \u03bcmol/L)\n* Serum albumin \u2265 2.8 g/dL (\u2265 28 g/L)\n* Alanine aminotransferase (ALT) \\< 3.0 upper limit of normal (ULN)\n\nExclusion Criteria:\n\n* Previous development of severe autoimmune complications from immune checkpoint inhibitors\n* History of moderate to sever autoimmune disease requiring steroid use\n* History of organ transplant\n* Prior use of lenvatinib or sorafenib\n* Disease involvement/thrombosis of major vessels (including main trunk of portal vein, inferior vena cava or pulmonary artery)\n* More than two lines of systemic therapy (i.e., study treatment must be second-line or third-line treatment)\n* Clinically significant bleeding events (eg.. esophageal varices) within 3 months\n* Moderate or severe ascites\n* Child-pugh B or C hepatic function\n* Systolic blood pressure of 200mmHg or higher\n* Pregnant or lactating females",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "minimumAge": "18 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Stephen Chan, MD, FRCP",
+                    "role": "CONTACT",
+                    "phone": "3505 2166",
+                    "email": "chanlam_stephen@cuhk.edu.hk"
+                },
+                {
+                    "name": "Nicole Yim, RN",
+                    "role": "CONTACT",
+                    "phone": "3505 1046",
+                    "email": "nicole@clo.cuhk.edu.hk"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

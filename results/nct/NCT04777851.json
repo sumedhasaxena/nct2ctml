@@ -1,1 +1,154 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT04777851", "orgStudyIdInfo": {"id": "TRIO041"}, "secondaryIdInfos": [{"id": "EU CT # 2022-501969-42-00", "type": "OTHER", "domain": "European Medicines Agency (EMA)"}], "organization": {"fullName": "Translational Research in Oncology", "class": "OTHER"}, "briefTitle": "Regorafenib-pembrolizumab Vs. TACE/TARE in Intermediate Stage HCC Beyond Up-to-7", "officialTitle": "A Phase III, Multicenter, Randomized, Open-label Trial to Evaluate the Safety and Efficacy of Systemic Therapy with Regorafenib and Pembrolizumab Versus Locoregional Therapy with Transarterial Chemoembolization or Transarterial Radioembolization, for the First-line Treatment of Intermediate-stage Hepatocellular Carcinoma with Beyond Up-to-7 Criteria", "acronym": "REPLACE"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "SPONSOR"}, "leadSponsor": {"name": "Translational Research in Oncology", "class": "OTHER"}, "collaborators": [{"name": "Bayer", "class": "INDUSTRY"}]}, "descriptionModule": {"briefSummary": "REPLACE is a phase III, multicenter, randomized, open-label trial to evaluate the efficacy and safety of regorafenib and pembrolizumab (Rego-Pembro) versus transarterial chemoembolization (TACE) or transarterial radioembolization (TARE) for the first-line treatment of hepatocellular carcinoma (HCC or liver cancer). Approximately 496 patients in around 80 clinical sites worldwide will be randomized to receive either:\n\n* Investigational arm: Regorafenib in combination with pembrolizumab\n* Control arm: Transarterial chemoembolization (TACE) or transarterial radioembolization (TARE)\n\nIn both arms, patients will receive trial treatment until progressive disease, unacceptable toxicity, deterioration of patient's condition that warrants permanent trial treatment discontinuation or other treatment discontinuation criteria is met. After trial treatment discontinuation, subsequent treatment will be administered according to the Investigator's clinical judgment.", "detailedDescription": "REPLACE is a phase III, multicenter, randomized, open-label trial to evaluate the efficacy and safety of systemic therapy with Rego-Pembro versus loco-regional therapy with TACE or TARE, for the first-line treatment of intermediate-stage HCC with beyond up-to-7 criteria. Approximately 496 patients (\\~248 in each arm) from approximately 80 sites will be randomized in order to power the trial efficiently to measure a clinically meaningful improvement for the primary endpoint, PFS according to mRECIST based on the Investigator\u00b4s assessment.\n\nThe trial will include patients who have been diagnosed with intermediate-stage HCC by biopsy, cytology or diagnostic imaging, such as dynamic computed tomography (CT) or magnetic resonance imaging (MRI), according to the criteria of the American Association for the Study of Liver Diseases (AASLD). Patients should have at least one measurable lesion per RECIST 1.1, disease not amenable to curative treatment but amenable to loco-regional therapy with TACE (cTACE or DEB-TACE) or TARE, ECOG PS 0-1, Child-Pugh class A, and beyond up-to-7 criteria.\n\nThe trial will include the following phases:\n\n* Screening\n* Treatment\n* Follow-up\n\nRandomized patients will receive either:\n\nInvestigational arm (Arm A):\n\n-Regorafenib at a dose of 90 mg orally q.d. on days 1 to 21 of a 4-week cycle.\n\nIn combination with:\n\n-Pembrolizumab 400 mg using a 30-minutes i.v. infusion, on day 1 (D1) of a 6-week cycle.\n\nControl arm (Arm B):\n\n-Patients will be treated with TACE or TARE \"on-demand\" according to site's standard, with the goal of controlling all known liver lesions.\n\nIn both arms, patients will receive trial treatment (Rego-Pembro or TACE/TARE) until PD per mRECIST, unacceptable toxicity, deterioration of patient's condition that warrants permanent trial treatment discontinuation or other treatment discontinuation criteria are met."}, "conditionsModule": {"conditions": ["Carcinoma, Hepatocellular"], "keywords": ["Hepatocellular Carcinoma", "Hepatoma", "Liver Cancer, Adult", "Liver Cell Carcinoma", "Liver Cell Carcinoma, Adult"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["PHASE3"], "designInfo": {"allocation": "RANDOMIZED", "interventionModel": "PARALLEL", "primaryPurpose": "TREATMENT", "maskingInfo": {"masking": "NONE"}}, "enrollmentInfo": {"count": 496, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "Regorafenib + Pembrolizumab", "type": "EXPERIMENTAL", "description": "Investigational arm: regorafenib at a dose of 90 mg orally once per day (on days 1 to 21 of a 28-day cycle), in combination with pembrolizumab 400 mg using a 30-minute intravenous infusion, on day 1 of a 6-week cycle.", "interventionNames": ["Drug: Regorafenib in combination with pembrolizumab"]}, {"label": "Loco-regional therapy", "type": "ACTIVE_COMPARATOR", "description": "Control arm: Patients will be treated with TACE or TARE \"on-demand\" according to site's standard of practice.", "interventionNames": ["Procedure: Loco-regional therapy"]}], "interventions": [{"type": "DRUG", "name": "Regorafenib in combination with pembrolizumab", "description": "Randomized patients will receive regorafenib at a dose of 90 mg per day by mouth on days 1 to 21 of a 28-day cycle, in combination with pembrolizumab 400 mg using a 30-minute intravenous infusion, on day 1 (D1) of a 6-week cycle.", "armGroupLabels": ["Regorafenib + Pembrolizumab"], "otherNames": ["Stivarga\u00ae (regorafenib)", "Keytruda\u00ae (pembrolizumab)"]}, {"type": "PROCEDURE", "name": "Loco-regional therapy", "description": "Patients will be treated with TACE or TARE \"on-demand\" according to site's standard of practice.", "armGroupLabels": ["Loco-regional therapy"], "otherNames": ["Convention transarterial chemoembolization (cTACE)", "Drug-eluting bead transarterial chemoembolization (DEB-TACE)", "Transarterial Chemoembolization (TACE)", "Transarterial radioembolization (TARE)"]}]}, "eligibilityModule": {"eligibilityCriteria": "Inclusion Criteria:\n\n* Signed and dated Patient Informed Consent Form (PICF)\n* \u2265 18 years-old at the time of PICF signature\n* Confirmed diagnosis of HCC\n* Intermediate-stage HCC, defined as follows:\n\n  * Multinodular HCC localized to the liver\n  * No evidence of MVI or EHS\n  * Not amenable to curative treatment\n  * Child-Pugh Class A\n  * ECOG PS 0 or 1\n  * ALBI grade 1 or 2\n* Beyond up-to-seven criteria\n* Disease amenable to TACE or TARE and no contradiction to intra-arterial treatment\n* Measurable disease by CT or MRI as per RECIST 1.1\n* No prior systemic therapy or loco-regional therapy for HCC\n* Adequate hematologic and organ function\n* Willing and able to comply with scheduled visits, treatment plans, laboratory tests and other trial procedures\n* Women of childbearing potential (CBP) must have confirmed negative serum pregnancy test\n* Use of highly-effective contraceptive methods in women of CBP and men\n* Patients with hepatitis C virus (HCV) or hepatitis B virus (HBV) infection are eligible if they meet criteria as defined within the protocol\n\nExclusion Criteria:\n\n* No measurable tumor of a diffuse infiltrative HCC type.\n* Fibrolamellar HCC, sarcomatoid HCC or mixed hepatocellular/ cholangiocarcinoma subtypes.\n* Clinically meaningful ascites.\n* Prior treatment with regorafenib, a PD-1, PD-L1/PD-L2, or cytotoxic T lymphocyte associated protein 4 (CTLA-4) inhibitors, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways.\n* Major surgical procedure, open biopsy, or significant traumatic injury \u226428 days prior to randomization.\n* Active autoimmune disease or history of autoimmune disease that might recur, which may affect vital organ function or require immune suppressive treatment including systemic corticosteroids.\n* Requirement of systemic treatment with either corticosteroids or other immunosuppressive medications \u2264 14 days prior to randomization.\n* Interstitial lung disease, non-infectious pneumonitis or uncontrolled lung diseases including pulmonary fibrosis, or clinically significant acute lung diseases.\n* Cardiovascular conditions as defined within the protocol.\n* Patient has a concurrent invasive malignancy or a prior invasive malignancy whose treatment was completed \u2264 2 years before randomization.\n* Persistent proteinuria of NCI-CTCAE v5.0 Grade 3.\n* Pregnant or breast-feeding (lactating) women or women who plan to become pregnant or breast-feed during the trial.", "healthyVolunteers": false, "sex": "ALL", "minimumAge": "18 Years", "stdAges": ["ADULT", "OLDER_ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "Project Management", "role": "CONTACT", "phone": "+33 1 58 10 08 81", "email": "041@trioncology.org"}], "overallOfficials": [{"name": "Peter R Galle, MD", "affiliation": "University Medical Center, Mainz, Germany", "role": "STUDY_CHAIR"}, {"name": "Richard S Finn, MD", "affiliation": "UCLA Department of Medicine, Division of Hematology-Oncology", "role": "STUDY_CHAIR"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT04777851",
+            "orgStudyIdInfo": {
+                "id": "TRIO041"
+            },
+            "secondaryIdInfos": [
+                {
+                    "id": "EU CT # 2022-501969-42-00",
+                    "type": "OTHER",
+                    "domain": "European Medicines Agency (EMA)"
+                }
+            ],
+            "organization": {
+                "fullName": "Translational Research in Oncology",
+                "class": "OTHER"
+            },
+            "briefTitle": "Regorafenib-pembrolizumab Vs. TACE/TARE in Intermediate Stage HCC Beyond Up-to-7",
+            "officialTitle": "A Phase III, Multicenter, Randomized, Open-label Trial to Evaluate the Safety and Efficacy of Systemic Therapy with Regorafenib and Pembrolizumab Versus Locoregional Therapy with Transarterial Chemoembolization or Transarterial Radioembolization, for the First-line Treatment of Intermediate-stage Hepatocellular Carcinoma with Beyond Up-to-7 Criteria",
+            "acronym": "REPLACE"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "Translational Research in Oncology",
+                "class": "OTHER"
+            },
+            "collaborators": [
+                {
+                    "name": "Bayer",
+                    "class": "INDUSTRY"
+                }
+            ]
+        },
+        "descriptionModule": {
+            "briefSummary": "REPLACE is a phase III, multicenter, randomized, open-label trial to evaluate the efficacy and safety of regorafenib and pembrolizumab (Rego-Pembro) versus transarterial chemoembolization (TACE) or transarterial radioembolization (TARE) for the first-line treatment of hepatocellular carcinoma (HCC or liver cancer). Approximately 496 patients in around 80 clinical sites worldwide will be randomized to receive either:\n\n* Investigational arm: Regorafenib in combination with pembrolizumab\n* Control arm: Transarterial chemoembolization (TACE) or transarterial radioembolization (TARE)\n\nIn both arms, patients will receive trial treatment until progressive disease, unacceptable toxicity, deterioration of patient's condition that warrants permanent trial treatment discontinuation or other treatment discontinuation criteria is met. After trial treatment discontinuation, subsequent treatment will be administered according to the Investigator's clinical judgment.",
+            "detailedDescription": "REPLACE is a phase III, multicenter, randomized, open-label trial to evaluate the efficacy and safety of systemic therapy with Rego-Pembro versus loco-regional therapy with TACE or TARE, for the first-line treatment of intermediate-stage HCC with beyond up-to-7 criteria. Approximately 496 patients (\\~248 in each arm) from approximately 80 sites will be randomized in order to power the trial efficiently to measure a clinically meaningful improvement for the primary endpoint, PFS according to mRECIST based on the Investigator\u00b4s assessment.\n\nThe trial will include patients who have been diagnosed with intermediate-stage HCC by biopsy, cytology or diagnostic imaging, such as dynamic computed tomography (CT) or magnetic resonance imaging (MRI), according to the criteria of the American Association for the Study of Liver Diseases (AASLD). Patients should have at least one measurable lesion per RECIST 1.1, disease not amenable to curative treatment but amenable to loco-regional therapy with TACE (cTACE or DEB-TACE) or TARE, ECOG PS 0-1, Child-Pugh class A, and beyond up-to-7 criteria.\n\nThe trial will include the following phases:\n\n* Screening\n* Treatment\n* Follow-up\n\nRandomized patients will receive either:\n\nInvestigational arm (Arm A):\n\n-Regorafenib at a dose of 90 mg orally q.d. on days 1 to 21 of a 4-week cycle.\n\nIn combination with:\n\n-Pembrolizumab 400 mg using a 30-minutes i.v. infusion, on day 1 (D1) of a 6-week cycle.\n\nControl arm (Arm B):\n\n-Patients will be treated with TACE or TARE \"on-demand\" according to site's standard, with the goal of controlling all known liver lesions.\n\nIn both arms, patients will receive trial treatment (Rego-Pembro or TACE/TARE) until PD per mRECIST, unacceptable toxicity, deterioration of patient's condition that warrants permanent trial treatment discontinuation or other treatment discontinuation criteria are met."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Carcinoma, Hepatocellular"
+            ],
+            "keywords": [
+                "Hepatocellular Carcinoma",
+                "Hepatoma",
+                "Liver Cancer, Adult",
+                "Liver Cell Carcinoma",
+                "Liver Cell Carcinoma, Adult"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE3"
+            ],
+            "designInfo": {
+                "allocation": "RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 496,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Regorafenib + Pembrolizumab",
+                    "type": "EXPERIMENTAL",
+                    "description": "Investigational arm: regorafenib at a dose of 90 mg orally once per day (on days 1 to 21 of a 28-day cycle), in combination with pembrolizumab 400 mg using a 30-minute intravenous infusion, on day 1 of a 6-week cycle.",
+                    "interventionNames": [
+                        "Drug: Regorafenib in combination with pembrolizumab"
+                    ]
+                },
+                {
+                    "label": "Loco-regional therapy",
+                    "type": "ACTIVE_COMPARATOR",
+                    "description": "Control arm: Patients will be treated with TACE or TARE \"on-demand\" according to site's standard of practice.",
+                    "interventionNames": [
+                        "Procedure: Loco-regional therapy"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DRUG",
+                    "name": "Regorafenib in combination with pembrolizumab",
+                    "description": "Randomized patients will receive regorafenib at a dose of 90 mg per day by mouth on days 1 to 21 of a 28-day cycle, in combination with pembrolizumab 400 mg using a 30-minute intravenous infusion, on day 1 (D1) of a 6-week cycle.",
+                    "armGroupLabels": [
+                        "Regorafenib + Pembrolizumab"
+                    ],
+                    "otherNames": [
+                        "Stivarga\u00ae (regorafenib)",
+                        "Keytruda\u00ae (pembrolizumab)"
+                    ]
+                },
+                {
+                    "type": "PROCEDURE",
+                    "name": "Loco-regional therapy",
+                    "description": "Patients will be treated with TACE or TARE \"on-demand\" according to site's standard of practice.",
+                    "armGroupLabels": [
+                        "Loco-regional therapy"
+                    ],
+                    "otherNames": [
+                        "Convention transarterial chemoembolization (cTACE)",
+                        "Drug-eluting bead transarterial chemoembolization (DEB-TACE)",
+                        "Transarterial Chemoembolization (TACE)",
+                        "Transarterial radioembolization (TARE)"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Signed and dated Patient Informed Consent Form (PICF)\n* \u2265 18 years-old at the time of PICF signature\n* Confirmed diagnosis of HCC\n* Intermediate-stage HCC, defined as follows:\n\n  * Multinodular HCC localized to the liver\n  * No evidence of MVI or EHS\n  * Not amenable to curative treatment\n  * Child-Pugh Class A\n  * ECOG PS 0 or 1\n  * ALBI grade 1 or 2\n* Beyond up-to-seven criteria\n* Disease amenable to TACE or TARE and no contradiction to intra-arterial treatment\n* Measurable disease by CT or MRI as per RECIST 1.1\n* No prior systemic therapy or loco-regional therapy for HCC\n* Adequate hematologic and organ function\n* Willing and able to comply with scheduled visits, treatment plans, laboratory tests and other trial procedures\n* Women of childbearing potential (CBP) must have confirmed negative serum pregnancy test\n* Use of highly-effective contraceptive methods in women of CBP and men\n* Patients with hepatitis C virus (HCV) or hepatitis B virus (HBV) infection are eligible if they meet criteria as defined within the protocol\n\nExclusion Criteria:\n\n* No measurable tumor of a diffuse infiltrative HCC type.\n* Fibrolamellar HCC, sarcomatoid HCC or mixed hepatocellular/ cholangiocarcinoma subtypes.\n* Clinically meaningful ascites.\n* Prior treatment with regorafenib, a PD-1, PD-L1/PD-L2, or cytotoxic T lymphocyte associated protein 4 (CTLA-4) inhibitors, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways.\n* Major surgical procedure, open biopsy, or significant traumatic injury \u226428 days prior to randomization.\n* Active autoimmune disease or history of autoimmune disease that might recur, which may affect vital organ function or require immune suppressive treatment including systemic corticosteroids.\n* Requirement of systemic treatment with either corticosteroids or other immunosuppressive medications \u2264 14 days prior to randomization.\n* Interstitial lung disease, non-infectious pneumonitis or uncontrolled lung diseases including pulmonary fibrosis, or clinically significant acute lung diseases.\n* Cardiovascular conditions as defined within the protocol.\n* Patient has a concurrent invasive malignancy or a prior invasive malignancy whose treatment was completed \u2264 2 years before randomization.\n* Persistent proteinuria of NCI-CTCAE v5.0 Grade 3.\n* Pregnant or breast-feeding (lactating) women or women who plan to become pregnant or breast-feed during the trial.",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "minimumAge": "18 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Project Management",
+                    "role": "CONTACT",
+                    "phone": "+33 1 58 10 08 81",
+                    "email": "041@trioncology.org"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Peter R Galle, MD",
+                    "affiliation": "University Medical Center, Mainz, Germany",
+                    "role": "STUDY_CHAIR"
+                },
+                {
+                    "name": "Richard S Finn, MD",
+                    "affiliation": "UCLA Department of Medicine, Division of Hematology-Oncology",
+                    "role": "STUDY_CHAIR"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

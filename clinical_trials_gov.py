@@ -11,6 +11,7 @@ import ai_helper as ai
 import trial_data_formatter as tdf
 import oncotree
 import match_criteria_mapper as mcm
+from loguru import logger
 
 
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
@@ -166,19 +167,21 @@ def map_nct_to_ctml(trial_data: dict) -> dict:
     return trial_schema
 
 def map_ctml_match_clinical_criteria(trial_data: dict):
-    map_oncotree_primary_diagnosis(trial_data)
-    res = map_age_numerical(trial_data)
-    print(res)
+    oncotree_diagnoses_list = map_oncotree_primary_diagnosis(trial_data)
+    age_numerical_dict = map_age_numerical(trial_data)
     # map_tmb_numerical(trial_data)
-    res = map_gender(trial_data)
-    print(res)
-
-    res = map_her2_er_pr_status(trial_data)
-    print(res)
-
-    # map_pdl1_status(trial_data)	
+    gender_dict = map_gender(trial_data)
+    her2_er_pr_dict = map_her2_er_pr_status(trial_data)
+    pdl1_status_dict = map_pdl1_status(trial_data)	
     # map_muscle_invasion(trial_data)
-    # map_disease_status(trial_data)
+    disease_status_list = map_disease_status(trial_data)
+
+    # clinical_ctml = consolidate_clinical_criteria(oncotree_diagnoses_list,
+    #                               age_numerical_dict,
+    #                               gender_dict,
+    #                               her2_er_pr_dict,
+    #                               pdl1_status_dict,
+    #                               disease_status_list)
     return
 
 def map_age_numerical(trial_data: dict):
@@ -191,7 +194,14 @@ def map_age_numerical(trial_data: dict):
 
 def map_her2_er_pr_status(trial_data: dict):
     eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    ai.get_her2_er_pr_status(eligibilityCriteria)
+    keywords = tdf.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+    ai.get_her2_er_pr_status(eligibilityCriteria, keywords)
+    return {}
+
+def map_pdl1_status(trial_data: dict):
+    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    keywords = tdf.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+    ai.get_pdl1_status(eligibilityCriteria, keywords)
     return {}
 
 def map_gender(trial_data: dict):
@@ -203,19 +213,25 @@ def map_gender(trial_data: dict):
     result = gender_mapping.get(gender.lower(), {})
     return result
 
-def map_oncotree_primary_diagnosis(trial_data: dict) -> dict:
+def map_disease_status(trial_data: dict):
+    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    keywords = tdf.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+    ai.get_disease_status(eligibilityCriteria, keywords)
+    return {}
+
+def map_oncotree_primary_diagnosis(trial_data: dict) -> list:
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
     conditions_list = tdf.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
     
-    level_1_list, main_type_list, level1_mapping = oncotree.get_oncotree_data()
+    level_1_diagnosis, main_type_list, level1_mapping = oncotree.get_oncotree_data()
     
     # stage 1 - Extract Keywords
     keywords = mcm.get_keywords_from_conditions(conditions_list)
-    print("Stage 1 - Condition keywords:", keywords)    
+    logger.debug(f"NCTID: {nct_id} | Stage 1 - Condition keywords:{keywords}")    
 
     # stage 2 - Map keywords to Level 1 oncotree diagnoses
-    level1_oncotree_values_dict = ai.get_level1_diagnosis_from_condition_keywords(nct_id, keywords, level_1_list)
-    print("Stage 2 - Mapped keywords to Level 1:", level1_oncotree_values_dict) 
+    level1_oncotree_values_dict = ai.get_level1_diagnosis_from_condition_keywords(nct_id, keywords, level_1_diagnosis)
+    logger.debug(f"NCTID: {nct_id} | Stage 2 - Mapped keywords to Level 1:{level1_oncotree_values_dict}") 
     # create a dictionary to map level1 diagnoses back to original condition (not keywords)
     level1_oncotree_value_to_nct_condition = {}
 
@@ -227,21 +243,23 @@ def map_oncotree_primary_diagnosis(trial_data: dict) -> dict:
                 level1_oncotree_value_to_nct_condition[oncotree_value] = condition
                 continue
     
-    print("Level1 to nct_condition map: ", level1_oncotree_value_to_nct_condition) #{'Bowel': 'Colorectal Cancer', 'Liver': 'Hepatocellular Carcinoma'}
+    logger.debug(f"NCTID: {nct_id} | Level1 to nct_condition map: {level1_oncotree_value_to_nct_condition}") 
+
+    all_possible_diagnoses = []
 
     for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
         # stage 3: Get the child values for Level 1 oncotree diagnoses
         child_values = level1_mapping[item['oncotree_value']]
         nct_condition = level1_oncotree_value_to_nct_condition[item['oncotree_value']]
-        print(f"Stage 3 - Condition = {nct_condition}. Child values = {child_values}")
+        logger.debug(f"NCTID: {nct_id} | Stage 3 - Condition = {nct_condition}. Child values = {child_values}")
         if len(child_values) > 0:
             # stage 4: Pass the child values to AI and the conditions to map to a child value
-            oncotree_diagnoses = ai.get_child_level_diagnoses_from_condition(nct_id, child_values, nct_condition)
-            print(f"Stage 4 Oncotree_diagnoses = {oncotree_diagnoses}")     
-
-    # Stage 6
-    # Add all possible diagnoses returned by AI in a list and format them witn an 'or' condition
-    return
+            oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_condition(nct_id, child_values, nct_condition)
+            if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
+                all_possible_diagnoses.extend(oncotree_diagnoses_result['oncotree_diagnoses'])
+    logger.debug(f"NCTID: {nct_id} | Stage 4 Oncotree_diagnoses : {all_possible_diagnoses}")
+            
+    return all_possible_diagnoses
 
 def map_prior_treatment_requirements(trial_schema, trial_data):
     """

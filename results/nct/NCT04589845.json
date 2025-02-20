@@ -1,1 +1,322 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT04589845", "orgStudyIdInfo": {"id": "BO41932"}, "secondaryIdInfos": [{"id": "2020-001847-16", "type": "EUDRACT_NUMBER"}], "organization": {"fullName": "Hoffmann-La Roche", "class": "INDUSTRY"}, "briefTitle": "Tumor-Agnostic Precision Immuno-Oncology and Somatic Targeting Rational for You (TAPISTRY) Platform Study", "officialTitle": "Tumor-Agnostic Precision Immunooncology and Somatic Targeting Rational for You (TAPISTRY) Phase II Platform Trial"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "SPONSOR"}, "leadSponsor": {"name": "Hoffmann-La Roche", "class": "INDUSTRY"}}, "descriptionModule": {"briefSummary": "TAPISTRY is a Phase II, global, multicenter, open-label, multi-cohort study designed to evaluate the safety and efficacy of targeted therapies or immunotherapy as single agents or in rational, specified combinations in participants with unresectable, locally advanced or metastatic solid tumors determined to harbor specific oncogenic genomic alterations or who are tumor mutational burden (TMB)-high as identified by a validated next-generation sequencing (NGS) assay. Participants with solid tumors will be treated with a drug or drug regimen tailored to their NGS assay results at screening. Participants will be assigned to the appropriate cohort based on their genetic alteration(s). Treatment will be assigned on the basis of relevant oncogenotype, will have cohort-specific inclusion/exclusion criteria, and, unless otherwise specified, will continue until disease progression, loss of clinical benefit, unacceptable toxicity, participant or physician decision to discontinue, or death, whichever occurs first."}, "conditionsModule": {"conditions": ["Solid Tumors"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["PHASE2"], "designInfo": {"allocation": "NON_RANDOMIZED", "interventionModel": "PARALLEL", "primaryPurpose": "TREATMENT", "maskingInfo": {"masking": "NONE"}}, "enrollmentInfo": {"count": 920, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "Cohort A: ROS1 Fusion-positive tumors (excluding NSCLC)", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors, with the exception of NSCLC will receive entrectinib once daily in repeated 28-day cycles at a dose of 600 milligram per day (mg/day) for adults and pediatric participants with a body surface area (BSA) \\>/= 1.51 squaremeter (m2). The total dose of daily entrectinib administration for pediatric participants with BSA\\<1.51 m2 will be lower.", "interventionNames": ["Drug: Entrectinib"]}, {"label": "Cohort B: NTRK1/2/3 fusion-positive tumors", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors will receive entrectinib once daily in repeated 28-day cycles at a dose of 600 mg/day for adults and pediatric participants with a BSA \\>/= 1.51 m2. The total dose of daily entrectinib administration for pediatric participants with BSA\\<1.51 m2 will be lower.", "interventionNames": ["Drug: Entrectinib"]}, {"label": "Cohort C: ALK fusion-positive tumors (excluding NSCLC)", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors, with the exception of NSCLC, will receive alectinib at a dosage of 600 mg orally twice a day (BID), taken with food, in repeated 28-day cycles.", "interventionNames": ["Drug: Alectinib"]}, {"label": "Cohort D: TMB-high tumors", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors will receive atezolizumab intravenously (IV) at a fixed dose for participants aged \\>/= 18 years, and 15 mg/kg (maximum 1200 mg) for participants aged \\< 18 years on Day 1 of each 21-day cycle.\n\nNote: Cohort D has been closed for enrollment", "interventionNames": ["Drug: Atezolizumab"]}, {"label": "Cohort E: AKT1/2/3 mutant-positive tumors", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors will receive ipatasertib orally once daily (QD) at the starting dose of 400 mg in repeated 28-day cycles until the participant experiences disease progression, intolerable toxicity, or withdraws consent. For participants 12-17 years of age, ipatasertib will be administered at the starting dose of 200 mg for participants \\<35 kg, 300 mg for participants \\>/= 35 and \\<45 kg, 400 mg for those \\>/=45 kg orally QD in repeated 28-day cycles until the participant experiences disease progression, intolerable toxicity, or withdraws consent.\n\nNote: Cohort E has been closed for enrollment", "interventionNames": ["Drug: Ipatasertib"]}, {"label": "Cohort F: HER2 mutant-positive tumors", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors will receive trastuzumab emtansine IV at a dose of 3.6 mg/kg every 21 days.\n\nNote: Cohort F has been closed for enrollment", "interventionNames": ["Drug: Trastuzumab emtansine"]}, {"label": "Cohort G: MDM2-amplified, TP53 wild-type tumors", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors will receive idasanutlin at a dose of 250 mg orally QD on Days 1-5 of each 28-day cycle.\n\nNote: Cohort G has been closed for enrollment", "interventionNames": ["Drug: Idasanutlin"]}, {"label": "Cohort H: PIK3CA multiple mutant-positive tumors", "type": "EXPERIMENTAL", "description": "Participants with metastatic or advanced solid tumors will receive GDC-0077 QD at a starting dose of 9 mg by mouth (PO) in repeated 28-day cycles.\n\nNote: Cohort H has been closed for enrollment", "interventionNames": ["Drug: Inavolisib"]}, {"label": "Cohort I: BRAF class II mutant or fusion-positive tumors", "type": "EXPERIMENTAL", "description": "Participants with BRAF class II mutant/fusion-positive tumors (adults and adolescents \u2265 40 kg) will receive 400 mg belvarafenib by mouth (PO) BID (twice a day) with adequate water (more than 200 mL). One cycle consists of 28 days. Administration of belvarafenib should occur BID on every day of each 28-day cycle.\n\nNote: Cohort I has been closed for enrollment", "interventionNames": ["Drug: Belvarafenib"]}, {"label": "Cohort J: BRAF class III mutant-positive tumors", "type": "EXPERIMENTAL", "description": "Participants with BRAF class III mutant-positive tumors(adults and adolescents \u2265 40 kg) will receive 400 mg belvarafenib by mouth (PO) BID (twice a day) with adequate water (more than 200 mL). One cycle consists of 28 days. Administration of belvarafenib should occur BID on every day of each 28-day cycle.\n\nNote: Cohort J has been closed for enrollment", "interventionNames": ["Drug: Belvarafenib"]}, {"label": "Cohort K: RET fusion-positive tumors (excluding NSCLC)", "type": "EXPERIMENTAL", "description": "Participants with RET fusion-positive tumors will self-administer Pralsetinib orally at home (except on clinic days) on a continuous daily dosing regimen at a dose of 400 mg/day (four 100-mg capsules per day) for adult and pediatric patients \u2265 12 and \\< 18 years of age. A treatment cycle consists of 4 weeks (28 days).\n\nNote: Cohort K has been closed for enrollment", "interventionNames": ["Drug: Pralsetinib"]}, {"label": "Cohort L: KRAS G12C-positive tumors (excluding NSCLC and CRC)", "type": "EXPERIMENTAL", "description": "Participants with KRAS G12C-positive tumors will self-administer GDC-6036 orally at home (except on clinic days).", "interventionNames": ["Drug: GDC-6036"]}, {"label": "Cohort M: ATM Loss of Function tumors", "type": "EXPERIMENTAL", "description": "Participants with ATM Loss of Function tumors will self-administer Camonsertib orally at home (except on clinic days).", "interventionNames": ["Drug: Camonsertib"]}, {"label": "Cohort N: SETD2 Loss of Function tumors", "type": "EXPERIMENTAL", "description": "Participants with SETD2 Loss of Function tumors will self-administer Camonsertib orally at home (except on clinic days).", "interventionNames": ["Drug: Camonsertib"]}], "interventions": [{"type": "DRUG", "name": "Entrectinib", "description": "Adults and pediatric participants with a BSA \\>/= 1.51 m2: entrectinib will be self-administered by participants orally at home at a dose of 600 mg/day (three 200-mg capsules per day). Pediatric participants with a BSA \\< 1.51 m2: entrectinib will be administered orally at home in mini-tablet formulation at a dose of 400 mg/day (BSA=1.11-1.50 m2) or 300 mg/day (BSA=0.81-1.10 m2) or 200 mg/day (BSA=0.51-0.80 m2) or 100 mg/day (BSA=0.43-0.50 m2).", "armGroupLabels": ["Cohort A: ROS1 Fusion-positive tumors (excluding NSCLC)"], "otherNames": ["Rozlytrek"]}, {"type": "DRUG", "name": "Entrectinib", "description": "Adults and pediatric participants with a BSA \\>/= 1.51 m2: entrectinib will be self-administered by participants orally at home at a dose of 600 mg/day (three 200-mg capsules per day). Pediatric participants with a BSA \\< 1.51 m2: entrectinib will be administered orally at home in mini-tablet formulation at a dose of 400 mg/day (BSA=1.11-1.50 m2) or 300 mg/day (BSA=0.81-1.10 m2) or 200 mg/day (BSA=0.51-0.80 m2) or 100 mg/day (BSA=0.43-0.50 m2).", "armGroupLabels": ["Cohort B: NTRK1/2/3 fusion-positive tumors"], "otherNames": ["Rozlytrek"]}, {"type": "DRUG", "name": "Alectinib", "description": "Alectinib will be administered orally BID (twice a day) with food at a dosage of 600 mg (four 150-mg capsules).", "armGroupLabels": ["Cohort C: ALK fusion-positive tumors (excluding NSCLC)"], "otherNames": ["Alecensa"]}, {"type": "DRUG", "name": "Atezolizumab", "description": "Atezolizumab will be administered by IV infusion at a fixed dose of 1200 mg for participants aged \\>/=18 years, and 15 mg/kg (maximum 1200 mg) for participants aged \\<18 years on Day 1 of each 21-day cycle.", "armGroupLabels": ["Cohort D: TMB-high tumors"], "otherNames": ["Tecentriq"]}, {"type": "DRUG", "name": "Ipatasertib", "description": "For participants 12-17 years of age, ipatasertib will be administered at the starting dose of 200 mg for participants \\< 35 kg, 300 mg for participants \\>/= 35 and \\< 45 kg, 400 mg for those \\>/= 45 kg orally QD, beginning of Cycle 1, on Days 1-21 of each 28-day cycle until the participant experiences disease progression, intolerable toxicity, or withdraws consent.", "armGroupLabels": ["Cohort E: AKT1/2/3 mutant-positive tumors"]}, {"type": "DRUG", "name": "Trastuzumab emtansine", "description": "Trastuzumab emtansine will be administered at 3.6 mg/kg by IV infusion every 21 days until disease progression or unacceptable toxicity. The dosage and administration method also applies for pediatric participants 12-17 years of age.", "armGroupLabels": ["Cohort F: HER2 mutant-positive tumors"], "otherNames": ["Kadcyla"]}, {"type": "DRUG", "name": "Idasanutlin", "description": "Idasanutlin will be administered at 250 mg QD (daily) PO for Days 1-5 of each 28-day cycle. Idasanutlin may be given without regard to meals and water can be given as often as necessary or desired. The daily doses should be administered 10-14 hours apart.\n\nNote: Cohort G has been closed for enrollment.", "armGroupLabels": ["Cohort G: MDM2-amplified, TP53 wild-type tumors"]}, {"type": "DRUG", "name": "Inavolisib", "description": "GDC-077 will be administered QD at a starting dose of 9 mg PO in repeated 28-day cycles. The dosage and administration method also applies for pediatric participants 12-17 years of age.", "armGroupLabels": ["Cohort H: PIK3CA multiple mutant-positive tumors"], "otherNames": ["GDC-0077"]}, {"type": "DRUG", "name": "Belvarafenib", "description": "Belvarafenib will be administered at a dose 400 mg (PO) BID with adequate water (more than 200 mL). One cycle consists of 28 days. Administration of belvarafenib should occur BID on every day of each 28-day cycle.", "armGroupLabels": ["Cohort I: BRAF class II mutant or fusion-positive tumors", "Cohort J: BRAF class III mutant-positive tumors"]}, {"type": "DRUG", "name": "Pralsetinib", "description": "Pralsetinib will be self-administered by participants orally at home (except on clinic days) on a continuous daily dosing regimen at a dose of 400 mg/day (four 100-mg capsules per day) for adult and pediatric patients \u2265 12 and \\< 18 years of age. A treatment cycle consists of 4 weeks (28 days).", "armGroupLabels": ["Cohort K: RET fusion-positive tumors (excluding NSCLC)"], "otherNames": ["Gavreto (US)"]}, {"type": "DRUG", "name": "GDC-6036", "description": "GDC-6036 will be self-administered by patients orally at home (except on clinic days) on a continuous daily dosing regimen for both adult and pediatric patients. A treatment cycle consists of 3 weeks (21 days).", "armGroupLabels": ["Cohort L: KRAS G12C-positive tumors (excluding NSCLC and CRC)"]}, {"type": "DRUG", "name": "Camonsertib", "description": "Camonsertib will be self-administered by patients orally at home (except on clinic days). A treatment cycle consists of 3 weeks and will be given on days 1-3 and days 8-10 of every 21-day cycle.", "armGroupLabels": ["Cohort M: ATM Loss of Function tumors", "Cohort N: SETD2 Loss of Function tumors"]}]}, "eligibilityModule": {"eligibilityCriteria": "Inclusion Criteria:\n\n* Histologically or cytologically confirmed diagnosis of advanced and unresectable or metastatic solid malignancy\n* Measurable disease as defined by Response Evaluation Criteria in Solid Tumors, Version 1.1 (RECIST v1.1), Response Assessment in Neuro-Oncology (RANO) criteria, or International Neuroblastoma Response Criteria (INRC)\n* Performance status as follows: Participantss aged \\>= 18 years: Eastern Cooperative Oncology Group (ECOG) Performance Status 0-2; Participantss aged 16 to \\< 18 years: Karnofsky score \\>= 50%; Participants aged \\< 16 years: Lansky score \\>= 50%\n* For participants aged \\>= 18 and \\<18 years: adequate hematologic and end-organ function\n* Disease progression on prior treatment, or previously untreated disease with no available acceptable treatment\n* Adequate recovery from most recent systemic or local treatment for cancer\n* Life expectancy \\>= 8 weeks\n* Ability to comply with the study protocol, in the investigator's judgment\n* For female participants of childbearing potential: Negative serum pregnancy test \\<= 14 days prior to initiating study treatment; agreement to remain abstinent or use single or combined contraception methods that result in a failure rate of \\< 1% per year for the period defined in the cohort-specific inclusion criteria; and agreement to refrain from donating eggs during the same period\n* For male participants: Willingness to remain abstinent or use acceptable methods of contraception as defined in the cohort-specific inclusion criteria\n* In addition to the general inclusion criteria above, participants must meet all of the cohort-specific inclusion criteria for the respective cohort\n\nExclusion Criteria:\n\n* Current participation or enrollment in another therapeutic clinical trial\n* Any anticancer treatment within 2 weeks or 5 half-lives prior to start of study treatment\n* Whole brain radiotherapy within 14 days prior to start of study treatment\n* Stereotactic radiosurgery within 7 days prior to start of study treatment\n* Pregnant or breastfeeding, or intending to become pregnant during the study\n* History of or concurrent serious medical condition or abnormality in clinical laboratory tests that, in the investigator's judgment, precludes the participant's safe participation in and completion of the study or confounds the ability to interpret data from the study\n* Incomplete recovery from any surgery prior to the start of study treatment that would interfere with the determination of safety or efficacy of study treatment\n* Significant cardiovascular disease, such as New York Heart Association cardiac disease (Class II or higher), myocardial infarction, or cerebrovascular accident within 3 months prior to enrollment, unstable arrhythmias, or unstable angina\n* History of another active cancer within 5 years prior to screening that may interfere with the determination of safety or efficacy of study treatment with respect to the qualifying solid tumor malignancy\n* In addition to the general exclusion criteria above, in order to be enrolled in a treatment cohort of the study, participants must not meet any of the cohort-specific exclusion criteria", "healthyVolunteers": false, "sex": "ALL", "stdAges": ["CHILD", "ADULT", "OLDER_ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "Reference Study ID Number: BO41932 https://forpatients.roche.com/", "role": "CONTACT", "phone": "888-662-6728 (U.S. and Canada)", "email": "Global-Roche-Genentech-Trials@gene.com"}], "overallOfficials": [{"name": "Clinical Trials", "affiliation": "Hoffmann-La Roche", "role": "STUDY_DIRECTOR"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT04589845",
+            "orgStudyIdInfo": {
+                "id": "BO41932"
+            },
+            "secondaryIdInfos": [
+                {
+                    "id": "2020-001847-16",
+                    "type": "EUDRACT_NUMBER"
+                }
+            ],
+            "organization": {
+                "fullName": "Hoffmann-La Roche",
+                "class": "INDUSTRY"
+            },
+            "briefTitle": "Tumor-Agnostic Precision Immuno-Oncology and Somatic Targeting Rational for You (TAPISTRY) Platform Study",
+            "officialTitle": "Tumor-Agnostic Precision Immunooncology and Somatic Targeting Rational for You (TAPISTRY) Phase II Platform Trial"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "Hoffmann-La Roche",
+                "class": "INDUSTRY"
+            }
+        },
+        "descriptionModule": {
+            "briefSummary": "TAPISTRY is a Phase II, global, multicenter, open-label, multi-cohort study designed to evaluate the safety and efficacy of targeted therapies or immunotherapy as single agents or in rational, specified combinations in participants with unresectable, locally advanced or metastatic solid tumors determined to harbor specific oncogenic genomic alterations or who are tumor mutational burden (TMB)-high as identified by a validated next-generation sequencing (NGS) assay. Participants with solid tumors will be treated with a drug or drug regimen tailored to their NGS assay results at screening. Participants will be assigned to the appropriate cohort based on their genetic alteration(s). Treatment will be assigned on the basis of relevant oncogenotype, will have cohort-specific inclusion/exclusion criteria, and, unless otherwise specified, will continue until disease progression, loss of clinical benefit, unacceptable toxicity, participant or physician decision to discontinue, or death, whichever occurs first."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Solid Tumors"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE2"
+            ],
+            "designInfo": {
+                "allocation": "NON_RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 920,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Cohort A: ROS1 Fusion-positive tumors (excluding NSCLC)",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors, with the exception of NSCLC will receive entrectinib once daily in repeated 28-day cycles at a dose of 600 milligram per day (mg/day) for adults and pediatric participants with a body surface area (BSA) \\>/= 1.51 squaremeter (m2). The total dose of daily entrectinib administration for pediatric participants with BSA\\<1.51 m2 will be lower.",
+                    "interventionNames": [
+                        "Drug: Entrectinib"
+                    ]
+                },
+                {
+                    "label": "Cohort B: NTRK1/2/3 fusion-positive tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors will receive entrectinib once daily in repeated 28-day cycles at a dose of 600 mg/day for adults and pediatric participants with a BSA \\>/= 1.51 m2. The total dose of daily entrectinib administration for pediatric participants with BSA\\<1.51 m2 will be lower.",
+                    "interventionNames": [
+                        "Drug: Entrectinib"
+                    ]
+                },
+                {
+                    "label": "Cohort C: ALK fusion-positive tumors (excluding NSCLC)",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors, with the exception of NSCLC, will receive alectinib at a dosage of 600 mg orally twice a day (BID), taken with food, in repeated 28-day cycles.",
+                    "interventionNames": [
+                        "Drug: Alectinib"
+                    ]
+                },
+                {
+                    "label": "Cohort D: TMB-high tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors will receive atezolizumab intravenously (IV) at a fixed dose for participants aged \\>/= 18 years, and 15 mg/kg (maximum 1200 mg) for participants aged \\< 18 years on Day 1 of each 21-day cycle.\n\nNote: Cohort D has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Atezolizumab"
+                    ]
+                },
+                {
+                    "label": "Cohort E: AKT1/2/3 mutant-positive tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors will receive ipatasertib orally once daily (QD) at the starting dose of 400 mg in repeated 28-day cycles until the participant experiences disease progression, intolerable toxicity, or withdraws consent. For participants 12-17 years of age, ipatasertib will be administered at the starting dose of 200 mg for participants \\<35 kg, 300 mg for participants \\>/= 35 and \\<45 kg, 400 mg for those \\>/=45 kg orally QD in repeated 28-day cycles until the participant experiences disease progression, intolerable toxicity, or withdraws consent.\n\nNote: Cohort E has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Ipatasertib"
+                    ]
+                },
+                {
+                    "label": "Cohort F: HER2 mutant-positive tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors will receive trastuzumab emtansine IV at a dose of 3.6 mg/kg every 21 days.\n\nNote: Cohort F has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Trastuzumab emtansine"
+                    ]
+                },
+                {
+                    "label": "Cohort G: MDM2-amplified, TP53 wild-type tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors will receive idasanutlin at a dose of 250 mg orally QD on Days 1-5 of each 28-day cycle.\n\nNote: Cohort G has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Idasanutlin"
+                    ]
+                },
+                {
+                    "label": "Cohort H: PIK3CA multiple mutant-positive tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with metastatic or advanced solid tumors will receive GDC-0077 QD at a starting dose of 9 mg by mouth (PO) in repeated 28-day cycles.\n\nNote: Cohort H has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Inavolisib"
+                    ]
+                },
+                {
+                    "label": "Cohort I: BRAF class II mutant or fusion-positive tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with BRAF class II mutant/fusion-positive tumors (adults and adolescents \u2265 40 kg) will receive 400 mg belvarafenib by mouth (PO) BID (twice a day) with adequate water (more than 200 mL). One cycle consists of 28 days. Administration of belvarafenib should occur BID on every day of each 28-day cycle.\n\nNote: Cohort I has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Belvarafenib"
+                    ]
+                },
+                {
+                    "label": "Cohort J: BRAF class III mutant-positive tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with BRAF class III mutant-positive tumors(adults and adolescents \u2265 40 kg) will receive 400 mg belvarafenib by mouth (PO) BID (twice a day) with adequate water (more than 200 mL). One cycle consists of 28 days. Administration of belvarafenib should occur BID on every day of each 28-day cycle.\n\nNote: Cohort J has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Belvarafenib"
+                    ]
+                },
+                {
+                    "label": "Cohort K: RET fusion-positive tumors (excluding NSCLC)",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with RET fusion-positive tumors will self-administer Pralsetinib orally at home (except on clinic days) on a continuous daily dosing regimen at a dose of 400 mg/day (four 100-mg capsules per day) for adult and pediatric patients \u2265 12 and \\< 18 years of age. A treatment cycle consists of 4 weeks (28 days).\n\nNote: Cohort K has been closed for enrollment",
+                    "interventionNames": [
+                        "Drug: Pralsetinib"
+                    ]
+                },
+                {
+                    "label": "Cohort L: KRAS G12C-positive tumors (excluding NSCLC and CRC)",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with KRAS G12C-positive tumors will self-administer GDC-6036 orally at home (except on clinic days).",
+                    "interventionNames": [
+                        "Drug: GDC-6036"
+                    ]
+                },
+                {
+                    "label": "Cohort M: ATM Loss of Function tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with ATM Loss of Function tumors will self-administer Camonsertib orally at home (except on clinic days).",
+                    "interventionNames": [
+                        "Drug: Camonsertib"
+                    ]
+                },
+                {
+                    "label": "Cohort N: SETD2 Loss of Function tumors",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants with SETD2 Loss of Function tumors will self-administer Camonsertib orally at home (except on clinic days).",
+                    "interventionNames": [
+                        "Drug: Camonsertib"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DRUG",
+                    "name": "Entrectinib",
+                    "description": "Adults and pediatric participants with a BSA \\>/= 1.51 m2: entrectinib will be self-administered by participants orally at home at a dose of 600 mg/day (three 200-mg capsules per day). Pediatric participants with a BSA \\< 1.51 m2: entrectinib will be administered orally at home in mini-tablet formulation at a dose of 400 mg/day (BSA=1.11-1.50 m2) or 300 mg/day (BSA=0.81-1.10 m2) or 200 mg/day (BSA=0.51-0.80 m2) or 100 mg/day (BSA=0.43-0.50 m2).",
+                    "armGroupLabels": [
+                        "Cohort A: ROS1 Fusion-positive tumors (excluding NSCLC)"
+                    ],
+                    "otherNames": [
+                        "Rozlytrek"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Entrectinib",
+                    "description": "Adults and pediatric participants with a BSA \\>/= 1.51 m2: entrectinib will be self-administered by participants orally at home at a dose of 600 mg/day (three 200-mg capsules per day). Pediatric participants with a BSA \\< 1.51 m2: entrectinib will be administered orally at home in mini-tablet formulation at a dose of 400 mg/day (BSA=1.11-1.50 m2) or 300 mg/day (BSA=0.81-1.10 m2) or 200 mg/day (BSA=0.51-0.80 m2) or 100 mg/day (BSA=0.43-0.50 m2).",
+                    "armGroupLabels": [
+                        "Cohort B: NTRK1/2/3 fusion-positive tumors"
+                    ],
+                    "otherNames": [
+                        "Rozlytrek"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Alectinib",
+                    "description": "Alectinib will be administered orally BID (twice a day) with food at a dosage of 600 mg (four 150-mg capsules).",
+                    "armGroupLabels": [
+                        "Cohort C: ALK fusion-positive tumors (excluding NSCLC)"
+                    ],
+                    "otherNames": [
+                        "Alecensa"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Atezolizumab",
+                    "description": "Atezolizumab will be administered by IV infusion at a fixed dose of 1200 mg for participants aged \\>/=18 years, and 15 mg/kg (maximum 1200 mg) for participants aged \\<18 years on Day 1 of each 21-day cycle.",
+                    "armGroupLabels": [
+                        "Cohort D: TMB-high tumors"
+                    ],
+                    "otherNames": [
+                        "Tecentriq"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Ipatasertib",
+                    "description": "For participants 12-17 years of age, ipatasertib will be administered at the starting dose of 200 mg for participants \\< 35 kg, 300 mg for participants \\>/= 35 and \\< 45 kg, 400 mg for those \\>/= 45 kg orally QD, beginning of Cycle 1, on Days 1-21 of each 28-day cycle until the participant experiences disease progression, intolerable toxicity, or withdraws consent.",
+                    "armGroupLabels": [
+                        "Cohort E: AKT1/2/3 mutant-positive tumors"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Trastuzumab emtansine",
+                    "description": "Trastuzumab emtansine will be administered at 3.6 mg/kg by IV infusion every 21 days until disease progression or unacceptable toxicity. The dosage and administration method also applies for pediatric participants 12-17 years of age.",
+                    "armGroupLabels": [
+                        "Cohort F: HER2 mutant-positive tumors"
+                    ],
+                    "otherNames": [
+                        "Kadcyla"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Idasanutlin",
+                    "description": "Idasanutlin will be administered at 250 mg QD (daily) PO for Days 1-5 of each 28-day cycle. Idasanutlin may be given without regard to meals and water can be given as often as necessary or desired. The daily doses should be administered 10-14 hours apart.\n\nNote: Cohort G has been closed for enrollment.",
+                    "armGroupLabels": [
+                        "Cohort G: MDM2-amplified, TP53 wild-type tumors"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Inavolisib",
+                    "description": "GDC-077 will be administered QD at a starting dose of 9 mg PO in repeated 28-day cycles. The dosage and administration method also applies for pediatric participants 12-17 years of age.",
+                    "armGroupLabels": [
+                        "Cohort H: PIK3CA multiple mutant-positive tumors"
+                    ],
+                    "otherNames": [
+                        "GDC-0077"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Belvarafenib",
+                    "description": "Belvarafenib will be administered at a dose 400 mg (PO) BID with adequate water (more than 200 mL). One cycle consists of 28 days. Administration of belvarafenib should occur BID on every day of each 28-day cycle.",
+                    "armGroupLabels": [
+                        "Cohort I: BRAF class II mutant or fusion-positive tumors",
+                        "Cohort J: BRAF class III mutant-positive tumors"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Pralsetinib",
+                    "description": "Pralsetinib will be self-administered by participants orally at home (except on clinic days) on a continuous daily dosing regimen at a dose of 400 mg/day (four 100-mg capsules per day) for adult and pediatric patients \u2265 12 and \\< 18 years of age. A treatment cycle consists of 4 weeks (28 days).",
+                    "armGroupLabels": [
+                        "Cohort K: RET fusion-positive tumors (excluding NSCLC)"
+                    ],
+                    "otherNames": [
+                        "Gavreto (US)"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "GDC-6036",
+                    "description": "GDC-6036 will be self-administered by patients orally at home (except on clinic days) on a continuous daily dosing regimen for both adult and pediatric patients. A treatment cycle consists of 3 weeks (21 days).",
+                    "armGroupLabels": [
+                        "Cohort L: KRAS G12C-positive tumors (excluding NSCLC and CRC)"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Camonsertib",
+                    "description": "Camonsertib will be self-administered by patients orally at home (except on clinic days). A treatment cycle consists of 3 weeks and will be given on days 1-3 and days 8-10 of every 21-day cycle.",
+                    "armGroupLabels": [
+                        "Cohort M: ATM Loss of Function tumors",
+                        "Cohort N: SETD2 Loss of Function tumors"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Histologically or cytologically confirmed diagnosis of advanced and unresectable or metastatic solid malignancy\n* Measurable disease as defined by Response Evaluation Criteria in Solid Tumors, Version 1.1 (RECIST v1.1), Response Assessment in Neuro-Oncology (RANO) criteria, or International Neuroblastoma Response Criteria (INRC)\n* Performance status as follows: Participantss aged \\>= 18 years: Eastern Cooperative Oncology Group (ECOG) Performance Status 0-2; Participantss aged 16 to \\< 18 years: Karnofsky score \\>= 50%; Participants aged \\< 16 years: Lansky score \\>= 50%\n* For participants aged \\>= 18 and \\<18 years: adequate hematologic and end-organ function\n* Disease progression on prior treatment, or previously untreated disease with no available acceptable treatment\n* Adequate recovery from most recent systemic or local treatment for cancer\n* Life expectancy \\>= 8 weeks\n* Ability to comply with the study protocol, in the investigator's judgment\n* For female participants of childbearing potential: Negative serum pregnancy test \\<= 14 days prior to initiating study treatment; agreement to remain abstinent or use single or combined contraception methods that result in a failure rate of \\< 1% per year for the period defined in the cohort-specific inclusion criteria; and agreement to refrain from donating eggs during the same period\n* For male participants: Willingness to remain abstinent or use acceptable methods of contraception as defined in the cohort-specific inclusion criteria\n* In addition to the general inclusion criteria above, participants must meet all of the cohort-specific inclusion criteria for the respective cohort\n\nExclusion Criteria:\n\n* Current participation or enrollment in another therapeutic clinical trial\n* Any anticancer treatment within 2 weeks or 5 half-lives prior to start of study treatment\n* Whole brain radiotherapy within 14 days prior to start of study treatment\n* Stereotactic radiosurgery within 7 days prior to start of study treatment\n* Pregnant or breastfeeding, or intending to become pregnant during the study\n* History of or concurrent serious medical condition or abnormality in clinical laboratory tests that, in the investigator's judgment, precludes the participant's safe participation in and completion of the study or confounds the ability to interpret data from the study\n* Incomplete recovery from any surgery prior to the start of study treatment that would interfere with the determination of safety or efficacy of study treatment\n* Significant cardiovascular disease, such as New York Heart Association cardiac disease (Class II or higher), myocardial infarction, or cerebrovascular accident within 3 months prior to enrollment, unstable arrhythmias, or unstable angina\n* History of another active cancer within 5 years prior to screening that may interfere with the determination of safety or efficacy of study treatment with respect to the qualifying solid tumor malignancy\n* In addition to the general exclusion criteria above, in order to be enrolled in a treatment cohort of the study, participants must not meet any of the cohort-specific exclusion criteria",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "stdAges": [
+                "CHILD",
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Reference Study ID Number: BO41932 https://forpatients.roche.com/",
+                    "role": "CONTACT",
+                    "phone": "888-662-6728 (U.S. and Canada)",
+                    "email": "Global-Roche-Genentech-Trials@gene.com"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Clinical Trials",
+                    "affiliation": "Hoffmann-La Roche",
+                    "role": "STUDY_DIRECTOR"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

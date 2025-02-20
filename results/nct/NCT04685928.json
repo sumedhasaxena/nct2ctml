@@ -1,1 +1,255 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT04685928", "orgStudyIdInfo": {"id": "CRE 2020.569"}, "organization": {"fullName": "Chinese University of Hong Kong", "class": "OTHER"}, "briefTitle": "Extended Systematic Versus Mri-Assisted pRostate Transperineal Biopsy", "officialTitle": "A Randomized Controlled Trial Comparing Magnetic Resonance Imaging (MRI)-Targeted Biopsy and Extended Transperineal Systematic Biopsy for Detection of Clinically Significant Prostate Cancer: the SMART Trial", "acronym": "SMART"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "PRINCIPAL_INVESTIGATOR", "investigatorFullName": "CHIU Ka Fung Peter", "investigatorTitle": "Associate Professor", "investigatorAffiliation": "Chinese University of Hong Kong"}, "leadSponsor": {"name": "Chinese University of Hong Kong", "class": "OTHER"}}, "descriptionModule": {"briefSummary": "This is a randomized controlled trial to evaluate the detection of clinically significant prostate cancer (csPCa) by MRI-targeted approach (MRI-arm) versus 24-core transperineal (TP) systematic biopsy (TP-arm). Clinically significant prostate cancer (csPCa) is defined as ISUP (International Society of Urogenital Pathology) Grade group \u22652 prostate cancer. Patients with elevated PSA 4-20 ng/mL with or without abnormal digital rectal examination (DRE) will be randomized in a 1:1 manner to MRI-arm or TP-arm. In the MRI-arm, multiparametric MRI prostate will be performed for each subject. MRI prostate is considered abnormal if PI-RADS (Prostate Imaging-Reporting and Data System, version 2.1) score is 3, 4 or 5. For subjects in MRI-arm with abnormal MRI, MRI-targeted biopsy will be performed, followed by 12-core systematic transperineal biopsy (sparing MRI-target). For subjects in MRI-arm with normal MRI, no biopsy is performed. For subjects in TP-arm, 24-core systematic transperineal biopsy will be performed without MRI guidance. The study flowchart is provided in Figure 1. The detection rates of csPCa will be compared between MRI-targeted biopsy plus 12-core systematic biopsy (in MRI-arm) versus TP-arm. The study hypothesis is MRI-guided prostate biopsy with 12-core systematic biopsy is superior to 24-core transperineal systematic biopsy in detection of csPCa.", "detailedDescription": "The current study is a randomized controlled trial using a superiority design with the subjects randomized in 1:1 manner to either MRI-arm or TP-arm. In the MRI-arm, multiparametric MRI is performed for all subjects. If MRI is abnormal (PI-RADS score 3-5), 3-4 core targeted followed by 12-core systematic transperineal biopsies under local anaesthesia will be performed. If MRI is normal, no biopsy is performed. A 12-core systematic biopsy is also included in MRI-targeted biopsy as it has been shown in the Trio study that adding systematic biopsy increased the detection of csPCa.\n\nIn the TP-arm, no MRI will be performed, and all subjects will receive 24-core transperineal prostate biopsy under local anaesthesia. Patient will be followed up in clinic about 30 days after biopsy to review pathology result and complication."}, "conditionsModule": {"conditions": ["Prostate Cancer"], "keywords": ["Prostate biopsy", "Prostate Cancer", "MRI prostate", "Transperineal biopsy"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["NA"], "designInfo": {"allocation": "RANDOMIZED", "interventionModel": "PARALLEL", "interventionModelDescription": "Randomized controlled trial, 1:1 allocation", "primaryPurpose": "DIAGNOSTIC", "maskingInfo": {"masking": "NONE"}}, "enrollmentInfo": {"count": 500, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "MRI arm", "type": "EXPERIMENTAL", "description": "MRI prostate with contrast, followed by MRI-guided biopsy under local anaesthesia only if MRI show suspicious lesion. Men with non-suspicious MRI will not receive a biopsy.", "interventionNames": ["Diagnostic Test: MRI and MRI-guided prostate biopsy"]}, {"label": "TP-arm Systematic biopsy", "type": "ACTIVE_COMPARATOR", "description": "24-core Systematic transperineal prostate biopsy under local anaesthesia", "interventionNames": ["Diagnostic Test: TP-arm Systematic biopsy"]}], "interventions": [{"type": "DIAGNOSTIC_TEST", "name": "MRI and MRI-guided prostate biopsy", "description": "Multiparametric MRI prostates in the MRI arm will be performed using 1.5 or 3.0 Tesla scanner with a pelvic phased array coil and contrast injection. T2-weighted, diffusion weighted and dynamic contrast enhanced scans will be included and the reporting of MRI finding will be done according to PI-RADS (Prostate Imaging-Reporting and Data Systems) v2.1 recommendations. MRI-guided targeted biopsy will be performed by Urologists experienced in MRI-guided biopsy for men with PI-RADS score 3-5.", "armGroupLabels": ["MRI arm"]}, {"type": "DIAGNOSTIC_TEST", "name": "TP-arm Systematic biopsy", "description": "Transperineal 24-core biopsy using a free-hand technique under local anaesthesia will be performed under transrectal ultrasound guidance for men in this arm", "armGroupLabels": ["TP-arm Systematic biopsy"]}]}, "eligibilityModule": {"eligibilityCriteria": "Inclusion Criteria:\n\n1. Men \u226518 years of age\n2. Clinical suspicion of prostate cancer and indicated for prostate biopsy\n3. Serum Prostate-specific antigen (PSA) 4-20 ng/mL\n4. Digital rectal examination \u2264 cT2 (organ confined cancer)\n5. Able to provide written informed consent\n\nExclusion Criteria:\n\n1. Prior prostate biopsy\n2. Past or current history of prostate cancer\n3. MRI prostate performed within past 5 years\n4. Contraindicated to undergo MRI scan (e.g. pacemaker in-situ, claustrophobia, estimated glomerular filtration rate \\< 50ml/min in serum renal function test within 3 months)\n5. Contraindicated to transperineal prostate biopsy: active urinary tract infection, fail insertion of transrectal ultrasound probe into rectum (abdominal perineal resection, anal stenosis), fail to be placed in lithotomy position, uncorrectable coagulopathy, antiplatelet or anticoagulant which cannot be stopped (keep aspirin before and after biopsy is permitted)", "healthyVolunteers": false, "sex": "MALE", "genderBased": true, "minimumAge": "18 Years", "stdAges": ["ADULT", "OLDER_ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "Peter Ka-Fung CHIU, FRCS, PhD", "role": "CONTACT", "phone": "3505-2625", "email": "peterchiu@surgery.cuhk.edu.hk"}], "overallOfficials": [{"name": "Peter Ka-Fung CHIU, FRCS, PhD", "affiliation": "Prince of Wales Hospital, The Chinese University of Hong Kong", "role": "PRINCIPAL_INVESTIGATOR"}]}, "referencesModule": {"references": [{"pmid": "31493960", "type": "BACKGROUND", "citation": "Culp MB, Soerjomataram I, Efstathiou JA, Bray F, Jemal A. Recent Global Patterns in Prostate Cancer Incidence and Mortality Rates. Eur Urol. 2020 Jan;77(1):38-52. doi: 10.1016/j.eururo.2019.08.005. Epub 2019 Sep 5."}, {"pmid": "27932742", "type": "BACKGROUND", "citation": "Chan SY, Ng CF, Lee KW, Yee CH, Chiu PK, Teoh JY, Hou SS. Differences in cancer characteristics of Chinese patients with prostate cancer who present with different symptoms. Hong Kong Med J. 2017 Feb;23(1):6-12. doi: 10.12809/hkmj164875. Epub 2016 Dec 9."}, {"pmid": "30178778", "type": "BACKGROUND", "citation": "Wong HF, Yee CH, Teoh JY, Chan SY, Chiu PK, Cheung HY, Hou SS, Ng CF. Time trend and characteristics of prostate cancer diagnosed in Hong Kong (China) in the past two decades. Asian J Androl. 2019 Jan 1;21(1):104-106. doi: 10.4103/aja.aja_75_18. No abstract available."}, {"pmid": "12478119", "type": "BACKGROUND", "citation": "Presti JC Jr, O'Dowd GJ, Miller MC, Mattu R, Veltri RW. Extended peripheral zone biopsy schemes increase cancer detection rates and minimize variance in prostate specific antigen and age related cancer rates: results of a community multi-practice study. J Urol. 2003 Jan;169(1):125-9. doi: 10.1016/S0022-5347(05)64051-7."}, {"pmid": "2677409", "type": "BACKGROUND", "citation": "Carter HB, Hamper UM, Sheth S, Sanders RC, Epstein JI, Walsh PC. Evaluation of transrectal ultrasound in the early detection of prostate cancer. J Urol. 1989 Oct;142(4):1008-10. doi: 10.1016/s0022-5347(17)38971-1."}, {"pmid": "28498624", "type": "BACKGROUND", "citation": "Chiu PK, Alberts AR, Venderbos LDF, Bangma CH, Roobol MJ. Additional benefit of using a risk-based selection for prostate biopsy: an analysis of biopsy complications in the Rotterdam section of the European Randomized Study of Screening for Prostate Cancer. BJU Int. 2017 Sep;120(3):394-400. doi: 10.1111/bju.13913. Epub 2017 Jun 5."}, {"pmid": "30396635", "type": "BACKGROUND", "citation": "Chiu PK, Ng CF, Semjonow A, Zhu Y, Vincendeau S, Houlgatte A, Lazzeri M, Guazzoni G, Stephan C, Haese A, Bruijne I, Teoh JY, Leung CH, Casale P, Chiang CH, Tan LG, Chiong E, Huang CY, Wu HC, Nieboer D, Ye DW, Bangma CH, Roobol MJ. A Multicentre Evaluation of the Role of the Prostate Health Index (PHI) in Regions with Differing Prevalence of Prostate Cancer: Adjustment of PHI Reference Ranges is Needed for European and Asian Settings. Eur Urol. 2019 Apr;75(4):558-561. doi: 10.1016/j.eururo.2018.10.047. Epub 2018 Nov 2."}, {"pmid": "27897172", "type": "BACKGROUND", "citation": "Chiu PK, Roobol MJ, Nieboer D, Teoh JY, Yuen SK, Hou SM, Yiu MK, Ng CF. Adaptation and external validation of the European randomised study of screening for prostate cancer risk calculator for the Chinese population. Prostate Cancer Prostatic Dis. 2017 Mar;20(1):99-104. doi: 10.1038/pcan.2016.57. Epub 2016 Nov 29."}, {"pmid": "30898406", "type": "BACKGROUND", "citation": "Turkbey B, Rosenkrantz AB, Haider MA, Padhani AR, Villeirs G, Macura KJ, Tempany CM, Choyke PL, Cornud F, Margolis DJ, Thoeny HC, Verma S, Barentsz J, Weinreb JC. Prostate Imaging Reporting and Data System Version 2.1: 2019 Update of Prostate Imaging Reporting and Data System Version 2. Eur Urol. 2019 Sep;76(3):340-351. doi: 10.1016/j.eururo.2019.02.033. Epub 2019 Mar 18."}, {"pmid": "30082150", "type": "BACKGROUND", "citation": "Alberts AR, Roobol MJ, Verbeek JFM, Schoots IG, Chiu PK, Osses DF, Tijsterman JD, Beerlage HP, Mannaerts CK, Schimmoller L, Albers P, Arsov C. Prediction of High-grade Prostate Cancer Following Multiparametric Magnetic Resonance Imaging: Improving the Rotterdam European Randomized Study of Screening for Prostate Cancer Risk Calculators. Eur Urol. 2019 Feb;75(2):310-318. doi: 10.1016/j.eururo.2018.07.031. Epub 2018 Aug 3."}, {"pmid": "31022301", "type": "BACKGROUND", "citation": "Drost FH, Osses DF, Nieboer D, Steyerberg EW, Bangma CH, Roobol MJ, Schoots IG. Prostate MRI, with or without MRI-targeted biopsy, and systematic biopsy for detecting prostate cancer. Cochrane Database Syst Rev. 2019 Apr 25;4(4):CD012663. doi: 10.1002/14651858.CD012663.pub2."}, {"pmid": "28110982", "type": "BACKGROUND", "citation": "Ahmed HU, El-Shater Bosaily A, Brown LC, Gabe R, Kaplan R, Parmar MK, Collaco-Moraes Y, Ward K, Hindley RG, Freeman A, Kirkham AP, Oldroyd R, Parker C, Emberton M; PROMIS study group. Diagnostic accuracy of multi-parametric MRI and TRUS biopsy in prostate cancer (PROMIS): a paired validating confirmatory study. Lancet. 2017 Feb 25;389(10071):815-822. doi: 10.1016/S0140-6736(16)32401-1. Epub 2017 Jan 20."}, {"pmid": "29552975", "type": "BACKGROUND", "citation": "Kasivisvanathan V, Rannikko AS, Borghi M, Panebianco V, Mynderse LA, Vaarala MH, Briganti A, Budaus L, Hellawell G, Hindley RG, Roobol MJ, Eggener S, Ghei M, Villers A, Bladou F, Villeirs GM, Virdi J, Boxler S, Robert G, Singh PB, Venderink W, Hadaschik BA, Ruffion A, Hu JC, Margolis D, Crouzet S, Klotz L, Taneja SS, Pinto P, Gill I, Allen C, Giganti F, Freeman A, Morris S, Punwani S, Williams NR, Brew-Graves C, Deeks J, Takwoingi Y, Emberton M, Moore CM; PRECISION Study Group Collaborators. MRI-Targeted or Standard Biopsy for Prostate-Cancer Diagnosis. N Engl J Med. 2018 May 10;378(19):1767-1777. doi: 10.1056/NEJMoa1801993. Epub 2018 Mar 18."}, {"pmid": "23787356", "type": "BACKGROUND", "citation": "Loeb S, Vellekoop A, Ahmed HU, Catto J, Emberton M, Nam R, Rosario DJ, Scattoni V, Lotan Y. Systematic review of complications of prostate biopsy. Eur Urol. 2013 Dec;64(6):876-92. doi: 10.1016/j.eururo.2013.05.049. Epub 2013 Jun 4."}, {"pmid": "31178436", "type": "BACKGROUND", "citation": "Lo KL, Chui KL, Leung CH, Ma SF, Lim K, Ng T, Wong J, Li JKM, Mak SK, Ng CF. Outcomes of transperineal and transrectal ultrasound-guided prostate biopsy. Hong Kong Med J. 2019 Jun;25(3):209-215. doi: 10.12809/hkmj187599. Epub 2019 May 29."}, {"pmid": "31932659", "type": "BACKGROUND", "citation": "Grummet J, Gorin MA, Popert R, O'Brien T, Lamb AD, Hadaschik B, Radtke JP, Wagenlehner F, Baco E, Moore CM, Emberton M, George AK, Davis JW, Szabo RJ, Buckley R, Loblaw A, Allaway M, Kastner C, Briers E, Royce PL, Frydenberg M, Murphy DG, Woo HH. \"TREXIT 2020\": why the time to abandon transrectal prostate biopsy starts now. Prostate Cancer Prostatic Dis. 2020 Mar;23(1):62-65. doi: 10.1038/s41391-020-0204-8. Epub 2020 Jan 13. No abstract available."}, {"pmid": "30431694", "type": "BACKGROUND", "citation": "Kum F, Elhage O, Maliyil J, Wong K, Faure Walker N, Kulkarni M, Namdarian B, Challacombe B, Cathcart P, Popert R. Initial outcomes of local anaesthetic freehand transperineal prostate biopsies in the outpatient setting. BJU Int. 2020 Feb;125(2):244-252. doi: 10.1111/bju.14620. Epub 2019 Dec 3."}, {"pmid": "23773772", "type": "BACKGROUND", "citation": "Kuru TH, Wadhwa K, Chang RT, Echeverria LM, Roethke M, Polson A, Rottenberg G, Koo B, Lawrence EM, Seidenader J, Gnanapragasam V, Axell R, Roth W, Warren A, Doble A, Muir G, Popert R, Schlemmer HP, Hadaschik BA, Kastner C. Definitions of terms, processes and a minimum dataset for transperineal prostate biopsies: a standardization approach of the Ginsburg Study Group for Enhanced Prostate Diagnostics. BJU Int. 2013 Sep;112(5):568-77. doi: 10.1111/bju.12132. Epub 2013 Jun 17."}, {"pmid": "32999465", "type": "BACKGROUND", "citation": "Chiu PK, Lo KL, Teoh JY, Ma SF, Leung CH, Wong HF, Li KM, Sae-Lo K, Kwok SW, Li SY, Yee CH, Hou SM, Ng CF. Sectoral cancer detection and tolerability of freehand transperineal prostate biopsy under local anaesthesia. Prostate Cancer Prostatic Dis. 2021 Jun;24(2):431-438. doi: 10.1038/s41391-020-00293-1. Epub 2020 Sep 30."}, {"pmid": "32130814", "type": "BACKGROUND", "citation": "Ahdoot M, Wilbur AR, Reese SE, Lebastchi AH, Mehralivand S, Gomella PT, Bloom J, Gurram S, Siddiqui M, Pinsky P, Parnes H, Linehan WM, Merino M, Choyke PL, Shih JH, Turkbey B, Wood BJ, Pinto PA. MRI-Targeted, Systematic, and Combined Biopsy for Prostate Cancer Diagnosis. N Engl J Med. 2020 Mar 5;382(10):917-928. doi: 10.1056/NEJMoa1910038."}, {"pmid": "27617315", "type": "BACKGROUND", "citation": "Chiu PK, Teoh JY, Lee WM, Yee CH, Chan ES, Hou SM, Ng CF. Extended use of Prostate Health Index and percentage of [-2]pro-prostate-specific antigen in Chinese men with prostate specific antigen 10-20 ng/mL and normal digital rectal examination. Investig Clin Urol. 2016 Sep;57(5):336-42. doi: 10.4111/icu.2016.57.5.336. Epub 2016 Aug 31."}, {"pmid": "26492179", "type": "BACKGROUND", "citation": "Epstein JI, Egevad L, Amin MB, Delahunt B, Srigley JR, Humphrey PA; Grading Committee. The 2014 International Society of Urological Pathology (ISUP) Consensus Conference on Gleason Grading of Prostatic Carcinoma: Definition of Grading Patterns and Proposal for a New Grading System. Am J Surg Pathol. 2016 Feb;40(2):244-52. doi: 10.1097/PAS.0000000000000530."}, {"pmid": "15273542", "type": "BACKGROUND", "citation": "Dindo D, Demartines N, Clavien PA. Classification of surgical complications: a new proposal with evaluation in a cohort of 6336 patients and results of a survey. Ann Surg. 2004 Aug;240(2):205-13. doi: 10.1097/01.sla.0000133083.54934.ae."}], "seeAlsoLinks": [{"label": "accessed February 20", "url": "http://www3.ha.org.hk/cancereg/pdf/factsheet/2017/prostate_.pdf"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT04685928",
+            "orgStudyIdInfo": {
+                "id": "CRE 2020.569"
+            },
+            "organization": {
+                "fullName": "Chinese University of Hong Kong",
+                "class": "OTHER"
+            },
+            "briefTitle": "Extended Systematic Versus Mri-Assisted pRostate Transperineal Biopsy",
+            "officialTitle": "A Randomized Controlled Trial Comparing Magnetic Resonance Imaging (MRI)-Targeted Biopsy and Extended Transperineal Systematic Biopsy for Detection of Clinically Significant Prostate Cancer: the SMART Trial",
+            "acronym": "SMART"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "PRINCIPAL_INVESTIGATOR",
+                "investigatorFullName": "CHIU Ka Fung Peter",
+                "investigatorTitle": "Associate Professor",
+                "investigatorAffiliation": "Chinese University of Hong Kong"
+            },
+            "leadSponsor": {
+                "name": "Chinese University of Hong Kong",
+                "class": "OTHER"
+            }
+        },
+        "descriptionModule": {
+            "briefSummary": "This is a randomized controlled trial to evaluate the detection of clinically significant prostate cancer (csPCa) by MRI-targeted approach (MRI-arm) versus 24-core transperineal (TP) systematic biopsy (TP-arm). Clinically significant prostate cancer (csPCa) is defined as ISUP (International Society of Urogenital Pathology) Grade group \u22652 prostate cancer. Patients with elevated PSA 4-20 ng/mL with or without abnormal digital rectal examination (DRE) will be randomized in a 1:1 manner to MRI-arm or TP-arm. In the MRI-arm, multiparametric MRI prostate will be performed for each subject. MRI prostate is considered abnormal if PI-RADS (Prostate Imaging-Reporting and Data System, version 2.1) score is 3, 4 or 5. For subjects in MRI-arm with abnormal MRI, MRI-targeted biopsy will be performed, followed by 12-core systematic transperineal biopsy (sparing MRI-target). For subjects in MRI-arm with normal MRI, no biopsy is performed. For subjects in TP-arm, 24-core systematic transperineal biopsy will be performed without MRI guidance. The study flowchart is provided in Figure 1. The detection rates of csPCa will be compared between MRI-targeted biopsy plus 12-core systematic biopsy (in MRI-arm) versus TP-arm. The study hypothesis is MRI-guided prostate biopsy with 12-core systematic biopsy is superior to 24-core transperineal systematic biopsy in detection of csPCa.",
+            "detailedDescription": "The current study is a randomized controlled trial using a superiority design with the subjects randomized in 1:1 manner to either MRI-arm or TP-arm. In the MRI-arm, multiparametric MRI is performed for all subjects. If MRI is abnormal (PI-RADS score 3-5), 3-4 core targeted followed by 12-core systematic transperineal biopsies under local anaesthesia will be performed. If MRI is normal, no biopsy is performed. A 12-core systematic biopsy is also included in MRI-targeted biopsy as it has been shown in the Trio study that adding systematic biopsy increased the detection of csPCa.\n\nIn the TP-arm, no MRI will be performed, and all subjects will receive 24-core transperineal prostate biopsy under local anaesthesia. Patient will be followed up in clinic about 30 days after biopsy to review pathology result and complication."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Prostate Cancer"
+            ],
+            "keywords": [
+                "Prostate biopsy",
+                "Prostate Cancer",
+                "MRI prostate",
+                "Transperineal biopsy"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "NA"
+            ],
+            "designInfo": {
+                "allocation": "RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "interventionModelDescription": "Randomized controlled trial, 1:1 allocation",
+                "primaryPurpose": "DIAGNOSTIC",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 500,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "MRI arm",
+                    "type": "EXPERIMENTAL",
+                    "description": "MRI prostate with contrast, followed by MRI-guided biopsy under local anaesthesia only if MRI show suspicious lesion. Men with non-suspicious MRI will not receive a biopsy.",
+                    "interventionNames": [
+                        "Diagnostic Test: MRI and MRI-guided prostate biopsy"
+                    ]
+                },
+                {
+                    "label": "TP-arm Systematic biopsy",
+                    "type": "ACTIVE_COMPARATOR",
+                    "description": "24-core Systematic transperineal prostate biopsy under local anaesthesia",
+                    "interventionNames": [
+                        "Diagnostic Test: TP-arm Systematic biopsy"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DIAGNOSTIC_TEST",
+                    "name": "MRI and MRI-guided prostate biopsy",
+                    "description": "Multiparametric MRI prostates in the MRI arm will be performed using 1.5 or 3.0 Tesla scanner with a pelvic phased array coil and contrast injection. T2-weighted, diffusion weighted and dynamic contrast enhanced scans will be included and the reporting of MRI finding will be done according to PI-RADS (Prostate Imaging-Reporting and Data Systems) v2.1 recommendations. MRI-guided targeted biopsy will be performed by Urologists experienced in MRI-guided biopsy for men with PI-RADS score 3-5.",
+                    "armGroupLabels": [
+                        "MRI arm"
+                    ]
+                },
+                {
+                    "type": "DIAGNOSTIC_TEST",
+                    "name": "TP-arm Systematic biopsy",
+                    "description": "Transperineal 24-core biopsy using a free-hand technique under local anaesthesia will be performed under transrectal ultrasound guidance for men in this arm",
+                    "armGroupLabels": [
+                        "TP-arm Systematic biopsy"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n1. Men \u226518 years of age\n2. Clinical suspicion of prostate cancer and indicated for prostate biopsy\n3. Serum Prostate-specific antigen (PSA) 4-20 ng/mL\n4. Digital rectal examination \u2264 cT2 (organ confined cancer)\n5. Able to provide written informed consent\n\nExclusion Criteria:\n\n1. Prior prostate biopsy\n2. Past or current history of prostate cancer\n3. MRI prostate performed within past 5 years\n4. Contraindicated to undergo MRI scan (e.g. pacemaker in-situ, claustrophobia, estimated glomerular filtration rate \\< 50ml/min in serum renal function test within 3 months)\n5. Contraindicated to transperineal prostate biopsy: active urinary tract infection, fail insertion of transrectal ultrasound probe into rectum (abdominal perineal resection, anal stenosis), fail to be placed in lithotomy position, uncorrectable coagulopathy, antiplatelet or anticoagulant which cannot be stopped (keep aspirin before and after biopsy is permitted)",
+            "healthyVolunteers": false,
+            "sex": "MALE",
+            "genderBased": true,
+            "minimumAge": "18 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Peter Ka-Fung CHIU, FRCS, PhD",
+                    "role": "CONTACT",
+                    "phone": "3505-2625",
+                    "email": "peterchiu@surgery.cuhk.edu.hk"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Peter Ka-Fung CHIU, FRCS, PhD",
+                    "affiliation": "Prince of Wales Hospital, The Chinese University of Hong Kong",
+                    "role": "PRINCIPAL_INVESTIGATOR"
+                }
+            ]
+        },
+        "referencesModule": {
+            "references": [
+                {
+                    "pmid": "31493960",
+                    "type": "BACKGROUND",
+                    "citation": "Culp MB, Soerjomataram I, Efstathiou JA, Bray F, Jemal A. Recent Global Patterns in Prostate Cancer Incidence and Mortality Rates. Eur Urol. 2020 Jan;77(1):38-52. doi: 10.1016/j.eururo.2019.08.005. Epub 2019 Sep 5."
+                },
+                {
+                    "pmid": "27932742",
+                    "type": "BACKGROUND",
+                    "citation": "Chan SY, Ng CF, Lee KW, Yee CH, Chiu PK, Teoh JY, Hou SS. Differences in cancer characteristics of Chinese patients with prostate cancer who present with different symptoms. Hong Kong Med J. 2017 Feb;23(1):6-12. doi: 10.12809/hkmj164875. Epub 2016 Dec 9."
+                },
+                {
+                    "pmid": "30178778",
+                    "type": "BACKGROUND",
+                    "citation": "Wong HF, Yee CH, Teoh JY, Chan SY, Chiu PK, Cheung HY, Hou SS, Ng CF. Time trend and characteristics of prostate cancer diagnosed in Hong Kong (China) in the past two decades. Asian J Androl. 2019 Jan 1;21(1):104-106. doi: 10.4103/aja.aja_75_18. No abstract available."
+                },
+                {
+                    "pmid": "12478119",
+                    "type": "BACKGROUND",
+                    "citation": "Presti JC Jr, O'Dowd GJ, Miller MC, Mattu R, Veltri RW. Extended peripheral zone biopsy schemes increase cancer detection rates and minimize variance in prostate specific antigen and age related cancer rates: results of a community multi-practice study. J Urol. 2003 Jan;169(1):125-9. doi: 10.1016/S0022-5347(05)64051-7."
+                },
+                {
+                    "pmid": "2677409",
+                    "type": "BACKGROUND",
+                    "citation": "Carter HB, Hamper UM, Sheth S, Sanders RC, Epstein JI, Walsh PC. Evaluation of transrectal ultrasound in the early detection of prostate cancer. J Urol. 1989 Oct;142(4):1008-10. doi: 10.1016/s0022-5347(17)38971-1."
+                },
+                {
+                    "pmid": "28498624",
+                    "type": "BACKGROUND",
+                    "citation": "Chiu PK, Alberts AR, Venderbos LDF, Bangma CH, Roobol MJ. Additional benefit of using a risk-based selection for prostate biopsy: an analysis of biopsy complications in the Rotterdam section of the European Randomized Study of Screening for Prostate Cancer. BJU Int. 2017 Sep;120(3):394-400. doi: 10.1111/bju.13913. Epub 2017 Jun 5."
+                },
+                {
+                    "pmid": "30396635",
+                    "type": "BACKGROUND",
+                    "citation": "Chiu PK, Ng CF, Semjonow A, Zhu Y, Vincendeau S, Houlgatte A, Lazzeri M, Guazzoni G, Stephan C, Haese A, Bruijne I, Teoh JY, Leung CH, Casale P, Chiang CH, Tan LG, Chiong E, Huang CY, Wu HC, Nieboer D, Ye DW, Bangma CH, Roobol MJ. A Multicentre Evaluation of the Role of the Prostate Health Index (PHI) in Regions with Differing Prevalence of Prostate Cancer: Adjustment of PHI Reference Ranges is Needed for European and Asian Settings. Eur Urol. 2019 Apr;75(4):558-561. doi: 10.1016/j.eururo.2018.10.047. Epub 2018 Nov 2."
+                },
+                {
+                    "pmid": "27897172",
+                    "type": "BACKGROUND",
+                    "citation": "Chiu PK, Roobol MJ, Nieboer D, Teoh JY, Yuen SK, Hou SM, Yiu MK, Ng CF. Adaptation and external validation of the European randomised study of screening for prostate cancer risk calculator for the Chinese population. Prostate Cancer Prostatic Dis. 2017 Mar;20(1):99-104. doi: 10.1038/pcan.2016.57. Epub 2016 Nov 29."
+                },
+                {
+                    "pmid": "30898406",
+                    "type": "BACKGROUND",
+                    "citation": "Turkbey B, Rosenkrantz AB, Haider MA, Padhani AR, Villeirs G, Macura KJ, Tempany CM, Choyke PL, Cornud F, Margolis DJ, Thoeny HC, Verma S, Barentsz J, Weinreb JC. Prostate Imaging Reporting and Data System Version 2.1: 2019 Update of Prostate Imaging Reporting and Data System Version 2. Eur Urol. 2019 Sep;76(3):340-351. doi: 10.1016/j.eururo.2019.02.033. Epub 2019 Mar 18."
+                },
+                {
+                    "pmid": "30082150",
+                    "type": "BACKGROUND",
+                    "citation": "Alberts AR, Roobol MJ, Verbeek JFM, Schoots IG, Chiu PK, Osses DF, Tijsterman JD, Beerlage HP, Mannaerts CK, Schimmoller L, Albers P, Arsov C. Prediction of High-grade Prostate Cancer Following Multiparametric Magnetic Resonance Imaging: Improving the Rotterdam European Randomized Study of Screening for Prostate Cancer Risk Calculators. Eur Urol. 2019 Feb;75(2):310-318. doi: 10.1016/j.eururo.2018.07.031. Epub 2018 Aug 3."
+                },
+                {
+                    "pmid": "31022301",
+                    "type": "BACKGROUND",
+                    "citation": "Drost FH, Osses DF, Nieboer D, Steyerberg EW, Bangma CH, Roobol MJ, Schoots IG. Prostate MRI, with or without MRI-targeted biopsy, and systematic biopsy for detecting prostate cancer. Cochrane Database Syst Rev. 2019 Apr 25;4(4):CD012663. doi: 10.1002/14651858.CD012663.pub2."
+                },
+                {
+                    "pmid": "28110982",
+                    "type": "BACKGROUND",
+                    "citation": "Ahmed HU, El-Shater Bosaily A, Brown LC, Gabe R, Kaplan R, Parmar MK, Collaco-Moraes Y, Ward K, Hindley RG, Freeman A, Kirkham AP, Oldroyd R, Parker C, Emberton M; PROMIS study group. Diagnostic accuracy of multi-parametric MRI and TRUS biopsy in prostate cancer (PROMIS): a paired validating confirmatory study. Lancet. 2017 Feb 25;389(10071):815-822. doi: 10.1016/S0140-6736(16)32401-1. Epub 2017 Jan 20."
+                },
+                {
+                    "pmid": "29552975",
+                    "type": "BACKGROUND",
+                    "citation": "Kasivisvanathan V, Rannikko AS, Borghi M, Panebianco V, Mynderse LA, Vaarala MH, Briganti A, Budaus L, Hellawell G, Hindley RG, Roobol MJ, Eggener S, Ghei M, Villers A, Bladou F, Villeirs GM, Virdi J, Boxler S, Robert G, Singh PB, Venderink W, Hadaschik BA, Ruffion A, Hu JC, Margolis D, Crouzet S, Klotz L, Taneja SS, Pinto P, Gill I, Allen C, Giganti F, Freeman A, Morris S, Punwani S, Williams NR, Brew-Graves C, Deeks J, Takwoingi Y, Emberton M, Moore CM; PRECISION Study Group Collaborators. MRI-Targeted or Standard Biopsy for Prostate-Cancer Diagnosis. N Engl J Med. 2018 May 10;378(19):1767-1777. doi: 10.1056/NEJMoa1801993. Epub 2018 Mar 18."
+                },
+                {
+                    "pmid": "23787356",
+                    "type": "BACKGROUND",
+                    "citation": "Loeb S, Vellekoop A, Ahmed HU, Catto J, Emberton M, Nam R, Rosario DJ, Scattoni V, Lotan Y. Systematic review of complications of prostate biopsy. Eur Urol. 2013 Dec;64(6):876-92. doi: 10.1016/j.eururo.2013.05.049. Epub 2013 Jun 4."
+                },
+                {
+                    "pmid": "31178436",
+                    "type": "BACKGROUND",
+                    "citation": "Lo KL, Chui KL, Leung CH, Ma SF, Lim K, Ng T, Wong J, Li JKM, Mak SK, Ng CF. Outcomes of transperineal and transrectal ultrasound-guided prostate biopsy. Hong Kong Med J. 2019 Jun;25(3):209-215. doi: 10.12809/hkmj187599. Epub 2019 May 29."
+                },
+                {
+                    "pmid": "31932659",
+                    "type": "BACKGROUND",
+                    "citation": "Grummet J, Gorin MA, Popert R, O'Brien T, Lamb AD, Hadaschik B, Radtke JP, Wagenlehner F, Baco E, Moore CM, Emberton M, George AK, Davis JW, Szabo RJ, Buckley R, Loblaw A, Allaway M, Kastner C, Briers E, Royce PL, Frydenberg M, Murphy DG, Woo HH. \"TREXIT 2020\": why the time to abandon transrectal prostate biopsy starts now. Prostate Cancer Prostatic Dis. 2020 Mar;23(1):62-65. doi: 10.1038/s41391-020-0204-8. Epub 2020 Jan 13. No abstract available."
+                },
+                {
+                    "pmid": "30431694",
+                    "type": "BACKGROUND",
+                    "citation": "Kum F, Elhage O, Maliyil J, Wong K, Faure Walker N, Kulkarni M, Namdarian B, Challacombe B, Cathcart P, Popert R. Initial outcomes of local anaesthetic freehand transperineal prostate biopsies in the outpatient setting. BJU Int. 2020 Feb;125(2):244-252. doi: 10.1111/bju.14620. Epub 2019 Dec 3."
+                },
+                {
+                    "pmid": "23773772",
+                    "type": "BACKGROUND",
+                    "citation": "Kuru TH, Wadhwa K, Chang RT, Echeverria LM, Roethke M, Polson A, Rottenberg G, Koo B, Lawrence EM, Seidenader J, Gnanapragasam V, Axell R, Roth W, Warren A, Doble A, Muir G, Popert R, Schlemmer HP, Hadaschik BA, Kastner C. Definitions of terms, processes and a minimum dataset for transperineal prostate biopsies: a standardization approach of the Ginsburg Study Group for Enhanced Prostate Diagnostics. BJU Int. 2013 Sep;112(5):568-77. doi: 10.1111/bju.12132. Epub 2013 Jun 17."
+                },
+                {
+                    "pmid": "32999465",
+                    "type": "BACKGROUND",
+                    "citation": "Chiu PK, Lo KL, Teoh JY, Ma SF, Leung CH, Wong HF, Li KM, Sae-Lo K, Kwok SW, Li SY, Yee CH, Hou SM, Ng CF. Sectoral cancer detection and tolerability of freehand transperineal prostate biopsy under local anaesthesia. Prostate Cancer Prostatic Dis. 2021 Jun;24(2):431-438. doi: 10.1038/s41391-020-00293-1. Epub 2020 Sep 30."
+                },
+                {
+                    "pmid": "32130814",
+                    "type": "BACKGROUND",
+                    "citation": "Ahdoot M, Wilbur AR, Reese SE, Lebastchi AH, Mehralivand S, Gomella PT, Bloom J, Gurram S, Siddiqui M, Pinsky P, Parnes H, Linehan WM, Merino M, Choyke PL, Shih JH, Turkbey B, Wood BJ, Pinto PA. MRI-Targeted, Systematic, and Combined Biopsy for Prostate Cancer Diagnosis. N Engl J Med. 2020 Mar 5;382(10):917-928. doi: 10.1056/NEJMoa1910038."
+                },
+                {
+                    "pmid": "27617315",
+                    "type": "BACKGROUND",
+                    "citation": "Chiu PK, Teoh JY, Lee WM, Yee CH, Chan ES, Hou SM, Ng CF. Extended use of Prostate Health Index and percentage of [-2]pro-prostate-specific antigen in Chinese men with prostate specific antigen 10-20 ng/mL and normal digital rectal examination. Investig Clin Urol. 2016 Sep;57(5):336-42. doi: 10.4111/icu.2016.57.5.336. Epub 2016 Aug 31."
+                },
+                {
+                    "pmid": "26492179",
+                    "type": "BACKGROUND",
+                    "citation": "Epstein JI, Egevad L, Amin MB, Delahunt B, Srigley JR, Humphrey PA; Grading Committee. The 2014 International Society of Urological Pathology (ISUP) Consensus Conference on Gleason Grading of Prostatic Carcinoma: Definition of Grading Patterns and Proposal for a New Grading System. Am J Surg Pathol. 2016 Feb;40(2):244-52. doi: 10.1097/PAS.0000000000000530."
+                },
+                {
+                    "pmid": "15273542",
+                    "type": "BACKGROUND",
+                    "citation": "Dindo D, Demartines N, Clavien PA. Classification of surgical complications: a new proposal with evaluation in a cohort of 6336 patients and results of a survey. Ann Surg. 2004 Aug;240(2):205-13. doi: 10.1097/01.sla.0000133083.54934.ae."
+                }
+            ],
+            "seeAlsoLinks": [
+                {
+                    "label": "accessed February 20",
+                    "url": "http://www3.ha.org.hk/cancereg/pdf/factsheet/2017/prostate_.pdf"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}
