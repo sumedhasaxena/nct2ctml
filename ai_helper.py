@@ -45,7 +45,7 @@ def get_pdl1_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> dict
     pdl1_status_dict = parse_ai_response(ai_response)   
     return pdl1_status_dict
 
-def get_disease_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> list:
+def get_disease_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> dict:
     prompt = get_disease_status_prompt(eligibilityCriteria, keywords)
     ai_response = send_ai_request(nct_id, prompt)
     disease_status_dict = parse_ai_response(ai_response)   
@@ -139,7 +139,7 @@ def get_pdl1_status_prompt(eligibilityCriteria, keywords):
          keywords: {keywords}
          The output should be in the json format :
          {{
-         "pdl1_status": "High/Low",
+         "pdl1_status": "High/Low/Unknown",
          }}"""
          
     return prompt
