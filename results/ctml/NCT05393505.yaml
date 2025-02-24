@@ -1,0 +1,183 @@
+nct_id: NCT05393505
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Drug: Levofloxacin'
+  - drug_name: 'Drug: Amoxicillin Clavulanate'
+  - drug_name: 'Drug: Meropenem Injection'
+  - drug_name: 'Drug: Antibiotic'
+long_title: 'Fast-track Absolute Neutrophil Count in Suspected Neutropenic Fever (The
+  FRANCiS-NF Trial): A Single-centre, Pragmatic, Open-label, Randomised, Controlled
+  Trial'
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: PHASE4
+principal_investigator: ''
+principal_investigator_institution: The University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 344
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- '* Age criteria: 18 years old or above; AND'
+- "* Body temperature criteria: Tympanic temperature \u2265 38.3 degree Celsius (100.9\
+  \ degree Fahrenheit) within 24 hours before emergency department registration; AND"
+- '* Chemotherapy timeframe criteria: Last chemotherapy or targeted therapy within
+  6 weeks for any solid tumor, or in any period following therapies against leukemia,
+  lymphoma, myelodysplastic syndrome, aplastic anemia, multiple myeloma, or recipient
+  of hematopoietic stem cell transplantation; AND'
+- "* Modified Early Warning Score (MEWS) \u2264 4"
+- 'Exclude - Exclusion Criteria:'
+- Exclude - * Unable to provide informed consent
+- Exclude - * Previous enrolment to this trial within 180 days, or without current
+  resolution of the first episode
+- Exclude - * Enrolment to other interventional trials within 187 days
+- Exclude - * Sepsis or septic shock
+- Exclude - * Suspected central nervous system infection
+- Exclude - * Severe desaturation (SpO2 \< 88% in room air for patients with chronic
+  obstructive pulmonary disease, severe chest wall or spinal disease, neuromuscular
+  disease, severe obesity, cystic fibrosis, bronchiectasis; or \< 94% in room air
+  without)
+- Exclude - * Currently on prophylactic antibiotic
+- Exclude - * Any antibiotic treatment for \> 48 h within 1 week
+- Exclude - * Known human immunodeficiency virus infection
+- Exclude - * Primary humoral immunodeficiency
+- Exclude - * Complement deficiency
+- Exclude - * Asplenia
+- Exclude - * Vulnerable subjects (illiterate, pregnancy, mentally incapacitated,
+  impoverished, prisoner, subordinate or students of investigators, ethnic minorities)
+- Exclude - * Research staff not available
+- Exclude - * Unable to randomize within 1 hour of emergency department registration
+- Exclude - * Inter-hospital transfer
+- Exclude - * Scheduled "clinical" admissions
+- Exclude - * Body temperature not documented
+- Exclude - * Blood sample not taken in emergency department
+short_title: Fast-track Blood Test for Suspected Fever by Deficiency of a Kind of
+  White Blood Cells As Main Defense Against Infection
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: The University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: 'This is a comparative study for adult participants with cancer who are suspected
+  to have neutropenic fever (or fever with low neutrophil count) in emergency department.
+  Neutrophil is a kind of defensive white blood cell combating against infection,
+  especially by bacteria and fungi. Low neutrophil can be part of the disease progress
+  or secondary to some cancer treatment. These participants are at high risk of developing
+  infection-related complications including death.
+
+
+  Currently a dedicated clinical pathway has been in place in emergency department
+  for suspected neutropenic fever, which offers fast-track medical consultation, blood
+  tests and a very strong antibiotic (meropenem) as the first choice within 1 hour
+  of registration. However, majority of such participants'' neutrophil counts are
+  not low. Most of them have no bacterial infection in the body, and have unremarkable
+  short hospital stays. Early administration of meropenem in the majority of cases
+  may be unnecessary and imposes risk of developing antibiotic resistance.
+
+
+  This study attempts to answer the question, "In adult participants with cancer presenting
+  to emergency department with suspected neutropenic fever, when compared with conventional
+  treatment, can a new protocol guided by fast-track neutrophil count reduces prescription
+  of meropenem?" Agreed participants will be randomly assigned to the conventional
+  treatment group, or the new treatment group. For those who are assigned to the new
+  treatment group, blood will be taken and sent to the hospital laboratory for urgent
+  analysis of neutrophil count. Participants with proven low neutrophil counts will
+  still receive meropenem, while those without low neutrophil counts will receive
+  less strong antibiotic according to their clinical diagnoses, such as Augmentin.
+  They will be followed up on the first 7 days, and then on the 14th, 30th, 90th,
+  and 180th days after recruitment. Comparisons will be made to see how much less
+  meropenem will be prescribed, and whether more serious adverse events will happen.
+  The study is expected to take 37 months to complete. Duration of data collection,
+  including the day of last follow up, is estimated to be 33 months.'
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Fast-tRack Absolute Neutrophil Count (FRANC) Protocol
+      arm_internal_id: 0
+      arm_description: Patient's blood sample will be expedited for complete blood
+        count with differentials. Intravenous antibiotic is given depending on absolute
+        neutrophil count. If neutropenia is present, broad-spectrum antibiotic (meropenem
+        1 g or levofloxacin 500 mg) will be given after septic workup within 1 hour
+        of registration in emergency department before transfer to wards. If absent,
+        antibiotic according to "Hospital Authority Interhospital Multi-disciplinary
+        Programme on Antimicrobial ChemoTherapy (IMPACT)" with reference to previous
+        bacterial sensitivity pattern, or amoxiclav 1.2 g if not specified, will be
+        given. Other interventions are given according to clinical needs. The regimen
+        is continued until clinicians recommend an alternative antimicrobial based
+        on clinical grounds, or detection of other pathogens which indicate another
+        antimicrobial.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Drug: Meropenem Injection'
+        level_internal_id: 0
+        level_suspended: N
+      - level_code: '1'
+        level_description: 'Drug: Levofloxacin'
+        level_internal_id: 1
+        level_suspended: N
+      - level_code: '2'
+        level_description: 'Drug: Amoxicillin Clavulanate'
+        level_internal_id: 2
+        level_suspended: N
+      - level_code: '3'
+        level_description: 'Drug: Antibiotic'
+        level_internal_id: 3
+        level_suspended: N
+    - arm_code: Standard of Care
+      arm_internal_id: 1
+      arm_description: 'The control group refers to the existing clinical pathway
+        which guides management of adult patients with suspected NF in ED. Without
+        information of absolute neutrophil count, Meropenem 1 g IV bolus (or Levofloxacin
+        500 mg IV infusion over 1 hour if Penicillin-allergic) will be given within
+        1 hour of ED registration after septic workup. Other interventions are given
+        according to clinical needs.
+
+
+        Subsequent treatment in wards will be determined by doctor''s clinical judgement,
+        on a personalised basis. Each patient will be assessed by a parent team member.
+        There is no standardised antibiotic de-escalation protocol in place, but it
+        is a usual practice to continue Meropenem or Levofloxacin injections until
+        clinical improvement, rising ANC, and negative culture results. After that
+        it will be replaced with an antibiotic with a narrower spectrum, such as oral
+        Amoxiclav, before discharge.'
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Drug: Meropenem Injection'
+        level_internal_id: 0
+        level_suspended: N
+      - level_code: '1'
+        level_description: 'Drug: Levofloxacin'
+        level_internal_id: 1
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

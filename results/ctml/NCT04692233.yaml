@@ -1,0 +1,115 @@
+nct_id: NCT04692233
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Behavioral: Light flexibility exercise'
+  - drug_name: 'Behavioral: Qigong Baduanjin'
+long_title: 'Qigong to Improve Frailty Among Older Cancer Survivors: A Randomized
+  Controlled Trial'
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: NA
+principal_investigator: ''
+principal_investigator_institution: The University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 226
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- "1. aged \u226565"
+- 2. diagnosed with stage I-III non-metastatic cancer
+- 3. completed primary treatment with curative intent (surgery, chemotherapy, and/or
+  radiation therapy) 6 months to 5 years prior to baseline assessments with no recurrence
+  or occurrence of additional cancers
+- 4. classified as pre-frail or frail based on Fried frailty criteria
+- 5. can communicate in Cantonese or Putonghua
+- 6. written informed consent
+- 'Exclude - Exclusion Criteria:'
+- Exclude - 1. regular qigong training or other mind body intervention (once or more
+  per week) within the previous 6 months
+- Exclude - 2. medical conditions affecting mobility, predisposing to falls, or precluding
+  qigong practice (e.g., neurological disease, musculoskeletal disorder, recent myocardial
+  infarction, breathing difficulties requiring oxygen)
+short_title: Qigong to Improve Frailty Among Older Cancer Survivors
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: The University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: The objective of the study is to examine the effects of a 16-week Baduanjin
+  qigong intervention on frailty, physical performance, psychological well-being,
+  and health-related quality of life (HRQoL) among post-treatment older cancer survivors.
+  This will be a randomized controlled, assessor-blind trial conforming to the CONSORT
+  guidelines. A total of 226 cancer survivors aged over 65 who have completed curative
+  treatment and screened as pre-frail or frail will be recruited and randomized into
+  intervention and control groups. It is expected that upon intervention completion,
+  the intervention group will demonstrate greater reversed frailty status, more improvements
+  in physical performance, better psychological well-being, and enhanced HRQoL compared
+  to the control group. Study instruments will be Fried Phenotype Criteria, Edmonton
+  Frail Scale, Short Physical Performance Battery, Geriatric Depression Scale, European
+  Organization for Research and Treatment of Cancer Quality of Life Core Questionnaire,
+  and a background questionnaire. The intervention comprises of 1-hour qigong group
+  training twice a week for 8 weeks, then 1-hour weekly follow-up group practice for
+  8 weeks and self-practice. The control group participants will attend light flexibility
+  exercise group sessions at the same duration and frequency as the intervention group.
+  Intention-to-treat analysis will be performed.
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Qigong
+      arm_internal_id: 0
+      arm_description: The entire intervention will last 16 weeks, including 1-hour
+        supervised training sessions twice a week during weeks 1 to 8 (training; 16
+        hours), and 1-hour supervised weekly follow-up sessions during weeks 9 to
+        16 (follow-up; 8 hours). The sessions will be supervised by an experienced
+        qigong master. Throughout the intervention period, participants will be asked
+        to self-practice BQ for 30 minutes twice a week from weeks 1 to 8, and then
+        three times a week from weeks 9 to 16 (20 hours).
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Behavioral: Qigong Baduanjin'
+        level_internal_id: 0
+        level_suspended: N
+    - arm_code: Light flexibility exercise
+      arm_internal_id: 1
+      arm_description: The control group will practice light flexibility exercise
+        without any abdominal breathing and meditation techniques. The duration and
+        frequency of supervised sessions and self-practice will be identical to the
+        qigong sessions. The supervised sessions will be conducted by a certified
+        exercise trainer.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Behavioral: Light flexibility exercise'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

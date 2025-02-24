@@ -1,0 +1,118 @@
+nct_id: NCT06181331
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Behavioral: eHealthMaintenance'
+  - drug_name: 'Behavioral: eConquerFear+eHealthMaintenance'
+  - drug_name: 'Behavioral: eConquerFear'
+  - drug_name: 'Behavioral: ConquerFear'
+long_title: 'The Effect of a Stepped-care Metacognition-based Intervention on Managing
+  Fear of Cancer Recurrence: Sequential, Multiple Assignment, Randomized Controlled
+  Trial (SMARTs)'
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: NA
+principal_investigator: ''
+principal_investigator_institution: The University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 300
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- '* Cantonese- or Mandarin-speaking Chinese patients diagnosed with curable breast,
+  colorectal, or gynecological cancer, who had completed treatment (except endocrine
+  therapy) within five years, and with a Fear of Cancer Recurrence Inventory-Short
+  Form (FCRI-SF) score of 13 to 21 indicating subclinical FCR will be included.'
+- 'Exclude - Exclusion Criteria:'
+- Exclude - * Patients with metastatic cancer, with a current diagnosis of depression
+  or psychosis, or who are already receiving psychological treatment will be excluded.
+short_title: The Effect of a Stepped-care Metacognition-based Intervention on Managing
+  Fear of Cancer Recurrence
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: The University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: A sequential multiple-assignment randomized controlled trial (SMART) will
+  be used to assess the effect of an adaptive stepped-care intervention on FCR in
+  cancer survivors with subclinical levels of fear of cancer recurrence.
+treatment_list:
+  step:
+  - arm:
+    - arm_code: 'First stage intervention: eConquerFear'
+      arm_internal_id: 0
+      arm_description: Participants in the eConquerFear intervention group will receive
+        six online modules with each containing educational text, illustrative graphics,
+        interactive exercises, and brief videos. Every module will teach a specific
+        topic, such as self-examination and medical surveillance, values-based goal
+        setting, attention training, detached mindfulness, worry management and treatment
+        summary and relapse prevention.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Behavioral: eConquerFear'
+        level_internal_id: 0
+        level_suspended: N
+    - arm_code: 'First stage intervention: eHealthMaintenance'
+      arm_internal_id: 1
+      arm_description: Participants in the eHealthMaintenance group will receive six
+        videos, which were designed to provide comprehensive lifestyle guidance (e.g.,
+        relaxation techniques, diet and physical activity advices) to help with survivors'
+        maintenance of health in long-term.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Behavioral: eHealthMaintenance'
+        level_internal_id: 0
+        level_suspended: N
+    - arm_code: 'Second stage intervention: ConquerFear-HK'
+      arm_internal_id: 2
+      arm_description: ConquerFear-HK is a culturally adapted, manualized intervention
+        consisting of 6 individual face-to-face sessions over 10 weeks.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Behavioral: ConquerFear'
+        level_internal_id: 0
+        level_suspended: N
+    - arm_code: 'Second stage intervention: eConquerFear+eHealthMaintenance'
+      arm_internal_id: 3
+      arm_description: The augmented eConquerFear + eHealthMaintenance intervention
+        is a combined unsupervised, self-guided web-based intervention that consists
+        of 10 weekly online modules covering the content of eConquerFear and eHealthMaintenance
+        interventions.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Behavioral: eConquerFear+eHealthMaintenance'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

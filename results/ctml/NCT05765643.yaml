@@ -1,0 +1,116 @@
+nct_id: NCT05765643
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Other: Nurse parental support in symptom management using a mobile
+      health App'
+long_title: 'Is Nurse Parental Support Using a Proactive Mobile Health Application
+  More Effective Than Usual Community Care in Enhancing Parental Self-efficacy in
+  Symptom Management for the CMC in Communities: A RCT'
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: NA
+principal_investigator: ''
+principal_investigator_institution: The Hong Kong Polytechnic University
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 120
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- 'The eligible criteria for parents are:'
+- 1. parent of a child with medical complexity aged 2-18
+- 2. having a Smartphone
+- 3. able to communicate in Chinese and read Chinese
+- 4. living with his/her child at home.
+- 'Exclude - Exclusion Criteria:'
+- Exclude - The exclusion criteria for parents are
+- Exclude - 1. a reported mental health disorder
+- Exclude - 2. engaging in other structured programs related to symptom management
+  3) living in an area with no internet coverage.
+short_title: Nurse Parental Support Using a Mobile App in Symptom Management for CMC
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: The Hong Kong Polytechnic University
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: 'Parents of children with medical complexity (CMC) are suffering from high
+  level of stress. These CMC get multisystem diseases, including severe neurologic
+  conditions or cancer, resulting in potential premature death. They experience one
+  or more physical and psychological symptoms at one time, which seriously affect
+  their quality of life and increase their health services utilization. Parents may
+  lack confidence in their abilities when managing their child''s symptoms. Literature
+  suggested that increasing parental self-efficacy in managing their child''s symptoms
+  could improve child''s health status. Home-based nursing services for the CMC and
+  parents are available in Hong Kong. However, the service faces challenges because
+  of serious nursing workforce shortage and the recent coronavirus pandemic. Nurse
+  parental support in symptom management using a proactive mobile health App is an
+  alternative method considered more feasible to continue home-based support for the
+  CMC and parents.
+
+
+  This proposed RCT will test the effects of a nurse-led mobile App for enhancing
+  parental self-efficacy in symptom management for CMC. A repeated-measures, two-group
+  design will be used to evaluate the effects between intervention and wait-listed
+  control groups by comparing the study group receiving nurse support using a mobile
+  App, and the wait-listed control group receiving usual community care for 96 randomly
+  selected parents over a three-month follow-up. Primary outcome is parental self-efficacy.
+  Secondary outcomes include children''s symptom burden and health services utilization.
+  These factors will be measured before intervention, immediately after intervention
+  and three-month after intervention. The effectiveness of the intervention will be
+  evaluated by comparing the primary outcome at three-month after intervention across
+  the two study groups using ANCOVA with control for the pre-test value of parental
+  self-efficacy. Generalized estimating equation will be used to address secondary
+  objectives regarding the effectiveness of the mobile App as compared to the control
+  on secondary outcomes from T1 to T3 with appropriate link function. It is hypothesized
+  that nurse support using the mobile App is more effective than usual community care
+  in enhancing parental self-efficacy in symptom management for their CMC at three-month
+  after intervention.'
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Nurse parental support in symptom management using a mobile health
+        App over 3 months
+      arm_internal_id: 0
+      arm_description: {}
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Other: Nurse parental support in symptom management using
+          a mobile health App'
+        level_internal_id: 0
+        level_suspended: N
+    - arm_code: Wait-listed control
+      arm_internal_id: 1
+      arm_description: Parents in this group can join the usual community social or
+        health care services as usual.
+      arm_suspended: N
+      dose_level: []
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

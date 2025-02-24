@@ -57,10 +57,14 @@ def parse_ai_response(ai_response):
         answer = ai_response['choices'][0]
         ai_response_content = tdf.safe_get(answer,['message','content'])
         if ai_response_content:
-            begin_content = ai_response_content.find('```json')+len('```json')
-            end_content = ai_response_content.find('```', begin_content)
-
-            oncotree_diagnoses_response_string = ai_response_content[begin_content:end_content].strip()
+            prefix_pos = ai_response_content.find('```json')
+            if prefix_pos > -1:
+                begin_content = ai_response_content.find('```json')+len('```json')
+                end_content = ai_response_content.find('```', begin_content)
+                oncotree_diagnoses_response_string = ai_response_content[begin_content:end_content].strip()
+            else:
+                oncotree_diagnoses_response_string = ai_response_content
+            
             oncotree_diagnoses_dict = json.loads(oncotree_diagnoses_response_string)
     return oncotree_diagnoses_dict
 

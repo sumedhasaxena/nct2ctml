@@ -1,0 +1,91 @@
+nct_id: NCT04081246
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Device: Bipolar transurethral modified en bloc resection of bladder
+      tumour'
+long_title: Transurethral Modified En Bloc Resection For Large Bladder Tumours.
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: NA
+principal_investigator: ''
+principal_investigator_institution: Chinese University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 30
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- '* Age 18 to 80 years old with informed consent'
+- "* Bladder tumours with maximal dimension of \u2265 3cm"
+- 'Exclude - Exclusion Criteria:'
+- Exclude - * Bladder tumour detected during intravesical Bacillus Calmette-Guerin
+  therapy (These patients warrant more aggressive treatment, i.e. radical cystectomy)
+- Exclude - * Estimated glomerular filtration rate of \<60mL/min.
+- Exclude - * Presence of clinically significant cardiovascular disease (History of
+  acute myocardial infarction, presence of uncontrolled angina within 3 months before
+  screening, New York Heart Association Class III or IV congestive heart failure,
+  presence of ventricular arrhythmias, or presence of second-degree or third-degree
+  heart block)
+- Exclude - * Presence of GOLD Stage III or IV chronic obstructive pulmonary disease
+- Exclude - * History of bleeding disorder or use of anti-coagulant
+- Exclude - * Presence of other active malignancy
+- "Exclude - * ECOG performance status \u2265 2 (Ambulatory and capable of all self\
+  \ care but unable to carry our any work activities. Confined to bed or chair less\
+  \ than 50% of waking hours)"
+- Exclude - * Pregnancy
+- Exclude - * Presence of metallic foreign body or implant which is not MRI compatible
+- Exclude - * Known history of claustrophobia
+short_title: Transurethral Modified En Bloc Resection For Large Bladder Tumours.
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: Chinese University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: "Modified en bloc resection is a hybrid technique involving piecemeal resection\
+  \ of the exophytic part of the bladder tumour, followed by en bloc resection of\
+  \ the tumour base. In this study, we shall investigate the efficacy of modified\
+  \ en bloc resection for patients with bladder tumours of \u22653cm in size."
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Modified en bloc resection
+      arm_internal_id: 0
+      arm_description: For patients undergoing modified en bloc resection, piecemeal
+        resection of the exophytic part of the bladder tumour will be performed, followed
+        by en bloc resection of the tumour base.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Device: Bipolar transurethral modified en bloc resection
+          of bladder tumour'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

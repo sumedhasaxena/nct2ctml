@@ -1,0 +1,96 @@
+nct_id: NCT05296109
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Diagnostic Test: Magnetic Resonance Imaging on 3T scanner (Magnetom
+      Prisma, SIemens) with dedicated neurogram sequences (Constructive interference
+      in steady state - CISS; Dual Echo Steady State - DESS)'
+long_title: Application of 3D Magnetic Resonance Neurogram Sequences for Evaluation
+  of Intraparotid Facial Nerves in Patients With Parotid Neoplasm
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: NA
+principal_investigator: Chiu Wing WInnie Chu, MD, FHKCR
+principal_investigator_institution: Department of Imaging and Interventional Radiology,
+  Prince of Wales Hospital
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 50
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- '* Consecutive patients with parotid tumour diagnosed on other imaging modalities
+  (such as ultrasonography or computed tomography), with or without cytological diagnosis
+  from fine needle aspiration, will be recruited from the ear, nose and throat specialty
+  clinic.'
+- 'Exclude - Exclusion Criteria:'
+- Exclude - * Patients who are contraindicated to magnetic resonance imaging (such
+  as due to underlying MRI incompatible metallic implants)
+- Exclude - * Patient who are contraindicated to MRI contrast agents (such as advanced
+  renal failure or previous severe allergic reaction)
+- Exclude - * Patients who cannot cooperate for MRI scanning.
+- Exclude - * Patients show are unable to provide informed consent.
+short_title: Application of 3D MR Neurogram for Intraparotid Facial Nerves Evaluation
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: Chinese University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: Parotid neoplasm consists of a wide range of benign and malignant lesions,
+  and parotidectomy has been the mainstay for management of these neoplasms. Within
+  the parotid gland there are branches of the intra-parotid facial nerves, which are
+  tiny in calibre and are prone to injury to injury during operation. It has been
+  reported in recent retrospective view that the incidence of temporary and permanent
+  facial nerve injury were 9.2% and 5.2% respectively, the risk of which increased
+  with old age, malignant tumour and revision surgery. Traditional the incidental
+  of facial nerve injury is reduced by intra-operative facial nerve monitoring and
+  surgical magnification, while imaging has limited role in aiding this purpose. However
+  with advancement in MRI technique high resolution three-dimensional sequences (i.e.
+  neurogram sequences) are available for better visualization of branches of facial
+  nerves. The investigators would therefore aim to demonstrate additional efficacy
+  of these techniques and also to compare with conventional 3D post-contrast anatomical
+  imaging studies in the localization and visualization of the facial nerve branches
+  in patients with tumour. With better pre-operative imaging, the investigators hope
+  to reduce the chance of facial nerve injury in these patients.
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Imaging group
+      arm_internal_id: 0
+      arm_description: patients with parotid tumour being imaged
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Diagnostic Test: Magnetic Resonance Imaging on 3T scanner
+          (Magnetom Prisma, SIemens) with dedicated neurogram sequences (Constructive
+          interference in steady state - CISS; Dual Echo Steady State - DESS)'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

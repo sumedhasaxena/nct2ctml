@@ -1,0 +1,108 @@
+nct_id: NCT06262633
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Device: Targeted Microwave Ablation (TMA) for localized prostate cancer
+      using organ based tracking (OBT) navigation'
+long_title: A Multi-centre Trial on Targeted Microwave Ablation (TMA) for Localized
+  Prostate Cancer Using Organ Based Tracking (OBT) Navigation
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: NA
+principal_investigator: ''
+principal_investigator_institution: Chinese University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 103
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- 1. Men aged between 45 - 75 years
+- 2. Life expectancy \> 10 years upon recruitment
+- 3. Able to understand the trial and can provide informed and written consent, dated
+  and signed before the enrollment and before any exam required by the trial
+- 4. Localized low or intermediate risk prostate cancer diagnosed on MRI-Ultrasound
+  fusion targeted biopsy
+- 5. Organ-confined prostate cancer on MRI
+- 6. PSA \< 20 ng/mL
+- "7. 1-2 MRI visible lesion present and size \u226415mm, with targeted biopsy showing:"
+- '* ISUP grade group 2 or 3, or'
+- "* ISUP grade group 1 with tumor size \u226510mm"
+- 'Exclude - Exclusion Criteria:'
+- Exclude - 1. Patients not fit for general or spinal anaesthesia
+- Exclude - 2. Patients unfit for MRI exam or MR gadolinium contrast (e.g. estimated
+  glomerular filtration rate (eGFR) of \<50 ml/min)
+- Exclude - 3. Patients with coagulopathy that cannot be corrected
+- Exclude - 4. Patients on anticoagulants or antiplatelets that cannot be stopped
+  (Low dose Aspirin, e.g. 80-100mg, is acceptable and no need to stop before or during
+  TMA treatment)
+- Exclude - 5. Patients with previous treatment of prostate cancer
+- Exclude - 6. Patients with prior pelvic radiotherapy for prostate cancer or other
+  cancer
+- Exclude - 7. Patients with maximal length of target lesion \>15mm
+- Exclude - 8. Patients with MRI-visible or invisible lesion within 10mm from rectum
+  or 10mm from sphincter on MRI
+- Exclude - 9. . Patients with \>2 areas (MRI-visible or invisible) of prostate cancer
+- Exclude - 10. Patients with Gleason score 4+4 or any Gleason pattern 5 cancer
+- Exclude - 11. Patients with systematic cores showing any Gleason 4 pattern PCa which
+  are not adjacent to the target lesions (1 core of pure Gleason 3 pattern PCa on
+  systematic cores in contralateral lobe is acceptable)
+- Exclude - 12. Patients with definite cT3 or above disease on imaging (prostate capsular
+  contact without definite extra-capsular extension is acceptable)
+- Exclude - 13. Patients with bladder pathology including bladder stone and bladder
+  cancer
+- Exclude - 14. Patients with known urethral stricture
+- Exclude - 15. Patient with a suspected COVID-19 disease or an active SARS-CoV-2
+  infection.
+short_title: A Multi-centre Trial on Targeted Microwave Ablation (TMA) for Localized
+  Prostate Cancer
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: Chinese University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: This study is to investigate the efficacy of Targeted Microwave Ablation
+  (TMA) under MRI-Ultrasound fusion and organ-based tracking (OBT) navigation in localized
+  prostate cancer (PCa) in a multi-centre trial.
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Targeted Microwave Ablation (TMA)
+      arm_internal_id: 0
+      arm_description: Targeted Microwave Ablation (TMA) for localized prostate cancer
+        using organ based tracking (OBT) navigation
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Device: Targeted Microwave Ablation (TMA) for localized
+          prostate cancer using organ based tracking (OBT) navigation'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

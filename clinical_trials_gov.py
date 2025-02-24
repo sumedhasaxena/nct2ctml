@@ -110,60 +110,80 @@ def map_nct_to_ctml(trial_data: dict) -> dict:
 
     trial_schema = ctml_schema.get_ctml_schema()
 
-    trial_schema['nct_id'] = trial_data['protocolSection']['identificationModule']['nctId']
-    trial_schema['long_title'] = trial_data['protocolSection']['identificationModule']['officialTitle']
-    trial_schema['principal_investigator_institution'] = trial_data['protocolSection']['identificationModule']['organization']['fullName']
+    trial_schema = map_ctml_general_fields(trial_schema, trial_data)   
 
-    phases = trial_data['protocolSection']['designModule']['phases']
-    trial_schema['phase'] = phases[0] if len(phases) > 0 else ''
-    trial_schema['short_title'] = trial_data['protocolSection']['identificationModule']['briefTitle']
-    trial_schema['summary'] = trial_data['protocolSection']['descriptionModule']['briefSummary']
-    trial_schema['protocol_target_accrual'] = trial_data['protocolSection']['designModule']['enrollmentInfo']['count']
-    trial_schema['sponsor_list']['sponsor'].append(
-        {
-            'is_principal_sponsor': 'Y',
-            'sponsor_name':trial_data['protocolSection']['sponsorCollaboratorsModule']['leadSponsor']['name'],
-            'sponsor_protocol_no':'',
-            'sponsor_roles': 'sponsor'
-        }
-    )
+    trial_schema = map_prior_treatment_requirements(trial_schema, trial_data)
 
-    officials = trial_data['protocolSection']['contactsLocationsModule']['overallOfficials']
-    for official in officials:
-        if official['role'] == 'STUDY_DIRECTOR':
-            trial_schema['principal_investigator'] = official['name']
-            trial_schema['principal_investigator_institution'] = official['affiliation']
-            break
+    # clinical_ctml = map_ctml_match_clinical_criteria(trial_data)
+    # genomic_ctml = map_ctml_match_genomic_criteria(trial_data)
+    # match_result = mcm.combine_clinical_and_genomic_ctml(clinical_ctml, genomic_ctml)
+    # trial_schema['treatment_list']['step'][0]['match'] = match_result
+    # logger.debug(f"CTML: After mapping clinical and genomic match criteria | {trial_schema}")
 
-    # Populate arms and drug_list
-    drug_list = set()
-    arm_internal_id = 0
-    for trial_data_arm in trial_data['protocolSection']['armsInterventionsModule']['armGroups']:
-        schema_arm = {
-                'arm_code': trial_data_arm['label'],
-                'arm_internal_id': arm_internal_id,
-                'arm_description': trial_data_arm['description'],
-                'arm_suspended': 'N',
-                'dose_level': []            
+    return trial_schema
+
+def map_ctml_general_fields(trial_schema, trial_data) -> dict:
+
+    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
+
+    try:    
+        trial_schema['nct_id'] = nct_id
+        trial_schema['long_title'] = trial_data['protocolSection']['identificationModule']['officialTitle']
+        trial_schema['principal_investigator_institution'] = trial_data['protocolSection']['identificationModule']['organization']['fullName']
+
+        phases = trial_data['protocolSection']['designModule']['phases']
+        trial_schema['phase'] = phases[0] if len(phases) > 0 else ''
+        trial_schema['short_title'] = trial_data['protocolSection']['identificationModule']['briefTitle']
+        trial_schema['summary'] = trial_data['protocolSection']['descriptionModule']['briefSummary']
+        trial_schema['protocol_target_accrual'] = trial_data['protocolSection']['designModule']['enrollmentInfo']['count']
+        trial_schema['sponsor_list']['sponsor'].append(
+            {
+                'is_principal_sponsor': 'Y',
+                'sponsor_name':trial_data['protocolSection']['sponsorCollaboratorsModule']['leadSponsor']['name'],
+                'sponsor_protocol_no':'',
+                'sponsor_roles': 'sponsor'
             }
+        )
 
-        trial_schema['treatment_list']['step'][0]['arm'].append(schema_arm)
-        dose_level_code = 0
-        for intervention in trial_data_arm['interventionNames']:
-            drug_list.add(intervention) 
-            schema_arm['dose_level'].append({
-                'level_code': f'{dose_level_code}',
-                'level_description': intervention,
-                'level_internal_id': dose_level_code,
-                'level_suspended': 'N'
-            })
-            dose_level_code = dose_level_code + 1
-        arm_internal_id = arm_internal_id + 1
-    trial_schema['drug_list']['drug'] =[{'drug_name': drug} for drug in drug_list]
+        officials = tdf.safe_get(trial_data, ['protocolSection','contactsLocationsModule','overallOfficials'])
+        if officials:
+            for official in officials:
+                if official['role'] == 'STUDY_DIRECTOR':
+                    trial_schema['principal_investigator'] = official['name']
+                    trial_schema['principal_investigator_institution'] = official['affiliation']
+                    break
 
+        # Populate arms and drug_list
+        drug_list = set()
+        arm_internal_id = 0
+        for trial_data_arm in trial_data['protocolSection']['armsInterventionsModule']['armGroups']:
+            schema_arm = {
+                    'arm_code': trial_data_arm['label'],
+                    'arm_internal_id': arm_internal_id,
+                    'arm_description': tdf.safe_get(trial_data_arm, ['description']),
+                    'arm_suspended': 'N',
+                    'dose_level': []            
+                }
 
-    map_prior_treatment_requirements(trial_schema, trial_data)
-
+            trial_schema['treatment_list']['step'][0]['arm'].append(schema_arm)
+            dose_level_code = 0
+            for intervention in tdf.safe_get(trial_data_arm, ['interventionNames']):
+                if intervention:
+                    drug_list.add(intervention) 
+                    schema_arm['dose_level'].append({
+                        'level_code': f'{dose_level_code}',
+                        'level_description': intervention,
+                        'level_internal_id': dose_level_code,
+                        'level_suspended': 'N'
+                    })
+                    dose_level_code = dose_level_code + 1
+            arm_internal_id = arm_internal_id + 1
+        trial_schema['drug_list']['drug'] =[{'drug_name': drug} for drug in drug_list]
+    except KeyError as ke:
+        logger.error(f"Key {ke} not found in NCT study {nct_id}")
+        raise
+        
+    #logger.debug(f"CTML: After general mapping | {trial_schema}")
     return trial_schema
 
 def map_ctml_match_clinical_criteria(trial_data: dict):
@@ -198,6 +218,12 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
     clinical_ctml = mcm.convert_to_ctml_clinical_schema(clinical_critera)
     logger.debug(f"clinical criteria as CTML: {clinical_ctml}")
     return
+
+def map_ctml_match_genomic_criteria(trial_data: dict):
+    genomic_critera = {}
+    genomic_ctml = mcm.convert_to_ctml_genomic_schema(genomic_critera)
+    logger.debug(f"genomic criteria as CTML: {genomic_ctml}")
+    return {}
 
 def map_age_numerical(trial_data: dict) -> str:
     minimum_age = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','minimumAge'])
@@ -284,7 +310,7 @@ def map_oncotree_primary_diagnosis(trial_data: dict) -> list:
             
     return all_possible_diagnoses
 
-def map_prior_treatment_requirements(trial_schema, trial_data):
+def map_prior_treatment_requirements(trial_schema, trial_data) -> dict:
     """
     Special logic to map the inclusion and exclusion criteria, along with prefixing the exclusion criteria with 'Exclude -'
     Updates the incoming trial_schema to add 'prior_treatment_requirements' key
@@ -312,5 +338,8 @@ def map_prior_treatment_requirements(trial_schema, trial_data):
             else:
                 # Add inclusion criteria lines directly
                 trial_schema['prior_treatment_requirements'].append(stripped_line)
+    
+    #logger.debug(f"CTML: After mapping prior_treatment_requirements | {trial_schema}")
+    return trial_schema
  
 

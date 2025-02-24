@@ -1,0 +1,128 @@
+nct_id: NCT06077591
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Other: Patient-Derived Tumor Organoids'
+long_title: Prospective Clinical Validation of Next Generation Sequencing (NGS) and
+  Patient-Derived Tumor Organoids (PDO) Guided Therapy in Patients with Advanced/
+  Inoperable Solid Tumors
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: PHASE3
+principal_investigator: ''
+principal_investigator_institution: Chinese University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 40
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- '* patients with metastatic, inoperable or advanced solid tumors who are refractory
+  to at least one standard chemo- or targeted drugs.'
+- '* The disease is accessible for a biopsy (radiologic or endoscopic) or resection
+  of a metastatic site.'
+- '* These patients are seen at a multidisciplinary tumor board meeting prior to referrals.'
+- '* aged \>18 years, able to provide written consents to trial participation,'
+- '* with an Eastern cooperative oncology group performance status of 0 or 1,'
+- '* with measurable disease in accordance with response evaluation criteria in solid
+  tumors (RECIST) version 1.1.'
+- '* deem suitable for standard chemo-therapy; i.e. with a normal neutrophil count,
+  hemoglobin \> 9g/dl, serum creatinine, \<1.5 x upper limit of normal, bilirubin
+  \< 1.5 x normal, Aspartate and alanine aminotransferases (\<3 x ULN or \<5x'
+- '* those with liver metastasis) and with an ejection Fraction \>50% of normal on
+  echocardiography.'
+- 'Exclude - Exclusion Criteria:'
+- Exclude - * unable to provide informed consent
+short_title: Prospective Clinical Validation of Next Generation Sequencing (NGS) and
+  Patient-Derived Tumor Organoids (PDO) Guided Therapy in Patients with Advanced/
+  Inoperable Solid Tumors
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: Chinese University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: Precision oncology aims to improve clinical outcome of patients by offering
+  personalized treatment through identifying druggable genomic aberrations within
+  their tumors. This is particularly valid when it comes to offering alternative treatment
+  options for patients with advanced tumors that are chemo-refractory. Patient-derived
+  organoids (PDOs) are 3 dimensional tumoroids that can be expanded ex vivo and are
+  both pheno- and genotypically identical to patients' tumors. Observational studies
+  have shown that PDO-based drug screens can predict treatment response with high
+  sensitivity and specificity. Vlachogiannis G. reported a living biobank of patient-derived
+  organoids (PDOs) from patients with advanced GI cancers enrolled in clinical trials.
+  PDOs can recapitulate patients' clinical response to chemotherapeutic agents. In
+  19 tumor organoids, the group performed molecular profiling and drug screens and
+  then compared ex vivo organoid responses to anticancer drugs. Drug response to PDO
+  based orthotopic mouse tumor xenografts correlated to the drug response of the patient
+  in clinical trials. Further to the study, there were other retrospective validation
+  studies utilizing PDOs from patients enrolled in clinical trials such as the TUMOROID,
+  CinClare to predict clinical response. Ooft studied PDOs from patients with metastatic
+  colorectal cancers enrolled in the TUMOROID study to predict response to irinotecan-based
+  therapies. Yao generated a organoid biobank of 80 locally advanced rectal cancers.
+  These patients were derived from a phase III study (CinClare) that compared neoadjuvant
+  chemo-radiation using either capecitabine or CAPIRI. Response to chemoradiation
+  in patients matched to that of rectal cancer organoids (sensitivity 78% and specificity
+  91.9%). In a systematic analysis of 17 studies (9 on advanced GI and pancreatic
+  cancers, one on renal cell cancer and others on miscellaneous cancers), the pooled
+  sensitivity and specificity for discriminating patients with a clinical response
+  through PDO-based drug screen was 0.81 (95%CI 0.69-0.89) and 0.74 (95%CI 0.64-0.82)
+  respectively. Within 4-6 weeks, PDO-based drug screen creates a true personalised
+  platform by predicting patient-specific drug response with high accuracy. Recent
+  technical advancements in growing these PDO 'avatars' from biopsies have made it
+  possible to test suitable anticancer drugs in patients with advanced inoperable
+  tumors, and explore the new possibilities for treatment options that otherwise would
+  be missed by standard conventional therapies. In 2019, our group embarked on PDO
+  research; investigators obtained tissues from patients with advanced/ inoperable
+  solid tumors, and performing drug screens on these PDOs ex vivo. In several patients,
+  investigators were able to identified drugs not otherwise used through sequencing
+  data, and observed remarkable clinical response in patients with PDO responsive
+  tumors. Investigators illustrate with cases that underwent PDO culture and drug
+  screens. \[ See appendix \] In the literature, the clinical utility of treatment
+  based on PDO informed drug options has however not been fully established. Investigators
+  therefore propose a phase 2 proof-of-concept clinical trial to evaluate efficacy
+  of NGS/ PDO guided treatment in patients with inoperable or metastatic solid tumors..
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Patient-Derived Tumor Organoids (PDO) Guided Therapy
+      arm_internal_id: 0
+      arm_description: Intervention in this study is to perform tissue sampling to
+        patient's tumor which are then subjected to DNA extraction for whole exome
+        sequencing, organoid culture, and drug screen. An MDT board will review the
+        drug screen results and excluded drug choice of poor response. Then the referring
+        oncologist has the final discretion on the choice of chemo- or targeted agent
+        as usual.
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Other: Patient-Derived Tumor Organoids'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

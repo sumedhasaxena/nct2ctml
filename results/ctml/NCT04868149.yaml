@@ -1,0 +1,125 @@
+nct_id: NCT04868149
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Procedure: Associating liver partition and portal vein ligation for
+      staged hepatectomy (ALPPS)'
+long_title: 'Clinical Outcome and Future Liver Remnant Regenerative Response in Laparoscopic
+  Versus Open ALPPS: A Randomized Clinical Trial'
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: PHASE3
+principal_investigator: ''
+principal_investigator_institution: The University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 40
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- 1. Patients with a diagnosis of malignant liver tumor contemplating for extended
+  right hepatectomy or right trisectionectomy
+- 2. Patient consent
+- 3. Age \>/= 18
+- 4. FLR/ESLV \</= 30%
+- '5. Indocyanine green clearance rate at 15 mins : \< 18%'
+- 6. Platelet count \> 100x10\^9/L
+- 7. Child A cirrhosis (due to hepatitis B/C virus, or alcohol, or autoimmune disease)
+- 8. American Society of Anaesthesiology score \< 3
+- 9. Eastern Cooperative Oncology Group (ECOG) performance status 0-2
+- Technical factors eligible for laparoscopic ALPPS
+- '* single long-segment portal'
+- 'Exclude - Exclusion Criteria:'
+- Exclude - 1. Absence of consent
+- Exclude - 2. Decompensated liver disease as indicated by the presence of ascites,
+  varices and hepatic encephalopathy
+- Exclude - 3. ECOG performance status \>/= 3
+- Exclude - 4. Main portal vein thrombosis
+- Exclude - 5. FLR/ESLV \> 30%
+- Exclude - Technical factors not eligible for laparoscopic ALPPS
+- Exclude - * Short-segment right portal vein or early bifurcation of right anterior/posterior
+  portal vein, or other portal vein anomalies
+- Exclude - * Large tumor size with diameter \> 5 cm
+- Exclude - * Intolerance to CO2 pneumoperitoneum
+short_title: Clinical Outcome and Future Liver Remnant Regenerative Response in Laparoscopic
+  Versus Open ALPPS
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: The University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: Associating liver partition and portal vein ligation for staged hepatectomy
+  (ALPPS) is a new surgical procedure that induces rapid liver regeneration in patients
+  with small liver remnant planning for major liver resection. It is a two-staged
+  operation with stage I including portal vein ligation and splitting the right liver
+  away from the left liver. After stage I, the left liver will undergo rapid liver
+  regeneration and the stage II operation can be performed at 7-10 days after stage
+  I operation when the liver remnant reaches an adequate size. In stage II operation,
+  the right liver that contains the tumor is then removed. This surgical procedure
+  was incepted in Germany in 2013 and was later started in Queen Mary Hospital in
+  Hong Kong for the first time in December 2015. The initial indication was mainly
+  for colorectal liver metastasis but due to the relatively high incidence of hepatocellular
+  carcinoma in Hong Kong, HBP surgery team of Queen Mary Hospital has transferred
+  this procedure to be applied for hepatitis-related hepatocellular carcinoma and
+  so far, the centre has cumulated one of the largest single-center experience in
+  the literature. Nonetheless, the usual approach for ALPPS involved open surgery
+  and induced substantial surgical stress to the patient, especially after stage I
+  operation. With the advent of minimally invasive liver surgery in recent years,
+  the team has successfully applied laparoscopic surgery to ALPPS in 2019. Despite
+  the advancement in laparoscopic surgical skills that rendered laparoscopic ALPPS
+  feasible, there is scarcity of data in the literature to evaluate its outcome in
+  comparison with open ALPPS with regard to perioperative recovery and liver regeneration.
+  Hence, the aim of this project is to evaluate the short-term clinical outcomes of
+  laparoscopic ALPPS and the impact of laparoscopy on liver remnant regeneration after
+  ALPPS in a prospective randomised clinical trial setting.
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Laparoscopic ALPPS
+      arm_internal_id: 0
+      arm_description: Laparoscopic ALPPS procedure
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Procedure: Associating liver partition and portal vein
+          ligation for staged hepatectomy (ALPPS)'
+        level_internal_id: 0
+        level_suspended: N
+    - arm_code: Open ALPPS
+      arm_internal_id: 1
+      arm_description: Open ALPPS procedure
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Procedure: Associating liver partition and portal vein
+          ligation for staged hepatectomy (ALPPS)'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

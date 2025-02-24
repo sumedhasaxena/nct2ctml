@@ -1,0 +1,112 @@
+nct_id: NCT05337137
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Other: Placebo'
+  - drug_name: 'Drug: Bevacizumab'
+  - drug_name: 'Drug: Relatlimab'
+  - drug_name: 'Drug: Nivolumab'
+long_title: A Phase 1/2, Safety Confirmation, Placebo-controlled, Randomized Study
+  of Nivolumab in Combination With Relatlimab and Bevacizumab in Treatment-naive Advanced/Metastatic
+  Hepatocellular Carcinoma
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: PHASE1
+principal_investigator: Bristol-Myers Squibb
+principal_investigator_institution: Bristol-Myers Squibb
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 162
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- '* Histologically confirmed advanced/metastatic hepatocellular carcinoma (HCC)'
+- "* Na\xEFve to systemic therapy for advanced/metastatic HCC (prior neo-adjuvant\
+  \ or adjuvant immunotherapy is permitted if recurrence occurs \u2265 6 months after\
+  \ treatment completion and the case is discussed with BMS medical team)"
+- '* Child-Pugh score of 5 or 6 (ie, Child-Pugh A)'
+- '* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1'
+- 'Exclude - Exclusion Criteria:'
+- Exclude - * Known fibrolamellar HCC, sarcomatoid HCC or mixed cholangiocarcinoma
+  and HCC
+- Exclude - * Prior allogenic stem cell or solid organ transplantation
+- Exclude - * Untreated symptomatic central nervous system (CNS) metastases
+- 'Exclude - * Clinically significant ascites as defined by:'
+- Exclude - i) Prior ascites that required treatment and requires on-going prophylaxis,
+  or ii) Current ascites requiring treatment
+- Exclude - Other protocol-defined inclusion/exclusion criteria apply
+short_title: A Study of Nivolumab and Relatlimab in Combination With Bevacizumab in
+  Advanced Liver Cancer
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: Bristol-Myers Squibb
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: The purpose of this study is to evaluate the safety and effectiveness of
+  triplet therapy of nivolumab, relatlimab and bevacizumab versus nivolumab and bevacizumab
+  in participants with untreated advanced/metastatic hepatocellular carcinoma (HCC).
+treatment_list:
+  step:
+  - arm:
+    - arm_code: 'Arm A: Relatlimab + Nivolumab + Bevacizumab'
+      arm_internal_id: 0
+      arm_description: {}
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Drug: Relatlimab'
+        level_internal_id: 0
+        level_suspended: N
+      - level_code: '1'
+        level_description: 'Drug: Nivolumab'
+        level_internal_id: 1
+        level_suspended: N
+      - level_code: '2'
+        level_description: 'Drug: Bevacizumab'
+        level_internal_id: 2
+        level_suspended: N
+    - arm_code: 'Arm B: Placebo + Nivolumab + Bevacizumab'
+      arm_internal_id: 1
+      arm_description: {}
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Drug: Nivolumab'
+        level_internal_id: 0
+        level_suspended: N
+      - level_code: '1'
+        level_description: 'Drug: Bevacizumab'
+        level_internal_id: 1
+        level_suspended: N
+      - level_code: '2'
+        level_description: 'Other: Placebo'
+        level_internal_id: 2
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''

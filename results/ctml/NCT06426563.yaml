@@ -1,0 +1,117 @@
+nct_id: NCT06426563
+age: Adults
+cancer_center_accrual_goal_upper: 0
+data_table4: Interventional
+drug_list:
+  drug:
+  - drug_name: 'Procedure: Ablation treatment of thyroid nodule'
+long_title: Microwave Ablation Versus Radiofrequency Ablation for the Treatment of
+  Moderate-sized Benign Thyroid Nodules, a Randomized Controlled Trial
+management_group_list:
+  management_group:
+  - is_primary: Y
+    management_group_name: Group1
+oncology_group_list:
+  oncology_group:
+  - group_name: Group1
+    is_primary: N
+phase: NA
+principal_investigator: ''
+principal_investigator_institution: The University of Hong Kong
+program_area_list:
+  program_area:
+  - is_primary: Y
+    program_area_name: Program1
+protocol_id: 0
+protocol_no: ''
+protocol_target_accrual: 150
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+- 'Inclusion Criteria:'
+- 1. Adult patients \&gt;/=18 years of age
+- "2. Nodule maximal diameter \u22652cm and nodule volume \\&lt;20ml"
+- "3. Nodule being predominantly solid (\u226580% solid)"
+- '4. Confirmed benign nature of nodules, either by : two benign fine needle biopsies,
+  with the most recent biopsy performed within 1 year of enrollment in study or one
+  benign fine needle biopsy and low suspicion characteristics on ultrasound'
+- 5. Both functional and non-functional nodules are eligible.
+- 'Exclude - Exclusion Criteria:'
+- Exclude - 1. Cytologically indeterminate nodules
+- Exclude - 2. Nodules with substernal extension or posterior extension that cannot
+  be viewed sufficiently with ultrasound
+- Exclude - 3. current pregnancy or cardiac arrhythmias; presence of pacemaker or
+  any medical condition that renders patient unfit for thermal ablation
+short_title: MWA vs RFA for the Treatment of Moderate-sized Benign Thyroid Nodules
+site_list:
+  site: []
+sponsor_list:
+  sponsor:
+  - is_principal_sponsor: Y
+    sponsor_name: The University of Hong Kong
+    sponsor_protocol_no: ''
+    sponsor_roles: sponsor
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: 'Thyroid nodule is a common condition that affects up to 60% of the population.
+  There is an estimated 10% lifetime probability of developing a thyroid nodule. Although
+  most thyroid nodules are benign, up to 10-15% can enlarge to cause compressive symptoms
+  including neck pressure and discomfort, dysphagia, dyspnea, and dysphonia. The conventional
+  treatment for these benign but problematic nodules has been thyroidectomy. Although
+  generally a low risk operation, thyroidectomy is associated with some risk for recurrent
+  laryngeal nerve injury, bleeding, infection, and need for thyroid hormone supplementation.
+  Since the early 2000s, ultrasound-guided percutaneous thermal ablation has emerged
+  as a potential alternative treatment to surgery for benign thyroid nodules. Of the
+  myriad ablation methods, the most commonly used techniques are radiofrequency ablation
+  (RFA) and microwave ablation (MWA). \[1-3\] A growing body of evidence shows that
+  RFA is an effective treatment for benign solid thyroid nodules, toxic adenomas,
+  and thyroid cysts resulting in overall volume reduction ranges of 40-80% at 1 year,
+  with durable resolution of compressive and hyperthyroid symptoms. However, RFA is
+  not without its limitations. Radiofrequency waves can be limited by the heat sink
+  effect and tissue char leading to longer procedure times and potentially less optimal
+  outcomes in larger, hypervascular, and/or more cystic nodules.
+
+
+  Microwave ablation (MWA) is another ablative technique that uses electromagnetic
+  energy waves to cause tissue hyperthermia and coagulative necrosis. It generally
+  causes higher ablation temperatures than RFA and is less subject to the heat sink
+  effect, and therefore can facilitate more efficient ablation procedures. Current
+  evidence comparing RFA versus MWA for thyroid ablation was limited and was either
+  retrospective, non-randomized \[4-9\], under-powered, or with an unequal baseline.
+  The results from these studies were also conflicting, suggesting suboptimal quality
+  of evidence and bias due to non-standardized technique of ablation across studies.
+  To date, there is no randomized controlled trial comparing the efficacy and safety
+  of RFA versus MWA for the treatment of benign thyroid nodules. Given the higher
+  ablation temperatures, freedom from heat sink effect, and no influence from impedance
+  changes during ablation, MWA may achieve different treatment efficacy.'
+treatment_list:
+  step:
+  - arm:
+    - arm_code: Radiofrequency ablation treatment (RFA) to thyroid nodule
+      arm_internal_id: 0
+      arm_description: Participants who are undergo thyroid nodule treatment by RFA
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Procedure: Ablation treatment of thyroid nodule'
+        level_internal_id: 0
+        level_suspended: N
+    - arm_code: Microwave ablation treatment (MWA) to thyroid nodule
+      arm_internal_id: 1
+      arm_description: Participants who are undergo thyroid nodule treatment by MWA
+      arm_suspended: N
+      dose_level:
+      - level_code: '0'
+        level_description: 'Procedure: Ablation treatment of thyroid nodule'
+        level_internal_id: 0
+        level_suspended: N
+    match:
+    - and:
+      - clinical:
+          oncotree_primary_diagnosis: ''
+          disease_status:
+          - ''
+          - ''
+      - genomic:
+          hugo_symbol: ''
+          variant_category: ''
