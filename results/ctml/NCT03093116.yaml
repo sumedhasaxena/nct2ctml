@@ -186,12 +186,26 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - and:
+      and:
       - clinical:
-          oncotree_primary_diagnosis: ''
+          age_numerical: '>=12'
           disease_status:
-          - ''
-          - ''
-      - genomic:
-          hugo_symbol: ''
-          variant_category: ''
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: _SOLID_
+      - or:
+        - genomic:
+            hugo_symbol: ALK
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: ROS1
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: NTRK1
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: NTRK2
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: NTRK3
+            variant_category: Structural Variation

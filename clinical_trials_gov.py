@@ -3,7 +3,7 @@ This script contains methods that deal with extraction and manpipulation
 of data from clinicaltrials.gov
 """
 
-import json
+import config
 import requests
 import urllib.parse
 import ctml_schema
@@ -94,7 +94,7 @@ def get_nct_study(nct_id:str):
     else:
         print(f"Study {nct_id} is not recruiting actively in HK. Skipping")
 
-def map_nct_to_ctml(trial_data: dict) -> dict:
+def map_nct_to_ctml(trial_data: dict, genes:list) -> dict:
     """
     Logic to map the fields from https://clinicaltrials.gov/ API response to the clinical trial schema required by matchminer
     Parameters
@@ -114,11 +114,11 @@ def map_nct_to_ctml(trial_data: dict) -> dict:
 
     trial_schema = map_prior_treatment_requirements(trial_schema, trial_data)
 
-    # clinical_ctml = map_ctml_match_clinical_criteria(trial_data)
-    # genomic_ctml = map_ctml_match_genomic_criteria(trial_data)
-    # match_result = mcm.combine_clinical_and_genomic_ctml(clinical_ctml, genomic_ctml)
-    # trial_schema['treatment_list']['step'][0]['match'] = match_result
-    # logger.debug(f"CTML: After mapping clinical and genomic match criteria | {trial_schema}")
+    clinical_ctml = map_ctml_match_clinical_criteria(trial_data)
+    genomic_ctml = map_ctml_match_genomic_criteria(trial_data, genes)
+    match_result = mcm.combine_clinical_and_genomic_ctml(clinical_ctml, genomic_ctml)
+    trial_schema['treatment_list']['step'][0]['match'] = match_result
+    logger.debug(f"CTML: After mapping clinical and genomic match criteria | {trial_schema}")
 
     return trial_schema
 
@@ -217,13 +217,20 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
     logger.debug(f"clinical criteria: {clinical_critera}")
     clinical_ctml = mcm.convert_to_ctml_clinical_schema(clinical_critera)
     logger.debug(f"clinical criteria as CTML: {clinical_ctml}")
-    return
+    return clinical_ctml
 
-def map_ctml_match_genomic_criteria(trial_data: dict):
-    genomic_critera = {}
-    genomic_ctml = mcm.convert_to_ctml_genomic_schema(genomic_critera)
-    logger.debug(f"genomic criteria as CTML: {genomic_ctml}")
-    return {}
+def map_ctml_match_genomic_criteria(trial_data: dict, genes:list):
+    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
+    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+
+    contains_gene_info = mcm.check_if_eligibility_criteria_contains_gene_info(genes, eligibilityCriteria)
+    if contains_gene_info: #check if eligibility criteria contains any gene before asking AI
+        genomic_critera = ai.get_genomic_criteria(nct_id, genes, eligibilityCriteria)
+        genomic_ctml = mcm.convert_to_ctml_genomic_schema(genomic_critera)
+        logger.debug(f"genomic criteria as CTML: {genomic_ctml}")
+        return genomic_ctml
+    else:
+        return {}
 
 def map_age_numerical(trial_data: dict) -> str:
     minimum_age = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','minimumAge'])
@@ -244,8 +251,11 @@ def map_pdl1_status(trial_data: dict):
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
     eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
     keywords = tdf.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
-    result = ai.get_pdl1_status(nct_id, eligibilityCriteria, keywords)
-    return result
+    contains_pdl1_info = mcm.check_if_eligibility_criteria_contains_pdl1_info(keywords, eligibilityCriteria)
+    if contains_pdl1_info:
+        result = ai.get_pdl1_status(nct_id, eligibilityCriteria, keywords)
+        return result
+    return {}
 
 def map_gender(trial_data: dict):
     nct_gender = tdf.safe_get(trial_data, ['protocolSection', 'eligibilityModule', 'sex'])
@@ -269,7 +279,8 @@ def map_oncotree_primary_diagnosis(trial_data: dict) -> list:
     all_possible_diagnoses = []
 
     all_solid_tumors = any(
-    cond.lower() in ["solid tumors", "cancer"]    
+    cond.lower() in ["cancer","oncology"] or
+      "solid tumors" in cond.lower()
     for cond in conditions_list)
     if all_solid_tumors:
         all_possible_diagnoses.append("_SOLID_")

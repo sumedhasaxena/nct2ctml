@@ -1,9 +1,9 @@
 import csv
 from collections import defaultdict
-
-ONCOTREE_TXT_FILE_PATH = "ref\oncotree_file.txt"
+import config
 
 def get_oncotree_data():
+    ONCOTREE_TXT_FILE_PATH = config.ONCOTREE_TXT_FILE_PATH
     level_1_list = set()
     maintype_list = set()
     mapping = defaultdict(set)

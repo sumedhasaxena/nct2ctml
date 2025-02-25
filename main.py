@@ -18,6 +18,7 @@ import os
 import all_studies
 import clinical_trials_gov as ctg
 import trial_data_formatter as tdf
+from loguru import logger
 
 def main():
     if len(sys.argv) < 3:
@@ -39,16 +40,20 @@ def main():
         ctml_files_path = "results/ctml/"
         if arg2 == 'all':            
             # read all nct files from /results/nct and map to ctml
+            genes = get_gene_list()
             for file_name in os.listdir(nct_files_path):
                 if os.path.isfile(os.path.join(nct_files_path, file_name)):
                     file_components = file_name.split('.')
                     if file_components[1] == "json":
                         nct_id = file_name.split('.')[0]
                         trial_data = tdf.read_from_file(nct_files_path, nct_id, 'json')
-                    
-                        mapped_ctml = ctg.map_nct_to_ctml(trial_data)
-                        tdf.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'yaml')
-                        tdf.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'json')
+
+                        try:                    
+                            mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
+                            tdf.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'yaml')
+                            tdf.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'json')
+                        except Exception as ex:
+                            logger.error(f"nct_id: {nct_id} | Unexpected {ex=}, {type(ex)=}")
 
             return
         else:
@@ -63,11 +68,22 @@ def main():
                 print(f'File {nct_id}.json is not a valid json file')
                 return
             
-            mapped_ctml = ctg.map_nct_to_ctml(trial_data)
+            genes = get_gene_list()
 
-            file_name = nct_id
-            tdf.save_to_file(mapped_ctml, ctml_files_path, file_name, 'yaml')
-            tdf.save_to_file(mapped_ctml, ctml_files_path, file_name, 'json')
+            try:
+                mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
+
+                file_name = nct_id
+                tdf.save_to_file(mapped_ctml, ctml_files_path, file_name, 'yaml')
+                tdf.save_to_file(mapped_ctml, ctml_files_path, file_name, 'json')
+            except Exception as ex:
+                logger.error(f"nct_id: {nct_id} | Unexpected {ex=}, {type(ex)=}")
+
+def get_gene_list() -> list:
+    genes = []
+    with open('ref/genes.txt', 'r') as file:     
+        genes = [line.strip() for line in file.readlines()]
+    return genes
 
 if __name__ == "__main__":
     main()
