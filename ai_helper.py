@@ -51,6 +51,12 @@ def get_disease_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> d
     disease_status_dict = parse_ai_response(ai_response)   
     return disease_status_dict
 
+def get_genomic_criteria(nct_id:str, genes:list, eligibilityCriteria:str)-> dict:
+    prompt = get_genomic_criteria_prompt(genes, eligibilityCriteria)
+    ai_response = send_ai_request(nct_id, prompt)
+    genomic_criteria_dict = parse_ai_response(ai_response)
+    return genomic_criteria_dict
+
 def parse_ai_response(ai_response):
     oncotree_diagnoses_dict = {}
     if type(ai_response) is dict and 'choices' in ai_response.keys() and type(ai_response['choices']) is list:
@@ -158,6 +164,38 @@ def get_disease_status_prompt(eligibilityCriteria, keywords):
          "disease_status": [],
          }}"""
          
+    return prompt
+
+def get_genomic_criteria_prompt(genes, eligibilityCriteria):
+    prompt = f"""
+    Task: Below is the list of genes, list of variant categories and a clinical trial description.
+    Find out of the clinical trial description mentions any mutations in one or more genes from the list, along with the type of variant from the categories.
+    The output should be in the json format mentioned below.
+
+    Gene list: {genes}
+    Variant Category:
+    Mutation
+    Copy Number Variation
+    Structural Variation
+    Any Variation
+    !Mutation
+    !Copy Number Variation
+    !Structural Variation
+
+    Clinical Trial Description: {eligibilityCriteria}
+
+    Output format:
+    {{
+        "or": [
+            {{
+                "genomic": {{
+                    "hugo_symbol": "",
+                    "variant_category": ""
+                }}
+            }}
+        ]
+    }}
+    """
     return prompt
 
 
