@@ -60,27 +60,7 @@ def get_ctml_schema():
     'step': [
       {        
         'arm': [],
-        'match': [
-          {
-            'and': [
-              {
-                'clinical': {
-                  'oncotree_primary_diagnosis': '',
-                  'disease_status': [
-                    '',
-                    ''
-                  ]
-                }
-              },
-              {
-                'genomic': {
-                  'hugo_symbol': '',
-                  'variant_category': ''
-                }
-              }
-            ]
-          }
-        ]
+        'match': []
       }
     ]
   }

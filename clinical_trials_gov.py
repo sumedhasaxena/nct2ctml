@@ -117,7 +117,8 @@ def map_nct_to_ctml(trial_data: dict, genes:list) -> dict:
     clinical_ctml = map_ctml_match_clinical_criteria(trial_data)
     genomic_ctml = map_ctml_match_genomic_criteria(trial_data, genes)
     match_result = mcm.combine_clinical_and_genomic_ctml(clinical_ctml, genomic_ctml)
-    trial_schema['treatment_list']['step'][0]['match'] = match_result
+    match_list = trial_schema['treatment_list']['step'][0]['match']
+    match_list.append(match_result)
     logger.debug(f"CTML: After mapping clinical and genomic match criteria | {trial_schema}")
 
     return trial_schema
@@ -222,7 +223,6 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
 def map_ctml_match_genomic_criteria(trial_data: dict, genes:list):
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
     eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-
     contains_gene_info = mcm.check_if_eligibility_criteria_contains_gene_info(genes, eligibilityCriteria)
     if contains_gene_info: #check if eligibility criteria contains any gene before asking AI
         genomic_critera = ai.get_genomic_criteria(nct_id, genes, eligibilityCriteria)
