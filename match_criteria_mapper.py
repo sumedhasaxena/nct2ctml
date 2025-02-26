@@ -49,12 +49,14 @@ def combine_clinical_and_genomic_ctml(clinical_ctml, genomic_ctml):
         return match_result
 
 def check_if_eligibility_criteria_contains_gene_info(genes:list, eligibility):
+    print("looking for gene keywords")
     contains = ac.search_keywords_in_text(genes, eligibility)
     return contains
 
 def check_if_eligibility_criteria_contains_pdl1_info(nct_keywords:list, eligibility):
     pdl1_keywords_to_check = ['pdl1', 'pd-l1']
     nct_keywords_string = ', '.join(nct_keywords)
+    print("looking for PDL1 keywords")
     contains = ac.search_keywords_in_text(pdl1_keywords_to_check, nct_keywords_string)
     if contains:
         return True
