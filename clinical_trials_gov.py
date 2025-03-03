@@ -16,7 +16,6 @@ from loguru import logger
 
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/"
 
-
 def get_all_studies():
     """
     Queries https://clinicaltrials.gov/api to get all studies filtered by params specified below.
@@ -36,6 +35,7 @@ def get_all_studies():
     location = "Hong Kong"
     status = "RECRUITING"
     study_type = "AREA[StudyType]INTERVENTIONAL"
+    
 
     sortBy = "LastUpdatePostDate"
 
@@ -56,17 +56,22 @@ def get_all_studies():
         for study in json_response['studies']:
             nct_id = study['protocolSection']['identificationModule']['nctId']
             is_recruiting_in_hk = tdf.check_if_recruiting_in_HK(study)
-            if is_recruiting_in_hk == True:                
-                # consolidate info to be saved in a CSV file
-                conditions = ','.join(study['protocolSection']['conditionsModule']['conditions'])
-                lastUpdatedDate = study['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
-                nct_data.append((nct_id, conditions, lastUpdatedDate))
+            if is_recruiting_in_hk == True:
+                if tdf.has_correct_intervention(study, config.intervention_types):
+                    # consolidate info to be saved in a CSV file
+                    conditions = ','.join(study['protocolSection']['conditionsModule']['conditions'])
+                    lastUpdatedDate = study['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
+                    nct_data.append((nct_id, conditions, lastUpdatedDate))
 
-                # save each study as a separate json file after removing unnecessary sections
-                tdf.remove_unused_keys(study)
-                tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
+                    # save each study as a separate json file after removing unnecessary sections
+                    tdf.remove_unused_keys(study)
+                    tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
+                else:
+                    print(f"Study {nct_id} does not have relevant intervention types. Skipping")
+                    logger.info(f"Study {nct_id} does not have relevant intervention types. Skipping")
             else:
                 print(f"Study {nct_id} is not recruiting actively in HK. Skipping")
+                logger.info(f"Study {nct_id} is not recruiting actively in HK. Skipping")
 
         if 'nextPageToken' not in json_response:
             break
@@ -88,11 +93,16 @@ def get_nct_study(nct_id:str):
     study = response.json()
     is_recruiting_in_hk =tdf.check_if_recruiting_in_HK(study)
     if is_recruiting_in_hk == True:
-        tdf.remove_unused_keys(study)
-        tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
-        print(f"Study {nct_id} saved at results/nct/{nct_id}.json")
+        if tdf.has_correct_intervention(study, config.intervention_types):
+            tdf.remove_unused_keys(study)
+            tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
+            print(f"Study {nct_id} saved at results/nct/{nct_id}.json")
+        else:
+            print(f"Study {nct_id} does not have relevant intervention types. Skipping")
+            logger.info(f"Study {nct_id} does not have relevant intervention types. Skipping")
     else:
         print(f"Study {nct_id} is not recruiting actively in HK. Skipping")
+        logger.info(f"Study {nct_id} is not recruiting actively in HK. Skipping")
 
 def map_nct_to_ctml(trial_data: dict, genes:list) -> dict:
     """

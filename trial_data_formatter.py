@@ -42,6 +42,11 @@ def is_study_interventional(trial_data: dict) -> bool:
         return True
     else:
         return False
+    
+def has_correct_intervention(trial_data: dict, intervention_types:list) -> bool:
+    interventions = trial_data['protocolSection']['armsInterventionsModule']['interventions']
+    return any(intervention["type"] in intervention_types for intervention in interventions)
+
         
 def read_from_file(path: str, file_name :str, format:str) -> dict:    
     if format == "json":
