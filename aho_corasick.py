@@ -13,11 +13,11 @@ def search_keywords_in_text(keywords:list, text):
     A.make_automaton()
     lower_text = text.lower()
 
-    # Search in the text
-    for end_index, (index, original_value) in A.iter(lower_text):
-        start_index = end_index - len(original_value) + 1
-        print(f"Found keyword: '{original_value}' at position {start_index} to {end_index}")
-        return True  # Exit on first match
+    for word in lower_text.split():
+        word_lower = word.lower()
+        if word_lower in A:
+            print(f"Found keyword: '{word_lower}'")
+            return True  # Exit on first match
     print("No keywords found.")
     return False
 
