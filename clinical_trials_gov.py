@@ -8,7 +8,7 @@ import requests
 import urllib.parse
 import ctml_schema
 import ai_helper as ai
-import trial_data_formatter as tdf
+import trial_data_helper as tdh
 import oncotree
 import match_criteria_mapper as mcm
 from loguru import logger
@@ -55,17 +55,17 @@ def get_all_studies():
         json_response = response.json()
         for study in json_response['studies']:
             nct_id = study['protocolSection']['identificationModule']['nctId']
-            is_recruiting_in_hk = tdf.check_if_recruiting_in_HK(study)
+            is_recruiting_in_hk = tdh.check_if_recruiting_in_HK(study)
             if is_recruiting_in_hk == True:
-                if tdf.has_correct_intervention(study, config.intervention_types):
+                if tdh.has_correct_intervention(study, config.intervention_types):
                     # consolidate info to be saved in a CSV file
                     conditions = ','.join(study['protocolSection']['conditionsModule']['conditions'])
                     lastUpdatedDate = study['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
                     nct_data.append((nct_id, conditions, lastUpdatedDate))
 
                     # save each study as a separate json file after removing unnecessary sections
-                    tdf.remove_unused_keys(study)
-                    tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
+                    tdh.remove_unused_keys(study)
+                    tdh.save_to_file(study, 'results/nct/', nct_id, 'json')
                 else:
                     print(f"Study {nct_id} does not have relevant intervention types. Skipping")
                     logger.info(f"Study {nct_id} does not have relevant intervention types. Skipping")
@@ -91,11 +91,11 @@ def get_nct_study(nct_id:str):
     response = requests.get(endpoint_url)
     response.raise_for_status()
     study = response.json()
-    is_recruiting_in_hk =tdf.check_if_recruiting_in_HK(study)
+    is_recruiting_in_hk =tdh.check_if_recruiting_in_HK(study)
     if is_recruiting_in_hk == True:
-        if tdf.has_correct_intervention(study, config.intervention_types):
-            tdf.remove_unused_keys(study)
-            tdf.save_to_file(study, 'results/nct/', nct_id, 'json')
+        if tdh.has_correct_intervention(study, config.intervention_types):
+            tdh.remove_unused_keys(study)
+            tdh.save_to_file(study, 'results/nct/', nct_id, 'json')
             print(f"Study {nct_id} saved at results/nct/{nct_id}.json")
         else:
             print(f"Study {nct_id} does not have relevant intervention types. Skipping")
@@ -156,7 +156,7 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
             }
         )
 
-        officials = tdf.safe_get(trial_data, ['protocolSection','contactsLocationsModule','overallOfficials'])
+        officials = tdh.safe_get(trial_data, ['protocolSection','contactsLocationsModule','overallOfficials'])
         if officials:
             for official in officials:
                 if official['role'] == 'STUDY_DIRECTOR':
@@ -168,17 +168,18 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
         drug_list = set()
         arm_internal_id = 0
         for trial_data_arm in trial_data['protocolSection']['armsInterventionsModule']['armGroups']:
+            arm_description = tdh.safe_get(trial_data_arm, ['description'])
             schema_arm = {
                     'arm_code': trial_data_arm['label'],
                     'arm_internal_id': arm_internal_id,
-                    'arm_description': tdf.safe_get(trial_data_arm, ['description']),
+                    'arm_description': arm_description if arm_description else tdh.safe_get(trial_data_arm, ['label']),
                     'arm_suspended': 'N',
                     'dose_level': []            
                 }
 
             trial_schema['treatment_list']['step'][0]['arm'].append(schema_arm)
             dose_level_code = 0
-            for intervention in tdf.safe_get(trial_data_arm, ['interventionNames']):
+            for intervention in tdh.safe_get(trial_data_arm, ['interventionNames']):
                 if intervention:
                     drug_list.add(intervention) 
                     schema_arm['dose_level'].append({
@@ -222,7 +223,6 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
     if disease_status_dict and len(disease_status_dict.get('disease_status', {})) > 0:
         clinical_critera.update(disease_status_dict)
 
-    # map_muscle_invasion(trial_data)
     # map_tmb_numerical(trial_data)
 
     logger.debug(f"clinical criteria: {clinical_critera}")
@@ -232,7 +232,7 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
 
 def map_ctml_match_genomic_criteria(trial_data: dict, genes:list):
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
     contains_gene_info = mcm.check_if_eligibility_criteria_contains_gene_info(genes, eligibilityCriteria)
     if contains_gene_info: #check if eligibility criteria contains any gene before asking AI
         genomic_critera = ai.get_genomic_criteria(nct_id, genes, eligibilityCriteria)
@@ -243,24 +243,25 @@ def map_ctml_match_genomic_criteria(trial_data: dict, genes:list):
         return {}
 
 def map_age_numerical(trial_data: dict) -> str:
-    minimum_age = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','minimumAge'])
-    min_age_components = minimum_age.split()
-    if len(min_age_components) > 1 and min_age_components[1].lower() == "years":
-        min_age = f">={min_age_components[0]}"
-        return min_age
+    minimum_age = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','minimumAge'])
+    if minimum_age:
+        min_age_components = minimum_age.split()
+        if len(min_age_components) > 1 and min_age_components[1].lower() == "years":
+            min_age = f">={min_age_components[0]}"
+            return min_age
     return ""
 
 def map_her2_er_pr_status(trial_data: dict):
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    keywords = tdf.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
     result = ai.get_her2_er_pr_status(nct_id, eligibilityCriteria, keywords)
     return result
 
 def map_pdl1_status(trial_data: dict):
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    keywords = tdf.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
     contains_pdl1_info = mcm.check_if_eligibility_criteria_contains_pdl1_info(keywords, eligibilityCriteria)
     if contains_pdl1_info:
         result = ai.get_pdl1_status(nct_id, eligibilityCriteria, keywords)
@@ -268,7 +269,7 @@ def map_pdl1_status(trial_data: dict):
     return {}
 
 def map_gender(trial_data: dict):
-    nct_gender = tdf.safe_get(trial_data, ['protocolSection', 'eligibilityModule', 'sex'])
+    nct_gender = tdh.safe_get(trial_data, ['protocolSection', 'eligibilityModule', 'sex'])
     gender_mapping = {
         "male": "Male",
         "female": "Female"}
@@ -277,59 +278,51 @@ def map_gender(trial_data: dict):
 
 def map_disease_status(trial_data: dict):
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdf.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    keywords = tdf.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
     result = ai.get_disease_status(nct_id, eligibilityCriteria, keywords)
     return result
 
 def map_oncotree_primary_diagnosis(trial_data: dict) -> list:
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    conditions_list = tdf.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
+    conditions_list = tdh.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
         
-    all_possible_diagnoses = []
+    all_possible_diagnoses = set()
 
-    all_solid_tumors = any(
-    cond.lower() in ["cancer","oncology"] or
-      "solid tumors" in cond.lower()
-    for cond in conditions_list)
-    if all_solid_tumors:
-        all_possible_diagnoses.append("_SOLID_")
-    else:
-        level_1_diagnosis, main_type_list, level1_mapping = oncotree.get_oncotree_data()
-        
-        # stage 1 - Extract Keywords
-        keywords = mcm.get_keywords_from_conditions(conditions_list)
-        logger.debug(f"NCTID: {nct_id} | Stage 1 - Condition keywords:{keywords}")    
+    if tdh.all_tumours(conditions_list):
+        all_possible_diagnoses.add("_SOLID_")
+        all_possible_diagnoses.add("_LIQUID_")
+    else:        
+        if tdh.all_solid_tumours(conditions_list):
+            all_possible_diagnoses.add("_SOLID_")
+        else:
+            level_1_diagnosis, l1_l2_mapping = oncotree.get_l1_l2_oncotree_data()
+            # stage 1 - no need to Extract Keywords
+            logger.debug(f"NCTID: {nct_id} | Stage 1 - Original Conditions:{conditions_list}")
+            # stage 2 - Map original conditions to Level 1 oncotree diagnoses
+            level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_conditions(nct_id, conditions_list, level_1_diagnosis)
+            logger.debug(f"NCTID: {nct_id} | Stage 2 - Mapped original conditions to Level 1:{level1_oncotree_values_dict}") 
 
-        # stage 2 - Map keywords to Level 1 oncotree diagnoses
-        level1_oncotree_values_dict = ai.get_level1_diagnosis_from_condition_keywords(nct_id, keywords, level_1_diagnosis)
-        logger.debug(f"NCTID: {nct_id} | Stage 2 - Mapped keywords to Level 1:{level1_oncotree_values_dict}") 
-        # create a dictionary to map level1 diagnoses back to original condition (not keywords)
-        level1_oncotree_value_to_nct_condition = {}
-
-        for item in level1_oncotree_values_dict["oncotree_diagnoses"]:        
-            cancer_condition_keyword = item['cancer_condition_keyword']
-            oncotree_value = item['oncotree_value']
-            for condition in conditions_list:
-                if cancer_condition_keyword in condition:                
-                    level1_oncotree_value_to_nct_condition[oncotree_value] = condition
+            for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
+                if item['oncotree_value'] == "" or item['oncotree_value'].lower() == "other":
+                    logger.debug(f"NCTID: {nct_id} | Skipping condition {item['cancer_condition']} as no oncotree diagnosis was returned")
                     continue
-        
-        logger.debug(f"NCTID: {nct_id} | Level1 to nct_condition map: {level1_oncotree_value_to_nct_condition}") 
-
-        for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
-            # stage 3: Get the child values for Level 1 oncotree diagnoses
-            child_values = level1_mapping[item['oncotree_value']]
-            nct_condition = level1_oncotree_value_to_nct_condition[item['oncotree_value']]
-            logger.debug(f"NCTID: {nct_id} | Stage 3 - Condition = {nct_condition}. Child values = {child_values}")
-            if len(child_values) > 0:
-                # stage 4: Pass the child values to AI and the conditions to map to a child value
-                oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_condition(nct_id, child_values, nct_condition)
-                if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
-                    all_possible_diagnoses.extend(oncotree_diagnoses_result['oncotree_diagnoses'])
+                # stage 3: Get the child values for Level 1 oncotree diagnoses
+                l2_oncotree_values = l1_l2_mapping[item['oncotree_value']]
+                nct_condition = item['cancer_condition']
+                logger.debug(f"NCTID: {nct_id} | Stage 3 - Condition = {nct_condition}. Child values = {l2_oncotree_values}")
+                if len(l2_oncotree_values) > 0:
+                    # stage 4: Pass the child values to AI and the conditions to map to a child value --> pass only level 2 values
+                    oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_condition(nct_id, l2_oncotree_values, nct_condition)
+                    if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
+                        all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])        
+    
     logger.debug(f"NCTID: {nct_id} | Stage 4 Oncotree_diagnoses : {all_possible_diagnoses}")
-            
-    return all_possible_diagnoses
+        
+    if len(all_possible_diagnoses) == 0:
+        raise Exception(f"NCTID: {nct_id} | No oncotree diagnosis was found")
+    return list(all_possible_diagnoses)
+
 
 def map_prior_treatment_requirements(trial_schema, trial_data) -> dict:
     """
@@ -359,8 +352,6 @@ def map_prior_treatment_requirements(trial_schema, trial_data) -> dict:
             else:
                 # Add inclusion criteria lines directly
                 trial_schema['prior_treatment_requirements'].append(stripped_line)
-    
-    #logger.debug(f"CTML: After mapping prior_treatment_requirements | {trial_schema}")
     return trial_schema
  
 
