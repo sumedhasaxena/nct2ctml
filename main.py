@@ -17,11 +17,11 @@ import sys
 import os
 import all_studies
 import clinical_trials_gov as ctg
-import trial_data_formatter as tdf
+import trial_data_helper as tdh
 from loguru import logger
 
 def main():
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 3 or sys.argv[1] not in ['pull','map']:
         print("Usage: python main.py [pull all | pull {nct_id} | map all | map {nct_id}]")
         return
     
@@ -46,12 +46,14 @@ def main():
                     file_components = file_name.split('.')
                     if file_components[1] == "json":
                         nct_id = file_name.split('.')[0]
-                        trial_data = tdf.read_from_file(nct_files_path, nct_id, 'json')
+                        trial_data = tdh.read_from_file(nct_files_path, nct_id, 'json')
 
-                        try:                    
+                        try:
+                            logger.info(f"Mapping NCT ID: {nct_id}")   
+                            logger.info(f"-----------------------")                   
                             mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
-                            tdf.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'yaml')
-                            tdf.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'json')
+                            tdh.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'yaml')
+                            tdh.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'json')
                         except Exception as ex:
                             logger.error(f"nct_id: {nct_id} | Unexpected {ex=}, {type(ex)=}")
 
@@ -59,8 +61,10 @@ def main():
         else:
             nct_id = arg2
             try:
-                # read specific nct file and map to ctml                
-                trial_data = tdf.read_from_file(nct_files_path, nct_id, 'json')
+                # read specific nct file and map to ctml  
+                logger.info(f"Mapping NCT ID: {nct_id}")   
+                logger.info(f"-----------------------")                 
+                trial_data = tdh.read_from_file(nct_files_path, nct_id, 'json')
             except FileNotFoundError:
                 print(f'File {nct_id}.json not found at {nct_files_path}')
                 return
@@ -74,8 +78,8 @@ def main():
                 mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
 
                 file_name = nct_id
-                tdf.save_to_file(mapped_ctml, ctml_files_path, file_name, 'yaml')
-                tdf.save_to_file(mapped_ctml, ctml_files_path, file_name, 'json')
+                tdh.save_to_file(mapped_ctml, ctml_files_path, file_name, 'yaml')
+                tdh.save_to_file(mapped_ctml, ctml_files_path, file_name, 'json')
             except Exception as ex:
                 logger.error(f"nct_id: {nct_id} | Unexpected {ex=}, {type(ex)=}")
 
@@ -86,4 +90,5 @@ def get_gene_list() -> list:
     return genes
 
 if __name__ == "__main__":
+    logger.add('nct2ctml.log', rotation = '1 MB', encoding="utf-8", format="{time} {level} - Line: {line} - {message}")
     main()
