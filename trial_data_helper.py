@@ -1,5 +1,6 @@
 import json
 import yaml
+from loguru import logger
 
 def remove_unused_keys(trial_data: dict):
     """
@@ -73,5 +74,51 @@ def safe_get(trial_data, keys):
     for key in keys:
         trial_data = trial_data.get(key, {})
     return trial_data
+
+def all_solid_tumours(conditions_list):
+    all_solid_tumors = any(
+            "solid tumors" in cond.lower() or
+            "solid malignancies" in cond.lower()
+            for cond in conditions_list)
+        
+    return all_solid_tumors
+
+def all_tumours(conditions_list):
+    all_tumors = any(
+    cond.lower() in ["cancer","oncology"] 
+    for cond in conditions_list)
+    
+    return all_tumors
+
+
+def get_all_keys(d: dict, keys=None):
+    if keys is None:
+        keys = set()        
+    for key, value in d.items():
+        keys.add(key) 
+        if isinstance(value, dict):  # If the value is a dictionary, recurse into it
+            get_all_keys(value, keys)
+        elif isinstance(value, list):  # If the value is a list, iterate through each item
+            for item in value:
+                if isinstance(item, dict):
+                    get_all_keys(item, keys)
+    return keys
+
+##Post-processing##
+def update_hugo_symbol(genomic_crit:dict):
+    # Check each key-value pair in the dictionary
+    for key, value in genomic_crit.items():
+        if key == "hugo_symbol" and value == "HER2":            
+            genomic_crit[key] = "ERBB2"  # Update the value
+            logger.info(f"Changed HER2 to ERBB2")
+        elif isinstance(value, dict):
+            update_hugo_symbol(value)  # Recurse into the dictionary
+        elif isinstance(value, list):
+            for item in value:
+                if isinstance(item, dict):
+                    update_hugo_symbol(item)  # Recurse into each item in the list
+    
+    return genomic_crit
+    
 
 
