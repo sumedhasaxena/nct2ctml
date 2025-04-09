@@ -2,22 +2,24 @@ import json
 import config
 import requests
 import urllib.parse
-import trial_data_formatter as tdf
+import trial_data_helper as tdf
 from loguru import logger
-
-
-#AI_MODEL = "qwen2.5-coder-1.5b-instruct"
-#AI_MODEL = "deepseek-r1-distill-llama-8b"
-AI_MODEL = "qwen2.5-14b-instruct"
-#AI_MODEL = "deepseek-r1-distill-llama-70b"
-
-CHAT_ENDPOINT = "chat/completions"
 
 def get_level1_diagnosis_from_condition_keywords(nct_id:str, keywords: set, level1_oncotree: set) -> dict:    
     cancer_keywords_list = list(keywords)
     level1_oncotree_list = list(level1_oncotree) 
     
     prompt = get_ai_prompt_level1(cancer_keywords_list, level1_oncotree_list)
+        
+    ai_response = send_ai_request(nct_id, prompt)
+    oncotree_diagnoses_dict = parse_ai_response(ai_response)
+    return oncotree_diagnoses_dict
+
+def get_level1_diagnosis_from_original_conditions(nct_id:str, original_conditions: dict, level1_oncotree: set) -> dict:    
+    original_conditions_list = list(original_conditions)
+    level1_oncotree_list = list(level1_oncotree) 
+    
+    prompt = get_ai_prompt_level1_for_original_conditions(original_conditions_list, level1_oncotree_list)
         
     ai_response = send_ai_request(nct_id, prompt)
     oncotree_diagnoses_dict = parse_ai_response(ai_response)
@@ -59,35 +61,49 @@ def get_genomic_criteria(nct_id:str, genes:list, eligibilityCriteria:str)-> dict
 
 def parse_ai_response(ai_response):
     oncotree_diagnoses_dict = {}
-    if type(ai_response) is dict and 'choices' in ai_response.keys() and type(ai_response['choices']) is list:
-        answer = ai_response['choices'][0]
-        ai_response_content = tdf.safe_get(answer,['message','content'])
-        if ai_response_content:
-            prefix_pos = ai_response_content.find('```json')
-            if prefix_pos > -1:
-                begin_content = ai_response_content.find('```json')+len('```json')
-                end_content = ai_response_content.find('```', begin_content)
-                oncotree_diagnoses_response_string = ai_response_content[begin_content:end_content].strip()
-            else:
-                oncotree_diagnoses_response_string = ai_response_content
-            
-            oncotree_diagnoses_dict = json.loads(oncotree_diagnoses_response_string)
+
+    try:
+        if type(ai_response) is dict and 'choices' in ai_response.keys() and type(ai_response['choices']) is list:
+            answer = ai_response['choices'][0]
+            ai_response_content = tdf.safe_get(answer,['message','content'])
+            if ai_response_content:
+                prefix_pos = ai_response_content.find('```json') #look for ```json in response string 
+                if prefix_pos > -1:
+                    begin_content = ai_response_content.find('```json')+len('```json')
+                    end_content = ai_response_content.find('```', begin_content)
+                    oncotree_diagnoses_response_string = ai_response_content[begin_content:end_content].strip()
+                else:
+                    prefix_pos = ai_response_content.find('</think>')# elseget everything after </think>
+                    if prefix_pos > -1:
+                        begin_content = ai_response_content.find('</think>')+len('</think>')
+                        oncotree_diagnoses_response_string = ai_response_content[begin_content:].strip()
+                    else:
+                        oncotree_diagnoses_response_string = ai_response_content
+                
+                oncotree_diagnoses_dict = json.loads(oncotree_diagnoses_response_string)
+    except json.JSONDecodeError as ex:
+        logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
     return oncotree_diagnoses_dict
 
 def send_ai_request(nct_id, prompt):
     req_body = {
-    "model":AI_MODEL,
+    "model":config.AI_MODEL,
     "messages":[
+        {"role": "system", "content": "You are a biomedical researcher."},
         {
-          "role":"system",
-          "content": prompt
+          "role":"user", "content": prompt
         }
     ],
+    "temperature": 0.5, #lower value of temperature results in more deterministric responses
+    "max_tokens": 8192,
+    "response_format": {
+    "type": "json_object"
+    },
     "stream":False
     }
     req_body_json = json.dumps(req_body)
     logger.debug(f"AI request | NCTID:{nct_id} | {req_body_json}")
-    endpoint_url = f'{urllib.parse.urljoin(f"{config.GPU_SERVER_HOSTNAME}:{config.LOCAL_AI_PORT}", CHAT_ENDPOINT)}'
+    endpoint_url = f'{urllib.parse.urljoin(f"{config.GPU_SERVER_HOSTNAME}:{config.AI_PORT}", config.CHAT_ENDPOINT)}'
 
     response = requests.post(endpoint_url, data=req_body_json, headers={"Content-Type":"application/json"})
     response.raise_for_status()
@@ -106,6 +122,22 @@ def get_ai_prompt_level1(cancer_keywords_list, level1_oncotree_list):
     "oncotree_diagnoses": [
         {{
         "cancer_condition_keyword": "",
+        "oncotree_value": ""
+        }}
+    ]
+    }}"""
+    
+    return prompt
+
+def get_ai_prompt_level1_for_original_conditions(original_conditions_list, level1_oncotree_list):
+    prompt = f"""Task: Map the list of 'cancer conditions' to the closest type listed in 'Oncotree values' below.
+    Cancer conditions: {original_conditions_list}
+    Oncotree values:{level1_oncotree_list}
+    The output should be in the json format :
+    {{
+    "oncotree_diagnoses": [
+        {{
+        "cancer_condition": "",
         "oncotree_value": ""
         }}
     ]
@@ -168,33 +200,71 @@ def get_disease_status_prompt(eligibilityCriteria, keywords):
 
 def get_genomic_criteria_prompt(genes, eligibilityCriteria):
     prompt = f"""
-    Task: Below is the list of genes, list of variant categories and a clinical trial description.
-    Find out of the clinical trial description mentions any mutations in one or more genes from the list, along with the type of variant from the categories.
-    The output should be in the json format mentioned below.
+    Task: Evaluate the clinical trial description against the provided gene list and variant categories to determine whether any mutations in the listed genes are included or excluded based on the eligibility criteria.
 
+    Instructions:
+    1. Identify if the clinical trial description mentions mutations in the given genes (inclusion) or specifies exclusions.
+    2. Use the variant categories:
+        Mutation
+        Copy Number Variation
+        Structural Variation
+        Any Variation
+        !Mutation
+        !Copy Number Variation
+        !Structural Variation
+    
+    Logic:
+    1. If the genes are mentioned in trial's inlcusion criteria, use the 'or' operator along with appropriate variant categories.
+    2. If the genes are mentioned in trial's exclusion criteria, use the 'and' operator along with variant categories (!Mutation/!Copy Number Variation/!Structural Variation).
+    3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
+    
     Gene list: {genes}
-    Variant Category:
-    Mutation
-    Copy Number Variation
-    Structural Variation
-    Any Variation
-    !Mutation
-    !Copy Number Variation
-    !Structural Variation
 
     Clinical Trial Description: {eligibilityCriteria}
 
-    Output format:
-    {{
-        "or": [
-            {{
-                "genomic": {{
-                    "hugo_symbol": "",
-                    "variant_category": ""
-                }}
+    Example A:
+    Inclusion criteria:Subjects with advanced solid tumors harboring ROS1 or NTRK1 rearrangement will be included in this trial. 
+    Output:
+{{
+    "or": [        
+        {{
+            "genomic": {{
+                "hugo_symbol": "ROS1",
+                "variant_category": "Structural Variation"
             }}
-        ]
-    }}
+        }},
+        {{
+            "genomic": {{
+                "hugo_symbol": "NTRK1",
+                "variant_category": "Structural Variation"
+            }}
+        }}
+    ]
+}}
+
+Example B:
+Inclusion criteria:Patient should have mutation in geneA or geneB.
+Exclusion criteria: Patient should not have a mutation in geneC or geneD
+
+Output:
+{{
+    "and":[
+        {{
+            "or":[
+                {{"genomic": {{"hugo_symbol": "geneA","variant_category": "Mutation"}}}},
+                {{"genomic": {{"hugo_symbol": "geneB","variant_category": "Mutation"}}}}
+            ]
+        }},
+        {{
+            "and":[
+                {{"genomic": {{"hugo_symbol": "geneC","variant_category": "!Mutation"}}}},
+                {{"genomic": {{"hugo_symbol": "geneD","variant_category": "!Mutation"}}}}
+            ]
+
+        }}
+    ]
+}}
+
     """
     return prompt
 
