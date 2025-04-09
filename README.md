@@ -1,4 +1,4 @@
-This application pulls clinical trials from https://clinicaltrials.gov/, converts them to a CTML compliant schema to be used by Matchminer platform, and saves the converted trial files (JSON & YAML) locally.
+**nct2ctml** application pulls clinical trials from https://clinicaltrials.gov/, converts them to a CTML compliant schema to be used by Matchminer platform, and saves the converted trial files (JSON & YAML) locally.
 
 **Source**:
 https://clinicaltrials.gov/data-api/api#extapi
