@@ -1,6 +1,6 @@
-"""
+'''
 This script contains defines the clinical trial schema as requied by Matchminer app
-"""
+'''
 
 def get_ctml_schema():
     return {
@@ -58,7 +58,10 @@ def get_ctml_schema():
   'summary': '',
   'treatment_list': {
     'step': [
-      {        
+      {
+        'step_internal_id': 111,
+        'step_code': '1',
+        'step_type': 'Registration',
         'arm': [],
         'match': []
       }
