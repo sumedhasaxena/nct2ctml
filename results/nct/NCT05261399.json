@@ -1,1 +1,200 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT05261399", "orgStudyIdInfo": {"id": "D5087C00001"}, "secondaryIdInfos": [{"id": "2024-511169-12-00", "type": "REGISTRY", "domain": "CTIS"}, {"id": "2021-006374-24", "type": "EUDRACT_NUMBER"}], "organization": {"fullName": "AstraZeneca", "class": "INDUSTRY"}, "briefTitle": "Savolitinib Plus Osimertinib Versus Platinum-based Doublet Chemotherapy in Participants With Non-Small Cell Lung Cancer Who Have Progressed on Osimertinib Treatment", "officialTitle": "A Phase III, Randomised, Open-Label Study of Savolitinib in Combination With Osimertinib Versus Platinum-Based Doublet Chemotherapy in Participants With EGFR Mutated, MET-Overexpressed and/or Amplified, Locally Advanced or Metastatic Non-Small Cell Lung Cancer Who Have Progressed on Treatment With Osimertinib (SAFFRON).", "acronym": "SAFFRON"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "SPONSOR"}, "leadSponsor": {"name": "AstraZeneca", "class": "INDUSTRY"}}, "descriptionModule": {"briefSummary": "Clinical study to investigate the efficacy and safety of savolitinib in combination with osimertinib versus platinum-based doublet chemotherapy in participants with EGFR mutated, MET-overexpressed and/or amplified, locally advanced or metastatic NSCLC who have progressed on treatment with Osimertinib.", "detailedDescription": "This is a multicentre, Phase III, randomised, open-label study to investigate the efficacy and safety of savolitinib administered orally in combination with osimertinib versus platinum-based doublet chemotherapy in participants with EGFR mutated, MET-overexpressed and/or amplified, locally advanced or metastatic NSCLC who have progressed on first- or second-line treatment with osimertinib as the most recent therapy.\n\nApproximately 324 participants with EGFR mutated, MET-overexpressed and/or amplified, locally advanced or metastatic NSCLC will be randomly assigned to study intervention with 1:1 ratio.\n\nPatients will be treated until either objective progression of disease (PD) by Response Evaluation Criteria in Solid Tumours 1.1 (RECIST 1.1) is assessed by the investigator, unacceptable toxicity occurs, consent is withdrawn, or another discontinuation criterion is met."}, "conditionsModule": {"conditions": ["Carcinoma", "Non-Small-Cell Lung"], "keywords": ["Savolitinib", "Osimertinib", "EGFR", "Amplified", "Metastatic", "MET Driven", "carcinoma", "NSCLC", "overexpressed"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["PHASE3"], "designInfo": {"allocation": "RANDOMIZED", "interventionModel": "PARALLEL", "interventionModelDescription": "Parallel Assignment", "primaryPurpose": "TREATMENT", "maskingInfo": {"masking": "NONE"}}, "enrollmentInfo": {"count": 324, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "Chemotherapy", "type": "ACTIVE_COMPARATOR", "description": "Pemetrexed (500 mg/m2) with either cisplatin (75 mg/m2) or carboplatin (AUC5) on Day 1 of 21-day cycles (Q3W) for 4 cycles, followed by pemetrexed maintenance (500 mg/m2) Q3W", "interventionNames": ["Drug: Pemetrexed", "Drug: Cisplatin", "Drug: Carboplatin"]}, {"label": "Savolitinib + Osimertinib", "type": "EXPERIMENTAL", "description": "300 mg savolitinib BID plus 80 mg osimertinib QD", "interventionNames": ["Drug: Savolitinib", "Drug: Osimertinib"]}], "interventions": [{"type": "DRUG", "name": "Savolitinib", "description": "300 mg savolitinib (3 \u00d7 100 mg tablets twice daily) Administrative route : oral", "armGroupLabels": ["Savolitinib + Osimertinib"], "otherNames": ["AZD6094, HMPL-504, volitinib"]}, {"type": "DRUG", "name": "Osimertinib", "description": "80 mg osimertinib\n\n(1 \u00d7 80 mg tablet once daily) Administrative route : oral", "armGroupLabels": ["Savolitinib + Osimertinib"], "otherNames": ["AZD9291, Tagrisso"]}, {"type": "DRUG", "name": "Pemetrexed", "description": "Pemetrexed (500 mg/m2) Administrative route : IV infusion", "armGroupLabels": ["Chemotherapy"], "otherNames": ["NAP"]}, {"type": "DRUG", "name": "Cisplatin", "description": "Cisplatin (75 mg/m2) or Administrative route : IV infusion", "armGroupLabels": ["Chemotherapy"], "otherNames": ["NAP"]}, {"type": "DRUG", "name": "Carboplatin", "description": "Carboplatin (AUC5) Administrative route : IV infusion", "armGroupLabels": ["Chemotherapy"], "otherNames": ["NAP"]}]}, "eligibilityModule": {"eligibilityCriteria": "Inclusion Criteria:\n\n* Provision of signed and dated written ICF prior to any mandatory and non-mandatory study-specific procedures, sampling and analyses.\n* Participant must be \u226518 years (\u2265 19 years of age in South Korea) at the time of signing the informed consent. All genders are permitted.\n* Histologically or cytologically confirmed locally advanced or metastatic NSCLC which is not amenable to curative therapy.\n* Must have at least one documented sensitising EGFR mutation: exon19 deletion, L858R mutation, and/or T790M.\n* Documented radiologic progression on first- or second-line treatment with osimertinib as the most recent anti-cancer therapy.\n* Mandatory provision of FFPE tumour tissue.\n* MET overexpression and/or amplification in tumour specimen collected following progression on prior osimertinib treatment.\n* Measurable disease as defined by RECIST 1.1.\n* Adequate haematological, liver, renal and cardiac functions, and coagulation parameters.\n* ECOG performance status of 0 or 1.\n\nExclusion Criteria:\n\n* Predominant squamous NSCLC, and small cell lung cancer.\n* Prior or current treatment with a third-generation EGFR-TKI other than Osimertinib.\n* Prior or current treatment with savolitinib or another MET inhibitors.\n* Spinal cord compression or brain metastases, unless asymptomatic and are stable.\n* History or active leptomeningeal carcinomatosis.\n* Unresolved toxicities from any prior therapy greater than CTCAE Grade 1 and prior platinum-therapy related Grade 2 neuropathies with the exception of alopecia and haemoglobin \u2265 9.0 g/dL.\n* Active/unstable cardiac diseases currently or within the last 6 months, clinically significant ECG abnormalities, and/or factors/medications that may affect QTc intervals.\n* History of liver cirrhosis of any origin and clinical stage; or history of other serious liver disease or chronic disease with relevant liver involvement.\n* Known serious active infection including, but not limited to, tuberculosis, or HIV, HBV or HCV or gastrointestinal disease.\n* Receipt of live attenuated vaccine (including against COVID-19) within 30 days prior to the first dose of study intervention.\n* Past medical history of ILD, drug-induced ILD, radiation pneumonitis, which required steroid treatment, or any evidence of clinically active ILD.\n* Participants currently receiving medications or herbal supplements known to be strong inducers of cytochrome P450 (CYP)3A4 or strong inhibitors of CYP1A2.", "healthyVolunteers": false, "sex": "ALL", "minimumAge": "18 Years", "maximumAge": "130 Years", "stdAges": ["ADULT", "OLDER_ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "AstraZeneca Clinical Study Information Center", "role": "CONTACT", "phone": "1-877-240-9479", "email": "information.center@astrazeneca.com"}, {"name": "AstraZeneca Lung Cancer Study Locator Service", "role": "CONTACT", "phone": "1-884-432-3892", "email": "az-lcsl@careboxhealth.com"}], "overallOfficials": [{"name": "Shun Lu, Prof,MD,PhD,", "affiliation": "Shanghai Chest Hospital, Shanghai JiaoTong University, #241 Huai Hai Road (west), Shanghai, China.", "role": "PRINCIPAL_INVESTIGATOR"}]}, "referencesModule": {"seeAlsoLinks": [{"label": "Lung Cancer Study Locator details (for US)", "url": "https://www.lungcancerstudylocator.com/trial/listing/335213"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT05261399",
+            "orgStudyIdInfo": {
+                "id": "D5087C00001"
+            },
+            "secondaryIdInfos": [
+                {
+                    "id": "2024-511169-12-00",
+                    "type": "REGISTRY",
+                    "domain": "CTIS"
+                },
+                {
+                    "id": "2021-006374-24",
+                    "type": "EUDRACT_NUMBER"
+                }
+            ],
+            "organization": {
+                "fullName": "AstraZeneca",
+                "class": "INDUSTRY"
+            },
+            "briefTitle": "Savolitinib Plus Osimertinib Versus Platinum-based Doublet Chemotherapy in Participants With Non-Small Cell Lung Cancer Who Have Progressed on Osimertinib Treatment",
+            "officialTitle": "A Phase III, Randomised, Open-Label Study of Savolitinib in Combination With Osimertinib Versus Platinum-Based Doublet Chemotherapy in Participants With EGFR Mutated, MET-Overexpressed and/or Amplified, Locally Advanced or Metastatic Non-Small Cell Lung Cancer Who Have Progressed on Treatment With Osimertinib (SAFFRON).",
+            "acronym": "SAFFRON"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "AstraZeneca",
+                "class": "INDUSTRY"
+            }
+        },
+        "descriptionModule": {
+            "briefSummary": "Clinical study to investigate the efficacy and safety of savolitinib in combination with osimertinib versus platinum-based doublet chemotherapy in participants with EGFR mutated, MET-overexpressed and/or amplified, locally advanced or metastatic NSCLC who have progressed on treatment with Osimertinib.",
+            "detailedDescription": "This is a multicentre, Phase III, randomised, open-label study to investigate the efficacy and safety of savolitinib administered orally in combination with osimertinib versus platinum-based doublet chemotherapy in participants with EGFR mutated, MET-overexpressed and/or amplified, locally advanced or metastatic NSCLC who have progressed on first- or second-line treatment with osimertinib as the most recent therapy.\n\nApproximately 324 participants with EGFR mutated, MET-overexpressed and/or amplified, locally advanced or metastatic NSCLC will be randomly assigned to study intervention with 1:1 ratio.\n\nPatients will be treated until either objective progression of disease (PD) by Response Evaluation Criteria in Solid Tumours 1.1 (RECIST 1.1) is assessed by the investigator, unacceptable toxicity occurs, consent is withdrawn, or another discontinuation criterion is met."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Carcinoma",
+                "Non-Small-Cell Lung"
+            ],
+            "keywords": [
+                "Savolitinib",
+                "Osimertinib",
+                "EGFR",
+                "Amplified",
+                "Metastatic",
+                "MET Driven",
+                "carcinoma",
+                "NSCLC",
+                "overexpressed"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE3"
+            ],
+            "designInfo": {
+                "allocation": "RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "interventionModelDescription": "Parallel Assignment",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 324,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Chemotherapy",
+                    "type": "ACTIVE_COMPARATOR",
+                    "description": "Pemetrexed (500 mg/m2) with either cisplatin (75 mg/m2) or carboplatin (AUC5) on Day 1 of 21-day cycles (Q3W) for 4 cycles, followed by pemetrexed maintenance (500 mg/m2) Q3W",
+                    "interventionNames": [
+                        "Drug: Pemetrexed",
+                        "Drug: Cisplatin",
+                        "Drug: Carboplatin"
+                    ]
+                },
+                {
+                    "label": "Savolitinib + Osimertinib",
+                    "type": "EXPERIMENTAL",
+                    "description": "300 mg savolitinib BID plus 80 mg osimertinib QD",
+                    "interventionNames": [
+                        "Drug: Savolitinib",
+                        "Drug: Osimertinib"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DRUG",
+                    "name": "Savolitinib",
+                    "description": "300 mg savolitinib (3 \u00d7 100 mg tablets twice daily) Administrative route : oral",
+                    "armGroupLabels": [
+                        "Savolitinib + Osimertinib"
+                    ],
+                    "otherNames": [
+                        "AZD6094, HMPL-504, volitinib"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Osimertinib",
+                    "description": "80 mg osimertinib\n\n(1 \u00d7 80 mg tablet once daily) Administrative route : oral",
+                    "armGroupLabels": [
+                        "Savolitinib + Osimertinib"
+                    ],
+                    "otherNames": [
+                        "AZD9291, Tagrisso"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Pemetrexed",
+                    "description": "Pemetrexed (500 mg/m2) Administrative route : IV infusion",
+                    "armGroupLabels": [
+                        "Chemotherapy"
+                    ],
+                    "otherNames": [
+                        "NAP"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Cisplatin",
+                    "description": "Cisplatin (75 mg/m2) or Administrative route : IV infusion",
+                    "armGroupLabels": [
+                        "Chemotherapy"
+                    ],
+                    "otherNames": [
+                        "NAP"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Carboplatin",
+                    "description": "Carboplatin (AUC5) Administrative route : IV infusion",
+                    "armGroupLabels": [
+                        "Chemotherapy"
+                    ],
+                    "otherNames": [
+                        "NAP"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Provision of signed and dated written ICF prior to any mandatory and non-mandatory study-specific procedures, sampling and analyses.\n* Participant must be \u226518 years (\u2265 19 years of age in South Korea) at the time of signing the informed consent. All genders are permitted.\n* Histologically or cytologically confirmed locally advanced or metastatic NSCLC which is not amenable to curative therapy.\n* Must have at least one documented sensitising EGFR mutation: exon19 deletion, L858R mutation, and/or T790M.\n* Documented radiologic progression on first- or second-line treatment with osimertinib as the most recent anti-cancer therapy.\n* Mandatory provision of FFPE tumour tissue.\n* MET overexpression and/or amplification in tumour specimen collected following progression on prior osimertinib treatment.\n* Measurable disease as defined by RECIST 1.1.\n* Adequate haematological, liver, renal and cardiac functions, and coagulation parameters.\n* ECOG performance status of 0 or 1.\n\nExclusion Criteria:\n\n* Predominant squamous NSCLC, and small cell lung cancer.\n* Prior or current treatment with a third-generation EGFR-TKI other than Osimertinib.\n* Prior or current treatment with savolitinib or another MET inhibitors.\n* Spinal cord compression or brain metastases, unless asymptomatic and are stable.\n* History or active leptomeningeal carcinomatosis.\n* Unresolved toxicities from any prior therapy greater than CTCAE Grade 1 and prior platinum-therapy related Grade 2 neuropathies with the exception of alopecia and haemoglobin \u2265 9.0 g/dL.\n* Active/unstable cardiac diseases currently or within the last 6 months, clinically significant ECG abnormalities, and/or factors/medications that may affect QTc intervals.\n* History of liver cirrhosis of any origin and clinical stage; or history of other serious liver disease or chronic disease with relevant liver involvement.\n* Known serious active infection including, but not limited to, tuberculosis, or HIV, HBV or HCV or gastrointestinal disease.\n* Receipt of live attenuated vaccine (including against COVID-19) within 30 days prior to the first dose of study intervention.\n* Past medical history of ILD, drug-induced ILD, radiation pneumonitis, which required steroid treatment, or any evidence of clinically active ILD.\n* Participants currently receiving medications or herbal supplements known to be strong inducers of cytochrome P450 (CYP)3A4 or strong inhibitors of CYP1A2.",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "minimumAge": "18 Years",
+            "maximumAge": "130 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "AstraZeneca Clinical Study Information Center",
+                    "role": "CONTACT",
+                    "phone": "1-877-240-9479",
+                    "email": "information.center@astrazeneca.com"
+                },
+                {
+                    "name": "AstraZeneca Lung Cancer Study Locator Service",
+                    "role": "CONTACT",
+                    "phone": "1-884-432-3892",
+                    "email": "az-lcsl@careboxhealth.com"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Shun Lu, Prof,MD,PhD,",
+                    "affiliation": "Shanghai Chest Hospital, Shanghai JiaoTong University, #241 Huai Hai Road (west), Shanghai, China.",
+                    "role": "PRINCIPAL_INVESTIGATOR"
+                }
+            ]
+        },
+        "referencesModule": {
+            "seeAlsoLinks": [
+                {
+                    "label": "Lung Cancer Study Locator details (for US)",
+                    "url": "https://www.lungcancerstudylocator.com/trial/listing/335213"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

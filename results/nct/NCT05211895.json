@@ -1,1 +1,177 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT05211895", "orgStudyIdInfo": {"id": "D9075C00001"}, "secondaryIdInfos": [{"id": "2021-004327-32", "type": "EUDRACT_NUMBER"}], "organization": {"fullName": "AstraZeneca", "class": "INDUSTRY"}, "briefTitle": "A Global Study to Assess the Effects of Durvalumab + Domvanalimab Following Concurrent Chemoradiation in Participants With Stage III Unresectable NSCLC", "officialTitle": "A Phase III, Randomised, Double-blind, Placebo-controlled, Multicentre, International Study of Durvalumab Plus Domvanalimab(AB154) in Participants With Locally Advanced (Stage III), Unresectable Non-small Cell Lung Cancer Whose Disease Has Not Progressed Following Definitive Platinum-based Concurrent Chemoradiation Therapy", "acronym": "PACIFIC-8"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "SPONSOR"}, "leadSponsor": {"name": "AstraZeneca", "class": "INDUSTRY"}, "collaborators": [{"name": "Arcus Biosciences, Inc.", "class": "INDUSTRY"}]}, "descriptionModule": {"briefSummary": "This is a Phase III, randomised, double-blind, placebo-controlled, multicentre, international study assessing the efficacy and safety of durvalumab (MEDI4736) and domvanalimab (AB154) compared with durvalumab plus placebo in adults with locally advanced (Stage III), unresectable NSCLC whose disease has not progressed following definitive platinum-based cCRT."}, "conditionsModule": {"conditions": ["Non-Small Cell Lung Cancer"], "keywords": ["non-small cell lung cancer", "locally advanced", "NSCLC"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["PHASE3"], "designInfo": {"allocation": "RANDOMIZED", "interventionModel": "PARALLEL", "primaryPurpose": "TREATMENT", "maskingInfo": {"masking": "QUADRUPLE", "maskingDescription": "Double-blind", "whoMasked": ["PARTICIPANT", "CARE_PROVIDER", "INVESTIGATOR", "OUTCOMES_ASSESSOR"]}}, "enrollmentInfo": {"count": 860, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "Arm A: Durvalumab + Domvanalimab", "type": "EXPERIMENTAL", "description": "Durvalumab and domvanalimab as an IV infusion q4w, starting on Day 1 for up to a maximum of 12 months", "interventionNames": ["Drug: Durvalumab", "Drug: Domvanalimab"]}, {"label": "Arm B: Durvalumab + Placebo", "type": "ACTIVE_COMPARATOR", "description": "Durvalumab + placebo as an IV infusion q4w starting on Day 1 for up to a maximum of 12 months", "interventionNames": ["Drug: Durvalumab", "Other: Placebo"]}], "interventions": [{"type": "DRUG", "name": "Durvalumab", "description": "Durvalumab IV (Intravenous infusion)", "armGroupLabels": ["Arm A: Durvalumab + Domvanalimab", "Arm B: Durvalumab + Placebo"]}, {"type": "DRUG", "name": "Domvanalimab", "description": "Domvanalimab IV (Intravenous infusion)", "armGroupLabels": ["Arm A: Durvalumab + Domvanalimab"]}, {"type": "OTHER", "name": "Placebo", "description": "Placebo IV (Intravenous infusion)", "armGroupLabels": ["Arm B: Durvalumab + Placebo"]}]}, "eligibilityModule": {"eligibilityCriteria": "INCLUSION CRITERIA:\n\n1. Participant must be \u2265 18 years at the time of screening.\n2. Histologically- or cytologically-documented NSCLC and have been treated with concurrent CRT for locally advanced, unresectable (Stage III) disease\n3. Provision of a tumour tissue sample obtained prior to CRT\n4. Documented tumour PD-L1 status \u2265 1% by central lab\n5. Documented EGFR and ALK wild-type status (local or central).\n6. Patients must not have progressed following definitive, platinum-based, concurrent chemoradiotherapy\n7. Participants must have received at least 2 cycles of platinum-based chemotherapy concurrent with radiation therapy\n8. Participants must have received a total dose of radiation of 60 Gy \u00b110% (54 Gy to 66 Gy) as part of the chemoradiation therapy, to be randomised. Radiation therapy should be administered by intensity modulated RT (preferred) or 3D-conforming technique.\n9. WHO performance status of 0 or 1 at randomization\n10. Adequate organ and marrow function\n\nEXCLUSION CRITERIA:\n\n1. History of another primary malignancy, except for:\n\n   * Malignancies treated with curative intent and adequate follow-up with no known active disease and have not required active treatment within the past 3 years before the first dose of study intervention and of low potential risk of recurrence.\n   * Adequately resected non melanoma skin cancer or lentigo maligna without evidence of disease .\n   * Adequately treated carcinoma in situ, including Ta tumors without evidence of disease.\n2. Mixed small cell and non-small cell lung cancer histology.\n3. Participants who receive sequential (not inclusive of induction) chemoradiation therapy for locally advanced (Stage III) unresectable NSCLC.\n4. Participants with locally advanced (Stage III) unresectable NSCLC who have progressed during platinum-based cCRT.\n5. Any unresolved toxicity CTCAE \\>Grade 2 from the prior chemoradiation therapy (excluding alopecia).\n6. Participants with \u2265 grade 2 pneumonitis from prior chemoradiation therapy.\n7. History of idiopathic pulmonary fibrosis, drug-induced pneumonitis, or idiopathic pneumonitis - regardless of time of onset prior to randomisation. Evidence of active non-CRT induced pneumonitis (\u2265 Grade 2), active pneumonia, active ILD, active or recently treated pleural effusion, or current pulmonary fibrosis\n8. Active or prior documented autoimmune or inflammatory disorders (with exceptions)\n9. Active EBV infection, or known or suspected chronic active EBV infection at screening\n10. Current or prior use of immunosuppressive medication within 14 days before the first dose of durvalumab.", "healthyVolunteers": false, "sex": "ALL", "minimumAge": "18 Years", "stdAges": ["ADULT", "OLDER_ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "AstraZeneca Clinical Study Information Center", "role": "CONTACT", "phone": "1-877-240-9479", "email": "information.center@astrazeneca.com"}, {"name": "AstraZeneca Lung Cancer Study Locator Service", "role": "CONTACT", "phone": "1-884-432-3892", "email": "az-lcsl@careboxhealth.com"}], "overallOfficials": [{"name": "Hidehito Horinouchi, MD, PhD", "affiliation": "National Cancer Center Hospital", "role": "PRINCIPAL_INVESTIGATOR"}, {"name": "Alexander Spira, MD, PhD", "affiliation": "Virginia Cancer Specialists Research Institute", "role": "PRINCIPAL_INVESTIGATOR"}, {"name": "Jinming Yu, MD, PhD", "affiliation": "Shandong Cancer Hospital and Institute", "role": "PRINCIPAL_INVESTIGATOR"}]}, "referencesModule": {"seeAlsoLinks": [{"label": "1-844-432-3892 Lung Cancer Study Locator details to CT.gov for the US sites only", "url": "https://www.lungcancerstudylocator.com/trial/listing/331601"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT05211895",
+            "orgStudyIdInfo": {
+                "id": "D9075C00001"
+            },
+            "secondaryIdInfos": [
+                {
+                    "id": "2021-004327-32",
+                    "type": "EUDRACT_NUMBER"
+                }
+            ],
+            "organization": {
+                "fullName": "AstraZeneca",
+                "class": "INDUSTRY"
+            },
+            "briefTitle": "A Global Study to Assess the Effects of Durvalumab + Domvanalimab Following Concurrent Chemoradiation in Participants With Stage III Unresectable NSCLC",
+            "officialTitle": "A Phase III, Randomised, Double-blind, Placebo-controlled, Multicentre, International Study of Durvalumab Plus Domvanalimab(AB154) in Participants With Locally Advanced (Stage III), Unresectable Non-small Cell Lung Cancer Whose Disease Has Not Progressed Following Definitive Platinum-based Concurrent Chemoradiation Therapy",
+            "acronym": "PACIFIC-8"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "AstraZeneca",
+                "class": "INDUSTRY"
+            },
+            "collaborators": [
+                {
+                    "name": "Arcus Biosciences, Inc.",
+                    "class": "INDUSTRY"
+                }
+            ]
+        },
+        "descriptionModule": {
+            "briefSummary": "This is a Phase III, randomised, double-blind, placebo-controlled, multicentre, international study assessing the efficacy and safety of durvalumab (MEDI4736) and domvanalimab (AB154) compared with durvalumab plus placebo in adults with locally advanced (Stage III), unresectable NSCLC whose disease has not progressed following definitive platinum-based cCRT."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Non-Small Cell Lung Cancer"
+            ],
+            "keywords": [
+                "non-small cell lung cancer",
+                "locally advanced",
+                "NSCLC"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE3"
+            ],
+            "designInfo": {
+                "allocation": "RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "QUADRUPLE",
+                    "maskingDescription": "Double-blind",
+                    "whoMasked": [
+                        "PARTICIPANT",
+                        "CARE_PROVIDER",
+                        "INVESTIGATOR",
+                        "OUTCOMES_ASSESSOR"
+                    ]
+                }
+            },
+            "enrollmentInfo": {
+                "count": 860,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Arm A: Durvalumab + Domvanalimab",
+                    "type": "EXPERIMENTAL",
+                    "description": "Durvalumab and domvanalimab as an IV infusion q4w, starting on Day 1 for up to a maximum of 12 months",
+                    "interventionNames": [
+                        "Drug: Durvalumab",
+                        "Drug: Domvanalimab"
+                    ]
+                },
+                {
+                    "label": "Arm B: Durvalumab + Placebo",
+                    "type": "ACTIVE_COMPARATOR",
+                    "description": "Durvalumab + placebo as an IV infusion q4w starting on Day 1 for up to a maximum of 12 months",
+                    "interventionNames": [
+                        "Drug: Durvalumab",
+                        "Other: Placebo"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DRUG",
+                    "name": "Durvalumab",
+                    "description": "Durvalumab IV (Intravenous infusion)",
+                    "armGroupLabels": [
+                        "Arm A: Durvalumab + Domvanalimab",
+                        "Arm B: Durvalumab + Placebo"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Domvanalimab",
+                    "description": "Domvanalimab IV (Intravenous infusion)",
+                    "armGroupLabels": [
+                        "Arm A: Durvalumab + Domvanalimab"
+                    ]
+                },
+                {
+                    "type": "OTHER",
+                    "name": "Placebo",
+                    "description": "Placebo IV (Intravenous infusion)",
+                    "armGroupLabels": [
+                        "Arm B: Durvalumab + Placebo"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "INCLUSION CRITERIA:\n\n1. Participant must be \u2265 18 years at the time of screening.\n2. Histologically- or cytologically-documented NSCLC and have been treated with concurrent CRT for locally advanced, unresectable (Stage III) disease\n3. Provision of a tumour tissue sample obtained prior to CRT\n4. Documented tumour PD-L1 status \u2265 1% by central lab\n5. Documented EGFR and ALK wild-type status (local or central).\n6. Patients must not have progressed following definitive, platinum-based, concurrent chemoradiotherapy\n7. Participants must have received at least 2 cycles of platinum-based chemotherapy concurrent with radiation therapy\n8. Participants must have received a total dose of radiation of 60 Gy \u00b110% (54 Gy to 66 Gy) as part of the chemoradiation therapy, to be randomised. Radiation therapy should be administered by intensity modulated RT (preferred) or 3D-conforming technique.\n9. WHO performance status of 0 or 1 at randomization\n10. Adequate organ and marrow function\n\nEXCLUSION CRITERIA:\n\n1. History of another primary malignancy, except for:\n\n   * Malignancies treated with curative intent and adequate follow-up with no known active disease and have not required active treatment within the past 3 years before the first dose of study intervention and of low potential risk of recurrence.\n   * Adequately resected non melanoma skin cancer or lentigo maligna without evidence of disease .\n   * Adequately treated carcinoma in situ, including Ta tumors without evidence of disease.\n2. Mixed small cell and non-small cell lung cancer histology.\n3. Participants who receive sequential (not inclusive of induction) chemoradiation therapy for locally advanced (Stage III) unresectable NSCLC.\n4. Participants with locally advanced (Stage III) unresectable NSCLC who have progressed during platinum-based cCRT.\n5. Any unresolved toxicity CTCAE \\>Grade 2 from the prior chemoradiation therapy (excluding alopecia).\n6. Participants with \u2265 grade 2 pneumonitis from prior chemoradiation therapy.\n7. History of idiopathic pulmonary fibrosis, drug-induced pneumonitis, or idiopathic pneumonitis - regardless of time of onset prior to randomisation. Evidence of active non-CRT induced pneumonitis (\u2265 Grade 2), active pneumonia, active ILD, active or recently treated pleural effusion, or current pulmonary fibrosis\n8. Active or prior documented autoimmune or inflammatory disorders (with exceptions)\n9. Active EBV infection, or known or suspected chronic active EBV infection at screening\n10. Current or prior use of immunosuppressive medication within 14 days before the first dose of durvalumab.",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "minimumAge": "18 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "AstraZeneca Clinical Study Information Center",
+                    "role": "CONTACT",
+                    "phone": "1-877-240-9479",
+                    "email": "information.center@astrazeneca.com"
+                },
+                {
+                    "name": "AstraZeneca Lung Cancer Study Locator Service",
+                    "role": "CONTACT",
+                    "phone": "1-884-432-3892",
+                    "email": "az-lcsl@careboxhealth.com"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Hidehito Horinouchi, MD, PhD",
+                    "affiliation": "National Cancer Center Hospital",
+                    "role": "PRINCIPAL_INVESTIGATOR"
+                },
+                {
+                    "name": "Alexander Spira, MD, PhD",
+                    "affiliation": "Virginia Cancer Specialists Research Institute",
+                    "role": "PRINCIPAL_INVESTIGATOR"
+                },
+                {
+                    "name": "Jinming Yu, MD, PhD",
+                    "affiliation": "Shandong Cancer Hospital and Institute",
+                    "role": "PRINCIPAL_INVESTIGATOR"
+                }
+            ]
+        },
+        "referencesModule": {
+            "seeAlsoLinks": [
+                {
+                    "label": "1-844-432-3892 Lung Cancer Study Locator details to CT.gov for the US sites only",
+                    "url": "https://www.lungcancerstudylocator.com/trial/listing/331601"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

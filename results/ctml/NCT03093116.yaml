@@ -168,7 +168,10 @@ summary: 'Phase 1 dose escalation will determine the first cycle dose-limiting t
   advanced solid tumors that harbor a ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement.'
 treatment_list:
   step:
-  - arm:
+  - step_internal_id: 111
+    step_code: '1'
+    step_type: Registration
+    arm:
     - arm_code: Repotrectinib (TPX-0005)
       arm_internal_id: 0
       arm_description: "Phase 1\n\nOral repotrectinib (TPX-0005):\n\nPhase 1a dose\
@@ -186,7 +189,7 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-      and:
+    - and:
       - clinical:
           age_numerical: '>=12'
           disease_status:

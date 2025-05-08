@@ -15,9 +15,9 @@ map {nct_id} -> read pre-saved nct data file for specific id and map to ctml sch
 import json
 import sys
 import os
-import all_studies
-import clinical_trials_gov as ctg
-import trial_data_helper as tdh
+import trial_data.all_studies as ast
+import trial_data.clinical_trials_gov as ctg
+import trial_data.trial_data_helper as tdh
 from loguru import logger
 
 def main():
@@ -29,7 +29,7 @@ def main():
     if arg1 == 'pull':
         arg2 = sys.argv[2]
         if arg2 == 'all':
-            all_studies.main()
+            ast.all_studies.main()
         else:
             nct_id = arg2
             ctg.get_nct_study(nct_id)
@@ -90,5 +90,5 @@ def get_gene_list() -> list:
     return genes
 
 if __name__ == "__main__":
-    logger.add('nct2ctml.log', rotation = '1 MB', encoding="utf-8", format="{time} {level} - Line: {line} - {message}")
+    logger.add('logs/nct2ctml.log', rotation = '1 MB', encoding="utf-8", format="{time} {level} - Line: {line} - {message}")
     main()

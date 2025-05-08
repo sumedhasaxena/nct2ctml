@@ -1,1 +1,174 @@
-{"protocolSection": {"identificationModule": {"nctId": "NCT05754684", "orgStudyIdInfo": {"id": "HKCH-REC-2021-007"}, "organization": {"fullName": "Hong Kong Children's Hospital", "class": "OTHER"}, "briefTitle": "Quadruple Immunotherapy for Neuroblastoma", "officialTitle": "Quadruple Immunotherapy for Paediatric Patients with Relapsed or Refractory Neuroblastoma"}, "sponsorCollaboratorsModule": {"responsibleParty": {"type": "PRINCIPAL_INVESTIGATOR", "investigatorFullName": "Cheuk Ka Leung Daniel", "investigatorTitle": "Consultant", "investigatorAffiliation": "Hong Kong Children's Hospital"}, "leadSponsor": {"name": "Hong Kong Children's Hospital", "class": "OTHER"}, "collaborators": [{"name": "The University of Hong Kong", "class": "OTHER"}]}, "descriptionModule": {"briefSummary": "This is a single-arm clinical trial to evaluate the efficacy and safety of quadruple immunotherapy with natural killer (NK) cells, anti-GD2 antibody, cytokines (interleukin-2 (IL-2) and granulocyte-macrophage colony stimulating factor (GM-CSF)) and retinoid X receptor gamma (RXRg) agonist spironolactone for paediatric patients with relapsed or refractory neuroblastoma.", "detailedDescription": "Included patients will receive intravenous infusion of donor NK cells on day 0, and anti-GD2 antibody (dinutuximab) on day -6 to day -2. IL-2 will be given subcutaneously on day -1, day +1, day +3, day +5, day +7, and day +9. Subcutaneous injection of GM-CSF will be started on day 0, given daily till neutrophil count \\>1000/mm3. Spironolactone will be started orally on day -1, given three times daily till cessation of GM-CSF.\n\nAlternative anti-GD2 antibody (Naxitamab) can be used instead of dinutuximab, to be given on day -5, day -3, day +1 and day +3."}, "conditionsModule": {"conditions": ["Neuroblastoma Recurrent"]}, "designModule": {"studyType": "INTERVENTIONAL", "phases": ["PHASE2"], "designInfo": {"allocation": "NA", "interventionModel": "SINGLE_GROUP", "primaryPurpose": "TREATMENT", "maskingInfo": {"masking": "NONE"}}, "enrollmentInfo": {"count": 29, "type": "ESTIMATED"}}, "armsInterventionsModule": {"armGroups": [{"label": "Intervention", "type": "EXPERIMENTAL", "description": "Quadruple immunotherapy", "interventionNames": ["Biological: Natural killer cell", "Drug: Dinutuximab beta", "Drug: Interleukin-2", "Drug: Granulocyte-Macrophage Colony-Stimulating Factor", "Drug: Spironolactone", "Drug: Naxitamab"]}], "interventions": [{"type": "BIOLOGICAL", "name": "Natural killer cell", "description": "Natural killer cells isolated from HLA-haploidentical relative donor", "armGroupLabels": ["Intervention"], "otherNames": ["NK cell"]}, {"type": "DRUG", "name": "Dinutuximab beta", "description": "Dinutuximab beta iv for 5 days", "armGroupLabels": ["Intervention"], "otherNames": ["Ch14.18"]}, {"type": "DRUG", "name": "Interleukin-2", "description": "Interleukin-2 sc alternate day for 6 doses", "armGroupLabels": ["Intervention"], "otherNames": ["Aldesleukin"]}, {"type": "DRUG", "name": "Granulocyte-Macrophage Colony-Stimulating Factor", "description": "Granulocyte-macrophage colony-stimulating factor sc daily till ANC \\>2,000/mm3", "armGroupLabels": ["Intervention"], "otherNames": ["Sargramostim"]}, {"type": "DRUG", "name": "Spironolactone", "description": "Spironolactone po three time daily", "armGroupLabels": ["Intervention"], "otherNames": ["Aldactone"]}, {"type": "DRUG", "name": "Naxitamab", "description": "Naxitamab iv for 4 days (as alternative for dinutuximab)", "armGroupLabels": ["Intervention"], "otherNames": ["hu3F8"]}]}, "eligibilityModule": {"eligibilityCriteria": "Inclusion Criteria:\n\n* relapsed or refractory neuroblastoma\n* Adequate organ function: creatinine clearance \u226540 ml/min/1.73m2, total bilirubin \u22643 times upper limit of normal and ALT \u2264500 IU/L, left ventricular shortening fraction \u226525%, and oxygen saturation \u226592% in room air\n* Karnofsky or Lansky performance status score \u226550\n* Has an appropriate HLA-haploidentical NK-cell donor available\n\nExclusion Criteria:\n\n* Pregnant or lactating woman\n* HIV infection\n* Patients for whom conventional treatment is deemed more appropriate\n* Patients who are unlikely to benefit, e.g., terminal malignancy with life expectancy \\<1 month", "healthyVolunteers": false, "sex": "ALL", "maximumAge": "18 Years", "stdAges": ["CHILD", "ADULT"]}, "contactsLocationsModule": {"centralContacts": [{"name": "Daniel Cheuk", "role": "CONTACT", "phone": "852-35136049", "email": "cheukkld@gmail.com"}], "overallOfficials": [{"name": "Daniel Cheuk", "affiliation": "Hong Kong Children's Hospital", "role": "PRINCIPAL_INVESTIGATOR"}]}}, "hasResults": false}
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT05754684",
+            "orgStudyIdInfo": {
+                "id": "HKCH-REC-2021-007"
+            },
+            "organization": {
+                "fullName": "Hong Kong Children's Hospital",
+                "class": "OTHER"
+            },
+            "briefTitle": "Quadruple Immunotherapy for Neuroblastoma",
+            "officialTitle": "Quadruple Immunotherapy for Paediatric Patients with Relapsed or Refractory Neuroblastoma"
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "PRINCIPAL_INVESTIGATOR",
+                "investigatorFullName": "Cheuk Ka Leung Daniel",
+                "investigatorTitle": "Consultant",
+                "investigatorAffiliation": "Hong Kong Children's Hospital"
+            },
+            "leadSponsor": {
+                "name": "Hong Kong Children's Hospital",
+                "class": "OTHER"
+            },
+            "collaborators": [
+                {
+                    "name": "The University of Hong Kong",
+                    "class": "OTHER"
+                }
+            ]
+        },
+        "descriptionModule": {
+            "briefSummary": "This is a single-arm clinical trial to evaluate the efficacy and safety of quadruple immunotherapy with natural killer (NK) cells, anti-GD2 antibody, cytokines (interleukin-2 (IL-2) and granulocyte-macrophage colony stimulating factor (GM-CSF)) and retinoid X receptor gamma (RXRg) agonist spironolactone for paediatric patients with relapsed or refractory neuroblastoma.",
+            "detailedDescription": "Included patients will receive intravenous infusion of donor NK cells on day 0, and anti-GD2 antibody (dinutuximab) on day -6 to day -2. IL-2 will be given subcutaneously on day -1, day +1, day +3, day +5, day +7, and day +9. Subcutaneous injection of GM-CSF will be started on day 0, given daily till neutrophil count \\>1000/mm3. Spironolactone will be started orally on day -1, given three times daily till cessation of GM-CSF.\n\nAlternative anti-GD2 antibody (Naxitamab) can be used instead of dinutuximab, to be given on day -5, day -3, day +1 and day +3."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Neuroblastoma Recurrent"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE2"
+            ],
+            "designInfo": {
+                "allocation": "NA",
+                "interventionModel": "SINGLE_GROUP",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 29,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Intervention",
+                    "type": "EXPERIMENTAL",
+                    "description": "Quadruple immunotherapy",
+                    "interventionNames": [
+                        "Biological: Natural killer cell",
+                        "Drug: Dinutuximab beta",
+                        "Drug: Interleukin-2",
+                        "Drug: Granulocyte-Macrophage Colony-Stimulating Factor",
+                        "Drug: Spironolactone",
+                        "Drug: Naxitamab"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "BIOLOGICAL",
+                    "name": "Natural killer cell",
+                    "description": "Natural killer cells isolated from HLA-haploidentical relative donor",
+                    "armGroupLabels": [
+                        "Intervention"
+                    ],
+                    "otherNames": [
+                        "NK cell"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Dinutuximab beta",
+                    "description": "Dinutuximab beta iv for 5 days",
+                    "armGroupLabels": [
+                        "Intervention"
+                    ],
+                    "otherNames": [
+                        "Ch14.18"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Interleukin-2",
+                    "description": "Interleukin-2 sc alternate day for 6 doses",
+                    "armGroupLabels": [
+                        "Intervention"
+                    ],
+                    "otherNames": [
+                        "Aldesleukin"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Granulocyte-Macrophage Colony-Stimulating Factor",
+                    "description": "Granulocyte-macrophage colony-stimulating factor sc daily till ANC \\>2,000/mm3",
+                    "armGroupLabels": [
+                        "Intervention"
+                    ],
+                    "otherNames": [
+                        "Sargramostim"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Spironolactone",
+                    "description": "Spironolactone po three time daily",
+                    "armGroupLabels": [
+                        "Intervention"
+                    ],
+                    "otherNames": [
+                        "Aldactone"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Naxitamab",
+                    "description": "Naxitamab iv for 4 days (as alternative for dinutuximab)",
+                    "armGroupLabels": [
+                        "Intervention"
+                    ],
+                    "otherNames": [
+                        "hu3F8"
+                    ]
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* relapsed or refractory neuroblastoma\n* Adequate organ function: creatinine clearance \u226540 ml/min/1.73m2, total bilirubin \u22643 times upper limit of normal and ALT \u2264500 IU/L, left ventricular shortening fraction \u226525%, and oxygen saturation \u226592% in room air\n* Karnofsky or Lansky performance status score \u226550\n* Has an appropriate HLA-haploidentical NK-cell donor available\n\nExclusion Criteria:\n\n* Pregnant or lactating woman\n* HIV infection\n* Patients for whom conventional treatment is deemed more appropriate\n* Patients who are unlikely to benefit, e.g., terminal malignancy with life expectancy \\<1 month",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "maximumAge": "18 Years",
+            "stdAges": [
+                "CHILD",
+                "ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Daniel Cheuk",
+                    "role": "CONTACT",
+                    "phone": "852-35136049",
+                    "email": "cheukkld@gmail.com"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Daniel Cheuk",
+                    "affiliation": "Hong Kong Children's Hospital",
+                    "role": "PRINCIPAL_INVESTIGATOR"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}
