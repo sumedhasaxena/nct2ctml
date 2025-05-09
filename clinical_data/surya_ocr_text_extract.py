@@ -13,6 +13,7 @@ import argparse
 import os
 
 extracted_text_dir = 'extracted_text'
+image_to_be_extracted_dir = 'images'
 
 def sort_lines(lines:List[TextLine] | List[dict], tolerance=10.0):
     vertical_groups = []
@@ -41,7 +42,10 @@ def sort_lines(lines:List[TextLine] | List[dict], tolerance=10.0):
 
     return ' '.join(sorted_text).strip()
 
-def main(image_path: str):
+def main(image_file: str):
+    current_dir =  os.path.dirname(__file__)
+    image_path = os.path.abspath(os.path.join(current_dir,image_to_be_extracted_dir,image_file))
+    print(f'Looking for file in {image_path}')
     image = Image.open(image_path)
     langs = ["en"]
     recognition_predictor = RecognitionPredictor()
@@ -50,7 +54,6 @@ def main(image_path: str):
     predictions = recognition_predictor([image], [langs], detection_predictor)
     text_lines = predictions[0].text_lines
     sorted_text = sort_lines(text_lines)
-        
     save_extracted_text(sorted_text, image_path)
 
 def save_extracted_text(extracted_text:str, image_path:str):
@@ -64,7 +67,7 @@ def save_extracted_text(extracted_text:str, image_path:str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract text from an image file.")
-    parser.add_argument("image_path", type=str, help="Relative path to the image file")
+    parser.add_argument("image_file", type=str, help="Name of the image file")
     args = parser.parse_args()
 
-    main(args.image_path)
+    main(args.image_file)
