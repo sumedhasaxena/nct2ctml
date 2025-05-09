@@ -10,6 +10,9 @@ from surya.detection import DetectionPredictor
 from typing import List
 from surya.recognition.schema import TextLine
 import argparse
+import os
+
+extracted_text_dir = 'extracted_text'
 
 def sort_lines(lines:List[TextLine] | List[dict], tolerance=10.0):
     vertical_groups = []
@@ -26,8 +29,7 @@ def sort_lines(lines:List[TextLine] | List[dict], tolerance=10.0):
 
         #if group not found,create a new one
         if not found_group:
-            vertical_groups.append([min_y,line])
-    
+            vertical_groups.append([min_y,line])   
 
     sorted_text = []
     for group in sorted(vertical_groups):
@@ -47,10 +49,18 @@ def main(image_path: str):
 
     predictions = recognition_predictor([image], [langs], detection_predictor)
     text_lines = predictions[0].text_lines
-    s = sort_lines(text_lines)
-    print(s)
+    sorted_text = sort_lines(text_lines)
+        
+    save_extracted_text(sorted_text, image_path)
 
-#IMAGE_PATH = "mtb/case1.png"
+def save_extracted_text(extracted_text:str, image_path:str):
+    current_dir =  os.path.dirname(__file__)
+    op_file = f'{os.path.splitext(os.path.basename(image_path))[0]}.txt'
+    op_file_path = os.path.join(current_dir, extracted_text_dir,op_file)
+    with open(op_file_path, 'w') as op_text_file:
+        op_text_file.write(extracted_text)
+    print(f"Extracted text saved at {op_file_path}")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract text from an image file.")
