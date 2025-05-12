@@ -4,16 +4,6 @@ import requests
 import urllib.parse
 from loguru import logger
 
-def get_level1_diagnosis_from_condition_keywords(nct_id:str, keywords: set, level1_oncotree: set) -> dict:    
-    cancer_keywords_list = list(keywords)
-    level1_oncotree_list = list(level1_oncotree) 
-    
-    prompt = get_ai_prompt_level1(cancer_keywords_list, level1_oncotree_list)
-        
-    ai_response = send_ai_request(nct_id, prompt)
-    oncotree_diagnoses_dict = parse_ai_response(ai_response)
-    return oncotree_diagnoses_dict
-
 def get_level1_diagnosis_from_original_conditions(nct_id:str, original_conditions: dict, level1_oncotree: set) -> dict:    
     original_conditions_list = list(original_conditions)
     level1_oncotree_list = list(level1_oncotree) 
@@ -33,6 +23,17 @@ def get_child_level_diagnoses_from_condition(nct_id:str, child_nodes_oncotree:se
     ai_response = send_ai_request(nct_id, prompt)
     oncotree_diagnoses_dict = parse_ai_response(ai_response)   
     return oncotree_diagnoses_dict
+
+def get_child_level_diagnosis_from_clinical_condition(clinical_id:str, child_nodes_oncotree:set, condition: str) -> dict:
+
+    child_nodes_oncotree_list = list(child_nodes_oncotree)
+
+    prompt = get_ai_prompt_clinical_oncotree_diagnosis(condition, child_nodes_oncotree_list)
+
+    ai_response = send_ai_request(clinical_id, prompt)
+    oncotree_diagnosis_dict = parse_ai_response(ai_response)   
+    return oncotree_diagnosis_dict
+
 
 def get_her2_er_pr_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> dict:
     prompt = get_her2_er_pr_status_prompt(eligibilityCriteria, keywords)
@@ -212,6 +213,23 @@ def get_ai_prompt_child_values(nct_condition, child_nodes_oncotree_list):
     {{
     "cancer_condition": "",
     "oncotree_diagnoses": []
+    }}
+    """
+    return prompt
+
+def get_ai_prompt_clinical_oncotree_diagnosis(condition, child_nodes_oncotree_list):
+
+    # cancer_condition: {condition} E.g. -> Colorectal Cancer
+    # Oncotree values: {child_nodes_oncotree} # E.g. -> {'Signet Ring Cell Adenocarcinoma of the Colon and Rectum', 'Colon Adenocarcinoma In Situ', 'Small Bowel Well-Differentiated Neuroendocrine Tumor', 'Gastrointestinal Neuroendocrine Tumors', 'Well-Differentiated Neuroendocrine Tumor of the Rectum', 'Small Bowel Cancer', 'Anal Squamous Cell Carcinoma', 'Anorectal Mucosal Melanoma', 'Low-grade Appendiceal Mucinous Neoplasm', 'Medullary Carcinoma of the Colon', 'Goblet Cell Adenocarcinoma of the Appendix', 'Mucinous Adenocarcinoma of the Appendix', 'Appendiceal Adenocarcinoma', 'Small Intestinal Carcinoma', 'Well-Differentiated Neuroendocrine Tumor of the Appendix', 'Signet Ring Cell Type of the Appendix', 'Colorectal Adenocarcinoma', 'High-Grade Neuroendocrine Carcinoma of the Colon and Rectum', 'Colonic Type Adenocarcinoma of the Appendix', 'Anal Gland Adenocarcinoma', 'Rectal Adenocarcinoma', 'Mucinous Adenocarcinoma of the Colon and Rectum', 'Duodenal Adenocarcinoma', 'Colon Adenocarcinoma', 'Tubular Adenoma of the Colon'}
+
+    prompt = f"""
+    Task: Map the cancer condition to the closest diagnosis from the list of 'Oncotree values' below.
+    Cancer_condition: {condition}
+    Oncotree values: {child_nodes_oncotree_list}
+    The output should be in the json format :
+    {{
+    "cancer_condition": "",
+    "oncotree_diagnosis": ""
     }}
     """
     return prompt
