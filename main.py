@@ -22,7 +22,7 @@ from loguru import logger
 
 def main():
     if len(sys.argv) < 3 or sys.argv[1] not in ['pull','map']:
-        print("Usage: python main.py [pull all | pull {nct_id} | map all | map {nct_id}]")
+        print("Usage: python main.py [pull all | pull existing | pull {nct_id} | map all | map {nct_id}]")
         return
     
     arg1 = sys.argv[1]
@@ -30,6 +30,8 @@ def main():
         arg2 = sys.argv[2]
         if arg2 == 'all':
             ast.all_studies.main()
+        elif arg2 == 'existing':
+            ctg.get_status_of_existing_studies()
         else:
             nct_id = arg2
             ctg.get_nct_study(nct_id)

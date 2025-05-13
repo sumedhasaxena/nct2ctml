@@ -4,6 +4,7 @@ of data from clinicaltrials.gov
 """
 import sys
 import os
+import csv
 
 sys.path.append(os.path.abspath('../'))
 
@@ -84,6 +85,49 @@ def get_all_studies():
             break
         params['pageToken'] = nextPageToken
     return nct_data
+
+def get_status_of_existing_studies():
+
+    nct_ids = tdh.read_from_file_path(os.path.abspath(config.EXISTING_NCT_STUDIES_PATH), 'json')
+
+    nct_status_data = []
+    ALL_STUDIES_ENDPOINT = "studies"
+    # filters
+    # Join the list into a single string for the filter.ids parameter
+    filter_ids = "|".join(nct_ids)
+    params = {'filter.ids' : filter_ids,
+              'fields': "NCTId|OverallStatus|ContactsLocationsModule",
+              'pageSize': 50}
+    while True: 
+        endpoint_url = f'{urllib.parse.urljoin(API_BASE_URL, ALL_STUDIES_ENDPOINT)}?{urllib.parse.urlencode(params)}'
+        response = requests.get(endpoint_url)
+        response.raise_for_status()
+
+        json_response = response.json()
+        for study in json_response['studies']:
+            
+            nct_id = study['protocolSection']['identificationModule']['nctId']
+            overall_status = study['protocolSection']['statusModule']['overallStatus']
+            if overall_status.lower() == "recruiting":
+                is_recruiting_in_hk =tdh.check_if_recruiting_in_HK(study)
+            else:
+                is_recruiting_in_hk="NA"
+            nct_status_data.append((nct_id, overall_status, is_recruiting_in_hk))
+        if 'nextPageToken' not in json_response:
+            break
+        nextPageToken = json_response['nextPageToken']
+        if not nextPageToken:
+            break
+        params['pageToken'] = nextPageToken
+    
+    # save NCT_IDS with satatus to CSV file
+    path_to_save = os.path.join('results','nct','nct_status.csv')
+    with open(path_to_save, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['NCT ID', 'Overall Status', 'Recruiting in HK?'])
+        writer.writerows(nct_status_data)
+    print(f"Data stored at location: {path_to_save}")
+
 
 def get_nct_study(nct_id:str):
     """

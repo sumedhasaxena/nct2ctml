@@ -47,11 +47,18 @@ def is_study_interventional(trial_data: dict) -> bool:
 def has_correct_intervention(trial_data: dict, intervention_types:list) -> bool:
     interventions = trial_data['protocolSection']['armsInterventionsModule']['interventions']
     return any(intervention["type"] in intervention_types for intervention in interventions)
-
         
 def read_from_file(path: str, file_name :str, format:str) -> dict:    
     if format == "json":
         with open(f'{path}/{file_name}.json', 'r') as json_file:
+            data = json.load(json_file)
+            return data
+    else:
+        print('No implementation for formats other than json')
+
+def read_from_file_path(path: str, format:str) -> dict:    
+    if format == "json":
+        with open(path, 'r') as json_file:
             data = json.load(json_file)
             return data
     else:
