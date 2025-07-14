@@ -8,7 +8,7 @@ The CTML trial documents are YAML files containing trial information.
 The schema for a trial document is located at [matchminer_schema](http://https://github.com/sumedhasaxena/matchminer-api/blob/5b97c71e3f9f7b29c77a84ddbc5ad6b02e8e124b/matchminer/data_model.py "matchminer_schema").
 Please refer to following fields in the link above:
 - parent_schema
-- yaml_match_schema
+- yaml_genomic_schema
 - yaml_clinical_schema
 
 ------------
