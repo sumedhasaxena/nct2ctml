@@ -15,6 +15,19 @@ Please refer to following fields in the link above:
 
 
 #### Directory Structure
+
+nct2ctml/
+
+├── ctml/
+
+│   ├── closed/
+
+│   ├── json/
+
+│   ├── pending/
+
+│   └── reviewed/
+
 The CTML directory on root level contains the trial CTML files. The sub-directories and their purpose is as follows:
 
 **pending**: Newly curated CTML trial files go here.
