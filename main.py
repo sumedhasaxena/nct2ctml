@@ -15,9 +15,9 @@ map {nct_id} -> read pre-saved nct data file for specific id and map to ctml sch
 import json
 import sys
 import os
-import trial_data.all_studies as ast
-import trial_data.clinical_trials_gov as ctg
-import trial_data.trial_data_helper as tdh
+import src.all_studies as ast
+import src.clinical_trials_gov as ctg
+import src.trial_data_helper as tdh
 from loguru import logger
 import argparse
 

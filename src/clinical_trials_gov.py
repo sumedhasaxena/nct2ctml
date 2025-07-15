@@ -8,14 +8,14 @@ import csv
 
 sys.path.append(os.path.abspath('../'))
 
-import trial_data.trial_config as config
+import src.trial_config as config
 import requests
 import urllib.parse
-import trial_data.ctml_schema as cs
+import src.ctml_schema as cs
 import utils.ai_helper as ai
-import trial_data.trial_data_helper as tdh
+import src.trial_data_helper as tdh
 import utils.oncotree as onct
-import trial_data.match_criteria_mapper as mcm
+import src.match_criteria_mapper as mcm
 from loguru import logger
 
 

@@ -1,6 +1,6 @@
 import config
 import utils.aho_corasick as ac
-import trial_data.trial_data_helper as tdh
+import src.trial_data_helper as tdh
 
 def get_keywords_from_conditions(conditions_list):
     all_keywords = set()

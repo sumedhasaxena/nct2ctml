@@ -4,7 +4,7 @@ and write the result in a CSV file
 Designed to also run as a standalone script
 """
 
-import trial_data.clinical_trials_gov as ctg
+import src.clinical_trials_gov as ctg
 import csv
 
 def main():
