@@ -13,7 +13,7 @@ The **nct2ctml** repository is a specialized ETL (Extract, Transform, Load) appl
 
 > **Manual Curation:**
 > For manual creation or editing of CTML files, please refer to the guide at [`doc/trial_creation_guide.md`](doc/trial_creation_guide.md).
-
+> Plans for new workflow: https://miro.com/app/board/uXjVJcuSvUY=/?share_link_id=429445659556
 ---
 
 For detailed information about the system architecture and component relationships, see:
