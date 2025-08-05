@@ -1,0 +1,82 @@
+nct_id: HKUCTR2956
+nct_purpose: >-
+  To compare efficacy and safety of radium-223 versus novel anti-hormonal therapy in bone-dominant metastatic castration-resistant prostate cancer (mCRPC) patients who progressed on/after one line of NHA.
+age: Adults
+cancer_center_accrual_goal_upper: 12
+data_table4: Interventional
+drug_list:
+  drug:
+    - drug_name: 'Radium-223 dichloride'
+    - drug_name: 'Abiraterone'
+    - drug_name: 'Prednisone/ Prednisolone'
+    - drug_name: 'Enzalutamide'
+long_title: >-
+  A Phase 4, randomized, open-label, multicenter efficacy and safety study of standard dose of radium-223 dichloride vs. standard doses of novel anti-hormonal therapy (NAH) in patients with bone dominant metastatic castration resistant prostate cancer (mCRPC) progressing on/after one line of NAH.
+management_group_list:
+  management_group:
+    - is_primary: 'Y'
+      management_group_name: HKU
+oncology_group_list:
+  oncology_group:
+    - group_name: Group1
+      is_primary: 'N'
+phase: '4'
+principal_investigator: Dr. Wayne Pei Lam
+principal_investigator_institution: HKU
+program_area_list:
+  program_area:
+    - is_primary: 'Y'
+      program_area_name: Program1
+protocol_id: 0
+protocol_no: '{{protocol_no}}'
+protocol_target_accrual: 12
+protocol_type: INTERVENTIONAL
+prior_treatment_requirements:
+  - Participants must be ≥18 years old and male with histologically confirmed adenocarcinoma of the prostate.
+  - Participants must have bone-dominant mCRPC progressing after one line of NHA.
+  - Participants must have had one prior taxane treatment or refused/ineligible for such.
+  - Participants must have ≥2 bone metastases and no visceral or brain metastases.
+  - Participants must maintain medical or surgical castration (testosterone <50 ng/dL).
+  - Participants must be on bone health agents unless contraindicated.
+  - Participants must have symptomatic prostate cancer with BPI worst pain ≥1.
+  - Participants must have ECOG performance status 0 or 1 and life expectancy ≥6 months.
+  - Participants must meet defined laboratory criteria including ANC, platelets, hemoglobin, liver/renal/coagulation parameters.
+  - Participants must be able to swallow study drugs and use effective contraception.
+  - Participants must provide informed consent.
+  - Exclude- Participants with neuroendocrine or small cell histology.
+  - Exclude- Participants with prior visceral metastasis, brain metastasis, or spinal cord compression.
+  - Exclude- Participants with uncontrolled hypertension, viral hepatitis, or pituitary/adrenal dysfunction.
+  - Exclude- Participants with serious comorbidities including significant heart disease or hepatic impairment.
+  - Exclude- Participants with prior systemic radiotherapy with isotopes or recent investigational therapy.
+  - Exclude- Participants with hypersensitivity to study drugs or active concurrent malignancies.
+short_title: >-
+  Radium-223 vs NHA in bone-dominant mCRPC
+site_list:
+  site: []
+sponsor_list:
+  sponsor: []
+staff_list:
+  protocol_staff: []
+status: open to accrual
+summary: ''
+treatment_list:
+  step:
+    - step_code: '1'
+      step_type: 'Registration'
+      step_internal_id: 1111
+      arm:
+        - arm_code: Radium Arm
+          arm_internal_id: 1111
+          arm_description: 'Radium-223 dichloride every 4 weeks for up to 6 cycles'
+          arm_suspended: N
+        - arm_code: Control Arm
+          arm_internal_id: 2222
+          arm_description: 'Abiraterone or Enzalutamide + Prednisone/Prednisolone until progression'
+          arm_suspended: N
+      match:
+        - and:
+            - clinical:
+                oncotree_primary_diagnosis: Prostate Adenocarcinoma
+            - clinical:
+                disease_status:
+                  - Metastatic
