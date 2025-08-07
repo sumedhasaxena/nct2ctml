@@ -43,8 +43,8 @@ def main():
 
     args = parser.parse_args()
 
-    nct_files_path = 'results/nct'
-    ctml_files_path = "results/ctml/"
+    nct_files_path = 'cache/nct'
+    ctml_files_path = "cache/ctml/"
 
     if args.command == 'pull':
         if args.all:
@@ -61,12 +61,27 @@ def main():
             map_nct(args.nct_id, nct_files_path, ctml_files_path)
 
 def pull_all():
-    ast.all_studies.main()
+    """Trial synchronization implementation"""
+    from src.trial_sync_manager import TrialSyncManager
+    
+    try:
+        sync = TrialSyncManager()
+        results = sync.sync_trials()
+        print("Trial synchronization completed successfully!")
+        print(f"Processed {results['api_trials_processed']} trials from API")
+        print(f"Inserted {results['insertions']} new trials")
+        print(f"Updated {results['updates']} existing trials")
+        print(f"Closed {results['closures']} trials")
+        print(f"Merged {results['local_trials_merged']} local trials")
+    except Exception as e:
+        logger.error(f"Error in pull_all: {e}")
+        raise
 
 def pull_nct(nct_id):
     ctg.get_nct_study(nct_id)
 
 def pull_existing():
+    """Legacy method - kept for backward compatibility"""
     ctg.get_status_of_existing_studies()
 
 def map_all(nct_files_path, ctml_files_path):
