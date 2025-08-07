@@ -70,7 +70,7 @@ def get_all_studies():
 
                     # save each study as a separate json file after removing unnecessary sections
                     tdh.remove_unused_keys(study)
-                    tdh.save_to_file(study, 'results/nct/', nct_id, 'json')
+                    tdh.save_to_file(study, 'cache/nct/', nct_id, 'json')
                 else:
                     print(f"Study {nct_id} does not have relevant intervention types. Skipping")
                     logger.info(f"Study {nct_id} does not have relevant intervention types. Skipping")
@@ -121,7 +121,7 @@ def get_status_of_existing_studies():
         params['pageToken'] = nextPageToken
     
     # save NCT_IDS with satatus to CSV file
-    path_to_save = os.path.join('results','nct','nct_status.csv')
+    path_to_save = os.path.join('cache','nct','nct_status.csv')
     with open(path_to_save, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['NCT ID', 'Overall Status', 'Recruiting in HK?'])
@@ -143,8 +143,8 @@ def get_nct_study(nct_id:str):
     if is_recruiting_in_hk == True:
         if tdh.has_correct_intervention(study, config.intervention_types):
             tdh.remove_unused_keys(study)
-            tdh.save_to_file(study, 'results/nct/', nct_id, 'json')
-            print(f"Study {nct_id} saved at results/nct/{nct_id}.json")
+            tdh.save_to_file(study, 'cache/nct/', nct_id, 'json')
+            print(f"Study {nct_id} saved at cache/nct/{nct_id}.json")
         else:
             print(f"Study {nct_id} does not have relevant intervention types. Skipping")
             logger.info(f"Study {nct_id} does not have relevant intervention types. Skipping")

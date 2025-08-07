@@ -1,6 +1,6 @@
 import os
 
-nct_files_path = '../results/nct'
+nct_files_path = '../cache/nct'
 import trial_data_helper as tdf
 
 intervention_types = set()
