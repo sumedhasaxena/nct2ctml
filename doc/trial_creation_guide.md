@@ -20,8 +20,6 @@ nct2ctml/
 
 ├── ctml/
 
-│   ├── closed/
-
 │   ├── json/
 
 │   ├── pending/
@@ -32,11 +30,9 @@ The CTML directory on root level contains the trial CTML files. The sub-director
 
 **pending**: Newly curated CTML trial files go here.
 
-**closed**: Trial files for trials that are no loger recruiting go here.
-
 **reviewed**: Once the trials under 'pending' folder are reviewed, they are moved to this folder
 
-**json**: When trial files are ready to be picked up my [matchminer-admin](http://https://github.com/sumedhasaxena/matchminer-admin "matchminer-admin"), they are moved here. matchminer-admin repo will remove files from here, once it finishes processing them.
+**json**: When trial files are ready to be picked up my [matchminer-admin](http://https://github.com/sumedhasaxena/matchminer-admin "matchminer-admin"), they are converted to JSON format and moved here. matchminer-admin repo will remove files from here, once it finishes processing them.
 
 ------------
 #### Rules for assigning values to various CTML fields
