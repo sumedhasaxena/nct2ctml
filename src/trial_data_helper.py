@@ -6,7 +6,7 @@ def remove_unused_keys(trial_data: dict):
     """
     Removes keys that will not be used for mapping data to matchminer trial schema
     The shortened dictionary can be passed to an AI API for mapping
-
+    
     Parameters
     ----------
     trial_data : dict
@@ -17,7 +17,16 @@ def remove_unused_keys(trial_data: dict):
     trial_data: dict
         Shortened dictionary 
     """
-    trial_data["protocolSection"].pop("statusModule", None)
+    # Handle statusModule - preserve specific date structures, remove others
+    if "statusModule" in trial_data["protocolSection"]:
+        status_module = trial_data["protocolSection"]["statusModule"]
+        # Keep only the required date structures
+        preserved_keys = ["studyFirstPostDateStruct", "lastUpdatePostDateStruct"]
+        keys_to_remove = [key for key in status_module.keys() if key not in preserved_keys]
+        
+        for key in keys_to_remove:
+            status_module.pop(key, None)
+    
     trial_data["protocolSection"].pop("oversightModule", None)
     trial_data["protocolSection"]["contactsLocationsModule"].pop("locations", None)
     trial_data["protocolSection"].pop("outcomesModule", None)
@@ -126,6 +135,29 @@ def update_hugo_symbol(genomic_crit:dict):
                     update_hugo_symbol(item)  # Recurse into each item in the list
     
     return genomic_crit
+
+
+def convert_protocol_ids_to_list(protocol_ids_str: str) -> list:
+    """
+    Convert protocol IDs string to a list of strings.
+    Handles cases where the input might already be pipe-separated.
+    
+    Parameters
+    ----------
+    protocol_ids_str : str
+        Protocol IDs string that might contain pipe-separated values
+        
+    Returns
+    -------
+    list
+        List of protocol ID strings
+    """
+    if not protocol_ids_str or protocol_ids_str.strip() == '':
+        return []
+    
+    # Split by pipe and clean up each ID
+    protocol_ids_list = [pid.strip() for pid in protocol_ids_str.split('|') if pid.strip()]
+    return protocol_ids_list
     
 
 
