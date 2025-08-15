@@ -20,6 +20,7 @@ import src.clinical_trials_gov as ctg
 import src.trial_data_helper as tdh
 from loguru import logger
 import argparse
+import csv
 
 def main():
     parser = argparse.ArgumentParser(description="Process NCT trial data into CTML.")
@@ -38,7 +39,7 @@ def main():
     map_parser = subparsers.add_parser('map', help='Map NCT IDs to CTML.')
     map_group = map_parser.add_mutually_exclusive_group(required=True)
     
-    map_group.add_argument('--all', action='store_true', help='Map all NCT files')
+    map_group.add_argument('--all', action='store_true', help='Map all eligible NCT files, based on last update date in trial_status.csv')
     map_group.add_argument('--nct_id', type=str, help='Map a specific NCT ID')
 
     args = parser.parse_args()
@@ -62,10 +63,10 @@ def main():
 
 def pull_all():
     """Trial synchronization implementation"""
-    from src.trial_sync_manager import TrialSyncManager
+    from src.trial_pull_manager import TrialPullManager
     
     try:
-        sync = TrialSyncManager()
+        sync = TrialPullManager()
         results = sync.sync_trials()
         print("Trial synchronization completed successfully!")
         print(f"Processed {results['api_trials_processed']} trials from API")
@@ -85,47 +86,31 @@ def pull_existing():
     ctg.get_status_of_existing_studies()
 
 def map_all(nct_files_path, ctml_files_path):
-    genes = get_gene_list()
-    for file_name in os.listdir(nct_files_path):
-        if os.path.isfile(os.path.join(nct_files_path, file_name)) and file_name.endswith('.json'):
-            nct_id = file_name.split('.')[0]
-            trial_data = tdh.read_from_file(nct_files_path, nct_id, 'json')
-
-            try:
-                logger.info(f"Mapping NCT ID: {nct_id}")   
-                logger.info("-----------------------")                   
-                mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
-                tdh.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'yaml')
-                tdh.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'json')
-            except Exception as ex:
-                logger.error(f"nct_id: {nct_id} | Unexpected {ex=}, {type(ex)=}")
+    """Map all NCT files to CTML format"""
+    from src.trial_map_manager import TrialMapManager
+    
+    try:
+        manager = TrialMapManager()
+        results = manager.map_all_trials(nct_files_path, ctml_files_path)
+        logger.info(f"Mapping completed. Processed: {results['processed']}, Skipped: {results['skipped']}")
+    except Exception as e:
+        logger.error(f"Error in map_all: {e}")
+        raise
 
 def map_nct(nct_id, nct_files_path, ctml_files_path):
-    try:
-        logger.info(f"Mapping NCT ID: {nct_id}")   
-        logger.info("-----------------------")                 
-        trial_data = tdh.read_from_file(nct_files_path, nct_id, 'json')
-    except FileNotFoundError:
-        print(f'File {nct_id}.json not found at {nct_files_path}')
-        return
-    except json.JSONDecodeError:
-        print(f'File {nct_id}.json is not a valid json file')
-        return
+    """Map a specific NCT ID to CTML format"""
+    from src.trial_map_manager import TrialMapManager
     
-    genes = get_gene_list()
-
     try:
-        mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
-        tdh.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'yaml')
-        tdh.save_to_file(mapped_ctml, ctml_files_path, nct_id, 'json')
-    except Exception as ex:
-        logger.error(f"nct_id: {nct_id} | Unexpected {ex=}, {type(ex)=}")
-
-def get_gene_list() -> list:
-    genes = []
-    with open('ref/genes.txt', 'r') as file:     
-        genes = [line.strip() for line in file.readlines()]
-    return genes
+        manager = TrialMapManager()
+        success = manager.map_single_trial(nct_id, nct_files_path, ctml_files_path)
+        if success:
+            logger.info(f"Successfully mapped {nct_id}")
+        else:
+            logger.error(f"Failed to map {nct_id}")
+    except Exception as e:
+        logger.error(f"Error in map_nct: {e}")
+        raise
 
 if __name__ == "__main__":
     logger.add('logs/nct2ctml.log', rotation = '1 MB', encoding="utf-8", format="{time} {level} - Line: {line} - {message}")
