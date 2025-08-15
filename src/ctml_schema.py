@@ -7,11 +7,13 @@ def get_ctml_schema():
   'nct_id': '',
   'age': 'Adults',
   'cancer_center_accrual_goal_upper': 0,
+  'curated_on': '',
   'data_table4': 'Interventional',
   'drug_list': {
     'drug': []
   },
   'long_title': '',
+  'last_updated': '',
   'management_group_list': {
     'management_group': [
       {
@@ -40,6 +42,7 @@ def get_ctml_schema():
     ]
   },
   'protocol_id': 0,
+  'protocol_ids': [], # list of local protocol IDs
   'protocol_no': '',
   'protocol_target_accrual': 0,
   'protocol_type': 'INTERVENTIONAL',

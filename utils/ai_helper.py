@@ -47,6 +47,12 @@ def get_pdl1_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> dict
     pdl1_status_dict = parse_ai_response(ai_response)   
     return pdl1_status_dict
 
+def get_mmr_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> dict:
+    prompt = get_mmr_status_prompt(eligibilityCriteria, keywords)
+    ai_response = send_ai_request(nct_id, prompt)
+    mmr_status_dict = parse_ai_response(ai_response)   
+    return mmr_status_dict
+
 def get_disease_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> dict:
     prompt = get_disease_status_prompt(eligibilityCriteria, keywords)
     ai_response = send_ai_request(nct_id, prompt)
@@ -256,6 +262,23 @@ def get_pdl1_status_prompt(eligibilityCriteria, keywords):
          {{
          "pdl1_status": "High/Low/Unknown",
          }}"""
+         
+    return prompt
+
+def get_mmr_status_prompt(eligibilityCriteria, keywords):
+    prompt = f"""Task: From the eligibility criteria and the keywords mentioned below, find out if it mentions MMR/MS status along with the value closen the below mentioned list of allowed values.
+    Return empty JSON if the text does not talk about mismatch repair or microsatellite instability.
+    Allowed values:
+    mmr_status: ['MMR-Proficient', 'MMR-Deficient']
+    ms_status: ['MSI-H', 'MSI-L', 'MSS']
+
+    eligibilityCriteria: {eligibilityCriteria}
+    keywords: {keywords}
+    The output should be in the json format :
+    {{
+    "mmr_status": "MMR-Deficient",
+    "ms_status": "MSI-H"
+    }}"""
          
     return prompt
 

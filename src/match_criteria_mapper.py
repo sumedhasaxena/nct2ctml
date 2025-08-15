@@ -80,3 +80,14 @@ def check_if_eligibility_criteria_contains_pdl1_info(nct_keywords:list, eligibil
     else:
         contains = ac.search_keywords_in_text(pdl1_keywords_to_check, eligibility)
         return contains
+    
+def check_if_eligibility_criteria_contains_mmr_info(nct_keywords:list, eligibility):
+    mmr_keywords_to_check = ['mmr', 'Mismatch Repair', 'msi' ]
+    nct_keywords_string = ', '.join(nct_keywords)
+    print("looking for MMR keywords")
+    contains = ac.search_keywords_in_text(mmr_keywords_to_check, nct_keywords_string)
+    if contains:
+        return True
+    else:
+        contains = ac.search_keywords_in_text(mmr_keywords_to_check, eligibility)
+        return contains

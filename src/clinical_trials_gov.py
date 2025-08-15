@@ -189,6 +189,7 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
         trial_schema['nct_id'] = nct_id
         trial_schema['long_title'] = trial_data['protocolSection']['identificationModule']['officialTitle']
         trial_schema['principal_investigator_institution'] = trial_data['protocolSection']['identificationModule']['organization']['fullName']
+        trial_schema['principal_investigator'] = 'NA' # overwrriten later if a PI is found in overall officials list
 
         phases = trial_data['protocolSection']['designModule']['phases']
         trial_schema['phase'] = phases[0] if len(phases) > 0 else ''
@@ -204,10 +205,13 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
             }
         )
 
+        trial_schema['curated_on'] = trial_data['protocolSection']['statusModule']['studyFirstPostDateStruct']['date']
+        trial_schema['last_updated'] = trial_data['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
+
         officials = tdh.safe_get(trial_data, ['protocolSection','contactsLocationsModule','overallOfficials'])
         if officials:
             for official in officials:
-                if official['role'] == 'STUDY_DIRECTOR':
+                if official['role'] == 'PRINCIPAL_INVESTIGATOR':
                     trial_schema['principal_investigator'] = official['name']
                     trial_schema['principal_investigator_institution'] = official['affiliation']
                     break
@@ -266,6 +270,21 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
     pdl1_status_dict = map_pdl1_status(trial_data)
     filtered_pdl1_status_dict = {k:v for k,v in pdl1_status_dict.items() if v.lower() in ["high", "low"]}
     clinical_critera.update(filtered_pdl1_status_dict)
+
+    mmr_ms_status_dict = map_mmr_ms_status(trial_data)
+    filtered_mmr_ms_status_dict = {}    
+    
+    if 'mmr_status' in mmr_ms_status_dict:
+        mmr_value = mmr_ms_status_dict['mmr_status']
+        if mmr_value in ['MMR-Proficient', 'MMR-Deficient']:
+            filtered_mmr_ms_status_dict['mmr_status'] = mmr_value
+        
+    if 'ms_status' in mmr_ms_status_dict:
+        ms_value = mmr_ms_status_dict['ms_status']
+        if ms_value in ['MSI-H', 'MSI-L', 'MSS']:
+            filtered_mmr_ms_status_dict['ms_status'] = ms_value
+    
+    clinical_critera.update(filtered_mmr_ms_status_dict)
     
     disease_status_dict = map_disease_status(trial_data)
     if disease_status_dict and len(disease_status_dict.get('disease_status', {})) > 0:
@@ -313,6 +332,16 @@ def map_pdl1_status(trial_data: dict):
     contains_pdl1_info = mcm.check_if_eligibility_criteria_contains_pdl1_info(keywords, eligibilityCriteria)
     if contains_pdl1_info:
         result = ai.get_pdl1_status(nct_id, eligibilityCriteria, keywords)
+        return result
+    return {}
+
+def map_mmr_ms_status(trial_data: dict):
+    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
+    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+    contains_mmr_info = mcm.check_if_eligibility_criteria_contains_mmr_info(keywords, eligibilityCriteria)
+    if contains_mmr_info:
+        result = ai.get_mmr_status(nct_id, eligibilityCriteria, keywords)
         return result
     return {}
 
