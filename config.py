@@ -18,3 +18,8 @@ LLM_AI_MODEL = "neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16"
 
 ONCOTREE_TXT_FILE_PATH = "ref/oncotree_file.txt"
 GENE_LIST_FILE_PATH = "ref/genes.txt"
+
+# Mapping configuration
+# Number of days back to consider for mapping trials
+# Trials with entry_last_updated_date within this many days will be mapped
+MAPPING_CUTOFF_DAYS = 1

@@ -134,9 +134,32 @@ class TrialMapManager:
             mapped_ctml['protocol_ids'] = []
             logger.info("Local trial info file not found")
     
-    def map_all_trials(self, nct_files_path: str, ctml_files_path: str) -> Dict[str, int]:
+    def _get_cutoff_date(self, cutoff_days: int = None) -> str:
+        """
+        Get the cutoff date for mapping trials.
+        
+        Parameters
+        ----------
+        cutoff_days : int, optional
+            Number of days back to consider. If None, uses config default.
+            
+        Returns
+        -------
+        str
+            Cutoff date in YYYY-MM-DD format
+        """
+        import config
+        from datetime import datetime, timedelta
+        
+        if cutoff_days is None:
+            cutoff_days = config.MAPPING_CUTOFF_DAYS
+        
+        cutoff_date = datetime.now() - timedelta(days=cutoff_days)
+        return cutoff_date.strftime('%Y-%m-%d')
+    
+    def map_all_trials(self, nct_files_path: str, ctml_files_path: str, cutoff_days: int = None) -> Dict[str, int]:
         """Map all NCT files to CTML format with local trial info integration"""
-        current_date = datetime.now().strftime('%Y-%m-%d')
+        cutoff_date = self._get_cutoff_date(cutoff_days)
         genes = self.get_gene_list()
         
         # Load data dictionaries
@@ -145,6 +168,7 @@ class TrialMapManager:
         
         logger.info(f"Loaded {len(trial_status_dict)} trial status records")
         logger.info(f"Loaded {len(local_trial_dict)} local trial records")
+        logger.info(f"Using cutoff date: {cutoff_date} (trials updated within last {cutoff_days or 'config default'} days)")
         
         processed_count = 0
         skipped_count = 0
@@ -153,11 +177,11 @@ class TrialMapManager:
             if os.path.isfile(os.path.join(nct_files_path, file_name)) and file_name.endswith('.json'):
                 nct_id = file_name.split('.')[0]
                 
-                # Check if this trial was updated today in trial_status.csv
+                # Check if this trial was updated within the cutoff period in trial_status.csv
                 if nct_id in trial_status_dict:
                     entry_last_updated_date = trial_status_dict[nct_id]['entry_last_updated_date']
-                    if entry_last_updated_date != current_date:
-                        logger.info(f"Skipping NCT ID: {nct_id} - not updated today (last updated: {entry_last_updated_date})")
+                    if entry_last_updated_date < cutoff_date:
+                        logger.info(f"Skipping NCT ID: {nct_id} - last updated: {entry_last_updated_date}, cutoff: {cutoff_date}")
                         skipped_count += 1
                         continue
                 else:
