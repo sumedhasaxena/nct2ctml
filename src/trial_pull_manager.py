@@ -175,6 +175,46 @@ class TrialPullManager:
         except Exception as e:
             logger.error(f"Error fetching trial {nct_id}: {e}")
             return False
+
+    def pull_single_trial(self, nct_id: str) -> bool:
+        """
+        Pull a single trial by NCT ID, apply local filters, and cache if eligible.        
+        """
+        try:
+            NCT_STUDY_ENDPOINT = "studies/{0}".format(nct_id)
+            endpoint_url = urllib.parse.urljoin(self.api_base_url, NCT_STUDY_ENDPOINT)
+            response = requests.get(endpoint_url)
+            response.raise_for_status()
+            study = response.json()
+
+            if not study:
+                logger.warning(f"No trial found for NCT ID: {nct_id}")
+                return False
+
+            # Apply filters: recruiting in HK and correct intervention types
+            is_recruiting_in_hk = tdh.check_if_recruiting_in_HK(study)
+            if not is_recruiting_in_hk:
+                msg = f"Study {nct_id} is not recruiting actively in HK. Skipping"
+                print(msg)
+                logger.info(msg)
+                return False
+
+            if not tdh.has_correct_intervention(study, config.intervention_types):
+                msg = f"Study {nct_id} does not have relevant intervention types. Skipping"
+                print(msg)
+                logger.info(msg)
+                return False
+
+            # Persist trimmed study JSON
+            tdh.remove_unused_keys(study)
+            tdh.save_to_file(study, self.cache_nct_dir, nct_id, 'json')
+            print(f"Study {nct_id} saved at {self.cache_nct_dir}/{nct_id}.json")
+            logger.info(f"Successfully saved {nct_id} to {self.cache_nct_dir}")
+            return True
+
+        except Exception as e:
+            logger.error(f"Error pulling single trial {nct_id}: {e}")
+            return False
     
     def modify_trial_status_file(self, nct_id: str, local_protocol_ids: str, status: str, last_update_date: str, action: str):
         """Update trial_status.csv with new information"""
