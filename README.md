@@ -7,9 +7,11 @@ The **nct2ctml** repository is a specialized ETL (Extract, Transform, Load) appl
 ## Features
 - Pulls trial data from ClinicalTrials.gov
 - Converts trial data to CTML schema format
-- Saves converted trial files locally (YAML and JSON)
+- Saves converted trial files(CTML) locally (YAML format)
 - Uses Oncotree and gene reference data for mapping
 - CLI interface for automation and scripting
+- Configurable cutoff dates for mapping trials
+- Shell script for continuous automated syncing
 
 > **Manual Curation:**
 > For manual creation or editing of CTML files, please refer to the guide at [`doc/trial_creation_guide.md`](doc/trial_creation_guide.md).
@@ -58,20 +60,58 @@ python main.py [-h] {pull,map} ...
   ```bash
   python main.py pull --nct_id NCT_ID
   ```
-- Pull existing studies (from local list):
-  ```bash
-  python main.py pull --existing
-  ```
 
 #### Map NCT IDs to CTML
-- Map all NCT files:
+- Map all NCT files (uses config default cutoff):
   ```bash
   python main.py map --all
+  ```
+- Map all NCT files with custom cutoff days:
+  ```bash
+  python main.py map --all --cutoff-days 14
   ```
 - Map a specific NCT ID:
   ```bash
   python main.py map --nct_id NCT_ID
   ```
+
+### Configuration
+
+The mapping cutoff is configurable in `config.py`:
+```python
+MAPPING_CUTOFF_DAYS = 1  # Default: 1 day
+```
+
+This determines how far back to look for updated trials when using `map --all`. Trials with `entry_last_updated_date` within the cutoff period will be processed.
+
+---
+
+## Continuous Automation
+
+For automated daily syncing, use the included shell script:
+
+```bash
+# Make executable
+chmod +x sync_trials.sh
+
+# Run continuously (runs pull all + map all every 24 hours)
+./sync_trials.sh
+
+# To stop: Press Ctrl+C
+```
+
+### Customizing the sync interval
+
+Edit `sync_trials.sh` and change this line:
+```bash
+SLEEP_HOURS=24    # Change to 6, 12, 2, etc.
+```
+
+The script will:
+1. Run `python main.py pull --all`
+2. Run `python main.py map --all`
+3. Sleep for the configured interval
+4. Repeat forever
 
 ---
 
