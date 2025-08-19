@@ -32,7 +32,7 @@ The CTML directory on root level contains the trial CTML files. The sub-director
 
 **reviewed**: Once the trials under 'pending' folder are reviewed, they are moved to this folder
 
-**json**: When trial files are ready to be picked up my [matchminer-admin](http://https://github.com/sumedhasaxena/matchminer-admin "matchminer-admin"), they are converted to JSON format and moved here. matchminer-admin repo will remove files from here, once it finishes processing them.
+**json**: When trial files are ready to be picked up by [matchminer-admin](http://https://github.com/sumedhasaxena/matchminer-admin "matchminer-admin"), they are converted to JSON format and moved here. matchminer-admin repo will remove files from here, once it finishes processing them.
 
 ------------
 #### Rules for assigning values to various CTML fields
@@ -47,40 +47,19 @@ The CTML directory on root level contains the trial CTML files. The sub-director
 
 ------------
 
-Steps for trial file management:
+#### Manual curation of trial a file (CTML):
 
-1. Find a clinical trial from a source that needs to be added to the system
-   
-2. Check if the same trial is present at https://clinicaltrials.gov/
-   
-3.  If present, check the status of the trial
-   
-	a. If closed, follow the steps below:
+Please follow the 'Manual workflow' section in doc/clinical_trial_management_workflow.pdf to understand if a trial needs to be created manually.
+Essentially, a trial file needs to be prepared manually only if it cannot be created via automated workflow or if its not present on clinical_trials.gov.
 
-		i. Create a CTML file with necessary fields.
+In such case, as presented in the workflow, one needs to do the following:
 
-		ii. Set the 'status' as 'Closed'
+1. Prepare a CTML file for the trial manually, using the CTML schema mentioned in the section above.
+Make sure to set the following fields as:
 
-		iii. Set the local protocol numbers in the 'protocol_ids' field
+- nct_id: Set as 'NA'
+- protocol_ids: Append the local protocol id to the protocol_ids list.
 
-	b. If recruiting, check if the trial is alreday present in the matchminer system.
+2. Make an entry for the manually curated trial file in local_trial_info.csv and push the the updated content to git.
 
-	If not present in the system:
-
-		i. Create a CTML file capturing as much information as possible.
-
-		ii. Upload the file to 'pending' folder.
-
-
-
-TODO:
-Plans needed for:
-
-Preventing duplicate entries
-
-Update CTML from ClinicalTrials.gov with information from duplicate local trial (i.e. local recruiting site). Most important information to add is the name of the local investigator.
-
-Updating trial status
-
-Merge manually added CTML and auto-generated CTML from ClinicalTrials.gov
 
