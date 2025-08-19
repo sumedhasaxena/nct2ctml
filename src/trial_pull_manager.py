@@ -399,14 +399,22 @@ class TrialPullManager:
                 
                 # Try to update existing NCT entry in trial_status.csv, assuming it is present.
                 # If not, the trial should be pulled from clinicaltrials.gov in next run.
-                self.modify_trial_status_file(
-                    nct_id,
-                    local_protocol_ids, 
-                    '',  # don't change status, just update local_protocol_ids
-                    datetime.now().strftime('%Y-%m-%d'), 
-                    'update'
-                )
-                local_trials_merged = local_trials_merged + 1
+                needs_update = False
+                with open(self.trial_status_file, 'r', newline='', encoding='utf-8') as trial_status_file:
+                    trial_status_file_reader = csv.DictReader(trial_status_file)                    
+                    for trial_status_file_row in trial_status_file_reader:
+                        if trial_status_file_row['nct_id'] == nct_id and trial_status_file_row['local_protocol_ids'] != local_protocol_ids:
+                            needs_update = True  # update trial_status.csv only if local_protocol_ids is different
+                            break
+                if needs_update:
+                    self.modify_trial_status_file(
+                        nct_id,
+                        local_protocol_ids, 
+                        '',  # don't change status, just update local_protocol_ids
+                        datetime.now().strftime('%Y-%m-%d'), 
+                        'update'
+                    )
+                    local_trials_merged = local_trials_merged + 1
               
         logger.info("Trial synchronization completed!")
         
