@@ -21,7 +21,7 @@ def remove_unused_keys(trial_data: dict):
     if "statusModule" in trial_data["protocolSection"]:
         status_module = trial_data["protocolSection"]["statusModule"]
         # Keep only the required date structures
-        preserved_keys = ["studyFirstPostDateStruct", "lastUpdatePostDateStruct"]
+        preserved_keys = ["studyFirstPostDateStruct", "lastUpdatePostDateStruct","startDateStruct","completionDateStruct"]
         keys_to_remove = [key for key in status_module.keys() if key not in preserved_keys]
         
         for key in keys_to_remove:
