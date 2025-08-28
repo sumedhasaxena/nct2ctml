@@ -85,8 +85,7 @@ Examples:
         '--cutoff-days', 
         type=int, 
         metavar='DAYS',
-        help='Number of days back to consider for mapping (overrides MAPPING_CUTOFF_DAYS in config.py). '
-             'Only trials with entry_last_updated_date within this period will be mapped.'
+        help='Only with --all. Map trials updated in the last DAYS; overrides MAPPING_CUTOFF_DAYS in the config.'
     )
 
     args = parser.parse_args()

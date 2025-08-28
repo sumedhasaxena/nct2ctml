@@ -220,6 +220,7 @@ class TrialPullManager:
         """Update trial_status.csv with new information"""
         current_date = datetime.now().strftime('%Y-%m-%d')
         
+        
         if action == 'insert':
             # Add new row
             with open(self.trial_status_file, 'a', newline='', encoding='utf-8') as file:
