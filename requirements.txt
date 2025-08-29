@@ -1,4 +1,4 @@
-requests
-loguru
-yaml
-ahocorasick 
+requests>=2.32.0
+loguru>=0.7.0
+PyYAML>=6.0.0
+pyahocorasick>=2.1.0 
