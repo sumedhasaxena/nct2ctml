@@ -8,6 +8,8 @@ def get_ctml_schema():
   'age': 'Adults',
   'cancer_center_accrual_goal_upper': 0,
   'curated_on': '',
+  'study_start_date':'',
+  'study_completion_date':'',
   'data_table4': 'Interventional',
   'drug_list': {
     'drug': []

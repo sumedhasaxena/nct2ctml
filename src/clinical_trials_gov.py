@@ -74,6 +74,10 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
 
         trial_schema['curated_on'] = trial_data['protocolSection']['statusModule']['studyFirstPostDateStruct']['date']
         trial_schema['last_updated'] = trial_data['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
+        if trial_data['protocolSection']['statusModule']['startDateStruct']['type'] == 'ACTUAL':
+            trial_schema['study_start_date'] = trial_data['protocolSection']['statusModule']['startDateStruct']['date']
+        if trial_data['protocolSection']['statusModule']['completionDateStruct']['type'] == 'ACTUAL':
+            trial_schema['study_completion_date'] = trial_data['protocolSection']['statusModule']['completionDateStruct']['date']
 
         officials = tdh.safe_get(trial_data, ['protocolSection','contactsLocationsModule','overallOfficials'])
         if officials:
