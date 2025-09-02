@@ -19,6 +19,7 @@ class TrialMapManager:
     def __init__(self):
         self.local_trial_file = 'ref/local_trial_info.csv'
         self.trial_status_file = 'cache/nct/trial_status.csv'
+       
     
     def get_gene_list(self) -> List[str]:
         """Load gene list from reference file"""
@@ -285,6 +286,9 @@ def main():
     # Test mapping all trials
     nct_files_path = 'cache/nct'
     ctml_files_path = 'cache/ctml/'
+        
+    # Ensure directories exist
+    os.makedirs(ctml_files_path, exist_ok=True)
     
     if os.path.exists(nct_files_path):
         results = manager.map_all_trials(nct_files_path, ctml_files_path)
