@@ -4,18 +4,21 @@ The **nct2ctml** repository is a specialized ETL (Extract, Transform, Load) appl
 
 ---
 
-## Features
-- Pulls trial data from ClinicalTrials.gov
-- Converts trial data to CTML schema format
-- Saves converted trial files(CTML) locally (YAML format)
-- Uses Oncotree and gene reference data for mapping
-- CLI interface for automation and scripting
-- Configurable cutoff dates for mapping trials
-- Shell script for continuous automated syncing
+## Workflow
+- For the trials present on clinicaltrials.gov:
+  1. The trials are pulled and synced automatically via 'pull' command. The trials are saved in `cache\nct` directory.
+  2. Once pulled, they are converted to CTML format via 'map' command. The CTML files are saved in `cache\ctml` directory.
+  3. Once mapped, manual review is encouraged to verify that the AI generated diagnosis and match criteria is correct. Once reviewed, the files are saved in `ctml\reviewed` directory.
+  4. Further, they are converted to json and placed under `ctml/json` directory for matchminer-admin workflow to pick up and inserted to matchminer DB.
 
-> **Manual Curation:**
-> For manual creation or editing of CTML files, please refer to the guide at [`doc/trial_creation_guide.md`](doc/trial_creation_guide.md).
-> Plans for new workflow: https://miro.com/app/board/uXjVJcuSvUY=/?share_link_id=429445659556
+- For local trials, not present on any international trial repository,
+  1. A CTML file is generated manually and placed in `ctml/pending` directory.
+  2. A manual review is done to make sure that the captured information is correct and post-verification, file is saved in `ctml\reviewed` directory.
+  3. Further, they are converted to json and placed under `ctml/json` directory for matchminer-admin workflow to pick up and inserted to matchminer DB.
+  4. For manual creation or editing of CTML files, please refer to the guide at [`doc/trial_creation_guide.md`](doc/trial_creation_guide.md).
+
+> **Detailed workflows:**
+> For detailed steps please visit https://miro.com/app/board/uXjVJcuSvUY=/, and follow the steps under 'Manual workflow' section and 'Automated Workflow' section.
 ---
 
 For detailed information about the system architecture and component relationships, see:
@@ -24,9 +27,6 @@ For detailed information about the system architecture and component relationshi
 ---
 
 ## Quick Start
-
-### Prerequisites
-- Python 3.12 recommended
 
 ### Installation
 1. Clone this repository:
@@ -86,34 +86,21 @@ This determines how far back to look for updated trials when using `map --all`. 
 
 ---
 
-## Continuous Automation
+## Shell script
 
-For automated daily syncing, use the included shell script:
+Instead of running individual commands, sync_trials.sh can be used for running the full automated workflow.
+The script will:
+1. Ensure correct conda environment is created with required dependencies. 
+2. Run `python main.py pull --all`
+3. Run `python main.py map --all`
 
 ```bash
 # Make executable
 chmod +x sync_trials.sh
 
-# Run continuously (runs pull all + map all every 24 hours)
 ./sync_trials.sh
 
-# To stop: Press Ctrl+C
 ```
-
-### Customizing the sync interval
-
-Edit `sync_trials.sh` and change this line:
-```bash
-SLEEP_HOURS=24    # Change to 6, 12, 2, etc.
-```
-
-The script will:
-1. Run `python main.py pull --all`
-2. Run `python main.py map --all`
-3. Sleep for the configured interval
-4. Repeat forever
-
----
 
 ## Running Tests
 
