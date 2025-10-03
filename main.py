@@ -157,5 +157,5 @@ def map_nct(nct_id, nct_files_path, ctml_files_path):
         raise
 
 if __name__ == "__main__":
-    logger.add('logs/nct2ctml.log', rotation = '1 MB', encoding="utf-8", format="{time} {level} - Line: {line} - {message}")
+    logger.add('logs/nct2ctml.log', rotation = '1 MB', encoding="utf-8", format="{time} {level} - Line: {line} - {message}", level="INFO")
     main()

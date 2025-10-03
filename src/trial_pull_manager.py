@@ -304,6 +304,7 @@ class TrialPullManager:
                         trials_to_be_updated.append(nct_trial)
                     else:
                         logger.debug(f"Trial {nct_id} - no action needed")
+        #TODO : trials that are in trial_status.csv but not returned by API - what do we do?
         
         # Step 4: Process insertions
         logger.info(f"Processing {len(trials_to_be_inserted)} insertions")
