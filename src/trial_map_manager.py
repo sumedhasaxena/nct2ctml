@@ -253,10 +253,11 @@ class TrialMapManager:
             logger.info("-----------------------")                 
             trial_data = tdh.read_from_file(nct_files_path, nct_id, 'json')
         except FileNotFoundError:
-            print(f'File {nct_id}.json not found at {nct_files_path}')
+            logger.error(f'File {nct_id}.json not found at {nct_files_path}')
             return False
         except Exception as e:
-            print(f'Error reading file {nct_id}.json: {e}')
+            # Log full traceback so we get file/line information
+            logger.exception(f'Error reading file {nct_id}.json: {e}')
             return False
         
         genes = self.get_gene_list()
@@ -275,7 +276,7 @@ class TrialMapManager:
             return True
             
         except Exception as ex:
-            logger.error(f"nct_id: {nct_id} | Unexpected {ex=}, {type(ex)=}")
+            logger.exception(f"nct_id: {nct_id} | Unexpected error while mapping: {ex}")
             return False
 
 
