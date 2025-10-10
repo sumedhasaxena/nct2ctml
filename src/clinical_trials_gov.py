@@ -75,12 +75,12 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
         trial_schema['curated_on'] = trial_data['protocolSection']['statusModule']['studyFirstPostDateStruct']['date']
         trial_schema['last_updated'] = trial_data['protocolSection']['statusModule']['lastUpdatePostDateStruct']['date']
 
-        start_date_type = tdh.safe_get(trial_data, ['protocolSection','statusModule','startDateStruct','type'])
-        if start_date_type and start_date_type == 'ACTUAL':
-            trial_schema['study_start_date'] = start_date_type['date']
-        completion_date_type = tdh.safe_get(trial_data, ['protocolSection','statusModule','completionDateStruct','type'])
-        if completion_date_type and completion_date_type == 'ACTUAL':
-            trial_schema['study_completion_date'] = completion_date_type['date']
+        start_date_struct = tdh.safe_get(trial_data, ['protocolSection','statusModule','startDateStruct'])
+        if start_date_struct and start_date_struct.get('type') == 'ACTUAL':
+            trial_schema['study_start_date'] = start_date_struct['date']
+        completion_date_struct = tdh.safe_get(trial_data, ['protocolSection','statusModule','completionDateStruct'])
+        if completion_date_struct and completion_date_struct.get('type') == 'ACTUAL':
+            trial_schema['study_completion_date'] = completion_date_struct['date']
         officials = tdh.safe_get(trial_data, ['protocolSection','contactsLocationsModule','overallOfficials'])
         if officials:
             for official in officials:
