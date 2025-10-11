@@ -224,6 +224,12 @@ class TrialMapManager:
                         else:
                             mapped_ctml['principal_investigator_institution'] = local_pi_institutions
                         logger.info(f"Added local PI institutions: {local_pi_institutions}")
+
+                        # Handle case when we need to explicity record status as closed
+                        # This will be needed if we are inserting an already closed trial, which has a local trial too, just to record it
+                        if trial_status_dict[nct_id]['status'].lower() == 'closed':
+                            mapped_ctml['status'] = 'closed'
+                            logger.info(f"nct_id: {nct_id} | Set trial status to closed  based on trial_status.csv")
                         
                     else:
                         # Fall back to reading from file for this specific trial
