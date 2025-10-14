@@ -78,9 +78,13 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
         start_date_struct = tdh.safe_get(trial_data, ['protocolSection','statusModule','startDateStruct'])
         if start_date_struct and start_date_struct.get('type') == 'ACTUAL':
             trial_schema['study_start_date'] = start_date_struct['date']
+        else: 
+            trial_schema['study_start_date'] = None
         completion_date_struct = tdh.safe_get(trial_data, ['protocolSection','statusModule','completionDateStruct'])
         if completion_date_struct and completion_date_struct.get('type') == 'ACTUAL':
             trial_schema['study_completion_date'] = completion_date_struct['date']
+        else:
+            trial_schema['study_completion_date'] = None
         officials = tdh.safe_get(trial_data, ['protocolSection','contactsLocationsModule','overallOfficials'])
         if officials:
             for official in officials:
