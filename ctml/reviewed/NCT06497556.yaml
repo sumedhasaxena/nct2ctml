@@ -3,13 +3,13 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-07-11'
 study_start_date: '2024-09-23'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Divarasib'
-  - drug_name: 'Drug: Adagrasib'
   - drug_name: 'Drug: Sotorasib'
+  - drug_name: 'Drug: Adagrasib'
 long_title: A Phase III, Randomized, Open-Label, Multicenter Study Evaluating the
   Efficacy and Safety of Divarasib Versus Sotorasib or Adagrasib in Patients With
   Previously Treated KRAS G12C-Positive Advanced or Metastatic Non-Small Cell Lung
@@ -88,7 +88,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: The purpose of this study is to assess the safety and efficacy of divarasib
   compared to locally approved KRAS G12C inhibitors (sotorasib or adagrasib) in participants
   with KRAS G12C-positive (KRAS G12C +) advanced or metastatic non-small cell lung
@@ -124,23 +124,15 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-          - clinical:
-              oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Metastatic
-            - Locally Advanced
-            - Advanced
       - or:
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic
+          - Locally Advanced
+          - Advanced
+          - Untreated

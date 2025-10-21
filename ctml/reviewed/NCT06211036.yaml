@@ -3,12 +3,12 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-01-18'
 study_start_date: '2024-06-05'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Tarlatamab'
   - drug_name: 'Drug: Durvalumab'
+  - drug_name: 'Drug: Tarlatamab'
 long_title: A Phase 3, Open-label, Multicenter, Randomized Study of Tarlatamab in
   Combination With Durvalumab vs Durvalumab Alone in Subjects With Extensive-Stage
   Small-Cell Lung Cancer Following Platinum, Etoposide and Durvalumab (DeLLphi-305)
@@ -174,11 +174,10 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
-        - clinical:
             oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Advanced
-          - Early Stage
