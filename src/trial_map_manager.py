@@ -135,7 +135,7 @@ class TrialMapManager:
             mapped_ctml['protocol_ids'] = []
             logger.info("Local trial info file not found")
     
-    def _get_cutoff_date(self, cutoff_days: int = None) -> str:
+    def _get_cutoff_date(self, cutoff_days: int = None) -> datetime:
         """
         Get the cutoff date for mapping trials.
         
@@ -146,8 +146,8 @@ class TrialMapManager:
             
         Returns
         -------
-        str
-            Cutoff date in YYYY-MM-DD format
+        datetime
+            Cutoff date
         """
         import config
         from datetime import datetime, timedelta
@@ -156,7 +156,7 @@ class TrialMapManager:
             cutoff_days = config.MAPPING_CUTOFF_DAYS
         
         cutoff_date = datetime.now() - timedelta(days=cutoff_days)
-        return cutoff_date.strftime('%Y-%m-%d')
+        return cutoff_date
     
     def map_all_trials(self, nct_files_path: str, ctml_files_path: str, cutoff_days: int = None) -> Dict[str, int]:
         """Map all NCT files to CTML format with local trial info integration"""
@@ -169,7 +169,7 @@ class TrialMapManager:
         
         logger.info(f"Loaded {len(trial_status_dict)} trial status records")
         logger.info(f"Loaded {len(local_trial_dict)} local trial records")
-        logger.info(f"Using cutoff date: {cutoff_date} (trials updated within last {cutoff_days or 'config default'} days)")
+        logger.info(f"Using cutoff date: {cutoff_date.strftime('%Y-%m-%d')} (trials updated within last {cutoff_days or 'config default'} days)")
         
         processed_count = 0
         skipped_count = 0
@@ -180,9 +180,12 @@ class TrialMapManager:
                 
                 # Check if this trial was updated within the cutoff period in trial_status.csv
                 if nct_id in trial_status_dict:
-                    entry_last_updated_date = trial_status_dict[nct_id]['entry_last_updated_date']
+                    entry_last_updated_date_str = trial_status_dict[nct_id]['entry_last_updated_date']
+                    
+                    # Convert string date to datetime object for comparison                    
+                    entry_last_updated_date = datetime.strptime(entry_last_updated_date_str, '%Y-%m-%d')
                     if entry_last_updated_date < cutoff_date:
-                        logger.info(f"Skipping NCT ID: {nct_id} - last updated: {entry_last_updated_date}, cutoff: {cutoff_date}")
+                        logger.info(f"Skipping NCT ID: {nct_id} - last updated: {entry_last_updated_date_str}, cutoff: {cutoff_date.strftime('%Y-%m-%d')}")
                         skipped_count += 1
                         continue
                 else:

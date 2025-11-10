@@ -266,14 +266,14 @@ class TrialPullManager:
         """Main synchronization method"""
         logger.info("Starting trial synchronization")
         
-        # Step 1: Get existing and local NCT IDs
+        # Step 1: Get existing and local NCT IDs from trial_status.csv and local_trial_info.csv
         existing_nct_ids = self.get_existing_nct_ids()
         local_trial_nct_ids = self.get_local_trial_nct_ids()
         
         logger.info(f"Found {len(existing_nct_ids)} existing trials and {len(local_trial_nct_ids)} local trials")
         
         # Step 2: Fetch trials from API
-        nct_trials = self.fetch_trials_from_api()
+        nct_trials = self.fetch_trials_from_api() # only basic fields fetched here, not full trial data
         logger.info(f"Retrieved {len(nct_trials)} trials from API")
         
         # Step 3: Classify and process trials
