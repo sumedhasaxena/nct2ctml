@@ -34,17 +34,14 @@ def remove_unused_keys(trial_data: dict):
     trial_data.pop("derivedSection", None)
     return trial_data
 
-def check_if_recruiting_in_HK(trial_data: dict) -> bool:
+def check_if_recruiting_in_any_region(trial_data: dict, regions: list[str]) -> bool:
     locations = trial_data["protocolSection"]["contactsLocationsModule"]["locations"]
-    recruiting_in_hk = any(
-        location["country"].lower() == "hong kong" and
-        location["status"].lower() == "recruiting"
+    target_countries = {region.lower() for region in regions}
+    return any(
+        location["country"].lower() in target_countries
+        and location["status"].lower() == "recruiting"
         for location in locations
     )
-    if recruiting_in_hk:
-        return True
-    else:
-        return False
     
 def is_study_interventional(trial_data: dict) -> bool:
     studyType = trial_data["protocolSection"]["designModule"]["studyType"]    

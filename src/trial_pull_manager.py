@@ -25,7 +25,8 @@ class TrialPullManager:
         self.trial_status_file = "cache/nct/trial_status.csv"
         self.local_trial_file = "ref/local_trial_info.csv"
         self.cache_nct_dir = "cache/nct"
-        
+        self.regions = config.regions
+        self.conditions = config.conditions
         # Ensure directories exist
         os.makedirs(self.cache_nct_dir, exist_ok=True)
         self._ensure_trial_status_file()
@@ -78,8 +79,8 @@ class TrialPullManager:
         if overall_status.lower() != 'recruiting':
             return 'closed'
         else:
-            is_recruiting_in_hk = tdh.check_if_recruiting_in_HK(trial['full_data'])
-            if is_recruiting_in_hk:
+            is_recruiting = tdh.check_if_recruiting_in_any_region(trial['full_data'], self.regions)
+            if is_recruiting:
                 return 'open'
             else:
                 return 'closed'
@@ -88,10 +89,12 @@ class TrialPullManager:
         """Fetch trial summaries from clinicaltrials.gov API"""
         endpoint = "studies"
         
+        regions_str = ' or '.join(self.regions)
+        condition_str = ' or '.join(self.conditions)
         # Default filters
         params = {
-            'query.cond': 'cancer',
-            'query.locn': 'Hong Kong',
+            'query.cond': condition_str,
+            'query.locn': regions_str,
             'query.term': 'AREA[StudyType]INTERVENTIONAL',
             'pageSize': 50,
             'sort': 'LastUpdatePostDate',
@@ -192,9 +195,9 @@ class TrialPullManager:
                 return False
 
             # Apply filters: recruiting in HK and correct intervention types
-            is_recruiting_in_hk = tdh.check_if_recruiting_in_HK(study)
-            if not is_recruiting_in_hk:
-                msg = f"Study {nct_id} is not recruiting actively in HK. Skipping"
+            is_recruiting = tdh.check_if_recruiting_in_any_region(study, self.regions)
+            if not is_recruiting:
+                msg = f"Study {nct_id} is not recruiting actively in {self.regions}. Skipping"
                 print(msg)
                 logger.info(msg)
                 return False
