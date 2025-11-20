@@ -3,14 +3,14 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-04-11'
 study_start_date: '2024-05-29'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: RMC-6236'
   - drug_name: 'Drug: Nab-paclitaxel'
-  - drug_name: 'Drug: AMG 193'
   - drug_name: 'Drug: Modified FOLFIRINOX'
+  - drug_name: 'Drug: AMG 193'
+  - drug_name: 'Drug: RMC-6236'
   - drug_name: 'Drug: Gemcitabine'
 long_title: A Phase 1b Study Evaluating the Safety, Tolerability, Pharmacokinetics,
   and Efficacy of AMG 193 in Combination With Other Therapies in Subjects With Advanced
@@ -179,17 +179,47 @@ treatment_list:
       - and:
         - or:
           - clinical:
+              oncotree_primary_diagnosis: Anal Gland Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Small Bowel Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Low-grade Appendiceal Mucinous Neoplasm
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
+          - clinical:
+              oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
+          - clinical:
+              oncotree_primary_diagnosis: Tubular Adenoma of the Colon
+          - clinical:
+              oncotree_primary_diagnosis: Anal Squamous Cell Carcinoma
+          - clinical:
               oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
                 Duct
           - clinical:
-              oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Small Intestinal Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
+          - clinical:
+              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+          - clinical:
+              oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Metastatic
             - Locally Advanced
+            - Unresectable
             - Advanced
       - or:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
+        - genomic:
+            hugo_symbol: MTAP
+            variant_category: Copy Number Variation
+            cnv_call: Homozygous Deletion
+

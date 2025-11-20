@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2023-06-08",
     "study_start_date": "2023-09-08",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -12,16 +12,16 @@
                 "drug_name": "Drug: Inavolisib"
             },
             {
-                "drug_name": "Drug: Placebo"
+                "drug_name": "Drug: Phesgo"
+            },
+            {
+                "drug_name": "Drug: Optional Endocrine Therapy of Investigator's Choice"
             },
             {
                 "drug_name": "Drug: Taxane-based Chemotherapy"
             },
             {
-                "drug_name": "Drug: Phesgo"
-            },
-            {
-                "drug_name": "Drug: Optional Endocrine Therapy of Investigator's Choice"
+                "drug_name": "Drug: Placebo"
             }
         ]
     },
@@ -188,27 +188,46 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "her2_status": "Positive",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Locally Advanced"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                }
-                            },
-                            {
                                 "and": [
                                     {
                                         "or": [
                                             {
-                                                "genomic": {
-                                                    "hugo_symbol": "PIK3CA",
-                                                    "variant_category": "Mutation"
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
                                                 }
                                             }
                                         ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "her2_status": "Positive",
+                                            "disease_status": [
+                                                "Metastatic",
+                                                "Locally Advanced"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "and": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "ERBB2",
+                                            "variant_category": "Mutation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "PIK3CA",
+                                            "variant_category": "Mutation"
+                                        }
                                     }
                                 ]
                             }

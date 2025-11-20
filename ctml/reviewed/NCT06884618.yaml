@@ -3,7 +3,7 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2025-03-19'
 study_start_date: '2025-04-30'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
@@ -116,11 +116,25 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Untreated
-        - Locally Advanced
-        - Recurrent
-        - Metastatic
-        oncotree_primary_diagnosis: _SOLID_
+    - and:
+      - clinical:
+         age_numerical: '>=18'
+         disease_status:
+         - Untreated
+         - Locally Advanced
+         - Recurrent
+         - Metastatic
+         oncotree_primary_diagnosis: _SOLID_
+      - or:
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: NRAS
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: HRAS
+            variant_category: Mutation
+
+
+

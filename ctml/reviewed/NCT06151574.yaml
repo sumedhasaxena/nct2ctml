@@ -3,15 +3,15 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2023-11-30'
 study_start_date: '2024-02-09'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: pembrolizumab'
-  - drug_name: 'Drug: carboplatin'
   - drug_name: 'Drug: zongertinib'
   - drug_name: 'Drug: pemetrexed'
+  - drug_name: 'Drug: carboplatin'
   - drug_name: 'Drug: cisplatin'
+  - drug_name: 'Drug: pembrolizumab'
 long_title: 'Beamion LUNG 2: A Phase III, Open-label, Randomized, Active-controlled,
   Multi-centre Trial Evaluating Orally Administered Zongertinib (BI 1810631) Compared
   With Standard of Care as First-line Treatment in Patients With Unresectable, Locally
@@ -168,15 +168,20 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Positive
-          disease_status:
-          - Advanced
-          - Metastatic
-          - Unresectable
-          - Locally Advanced
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            age_numerical: '>=18'
+            her2_status: Positive
+            disease_status:
+            - Advanced
+            - Metastatic
+            - Unresectable
+            - Locally Advanced
       - or:
         - genomic:
             hugo_symbol: ERBB2

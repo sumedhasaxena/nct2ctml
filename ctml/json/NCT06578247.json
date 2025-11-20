@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-08-29",
     "study_start_date": "2024-11-19",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -12,10 +12,10 @@
                 "drug_name": "Drug: Chemotherapy"
             },
             {
-                "drug_name": "Drug: Placebo"
+                "drug_name": "Drug: Quizartinib"
             },
             {
-                "drug_name": "Drug: Quizartinib"
+                "drug_name": "Drug: Placebo"
             }
         ]
     },
@@ -172,25 +172,25 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Untreated"
+                                        "Untreated",
+                                        "Early Stage"
                                     ],
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                    "oncotree_primary_diagnosis": "Myeloid Neoplasm"
                                 }
                             },
                             {
                                 "and": [
                                     {
-                                        "or": []
+                                        "genomic": {
+                                            "hugo_symbol": "BCR-ABL",
+                                            "variant_category": "!Structural Variation"
+                                        }
                                     },
                                     {
-                                        "and": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "FLT3",
-                                                    "variant_category": "!Mutation"
-                                                }
-                                            }
-                                        ]
+                                        "genomic": {
+                                            "hugo_symbol": "FLT3",
+                                            "variant_category": "!Mutation"
+                                        }
                                     }
                                 ]
                             }

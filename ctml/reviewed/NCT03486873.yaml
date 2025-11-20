@@ -3,16 +3,16 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2018-04-03'
 study_start_date: '2018-08-21'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Olaparib'
-  - drug_name: 'Drug: Standard of Care (SOC)'
   - drug_name: 'Drug: MK-4280'
+  - drug_name: 'Drug: Olaparib'
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Lenvatinib'
   - drug_name: 'Biological: MK-4280A'
-  - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Standard of Care (SOC)'
 long_title: A Multicenter, Open-label, Phase 3 Study to Evaluate the Long-term Safety
   and Efficacy in Participants Who Are Currently on Treatment or in Follow-up in Studies
   That Include Pembrolizumab
@@ -372,7 +372,4 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=18'
-        disease_status:
-        - Early Stage
-        - Metastatic
         oncotree_primary_diagnosis: _SOLID_

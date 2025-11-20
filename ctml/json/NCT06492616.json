@@ -4,24 +4,24 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-07-09",
     "study_start_date": "2024-09-27",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: Letrozole"
+            },
+            {
                 "drug_name": "Drug: Anastrozole"
-            },
-            {
-                "drug_name": "Drug: Tamoxifen"
-            },
-            {
-                "drug_name": "Drug: Elacestrant"
             },
             {
                 "drug_name": "Drug: Exemestane"
             },
             {
-                "drug_name": "Drug: Letrozole"
+                "drug_name": "Drug: Elacestrant"
+            },
+            {
+                "drug_name": "Drug: Tamoxifen"
             }
         ]
     },
@@ -152,7 +152,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                            "oncotree_primary_diagnosis": "Inflammatory Breast Cancer"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
                                         }
                                     },
                                     {
@@ -162,12 +167,12 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
+                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                            "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
                                         }
                                     }
                                 ]

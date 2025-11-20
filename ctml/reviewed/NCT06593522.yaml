@@ -3,7 +3,7 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-09-19'
 study_start_date: '2024-12-26'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
@@ -106,10 +106,8 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=18'
-          her2_status: Negative
           disease_status:
           - Metastatic
-          - Locally Advanced
           - Unresectable
           - Recurrent
           - Untreated
@@ -142,3 +140,7 @@ treatment_list:
         - genomic:
             hugo_symbol: KRAS
             variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: MTAP
+            variant_category: 'Copy Number Variation'
+            cnv_call: 'Homozygous Deletion'

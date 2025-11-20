@@ -3,19 +3,19 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-12-05'
 study_start_date: '2025-01-27'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cyclophosphamide'
-  - drug_name: 'Biological: Rituximab'
-  - drug_name: 'Biological: Zilovertamab vedotin'
-  - drug_name: 'Drug: Doxorubicin'
-  - drug_name: 'Drug: Prednisolone'
   - drug_name: 'Drug: Rescue medication'
-  - drug_name: 'Biological: Rituximab Biosimilar'
+  - drug_name: 'Drug: Doxorubicin'
   - drug_name: 'Drug: Vincristine'
   - drug_name: 'Drug: Prednisone'
+  - drug_name: 'Biological: Rituximab'
+  - drug_name: 'Biological: Zilovertamab vedotin'
+  - drug_name: 'Biological: Rituximab Biosimilar'
+  - drug_name: 'Drug: Prednisolone'
+  - drug_name: 'Drug: Cyclophosphamide'
 long_title: A Randomized, Open-Label, Multicenter, Phase 3 Study of Zilovertamab Vedotin
   (MK-2140) in Combination With R-CHP Versus R-CHOP in Participants With Previously
   Untreated Diffuse Large B-Cell Lymphoma (DLBCL) (waveLINE-010)

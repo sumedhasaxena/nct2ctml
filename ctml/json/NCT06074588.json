@@ -4,18 +4,18 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2023-10-10",
     "study_start_date": "2023-11-12",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Pemetrexed"
+                "drug_name": "Drug: Docetaxel"
             },
             {
                 "drug_name": "Biological: Sacituzumab tirumotecan"
             },
             {
-                "drug_name": "Drug: Docetaxel"
+                "drug_name": "Drug: Pemetrexed"
             }
         ]
     },
@@ -150,28 +150,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Advanced",
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
-                            },
-                            {
-                                "and": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Advanced",
+                                "Metastatic"
+                            ],
+                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

@@ -3,7 +3,7 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-11-26'
 study_start_date: '2025-01-09'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
@@ -122,15 +122,10 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-      - and:
-        - or:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: Mutation
-          - genomic:
-              hugo_symbol: ERBB2
-              variant_category: Mutation
-        - and:
-          - genomic:
-              hugo_symbol: MET
-              variant_category: '!Copy Number Variation'
+      - or:
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Mutation

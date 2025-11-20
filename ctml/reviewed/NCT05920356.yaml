@@ -3,12 +3,12 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2023-06-27'
 study_start_date: '2023-11-16'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Sotorasib'
+  - drug_name: 'Drug: Pembrolizumab'
 long_title: A Phase 3, Multicenter, Randomized, Open-label Study Evaluating Efficacy
   of Sotorasib Platinum Doublet Combination Versus Pembrolizumab Platinum Doublet
   Combination as a Front-Line Therapy in Subjects With Stage IV or Advanced Stage
@@ -103,21 +103,14 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-          - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-        - clinical:
-            age_numerical: '>=18'
-            pdl1_status: Low
-            disease_status:
-            - Metastatic
-            - Advanced
+      - clinical:
+          age_numerical: '>=18'
+          pdl1_status: Low
+          disease_status:
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - or:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
+            protein_change: p.G12C

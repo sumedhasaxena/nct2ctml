@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pembrolizumab'
-  - drug_name: 'Drug: Divarasib'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Divarasib'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Pemetrexed'
 long_title: A Phase III, Randomized, Open-Label Study Evaluating the Efficacy and
   Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin
   or Cisplatin in Patients With Previously Untreated, KRAS G12C-Mutated, Advanced
@@ -156,32 +156,15 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
               oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Advanced
             - Metastatic
-      - and:
-        - or:
-          - genomic:
-              hugo_symbol: KRAS
-              variant_category: Mutation
-        - and:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ROS1
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: BRAF
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: MET
-              variant_category: '!Mutation'
+      - or:
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation

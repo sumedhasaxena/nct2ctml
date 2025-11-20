@@ -4,27 +4,27 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2025-05-30",
     "study_start_date": "2025-07-16",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: Leucovorin/levofolinate calcium"
+            },
+            {
                 "drug_name": "Biological: Cetuximab"
+            },
+            {
+                "drug_name": "Drug: Oxaliplatin"
+            },
+            {
+                "drug_name": "Drug: Bevacizumab"
             },
             {
                 "drug_name": "Drug: MK-1084"
             },
             {
                 "drug_name": "Drug: 5-Fluorouracil"
-            },
-            {
-                "drug_name": "Drug: Oxaliplatin"
-            },
-            {
-                "drug_name": "Drug: Leucovorin/levofolinate calcium"
-            },
-            {
-                "drug_name": "Drug: Bevacizumab"
             }
         ]
     },
@@ -184,14 +184,24 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "disease_status": [
-                                "Locally Advanced",
-                                "Metastatic"
-                            ],
-                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
-                        }
+                        "and": [
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Locally Advanced",
+                                        "Metastatic"
+                                    ],
+                                    "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                }
+                            },
+                            {
+                                "genomic": {
+                                    "hugo_symbol": "KRAS",
+                                    "variant_category": "Mutation"
+                                }
+                            }
+                        ]
                     }
                 ]
             }

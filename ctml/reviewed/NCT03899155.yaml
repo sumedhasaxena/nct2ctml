@@ -3,29 +3,29 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2019-04-02'
 study_start_date: '2019-08-09'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Trametinib'
-  - drug_name: 'Drug: Regorafinib'
-  - drug_name: 'Drug: Oxaliplatin'
-  - drug_name: 'Drug: Daratumumab'
-  - drug_name: 'Drug: Temozolomide'
-  - drug_name: 'Drug: Cabozantinib'
-  - drug_name: 'Drug: Fluorouracil'
-  - drug_name: 'Drug: Nivolumab + Relatlimab'
-  - drug_name: 'Drug: Pemetrexed'
-  - drug_name: 'Drug: Leucovorin'
   - drug_name: 'Drug: Pembrolizumab'
-  - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Drug: Sunitinib'
-  - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Rucaparib'
-  - drug_name: 'Drug: Nivolumab'
-  - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: Trametinib'
+  - drug_name: 'Drug: Oxaliplatin'
   - drug_name: 'Drug: Relatlimab'
+  - drug_name: 'Drug: Cabozantinib'
+  - drug_name: 'Drug: Sunitinib'
+  - drug_name: 'Drug: Leucovorin'
+  - drug_name: 'Drug: Nivolumab'
+  - drug_name: 'Drug: Bevacizumab'
+  - drug_name: 'Drug: Rucaparib'
+  - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: Daratumumab'
   - drug_name: 'Drug: Ipilimumab'
+  - drug_name: 'Drug: Temozolomide'
+  - drug_name: 'Drug: Regorafinib'
+  - drug_name: 'Drug: Nivolumab + Relatlimab'
+  - drug_name: 'Drug: Fluorouracil'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Capecitabine'
 long_title: Pan-Tumor Study for Long-term Treatment of Cancer Patients Who Have Participated
   in BMS Sponsored Trials Investigating Nivolumab and Other Cancer Therapies
 last_updated: '2025-08-26'
@@ -462,8 +462,8 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: _LIQUID_
-        - clinical:
             oncotree_primary_diagnosis: _SOLID_
+        - clinical:
+            oncotree_primary_diagnosis: _LIQUID_
       - clinical:
           age_numerical: '>=18'

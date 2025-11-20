@@ -3,13 +3,13 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2023-10-10'
 study_start_date: '2023-11-12'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pemetrexed'
-  - drug_name: 'Biological: Sacituzumab tirumotecan'
   - drug_name: 'Drug: Docetaxel'
+  - drug_name: 'Biological: Sacituzumab tirumotecan'
+  - drug_name: 'Drug: Pemetrexed'
 long_title: A Randomized, Open-label, Phase 3 Study of MK-2870 vs Chemotherapy (Docetaxel
   or Pemetrexed) in Previously Treated Advanced or Metastatic Nonsquamous Non-small
   Cell Lung Cancer (NSCLC) With EGFR Mutations or Other Genomic Alterations
@@ -159,14 +159,9 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-      - and:
-        - genomic:
-            hugo_symbol: EGFR
-            variant_category: Mutation
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Advanced
+        - Metastatic
+        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

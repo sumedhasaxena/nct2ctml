@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Abemaciclib'
-  - drug_name: 'Drug: Giredestrant'
   - drug_name: 'Drug: Fulvestrant'
   - drug_name: 'Drug: Ribociclib'
   - drug_name: 'Drug: Palbociclib'
-  - drug_name: 'Drug: LHRH Agonist'
   - drug_name: 'Diagnostic Test: FoundationOne Liquid CDx Assay (F1LCDx)'
+  - drug_name: 'Drug: Giredestrant'
+  - drug_name: 'Drug: LHRH Agonist'
+  - drug_name: 'Drug: Abemaciclib'
 long_title: A Phase III Randomized, Open-Label Study Evaluating Efficacy and Safety
   of Giredestrant Compared With Fulvestrant, Both Combined With a CDK4/6 Inhibitor,
   in Patients With Estrogen Receptor-Positive, HER2-Negative Advanced Breast Cancer
@@ -159,11 +159,21 @@ treatment_list:
         level_internal_id: 5
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        her2_status: Negative
-        er_status: Positive
-        disease_status:
-        - Locally Advanced
-        - Metastatic
-        oncotree_primary_diagnosis: Invasive Breast Carcinoma
+    - and:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - clinical:
+            age_numerical: '>=18'
+            her2_status: Negative
+            er_status: Positive
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+      - or:
+        - genomic:
+            hugo_symbol: ESR1
+            variant_category: Mutation

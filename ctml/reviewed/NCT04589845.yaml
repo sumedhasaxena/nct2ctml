@@ -7,16 +7,16 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Alectinib'
-  - drug_name: 'Drug: Divarasib'
-  - drug_name: 'Drug: Trastuzumab emtansine'
   - drug_name: 'Drug: Camonsertib'
-  - drug_name: 'Drug: Inavolisib'
+  - drug_name: 'Drug: Divarasib'
+  - drug_name: 'Drug: Alectinib'
   - drug_name: 'Drug: Pralsetinib'
-  - drug_name: 'Drug: Atezolizumab'
-  - drug_name: 'Drug: Belvarafenib'
   - drug_name: 'Drug: Entrectinib'
+  - drug_name: 'Drug: Atezolizumab'
   - drug_name: 'Drug: Ipatasertib'
+  - drug_name: 'Drug: Inavolisib'
+  - drug_name: 'Drug: Trastuzumab emtansine'
+  - drug_name: 'Drug: Belvarafenib'
 long_title: Tumor-agnostic Precision Immuno-oncology and Somatic Targeting Rational
   for You (TAPISTRY) Phase II Platform Trial
 last_updated: '2025-08-24'

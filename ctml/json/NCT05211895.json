@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2022-01-27",
     "study_start_date": "2022-02-18",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -12,10 +12,10 @@
                 "drug_name": "Drug: Domvanalimab"
             },
             {
-                "drug_name": "Other: Placebo"
+                "drug_name": "Drug: Durvalumab"
             },
             {
-                "drug_name": "Drug: Durvalumab"
+                "drug_name": "Other: Placebo"
             }
         ]
     },
@@ -151,32 +151,15 @@
                     {
                         "and": [
                             {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "pdl1_status": "High",
-                                            "disease_status": [
-                                                "Locally Advanced",
-                                                "Unresectable"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "pdl1_status": "High",
+                                    "disease_status": [
+                                        "Locally Advanced",
+                                        "Unresectable"
+                                    ],
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
                             },
                             {
                                 "and": [

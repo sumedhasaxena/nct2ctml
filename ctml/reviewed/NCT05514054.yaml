@@ -3,15 +3,15 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2022-08-24'
 study_start_date: '2022-10-04'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Tamoxifen'
-  - drug_name: 'Drug: Anastrozole'
-  - drug_name: 'Drug: Exemestane'
-  - drug_name: 'Drug: Letrozole'
   - drug_name: 'Drug: Imlunestrant'
+  - drug_name: 'Drug: Letrozole'
+  - drug_name: 'Drug: Tamoxifen'
+  - drug_name: 'Drug: Exemestane'
+  - drug_name: 'Drug: Anastrozole'
 long_title: 'EMBER-4: A Randomized, Open-Label, Phase 3 Study of Adjuvant Imlunestrant
   vs Standard Adjuvant Endocrine Therapy in Patients Who Have Previously Received
   2 to 5 Years of Adjuvant Endocrine Therapy for ER+, HER2- Early Breast Cancer With
@@ -130,25 +130,25 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
-        - clinical:
             oncotree_primary_diagnosis: Breast Fibroepithelial Neoplasms
-        - clinical:
-            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
-        - clinical:
-            oncotree_primary_diagnosis: Metaplastic Breast Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Breast Sarcoma
-        - clinical:
-            oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
         - clinical:
             oncotree_primary_diagnosis: Breast Neoplasm, NOS
         - clinical:
             oncotree_primary_diagnosis: Inflammatory Breast Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
+        - clinical:
+            oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
+        - clinical:
+            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Breast Sarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Metaplastic Breast Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
       - clinical:
           age_numerical: '>=18'
           her2_status: Negative

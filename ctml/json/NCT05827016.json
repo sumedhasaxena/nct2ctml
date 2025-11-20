@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2023-04-24",
     "study_start_date": "2023-06-22",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [

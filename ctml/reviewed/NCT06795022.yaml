@@ -3,12 +3,12 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2025-01-27'
 study_start_date: '2025-03-27'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: AZD9793 Intravenous (IV) monotherapy'
   - drug_name: 'Drug: AZD9793 Subcutaneous (SC) monotherapy)'
+  - drug_name: 'Drug: AZD9793 Intravenous (IV) monotherapy'
 long_title: A Modular Phase I/II Open-label Dose Escalation and Dose Expansion Study
   to Evaluate the Safety, Pharmacokinetics, Pharmacodynamics, and Efficacy of AZD9793,
   a T Cell-engaging Antibody Targeting Glypican-3 (GPC3) in Adult Participants With
@@ -141,12 +141,10 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
-              Cholangiocarcinoma
-        - clinical:
             oncotree_primary_diagnosis: Hepatocellular Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Fibrolamellar Carcinoma
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
+              Cholangiocarcinoma
       - clinical:
           age_numerical: '>=18'
           disease_status:

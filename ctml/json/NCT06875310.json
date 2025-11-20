@@ -4,18 +4,15 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2025-03-13",
     "study_start_date": "2025-04-24",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Placebo"
+                "drug_name": "Drug: Pembrolizumab"
             },
             {
                 "drug_name": "Drug: Carboplatin"
-            },
-            {
-                "drug_name": "Drug: Pemetrexed"
             },
             {
                 "drug_name": "Drug: Adagrasib"
@@ -24,7 +21,10 @@
                 "drug_name": "Drug: Cisplatin"
             },
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: Pemetrexed"
+            },
+            {
+                "drug_name": "Drug: Placebo"
             }
         ]
     },
@@ -192,6 +192,7 @@
                                     "disease_status": [
                                         "Locally Advanced",
                                         "Metastatic",
+                                        "Advanced",
                                         "Untreated"
                                     ],
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
@@ -202,7 +203,8 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation"
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.G12C"
                                         }
                                     }
                                 ]

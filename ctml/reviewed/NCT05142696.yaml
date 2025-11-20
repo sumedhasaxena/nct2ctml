@@ -3,14 +3,14 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2021-12-02'
 study_start_date: '2022-07-13'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: [177Lu]Lu-DOTA-TATE'
+  - drug_name: 'Other: Etoposide'
   - drug_name: 'Drug: Atezolizumab'
   - drug_name: 'Drug: [68Ga]Ga-DOTA-TATE'
-  - drug_name: 'Other: Etoposide'
+  - drug_name: 'Drug: [177Lu]Lu-DOTA-TATE'
   - drug_name: 'Other: Carboplatin'
 long_title: A Phase Ib/II Dose Finding Study Assessing Safety and Efficacy of [177Lu]Lu-DOTA-TATE
   in Newly Diagnosed Extensive Stage Small Cell Lung Cancer (ES-SCLC) in Combination
@@ -299,8 +299,11 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Untreated
-        oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+      - clinical:
+          age_numerical: '>=18'

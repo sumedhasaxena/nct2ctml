@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2023-02-14",
     "study_start_date": "2023-07-05",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -147,12 +147,16 @@
                                 }
                             },
                             {
-                                "or": [
+                                "and": [
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "FGFR2",
-                                            "variant_category": "Structural Variation"
-                                        }
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "FGFR2",
+                                                    "variant_category": "Structural Variation"
+                                                }
+                                            }
+                                        ]
                                     }
                                 ]
                             }

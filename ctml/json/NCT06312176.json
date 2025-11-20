@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-03-15",
     "study_start_date": "2024-04-14",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -12,7 +12,7 @@
                 "drug_name": "Biological: Pembrolizumab"
             },
             {
-                "drug_name": "Drug: Nab-paclitaxel"
+                "drug_name": "Drug: Capecitabine"
             },
             {
                 "drug_name": "Drug: Liposomal doxorubicin"
@@ -24,7 +24,7 @@
                 "drug_name": "Drug: Sacituzumab tirumotecan"
             },
             {
-                "drug_name": "Drug: Capecitabine"
+                "drug_name": "Drug: Nab-paclitaxel"
             }
         ]
     },
@@ -183,7 +183,7 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
+                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
                                         }
                                     },
                                     {
@@ -193,7 +193,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                            "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
                                         }
                                     }
                                 ]
