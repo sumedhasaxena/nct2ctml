@@ -3,19 +3,19 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2025-05-13'
 study_start_date: '2025-06-30'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Epirubicin'
-  - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Drug: Cyclophosphamide'
-  - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Olaparib'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Drug: Rescue Medication'
   - drug_name: 'Drug: Doxorubicin'
+  - drug_name: 'Drug: Epirubicin'
+  - drug_name: 'Drug: Olaparib'
+  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Rescue Medication'
+  - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Drug: Cyclophosphamide'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Biological: Sacituzumab tirumotecan'
 long_title: A Phase 3, Randomized, Open-label Study to Evaluate the Efficacy and Safety
   of Sac-TMT (Sacituzumab Tirumotecan, MK-2870) Followed by Carboplatin/Paclitaxel
@@ -248,11 +248,25 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Inflammatory Breast Cancer
+            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
+        - clinical:
+            oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
+        - clinical:
+            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Breast Fibroepithelial Neoplasms
+        - clinical:
+            oncotree_primary_diagnosis: Breast Sarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Metaplastic Breast Cancer
         - clinical:
             oncotree_primary_diagnosis: Breast Neoplasm, NOS
         - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            oncotree_primary_diagnosis: Inflammatory Breast Cancer
       - clinical:
           age_numerical: '>=18'
           her2_status: Negative

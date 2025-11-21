@@ -4,10 +4,16 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2023-09-08",
     "study_start_date": "2024-07-15",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
+            {
+                "drug_name": "Drug: Carboplatin"
+            },
+            {
+                "drug_name": "Drug: Cisplatin"
+            },
             {
                 "drug_name": "Biological: Relatlimab"
             },
@@ -15,7 +21,7 @@
                 "drug_name": "Procedure: Computed Tomography"
             },
             {
-                "drug_name": "Procedure: Bone Scan"
+                "drug_name": "Procedure: Positron Emission Tomography"
             },
             {
                 "drug_name": "Procedure: Magnetic Resonance Imaging"
@@ -24,19 +30,13 @@
                 "drug_name": "Drug: Gemcitabine"
             },
             {
-                "drug_name": "Biological: Nivolumab"
-            },
-            {
-                "drug_name": "Drug: Carboplatin"
-            },
-            {
                 "drug_name": "Procedure: Biospecimen Collection"
             },
             {
-                "drug_name": "Drug: Cisplatin"
+                "drug_name": "Procedure: Bone Scan"
             },
             {
-                "drug_name": "Procedure: Positron Emission Tomography"
+                "drug_name": "Biological: Nivolumab"
             }
         ]
     },
@@ -294,32 +294,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Nasopharyngeal Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Head and Neck Carcinoma, Other"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Recurrent",
-                                        "Metastatic",
-                                        "Unresectable"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Recurrent",
+                                "Metastatic"
+                            ],
+                            "oncotree_primary_diagnosis": "Nasopharyngeal Carcinoma"
+                        }
                     }
                 ]
             }

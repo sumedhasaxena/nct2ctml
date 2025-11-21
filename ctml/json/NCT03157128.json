@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2017-05-17",
     "study_start_date": "2017-05-02",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -107,7 +107,7 @@
     "staff_list": {
         "protocol_staff": []
     },
-    "status": "open to accrual",
+    "status": "closed",
     "summary": "This is an open-label, first-in-human study designed to evaluate the safety, tolerability, pharmacokinetics (PK) and preliminary anti-tumor activity of selpercatinib (also known as LOXO-292) administered orally to participants with advanced solid tumors, including rearranged during transfection (RET)-fusion-positive solid tumors, medullary thyroid cancer (MTC) and other tumors with RET activation.",
     "treatment_list": {
         "step": [
@@ -140,7 +140,47 @@
                                         "or": [
                                             {
                                                 "clinical": {
+                                                    "oncotree_primary_diagnosis": "Tubular Adenoma of the Colon"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Leiomyosarcoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Ewing Sarcoma of Soft Tissue"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Rhabdomyosarcoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Synovial Sarcoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Liposarcoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Medullary Thyroid Cancer"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma"
                                                 }
                                             },
                                             {
@@ -172,7 +212,7 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "RET",
-                                            "variant_category": "Structural Variation"
+                                            "variant_category": "Mutation"
                                         }
                                     }
                                 ]

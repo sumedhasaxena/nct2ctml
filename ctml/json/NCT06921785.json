@@ -4,12 +4,12 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2025-04-10",
     "study_start_date": "2025-05-06",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Tremelimumab"
+                "drug_name": "Drug: Atezolizumab"
             },
             {
                 "drug_name": "Drug: Rilvegostomig"
@@ -18,7 +18,7 @@
                 "drug_name": "Drug: Bevacizumab"
             },
             {
-                "drug_name": "Drug: Atezolizumab"
+                "drug_name": "Drug: Tremelimumab"
             }
         ]
     },
@@ -179,33 +179,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Fibrolamellar Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic",
-                                        "Unresectable",
-                                        "Advanced"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Locally Advanced",
+                                "Metastatic"
+                            ],
+                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                        }
                     }
                 ]
             }

@@ -4,16 +4,10 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2023-12-08",
     "study_start_date": "2024-08-07",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
-            {
-                "drug_name": "Drug: S095024"
-            },
-            {
-                "drug_name": "Drug: S095018"
-            },
             {
                 "drug_name": "Drug: S095018 Recommended Dose Expansion (RDE)"
             },
@@ -21,13 +15,19 @@
                 "drug_name": "Drug: S095029 RDE"
             },
             {
-                "drug_name": "Drug: S095029"
-            },
-            {
                 "drug_name": "Drug: S095024 RDE"
             },
             {
+                "drug_name": "Drug: S095029"
+            },
+            {
                 "drug_name": "Drug: Cemiplimab"
+            },
+            {
+                "drug_name": "Drug: S095024"
+            },
+            {
+                "drug_name": "Drug: S095018"
             }
         ]
     },
@@ -277,13 +277,13 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "ALK",
-                                            "variant_category": "!Structural Variation"
+                                            "variant_category": "!Mutation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "ROS1",
-                                            "variant_category": "!Structural Variation"
+                                            "variant_category": "!Mutation"
                                         }
                                     }
                                 ]

@@ -4,18 +4,18 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2025-04-13",
     "study_start_date": "2025-05-13",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Ifinatamab deruxtecan"
+                "drug_name": "Drug: Docetaxel"
             },
             {
                 "drug_name": "Drug: Prednisone"
             },
             {
-                "drug_name": "Drug: Docetaxel"
+                "drug_name": "Drug: Ifinatamab deruxtecan"
             }
         ]
     },
@@ -133,12 +133,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
                                         }
                                     },
                                     {
@@ -148,12 +148,12 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
                                         }
                                     }
                                 ]

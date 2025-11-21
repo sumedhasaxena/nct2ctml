@@ -4,15 +4,15 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2020-11-03",
     "study_start_date": "2020-12-02",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Adagrasib"
+                "drug_name": "Drug: Pembrolizumab"
             },
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: Adagrasib"
             }
         ]
     },
@@ -170,38 +170,46 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "pdl1_status": "High",
-                                    "disease_status": [
-                                        "Unresectable",
-                                        "Metastatic",
-                                        "Locally Advanced"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
-                            },
-                            {
                                 "and": [
                                     {
                                         "or": [
                                             {
-                                                "genomic": {
-                                                    "hugo_symbol": "KRAS",
-                                                    "variant_category": "Mutation"
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
                                                 }
                                             }
                                         ]
                                     },
                                     {
-                                        "and": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "KRAS",
-                                                    "variant_category": "!Mutation"
-                                                }
-                                            }
-                                        ]
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "pdl1_status": "High",
+                                            "disease_status": [
+                                                "Unresectable",
+                                                "Metastatic",
+                                                "Untreated"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "or": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "KRAS",
+                                            "variant_category": "Mutation"
+                                        }
                                     }
                                 ]
                             }

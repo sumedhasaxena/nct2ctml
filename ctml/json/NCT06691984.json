@@ -4,21 +4,21 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-11-18",
     "study_start_date": "2024-12-09",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Abiraterone"
-            },
-            {
                 "drug_name": "Drug: Xaluritamig"
             },
             {
-                "drug_name": "Drug: Enzalutamide"
+                "drug_name": "Drug: Cabazitaxel"
             },
             {
-                "drug_name": "Drug: Cabazitaxel"
+                "drug_name": "Drug: Abiraterone"
+            },
+            {
+                "drug_name": "Drug: Enzalutamide"
             }
         ]
     },
@@ -153,15 +153,31 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "gender": "Male",
-                            "disease_status": [
-                                "Metastatic",
-                                "Recurrent"
-                            ],
-                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
-                        }
+                        "and": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "gender": "Male",
+                                    "disease_status": [
+                                        "Metastatic"
+                                    ]
+                                }
+                            }
+                        ]
                     }
                 ]
             }

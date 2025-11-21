@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Rescue medication'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Biological: Sacituzumab tirumotecan'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Rescue medication'
   - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Biological: Sacituzumab tirumotecan'
+  - drug_name: 'Drug: Gemcitabine'
 long_title: A Phase 3 Randomized Open-Label Study of Adjuvant Pembrolizumab With or
   Without MK-2870 in Participants With Resectable Stage II to IIIB (N2) NSCLC Not
   Achieving pCR After Receiving Neoadjuvant Pembrolizumab With Platinum-based Doublet
@@ -203,14 +203,9 @@ treatment_list:
         level_internal_id: 5
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Localized
-          - Locally Advanced
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Localized
+        - Locally Advanced
+        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

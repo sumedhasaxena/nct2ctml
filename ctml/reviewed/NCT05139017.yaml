@@ -3,16 +3,16 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2021-12-01'
 study_start_date: '2022-01-14'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Rituximab'
   - drug_name: 'Biological: Zilovertamab vedotin'
-  - drug_name: 'Drug: Gemcitabine'
-  - drug_name: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
-  - drug_name: 'Drug: Bendamustine'
   - drug_name: 'Drug: Oxaliplatin'
+  - drug_name: 'Biological: Rituximab'
+  - drug_name: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Bendamustine'
 long_title: A Phase 2/3 Multicenter, Open-label, Randomized, Active-Control Study
   of Zilovertamab Vedotin (MK-2140) in Combination With Standard of Care in Participants
   With Relapsed or Refractory Diffuse Large B-Cell Lymphoma (waveLINE-003)

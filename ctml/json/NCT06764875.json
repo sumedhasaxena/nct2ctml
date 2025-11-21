@@ -4,30 +4,30 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2025-01-09",
     "study_start_date": "2025-03-01",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Cisplatin"
+                "drug_name": "Drug: Trastuzumab deruxtecan"
             },
             {
                 "drug_name": "Drug: Capecitabine"
             },
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: 5-fluorouracil"
             },
             {
-                "drug_name": "Drug: 5-fluorouracil"
+                "drug_name": "Drug: Trastuzumab"
             },
             {
                 "drug_name": "Drug: Oxaliplatin"
             },
             {
-                "drug_name": "Drug: Trastuzumab deruxtecan"
+                "drug_name": "Drug: Pembrolizumab"
             },
             {
-                "drug_name": "Drug: Trastuzumab"
+                "drug_name": "Drug: Cisplatin"
             },
             {
                 "drug_name": "Drug: Rilvegostomig"
@@ -258,9 +258,9 @@
                                     "pdl1_status": "High",
                                     "disease_status": [
                                         "Untreated",
-                                        "Unresectable",
                                         "Locally Advanced",
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Unresectable"
                                     ],
                                     "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
                                 }
@@ -271,6 +271,12 @@
                                         "genomic": {
                                             "hugo_symbol": "ERBB2",
                                             "variant_category": "Mutation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "ERBB2",
+                                            "variant_category": "Copy Number Variation"
                                         }
                                     }
                                 ]

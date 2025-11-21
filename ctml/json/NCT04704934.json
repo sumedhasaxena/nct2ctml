@@ -4,15 +4,15 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2021-01-12",
     "study_start_date": "2021-05-21",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Trastuzumab deruxtecan"
+                "drug_name": "Drug: Ramucirumab"
             },
             {
-                "drug_name": "Drug: Ramucirumab"
+                "drug_name": "Drug: Trastuzumab deruxtecan"
             },
             {
                 "drug_name": "Drug: Paclitaxel"
@@ -98,7 +98,7 @@
     "staff_list": {
         "protocol_staff": []
     },
-    "status": "open to accrual",
+    "status": "closed",
     "summary": "This study will evaluate the efficacy and safety of trastuzumab deruxtecan (T-DXd) compared with ramucirumab and paclitaxel (Ram + PTX) in participants with HER2-positive gastric or gastro-esophageal junction (GEJ) adenocarcinoma who have progressed on or after a trastuzumab-containing regimen and have not received any additional systemic therapy.",
     "treatment_list": {
         "step": [
@@ -144,30 +144,16 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "her2_status": "Positive",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Locally Advanced",
-                                        "Unresectable"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
-                                }
-                            },
-                            {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "Copy Number Variation"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "her2_status": "Positive",
+                            "disease_status": [
+                                "Unresectable",
+                                "Locally Advanced",
+                                "Metastatic"
+                            ],
+                            "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
+                        }
                     }
                 ]
             }

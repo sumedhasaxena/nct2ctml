@@ -15,10 +15,10 @@
                 "drug_name": "Drug: GDC-0980"
             },
             {
-                "drug_name": "Drug: Fulvestrant"
+                "drug_name": "Drug: GDC-0980 Matching Placebo"
             },
             {
-                "drug_name": "Drug: GDC-0980 Matching Placebo"
+                "drug_name": "Drug: Fulvestrant"
             },
             {
                 "drug_name": "Drug: GDC-0941"
@@ -104,7 +104,7 @@
     "staff_list": {
         "protocol_staff": []
     },
-    "status": "closed",
+    "status": "open to accrual",
     "summary": "This is a multicenter, international, randomized, double-blinded, placebo-controlled, Phase II trial. Participants with advanced breast cancer (ABC) or Metastatic Breast Cancer (MBC) who have experienced recurrence or progression of their disease while receiving aromatase inhibitor (AI) therapy or who have relapsed within 6 months after completing adjuvant AI therapy will be enrolled in Part I of this study. Participants with ABC or MBC who have received prior AI therapy and who have PIK3CA-mutant tumors will be enrolled in Part II of this study. Part I of the study will assess the effect of the addition of GDC-0941 to fulvestrant (Arm A) and of GDC-0980 to fulvestrant (Arm B) on progression free survival (PFS) compared with fulvestrant + placebo (Arm C). Part II of the study will examine the safety and tolerability and to estimate the effect of GDC-0941 in combination with fulvestrant (Arm D) on PFS versus fulvestrant + placebo (Arm E) in participants who received prior treatment with an AI and whose tumors contain a PIK3CA mutation.",
     "treatment_list": {
         "step": [
@@ -227,12 +227,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Adenomyoepithelioma of the Breast"
+                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                            "oncotree_primary_diagnosis": "Adenomyoepithelioma of the Breast"
                                         }
                                     },
                                     {
@@ -242,7 +242,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                            "oncotree_primary_diagnosis": "Inflammatory Breast Cancer"
                                         }
                                     },
                                     {
@@ -252,12 +252,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Metaplastic Breast Cancer"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Inflammatory Breast Cancer"
+                                            "oncotree_primary_diagnosis": "Breast Fibroepithelial Neoplasms"
                                         }
                                     },
                                     {
@@ -267,7 +262,17 @@
                                     },
                                     {
                                         "clinical": {
+                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
                                             "oncotree_primary_diagnosis": "Juvenile Secretory Carcinoma of the Breast"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Metaplastic Breast Cancer"
                                         }
                                     }
                                 ]
@@ -279,8 +284,9 @@
                                     "her2_status": "Negative",
                                     "er_status": "Positive",
                                     "disease_status": [
-                                        "Advanced",
-                                        "Metastatic"
+                                        "Localized",
+                                        "Metastatic",
+                                        "Recurrent"
                                     ]
                                 }
                             }

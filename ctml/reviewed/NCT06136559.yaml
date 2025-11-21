@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Acalabrutinib'
   - drug_name: 'Drug: Ibrutinib'
   - drug_name: 'Drug: Nemtabrutinib'
+  - drug_name: 'Drug: Acalabrutinib'
 long_title: A Phase 3, Randomized Study to Compare Nemtabrutinib Versus Comparator
   (Investigator's Choice of Ibrutinib or Acalabrutinib) in Participants With Untreated
   Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma (BELLWAVE-011)

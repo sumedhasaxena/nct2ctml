@@ -3,14 +3,14 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-02-12'
 study_start_date: '2024-07-17'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: FOLFIRI Regimen'
+  - drug_name: 'Drug: Sotorasib'
   - drug_name: 'Drug: Bevacizumab-awwb'
   - drug_name: 'Drug: Panitumumab'
-  - drug_name: 'Drug: Sotorasib'
-  - drug_name: 'Drug: FOLFIRI Regimen'
 long_title: "Phase 3 Multicenter, Randomized, Open-label, Active-controlled Study\
   \ of Sotorasib, Panitumumab and FOLFIRI Versus FOLFIRI With or Without Bevacizumab-awwb\
   \ for Treatment-na\xEFve Subjects With Metastatic Colorectal Cancer With KRAS p.G12C\
@@ -109,13 +109,15 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-          - clinical:
               oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+          - clinical:
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Metastatic
-      - genomic:
-          hugo_symbol: KRAS
-          variant_category: Mutation
+      - or:
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12C

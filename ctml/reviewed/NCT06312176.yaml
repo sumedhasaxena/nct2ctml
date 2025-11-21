@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Biological: Pembrolizumab'
   - drug_name: 'Drug: Capecitabine'
   - drug_name: 'Drug: Liposomal doxorubicin'
-  - drug_name: 'Drug: Nab-paclitaxel'
-  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Drug: Sacituzumab tirumotecan'
+  - drug_name: 'Drug: Nab-paclitaxel'
 long_title: An Open-label, Randomized Phase 3 Study of MK-2870 as a Single Agent and
   in Combination With Pembrolizumab Versus Treatment of Physician's Choice in Participants
   With HR+/HER2- Unresectable Locally Advanced or Metastatic Breast Cancer
@@ -156,12 +156,20 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        her2_status: Negative
-        er_status: Positive
-        pr_status: Positive
-        disease_status:
-        - Unresectable
-        - Metastatic
-        oncotree_primary_diagnosis: Breast Neoplasm, NOS
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Breast Neoplasm, NOS
+      - clinical:
+          age_numerical: '>=18'
+          her2_status: Negative
+          er_status: Positive
+          pr_status: Positive
+          disease_status:
+          - Unresectable
+          - Locally Advanced
+          - Metastatic

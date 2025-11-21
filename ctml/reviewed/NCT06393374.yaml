@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Biological: Sacituzumab tirumotecan'
-  - drug_name: 'Biological: Pembrolizumab'
   - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Biological: Pembrolizumab'
 long_title: A Phase 3, Randomized, Open-label, Study to Compare the Efficacy and Safety
   of Adjuvant MK-2870 in Combination With Pembrolizumab (MK-3475) Versus Treatment
   of Physician's Choice (TPC) in Participants With Triple-Negative Breast Cancer (TNBC)
@@ -192,24 +192,11 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - and:
-        - genomic:
-            hugo_symbol: BRCA1
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: BRCA2
-            variant_category: '!Mutation'
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
-          - clinical:
-              oncotree_primary_diagnosis: Invasive Breast Carcinoma
-        - clinical:
-            age_numerical: '>=18'
-            her2_status: Negative
-            er_status: Negative
-            pr_status: Negative
-            disease_status:
-            - Early Stage
+    - clinical:
+        age_numerical: '>=18'
+        her2_status: Negative
+        er_status: Negative
+        pr_status: Negative
+        disease_status:
+        - Early Stage
+        oncotree_primary_diagnosis: Invasive Breast Carcinoma

@@ -4,24 +4,24 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-12-27",
     "study_start_date": "2024-12-12",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Bevacizumab"
-            },
-            {
-                "drug_name": "Drug: Irinotecan"
-            },
-            {
-                "drug_name": "Drug: 5-fluorouracil"
+                "drug_name": "Biological: Cetuximab"
             },
             {
                 "drug_name": "Biological: Amivantamab"
             },
             {
-                "drug_name": "Biological: Cetuximab"
+                "drug_name": "Biological: Bevacizumab"
+            },
+            {
+                "drug_name": "Drug: 5-fluorouracil"
+            },
+            {
+                "drug_name": "Drug: Irinotecan"
             },
             {
                 "drug_name": "Drug: Leucovorin calcium/Levoleucovorin"
@@ -191,42 +191,12 @@
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Low-grade Appendiceal Mucinous Neoplasm"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
                                                 }
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Anal Squamous Cell Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Appendiceal Adenocarcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Tubular Adenoma of the Colon"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Anal Gland Adenocarcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Anorectal Mucosal Melanoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Gastrointestinal Neuroendocrine Tumors"
                                                 }
                                             }
                                         ]
@@ -234,9 +204,7 @@
                                     {
                                         "clinical": {
                                             "age_numerical": ">=18",
-                                            "mmr_status": "!MMR-Deficient",
-                                            "ms_status": "!MSI-H",
-                                            "her2_status": "!Positive",
+                                            "her2_status": "Negative",
                                             "disease_status": [
                                                 "Recurrent",
                                                 "Unresectable",
@@ -249,26 +217,28 @@
                             {
                                 "and": [
                                     {
-                                        "and": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "KRAS",
-                                                    "variant_category": "!Mutation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "NRAS",
-                                                    "variant_category": "!Mutation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "BRAF",
-                                                    "variant_category": "!Mutation"
-                                                }
-                                            }
-                                        ]
+                                        "genomic": {
+                                            "hugo_symbol": "KRAS",
+                                            "variant_category": "!Mutation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "NRAS",
+                                            "variant_category": "!Mutation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "BRAF",
+                                            "variant_category": "!Mutation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "ERBB2",
+                                            "variant_category": "!Mutation"
+                                        }
                                     }
                                 ]
                             }

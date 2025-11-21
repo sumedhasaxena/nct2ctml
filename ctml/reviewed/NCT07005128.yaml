@@ -3,14 +3,14 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2025-06-05'
 study_start_date: '2025-08-18'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Durvalumab'
   - drug_name: 'Drug: Tarlatamab'
   - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Etoposide'
-  - drug_name: 'Drug: Durvalumab'
 long_title: A Phase 3, Open Label, Multicenter, Randomized Study of First Line Tarlatamab
   in Combination With Durvalumab, Carboplatin and Etoposide Versus Durvalumab, Carboplatin
   and Etoposide in Untreated Extensive Stage Small-Cell Lung Cancer (DeLLphi-312)

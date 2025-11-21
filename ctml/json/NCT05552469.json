@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2022-09-23",
     "study_start_date": "2023-05-08",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -147,6 +147,11 @@
                                 "or": [
                                     {
                                         "clinical": {
+                                            "oncotree_primary_diagnosis": "Myeloid Atypical"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
                                             "oncotree_primary_diagnosis": "Myeloid Benign"
                                         }
                                     },
@@ -161,8 +166,7 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Refractory",
-                                        "Early Stage"
+                                        "Refractory"
                                     ]
                                 }
                             }

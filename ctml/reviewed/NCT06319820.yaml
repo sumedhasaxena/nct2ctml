@@ -3,13 +3,13 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-03-20'
 study_start_date: '2024-04-18'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: MMC'
-  - drug_name: 'Combination Product: TAR-210'
   - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Combination Product: TAR-210'
 long_title: A Phase 3, Randomized Study Evaluating the Efficacy and Safety of TAR-210
   Erdafitinib Intravesical Delivery System Versus Single Agent Intravesical Chemotherapy
   in Participants With Intermediate-risk Non-muscle Invasive Bladder Cancer (IR-NMIBC)
@@ -122,13 +122,8 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Recurrent
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Recurrent
+        oncotree_primary_diagnosis: Bladder Urothelial Carcinoma

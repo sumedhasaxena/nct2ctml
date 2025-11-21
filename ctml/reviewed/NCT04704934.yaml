@@ -3,12 +3,12 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2021-01-12'
 study_start_date: '2021-05-21'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Trastuzumab deruxtecan'
   - drug_name: 'Drug: Ramucirumab'
+  - drug_name: 'Drug: Trastuzumab deruxtecan'
   - drug_name: 'Drug: Paclitaxel'
 long_title: A Phase 3, Multicenter, 2-Arm Randomized, Open-Label Study of Trastuzumab
   Deruxtecan in Subjects With HER2-Positive Metastatic and/or Unresectable Gastric
@@ -110,7 +110,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: This study will evaluate the efficacy and safety of trastuzumab deruxtecan
   (T-DXd) compared with ramucirumab and paclitaxel (Ram + PTX) in participants with
   HER2-positive gastric or gastro-esophageal junction (GEJ) adenocarcinoma who have
@@ -149,16 +149,11 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Positive
-          disease_status:
-          - Metastatic
-          - Locally Advanced
-          - Unresectable
-          oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Copy Number Variation
+    - clinical:
+        age_numerical: '>=18'
+        her2_status: Positive
+        disease_status:
+        - Unresectable
+        - Locally Advanced
+        - Metastatic
+        oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma

@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-11-08",
     "study_start_date": "2024-12-20",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -167,33 +167,16 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Fibrolamellar Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Unresectable",
-                                        "Locally Advanced",
-                                        "Metastatic",
-                                        "Untreated"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Unresectable",
+                                "Locally Advanced",
+                                "Metastatic",
+                                "Untreated"
+                            ],
+                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                        }
                     }
                 ]
             }
