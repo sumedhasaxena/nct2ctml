@@ -89,8 +89,8 @@ class TrialPullManager:
         """Fetch trial summaries from clinicaltrials.gov API"""
         endpoint = "studies"
         
-        regions_str = ' or '.join(self.regions)
-        condition_str = ' or '.join(self.conditions)
+        regions_str = ' OR '.join(self.regions)
+        condition_str = ' OR '.join(self.conditions)
         # Default filters
         params = {
             'query.cond': condition_str,
