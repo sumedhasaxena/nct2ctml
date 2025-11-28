@@ -9,9 +9,31 @@ def get_level1_diagnosis_from_original_conditions(nct_id:str, original_condition
     level1_oncotree_list = list(level1_oncotree) 
     
     prompt = get_ai_prompt_level1_for_original_conditions(original_conditions_list, level1_oncotree_list)
+
+
+    logger.debug(f"NCTID: {nct_id} | AI Prompt for Level 1 diagnosis from original conditions: {prompt}")
         
     ai_response = send_ai_request(nct_id, prompt)
     oncotree_diagnoses_dict = parse_ai_response(ai_response)
+    return oncotree_diagnoses_dict
+
+def get_level1_diagnosis_from_original_extra_info(nct_id:str, extra_info: list, level1_oncotree: set) -> dict:    
+    level1_oncotree_list = list(level1_oncotree) 
+    
+    prompt = get_ai_prompt_level1_from_supporting_info(extra_info, level1_oncotree_list)
+        
+    ai_response = send_ai_request(nct_id, prompt)
+    oncotree_diagnoses_dict = parse_ai_response(ai_response)
+    return oncotree_diagnoses_dict
+
+def get_child_level_diagnoses_from_extra_info(nct_id:str, combined_child_nodes_oncotree:set, extra_info: set) -> dict:
+
+    combined_child_nodes_oncotree_list = list(combined_child_nodes_oncotree)
+
+    prompt = get_ai_prompt_child_values_from_supporting_info(extra_info, combined_child_nodes_oncotree_list)
+
+    ai_response = send_ai_request(nct_id, prompt)
+    oncotree_diagnoses_dict = parse_ai_response(ai_response)   
     return oncotree_diagnoses_dict
 
 def get_child_level_diagnoses_from_condition(nct_id:str, child_nodes_oncotree:set, nct_condition: str) -> dict:
@@ -204,7 +226,29 @@ def get_ai_prompt_level1_for_original_conditions(original_conditions_list, level
         }}
     ]
     }}"""
+    return prompt
+
+def get_ai_prompt_level1_from_supporting_info(trial_info, level1_oncotree_list):
+    prompt = f"""Task: From the trial information, try to get the closest oncotree values that might define the diagnosis this trial is looking for.
+    Trial information: {trial_info}
+    Oncotree values:{level1_oncotree_list}
+    The output should be in the json format :
+    {{
+    "oncotree_diagnoses": []
+    }}"""
     
+    return prompt
+
+def get_ai_prompt_child_values_from_supporting_info(extra_info:set, child_nodes_oncotree_list):
+    prompt = f"""
+    Task: Map the trial info to the closest diagnoses from the list of 'Oncotree values' below.
+    Trial Info: {extra_info}
+    Oncotree values: {child_nodes_oncotree_list}
+    The output should be in the json format :
+    {{    
+    "oncotree_diagnoses": []
+    }}
+    """
     return prompt
 
 def get_ai_prompt_child_values(nct_condition, child_nodes_oncotree_list):

@@ -269,7 +269,34 @@ def map_oncotree_primary_diagnosis(trial_data: dict) -> list:
                     # stage 4: Pass the child values to AI and the conditions to map to a child value --> pass only level 2 values
                     oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_condition(nct_id, l2_oncotree_values, nct_condition)
                     if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
-                        all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])        
+                        all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses']) 
+
+            if len(all_possible_diagnoses) == 0:
+                logger.info(f"NCTID: {nct_id} | No oncotree diagnosis was found from original conditions, trying from keywords and title")
+                # if the could not dianose from conditions, try getting diagnosis from keywords and title
+                extra_info = []
+                keywords = tdh.safe_get(trial_data, ['protocolSection', 'conditionsModule','keywords'])
+                if keywords:
+                    extra_info.extend(keywords)
+                long_title = tdh.safe_get(trial_data, ['protocolSection', 'identificationModule','officialTitle'])
+                brief_title = tdh.safe_get(trial_data, ['protocolSection', 'identificationModule','briefTitle'])
+                extra_info.append(long_title)
+                extra_info.append(brief_title)
+
+                all_level_oncotree_values = set()
+
+                # stage 3: Get the child values for Level 1 oncotree diagnoses
+                level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_extra_info(nct_id, extra_info, level_1_diagnosis)
+                for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
+                    if item == "" or item.lower() == "other":
+                        continue
+                    l2_oncotree_values = l1_l2_mapping[item]
+                    all_level_oncotree_values.update(l2_oncotree_values)
+                logger.debug(f"NCTID: {nct_id} | Stage 3 - Diagnoses = {level1_oncotree_values_dict["oncotree_diagnoses"]}. Child values = {l2_oncotree_values}")
+                # stage 4: Pass the child values to AI and the conditions to map to a child value --> pass only level 2 values
+                oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_extra_info(nct_id, all_level_oncotree_values, extra_info)
+                if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
+                    all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])                
     
     logger.debug(f"NCTID: {nct_id} | Stage 4 Oncotree_diagnoses : {all_possible_diagnoses}")
         
