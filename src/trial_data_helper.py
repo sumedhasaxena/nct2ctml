@@ -90,8 +90,13 @@ def safe_get(trial_data, keys):
 
 def all_solid_tumours(conditions_list):
     all_solid_tumors = any(
+            "solid tumor" in cond.lower() or
             "solid tumors" in cond.lower() or
+            "solid tumour" in cond.lower() or
+            "solid tumours" in cond.lower() or
             "solid malignancies" in cond.lower() or
+            "metastatic cancer" in cond.lower() or
+            cond.lower() == "malignant neoplasm" or
             cond.lower() == "neoplasms" 
             for cond in conditions_list)
         
