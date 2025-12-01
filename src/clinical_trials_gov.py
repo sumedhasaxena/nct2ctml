@@ -141,7 +141,7 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
         clinical_critera['gender'] = gender_str
 
     her2_er_pr_dict = map_her2_er_pr_status(trial_data)
-    filtered_her2_er_pr_dict = {k:v for k,v in her2_er_pr_dict.items() if v.lower() in ["positive", "negative"]}
+    filtered_her2_er_pr_dict = {k:v for k,v in her2_er_pr_dict.items() if v.lower() in ["positive", "negative","!positive","!negative"]}
     clinical_critera.update(filtered_her2_er_pr_dict)
     
     pdl1_status_dict = map_pdl1_status(trial_data)
