@@ -286,14 +286,16 @@ def get_ai_prompt_clinical_oncotree_diagnosis(condition, child_nodes_oncotree_li
     return prompt
 
 def get_her2_er_pr_status_prompt(eligibilityCriteria, keywords):
-    prompt = f"""Task: From the eligibility criteria and the keywords mentioned below, find out if it mentions her2, pr or er status along with the required value (Positive/Negative/unknown).
+    prompt = f"""Task: From the eligibility criteria and the keywords mentioned below, find out if it mentions her2, pr or er status along with the required value. The value should be one of the listed allowed values.
+         The '!' operator should be used if the criteria excludes a particular status.
+         Allowed values: ['Positive', 'Negative', 'Unknown','!Positive','!Negative']
          eligibilityCriteria: {eligibilityCriteria}
          keywords: {keywords}
          The output should be in the json format :
          {{
-         "her2_status": "Positive/Negative/Unknown",
-         "er_status": "Positive/Negative/Unknown",
-         "pr_status": "Positive/Negative/Unknown"
+         "her2_status": "value",
+         "er_status": "value",
+         "pr_status": "value"
          }}"""
          
     return prompt
