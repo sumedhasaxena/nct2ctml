@@ -97,6 +97,7 @@ def all_solid_tumours(conditions_list):
             "solid malignancies" in cond.lower() or
             "metastatic cancer" in cond.lower() or
             cond.lower() == "malignant neoplasm" or
+            
             cond.lower() == "neoplasms" 
             for cond in conditions_list)
         
@@ -104,7 +105,8 @@ def all_solid_tumours(conditions_list):
 
 def all_tumours(conditions_list):
     all_tumors = any(
-    cond.lower() in ["cancer","oncology"] 
+    cond.lower() in ["cancer","oncology","advanced cancer"] or
+    "metastatic cancer" in cond.lower()
     for cond in conditions_list)
     
     return all_tumors
