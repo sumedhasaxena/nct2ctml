@@ -94,59 +94,95 @@ def get_patient_genomic_criteria(id:str, genomic_data: str) -> dict:
     return patient_genomic_criteria
 
 def parse_ai_response(ai_response):
-    oncotree_diagnoses_dict = {}
+    response_dict = {}
 
-    try:
-        if type(ai_response) is dict and 'choices' in ai_response.keys() and type(ai_response['choices']) is list:
-            answer = ai_response['choices'][0]
-            ai_response_content = safe_get(answer,['message','content'])
-            if ai_response_content:
-                prefix_pos = ai_response_content.find('```json') #look for ```json in response string 
-                if prefix_pos > -1:
-                    begin_content = ai_response_content.find('```json')+len('```json')
-                    end_content = ai_response_content.find('```', begin_content)
-                    oncotree_diagnoses_response_string = ai_response_content[begin_content:end_content].strip()
-                else:
-                    prefix_pos = ai_response_content.find('</think>')# elseget everything after </think>
+    if config.LLM_PLATFORM == "SGLang" or config.LLM_PLATFORM == "vllm":
+        try:
+            if type(ai_response) is dict and 'choices' in ai_response.keys() and type(ai_response['choices']) is list:
+                answer = ai_response['choices'][0]
+                ai_response_content = safe_get(answer,['message','content'])
+                if ai_response_content:
+                    prefix_pos = ai_response_content.find('```json') #look for ```json in response string 
                     if prefix_pos > -1:
-                        begin_content = ai_response_content.find('</think>')+len('</think>')
-                        oncotree_diagnoses_response_string = ai_response_content[begin_content:].strip()
+                        begin_content = ai_response_content.find('```json')+len('```json')
+                        end_content = ai_response_content.find('```', begin_content)
+                        response_string = ai_response_content[begin_content:end_content].strip()
                     else:
-                        oncotree_diagnoses_response_string = ai_response_content
-                
-                oncotree_diagnoses_dict = json.loads(oncotree_diagnoses_response_string)
-    except json.JSONDecodeError as ex:
-        logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
-    return oncotree_diagnoses_dict
+                        prefix_pos = ai_response_content.find('</think>')# elseget everything after </think>
+                        if prefix_pos > -1:
+                            begin_content = ai_response_content.find('</think>')+len('</think>')
+                            response_string = ai_response_content[begin_content:].strip()
+                        else:
+                            response_string = ai_response_content
+                    
+                    response_dict = json.loads(response_string)
+        except json.JSONDecodeError as ex:
+            logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
+        return response_dict
+    elif config.LLM_PLATFORM == "Ollama":
+        try:
+            if type(ai_response) is dict and 'response' in ai_response.keys():
+                ai_response_content = ai_response['response']
+                response_dict = json.loads(ai_response_content)
+        except json.JSONDecodeError as ex:
+            logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
+        return response_dict
+
 
 def send_ai_request(id, prompt):
-    req_body = {
-    "model":config.LLM_AI_MODEL,
-    "messages":[
-        {"role": "system", "content": "You are a biomedical researcher."},
-        {
-          "role":"user", "content": prompt
-        }
-    ],
-    "temperature": 0.5, #lower value of temperature results in more deterministric responses
-    "max_tokens": 8192,
-    "response_format": {
-    "type": "json_object"
-    },
-    "stream":False
-    }
+    req_body = get_request_body(prompt, config.LLM_PLATFORM)    
     req_body_json = json.dumps(req_body)
     logger.debug(f"AI request | ID:{id} | {req_body_json}")
     endpoint_url = f'{urllib.parse.urljoin(f"{config.GPU_SERVER_HOSTNAME}:{config.AI_PORT}", config.CHAT_ENDPOINT)}'
     print(endpoint_url)
 
     response = requests.post(endpoint_url, data=req_body_json, headers={"Content-Type":"application/json"})
+    print(response)
     response.raise_for_status()
 
     print(response.status_code)
     ai_response = response.json()
     logger.debug(f"AI response | ID:{id} | {ai_response}")
     return ai_response
+
+
+def get_request_body(prompt, llm_platform:str):
+    if llm_platform == "Local_ai":
+        raise NotImplementedError("Local_ai platform is not configured yet.")    
+    elif llm_platform == "SGLang" or llm_platform == "vllm":
+        req_body = {
+        "model":config.LLM_AI_MODEL,
+        "messages":[
+            {"role": "system", "content": "You are a biomedical researcher."},
+            {
+            "role":"user", "content": prompt
+            }
+        ],
+        "temperature": 0.5, #lower value of temperature results in more deterministric responses
+        "max_tokens": 8192,
+        "response_format": {
+        "type": "json_object"
+        },
+        "stream":False
+        }
+        return req_body
+    elif llm_platform == "Ollama":
+        req_body = {
+        "model":config.LLM_AI_MODEL,
+        "prompt": prompt,
+        "format": "json",
+        "system": "You are a biomedical researcher specilizing in cancer genomics and clinical trials.",        
+        "stream":False,
+        "options": {
+            "think": True,
+            "temperature": 0,
+            "seed": 42,
+            "top_k": 1 }
+        }
+        return req_body
+    else:
+        raise ValueError(f"Unsupported LLM platform: {llm_platform}")
+
 
 def get_ai_prompt_for_patient_genomic_criteria(genomic_data):
     prompt = f"""Task: Convert the following text about genomic report of a patient sample into JSON format as described below:
