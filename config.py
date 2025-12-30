@@ -6,27 +6,12 @@ GPU_SERVER_HOSTNAME = "http://localhost"
 LLM_PLATFORM = "Ollama"  # Options: Local_ai, vllm, SGLang, Ollama
 #LLM_PLATFORM = "SGLang"
 
-#Local_ai
-#AI_PORT = 49152
-#CHAT_ENDPOINT = "chat/completions"
-
-#vllm
-#AI_PORT = 8000
-#CHAT_ENDPOINT = "v1/chat/completions"
-
-#SGLang
-# AI_PORT = 30000
-# CHAT_ENDPOINT = "v1/chat/completions"
-
-#Ollama
-AI_PORT = 11434
-CHAT_ENDPOINT = "api/generate"
-
 #LLM_AI_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
 #LLM_AI_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 #LLM_AI_MODEL = "neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16"
 #LLM_AI_MODEL = "hf.co/unsloth/medgemma-27b-text-it-GGUF:Q4_K_M"
 LLM_AI_MODEL = "hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M"
+#LLM_AI_MODEL = "hf.co/bartowski/gemma-2-27b-it-GGUF:Q4_K_M"
 
 ONCOTREE_TXT_FILE_PATH = "ref/oncotree_file.txt"
 GENE_LIST_FILE_PATH = "ref/genes.txt"

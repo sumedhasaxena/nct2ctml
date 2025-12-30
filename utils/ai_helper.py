@@ -2,7 +2,16 @@ import json
 import config
 import requests
 import urllib.parse
+import utils.schema as schema
 from loguru import logger
+from utils.llm_platforms import create_llm_platform
+
+# Initialize the LLM platform based on config
+_llm_platform = create_llm_platform(
+    platform_name=config.LLM_PLATFORM,
+    model=config.LLM_AI_MODEL,
+    hostname=config.GPU_SERVER_HOSTNAME
+)
 
 def get_level1_diagnosis_from_original_conditions(nct_id:str, original_conditions: dict, level1_oncotree: set) -> dict:    
     original_conditions_list = list(original_conditions)
@@ -82,8 +91,8 @@ def get_disease_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> d
     return disease_status_dict
 
 def get_genomic_criteria(nct_id:str, genes:list, eligibilityCriteria:str)-> dict:
-    prompt = get_genomic_criteria_prompt(genes, eligibilityCriteria)
-    ai_response = send_ai_request(nct_id, prompt)
+    json_schema, prompt = get_genomic_criteria_prompt(genes, eligibilityCriteria)
+    ai_response = send_ai_request(nct_id, prompt, json_schema)
     genomic_criteria_dict = parse_ai_response(ai_response)
     return genomic_criteria_dict
 
@@ -94,46 +103,14 @@ def get_patient_genomic_criteria(id:str, genomic_data: str) -> dict:
     return patient_genomic_criteria
 
 def parse_ai_response(ai_response):
-    response_dict = {}
+    return _llm_platform.parse_response(ai_response)
 
-    if config.LLM_PLATFORM == "SGLang" or config.LLM_PLATFORM == "vllm":
-        try:
-            if type(ai_response) is dict and 'choices' in ai_response.keys() and type(ai_response['choices']) is list:
-                answer = ai_response['choices'][0]
-                ai_response_content = safe_get(answer,['message','content'])
-                if ai_response_content:
-                    prefix_pos = ai_response_content.find('```json') #look for ```json in response string 
-                    if prefix_pos > -1:
-                        begin_content = ai_response_content.find('```json')+len('```json')
-                        end_content = ai_response_content.find('```', begin_content)
-                        response_string = ai_response_content[begin_content:end_content].strip()
-                    else:
-                        prefix_pos = ai_response_content.find('</think>')# elseget everything after </think>
-                        if prefix_pos > -1:
-                            begin_content = ai_response_content.find('</think>')+len('</think>')
-                            response_string = ai_response_content[begin_content:].strip()
-                        else:
-                            response_string = ai_response_content
-                    
-                    response_dict = json.loads(response_string)
-        except json.JSONDecodeError as ex:
-            logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
-        return response_dict
-    elif config.LLM_PLATFORM == "Ollama":
-        try:
-            if type(ai_response) is dict and 'response' in ai_response.keys():
-                ai_response_content = ai_response['response']
-                response_dict = json.loads(ai_response_content)
-        except json.JSONDecodeError as ex:
-            logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
-        return response_dict
-
-
-def send_ai_request(id, prompt):
-    req_body = get_request_body(prompt, config.LLM_PLATFORM)    
+def send_ai_request(id, prompt, json_schema=None):
+    """Send AI request using the configured platform."""
+    req_body = _llm_platform.get_request_body(prompt, json_schema)
     req_body_json = json.dumps(req_body)
     logger.debug(f"AI request | ID:{id} | {req_body_json}")
-    endpoint_url = f'{urllib.parse.urljoin(f"{config.GPU_SERVER_HOSTNAME}:{config.AI_PORT}", config.CHAT_ENDPOINT)}'
+    endpoint_url = _llm_platform.get_endpoint_url()
     print(endpoint_url)
 
     response = requests.post(endpoint_url, data=req_body_json, headers={"Content-Type":"application/json"})
@@ -144,45 +121,6 @@ def send_ai_request(id, prompt):
     ai_response = response.json()
     logger.debug(f"AI response | ID:{id} | {ai_response}")
     return ai_response
-
-
-def get_request_body(prompt, llm_platform:str):
-    if llm_platform == "Local_ai":
-        raise NotImplementedError("Local_ai platform is not configured yet.")    
-    elif llm_platform == "SGLang" or llm_platform == "vllm":
-        req_body = {
-        "model":config.LLM_AI_MODEL,
-        "messages":[
-            {"role": "system", "content": "You are a biomedical researcher."},
-            {
-            "role":"user", "content": prompt
-            }
-        ],
-        "temperature": 0.5, #lower value of temperature results in more deterministric responses
-        "max_tokens": 8192,
-        "response_format": {
-        "type": "json_object"
-        },
-        "stream":False
-        }
-        return req_body
-    elif llm_platform == "Ollama":
-        req_body = {
-        "model":config.LLM_AI_MODEL,
-        "prompt": prompt,
-        "format": "json",
-        "system": "You are a biomedical researcher specilizing in cancer genomics and clinical trials.",        
-        "stream":False,
-        "options": {
-            "think": True,
-            "temperature": 0,
-            "seed": 42,
-            "top_k": 1 }
-        }
-        return req_body
-    else:
-        raise ValueError(f"Unsupported LLM platform: {llm_platform}")
-
 
 def get_ai_prompt_for_patient_genomic_criteria(genomic_data):
     prompt = f"""Task: Convert the following text about genomic report of a patient sample into JSON format as described below:
@@ -229,8 +167,7 @@ Output:
         "TRUE_VARIANT_CLASSIFICATION": "Frame_Shift_Del",
         "TRUE_PROTEIN_CHANGE": "p.H429Tfs*39"
 }}
-"""
-    
+"""    
     return prompt
 
 def get_ai_prompt_level1(cancer_keywords_list, level1_oncotree_list):
@@ -376,51 +313,32 @@ def get_disease_status_prompt(eligibilityCriteria, keywords):
          
     return prompt
 
+#with json schema added as request body param
 def get_genomic_criteria_prompt(genes, eligibilityCriteria):
+
     prompt = f"""
-    Task: Evaluate the clinical trial description against the provided gene list and variant categories to determine whether any mutations in the listed genes are included or excluded based on the eligibility criteria.
+    Task: Evaluate the clinical trial description against the provided gene list to determine whether any mutations in the listed genes are included or excluded in eligibility criteria.
 
     Instructions:
-    1. Identify if the clinical trial description mentions mutations in the given genes (inclusion) or specifies exclusions.
-    2. Use the variant categories:
-        Mutation
-        Copy Number Variation
-        Structural Variation
-        Any Variation
-        !Mutation
-        !Copy Number Variation
-        !Structural Variation
+    1. Identify if the clinical trial description mentions variants in the given genes (inclusion) or specifies exclusions.
+    2. For each mentioned gene variant, use the JSON schema below for producing JSON output
+    3. Choose the correct variant_category based on the description:
+    - "mutation", "mutated" -> "Mutation" (or "!Mutation" for exclusion)
+    - "amplification", "deletion", "homozygous loss", "lost MTAP expression" -> "Copy Number Variation"
+    - "fusion", "rearrangement", "translocation" -> "Structural Variation"
+    - General "alteration" -> "Any Variation"
+    4. The output JSON should strictly use the enum values only for variant_category/cnv_call.
     
     Logic:
-    1. If the genes are mentioned in trial's inlcusion criteria, use the 'or' operator along with appropriate variant categories.
-    2. If the genes are mentioned in trial's exclusion criteria, use the 'and' operator along with variant categories (!Mutation/!Copy Number Variation/!Structural Variation).
+    1. If multiple genes are mentioned in trial's inclusion criteria, use the 'or' operator to combine the JSON output for each gene.
+    2. If multiple genes are mentioned in trial's exclusion criteria, use the 'and' operator to combine the JSON output for each gene.
     3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
     
     Gene list: {genes}
 
     Clinical Trial Description: {eligibilityCriteria}
 
-    Example A:
-    Inclusion criteria:Subjects with advanced solid tumors harboring ROS1 or NTRK1 rearrangement will be included in this trial. 
-    Output:
-{{
-    "or": [        
-        {{
-            "genomic": {{
-                "hugo_symbol": "ROS1",
-                "variant_category": "Structural Variation"
-            }}
-        }},
-        {{
-            "genomic": {{
-                "hugo_symbol": "NTRK1",
-                "variant_category": "Structural Variation"
-            }}
-        }}
-    ]
-}}
-
-Example B:
+    Example:
 Inclusion criteria:Patient should have mutation in geneA or geneB.
 Exclusion criteria: Patient should not have a mutation in geneC or geneD
 
@@ -442,9 +360,126 @@ Output:
         }}
     ]
 }}
-
     """
-    return prompt
+    return schema.trial_genomic_json_schema, prompt
+
+# with json schema as a part of prompt, not request body
+# def get_genomic_criteria_prompt(genes, eligibilityCriteria):
+
+#     prompt = f"""
+#     Task: Evaluate the clinical trial description against the provided gene list to determine whether any mutations in the listed genes are included or excluded in eligibility criteria.
+
+#     Instructions:
+#     1. Identify if the clinical trial description mentions variants in the given genes (inclusion) or specifies exclusions.
+#     2. For each mentioned gene variant, use the JSON schema below for producing JSON output    
+#     3. The output should strictly use the enum values mentioned in json schema for variant_category/cnv_call.
+    
+#     JSON schema for each gene variant: {json.dumps(schema.trial_genomic_json_schema, indent=4)}
+#     Logic:
+#     1. If multiple genes are mentioned in trial's inclusion criteria, use the 'or' operator to combine the JSON output for each gene.
+#     2. If multiple genes are mentioned in trial's exclusion criteria, use the 'and' operator to combine the JSON output for each gene.
+#     3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
+    
+#     Gene list: {genes}
+
+#     Clinical Trial Description: {eligibilityCriteria}
+
+#     Example:
+#     Inclusion criteria:Patient should have mutation in geneA or geneB.
+#     Exclusion criteria: Patient should not have a mutation in geneC or geneD
+
+#     Output:
+#     {{
+#         "and":[
+#             {{
+#                 "or":[
+#                     {{"genomic": {{"hugo_symbol": "geneA","variant_category": "Mutation"}}}},
+#                     {{"genomic": {{"hugo_symbol": "geneB","variant_category": "Mutation"}}}}
+#                 ]
+#             }},
+#             {{
+#                 "and":[
+#                     {{"genomic": {{"hugo_symbol": "geneC","variant_category": "!Mutation"}}}},
+#                     {{"genomic": {{"hugo_symbol": "geneD","variant_category": "!Mutation"}}}}
+#                 ]
+
+#             }}
+#         ]
+#     }}
+#     """
+#     return None, prompt
+
+
+# original version without json schema
+# def get_genomic_criteria_prompt(genes, eligibilityCriteria):
+#     prompt = f"""
+#     Task: Evaluate the clinical trial description against the provided gene list and variant categories to determine whether any mutations in the listed genes are included or excluded based on the eligibility criteria.
+
+#     Instructions:
+#     1. Identify if the clinical trial description mentions mutations in the given genes (inclusion) or specifies exclusions.
+#     2. Use the variant categories:
+#         Mutation
+#         Copy Number Variation
+#         Structural Variation
+#         Any Variation
+#         !Mutation
+#         !Copy Number Variation
+#         !Structural Variation
+    
+#     Logic:
+#     1. If the genes are mentioned in trial's inlcusion criteria, use the 'or' operator along with appropriate variant categories.
+#     2. If the genes are mentioned in trial's exclusion criteria, use the 'and' operator along with variant categories (!Mutation/!Copy Number Variation/!Structural Variation).
+#     3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
+    
+#     Gene list: {genes}
+
+#     Clinical Trial Description: {eligibilityCriteria}
+
+#     Example A:
+#     Inclusion criteria:Subjects with advanced solid tumors harboring ROS1 or NTRK1 rearrangement will be included in this trial. 
+#     Output:
+# {{
+#     "or": [        
+#         {{
+#             "genomic": {{
+#                 "hugo_symbol": "ROS1",
+#                 "variant_category": "Structural Variation"
+#             }}
+#         }},
+#         {{
+#             "genomic": {{
+#                 "hugo_symbol": "NTRK1",
+#                 "variant_category": "Structural Variation"
+#             }}
+#         }}
+#     ]
+# }}
+
+# Example B:
+# Inclusion criteria:Patient should have mutation in geneA or geneB.
+# Exclusion criteria: Patient should not have a mutation in geneC or geneD
+
+# Output:
+# {{
+#     "and":[
+#         {{
+#             "or":[
+#                 {{"genomic": {{"hugo_symbol": "geneA","variant_category": "Mutation"}}}},
+#                 {{"genomic": {{"hugo_symbol": "geneB","variant_category": "Mutation"}}}}
+#             ]
+#         }},
+#         {{
+#             "and":[
+#                 {{"genomic": {{"hugo_symbol": "geneC","variant_category": "!Mutation"}}}},
+#                 {{"genomic": {{"hugo_symbol": "geneD","variant_category": "!Mutation"}}}}
+#             ]
+
+#         }}
+#     ]
+# }}
+
+#     """
+#     return None, prompt
 
 def safe_get(dict_data, keys):
     for key in keys:
