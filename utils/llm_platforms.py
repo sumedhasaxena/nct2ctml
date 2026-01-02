@@ -133,11 +133,18 @@ class OllamaPlatform(LLMPlatform):
     
     @property
     def chat_endpoint(self) -> str:
-        return "api/generate"
-    
+        #return "api/generate"
+        return "api/chat"
+
+    def _safe_get(self, dict_data, keys):
+        for key in keys:
+            dict_data = dict_data.get(key, {})
+        return dict_data
+
     def get_request_body(self, prompt: str, json_schema: Optional[Dict] = None) -> Dict[str, Any]:
-        """Generate Ollama request body."""
-        req_body = {
+
+        if self.chat_endpoint == "api/generate":
+            req_body = {
             "model": self.model,
             "prompt": prompt,
             "system": "You are a biomedical researcher specializing in cancer genomics and clinical trials.",
@@ -149,6 +156,28 @@ class OllamaPlatform(LLMPlatform):
                 "top_k": 1
             }
         }
+        elif self.chat_endpoint == "api/chat":
+            req_body = {
+                "model": self.model,            
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a biomedical researcher specializing in cancer genomics and clinical trials."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                "stream": False,
+                "options": {
+                    "think": True,
+                    "temperature": 0,
+                    "seed": 42,
+                    "top_k": 1
+                }
+            }
+
         if json_schema is not None:
             req_body["format"] = json_schema
         else:
@@ -157,14 +186,23 @@ class OllamaPlatform(LLMPlatform):
         return req_body
     
     def parse_response(self, ai_response: Dict[str, Any]) -> Dict[str, Any]:
-        """Parse Ollama response."""
+        
         response_dict = {}
-        try:
-            if type(ai_response) is dict and 'response' in ai_response.keys():
-                ai_response_content = ai_response['response']
-                response_dict = json.loads(ai_response_content)
-        except json.JSONDecodeError as ex:
-            logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
+        if self.chat_endpoint == "api/generate":
+            try:
+                if type(ai_response) is dict and 'response' in ai_response.keys():
+                    ai_response_content = ai_response['response']
+                    response_dict = json.loads(ai_response_content)
+            except json.JSONDecodeError as ex:
+                logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
+        
+        elif self.chat_endpoint == "api/chat":
+            try:
+                if type(ai_response) is dict and 'message' in ai_response.keys():
+                    ai_response_content = self._safe_get(ai_response, ['message', 'content'])
+                    response_dict = json.loads(ai_response_content)
+            except json.JSONDecodeError as ex:
+                logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
         return response_dict
 
 
