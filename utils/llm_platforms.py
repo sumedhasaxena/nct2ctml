@@ -237,8 +237,10 @@ def create_llm_platform(platform_name: str, model: str, hostname: str) -> LLMPla
     platform_name_lower = platform_name.lower()
     
     if platform_name_lower == "sglang":
+        print( "Creating SGLang platform..." )
         return SGLangPlatform(model, hostname)
     elif platform_name_lower == "ollama":
+        print( "Creating Ollama platform..." )
         return OllamaPlatform(model, hostname)
     elif platform_name_lower == "vllm":
         return VLLMPlatform(model, hostname)
