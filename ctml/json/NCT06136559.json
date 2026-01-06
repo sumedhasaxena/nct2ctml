@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Ibrutinib"
-            },
-            {
                 "drug_name": "Drug: Nemtabrutinib"
             },
             {
                 "drug_name": "Drug: Acalabrutinib"
+            },
+            {
+                "drug_name": "Drug: Ibrutinib"
             }
         ]
     },
@@ -144,10 +144,27 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                        }
+                        "and": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lymphoid Atypical"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18"
+                                }
+                            }
+                        ]
                     }
                 ]
             }

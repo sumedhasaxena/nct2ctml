@@ -8,9 +8,9 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: FOLFIRI Regimen'
-  - drug_name: 'Drug: Sotorasib'
   - drug_name: 'Drug: Bevacizumab-awwb'
   - drug_name: 'Drug: Panitumumab'
+  - drug_name: 'Drug: Sotorasib'
 long_title: "Phase 3 Multicenter, Randomized, Open-label, Active-controlled Study\
   \ of Sotorasib, Panitumumab and FOLFIRI Versus FOLFIRI With or Without Bevacizumab-awwb\
   \ for Treatment-na\xEFve Subjects With Metastatic Colorectal Cancer With KRAS p.G12C\
@@ -106,18 +106,12 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Metastatic
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic
+          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
       - or:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
-            protein_change: p.G12C

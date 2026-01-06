@@ -126,24 +126,45 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "pdl1_status": "Low",
-                                    "disease_status": [
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
-                            },
-                            {
-                                "or": [
+                                "and": [
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.G12C"
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "pdl1_status": "Low",
+                                            "disease_status": [
+                                                "Metastatic",
+                                                "Advanced"
+                                            ]
                                         }
                                     }
+                                ]
+                            },
+                            {
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "KRAS",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            }
+                                        ]
+                                   }
                                 ]
                             }
                         ]

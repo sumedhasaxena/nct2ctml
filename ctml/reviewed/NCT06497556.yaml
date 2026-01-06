@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Divarasib'
-  - drug_name: 'Drug: Sotorasib'
   - drug_name: 'Drug: Adagrasib'
+  - drug_name: 'Drug: Sotorasib'
 long_title: A Phase III, Randomized, Open-Label, Multicenter Study Evaluating the
   Efficacy and Safety of Divarasib Versus Sotorasib or Adagrasib in Patients With
   Previously Treated KRAS G12C-Positive Advanced or Metastatic Non-Small Cell Lung
@@ -124,15 +124,14 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
           - Locally Advanced
           - Advanced
-          - Untreated
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - or:
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation

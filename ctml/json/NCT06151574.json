@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: zongertinib"
+                "drug_name": "Drug: carboplatin"
             },
             {
                 "drug_name": "Drug: pemetrexed"
             },
             {
-                "drug_name": "Drug: carboplatin"
+                "drug_name": "Drug: cisplatin"
             },
             {
-                "drug_name": "Drug: cisplatin"
+                "drug_name": "Drug: zongertinib"
             },
             {
                 "drug_name": "Drug: pembrolizumab"
@@ -167,12 +167,12 @@
                                         "or": [
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
                                                 }
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                                 }
                                             }
                                         ]

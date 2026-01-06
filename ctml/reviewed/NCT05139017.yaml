@@ -8,11 +8,11 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Biological: Zilovertamab vedotin'
-  - drug_name: 'Drug: Oxaliplatin'
-  - drug_name: 'Biological: Rituximab'
   - drug_name: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
-  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Oxaliplatin'
   - drug_name: 'Drug: Bendamustine'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Biological: Rituximab'
 long_title: A Phase 2/3 Multicenter, Open-label, Randomized, Active-Control Study
   of Zilovertamab Vedotin (MK-2140) in Combination With Standard of Care in Participants
   With Relapsed or Refractory Diffuse Large B-Cell Lymphoma (waveLINE-003)

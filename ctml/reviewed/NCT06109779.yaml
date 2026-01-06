@@ -3,15 +3,15 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2023-10-31'
 study_start_date: '2023-12-04'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Rilvegostomig'
   - drug_name: 'Drug: Gemcitabine/Cisplatin'
-  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: S-1 [Tegafur/Oteracil/gimeracil]'
   - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Drug: Placebo'
+  - drug_name: 'Drug: Rilvegostomig'
 long_title: A Phase III, Randomized, Double-Blind, Placebo-Controlled, Multicenter,
   Global Study of Rilvegostomig in Combination With Chemotherapy as Adjuvant Treatment
   After Resection of Biliary Tract Cancer With Curative Intent (ARTEMIDE-Biliary01)
@@ -71,7 +71,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: A global study to assess the efficacy and tolerability of rilvegostomig compared
   to placebo in combination with investigator's choice of chemotherapy in participants
   with BTC after surgical resection with curative intent.
@@ -136,6 +136,5 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Locally Advanced
-          - Unresectable
-          - Metastatic
+          - Localized
+          - Early Stage

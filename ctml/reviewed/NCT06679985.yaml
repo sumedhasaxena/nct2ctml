@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Casdozokitug'
-  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Toripalimab'
+  - drug_name: 'Drug: Bevacizumab'
+  - drug_name: 'Drug: Casdozokitug'
 long_title: A Randomized Phase 2 Study of Casdozokitug in Combination With Toripalimab
   Plus Bevacizumab in Participants With Unresectable and/or Locally Advanced or Metastatic
   Hepatocellular Carcinoma
@@ -123,11 +123,17 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Unresectable
-        - Locally Advanced
-        - Metastatic
-        - Untreated
-        oncotree_primary_diagnosis: Hepatocellular Carcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
+              Cholangiocarcinoma
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Unresectable
+          - Locally Advanced
+          - Metastatic
+          - Untreated

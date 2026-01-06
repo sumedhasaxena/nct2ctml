@@ -3,16 +3,16 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2023-03-20'
 study_start_date: '2023-04-24'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Rilvegostomig'
-  - drug_name: 'Drug: Gemcitabine'
-  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Lenvatinib'
+  - drug_name: 'Drug: Rilvegostomig'
+  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Volrustomig'
+  - drug_name: 'Drug: Gemcitabine'
 long_title: A Phase II, Open-Label, Multi-Drug, Multi-Center, Master Protocol to Evaluate
   the Efficacy and Safety of Novel Immunomodulators as Monotherapy and in Combination
   With Anticancer Agents in Participants With Advanced Hepatobiliary Cancer (GEMINI-Hepatobiliary)
@@ -184,14 +184,17 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
-              Duct
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma
-        - clinical:
             oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
         - clinical:
             oncotree_primary_diagnosis: Fibrolamellar Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
+              Cholangiocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
+              Duct
       - clinical:
           age_numerical: '>=18'
           disease_status:

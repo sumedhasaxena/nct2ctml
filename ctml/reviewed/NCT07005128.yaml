@@ -140,3 +140,4 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
+          - Untreated

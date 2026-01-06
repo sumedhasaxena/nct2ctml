@@ -3,18 +3,18 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2021-07-02'
 study_start_date: '2021-07-28'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Drug: Lenvatinib'
-  - drug_name: 'Drug: Levoleucovorin'
   - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Drug: 5-FU'
+  - drug_name: 'Drug: Levoleucovorin'
   - drug_name: 'Drug: Oxaliplatin'
+  - drug_name: 'Drug: Lenvatinib'
+  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: 5-FU'
   - drug_name: 'Drug: Leucovorin'
+  - drug_name: 'Drug: Paclitaxel'
 long_title: A Phase 3, Randomized Study to Evaluate the Efficacy and Safety of Pembrolizumab
   (MK-3475) + Lenvatinib (E7080/MK-7902) + Chemotherapy Compared With Standard of
   Care as First-line Intervention in Participants With Metastatic Esophageal Carcinoma
@@ -115,7 +115,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: 'The purpose of this study is to assess the efficacy and safety of pembrolizumab
   plus lenvatinib plus chemotherapy compared with pembrolizumab plus chemotherapy
   as first-line intervention in participants with metastatic esophageal carcinoma.

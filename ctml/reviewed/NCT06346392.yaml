@@ -3,17 +3,17 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-04-04'
 study_start_date: '2024-03-04'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Irinotecan'
-  - drug_name: 'Drug: Ramucirumab+ paclitaxel'
-  - drug_name: 'Drug: Apatinib'
-  - drug_name: 'Drug: TAS-102'
-  - drug_name: 'Drug: AZD0901'
-  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Drug: Docetaxel'
+  - drug_name: 'Drug: Irinotecan'
+  - drug_name: 'Drug: TAS-102'
+  - drug_name: 'Drug: Ramucirumab+ paclitaxel'
+  - drug_name: 'Drug: AZD0901'
+  - drug_name: 'Drug: Apatinib'
+  - drug_name: 'Drug: Paclitaxel'
 long_title: A Phase III Multi-center, Open-label, Sponsor-blinded, Randomized Study
   of AZD0901 Monotherapy Compared With Investigator's Choice of Therapy in Second-
   or Later-Line Adult Participants With Advanced/Metastatic Gastric or Gastroesophageal
@@ -171,10 +171,10 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-          - clinical:
               oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
                 the Esophagus/Stomach
+          - clinical:
+              oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
         - clinical:
             age_numerical: '>=18'
             her2_status: Negative

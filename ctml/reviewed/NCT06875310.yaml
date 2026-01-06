@@ -8,11 +8,11 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Pembrolizumab'
-  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Adagrasib'
-  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Placebo'
+  - drug_name: 'Drug: Cisplatin'
 long_title: A Randomized, Double-Blind, Phase 3 Trial of Adagrasib Plus Pembrolizumab
   Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants
   With Previously Untreated, Locally Advanced or Metastatic Non-squamous Non-small
@@ -153,10 +153,8 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           - Advanced
-          - Untreated
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - or:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
-            protein_change: p.G12C

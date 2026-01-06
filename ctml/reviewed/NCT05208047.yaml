@@ -3,14 +3,14 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2022-01-26'
 study_start_date: '2022-04-14'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: CGT9486 plus sunitinib'
+  - drug_name: 'Drug: Midazolam'
   - drug_name: 'Drug: Sunitinib'
   - drug_name: 'Drug: CGT9486'
-  - drug_name: 'Drug: Midazolam'
 long_title: A Phase 3 Randomized, Open-Label, Multicenter Clinical Study of CGT9486+Sunitinib
   vs. Sunitinib in Subjects With Locally Advanced, Unresectable, or Metastatic Gastrointestinal
   Stromal Tumors
@@ -79,7 +79,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: 'This is a Phase 3, open-label, international, multicenter study of CGT9486
   in combination with sunitinib. This is a multi-part study that will enroll approximately
   442 patients. Part 1 consists of two evaluations: 1) confirming the dose of an updated
@@ -164,4 +164,4 @@ treatment_list:
         - Locally Advanced
         - Metastatic
         - Unresectable
-        oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
+        oncotree_primary_diagnosis: _SOLID_

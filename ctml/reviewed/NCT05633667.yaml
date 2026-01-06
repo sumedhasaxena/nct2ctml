@@ -3,21 +3,21 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2022-12-01'
 study_start_date: '2023-03-16'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Etrumadenant (ETRUMA)'
-  - drug_name: 'Drug: Nab-paclitaxel'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Zimberelimab (ZIM)'
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Pemetrexed'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Drug: Nivolumab'
-  - drug_name: 'Drug: Docetaxel'
-  - drug_name: 'Drug: Domvanalimab (DOM)'
   - drug_name: 'Drug: Sacituzumab govitecan-hziy (SG)'
+  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Nivolumab'
+  - drug_name: 'Drug: Domvanalimab (DOM)'
+  - drug_name: 'Drug: Etrumadenant (ETRUMA)'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Docetaxel'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Zimberelimab (ZIM)'
+  - drug_name: 'Drug: Nab-paclitaxel'
 long_title: A Phase 2 Platform Study Evaluating the Safety and Efficacy of Novel Treatment
   Combinations in Patients With Lung Cancer (VELOCITY-Lung)
 last_updated: '2025-09-03'
@@ -347,19 +347,17 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
+            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
             oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:
-            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-        - clinical:
             oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
           - Untreated
-          - Localized
-          - Locally Advanced

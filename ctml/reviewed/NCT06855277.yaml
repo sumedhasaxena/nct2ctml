@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: AAA817'
   - drug_name: 'Drug: Standard of Care'
   - drug_name: 'Drug: ARPI'
+  - drug_name: 'Drug: AAA817'
 long_title: A Phase III, Open-label, Multi-center, Randomized Study Comparing AAA817+ARPI
   Versus Standard of Care in Adult Participants With PSMA-positive Metastatic Castration
   Resistant Prostate Cancer
@@ -135,20 +135,9 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Basal Cell Carcinoma of Prostate
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          gender: Male
-          disease_status:
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        gender: Male
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Prostate Adenocarcinoma

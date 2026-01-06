@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Xaluritamig'
-  - drug_name: 'Drug: Cabazitaxel'
   - drug_name: 'Drug: Abiraterone'
+  - drug_name: 'Drug: Cabazitaxel'
   - drug_name: 'Drug: Enzalutamide'
 long_title: A Phase 3, Open-label, Multicenter, Randomized Study of Xaluritamig vs
   Cabazitaxel or Second Androgen Receptor-Directed Therapy in Subjects With Metastatic
@@ -150,14 +150,9 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          gender: Male
-          disease_status:
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        gender: Male
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Prostate Adenocarcinoma

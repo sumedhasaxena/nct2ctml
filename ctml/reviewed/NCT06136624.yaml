@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Hydrocortisone'
   - drug_name: 'Drug: Abiraterone acetate'
+  - drug_name: 'Drug: Enzalutamide'
   - drug_name: 'Drug: Fludrocortisone acetate'
-  - drug_name: 'Drug: Prednisone'
   - drug_name: 'Drug: Dexamethasone'
   - drug_name: 'Drug: Opevesostat'
-  - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: Prednisone'
+  - drug_name: 'Drug: Hydrocortisone'
 long_title: A Phase 3 Randomized, Open-label Study of MK-5684 Versus Alternative Abiraterone
   Acetate or Enzalutamide in Participants With Metastatic Castration-resistant Prostate
   Cancer (mCRPC) Previously Treated With Next-generation Hormonal Agent (NHA) and
@@ -230,12 +230,8 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
-      - clinical:
-          disease_status:
-          - Metastatic
+    - clinical:
+        disease_status:
+        - Metastatic
+        - Advanced
+        oncotree_primary_diagnosis: Prostate Adenocarcinoma

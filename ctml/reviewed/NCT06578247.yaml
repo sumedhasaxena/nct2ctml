@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Chemotherapy'
   - drug_name: 'Drug: Quizartinib'
-  - drug_name: 'Drug: Placebo'
 long_title: Phase 3, Double-Blind, Randomized, Placebo-Controlled Trial Of Quizartinib
   Administered in Combination With Induction and Consolidation Chemotherapy and Administered
   as Maintenance Therapy in Adult Patients With Newly Diagnosed FLT3-ITD Negative
@@ -147,13 +147,9 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Untreated
           - Early Stage
-          oncotree_primary_diagnosis: Myeloid Neoplasm
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
       - and:
-        - genomic:
-            hugo_symbol: BCR-ABL
-            variant_category: '!Structural Variation'
         - genomic:
             hugo_symbol: FLT3
             variant_category: '!Mutation'

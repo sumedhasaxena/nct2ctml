@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: D3S-001'
   - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Cetuximab'
   - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: D3S-001'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Carboplatin'
 long_title: A Phase 1/2, Open Label, Dose-escalation, and Dose-expansion Study Evaluating
   the Safety, Tolerability, Pharmacokinetics, Pharmacodynamics, and Preliminary Efficacy
   of D3S 001 Monotherapy or Combination Therapy in Subjects With Advanced Solid Tumors
@@ -174,12 +174,17 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: __SOLID__
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Metastatic
+            - Locally Advanced
       - or:
         - genomic:
             hugo_symbol: KRAS

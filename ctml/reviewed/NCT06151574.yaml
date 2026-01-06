@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: zongertinib'
-  - drug_name: 'Drug: pemetrexed'
   - drug_name: 'Drug: carboplatin'
+  - drug_name: 'Drug: pemetrexed'
   - drug_name: 'Drug: cisplatin'
+  - drug_name: 'Drug: zongertinib'
   - drug_name: 'Drug: pembrolizumab'
 long_title: 'Beamion LUNG 2: A Phase III, Open-label, Randomized, Active-controlled,
   Multi-centre Trial Evaluating Orally Administered Zongertinib (BI 1810631) Compared
@@ -171,9 +171,9 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-          - clinical:
               oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
             age_numerical: '>=18'
             her2_status: Positive

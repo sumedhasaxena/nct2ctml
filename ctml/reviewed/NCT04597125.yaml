@@ -3,12 +3,12 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2020-10-22'
 study_start_date: '2020-11-09'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: NAH therapy'
   - drug_name: 'Drug: Radium-223 dichloride (Xofigo, BAY88-8223)'
+  - drug_name: 'Drug: NAH therapy'
 long_title: A Phase 4, Randomized, Open-label, Multicenter Efficacy and Safety Study
   of Standard Dose of Radium-223 Dichloride vs. Standard Doses of Novel Anti-hormonal
   Therapy (NAH) in Patients With Bone Dominant Metastatic Castration Resistant Prostate
@@ -152,7 +152,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: 'Researchers in this study want to compare how well drug radium-223 dichloride
   (Xofigo) and new (novel) anti-hormonal (NAH) therapy work in participants with prostate
   gland cancer which has spread to the bone and progressed on or after one line of
@@ -211,5 +211,4 @@ treatment_list:
         gender: Male
         disease_status:
         - Metastatic
-        - Refractory
         oncotree_primary_diagnosis: Prostate Adenocarcinoma

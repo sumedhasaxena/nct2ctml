@@ -3,18 +3,18 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2022-08-16'
 study_start_date: '2022-10-12'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pembrolizumab'
-  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Domvanalimab'
   - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Nab-paclitaxel'
-  - drug_name: 'Drug: Domvanalimab'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Zimberelimab'
+  - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Paclitaxel'
 long_title: A Randomized, Open-Label, Phase 3 Study to Evaluate Zimberelimab and Domvanalimab
   in Combination With Chemotherapy Versus Pembrolizumab With Chemotherapy for the
   First-Line Treatment of Patients With Metastatic Non-Small Cell Lung Cancer With
@@ -251,7 +251,7 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Metastatic
+          - Advanced
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:
@@ -264,13 +264,7 @@ treatment_list:
             hugo_symbol: ROS1
             variant_category: '!Mutation'
         - genomic:
-            hugo_symbol: NTRK1
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: NTRK2
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: NTRK3
+            hugo_symbol: NTRK
             variant_category: '!Mutation'
         - genomic:
             hugo_symbol: BRAF

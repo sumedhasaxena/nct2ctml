@@ -105,25 +105,25 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Small Bowel Cancer
-        - clinical:
             oncotree_primary_diagnosis: Anal Gland Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
-        - clinical:
-            oncotree_primary_diagnosis: Anal Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
-        - clinical:
-            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
         - clinical:
             oncotree_primary_diagnosis: Low-grade Appendiceal Mucinous Neoplasm
         - clinical:
+            oncotree_primary_diagnosis: Anal Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Small Bowel Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
+        - clinical:
+            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
             oncotree_primary_diagnosis: Small Intestinal Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
         - clinical:
             oncotree_primary_diagnosis: Tubular Adenoma of the Colon
       - clinical:

@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Sacituzumab tirumotecan'
   - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Biological: Sacituzumab tirumotecan'
   - drug_name: 'Biological: Pembrolizumab'
 long_title: A Phase 3, Randomized, Open-label, Study to Compare the Efficacy and Safety
   of Adjuvant MK-2870 in Combination With Pembrolizumab (MK-3475) Versus Treatment
@@ -192,11 +192,16 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        her2_status: Negative
-        er_status: Negative
-        pr_status: Negative
-        disease_status:
-        - Early Stage
-        oncotree_primary_diagnosis: Invasive Breast Carcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Metaplastic Breast Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+      - clinical:
+          age_numerical: '>=18'
+          her2_status: Negative
+          er_status: Negative
+          pr_status: Negative
+          disease_status:
+          - Early Stage

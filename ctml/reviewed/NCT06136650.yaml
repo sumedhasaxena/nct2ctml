@@ -3,17 +3,17 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2023-11-18'
 study_start_date: '2023-12-18'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Hydrocortisone'
-  - drug_name: 'Drug: Dexamethasone'
   - drug_name: 'Drug: Prednisone acetate'
+  - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: Dexamethasone'
   - drug_name: 'Drug: Opevesostat'
+  - drug_name: 'Drug: Hydrocortisone'
   - drug_name: 'Drug: Abiraterone acetate'
   - drug_name: 'Drug: Fludrocortisone acetate'
-  - drug_name: 'Drug: Enzalutamide'
 long_title: 'MK-5684-004: A Phase 3, Randomized, Open-label Study of Opevesostat Versus
   Alternative Abiraterone Acetate or Enzalutamide in Participants With Metastatic
   Castration-resistant Prostate Cancer (mCRPC) That Progressed On or After Prior Treatment
@@ -155,7 +155,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: The purpose of this study is to assess the efficacy and safety of opevesostat
   plus hormone replacement therapy (HRT) compared to alternative abiraterone acetate
   or enzalutamide in participants with Metastatic Castration-resistant Prostate Cancer
@@ -220,17 +220,19 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
+            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Prostate Adenocarcinoma
         - clinical:
-            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
-        - clinical:
             oncotree_primary_diagnosis: Basal Cell Carcinoma of Prostate
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
+          - Advanced
+          - Recurrent
           - Refractory

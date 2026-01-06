@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Letrozole'
-  - drug_name: 'Drug: Anastrozole'
-  - drug_name: 'Drug: Exemestane'
   - drug_name: 'Drug: Elacestrant'
+  - drug_name: 'Drug: Anastrozole'
+  - drug_name: 'Drug: Letrozole'
   - drug_name: 'Drug: Tamoxifen'
+  - drug_name: 'Drug: Exemestane'
 long_title: Elacestrant Versus Standard Endocrine Therapy in Women and Men With Node-positive,
   Estrogen Receptor-positive, HER2-negative, Early Breast Cancer With High Risk of
   Recurrence-A Global, Multicenter, Randomized, Open-label Phase 3 Study
@@ -125,15 +125,9 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Inflammatory Breast Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Breast Neoplasm, NOS
-        - clinical:
             oncotree_primary_diagnosis: Invasive Breast Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+            oncotree_primary_diagnosis: Breast Neoplasm, NOS
       - clinical:
           age_numerical: '>=18'
           her2_status: Negative

@@ -3,12 +3,12 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-04-05'
 study_start_date: '2024-04-29'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Datopotamab Deruxtecan'
   - drug_name: 'Drug: Osimertinib'
+  - drug_name: 'Drug: Datopotamab Deruxtecan'
 long_title: A Phase III, Open-label, Randomised Study of Osimertinib With or Without
   Datopotamab Deruxtecan (Dato-DXd), as First-line Treatment in Participants With
   Epidermal Growth Factor Receptor (EGFR) Mutation-positive, Locally Advanced or Metastatic
@@ -179,6 +179,9 @@ treatment_list:
           - Recurrent
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - or:
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: Mutation
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation

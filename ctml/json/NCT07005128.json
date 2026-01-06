@@ -181,7 +181,8 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Untreated"
                                     ]
                                 }
                             }

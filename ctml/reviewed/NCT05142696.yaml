@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Other: Etoposide'
-  - drug_name: 'Drug: Atezolizumab'
   - drug_name: 'Drug: [68Ga]Ga-DOTA-TATE'
+  - drug_name: 'Drug: Atezolizumab'
+  - drug_name: 'Other: Etoposide'
   - drug_name: 'Drug: [177Lu]Lu-DOTA-TATE'
   - drug_name: 'Other: Carboplatin'
 long_title: A Phase Ib/II Dose Finding Study Assessing Safety and Efficacy of [177Lu]Lu-DOTA-TATE

@@ -3,14 +3,14 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2023-06-15'
 study_start_date: '2023-09-14'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Other: Placebo'
+  - drug_name: 'Drug: Atezolizumab'
   - drug_name: 'Drug: Tiragolumab'
   - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Drug: Atezolizumab'
 long_title: A Phase III, Randomized, Double-Blind, Placebo-Controlled Study Evaluating
   Atezolizumab and Bevacizumab, With or Without Tiragolumab, in Patients With Untreated
   Locally Advanced or Metastatic Hepatocellular Carcinoma
@@ -97,7 +97,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: open to accrual
+status: closed
 summary: The purpose of this study is to assess the efficacy and safety of tiragolumab,
   an anti-TIGIT monoclonal antibody, when administered in combination with atezolizumab
   and bevacizumab as first-line treatment, in participants with unresectable, locally
@@ -147,11 +147,15 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Locally Advanced
-        - Metastatic
-        - Unresectable
-        - Untreated
-        oncotree_primary_diagnosis: Hepatocellular Carcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Fibrolamellar Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          - Unresectable

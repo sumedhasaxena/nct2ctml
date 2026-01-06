@@ -155,5 +155,3 @@ treatment_list:
             oncotree_primary_diagnosis: Myeloid Neoplasm
       - clinical:
           age_numerical: '>=18'
-          disease_status:
-          - Refractory
