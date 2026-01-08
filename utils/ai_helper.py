@@ -234,7 +234,7 @@ def get_genomic_criteria_prompt(genes, eligibilityCriteria):
     4. "variant_category" must be in ["Mutation", "Copy Number Variation", "Structural Variation", "Any Variation", "!Mutation", "!Copy Number Variation", "!Structural Variation"],
        where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
     5. If a specific amino acid substitution is required, return this in the "protein_change" field.
-    6. In the input text, the term "mutant" means "Any Variation" and "non-mutant" means "!Any Variation".
+    6. In EligibilityCriteria, the term "mutant" means "Any Variation" and "non-mutant" means "!Any Variation".
 
     Example 1:
     Criteria: Subjects with advanced solid tumors harboring NTRK1 rearrangement or KRAS G12C will be included in this trial. 
