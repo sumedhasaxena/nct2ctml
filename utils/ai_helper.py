@@ -3,6 +3,7 @@ import config
 import requests
 import urllib.parse
 import utils.schema as schema
+from inspect import cleandoc
 from loguru import logger
 from utils.llm_platforms import create_llm_platform
 
@@ -18,7 +19,6 @@ def get_level1_diagnosis_from_original_conditions(nct_id:str, original_condition
     level1_oncotree_list = list(level1_oncotree) 
     
     prompt = get_ai_prompt_level1_for_original_conditions(original_conditions_list, level1_oncotree_list)
-
 
     logger.debug(f"NCTID: {nct_id} | AI Prompt for Level 1 diagnosis from original conditions: {prompt}")
         
@@ -106,42 +106,42 @@ def send_ai_request(id, prompt, json_schema=None):
     return ai_response
 
 def get_ai_prompt_level1_for_original_conditions(original_conditions_list, level1_oncotree_list):
-    prompt = f"""Task: Map the list of 'cancer conditions' to the closest type listed in 'Oncotree values' below.
-    Cancer conditions: {original_conditions_list}
-    Oncotree values:{level1_oncotree_list}
-    The output should be in the json format :
-    {{
-    "oncotree_diagnoses": [
+    prompt = f"""Task: Map CancerConditions to the closest cancer type in OncotreeValues.
+        CancerConditions: {original_conditions_list}
+        OncotreeValues: {level1_oncotree_list}
+        Output in JSON format:
         {{
-        "cancer_condition": "",
-        "oncotree_value": ""
-        }}
-    ]
-    }}"""
-    return prompt
+        "oncotree_diagnoses": [
+            {{
+            "cancer_condition": "",
+            "oncotree_value": ""
+            }}
+        ]
+        }}"""
+    return cleandoc(prompt)
 
 def get_ai_prompt_level1_from_supporting_info(trial_info, level1_oncotree_list):
-    prompt = f"""Task: From the trial information, try to get the closest oncotree values that might define the diagnosis this trial is looking for.
-    Trial information: {trial_info}
-    Oncotree values:{level1_oncotree_list}
-    The output should be in the json format :
-    {{
-    "oncotree_diagnoses": []
-    }}"""
+    prompt = f"""Task: From the TrialInfo, extract the closest OncotreeValues corresponding to the medical conditions the trial is recruiting for.
+        TrialInfo: {trial_info}
+        OncotreeValues: {level1_oncotree_list}
+        Output in JSON format:
+        {{
+        "oncotree_diagnoses": []
+        }}"""
     
-    return prompt
+    return cleandoc(prompt)
 
 def get_ai_prompt_child_values_from_supporting_info(extra_info:set, child_nodes_oncotree_list):
     prompt = f"""
-    Task: Map the trial info to the closest diagnoses from the list of 'Oncotree values' below.
-    Trial Info: {extra_info}
-    Oncotree values: {child_nodes_oncotree_list}
-    The output should be in the json format :
-    {{    
-    "oncotree_diagnoses": []
-    }}
-    """
-    return prompt
+        Task: Map TrialInfo to the closest cancer diagnoses in OncotreeValues.
+        TrialInfo: {extra_info}
+        OncotreeValues: {child_nodes_oncotree_list}
+        Output in JSON format:
+        {{    
+        "oncotree_diagnoses": []
+        }}
+        """
+    return cleandoc(prompt)
 
 def get_ai_prompt_child_values(nct_condition, child_nodes_oncotree_list):
 
@@ -149,141 +149,136 @@ def get_ai_prompt_child_values(nct_condition, child_nodes_oncotree_list):
     # Oncotree values: {child_nodes_oncotree} # E.g. -> {'Signet Ring Cell Adenocarcinoma of the Colon and Rectum', 'Colon Adenocarcinoma In Situ', 'Small Bowel Well-Differentiated Neuroendocrine Tumor', 'Gastrointestinal Neuroendocrine Tumors', 'Well-Differentiated Neuroendocrine Tumor of the Rectum', 'Small Bowel Cancer', 'Anal Squamous Cell Carcinoma', 'Anorectal Mucosal Melanoma', 'Low-grade Appendiceal Mucinous Neoplasm', 'Medullary Carcinoma of the Colon', 'Goblet Cell Adenocarcinoma of the Appendix', 'Mucinous Adenocarcinoma of the Appendix', 'Appendiceal Adenocarcinoma', 'Small Intestinal Carcinoma', 'Well-Differentiated Neuroendocrine Tumor of the Appendix', 'Signet Ring Cell Type of the Appendix', 'Colorectal Adenocarcinoma', 'High-Grade Neuroendocrine Carcinoma of the Colon and Rectum', 'Colonic Type Adenocarcinoma of the Appendix', 'Anal Gland Adenocarcinoma', 'Rectal Adenocarcinoma', 'Mucinous Adenocarcinoma of the Colon and Rectum', 'Duodenal Adenocarcinoma', 'Colon Adenocarcinoma', 'Tubular Adenoma of the Colon'}
 
     prompt = f"""
-    Task: Map the cancer condition to the closest diagnoses from the list of 'Oncotree values' below.
-    Cancer_condition: {nct_condition}
-    Oncotree values: {child_nodes_oncotree_list}
-    The output should be in the json format :
-    {{
-    "cancer_condition": "",
-    "oncotree_diagnoses": []
-    }}
-    """
-    return prompt
+        Task: Map CancerCondition to the closest cancer diagnoses in OncotreeValues.
+        CancerCondition: {nct_condition}
+        OncotreeValues: {child_nodes_oncotree_list}
+
+        Output in JSON format:
+        {{
+        "cancer_condition": "",
+        "oncotree_diagnoses": []
+        }}
+        """
+    return cleandoc(prompt)
 
 def get_her2_er_pr_status_prompt(eligibilityCriteria, keywords):
-    prompt = f"""Task: From the eligibility criteria and the keywords mentioned below, find out if it mentions her2, pr or er status along with the required value. The value should be one of the listed allowed values.
-         The '!' operator should be used if the criteria excludes a particular status.
-         Allowed values: ['Positive', 'Negative', 'Unknown','!Positive','!Negative']
-         eligibilityCriteria: {eligibilityCriteria}
-         keywords: {keywords}
-         The output should be in the json format :
-         {{
-         "her2_status": "value",
-         "er_status": "value",
-         "pr_status": "value"
-         }}"""
-         
-    return prompt
+    prompt = f"""
+        Task: From the EligibilityCriteria and TrialKeywords, return the required Her2, PR or ER status.
+        Use the '!' operator if the criteria excludes a status.
+        EligibilityCriteria: {eligibilityCriteria}
+        TrialKeywords: {keywords}
+
+        Output in JSON format:
+        {{
+        "her2_status": "value",
+        "er_status": "value",
+        "pr_status": "value"
+        }}
+        where "value" must be in ["Positive", "Negative", "Unknown", "!Positive", "!Negative"]
+        """
+    return cleandoc(prompt)
 
 def get_pdl1_status_prompt(eligibilityCriteria, keywords):
-    prompt = f"""Task: From the eligibility criteria and the keywords mentioned below, find out if it mentions PDL1/PD-L1 status along with the required value (High/Low).
-         eligibilityCriteria: {eligibilityCriteria}
-         keywords: {keywords}
-         The output should be in the json format :
-         {{
-         "pdl1_status": "High/Low/Unknown",
-         }}"""
-         
-    return prompt
+    prompt = f"""
+        Task: From the EligibilityCriteria and TrialKeywords, return the required PDL1 (PD-L1) status.
+        EligibilityCriteria: {eligibilityCriteria}
+        TrialKeywords: {keywords}
+
+        Output in JSON format:
+        {{
+        "pdl1_status": "value",
+        }}
+        where "value" is in ["High", "Low", "Unknown"].
+        """
+    return cleandoc(prompt)
 
 def get_mmr_status_prompt(eligibilityCriteria, keywords):
-    prompt = f"""Task: From the eligibility criteria and the keywords mentioned below, find out if it mentions MMR/MS status along with the value closen the below mentioned list of allowed values.
-    Return empty JSON if the text does not talk about mismatch repair or microsatellite instability.
-    Allowed values:
-    mmr_status: ['MMR-Proficient', 'MMR-Deficient']
-    ms_status: ['MSI-H', 'MSI-L', 'MSS']
+    prompt = f"""
+        Task: From the EligibilityCriteria and TrialKeywords, return the required mismatch repair (MMR) or microsatellite (MS) status;
+        return an empty JSON if the text does not mention MMR or MS status.
+        EligibilityCriteria: {eligibilityCriteria}
+        TrialKeywords: {keywords}
 
-    eligibilityCriteria: {eligibilityCriteria}
-    keywords: {keywords}
-    The output should be in the json format :
-    {{
-    "mmr_status": "MMR-Deficient",
-    "ms_status": "MSI-H"
-    }}"""
-         
-    return prompt
+        Output in JSON format:
+        {{
+        "mmr_status": "value1",
+        "ms_status": "value2"
+        }}
+        where "value1" is in ["MMR-Proficient", "MMR-Deficient"]
+        and "value2" is in ['MSI-H', 'MSI-L', 'MSS'].
+        """
+    return cleandoc(prompt)
 
 def get_disease_status_prompt(eligibilityCriteria, keywords):
-    prompt = f"""Task: From the eligibility criteria and the keywords mentioned below, find out if it mentions disease status.
-         The status can be from the following values: ['Untreated', 'Localized', 'Locally Advanced', 'Metastatic', 'Advanced', 'Recurrent', 'Refractory', 'Unresectable', "Early Stage"]
-         eligibilityCriteria: {eligibilityCriteria}
-         keywords: {keywords}
-         The output should be in the json format :
-         {{
-         "disease_status": [],
-         }}"""
-         
-    return prompt
+    prompt = f"""Task: From the EligibilityCriteria and TrialKeywords, return the required disease statuses of the cancer.
+        EligibilityCriteria: {eligibilityCriteria}
+        TrialKeywords: {keywords}
+
+        Output in JSON format:
+        {{
+        "disease_status": [],
+        }}
+        where each disease_status is in ["Untreated", "Localized", "Locally Advanced", "Metastatic", "Advanced", "Recurrent", "Refractory", "Unresectable", "Early Stage"].
+        """
+    return cleandoc(prompt)
 
 def get_genomic_criteria_prompt(genes, eligibilityCriteria):
-    prompt = f"""
-    Task: Evaluate the clinical trial description against the provided gene list and variant categories to determine whether any mutations in the listed genes are included or excluded based on the eligibility criteria.
+    prompt = f"""Task: Evaluate the EligibilityCriteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
+    EligibilityCritieria: {eligibilityCriteria}
+    GeneList: {genes}
 
-    Instructions:
-    1. Identify if the clinical trial description mentions mutations in the given genes (inclusion) or specifies exclusions.
-    2. Use the variant categories:
-        Mutation
-        Copy Number Variation
-        Structural Variation
-        Any Variation
-        !Mutation
-        !Copy Number Variation
-        !Structural Variation
-    
-    Logic:
-    1. If the genes are mentioned in trial's inclusion criteria, use the 'or' operator along with appropriate variant categories.
-    2. If the genes are mentioned in trial's exclusion criteria, use the 'and' operator along with variant categories (!Mutation/!Copy Number Variation/!Structural Variation).
-    3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
-        
-    Potential gene list: {genes}
+    Output in JSON format such that:
+    1. If the genes are mentioned in trial's inclusion criteria, use the "or" operator along with included "variant_category".
+    2. If the genes are mentioned in trial's exclusion criteria, use the "and" operator along with the excluded "variant_categorory" prefixed with the "!" operator.
+    3. If applicable, combine inclusion and exclusion criteria with a top level "and" operator.
+    4. "variant_category" must be in ["Mutation", "Copy Number Variation", "Structural Variation", "Any Variation", "!Mutation", "!Copy Number Variation", "!Structural Variation"],
+       where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
+    5. If a specific amino acid substitution is required, return this in the "protein_change" field.
+    6. In the input text, the term "mutant" means "Any Variation" and "non-mutant" means "!Any Variation".
 
-    Clinical Trial Description: {eligibilityCriteria}
-
-    Example A:
-    Inclusion criteria:Subjects with advanced solid tumors harboring ROS1 or NTRK1 rearrangement will be included in this trial. 
+    Example 1:
+    Criteria: Subjects with advanced solid tumors harboring NTRK1 rearrangement or KRAS G12C will be included in this trial. 
     Output:
-{{
-    "or": [        
-        {{
-            "genomic": {{
-                "hugo_symbol": "ROS1",
-                "variant_category": "Structural Variation"
+    {{
+        "or": [        
+            {{
+                "genomic": {{
+                    "hugo_symbol": "NTRK1",
+                    "variant_category": "Structural Variation"
+                }}
+            }},
+            {{
+                "genomic": {{
+                    "hugo_symbol": "KRAS",
+                    "variant_category": "Mutation",
+                    "protein_change": "G12C"
+                }}
             }}
-        }},
-        {{
-            "genomic": {{
-                "hugo_symbol": "NTRK1",
-                "variant_category": "Mutation"
+        ]
+    }}
+
+    Example 2:
+    Criteria: Tumors with mutant KRAS or EGFR and wildtype BRCA1/2.
+    Output:
+    {{
+        "and":[
+            {{
+                "or":[
+                    {{"genomic": {{"hugo_symbol": "KRAS", "variant_category": "Any Variation"}}}},
+                    {{"genomic": {{"hugo_symbol": "EGFR", "variant_category": "Any Variation"}}}}
+                ]
+            }},
+            {{
+                "and":[
+                    {{"genomic": {{"hugo_symbol": "BRCA1", "variant_category": "!Any Variation"}}}},
+                    {{"genomic": {{"hugo_symbol": "BRCA2", "variant_category": "!Any Variation"}}}}
+                ]
+
             }}
-        }}
-    ]
-}}
-
-Example B:
-Inclusion criteria:Patient should have mutation in geneA or geneB.
-Exclusion criteria: Patient should not have a mutation in geneC or geneD
-
-Output:
-{{
-    "and":[
-        {{
-            "or":[
-                {{"genomic": {{"hugo_symbol": "geneA","variant_category": "Mutation"}}}},
-                {{"genomic": {{"hugo_symbol": "geneB","variant_category": "Mutation"}}}}
-            ]
-        }},
-        {{
-            "and":[
-                {{"genomic": {{"hugo_symbol": "geneC","variant_category": "!Mutation"}}}},
-                {{"genomic": {{"hugo_symbol": "geneD","variant_category": "!Mutation"}}}}
-            ]
-
-        }}
-    ]
-}}
-
+        ]
+    }}
     """
-    return None, prompt
+    return None, cleandoc(prompt)
 
 def safe_get(dict_data, keys):
     for key in keys:
