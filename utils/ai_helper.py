@@ -55,17 +55,6 @@ def get_child_level_diagnoses_from_condition(nct_id:str, child_nodes_oncotree:se
     oncotree_diagnoses_dict = parse_ai_response(ai_response)   
     return oncotree_diagnoses_dict
 
-def get_child_level_diagnosis_from_clinical_condition(clinical_id:str, child_nodes_oncotree:set, condition: str) -> dict:
-
-    child_nodes_oncotree_list = list(child_nodes_oncotree)
-
-    prompt = get_ai_prompt_clinical_oncotree_diagnosis(condition, child_nodes_oncotree_list)
-
-    ai_response = send_ai_request(clinical_id, prompt)
-    oncotree_diagnosis_dict = parse_ai_response(ai_response)   
-    return oncotree_diagnosis_dict
-
-
 def get_her2_er_pr_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> dict:
     prompt = get_her2_er_pr_status_prompt(eligibilityCriteria, keywords)
     ai_response = send_ai_request(nct_id, prompt)
@@ -96,12 +85,6 @@ def get_genomic_criteria(nct_id:str, genes:list, eligibilityCriteria:str)-> dict
     genomic_criteria_dict = parse_ai_response(ai_response)
     return genomic_criteria_dict
 
-def get_patient_genomic_criteria(id:str, genomic_data: str) -> dict:    
-    prompt = get_ai_prompt_for_patient_genomic_criteria(genomic_data)        
-    ai_response = send_ai_request(id, prompt)
-    patient_genomic_criteria = parse_ai_response(ai_response)
-    return patient_genomic_criteria
-
 def parse_ai_response(ai_response):
     return _llm_platform.parse_response(ai_response)
 
@@ -121,70 +104,6 @@ def send_ai_request(id, prompt, json_schema=None):
     ai_response = response.json()
     logger.debug(f"AI response | ID:{id} | {ai_response}")
     return ai_response
-
-def get_ai_prompt_for_patient_genomic_criteria(genomic_data):
-    prompt = f"""Task: Convert the following text about genomic report of a patient sample into JSON format as described below:
-    Text: {genomic_data}
-    Output JSON Format:
-    [
-   {{
-      "WILDTYPE":false,
-      "TRUE_HUGO_SYMBOL":"CDK4",
-      "VARIANT_CATEGORY":"CNV",
-      "CNV_CALL":"High level amplification"
-   }},
-   {{
-      "WILDTYPE":false,
-      "TRUE_HUGO_SYMBOL":"ARFRP1",
-      "VARIANT_CATEGORY":"MUTATION",
-      "TRUE_VARIANT_CLASSIFICATION":"Missense_Mutation",
-      "TRUE_PROTEIN_CHANGE":"p.R177H"
-   }},
-   {{
-      "WILDTYPE":false,
-      "TRUE_HUGO_SYMBOL":"CREBBP",
-      "VARIANT_CATEGORY":"MUTATION",
-      "TRUE_VARIANT_CLASSIFICATION":"Frame_Shift_Ins",
-      "TRUE_PROTEIN_CHANGE":"p.N435Kfs*4"
-   }}
-]
-Instructions:
-Each JSON object may contain following fields:
-1. TRUE_HUGO_SYMBOL: The gene symbol that's metioned in the beginning of each line. If it does not look like a gene symbol, try to find the closest match from the gene(s) defined at the end of the line.
-2. VARIANT_CATEGORY: Type of variant. Needs to be one of the following values: ['MUTATION', 'CNV', 'SV', 'SIGNATURE']. SV stands for 'Structural variation and variants of type 'fusion' from the report should be marked with 'SV'
-3. TRUE_VARIANT_CLASSIFICATION: If the 'VARIANT_CATEGORY' = 'MUTATION', the value should be one of the following values: ['In_Frame_Del', 'In_Frame_Ins', 'Missense_Mutation', 'Nonsense_Mutation', 'Nonstop_Mutation', 'Frame_Shift_Del','Frame_Shift_Ins','Initiator_Codon', 'Intron', 'RNA', 'Silent', 'Splice_Acceptor', 'Splice_Donor', 'Splice_Region','Splice_Site', 'Splice_Lost', 'Translation_Start_Site', "3'UTR", "5'Flank", "5'UTR"]. Otherwise, exclude this field.
-4. TRUE_PROTEIN_CHANGE: Protein change if described in the report. Example: "p.R146*"
-5. CNV_CALL: If the 'VARIANT_CATEGORY' = 'CNV', the value for this field should be one of the following values: ["High level amplification", "Homozygous deletion", "Gain", "Heterozygous deletion"].Otherwise, exclude this field.
-
-Example:
-FLCN H429fs*39 NM_144997.5: c.128Sdel(p.H429Tfs*39), 1285delC
-
-Output:
-{{
-        "WILDTYPE": false,
-        "TRUE_HUGO_SYMBOL": "FLCN",
-        "VARIANT_CATEGORY": "MUTATION",         
-        "TRUE_VARIANT_CLASSIFICATION": "Frame_Shift_Del",
-        "TRUE_PROTEIN_CHANGE": "p.H429Tfs*39"
-}}
-"""    
-    return prompt
-
-def get_ai_prompt_level1(cancer_keywords_list, level1_oncotree_list):
-    prompt = f"""Task: Map the keywords of 'cancer conditions' to the types listed in 'Oncotree values' below.
-    Cancer conditions: {cancer_keywords_list}
-    Oncotree values:{level1_oncotree_list}
-    The output should be in the json format :
-    {{
-    "oncotree_diagnoses": [
-        {{
-        "cancer_condition_keyword": "",
-        "oncotree_value": ""
-        }}
-    ]
-    }}"""
-    
-    return prompt
 
 def get_ai_prompt_level1_for_original_conditions(original_conditions_list, level1_oncotree_list):
     prompt = f"""Task: Map the list of 'cancer conditions' to the closest type listed in 'Oncotree values' below.
@@ -237,23 +156,6 @@ def get_ai_prompt_child_values(nct_condition, child_nodes_oncotree_list):
     {{
     "cancer_condition": "",
     "oncotree_diagnoses": []
-    }}
-    """
-    return prompt
-
-def get_ai_prompt_clinical_oncotree_diagnosis(condition, child_nodes_oncotree_list):
-
-    # cancer_condition: {condition} E.g. -> Colorectal Cancer
-    # Oncotree values: {child_nodes_oncotree} # E.g. -> {'Signet Ring Cell Adenocarcinoma of the Colon and Rectum', 'Colon Adenocarcinoma In Situ', 'Small Bowel Well-Differentiated Neuroendocrine Tumor', 'Gastrointestinal Neuroendocrine Tumors', 'Well-Differentiated Neuroendocrine Tumor of the Rectum', 'Small Bowel Cancer', 'Anal Squamous Cell Carcinoma', 'Anorectal Mucosal Melanoma', 'Low-grade Appendiceal Mucinous Neoplasm', 'Medullary Carcinoma of the Colon', 'Goblet Cell Adenocarcinoma of the Appendix', 'Mucinous Adenocarcinoma of the Appendix', 'Appendiceal Adenocarcinoma', 'Small Intestinal Carcinoma', 'Well-Differentiated Neuroendocrine Tumor of the Appendix', 'Signet Ring Cell Type of the Appendix', 'Colorectal Adenocarcinoma', 'High-Grade Neuroendocrine Carcinoma of the Colon and Rectum', 'Colonic Type Adenocarcinoma of the Appendix', 'Anal Gland Adenocarcinoma', 'Rectal Adenocarcinoma', 'Mucinous Adenocarcinoma of the Colon and Rectum', 'Duodenal Adenocarcinoma', 'Colon Adenocarcinoma', 'Tubular Adenoma of the Colon'}
-
-    prompt = f"""
-    Task: Map the cancer condition to the closest diagnosis from the list of 'Oncotree values' below.
-    Cancer_condition: {condition}
-    Oncotree values: {child_nodes_oncotree_list}
-    The output should be in the json format :
-    {{
-    "cancer_condition": "",
-    "oncotree_diagnosis": ""
     }}
     """
     return prompt
@@ -313,32 +215,51 @@ def get_disease_status_prompt(eligibilityCriteria, keywords):
          
     return prompt
 
-#with json schema added as request body param
 def get_genomic_criteria_prompt(genes, eligibilityCriteria):
-
     prompt = f"""
-    Task: Evaluate the clinical trial description against the provided gene list to determine whether any mutations in the listed genes are included or excluded in eligibility criteria.
+    Task: Evaluate the clinical trial description against the provided gene list and variant categories to determine whether any mutations in the listed genes are included or excluded based on the eligibility criteria.
 
     Instructions:
-    1. Identify if the clinical trial description mentions variants in the given genes (inclusion) or specifies exclusions.
-    2. For each mentioned gene variant, use the JSON schema below for producing JSON output
-    3. Choose the correct variant_category based on the description:
-    - "mutation", "mutated" -> "Mutation" (or "!Mutation" for exclusion)
-    - "amplification", "deletion", "homozygous loss", "lost MTAP expression" -> "Copy Number Variation"
-    - "fusion", "rearrangement", "translocation" -> "Structural Variation"
-    - General "alteration" -> "Any Variation"
-    4. The output JSON should strictly use the enum values only for variant_category/cnv_call.
+    1. Identify if the clinical trial description mentions mutations in the given genes (inclusion) or specifies exclusions.
+    2. Use the variant categories:
+        Mutation
+        Copy Number Variation
+        Structural Variation
+        Any Variation
+        !Mutation
+        !Copy Number Variation
+        !Structural Variation
     
     Logic:
-    1. If multiple genes are mentioned in trial's inclusion criteria, use the 'or' operator to combine the JSON output for each gene.
-    2. If multiple genes are mentioned in trial's exclusion criteria, use the 'and' operator to combine the JSON output for each gene.
+    1. If the genes are mentioned in trial's inclusion criteria, use the 'or' operator along with appropriate variant categories.
+    2. If the genes are mentioned in trial's exclusion criteria, use the 'and' operator along with variant categories (!Mutation/!Copy Number Variation/!Structural Variation).
     3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
-    
-    Gene list: {genes}
+        
+    Potential gene list: {genes}
 
     Clinical Trial Description: {eligibilityCriteria}
 
-    Example:
+    Example A:
+    Inclusion criteria:Subjects with advanced solid tumors harboring ROS1 or NTRK1 rearrangement will be included in this trial. 
+    Output:
+{{
+    "or": [        
+        {{
+            "genomic": {{
+                "hugo_symbol": "ROS1",
+                "variant_category": "Structural Variation"
+            }}
+        }},
+        {{
+            "genomic": {{
+                "hugo_symbol": "NTRK1",
+                "variant_category": "Mutation"
+            }}
+        }}
+    ]
+}}
+
+Example B:
 Inclusion criteria:Patient should have mutation in geneA or geneB.
 Exclusion criteria: Patient should not have a mutation in geneC or geneD
 
@@ -360,126 +281,9 @@ Output:
         }}
     ]
 }}
+
     """
-    return schema.trial_genomic_json_schema, prompt
-
-# with json schema as a part of prompt, not request body
-# def get_genomic_criteria_prompt(genes, eligibilityCriteria):
-
-#     prompt = f"""
-#     Task: Evaluate the clinical trial description against the provided gene list to determine whether any mutations in the listed genes are included or excluded in eligibility criteria.
-
-#     Instructions:
-#     1. Identify if the clinical trial description mentions variants in the given genes (inclusion) or specifies exclusions.
-#     2. For each mentioned gene variant, use the JSON schema below for producing JSON output    
-#     3. The output should strictly use the enum values mentioned in json schema for variant_category/cnv_call.
-    
-#     JSON schema for each gene variant: {json.dumps(schema.trial_genomic_json_schema, indent=4)}
-#     Logic:
-#     1. If multiple genes are mentioned in trial's inclusion criteria, use the 'or' operator to combine the JSON output for each gene.
-#     2. If multiple genes are mentioned in trial's exclusion criteria, use the 'and' operator to combine the JSON output for each gene.
-#     3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
-    
-#     Gene list: {genes}
-
-#     Clinical Trial Description: {eligibilityCriteria}
-
-#     Example:
-#     Inclusion criteria:Patient should have mutation in geneA or geneB.
-#     Exclusion criteria: Patient should not have a mutation in geneC or geneD
-
-#     Output:
-#     {{
-#         "and":[
-#             {{
-#                 "or":[
-#                     {{"genomic": {{"hugo_symbol": "geneA","variant_category": "Mutation"}}}},
-#                     {{"genomic": {{"hugo_symbol": "geneB","variant_category": "Mutation"}}}}
-#                 ]
-#             }},
-#             {{
-#                 "and":[
-#                     {{"genomic": {{"hugo_symbol": "geneC","variant_category": "!Mutation"}}}},
-#                     {{"genomic": {{"hugo_symbol": "geneD","variant_category": "!Mutation"}}}}
-#                 ]
-
-#             }}
-#         ]
-#     }}
-#     """
-#     return None, prompt
-
-
-# original version without json schema
-# def get_genomic_criteria_prompt(genes, eligibilityCriteria):
-#     prompt = f"""
-#     Task: Evaluate the clinical trial description against the provided gene list and variant categories to determine whether any mutations in the listed genes are included or excluded based on the eligibility criteria.
-
-#     Instructions:
-#     1. Identify if the clinical trial description mentions mutations in the given genes (inclusion) or specifies exclusions.
-#     2. Use the variant categories:
-#         Mutation
-#         Copy Number Variation
-#         Structural Variation
-#         Any Variation
-#         !Mutation
-#         !Copy Number Variation
-#         !Structural Variation
-    
-#     Logic:
-#     1. If the genes are mentioned in trial's inlcusion criteria, use the 'or' operator along with appropriate variant categories.
-#     2. If the genes are mentioned in trial's exclusion criteria, use the 'and' operator along with variant categories (!Mutation/!Copy Number Variation/!Structural Variation).
-#     3. If applicable, combine inclusion and exclusion with a top level 'and' operator.
-    
-#     Gene list: {genes}
-
-#     Clinical Trial Description: {eligibilityCriteria}
-
-#     Example A:
-#     Inclusion criteria:Subjects with advanced solid tumors harboring ROS1 or NTRK1 rearrangement will be included in this trial. 
-#     Output:
-# {{
-#     "or": [        
-#         {{
-#             "genomic": {{
-#                 "hugo_symbol": "ROS1",
-#                 "variant_category": "Structural Variation"
-#             }}
-#         }},
-#         {{
-#             "genomic": {{
-#                 "hugo_symbol": "NTRK1",
-#                 "variant_category": "Structural Variation"
-#             }}
-#         }}
-#     ]
-# }}
-
-# Example B:
-# Inclusion criteria:Patient should have mutation in geneA or geneB.
-# Exclusion criteria: Patient should not have a mutation in geneC or geneD
-
-# Output:
-# {{
-#     "and":[
-#         {{
-#             "or":[
-#                 {{"genomic": {{"hugo_symbol": "geneA","variant_category": "Mutation"}}}},
-#                 {{"genomic": {{"hugo_symbol": "geneB","variant_category": "Mutation"}}}}
-#             ]
-#         }},
-#         {{
-#             "and":[
-#                 {{"genomic": {{"hugo_symbol": "geneC","variant_category": "!Mutation"}}}},
-#                 {{"genomic": {{"hugo_symbol": "geneD","variant_category": "!Mutation"}}}}
-#             ]
-
-#         }}
-#     ]
-# }}
-
-#     """
-#     return None, prompt
+    return None, prompt
 
 def safe_get(dict_data, keys):
     for key in keys:
