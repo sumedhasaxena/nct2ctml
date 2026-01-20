@@ -16,6 +16,7 @@ import src.ctml_schema as cs
 import utils.ai_helper as ai
 import src.trial_data_helper as tdh
 import utils.oncotree as onct
+import src.trial_criteria_to_genes as ctg
 import src.match_criteria_mapper as mcm
 from loguru import logger
 
@@ -41,7 +42,7 @@ def map_nct_to_ctml(trial_data: dict, genes:list, gene_synonym_mapping: Dict[str
     trial_schema = map_prior_treatment_requirements(trial_schema, trial_data)
 
     clinical_ctml = map_ctml_match_clinical_criteria(trial_data)
-    genomic_ctml = map_ctml_match_genomic_criteria(trial_data, genes)
+    genomic_ctml = map_ctml_match_genomic_criteria(trial_data, gene_synonym_mapping)
     match_result = mcm.combine_clinical_and_genomic_ctml(clinical_ctml, genomic_ctml)
     match_list = trial_schema['treatment_list']['step'][0]['match']
     match_list.append(match_result)
@@ -175,12 +176,18 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
     logger.debug(f"clinical criteria as CTML: {clinical_ctml}")
     return clinical_ctml
 
-def map_ctml_match_genomic_criteria(trial_data: dict, genes:list):
+def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[str, List[str]]):
     nct_id = trial_data['protocolSection']['identificationModule']['nctId']
     eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    contains_gene_info = mcm.check_if_eligibility_criteria_contains_gene_info(genes, eligibilityCriteria)
+    contains_gene_info = mcm.check_if_eligibility_criteria_contains_gene_info(gene_synonym_mapping, eligibilityCriteria)
+
     if contains_gene_info: #check if eligibility criteria contains any gene before asking AI
-        genomic_critera = ai.get_genomic_criteria(nct_id, genes, eligibilityCriteria)
+        tcg = ctg.TrialCriteriaToGenes(
+            trial_criteria=eligibilityCriteria,
+            synonym_to_symbol=gene_synonym_mapping,
+        )
+        gene_symbols = tcg.extract_official_gene_symbols()
+        genomic_critera = ai.get_genomic_criteria(nct_id, gene_symbols, eligibilityCriteria)
         genomic_ctml = mcm.convert_to_ctml_genomic_schema(genomic_critera)
         logger.debug(f"genomic criteria as CTML: {genomic_ctml}")
         return genomic_ctml
