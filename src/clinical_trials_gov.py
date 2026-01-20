@@ -5,6 +5,7 @@ of data from clinicaltrials.gov
 import sys
 import os
 import csv
+from typing import Dict, List
 
 sys.path.append(os.path.abspath('../'))
 
@@ -19,7 +20,7 @@ import src.match_criteria_mapper as mcm
 from loguru import logger
 
 
-def map_nct_to_ctml(trial_data: dict, genes:list) -> dict:
+def map_nct_to_ctml(trial_data: dict, genes:list, gene_synonym_mapping: Dict[str, List[str]]) -> dict:
     """
     Logic to map the fields from https://clinicaltrials.gov/ API response to the clinical trial schema required by matchminer
     Parameters

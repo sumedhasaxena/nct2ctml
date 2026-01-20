@@ -7,8 +7,9 @@ This module handles the mapping of NCT trial data to CTML format.
 import csv
 import os
 from datetime import datetime
-from typing import Dict, List
+from typing import Any, Dict, List
 from loguru import logger
+from collections import defaultdict
 import src.clinical_trials_gov as ctg
 import src.trial_data_helper as tdh
 
@@ -30,6 +31,21 @@ class TrialMapManager:
         except FileNotFoundError:
             logger.warning("Gene list file not found: ref/genes.txt")
         return genes
+
+    def load_gene_synonym_mapping(self) -> Dict[str, List[str]]:
+        m = defaultdict[Any, list](list)
+        with open('ref/synonym_to_gene_symbol.tsv', newline="") as f:
+            for synonym, official in csv.reader(f, delimiter="\t"):
+                synonym = synonym.strip()
+                official = official.strip()
+                m[synonym].append(official)
+
+        with open('ref/gene_synonym_addendum.tsv', newline="") as f:
+            for synonym, official in csv.reader(f, delimiter="\t"):
+                synonym = synonym.strip()
+                official = official.strip()
+                m[synonym].append(official)
+        return m
     
     def load_trial_status_dict(self) -> Dict[str, Dict]:
         """Load trial status information into a dictionary"""
@@ -162,6 +178,8 @@ class TrialMapManager:
         """Map all NCT files to CTML format with local trial info integration"""
         cutoff_date = self._get_cutoff_date(cutoff_days)
         genes = self.get_gene_list()
+
+        gene_synonym_mapping = self.load_gene_synonym_mapping()
         
         # Load data dictionaries
         trial_status_dict = self.load_trial_status_dict()
@@ -200,7 +218,7 @@ class TrialMapManager:
                     trial_data = tdh.read_from_file(nct_files_path, nct_id, 'json')
                     
                     # Map to CTML format
-                    mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
+                    mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes, gene_synonym_mapping)
                     
                     # Add local trial info if available
                     if nct_id in local_trial_dict:
@@ -270,10 +288,10 @@ class TrialMapManager:
             return False
         
         genes = self.get_gene_list()
-
+        gene_synonym_mapping = self.load_gene_synonym_mapping()
         try:
             # Map to CTML format
-            mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes)
+            mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes, gene_synonym_mapping)
             
             # Add local trial info if available
             self._add_local_trial_info(mapped_ctml, nct_id)
