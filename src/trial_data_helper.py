@@ -111,7 +111,6 @@ def all_tumours(conditions_list):
     
     return all_tumors
 
-
 def get_all_keys(d: dict, keys=None):
     if keys is None:
         keys = set()        
@@ -124,6 +123,20 @@ def get_all_keys(d: dict, keys=None):
                 if isinstance(item, dict):
                     get_all_keys(item, keys)
     return keys
+
+def get_all_keys(list_of_dicts: list) -> set:
+    all_keys = set()
+    for d in list_of_dicts:
+        if isinstance(d, dict):
+            keys = get_all_keys(d)
+            all_keys.update(keys)
+    return all_keys
+
+def split_with_find(text, keyword):
+    index = text.find(keyword)
+    if index != -1:
+        return text[:index], text[index + len(keyword):]
+    return text, ""
 
 ##Post-processing##
 def update_hugo_symbol(genomic_crit:dict):

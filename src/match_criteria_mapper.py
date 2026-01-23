@@ -46,11 +46,58 @@ def convert_to_ctml_clinical_schema(clinical_critera) -> dict:
         return result
 
 # Checks that the genomic crietria returned by AI model is not empty and has "hugo_symbol", "variant_category" keys
-def convert_to_ctml_genomic_schema(genomic_criteria: dict) -> dict: 
-    if genomic_criteria and all(key in tdh.get_all_keys(genomic_criteria) for key in ["hugo_symbol", "variant_category"]):
+def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_genomic_criteria: list) -> dict: 
+    inclusions = []
+    exclusions = []
+    print(tdh.get_all_keys(inclusion_genomic_criteria))
+    print(tdh.get_all_keys(exclusion_genomic_criteria))
+    if inclusion_genomic_criteria and all(key in tdh.get_all_keys(inclusion_genomic_criteria) for key in ["hugo_symbol", "variant_category"]):
         #post processing
-        genomic_criteria = tdh.update_hugo_symbol(genomic_criteria)
-        return genomic_criteria
+        inclusion_genomic_criteria = tdh.update_hugo_symbol(inclusion_genomic_criteria)
+        for alteration in inclusion_genomic_criteria:
+            variant_category = alteration["genomic"]["variant_category"]
+            # if variant_category begins with !, add alteration to exclusions, without removing !
+            if variant_category.startswith('!'):
+                exclusions.append(alteration)
+            else:
+                inclusions.append(alteration)
+    
+    if exclusion_genomic_criteria and all(key in tdh.get_all_keys(exclusion_genomic_criteria) for key in ["hugo_symbol", "variant_category"]):
+        #post processing
+        exclusion_genomic_criteria = tdh.update_hugo_symbol(exclusion_genomic_criteria)
+        for alteration in exclusion_genomic_criteria:
+            exclusions.append(alteration)
+
+    print(f'Inclusions: {inclusions}')
+    print(f'Exclusions: {exclusions}')
+
+    #combine inclusions with a top level 'or' and exclusions with a top level 'and'
+    if inclusions:
+        if len(inclusions) == 1:
+            inclusion_genomic_criteria_ctml = inclusions
+        else:
+            inclusion_genomic_criteria_ctml = {"or": inclusions}
+    else:
+        inclusion_genomic_criteria_ctml = {}
+
+    print(f'inclusion_genomic_criteria_ctml: {inclusion_genomic_criteria_ctml}')
+
+    if exclusions:
+        if len(exclusions) == 1:
+            exclusion_genomic_criteria_ctml = exclusions
+        else:
+            exclusion_genomic_criteria_ctml = {"and": exclusions}
+    else:
+        exclusion_genomic_criteria_ctml = {}
+
+    print(f'exclusion_genomic_criteria_ctml: {exclusion_genomic_criteria_ctml}')
+
+    #combine both inclusion and exclusion criteria under a top level 'and'
+    if inclusion_genomic_criteria_ctml and exclusion_genomic_criteria_ctml:
+        inclusion_exclusion_genomic_criteria_ctml = {"and": [inclusion_genomic_criteria_ctml, exclusion_genomic_criteria_ctml]}
+        return inclusion_exclusion_genomic_criteria_ctml
+    elif inclusion_genomic_criteria_ctml:
+        return inclusion_genomic_criteria_ctml
     return {}
     
 
