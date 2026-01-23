@@ -21,7 +21,6 @@ class TrialCriteriaToGenes:
     def _normalize_token(s: str) -> str:
         s = (s or "").strip()
         s = s.strip('"\',;:.()[]{}')
-        s = s.upper()
         return s
 
     @staticmethod

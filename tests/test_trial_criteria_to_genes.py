@@ -30,7 +30,6 @@ class TestTrialCriteriaToGenes(unittest.TestCase):
                 synonym = synonym.strip()
                 official = official.strip()
                 m[synonym].append(official)
-
         return m
 
     def test_extract_official_gene_symbols_kras_family_1(self):
@@ -132,6 +131,16 @@ class TestTrialCriteriaToGenes(unittest.TestCase):
         expected_symbols = ['ROS1', 'NTRK1','NTRK2','NTRK3'] 
         print(f"Expected symbols: {expected_symbols}")
         self.assertCountEqual(symbols, expected_symbols)
+
+    def test_extract_official_gene_symbols_kras_family_6(self):
+        criteria = "Patients with RAS-mutated genes are eligible."
+        tcg = TrialCriteriaToGenes(
+            trial_criteria=criteria,
+            synonym_to_symbol=self.mapping,
+        )
+        symbols = tcg.extract_official_gene_symbols()
+        print(f"\nsymbols: {symbols}")
+        self.assertCountEqual(symbols, ["KRAS", "NRAS","HRAS"])
 
 if __name__ == "__main__":
     unittest.main()
