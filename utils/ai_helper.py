@@ -79,11 +79,17 @@ def get_disease_status(nct_id:str, eligibilityCriteria: str, keywords: list)-> d
     disease_status_dict = parse_ai_response(ai_response)   
     return disease_status_dict
 
-def get_genomic_criteria(nct_id:str, genes:list, eligibilityCriteria:str)-> dict:
-    json_schema, prompt = get_genomic_criteria_prompt(genes, eligibilityCriteria)
+def get_inclusion_genomic_criteria(nct_id:str, genes:list, eligibilityCriteria:str)-> list:
+    json_schema, prompt = get_inclusion_genomic_criteria_prompt(genes, eligibilityCriteria)
     ai_response = send_ai_request(nct_id, prompt, json_schema)
-    genomic_criteria_dict = parse_ai_response(ai_response)
-    return genomic_criteria_dict
+    genomic_criteria = parse_ai_response(ai_response)
+    return genomic_criteria
+
+def get_exclusion_genomic_criteria(nct_id:str, genes:list, eligibilityCriteria:str)-> list:
+    json_schema, prompt = get_exclusion_genomic_criteria_prompt(genes, eligibilityCriteria)
+    ai_response = send_ai_request(nct_id, prompt, json_schema)
+    genomic_criteria = parse_ai_response(ai_response)
+    return genomic_criteria
 
 def parse_ai_response(ai_response):
     return _llm_platform.parse_response(ai_response)
@@ -222,63 +228,102 @@ def get_disease_status_prompt(eligibilityCriteria, keywords):
         """
     return cleandoc(prompt)
 
-def get_genomic_criteria_prompt(genes, eligibilityCriteria):
-    prompt = f"""Task: Evaluate the EligibilityCriteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
-    EligibilityCritieria: {eligibilityCriteria}
+# a lot of trial criteria mention exclusion too in inclusion criteria hence the prompt supplies both inclusion and exclusion instructions
+def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
+    prompt = f"""Task: Evaluate the clinical trial criteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
+    EligibilityCritieria: {inclusion_criteria}
     GeneList: {genes}
 
     Output in JSON format such that:
-    1. If the genes are mentioned in trial's inclusion criteria, use the "or" operator along with included "variant_category".
-    2. If the genes are mentioned in trial's exclusion criteria, use the "and" operator along with the excluded "variant_categorory" prefixed with the "!" operator.
-    3. If applicable, combine inclusion and exclusion criteria with a top level "and" operator.
-    4. "variant_category" must be in ["Mutation", "Copy Number Variation", "Structural Variation", "Any Variation", "!Mutation", "!Copy Number Variation", "!Structural Variation"],
+    1. "variant_category" must be in ["Mutation", "Copy Number Variation", "Structural Variation", "Any Variation","!Mutation", "!Copy Number Variation", "!Structural Variation", "!Any Variation"],
        where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
-    5. If a specific amino acid substitution is required, return this in the "protein_change" field.
-    6. In EligibilityCriteria, the term "mutant" means "Any Variation" and "non-mutant" means "!Any Variation".
+    2. If a specific amino acid substitution is required, return this in the "protein_change" field.
+    3. In EligibilityCriteria, the term "mutant" means "Any Variation"
 
     Example 1:
     Criteria: Subjects with advanced solid tumors harboring NTRK1 rearrangement or KRAS G12C will be included in this trial. 
     Output:
-    {{
-        "or": [        
-            {{
-                "genomic": {{
-                    "hugo_symbol": "NTRK1",
-                    "variant_category": "Structural Variation"
-                }}
-            }},
-            {{
-                "genomic": {{
-                    "hugo_symbol": "KRAS",
-                    "variant_category": "Mutation",
-                    "protein_change": "G12C"
-                }}
+    [
+        {{
+            "genomic": {{
+                "hugo_symbol": "NTRK1",
+                "variant_category": "Structural Variation"
             }}
-        ]
-    }}
+        }},
+        {{
+            "genomic": {{
+                "hugo_symbol": "KRAS",
+                "variant_category": "Mutation",
+                "protein_change": "p.G12C"
+            }}
+        }}
+    ]
 
     Example 2:
-    Criteria: Tumors with mutant KRAS or EGFR and wildtype BRCA1/2.
+    Criteria: Any solid tumor type with MET amplification and negative test results for epidermal growth factor receptor (EGFR) and proto-oncogene1 (ROS1) actionable genomic alterations based on analysis of tumor tissue.
     Output:
-    {{
-        "and":[
-            {{
-                "or":[
-                    {{"genomic": {{"hugo_symbol": "KRAS", "variant_category": "Any Variation"}}}},
-                    {{"genomic": {{"hugo_symbol": "EGFR", "variant_category": "Any Variation"}}}}
-                ]
-            }},
-            {{
-                "and":[
-                    {{"genomic": {{"hugo_symbol": "BRCA1", "variant_category": "!Any Variation"}}}},
-                    {{"genomic": {{"hugo_symbol": "BRCA2", "variant_category": "!Any Variation"}}}}
-                ]
-
+    [
+        {{
+            "genomic": {{
+                "hugo_symbol": "MET",
+                "variant_category": "Copy Number Variation"
             }}
-        ]
-    }}
+        }},
+        {{
+            "genomic": {{
+                "hugo_symbol": "EGFR",
+                "variant_category": "!Any Variation"
+            }}
+        }},
+        {{
+            "genomic": {{
+                "hugo_symbol": "ROS1",
+                "variant_category": "!Any Variation"
+            }}
+        }}
+    ]
     """
-    return None, cleandoc(prompt)
+    json_schema = None # Define JSON schema if needed. It will be injected in teh request body to LLM
+    return json_schema, cleandoc(prompt)
+
+def get_exclusion_genomic_criteria_prompt(genes, exclusion_criteria):
+    prompt = f"""Task: Evaluate the clinical trial exclusion criteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
+    EligibilityCritieria: {exclusion_criteria}
+    GeneList: {genes}
+
+    Output in JSON format such that:
+    1. "variant_category" must be in ["!Mutation", "!Copy Number Variation", "!Structural Variation", "!Any Variation"],
+       where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
+    2. If a specific amino acid substitution is required, return this in the "protein_change" field.
+    3. In EligibilityCriteria, the term "mutant" means "Any Variation"
+
+    Example 1:
+    Criteria: Exclude - Patients who have EGFR, ALK or ROS1 driver mutations
+    Output:
+    [
+        {{
+            "genomic": {{
+                "hugo_symbol": "EGFR",
+                "variant_category": "!Any Variation"
+            }}
+        }},
+        {{
+            "genomic": {{
+                "hugo_symbol": "ALK",
+                "variant_category": "!Any Variation"
+            }}
+        }},
+        {{
+            "genomic": {{
+                "hugo_symbol": "ROS1",
+                "variant_category": "!Any Variation"
+            }}
+        }}
+    ]
+
+    """
+    json_schema = None # Define JSON schema if needed. It will be injected in teh request body to LLM
+    return json_schema, cleandoc(prompt)
 
 def safe_get(dict_data, keys):
     for key in keys:

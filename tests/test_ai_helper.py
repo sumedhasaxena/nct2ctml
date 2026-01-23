@@ -1,5 +1,5 @@
 import unittest
-from utils.ai_helper import get_child_level_diagnoses_from_condition, get_genomic_criteria
+from utils.ai_helper import get_child_level_diagnoses_from_condition, get_inclusion_genomic_criteria, get_exclusion_genomic_criteria
 
 class TestAITasks(unittest.TestCase):
 
@@ -33,7 +33,7 @@ class TestAITasks(unittest.TestCase):
         Cohort L: KRAS G12C-positive tumors (excluding NSCLC and CRC),
         Cohort M: ATM Loss of Function tumors,
         Cohort N: SETD2 Loss of Function tumors"""
-        result = get_genomic_criteria('', self.genes, text)
+        result = get_inclusion_genomic_criteria('', self.genes, text)
         self.assertIsNotNone(result, msg="failed to get genomic criteria")
 
         # Extract all gene names mentioned in the test text
