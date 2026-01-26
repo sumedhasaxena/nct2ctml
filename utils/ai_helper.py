@@ -232,13 +232,14 @@ def get_disease_status_prompt(eligibilityCriteria, keywords):
 def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
     prompt = f"""Task: Evaluate the clinical trial criteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
     EligibilityCritieria: {inclusion_criteria}
-    GeneList: {genes}
+    Possible GeneList: {genes}
 
     Output in JSON format such that:
     1. "variant_category" must be in ["Mutation", "Copy Number Variation", "Structural Variation", "Any Variation","!Mutation", "!Copy Number Variation", "!Structural Variation", "!Any Variation"],
        where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
     2. If a specific amino acid substitution is required, return this in the "protein_change" field.
     3. In EligibilityCriteria, the term "mutant" means "Any Variation"
+    4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
 
     Example 1:
     Criteria: Subjects with advanced solid tumors harboring NTRK1 rearrangement or KRAS G12C will be included in this trial. 
@@ -289,13 +290,14 @@ def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
 def get_exclusion_genomic_criteria_prompt(genes, exclusion_criteria):
     prompt = f"""Task: Evaluate the clinical trial exclusion criteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
     EligibilityCritieria: {exclusion_criteria}
-    GeneList: {genes}
+    Possible GeneList: {genes}
 
     Output in JSON format such that:
     1. "variant_category" must be in ["!Mutation", "!Copy Number Variation", "!Structural Variation", "!Any Variation"],
        where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
     2. If a specific amino acid substitution is required, return this in the "protein_change" field.
-    3. In EligibilityCriteria, the term "mutant" means "Any Variation"
+    3. In EligibilityCriteria, the term "mutant" means "Any Variation".    
+    4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
 
     Example 1:
     Criteria: Exclude - Patients who have EGFR, ALK or ROS1 driver mutations
