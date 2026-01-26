@@ -111,26 +111,24 @@ def all_tumours(conditions_list):
     
     return all_tumors
 
-def get_all_keys(d: dict, keys=None):
+def get_all_keys(data, keys=None):
     if keys is None:
-        keys = set()        
-    for key, value in d.items():
-        keys.add(key) 
-        if isinstance(value, dict):  # If the value is a dictionary, recurse into it
-            get_all_keys(value, keys)
-        elif isinstance(value, list):  # If the value is a list, iterate through each item
-            for item in value:
-                if isinstance(item, dict):
+        keys = set()
+    
+    if isinstance(data, dict):
+        for key, value in data.items():
+            keys.add(key) 
+            if isinstance(value, dict):
+                get_all_keys(value, keys)
+            elif isinstance(value, list):
+                for item in value:
                     get_all_keys(item, keys)
+    
+    elif isinstance(data, list):
+        for item in data:
+            get_all_keys(item, keys)
+    
     return keys
-
-def get_all_keys(list_of_dicts: list) -> set:
-    all_keys = set()
-    for d in list_of_dicts:
-        if isinstance(d, dict):
-            keys = get_all_keys(d)
-            all_keys.update(keys)
-    return all_keys
 
 def split_with_find(text, keyword):
     index = text.find(keyword)
@@ -140,17 +138,22 @@ def split_with_find(text, keyword):
 
 ##Post-processing##
 def update_hugo_symbol(genomic_crit:dict):
-    # Check each key-value pair in the dictionary
-    for key, value in genomic_crit.items():
-        if key == "hugo_symbol" and value == "HER2":            
-            genomic_crit[key] = "ERBB2"  # Update the value
-            logger.info(f"Changed HER2 to ERBB2")
-        elif isinstance(value, dict):
-            update_hugo_symbol(value)  # Recurse into the dictionary
-        elif isinstance(value, list):
-            for item in value:
-                if isinstance(item, dict):
-                    update_hugo_symbol(item)  # Recurse into each item in the list
+    
+    if isinstance(genomic_crit, dict):
+        for key, value in genomic_crit.items():
+            if key == "hugo_symbol" and value == "HER2":            
+                genomic_crit[key] = "ERBB2"  # Update the value
+                logger.info(f"Changed HER2 to ERBB2")
+            elif isinstance(value, dict):
+                update_hugo_symbol(value)  # Recurse into the dictionary
+            elif isinstance(value, list):
+                for item in value:
+                    if isinstance(item, dict):
+                        update_hugo_symbol(item)  # Recurse into each item in the list
+
+    elif isinstance(genomic_crit, list):
+        for item in genomic_crit:
+            update_hugo_symbol(item)  # Recurse into each item in the list
     
     return genomic_crit
 

@@ -26,23 +26,23 @@ nct_ids = [
 "NCT06497556",
 "NCT06593522"]
 
+def test_process_nct_ids():
+    print(f"Starting processing of {len(nct_ids)} NCT IDs...")
+    # Process each ID sequentially
+    for i, nct_id in enumerate(nct_ids, start=1):
+        print(f"Processing {i}/{len(nct_ids)}: {nct_id}")
+        
+        # Run the command
+        result = subprocess.run(
+            ["python", "main.py", "map", "--nct_id", nct_id],
+            #capture_output=True,
+            text=True
+        )
+        
+        # Check if successful
+        if result.returncode == 0:
+            print(f"{nct_id} : Success")
+        else:
+            print(f"{nct_id} : Failed (error code: {result.returncode})")
+    print(f"\nFinished! Processed {len(nct_ids)} NCT IDs.")
 
-print(f"Starting processing of {len(nct_ids)} NCT IDs...")
-
-# Process each ID sequentially
-for i, nct_id in enumerate(nct_ids, start=1):
-    print(f"Processing {i}/{len(nct_ids)}: {nct_id}")
-    
-    # Run the command
-    result = subprocess.run(
-        ["python", "main.py", "map", "--nct_id", nct_id],
-        #capture_output=True,
-        text=True
-    )
-    
-    # Check if successful
-    if result.returncode == 0:
-        print(f"{nct_id} : Success")
-    else:
-        print(f"{nct_id} : Failed (error code: {result.returncode})")
-print(f"\nFinished! Processed {len(nct_ids)} NCT IDs.")

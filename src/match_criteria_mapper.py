@@ -74,7 +74,7 @@ def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_g
     #combine inclusions with a top level 'or' and exclusions with a top level 'and'
     if inclusions:
         if len(inclusions) == 1:
-            inclusion_genomic_criteria_ctml = inclusions
+            inclusion_genomic_criteria_ctml = inclusions[0]
         else:
             inclusion_genomic_criteria_ctml = {"or": inclusions}
     else:
@@ -84,7 +84,7 @@ def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_g
 
     if exclusions:
         if len(exclusions) == 1:
-            exclusion_genomic_criteria_ctml = exclusions
+            exclusion_genomic_criteria_ctml = exclusions[0]
         else:
             exclusion_genomic_criteria_ctml = {"and": exclusions}
     else:

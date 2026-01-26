@@ -6,10 +6,10 @@ import os
 # Add the src directory to the path so we can import the module
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from trial_data_helper import remove_unused_keys
+from trial_data_helper import remove_unused_keys, get_all_keys
 
 
-class TestRemoveUnusedKeys(unittest.TestCase):
+class TestTrialDataHelper(unittest.TestCase):
     
     def setUp(self):
         """Set up test data before each test method"""
@@ -621,6 +621,12 @@ class TestRemoveUnusedKeys(unittest.TestCase):
         # Check that the result is the same object as the input
         self.assertIs(result, original_data)
 
+    def test_get_all_keys_returns_all_keys(self):
+        """Test that get_all_keys returns all unique keys from a list of dictionaries"""
+        list_of_dicts = [{"genomic": {"hugo_symbol": "ROS1", "variant_category": "Structural Variation"}}, {"genomic": {"hugo_symbol": "ALK", "variant_category": "Structural Variation"}}]
+        expected_keys = {"genomic", "hugo_symbol", "variant_category"}
+        result = get_all_keys(list_of_dicts)
+        self.assertEqual(result, expected_keys)
 
 if __name__ == '__main__':
     unittest.main()
