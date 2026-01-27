@@ -98,6 +98,8 @@ def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_g
         return inclusion_exclusion_genomic_criteria_ctml
     elif inclusion_genomic_criteria_ctml:
         return inclusion_genomic_criteria_ctml
+    elif exclusion_genomic_criteria_ctml:
+        return exclusion_genomic_criteria_ctml
     return {}
     
 
