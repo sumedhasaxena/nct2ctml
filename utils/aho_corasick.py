@@ -17,13 +17,17 @@ def search_keywords_in_text(keywords:list, text):
     A.make_automaton()
     lower_text = text.lower()
 
-    for word in lower_text.split():
-        word_lower = word.lower()
-        if word_lower in A:
-            print(f"Found keyword: '{word_lower}'")
-            return True  # Exit on first match
-    print("No keywords found.")
-    return False
+    # Search through the entire text, not just split words
+    found = False
+    for end_index, (idx, keyword) in A.iter(lower_text):
+        start_index = end_index - len(keyword) + 1
+        print(f"Found keyword: '{keyword}' at position {start_index}:{end_index+1}")
+        found = True
+        break  # Exit on first match
+    
+    if not found:
+        print("No keywords found.")
+    return found
 
 def get_gene_list() -> list:
     genes = []

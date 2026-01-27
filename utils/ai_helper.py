@@ -200,7 +200,7 @@ def get_pdl1_status_prompt(eligibilityCriteria, keywords):
 
 def get_mmr_status_prompt(eligibilityCriteria, keywords):
     prompt = f"""
-        Task: From the EligibilityCriteria and TrialKeywords, return the required mismatch repair (MMR) or microsatellite (MS) status;
+        Task: From the EligibilityCriteria and TrialKeywords, return the required mismatch repair (MMR) and/or microsatellite (MS) status;
         return an empty JSON if the text does not mention MMR or MS status.
         EligibilityCriteria: {eligibilityCriteria}
         TrialKeywords: {keywords}
@@ -210,8 +210,8 @@ def get_mmr_status_prompt(eligibilityCriteria, keywords):
         "mmr_status": "value1",
         "ms_status": "value2"
         }}
-        where "value1" is in ["MMR-Proficient", "MMR-Deficient"]
-        and "value2" is in ['MSI-H', 'MSI-L', 'MSS'].
+        where "value1" is in ["MMR-Proficient", "MMR-Deficient",'!MMR-Proficient', '!MMR-Deficient']. 
+        and "value2" is in ['MSI-H', 'MSI-L', 'MSS','!MSI-H', '!MSI-L'].
         """
     return cleandoc(prompt)
 

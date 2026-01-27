@@ -158,12 +158,12 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
     
     if 'mmr_status' in mmr_ms_status_dict:
         mmr_value = mmr_ms_status_dict['mmr_status']
-        if mmr_value in ['MMR-Proficient', 'MMR-Deficient']:
+        if mmr_value in ['MMR-Proficient', 'MMR-Deficient','!MMR-Proficient', '!MMR-Deficient']:
             filtered_mmr_ms_status_dict['mmr_status'] = mmr_value
         
     if 'ms_status' in mmr_ms_status_dict:
         ms_value = mmr_ms_status_dict['ms_status']
-        if ms_value in ['MSI-H', 'MSI-L', 'MSS']:
+        if ms_value in ['MSI-H', 'MSI-L', 'MSS', '!MSI-H', '!MSI-L']:
             filtered_mmr_ms_status_dict['ms_status'] = ms_value
     
     clinical_critera.update(filtered_mmr_ms_status_dict)
