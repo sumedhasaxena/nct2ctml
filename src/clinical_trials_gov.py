@@ -356,7 +356,7 @@ def split_inclusion_exclusion_criteria(trial_data: dict) -> tuple[str, str]:
     Splits the eligibility criteria into inclusion and exclusion parts
     """
     eligibility_criteria = trial_data['protocolSection']['eligibilityModule']['eligibilityCriteria']
-    inclusion_criteria, exclusion_criteria = tdh.split_with_find(eligibility_criteria, "Exclusion Criteria")    
+    inclusion_criteria, exclusion_criteria = tdh.split_with_find(eligibility_criteria, "exclusion criteria")    
     return inclusion_criteria, exclusion_criteria
 
 

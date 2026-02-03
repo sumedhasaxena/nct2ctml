@@ -6,7 +6,7 @@ import os
 # Add the src directory to the path so we can import the module
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from trial_data_helper import remove_unused_keys, get_all_keys
+from trial_data_helper import remove_unused_keys, get_all_keys, split_with_find
 
 
 class TestTrialDataHelper(unittest.TestCase):
@@ -627,6 +627,15 @@ class TestTrialDataHelper(unittest.TestCase):
         expected_keys = {"genomic", "hugo_symbol", "variant_category"}
         result = get_all_keys(list_of_dicts)
         self.assertEqual(result, expected_keys)
+
+    def test_split_with_find_splits_correctly(self):
+        """Test that split_with_find splits a string correctly based on a substring"""
+        input_string = "Inclusion criteria:Minimum body weight of 35 kg. Exclusion criteria: HER2 mutation"
+        substring = "exclusion criteria"
+        expected_output = ("Inclusion criteria:Minimum body weight of 35 kg. ", ": HER2 mutation")
+        result = split_with_find(input_string, substring)
+        print(result)
+        self.assertEqual(result, expected_output)
 
 if __name__ == '__main__':
     unittest.main()
