@@ -230,17 +230,20 @@ def get_disease_status_prompt(eligibilityCriteria, keywords):
 
 # a lot of trial criteria mention exclusion too in inclusion criteria hence the prompt supplies both inclusion and exclusion instructions
 def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
-    prompt = f"""Task: Evaluate the clinical trial criteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
+    prompt = f"""Task: Evaluate the clinical trial criteria to return a JSON-formatted eligibility criteria involving genetic variants
+      in any genes such as those in the GeneList.
     EligibilityCritieria: {inclusion_criteria}
     Possible GeneList: {genes}
 
     Output in JSON format such that:
     1. "variant_category" must be in ["Mutation", "Copy Number Variation", "Structural Variation", "Any Variation","!Mutation", "!Copy Number Variation", "!Structural Variation", "!Any Variation"],
        where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
-    2. If a specific amino acid substitution is required, return this in the "protein_change" field.
-    3. In EligibilityCriteria, the term "mutant" means "Any Variation"
+    2. If a specific amino acid substitution is explicitly mentioned for point mutations, return it in the "protein_change" field, with  format "p.XnnY" (e.g., p.G12C).
+    3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
-
+    
+    *CRITICAL RULE:** If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely.**
+    Only include genetic states that are direct reasons for inclusion (e.g., "patients *with* a BRAF V600E mutation are included").
     Example 1:
     Criteria: Subjects with advanced solid tumors harboring NTRK1 rearrangement or KRAS G12C will be included in this trial. 
     Output:
@@ -261,7 +264,8 @@ def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
     ]
 
     Example 2:
-    Criteria: Any solid tumor type with MET amplification and negative test results for epidermal growth factor receptor (EGFR) and proto-oncogene1 (ROS1) actionable genomic alterations based on analysis of tumor tissue.
+    Criteria: Any solid tumor type with MET amplification and negative test results for epidermal growth factor receptor (EGFR) and
+      proto-oncogene1 (ROS1) actionable genomic alterations based on analysis of tumor tissue.
     Output:
     [
         {{
@@ -284,20 +288,24 @@ def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
         }}
     ]
     """
-    json_schema = None # Define JSON schema if needed. It will be injected in teh request body to LLM
+    json_schema = None # Define JSON schema if needed. It will be injected in the request body to LLM
     return json_schema, cleandoc(prompt)
 
 def get_exclusion_genomic_criteria_prompt(genes, exclusion_criteria):
-    prompt = f"""Task: Evaluate the clinical trial exclusion criteria to return a JSON-formatted eligibility criteria involving genetic variants in any genes such as those in the GeneList.
+    prompt = f"""Task: Evaluate the clinical trial exclusion criteria to return a JSON-formatted eligibility criteria involving genetic 
+    variants in any genes such as those in the GeneList.
     EligibilityCritieria: {exclusion_criteria}
     Possible GeneList: {genes}
 
     Output in JSON format such that:
     1. "variant_category" must be in ["!Mutation", "!Copy Number Variation", "!Structural Variation", "!Any Variation"],
        where "Mutation" is defined narrowly to include only single nucleotide variants (SNVs) and indels.
-    2. If a specific amino acid substitution is required, return this in the "protein_change" field.
-    3. In EligibilityCriteria, the term "mutant" means "Any Variation".    
+    2. If a specific amino acid substitution is explicitly mentioned mentioned for point mutations, return it in the "protein_change" field, with  format "p.XnnY" (e.g., p.G12C).
+    3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.  
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
+    
+    *CRITICAL RULE:** If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely.**
+    Only include genetic states that are direct reasons for exclusion (e.g., "patients *with* a BRAF V600E mutation are excluded").
 
     Example 1:
     Criteria: Exclude - Patients who have EGFR, ALK or ROS1 driver mutations
@@ -324,7 +332,7 @@ def get_exclusion_genomic_criteria_prompt(genes, exclusion_criteria):
     ]
 
     """
-    json_schema = None # Define JSON schema if needed. It will be injected in teh request body to LLM
+    json_schema = None # Define JSON schema if needed. It will be injected in the request body to LLM
     return json_schema, cleandoc(prompt)
 
 def safe_get(dict_data, keys):
