@@ -110,7 +110,7 @@ chmod +x sync_trials.sh
   ```
 - **Run a specific test:**
   ```bash
-  python -m unittest tests.test_your_module.TestGetGeneInfo.test_get_gene_info -v
+  python -m unittest tests.test_ai_helper.TestAITasks.test_get_genomic_criteria -v
   ```
 
 ---
