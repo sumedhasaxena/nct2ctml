@@ -171,6 +171,11 @@ treatment_list:
           - Recurrent
           - Refractory
           oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - genomic:
+      - or:
+        - genomic:
+            hugo_symbol: TP53
+            variant_category: Mutation
+        - genomic:
           hugo_symbol: TP53
-          variant_category: Mutation
+          variant_category: Copy Number Variation
+

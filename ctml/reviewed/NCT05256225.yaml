@@ -7,16 +7,16 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Radiation: High-Dose-Rate Vaginal Cuff Brachytherapy'
-  - drug_name: 'Procedure: Multigated Acquisition Scan'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Procedure: Computed Tomography'
-  - drug_name: 'Drug: Hyaluronidase-zzxf/Pertuzumab/Trastuzumab'
-  - drug_name: 'Procedure: Echocardiography Test'
-  - drug_name: 'Drug: Trastuzumab/Hyaluronidase-oysk'
-  - drug_name: 'Procedure: Biospecimen Collection'
   - drug_name: 'Other: Survey Administration'
+  - drug_name: 'Procedure: Echocardiography Test'
+  - drug_name: 'Procedure: Biospecimen Collection'
+  - drug_name: 'Drug: Trastuzumab/Hyaluronidase-oysk'
+  - drug_name: 'Radiation: High-Dose-Rate Vaginal Cuff Brachytherapy'
+  - drug_name: 'Procedure: Computed Tomography'
+  - drug_name: 'Procedure: Multigated Acquisition Scan'
+  - drug_name: 'Drug: Hyaluronidase-zzxf/Pertuzumab/Trastuzumab'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Paclitaxel'
 long_title: A Phase II/III Study of Paclitaxel/Carboplatin Alone or Combined With
   Either Trastuzumab and Hyaluronidase-oysk (HERCEPTIN HYLECTA) or Pertuzumab, Trastuzumab,
   and Hyaluronidase-zzxf (PHESGO) in HER2 Positive, Stage I-IV Endometrial Serous
@@ -355,9 +355,11 @@ treatment_list:
             age_numerical: '>=18'
             gender: Female
             her2_status: Positive
+            mmr_status: MMR-Proficient
             disease_status:
-            - Untreated
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+            - Localized
+            - Locally Advanced
+            - Metastatic
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Copy Number Variation

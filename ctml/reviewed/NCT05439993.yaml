@@ -163,4 +163,4 @@ treatment_list:
             variant_category: Copy Number Variation
         - genomic:
             hugo_symbol: MET
-            variant_category: Mutation
+            variant_category: Structural Variation

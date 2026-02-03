@@ -140,4 +140,8 @@ treatment_list:
       - or:
         - genomic:
             hugo_symbol: TP53
+            variant_category: Copy Number Variation
+            cnv_call: Homozygous Deletion
+        - genomic:
+            hugo_symbol: TP53
             variant_category: Mutation

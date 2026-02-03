@@ -9,8 +9,8 @@ drug_list:
   drug:
   - drug_name: 'Drug: Abemaciclib'
   - drug_name: 'Drug: Alpelisib'
-  - drug_name: 'Drug: Elacestrant'
   - drug_name: 'Drug: Everolimus'
+  - drug_name: 'Drug: Elacestrant'
   - drug_name: 'Drug: Ribociclib'
   - drug_name: 'Drug: Palbociclib'
   - drug_name: 'Drug: Capivasertib'
@@ -384,41 +384,52 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Inflammatory Breast Cancer
           - clinical:
               oncotree_primary_diagnosis: Breast Sarcoma
           - clinical:
-              oncotree_primary_diagnosis: Metaplastic Breast Cancer
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
           - clinical:
-              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+              oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
           - clinical:
               oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
           - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+              oncotree_primary_diagnosis: Breast Fibroepithelial Neoplasms
           - clinical:
-              oncotree_primary_diagnosis: Inflammatory Breast Cancer
+              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Metaplastic Breast Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
         - clinical:
             age_numerical: '>=18'
             her2_status: Negative
             er_status: Positive
             disease_status:
             - Metastatic
-            - Advanced
       - and:
         - or:
           - genomic:
               hugo_symbol: PIK3CA
               variant_category: Mutation
           - genomic:
+              hugo_symbol: PIK3CA
+              variant_category: Any Variation
+          - genomic:
               hugo_symbol: AKT1
-              variant_category: Mutation
+              variant_category: Any Variation
           - genomic:
               hugo_symbol: PTEN
-              variant_category: Mutation
+              variant_category: Any Variation
         - and:
           - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
+          - genomic:
               hugo_symbol: BRCA1
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'
           - genomic:
               hugo_symbol: BRCA2
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'

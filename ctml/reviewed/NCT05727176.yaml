@@ -130,10 +130,9 @@ treatment_list:
           disease_status:
           - Locally Advanced
           - Metastatic
+          - Advanced
           - Unresectable
           oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile Duct
-      - and:
-        - or:
-          - genomic:
-              hugo_symbol: FGFR2
-              variant_category: Structural Variation
+      - genomic:
+          hugo_symbol: FGFR2
+          variant_category: Structural Variation

@@ -131,17 +131,9 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-            - Advanced
-            - Recurrent
-            - Metastatic
-      - or:
-        - clinical:          
-            oncotree_primary_diagnosis: _SOLID_
-        - clinical:          
-            oncotree_primary_diagnosis: Lymphoid Neoplasm
-
-
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Advanced
+        - Refractory
+        oncotree_primary_diagnosis: _SOLID_

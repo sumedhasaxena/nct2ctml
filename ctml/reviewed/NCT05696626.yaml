@@ -181,11 +181,13 @@ treatment_list:
           - Advanced
           oncotree_primary_diagnosis: Invasive Breast Carcinoma
       - and:
-        - or:
-          - genomic:
-              hugo_symbol: ESR1
-              variant_category: Mutation
+        - genomic:
+            hugo_symbol: ESR1
+            variant_category: Mutation
         - and:
           - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
+          - genomic:
               hugo_symbol: RB1
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'

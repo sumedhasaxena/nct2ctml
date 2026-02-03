@@ -174,33 +174,24 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Inflammatory Myofibroblastic Bladder Tumor
+              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Adenocarcinoma
           - clinical:
               oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Urachal Carcinoma
+              oncotree_primary_diagnosis: Small Cell Bladder Cancer
           - clinical:
               oncotree_primary_diagnosis: Inverted Urothelial Papilloma
           - clinical:
               oncotree_primary_diagnosis: Urothelial Papilloma
           - clinical:
-              oncotree_primary_diagnosis: Bladder Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Urinary Bladder
-          - clinical:
-              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
-          - clinical:
               oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Small Cell Bladder Cancer
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Locally Advanced
             - Metastatic
-      - or:
-        - genomic:
-            hugo_symbol: FGFR3
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: FGFR3
+          variant_category: Any Variation

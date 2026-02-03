@@ -8,9 +8,9 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Placebo oral tablet'
+  - drug_name: 'Drug: Tazemetostat'
   - drug_name: 'Combination Product: Lenalidomide'
   - drug_name: 'Combination Product: Rituximab'
-  - drug_name: 'Drug: Tazemetostat'
 long_title: 'Symphony-1: A Phase 1b/3 Double-Blind, Randomized, Active-Controlled,
   3-Stage, Biomarker Adaptive Study Of Tazemetostat Or Placebo In Combination With
   Lenalidomide Plus Rituximab In Subjects With Relapsed/Refractory Follicular Lymphoma'
@@ -349,9 +349,9 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           disease_status:
+          - Recurrent
           - Refractory
           oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - or:
-        - genomic:
-            hugo_symbol: EZH2
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: EZH2
+          variant_category: Mutation

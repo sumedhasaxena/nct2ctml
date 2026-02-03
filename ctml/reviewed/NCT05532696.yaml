@@ -103,7 +103,6 @@ treatment_list:
           - Advanced
           - Metastatic
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Mutation

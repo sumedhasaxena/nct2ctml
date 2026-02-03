@@ -8,12 +8,12 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Volrustomig'
+  - drug_name: 'Drug: T-DXd'
   - drug_name: 'Biological: Durvalumab'
   - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Volrustomig'
   - drug_name: 'Drug: Rilvegostomig'
-  - drug_name: 'Drug: T-DXd'
 long_title: A Phase Ib Multicenter, Open-label Study to Evaluate the Safety and Tolerability
   of Trastuzumab Deruxtecan (T-DXd) and Immunotherapy Agents With and Without Chemotherapy
   Agents in First-line Treatment of Patients With Advanced or Metastatic Non-squamous
@@ -295,13 +295,16 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=18'
+          her2_status: Positive
           disease_status:
-          - Unresectable
           - Locally Advanced
           - Metastatic
-          - Recurrent
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Copy Number Variation'
+            cnv_call: High Amplification
         - genomic:
             hugo_symbol: ERBB2
             variant_category: '!Mutation'

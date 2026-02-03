@@ -160,14 +160,15 @@ treatment_list:
           disease_status:
           - Metastatic
           - Recurrent
+          - Advanced
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:
             hugo_symbol: EGFR
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ALK
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ROS1
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'

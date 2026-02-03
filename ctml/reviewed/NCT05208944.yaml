@@ -296,6 +296,8 @@ treatment_list:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Locally Advanced
         - Metastatic
+        - Advanced
+        - Recurrent
+        - Refractory
         oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

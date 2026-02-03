@@ -148,7 +148,8 @@ treatment_list:
           - Metastatic
           - Untreated
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-      - or:
+      - and:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
+            protein_change: p.G12C

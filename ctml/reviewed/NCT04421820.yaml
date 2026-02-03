@@ -283,31 +283,36 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
-                Duct
+              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
           - clinical:
-              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
-                the Esophagus/Stomach
-          - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
+              oncotree_primary_diagnosis: Tubular Adenoma of the Colon
           - clinical:
               oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+              oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
+                Duct
           - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
+              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+          - clinical:
+              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
+                the Esophagus/Stomach
         - clinical:
             age_numerical: '>=18'
+            ms_status: MSI-H
             disease_status:
             - Metastatic
             - Unresectable
+            - Locally Advanced
       - and:
         - genomic:
             hugo_symbol: BRAF
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: DPYD
+            variant_category: '!Any Variation'

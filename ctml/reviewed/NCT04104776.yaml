@@ -251,6 +251,15 @@ treatment_list:
         level_description: 'Drug: Tulmimetostat'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: ARID1A
+                variant_category: Mutation          
     - arm_code: Phase 2 Cohort M2
       arm_internal_id: 2
       arm_description: "Tulmimetostat will be dosed once per day orally in 28 day\
@@ -262,6 +271,15 @@ treatment_list:
         level_description: 'Drug: Tulmimetostat'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: ARID1A
+                variant_category: Mutation  
     - arm_code: Phase 2 Cohort M3
       arm_internal_id: 3
       arm_description: "Tulmimetostat will be dosed once per day orally in 28 day\
@@ -273,6 +291,15 @@ treatment_list:
         level_description: 'Drug: Tulmimetostat'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: ARID1A
+                variant_category: Mutation  
     - arm_code: Phase 2 Cohort M4
       arm_internal_id: 4
       arm_description: "Tulmimetostat will be dosed once per day orally in 28 day\
@@ -286,6 +313,15 @@ treatment_list:
         level_description: 'Drug: Tulmimetostat'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EZH2
+                variant_category: Mutation 
     - arm_code: Phase 2 Cohort M5
       arm_internal_id: 5
       arm_description: "Tulmimetostat will be dosed once per day orally in 28 day\
@@ -297,6 +333,15 @@ treatment_list:
         level_description: 'Drug: Tulmimetostat'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: BAP1
+                variant_category: Copy Number Variation 
     - arm_code: Phase 2 Cohort M6
       arm_internal_id: 6
       arm_description: "Tulmimetostat will be dosed once per day orally in 28 day\
@@ -319,6 +364,15 @@ treatment_list:
         level_description: 'Drug: Tulmimetostat'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Endometrioid Ovarian Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: ARID1A
+                variant_category: '!Any Variation'
     - arm_code: Phase 1 Cohort M8
       arm_internal_id: 8
       arm_description: Tulmimetostat will be dosed once per day orally in combination
@@ -330,6 +384,10 @@ treatment_list:
         level_description: 'Drug: Tulmimetostat'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
     - arm_code: Phase 2 Cohort M8
       arm_internal_id: 9
       arm_description: "Tulmimetostat will be dosed once per day orally in 28-day\
@@ -345,27 +403,7 @@ treatment_list:
         level_description: 'Drug: Enzalutamide'
         level_internal_id: 1
         level_suspended: N
-    match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          - Advanced
-          - Recurrent
-          - Refractory
-          oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: ARID1A
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ARID1A
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: EZH2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: BAP1
-            variant_category: Any Variation
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_

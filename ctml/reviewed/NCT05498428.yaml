@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Low Molecular Weight Heparin (LMWH)'
   - drug_name: 'Drug: Direct Oral Anticoagulant (DOAC)'
   - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Amivantamab'
-  - drug_name: 'Drug: Low Molecular Weight Heparin (LMWH)'
   - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Lazertinib'
 long_title: A Phase 2, Open-Label, Parallel Cohort Study of Subcutaneous Amivantamab
@@ -381,7 +381,19 @@ treatment_list:
           - Metastatic
           - Unresectable
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-      - or:
+      - and:
+        - or:
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: Mutation
+              protein_change: p.L858R
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: Mutation
         - genomic:
-            hugo_symbol: EGFR
-            variant_category: Mutation
+            hugo_symbol: F5
+            variant_category: '!Mutation'
+            protein_change: p.R506Q

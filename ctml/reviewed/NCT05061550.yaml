@@ -8,17 +8,17 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: AZD0171'
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Pemetrexed/Cisplatin'
-  - drug_name: 'Drug: Durvalumab'
-  - drug_name: 'Drug: Dato-DXd'
-  - drug_name: 'Drug: Volrustomig'
-  - drug_name: 'Drug: Pemetrexed/Carboplatin'
   - drug_name: 'Drug: Monalizumab'
-  - drug_name: 'Drug: Carboplatin/Paclitaxel'
-  - drug_name: 'Drug: Oleclumab'
   - drug_name: 'Drug: Rilvegostomig'
+  - drug_name: 'Drug: Pemetrexed/Carboplatin'
+  - drug_name: 'Drug: Oleclumab'
+  - drug_name: 'Drug: Durvalumab'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Volrustomig'
+  - drug_name: 'Drug: Dato-DXd'
+  - drug_name: 'Drug: Pemetrexed/Cisplatin'
+  - drug_name: 'Drug: Carboplatin/Paclitaxel'
 long_title: A Phase II, Open-label, Multicentre, Randomised Study of Neoadjuvant and
   Adjuvant Treatment in Patients With Resectable, Early-stage (II to IIIB) Non-small
   Cell Lung Cancer (NeoCOAST-2)
@@ -341,20 +341,16 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           disease_status:
+          - Untreated
+          - Localized
+          - Locally Advanced
           - Early Stage
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
-        - or:
-          - genomic:
+        - genomic:
               hugo_symbol: EGFR
-              variant_category: Mutation
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: Structural Variation
-        - and:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: '!Structural Variation'
+              variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ALK
+            variant_category: '!Any Variation'
+          

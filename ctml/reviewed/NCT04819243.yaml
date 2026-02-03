@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Pabociclib, Endocrine(or ET + CDK4/6 inhibitors), Talazoparib,'
   - drug_name: 'Drug: Pabociclib, Endocrine(or ET + CDK4/6 inhibitors), Talazoparib,
       Atezolizumab'
-  - drug_name: 'Drug: Pabociclib, Endocrine(or ET + CDK4/6 inhibitors), Talazoparib,'
 long_title: Randomized Phase II Study of Talazoparib Versus Talazoparib Plus Atezolizumab
   After Palbociclib Combination Endocrine Therapy for Patients with Premenopausal
   HR+/HER2- Metastatic Breast Cancer Harboring HRD Scar
@@ -273,14 +273,16 @@ treatment_list:
           pr_status: Positive
           disease_status:
           - Metastatic
-          - Advanced
           - Locally Advanced
-          - Recurrent
           oncotree_primary_diagnosis: Invasive Breast Carcinoma
-      - or:
+      - and:
+        - or:
+          - genomic:
+              hugo_symbol: BRCA1
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: BRCA2
+              variant_category: Mutation
         - genomic:
-            hugo_symbol: BRCA1
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: BRCA2
-            variant_category: Mutation
+            hugo_symbol: ERBB2
+            variant_category: '!Copy Number Variation'

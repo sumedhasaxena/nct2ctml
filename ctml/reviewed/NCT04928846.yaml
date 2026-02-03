@@ -170,20 +170,20 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Locally Advanced
-            - Metastatic
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:
-            hugo_symbol: EGFR
-            variant_category: '!Mutation'
+            hugo_symbol: MET
+            variant_category: Copy Number Variation
+        - and:
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: '!Any Variation'

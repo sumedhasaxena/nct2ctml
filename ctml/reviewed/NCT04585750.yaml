@@ -247,18 +247,22 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=12'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: _SOLID_
       - and:
         - or:
-          - genomic:
-              hugo_symbol: TP53
-              variant_category: Mutation
-        - and:
-          - genomic:
-              hugo_symbol: KRAS
-              variant_category: '!Mutation'
+          - clinical:
+              oncotree_primary_diagnosis: _SOLID_
+          - clinical:
+              oncotree_primary_diagnosis: _LIQUID_
+        - clinical:
+            age_numerical: '>=12'
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+      - and:
+        - genomic:
+            hugo_symbol: TP53
+            variant_category: Mutation
+            protein_change: p.Y220C
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: '!Mutation'

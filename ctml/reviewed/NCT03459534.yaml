@@ -173,12 +173,16 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Refractory
-          - Localized
           - Early Stage
           oncotree_primary_diagnosis: Myeloid Neoplasm
       - and:
-        - or: []
-        - and:
-          - genomic:
-              hugo_symbol: BCR-ABL1
-              variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: BCR
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: ABL1
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: ABL1
+            variant_category: '!Mutation'
+            protein_change: p.T315I

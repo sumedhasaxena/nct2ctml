@@ -9,34 +9,34 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Camonsertib"
-            },
-            {
-                "drug_name": "Drug: Divarasib"
-            },
-            {
-                "drug_name": "Drug: Alectinib"
-            },
-            {
                 "drug_name": "Drug: Pralsetinib"
             },
             {
-                "drug_name": "Drug: Entrectinib"
+                "drug_name": "Drug: Camonsertib"
             },
             {
                 "drug_name": "Drug: Atezolizumab"
             },
             {
-                "drug_name": "Drug: Ipatasertib"
+                "drug_name": "Drug: Trastuzumab emtansine"
+            },
+            {
+                "drug_name": "Drug: Entrectinib"
+            },
+            {
+                "drug_name": "Drug: Belvarafenib"
+            },
+            {
+                "drug_name": "Drug: Divarasib"
             },
             {
                 "drug_name": "Drug: Inavolisib"
             },
             {
-                "drug_name": "Drug: Trastuzumab emtansine"
+                "drug_name": "Drug: Alectinib"
             },
             {
-                "drug_name": "Drug: Belvarafenib"
+                "drug_name": "Drug: Ipatasertib"
             }
         ]
     },

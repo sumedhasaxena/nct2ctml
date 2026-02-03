@@ -117,9 +117,9 @@ treatment_list:
               hugo_symbol: KIT
               variant_category: Mutation
           - genomic:
-              hugo_symbol: "PDGFR\u03B1"
+              hugo_symbol: PDGFRA
               variant_category: Mutation
-        - and:
-          - genomic:
-              hugo_symbol: "PDGFR\u03B1"
-              variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: PDGFRA
+            variant_category: '!Mutation'
+            protein_change: p.D842V

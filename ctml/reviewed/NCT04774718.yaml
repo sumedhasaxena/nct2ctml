@@ -137,14 +137,20 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Inflammatory Myofibroblastic Lung Tumor
+              oncotree_primary_diagnosis: Miscellaneous Neuroepithelial Tumor
           - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+              oncotree_primary_diagnosis: Diffuse Glioma
+          - clinical:
+              oncotree_primary_diagnosis: Embryonal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Pineal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Miscellaneous Brain Tumor
         - clinical:
             disease_status:
             - Recurrent
             - Refractory
-      - or:
+      - and:
         - genomic:
             hugo_symbol: ALK
             variant_category: Structural Variation

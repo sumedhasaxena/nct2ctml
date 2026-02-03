@@ -121,7 +121,7 @@
                                         "or": [
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                                 }
                                             },
                                             {
@@ -131,7 +131,12 @@
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                    "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
                                                 }
                                             }
                                         ]
@@ -143,7 +148,8 @@
                                                 "Localized",
                                                 "Locally Advanced",
                                                 "Metastatic",
-                                                "Untreated"
+                                                "Untreated",
+                                                "Early Stage"
                                             ]
                                         }
                                     }
@@ -154,7 +160,45 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation"
+                                            "variant_category": "Mutation",
+                                            "variant_classification": "In_Frame_Del",
+                                            "exon": 19
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Mutation",
+                                            "variant_classification": "In_Frame_Ins",
+                                            "exon": 20
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.L858R"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.T790M"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.G719X"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.S768I"
                                         }
                                     }
                                 ]

@@ -163,14 +163,22 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-          - clinical:
               oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
         - clinical:
             age_numerical: '>=30'
             disease_status:
             - Early Stage
       - or:
         - genomic:
+          hugo_symbol: EGFR
+          variant_category: Mutation
+          variant_classification: 'In_Frame_Del'
+          exon: 19
+        - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
+            protein_change: p.L858R

@@ -110,13 +110,23 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=20'
+          disease_status:
+          - Metastatic
+          - Advanced
           oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
       - and:
-        - and:
-          - genomic:
-              hugo_symbol: KIT
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: PDGFRA
-              variant_category: '!Mutation'
-       
+        - genomic:
+            hugo_symbol: KIT
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: PDGFRA
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: KIT
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: PDGFRA
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: NTRK1
+            variant_category: '!Structural Variation'

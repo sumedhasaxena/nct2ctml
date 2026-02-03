@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: carboplatin'
-  - drug_name: 'Drug: leucovorin'
-  - drug_name: 'Drug: MK-1084'
-  - drug_name: 'Biological: cetuximab'
-  - drug_name: 'Drug: pemetrexed'
-  - drug_name: 'Drug: 5-fluorouracil'
   - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: leucovorin'
+  - drug_name: 'Drug: 5-fluorouracil'
+  - drug_name: 'Drug: carboplatin'
+  - drug_name: 'Drug: pemetrexed'
+  - drug_name: 'Drug: MK-1084'
   - drug_name: 'Drug: oxaliplatin'
+  - drug_name: 'Biological: cetuximab'
 long_title: A Phase 1, Open-label, Multicenter Study to Assess Safety, Tolerability,
   PK, and Efficacy of MK-1084 as Monotherapy and as Part of Various Combination Therapies
   in Participants With KRAS G12C Mutant Advanced Solid Tumors
@@ -240,13 +240,15 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=18'
+          pdl1_status: High
           disease_status:
+          - Untreated
           - Locally Advanced
           - Metastatic
+          - Advanced
           - Unresectable
-          - Untreated
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: KRAS
+          variant_category: Mutation
+          protein_change: p.G12C

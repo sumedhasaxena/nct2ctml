@@ -124,14 +124,10 @@
                                 }
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "Mutation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "ERBB2",
+                                    "variant_category": "Mutation"
+                                }
                             }
                         ]
                     }

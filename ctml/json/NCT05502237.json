@@ -4,33 +4,33 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2022-08-16",
     "study_start_date": "2022-10-12",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Pembrolizumab"
-            },
-            {
-                "drug_name": "Drug: Pemetrexed"
-            },
-            {
                 "drug_name": "Drug: Carboplatin"
-            },
-            {
-                "drug_name": "Drug: Nab-paclitaxel"
-            },
-            {
-                "drug_name": "Drug: Domvanalimab"
-            },
-            {
-                "drug_name": "Drug: Paclitaxel"
             },
             {
                 "drug_name": "Drug: Cisplatin"
             },
             {
+                "drug_name": "Drug: Nab-paclitaxel"
+            },
+            {
+                "drug_name": "Drug: Paclitaxel"
+            },
+            {
+                "drug_name": "Drug: Domvanalimab"
+            },
+            {
+                "drug_name": "Drug: Pemetrexed"
+            },
+            {
                 "drug_name": "Drug: Zimberelimab"
+            },
+            {
+                "drug_name": "Drug: Pembrolizumab"
             }
         ]
     },
@@ -281,49 +281,49 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "EGFR",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "ALK",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "ROS1",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "NTRK1",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "NTRK2",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "NTRK3",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "BRAF",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "RET",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     }
                                 ]

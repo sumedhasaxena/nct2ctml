@@ -149,11 +149,13 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=12'
+          her2_status: '!Positive'
+          er_status: '!Positive'
+          pr_status: '!Positive'
           disease_status:
           - Locally Advanced
           - Metastatic
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: ROS1
-            variant_category: Structural Variation
+      - genomic:
+          hugo_symbol: ROS1
+          variant_category: Structural Variation

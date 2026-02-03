@@ -140,15 +140,11 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Lymphoid Neoplasm
-          - clinical:
-              oncotree_primary_diagnosis: Lymphoid Atypical
-        - clinical:
-            age_numerical: '>=18'
-      - or:
-        - genomic:
-            hugo_symbol: TP53
-            variant_category: Copy Number Variation
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Refractory
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
+      - genomic:
+          hugo_symbol: TP53
+          variant_category: Copy Number Variation

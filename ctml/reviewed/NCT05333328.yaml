@@ -79,25 +79,25 @@ treatment_list:
     - and:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
+        - clinical:
             oncotree_primary_diagnosis: Inflammatory Breast Cancer
         - clinical:
             oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
         - clinical:
-            oncotree_primary_diagnosis: Breast Sarcoma
+            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
         - clinical:
             oncotree_primary_diagnosis: Metaplastic Breast Cancer
         - clinical:
+            oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
+        - clinical:
+            oncotree_primary_diagnosis: Breast Sarcoma
+        - clinical:
             oncotree_primary_diagnosis: Invasive Breast Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Breast Fibroepithelial Neoplasms
-        - clinical:
-            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
         - clinical:
             oncotree_primary_diagnosis: Breast Neoplasm, NOS
         - clinical:
-            oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
-        - clinical:
-            oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
+            oncotree_primary_diagnosis: Breast Fibroepithelial Neoplasms
       - clinical:
           age_numerical: '>=20'
           gender: Female
@@ -105,4 +105,4 @@ treatment_list:
           er_status: Positive
           disease_status:
           - Localized
-          - Locally Advanced
+          - Early Stage

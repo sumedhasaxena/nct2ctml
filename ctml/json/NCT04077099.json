@@ -110,23 +110,18 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Untreated",
                                         "Advanced",
-                                        "Metastatic",
-                                        "Unresectable"
+                                        "Unresectable",
+                                        "Metastatic"
                                     ],
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "MET",
-                                            "variant_category": "Mutation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "MET",
+                                    "variant_category": "Any Variation"
+                                }
                             }
                         ]
                     }

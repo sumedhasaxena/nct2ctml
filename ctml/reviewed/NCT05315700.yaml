@@ -3,7 +3,7 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2022-04-07'
 study_start_date: '2022-03-10'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
@@ -158,7 +158,10 @@ treatment_list:
           - genomic:
               hugo_symbol: ERBB2
               variant_category: Mutation
-        - and:
           - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Mutation'
+              hugo_symbol: ERBB2
+              variant_category: Copy Number Variation
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: '!Mutation'
+            protein_change: p.T790M

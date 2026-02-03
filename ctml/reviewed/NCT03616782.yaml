@@ -157,5 +157,8 @@ treatment_list:
           age_numerical: '>=19'
           disease_status:
           - Advanced
-          oncotree_primary_diagnosis: Mantle Cell Lymphoma
-     
+          - Refractory
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
+      - genomic:
+          hugo_symbol: CCND1
+          variant_category: Structural Variation

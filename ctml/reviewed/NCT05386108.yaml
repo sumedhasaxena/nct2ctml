@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Elacestrant'
   - drug_name: 'Drug: Abemaciclib'
+  - drug_name: 'Drug: Elacestrant'
 long_title: An Open-label Multicenter Phase 1b-2 Study of Elacestrant in Combination
   With Abemaciclib in Women and Men With Brain Metastasis From Estrogen Receptor Positive,
   HER-2 Negative Breast Cancer
@@ -297,10 +297,6 @@ treatment_list:
           - Metastatic
           - Advanced
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: ESR1
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: '!Any Variation'

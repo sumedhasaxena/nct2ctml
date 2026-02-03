@@ -215,13 +215,27 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Advanced
+            - Metastatic
+            - Refractory
       - or:
         - genomic:
             hugo_symbol: EGFR
+            variant_category: Any Variation
+        - genomic:
+            hugo_symbol: EGFR
             variant_category: Mutation
+            protein_change: p.C797S
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: Mutation
+            protein_change: p.T790M

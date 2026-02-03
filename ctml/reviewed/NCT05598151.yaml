@@ -107,7 +107,6 @@ treatment_list:
           disease_status:
           - Advanced
           - Metastatic
-          - Untreated
           oncotree_primary_diagnosis: _SOLID_
       - or:
         - genomic:

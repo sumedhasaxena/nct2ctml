@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: DF1001'
-  - drug_name: 'Drug: Nab paclitaxel'
-  - drug_name: 'Drug: Sacituzumab Govitecan-hziy'
   - drug_name: 'Drug: Nivolumab'
+  - drug_name: 'Drug: DF1001'
+  - drug_name: 'Drug: Sacituzumab Govitecan-hziy'
+  - drug_name: 'Drug: Nab paclitaxel'
 long_title: A Phase I/II, First-In-Human, Multi-Part, Open-Label, Multiple-Ascending
   Dose Study to Investigate the Safety, Tolerability, Pharmacokinetics, Biological,
   and Clinical Activity of DF1001 in Patients with Locally Advanced or Metastatic
@@ -260,6 +260,13 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Any Variation' 
     - arm_code: Monotherapy DF1001 Safety/PK/PD Expansion
       arm_internal_id: 1
       arm_description: Expansion cohorts of monotherapy DF1001 in multiple dose levels
@@ -294,6 +301,14 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            her2_status: Negative
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: '!Any Variation'      
     - arm_code: Monotherapy DF1001 Expansion in Cancers with Erbb2 Amplification
       arm_internal_id: 4
       arm_description: Monotherapy expansion cohort enrolling up to 40 patients with
@@ -305,6 +320,14 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: _SOLID_
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Copy Number Variation' 
+            cnv_call: 'High Amplification'
     - arm_code: Combination Therapy with DF1001 and Nivolumab
       arm_internal_id: 5
       arm_description: Combination dose escalation of DF1001 in combination with nivolumab
@@ -319,6 +342,13 @@ treatment_list:
         level_description: 'Drug: Nivolumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: __SOLID__
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Any Variation'
     - arm_code: Combination Therapy with DF1001 and Nab-paclitaxel
       arm_internal_id: 6
       arm_description: Combination dose escalation of DF1001 in combination with nab-paclitaxel
@@ -333,6 +363,13 @@ treatment_list:
         level_description: 'Drug: Nab paclitaxel'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: __SOLID__
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Any Variation'
     - arm_code: Combination Therapy with DF1001 and Nivolumab Safety/PK/PD Expansion
       arm_internal_id: 7
       arm_description: Expansion cohort of DF1001 in combination with nivolumab after
@@ -394,6 +431,11 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            her2_status: Positive        
     - arm_code: Monotherapy DF1001 Expansion in NSCLC
       arm_internal_id: 11
       arm_description: Monotherapy expansion cohort enrolling up to 20 patients with
@@ -405,6 +447,14 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Copy Number Variation' 
+            cnv_call: 'High Amplification'      
     - arm_code: Combination Therapy with DF1001 and Nivolumab Expansion in NSCLC
       arm_internal_id: 12
       arm_description: Combination therapy with DF1001 and nivolumab expansion cohort
@@ -421,6 +471,11 @@ treatment_list:
         level_description: 'Drug: Nivolumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+            her2_status: Negative
     - arm_code: Monotherapy DF1001 Expansion in Gastric Cancer
       arm_internal_id: 13
       arm_description: Monotherapy expansion cohort enrolling up to 20 patients with
@@ -432,6 +487,11 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+            her2_status: Positive      
     - arm_code: Combination Therapy with DF1001 and Nivolumab Expansion in Gastric
         Cancer
       arm_internal_id: 14
@@ -460,6 +520,11 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+            her2_status: Positive 
     - arm_code: Combination Therapy with DF1001 and Nivolumab Expansion in Esophageal
         Cancer
       arm_internal_id: 16
@@ -477,6 +542,11 @@ treatment_list:
         level_description: 'Drug: Nivolumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+            her2_status: Negative
     - arm_code: Monotherapy DF1001 Exploratory Efficacy Expansion in NSCLC
       arm_internal_id: 17
       arm_description: Monotherapy expansion cohort enrolling up to 20 patients with
@@ -487,6 +557,13 @@ treatment_list:
         level_description: 'Drug: DF1001'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Any Variation'
     - arm_code: Combo Therapy with DF1001 and Sacituzumab Govitecan-hziy Exploratory
         Efficacy Expansion in NSCLC
       arm_internal_id: 18
@@ -503,6 +580,13 @@ treatment_list:
         level_description: 'Drug: Sacituzumab Govitecan-hziy'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: 'Any Variation'
     - arm_code: Monotherapy DF1001 Exploratory Efficacy Expansion in Metastatic Breast
         Cancer (HR+/HER2-)
       arm_internal_id: 19
@@ -531,6 +615,11 @@ treatment_list:
         level_description: 'Drug: Sacituzumab Govitecan-hziy'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            her2_status: Positive
     - arm_code: DF1001 with Sacituzumab Govitecan-hziy Exploratory Efficacy Expansion
         in Breast Cancer (HR+/HER2-)
       arm_internal_id: 21
@@ -547,22 +636,21 @@ treatment_list:
         level_description: 'Drug: Sacituzumab Govitecan-hziy'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            her2_status: Negative
+            er_status: Positive
+            pr_status: Positive
     match:
     - and:
       - clinical:
-          age_numerical: '>=18'
-          her2_status: Positive
-          er_status: Positive
+          age_numerical: '>=18'          
           disease_status:
-          - Metastatic
           - Locally Advanced
+          - Metastatic
           - Recurrent
+          - Refractory
           - Unresectable
-          oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Copy Number Variation
+          

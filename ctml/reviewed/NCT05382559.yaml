@@ -7,19 +7,19 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Oxaplatin'
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: ASP3082'
-  - drug_name: 'Drug: Nanoparticle albumin-bound-paclitaxel'
-  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Docetaxel'
+  - drug_name: 'Drug: ASP3082'
   - drug_name: 'Drug: Irinotecan'
-  - drug_name: 'Drug: Fluorouracil'
-  - drug_name: 'Drug: Leucovorin'
-  - drug_name: 'Drug: Gemcitabine'
-  - drug_name: 'Drug: Cetuximab'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Nanoparticle albumin-bound-paclitaxel'
   - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Leucovorin'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Oxaplatin'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Fluorouracil'
+  - drug_name: 'Drug: Cetuximab'
 long_title: A Phase 1 Study of ASP3082 in Participants With Locally Advanced or Metastatic
   Solid Tumor Malignancies With KRAS G12D Mutation
 last_updated: '2025-09-22'
@@ -367,10 +367,7 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           oncotree_primary_diagnosis: _SOLID_
-      - and:
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: '!Mutation'
+      - genomic:
+          hugo_symbol: KRAS
+          variant_category: Mutation
+          protein_change: p.G12D

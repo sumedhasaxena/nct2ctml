@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: HER3-DXd (CTM-3 Lyo-DP)'
-  - drug_name: 'Drug: HER3-DXd (CTM-1 Lyo-DP)'
   - drug_name: 'Drug: HER3-DXd (FL-DP)'
+  - drug_name: 'Drug: HER3-DXd (CTM-1 Lyo-DP)'
+  - drug_name: 'Drug: HER3-DXd (CTM-3 Lyo-DP)'
 long_title: A Multicenter, Open-Label Phase 1 Study of U3-1402 in Subjects With Metastatic
   or Unresectable Non-small Cell Lung Cancer
 last_updated: '2025-09-16'
@@ -315,6 +315,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (FL-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19
+          - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                protein_change: p.T790M
     - arm_code: 'Dose Escalation: Cohort 2, 4.8 mg/kg'
       arm_internal_id: 1
       arm_description: Participants in Dose Escalation Cohort 2 will receive HER3-DXd
@@ -325,6 +352,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (FL-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19
+          - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                protein_change: p.T790M
     - arm_code: 'Dose Escalation: Cohort 3, 5.6 mg/kg'
       arm_internal_id: 2
       arm_description: Participants in Dose Escalation Cohort 3 will receive HER3-DXd
@@ -335,6 +389,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (FL-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19
+          - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                protein_change: p.T790M
     - arm_code: 'Dose Escalation: Cohort 4, 6.4 mg/kg'
       arm_internal_id: 3
       arm_description: Participants in Dose Escalation Cohort 3 will receive HER3-DXd
@@ -345,6 +426,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (FL-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19
+          - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                protein_change: p.T790M
     - arm_code: 'Dose Expansion: Cohort 1, EGFR mutant'
       arm_internal_id: 4
       arm_description: Participants with adenocarcinoma NSCLC with EGFR mutations
@@ -356,6 +464,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (CTM-1 Lyo-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.T70M
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19          
     - arm_code: 'Dose Expansion: Cohort 2, EGFR wild-type'
       arm_internal_id: 5
       arm_description: Participants with squamous or non-squamous NSCLC without EGFR-activating
@@ -367,6 +502,43 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (CTM-1 Lyo-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - and:
+          - or:
+            - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+            - clinical:
+                oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+            - clinical:
+                oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
+            - clinical:
+                oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma        
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: ALK
+                variant_category: Structural Variation
+            - genomic:
+                hugo_symbol: ROS1
+                variant_category: Structural Variation
+          - and:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                protein_change: G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                exon: 19
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                protein_change: L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Mutation'
+                protein_change: L861Q
     - arm_code: 'Dose Expansion: Cohort 3a, EGFR mutant'
       arm_internal_id: 6
       arm_description: Randomized participants with NSCLC and EGFR mutations in the
@@ -379,6 +551,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (CTM-1 Lyo-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.T70M
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19 
     - arm_code: 'Dose Expansion: Cohort 3b, EGFR mutant'
       arm_internal_id: 7
       arm_description: 'Randomized participants with NSCLC and EGFR mutations in the
@@ -392,6 +591,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (CTM-1 Lyo-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.T70M
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19 
     - arm_code: 'Dose Expansion: Cohort 4, EGFR mutant'
       arm_internal_id: 8
       arm_description: Participants with NSCLC (including any histology other than
@@ -403,6 +629,33 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (CTM-3 Lyo-DP)'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.T70M
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.G719X
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L858R
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                protein_change: p.L861Q
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: 'In_Frame_Del'
+                exon: 19 
     - arm_code: 'Dose Expansion: Cohort 5, KRAS-G12C mutant NSCLC'
       arm_internal_id: 9
       arm_description: Participants with locally advanced or metastatic NSCLC whose
@@ -414,20 +667,19 @@ treatment_list:
         level_description: 'Drug: HER3-DXd (CTM-3 Lyo-DP)'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
+      match:
       - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Locally Advanced
-            - Metastatic
-      - or:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer                   
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
+            protein_change: p.G12C     
+                 
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Locally Advanced
+        - Metastatic
+        - Unresectable

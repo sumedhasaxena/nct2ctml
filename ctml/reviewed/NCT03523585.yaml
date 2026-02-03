@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Capecitabine'
   - drug_name: 'Drug: Lapatinib'
-  - drug_name: 'Drug: Trastuzumab'
   - drug_name: 'Drug: Trastuzumab deruxtecan'
+  - drug_name: 'Drug: Trastuzumab'
+  - drug_name: 'Drug: Capecitabine'
 long_title: A Phase 3, Multicenter, Randomized, Open-label, Active-controlled Study
   of Trastuzumab Deruxtecan (DS-8201a), an Anti-HER2-antibody Drug Conjugate, Versus
   Treatment of Investigator's Choice for HER2-positive, Unresectable and/or Metastatic
@@ -83,7 +83,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: closed
+status: open to accrual
 summary: 'This study will compare DS 8201a to standard treatment.
 
 
@@ -150,24 +150,17 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Breast Sarcoma
-          - clinical:
-              oncotree_primary_diagnosis: Metaplastic Breast Cancer
-          - clinical:
               oncotree_primary_diagnosis: Invasive Breast Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
-          - clinical:
               oncotree_primary_diagnosis: Breast Neoplasm, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Metaplastic Breast Cancer
         - clinical:
             age_numerical: '>=18'
             her2_status: Positive
             disease_status:
-            - Unresectable
             - Metastatic
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+            - Unresectable
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Any Variation

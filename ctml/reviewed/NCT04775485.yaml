@@ -121,10 +121,14 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           oncotree_primary_diagnosis: _SOLID_
-      - or:
+      - and:
+        - or:
+          - genomic:
+              hugo_symbol: BRAF
+              variant_category: 'Any Variation'
+          - genomic:
+              hugo_symbol: RAF1
+              variant_category: Structural Variation
         - genomic:
-            hugo_symbol: BRAF
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: BRAF
-            variant_category: Structural Variation
+            hugo_symbol: NF1
+            variant_category: '!Any Variation'

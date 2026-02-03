@@ -238,4 +238,5 @@ treatment_list:
         disease_status:
         - Recurrent
         - Refractory
+        - Advanced
         oncotree_primary_diagnosis: Lymphoid Neoplasm

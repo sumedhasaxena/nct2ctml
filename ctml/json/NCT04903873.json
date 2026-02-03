@@ -110,18 +110,6 @@
                         "arm_internal_id": 0,
                         "arm_description": "Participants with advanced solid tumors will receive EU101 intravenously once every 3 weeks (3 weeks = 1 cycle) with escalating doses starting from 0.05 milligrams per kilogram (mg/kg) to 10 mg/kg until disease progression, unacceptable toxicities or death, withdrawal of consent, end of study, or physician's decision, whichever occurs first.",
                         "arm_suspended": "N",
-                        "match": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Locally Advanced"
-                                    ],
-                                    "oncotree_primary_diagnosis": "_SOLID_"
-                                }
-                            }
-                        ],
                         "dose_level": [
                             {
                                 "level_code": "0",
@@ -136,18 +124,6 @@
                         "arm_internal_id": 1,
                         "arm_description": "Participants with CRC will receive EU101 intravenously once every 3 weeks (3 weeks = 1 cycle) with a determined recommended phase 2 dose until disease progression, unacceptable toxicities or death, withdrawal of consent, end of study, or physician's decision, whichever occurs first.",
                         "arm_suspended": "N",
-                        "match": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Locally Advanced"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
-                                }
-                            }
-                        ],
                         "dose_level": [
                             {
                                 "level_code": "0",
@@ -162,90 +138,51 @@
                         "arm_internal_id": 2,
                         "arm_description": "Participants with NSCLC will receive EU101 intravenously once every 3 weeks (3 weeks = 1 cycle) with a determined recommended phase 2 dose until disease progression, unacceptable toxicities or death, withdrawal of consent, end of study, or physician's decision, whichever occurs first.",
                         "arm_suspended": "N",
-                        "match": [
-                            {
-                                "and": [
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "disease_status": [
-                                                "Metastatic",
-                                                "Locally Advanced"
-                                            ],
-                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                        }
-                                    },
-                                    {
-                                        "and": [
-                                            {
-                                                "and": [
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "EGFR",
-                                                            "variant_category": "!Mutation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "ALK",
-                                                            "variant_category": "!Mutation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "ROS1",
-                                                            "variant_category": "!Mutation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "EGFR",
-                                                            "variant_category": "!Copy Number Variation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "ALK",
-                                                            "variant_category": "!Copy Number Variation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "ROS1",
-                                                            "variant_category": "!Copy Number Variation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "EGFR",
-                                                            "variant_category": "!Structural Variation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "ALK",
-                                                            "variant_category": "!Structural Variation"
-                                                        }
-                                                    },
-                                                    {
-                                                        "genomic": {
-                                                            "hugo_symbol": "ROS1",
-                                                            "variant_category": "!Structural Variation"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ],
                         "dose_level": [
                             {
                                 "level_code": "0",
                                 "level_description": "Drug: EU101",
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
+                            }
+                        ]
+                    }
+                ],
+                "match": [
+                    {
+                        "and": [
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Metastatic",
+                                        "Locally Advanced",
+                                        "Refractory"
+                                    ],
+                                    "oncotree_primary_diagnosis": "_SOLID_"
+                                }
+                            },
+                            {
+                                "and": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "ALK",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "ROS1",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }

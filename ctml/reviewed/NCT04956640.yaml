@@ -8,11 +8,11 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: LY3537982'
-  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Cetuximab'
+  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Pemetrexed'
 long_title: A Phase 1/2 Study of LY3537982 in Patients With KRAS G12C-Mutant Advanced
   Solid Tumors
 last_updated: '2025-09-25'
@@ -180,55 +180,55 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
+              oncotree_primary_diagnosis: Ovarian Epithelial Tumor
           - clinical:
               oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
           - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
           - clinical:
               oncotree_primary_diagnosis: Ovarian Cancer, Other
           - clinical:
-              oncotree_primary_diagnosis: Pancreatoblastoma
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
+          - clinical:
+              oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
+          - clinical:
+              oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
+          - clinical:
+              oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
+          - clinical:
+              oncotree_primary_diagnosis: Endometrial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
           - clinical:
               oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
                 Duct
           - clinical:
-              oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+              oncotree_primary_diagnosis: Sex Cord Stromal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatoblastoma
           - clinical:
               oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
           - clinical:
-              oncotree_primary_diagnosis: Endometrial Carcinoma
+              oncotree_primary_diagnosis: Ovarian Germ Cell Tumor
           - clinical:
-              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-          - clinical:
-              oncotree_primary_diagnosis: Sex Cord Stromal Tumor
+              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Tubular Adenoma of the Colon
           - clinical:
-              oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
+              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
           - clinical:
-              oncotree_primary_diagnosis: Ovarian Germ Cell Tumor
-          - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Locally Advanced
             - Metastatic
             - Unresectable
-            - Advanced
       - genomic:
           hugo_symbol: KRAS
           variant_category: Mutation
+          protein_change: p.G12C

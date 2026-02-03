@@ -148,19 +148,14 @@ treatment_list:
     - and:
       - clinical:
           disease_status:
-          - Advanced
           - Metastatic
+          - Advanced
+          - Recurrent
           oncotree_primary_diagnosis: _SOLID_
       - or:
         - genomic:
             hugo_symbol: ROS1
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ROS1
-            variant_category: Copy Number Variation
-        - genomic:
-            hugo_symbol: ROS1
-            variant_category: Structural Variation
+            variant_category: Any Variation
         - genomic:
             hugo_symbol: NTRK1
             variant_category: Structural Variation

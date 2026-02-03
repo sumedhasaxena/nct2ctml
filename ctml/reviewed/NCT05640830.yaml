@@ -117,8 +117,8 @@ treatment_list:
           her2_status: Positive
           disease_status:
           - Advanced
+          - Refractory
           oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Copy Number Variation

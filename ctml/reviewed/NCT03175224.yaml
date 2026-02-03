@@ -208,7 +208,7 @@ treatment_list:
       - level_code: '0'
         level_description: 'Drug: APL-101 Oral Capsules'
         level_internal_id: 0
-        level_suspended: N
+        level_suspended: N      
     - arm_code: NSCLC Exon 14 Skip Previously Treated
       arm_internal_id: 1
       arm_description: 'Cohort A-2: APL-101 Oral Capsules'
@@ -236,6 +236,20 @@ treatment_list:
         level_description: 'Drug: APL-101 Oral Capsules'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - and:
+          - or:
+            - clinical:
+                oncotree_primary_diagnosis: _LIQUID_
+            - clinical:
+                oncotree_primary_diagnosis: _SOLID_
+          - clinical:
+              age_numerical: '>=18'            
+        - and:
+          - genomic:
+                hugo_symbol: MET
+                variant_category: Copy Number Variation
     - arm_code: NSCLC MET amplification and EGFR wild-type
       arm_internal_id: 4
       arm_description: 'Cohort C-1: APL-101 Oral Capsules'
@@ -245,6 +259,18 @@ treatment_list:
         level_description: 'Drug: APL-101 Oral Capsules'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+              age_numerical: '>=18'                     
+        - and:
+          - genomic:
+                hugo_symbol: MET
+                variant_category: Copy Number Variation
+          - genomic:
+                hugo_symbol: EGFR
+                variant_category: '!Any Variation'          
     - arm_code: EGFR positive NSCLC MET amplification as an acquired resistance
       arm_internal_id: 5
       arm_description: 'Cohort C-2: APL-101 Oral Capsules + Standard of Care EGFR
@@ -255,6 +281,18 @@ treatment_list:
         level_description: 'Drug: APL-101 Oral Capsules'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+              age_numerical: '>=18'                     
+        - and:
+          - genomic:
+                hugo_symbol: MET
+                variant_category: Copy Number Variation
+          - genomic:
+                hugo_symbol: EGFR
+                variant_category: 'Any Variation'   
     - arm_code: Basket of solid tumor with MET gene fusions except for primary CNS
         tumors
       arm_internal_id: 6
@@ -265,6 +303,16 @@ treatment_list:
         level_description: 'Drug: APL-101 Oral Capsules'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+              oncotree_primary_diagnosis: __SOLID__
+        - clinical:
+              oncotree_primary_diagnosis: '!CNS/Brain' 
+        - and:
+          - genomic:
+                hugo_symbol: MET
+                variant_category: Structural Variation
     - arm_code: Primary CNS tumors with MET alterations
       arm_internal_id: 7
       arm_description: 'Cohort E: APL-101 Oral Capsules'
@@ -274,6 +322,14 @@ treatment_list:
         level_description: 'Drug: APL-101 Oral Capsules'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+              oncotree_primary_diagnosis: CNS/Brain
+        - and:
+          - genomic:
+                hugo_symbol: MET
+                variant_category: Any Variation         
     - arm_code: Basket of tumor types wild-type MET with over-expression of HGF and
         MET
       arm_internal_id: 8
@@ -284,44 +340,20 @@ treatment_list:
         level_description: 'Drug: APL-101 Oral Capsules'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Metastatic
-          - Refractory
-          oncotree_primary_diagnosis: _SOLID_
+      match:
       - and:
-        - or:
-          - genomic:
-              hugo_symbol: MET
-              variant_category: Structural Variation
-          - genomic:
-              hugo_symbol: MET
-              variant_category: Copy Number Variation
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: Mutation
+        - clinical:
+              oncotree_primary_diagnosis: __SOLID__
         - and:
           - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ROS1
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: RET
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: NTRK
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: KRAS
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: BRAF
-              variant_category: '!Mutation'
+                hugo_symbol: MET
+                variant_category: '!Mutation'
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        - Advanced
+        - Recurrent
+        - Refractory
+        - Unresectable
