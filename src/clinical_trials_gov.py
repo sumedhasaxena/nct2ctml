@@ -194,8 +194,8 @@ def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[
 
         inlcusion_genomic_criteria = ai.get_inclusion_genomic_criteria(nct_id, gene_symbols, inclusion_text)
         exclusion_genomic_criteria = ai.get_exclusion_genomic_criteria(nct_id, gene_symbols, exclusion_text)
-        print(inlcusion_genomic_criteria)
-        print(exclusion_genomic_criteria)
+        print(f'inlcusion_genomic_criteria: {inlcusion_genomic_criteria}')
+        print(f'exclusion_genomic_criteria: {exclusion_genomic_criteria}')
         genomic_ctml = mcm.convert_to_ctml_genomic_schema(inlcusion_genomic_criteria, exclusion_genomic_criteria)
         logger.debug(f"genomic criteria as CTML: {genomic_ctml}")
         return genomic_ctml
@@ -356,7 +356,7 @@ def split_inclusion_exclusion_criteria(trial_data: dict) -> tuple[str, str]:
     Splits the eligibility criteria into inclusion and exclusion parts
     """
     eligibility_criteria = trial_data['protocolSection']['eligibilityModule']['eligibilityCriteria']
-    inclusion_criteria, exclusion_criteria = tdh.split_with_find(eligibility_criteria, "exclusion criteria")    
+    inclusion_criteria, exclusion_criteria = tdh.split_with_find(eligibility_criteria, ["exclusion criteria", "exclusion"])    
     return inclusion_criteria, exclusion_criteria
 
 

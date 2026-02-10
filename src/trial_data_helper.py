@@ -130,10 +130,13 @@ def get_all_keys(data, keys=None):
     
     return keys
 
-def split_with_find(text, keyword):
-    index = text.lower().find(keyword)
-    if index != -1:
-        return text[:index], text[index + len(keyword):]
+def split_with_find(text, keywords: list[str]):
+    for keyword in keywords:
+        index = text.lower().find(keyword)
+        if index != -1:
+            return text[:index], text[index + len(keyword):]
+        else:
+            continue
     return text, ""
 
 ##Post-processing##

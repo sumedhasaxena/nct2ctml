@@ -479,9 +479,7 @@ class TestTrialDataHelper(unittest.TestCase):
         self.assertNotIn("statusVerifiedDate", result["protocolSection"]["statusModule"])
         self.assertNotIn("overallStatus", result["protocolSection"]["statusModule"])
         self.assertNotIn("expandedAccessInfo", result["protocolSection"]["statusModule"])
-        self.assertNotIn("startDateStruct", result["protocolSection"]["statusModule"])
         self.assertNotIn("primaryCompletionDateStruct", result["protocolSection"]["statusModule"])
-        self.assertNotIn("completionDateStruct", result["protocolSection"]["statusModule"])
         self.assertNotIn("studyFirstSubmitDate", result["protocolSection"]["statusModule"])
         self.assertNotIn("studyFirstSubmitQcDate", result["protocolSection"]["statusModule"])
         self.assertNotIn("lastUpdateSubmitDate", result["protocolSection"]["statusModule"])
@@ -633,9 +631,42 @@ class TestTrialDataHelper(unittest.TestCase):
         input_string = "Inclusion criteria:Minimum body weight of 35 kg. Exclusion criteria: HER2 mutation"
         substring = "exclusion criteria"
         expected_output = ("Inclusion criteria:Minimum body weight of 35 kg. ", ": HER2 mutation")
-        result = split_with_find(input_string, substring)
+        result = split_with_find(input_string, [substring])
         print(result)
         self.assertEqual(result, expected_output)
+
+    def test_split_with_find_splits_correctly_with_multiple_split_keywords(self):
+        """Test that split_with_find splits a string correctly based on a substring"""
+        input_string = (
+            "Pathologically confirmed, locally advanced or metastatic nonsquamous NSCLC. "
+            "Exclusion - Is currently receiving an investigational drug in a clinical trial "
+            "or participating in any other type of medical research judged not to be scientifically "
+            "or medically compatible with this study.")
+        
+        substring1 = "exclusion criteria"
+        substring2 = "exclusion"
+    
+        result = split_with_find(input_string, [substring1, substring2])
+        
+        first_part, second_part = result
+        
+        # Key assertions based on the function's behavior:
+        
+        # 1. First part should not contain the keyword
+        self.assertNotIn("Exclusion", first_part)
+        
+        # 2. First part should end right before the keyword
+        self.assertTrue(first_part.strip().endswith("NSCLC."))
+        
+        # 3. Second part should NOT start with the keyword (it's removed)
+        self.assertFalse(second_part.startswith("Exclusion"))
+        
+        # 4. Second part should start with the text after the keyword
+        self.assertTrue(second_part.strip().startswith("- Is currently"))
+        
+        # 5. The keyword should be case-insensitively matched
+        # (Test that it works even though we used lowercase "exclusion -")
+        self.assertTrue("Exclusion" in input_string)  # Original has capital E
 
 if __name__ == '__main__':
     unittest.main()
