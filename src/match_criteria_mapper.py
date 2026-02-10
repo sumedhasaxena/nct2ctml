@@ -58,18 +58,18 @@ def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_g
             variant_category = alteration["genomic"]["variant_category"]
             # if variant_category begins with !, add alteration to exclusions, without removing !
             if variant_category.startswith('!'):
-                exclusions.append(alteration)
+                if alteration not in exclusions:
+                    exclusions.append(alteration)
             else:
-                inclusions.append(alteration)
+                if alteration not in inclusions:
+                    inclusions.append(alteration)
     
     if exclusion_genomic_criteria and all(key in tdh.get_all_keys(exclusion_genomic_criteria) for key in ["hugo_symbol", "variant_category"]):
         #post processing
         exclusion_genomic_criteria = tdh.update_hugo_symbol(exclusion_genomic_criteria)
         for alteration in exclusion_genomic_criteria:
-            exclusions.append(alteration)
-
-    print(f'Inclusions: {inclusions}')
-    print(f'Exclusions: {exclusions}')
+            if alteration not in exclusions:
+                exclusions.append(alteration)
 
     #combine inclusions with a top level 'or' and exclusions with a top level 'and'
     if inclusions:
