@@ -47,6 +47,21 @@ class TrialMapManager:
                 m[synonym].append(official)
         return m
     
+    def get_gene_synonym_mapping(self) -> Dict[str, List[str]]:
+        """Load gene synonym mapping from reference files"""
+        synonym_mapping = self.load_gene_synonym_mapping()
+
+        keys_to_remove = []
+
+        for synonym in synonym_mapping:
+            if synonym[0] == "!":
+                key_to_be_removed = synonym[1:]
+                if key_to_be_removed in synonym_mapping:
+                    keys_to_remove.append(key_to_be_removed)
+        for synonym in keys_to_remove:
+            del synonym_mapping[synonym]
+        return synonym_mapping
+    
     def load_trial_status_dict(self) -> Dict[str, Dict]:
         """Load trial status information into a dictionary"""
         trial_status_dict = {}
@@ -179,7 +194,7 @@ class TrialMapManager:
         cutoff_date = self._get_cutoff_date(cutoff_days)
         genes = self.get_gene_list()
 
-        gene_synonym_mapping = self.load_gene_synonym_mapping()
+        gene_synonym_mapping = self.get_gene_synonym_mapping()
         
         # Load data dictionaries
         trial_status_dict = self.load_trial_status_dict()
@@ -288,7 +303,7 @@ class TrialMapManager:
             return False
         
         genes = self.get_gene_list()
-        gene_synonym_mapping = self.load_gene_synonym_mapping()
+        gene_synonym_mapping = self.get_gene_synonym_mapping()
         try:
             # Map to CTML format
             mapped_ctml = ctg.map_nct_to_ctml(trial_data, genes, gene_synonym_mapping)
