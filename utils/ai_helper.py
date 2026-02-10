@@ -241,6 +241,8 @@ def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
     2. If a specific amino acid substitution is explicitly mentioned for point mutations, return it in the "protein_change" field, with  format "p.XnnY" (e.g., p.G12C).
     3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
+    5. If the criteria mentions only protein expression (e.g., "negative PD-L1 expression", "nPKCδ expression") without explicitly mentioning the corresponding gene name, DO NOT infer or add a gene to the output.
+
     
     *CRITICAL RULE:** If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely.**
     Only include genetic states that are direct reasons for inclusion (e.g., "patients *with* a BRAF V600E mutation are included").
@@ -303,6 +305,7 @@ def get_exclusion_genomic_criteria_prompt(genes, exclusion_criteria):
     2. If a specific amino acid substitution is explicitly mentioned mentioned for point mutations, return it in the "protein_change" field, with  format "p.XnnY" (e.g., p.G12C).
     3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.  
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
+    5. If the criteria mentions only protein expression (e.g., "negative PD-L1 expression", "nPKCδ expression") without explicitly mentioning the corresponding gene name, DO NOT infer or add a gene to the output.
     
     *CRITICAL RULE:** If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely.**
     Only include genetic states that are direct reasons for exclusion (e.g., "patients *with* a BRAF V600E mutation are excluded").
