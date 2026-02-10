@@ -15,5 +15,17 @@ class TestKeywordSearch(unittest.TestCase):
         result = search_keywords_in_text(mmr_keywords_to_check, eligibility_text)
         self.assertTrue(result)
 
+    def test_search_mmr_keywords_in_text(self):
+        mmr_keywords_to_check = ['mmr', 'Mismatch Repair', 'msi', 'msi-h','dMMR','msi-l','MSI-high','MSI-low']
+        eligibility_text = "No evidence of distant metastases\
+        MMRd or MSI-H subtype (defined by either deficient/loss expression of mismatch repair (MMR) proteins MLH1, PMS2, MSH2, MSH6 or \
+        microsatellite instability-high (MSI-H) by polymerase chain reaction assay for 5 microsatellite markers)\
+        ECOG Performance Status Score 0 or 1"
+        result = search_keywords_in_text(mmr_keywords_to_check, eligibility_text)
+        self.assertTrue(result)
+
+
+
+
 if __name__ == "__main__":
     unittest.main()
