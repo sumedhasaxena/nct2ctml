@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Osimertinib (Osi)'
-  - drug_name: 'Drug: Standard of Care'
   - drug_name: 'Drug: Telisotuzumab Adizutecan'
+  - drug_name: 'Drug: Standard of Care'
+  - drug_name: 'Drug: Osimertinib (Osi)'
 long_title: A Phase 2/3 Randomized Study to Evaluate the Safety, Efficacy, and Optimal
   Dose of Telisotuzumab Adizutecan in Combination With Osimertinib as First-Line Treatment
   in Patients With Locally Advanced Unresectable or Metastatic EGFR-Mutated Non-Squamous
@@ -209,9 +209,14 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Locally Advanced
-        - Metastatic
-        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic

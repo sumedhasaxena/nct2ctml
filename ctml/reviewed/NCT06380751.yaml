@@ -7,15 +7,15 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Abemaciclib'
-  - drug_name: 'Drug: Exemestane'
   - drug_name: 'Drug: Letrozole'
-  - drug_name: 'Drug: Anastrozole'
-  - drug_name: 'Drug: Saruparib (AZD5305)'
   - drug_name: 'Drug: Camizestrant'
-  - drug_name: 'Drug: Fulvestrant'
   - drug_name: 'Drug: Ribociclib'
+  - drug_name: 'Drug: Abemaciclib'
+  - drug_name: 'Drug: Anastrozole'
   - drug_name: 'Drug: Palbociclib'
+  - drug_name: 'Drug: Fulvestrant'
+  - drug_name: 'Drug: Saruparib (AZD5305)'
+  - drug_name: 'Drug: Exemestane'
 long_title: A Randomised, Open-Label, Phase III Study of Saruparib (AZD5305) Plus
   Camizestrant Compared With Physician's Choice CDK4/6 Inhibitor Plus Endocrine Therapy
   or Plus Camizestrant for the First-Line Treatment of Patients With BRCA1, BRCA2,
@@ -205,22 +205,13 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Inflammatory Breast Cancer
-          - clinical:
-              oncotree_primary_diagnosis: Invasive Breast Carcinoma
-        - clinical:
-            age_numerical: '>=18'
-            her2_status: Negative
-            er_status: Positive
-            pr_status: Positive
-            disease_status:
-            - Advanced
-            - Locally Advanced
-            - Metastatic
-            - Early Stage
+      - clinical:
+          age_numerical: '>=18'
+          her2_status: Negative
+          disease_status:
+          - Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Invasive Breast Carcinoma
       - or:
         - genomic:
             hugo_symbol: BRCA1

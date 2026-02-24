@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Durvalumab'
   - drug_name: 'Drug: Olomorasib'
+  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Pembrolizumab'
 long_title: A Phase 3, Multicenter, Double-Blind, Placebo-controlled Study Assessing
   the Efficacy and Safety of Olomorasib in Combination With Standard of Care Immunotherapy
@@ -154,20 +154,27 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Unresectable
-          - Locally Advanced
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Locally Advanced
+            - Advanced
+            - Unresectable
       - and:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
+            protein_change: p.G12C
         - and:
           - genomic:
               hugo_symbol: EGFR
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'
           - genomic:
               hugo_symbol: ALK
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'

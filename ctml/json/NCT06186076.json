@@ -140,24 +140,49 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Recurrent",
-                                        "Refractory",
-                                        "Unresectable",
-                                        "Advanced",
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Recurrent",
+                                                "Refractory",
+                                                "Advanced",
+                                                "Metastatic",
+                                                "Unresectable"
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "or": [
                                     {
                                         "genomic": {
                                             "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation"
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.C797X"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.T790M"
                                         }
                                     }
                                 ]

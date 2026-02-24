@@ -7,18 +7,18 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Nab paclitaxel'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Oxaliplatin'
   - drug_name: 'Drug: LY4066434.'
-  - drug_name: 'Drug: Irinotecan'
   - drug_name: 'Drug: 5Fluorouracil'
   - drug_name: 'Drug: Leucovorin'
-  - drug_name: 'Drug: Gemcitabine'
-  - drug_name: 'Drug: Cetuximab'
+  - drug_name: 'Drug: Oxaliplatin'
+  - drug_name: 'Drug: Nab paclitaxel'
+  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Cetuximab'
+  - drug_name: 'Drug: Irinotecan'
 long_title: A Phase 1a/1b Study of the Pan-KRAS Inhibitor LY4066434 in Participants
   With KRAS Mutant Solid Tumors
 last_updated: '2025-11-05'
@@ -173,3 +173,24 @@ treatment_list:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
+            protein_change: p.G12C
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12D
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12V
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12A
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12S
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G13D

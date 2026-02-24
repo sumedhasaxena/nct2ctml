@@ -12,19 +12,19 @@
                 "drug_name": "Drug: MK-1084"
             },
             {
-                "drug_name": "Drug: Bevacizumab"
-            },
-            {
                 "drug_name": "Drug: Oxaliplatin"
             },
             {
                 "drug_name": "Biological: Cetuximab"
             },
             {
-                "drug_name": "Drug: 5-Fluorouracil"
+                "drug_name": "Drug: Bevacizumab"
             },
             {
                 "drug_name": "Drug: Leucovorin/levofolinate calcium"
+            },
+            {
+                "drug_name": "Drug: 5-Fluorouracil"
             }
         ]
     },
@@ -186,27 +186,37 @@
                     {
                         "and": [
                             {
-                                "or": [
+                                "and": [
                                     {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
-                                        }
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
+                                                }
+                                            }
+                                        ]
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Locally Advanced",
+                                                "Metastatic"
+                                            ]
                                         }
                                     }
                                 ]
                             },
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic",
-                                        "Untreated"
-                                    ]
+                                "genomic": {
+                                    "hugo_symbol": "KRAS",
+                                    "variant_category": "Mutation",
+                                    "protein_change": "p.G12C"
                                 }
                             }
                         ]

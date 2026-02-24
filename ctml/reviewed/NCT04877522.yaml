@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Asciminib single agent'
-  - drug_name: 'Drug: Asciminib single agent pediatric formulation'
-  - drug_name: 'Drug: Bosutinib'
-  - drug_name: 'Drug: Dasatinib'
-  - drug_name: 'Drug: Imatinib'
   - drug_name: 'Drug: Nilotinib'
+  - drug_name: 'Drug: Asciminib single agent'
+  - drug_name: 'Drug: Bosutinib'
+  - drug_name: 'Drug: Imatinib'
+  - drug_name: 'Drug: Asciminib single agent pediatric formulation'
+  - drug_name: 'Drug: Dasatinib'
 long_title: An Open Label, Multi-center Asciminib Roll-over Study to Assess Long-term
   Safety in Patients Who Have Completed a Novartis Sponsored Asciminib Study and Are
   Judged by the Investigator to Benefit From Continued Treatment
@@ -203,4 +203,7 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=7'
+        disease_status:
+        - Early Stage
+        - Advanced
         oncotree_primary_diagnosis: Myeloid Neoplasm

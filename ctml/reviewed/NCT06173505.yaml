@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Combination Product: Vudalimab + Carboplatin + Pemetrexed'
   - drug_name: 'Combination Product: Pembrolizumab + Carboplatin + Pemetrexed'
+  - drug_name: 'Combination Product: Vudalimab + Carboplatin + Pemetrexed'
 long_title: A Phase 1b/2, Open-label, Randomized Study of Vudalimab in Combination
   With Chemotherapy or Pembrolizumab in Combination With Chemotherapy as First-line
   Treatment in Patients With Advanced Non-small Cell Lung Cancer
@@ -118,14 +118,19 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          pdl1_status: Low
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          - Advanced
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            age_numerical: '>=18'
+            pdl1_status: Low
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+            - Unresectable
       - and:
         - genomic:
             hugo_symbol: EGFR

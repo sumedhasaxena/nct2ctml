@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Cetuximab'
-  - drug_name: 'Biological: Amivantamab'
-  - drug_name: 'Biological: Bevacizumab'
   - drug_name: 'Drug: 5-fluorouracil'
-  - drug_name: 'Drug: Irinotecan'
+  - drug_name: 'Biological: Bevacizumab'
+  - drug_name: 'Biological: Cetuximab'
   - drug_name: 'Drug: Leucovorin calcium/Levoleucovorin'
+  - drug_name: 'Biological: Amivantamab'
+  - drug_name: 'Drug: Irinotecan'
 long_title: A Randomized, Open-label Phase 3 Study of Amivantamab + FOLFIRI Versus
   Cetuximab/Bevacizumab + FOLFIRI in Participants With KRAS/NRAS and BRAF Wild-type
   Recurrent, Unresectable or Metastatic Colorectal Cancer Who Have Received Prior
@@ -157,14 +157,16 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
               oncotree_primary_diagnosis: Colorectal Adenocarcinoma
           - clinical:
               oncotree_primary_diagnosis: Tubular Adenoma of the Colon
+          - clinical:
+              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
         - clinical:
             age_numerical: '>=18'
-            her2_status: Negative
+            her2_status: '!Positive'
+            mmr_status: MMR-Proficient
+            ms_status: '!MSI-H'
             disease_status:
             - Recurrent
             - Unresectable
@@ -181,4 +183,4 @@ treatment_list:
             variant_category: '!Mutation'
         - genomic:
             hugo_symbol: ERBB2
-            variant_category: '!Mutation'
+            variant_category: '!Copy Number Variation'

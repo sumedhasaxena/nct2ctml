@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Supportive care measures'
   - drug_name: 'Biological: Sacituzumab tirumotecan'
   - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Supportive care measures'
 long_title: A Randomized, Open-label, Phase 3 Study of MK-2870 in Combination With
   Pembrolizumab Compared to Pembrolizumab Monotherapy in the First-line Treatment
   of Participants With Metastatic Non-small Cell Lung Cancer With PD-L1 TPS Greater
@@ -171,24 +171,19 @@ treatment_list:
         level_suspended: N
     match:
     - and:
+      - clinical:
+          age_numerical: '>=18'
+          pdl1_status: High
+          disease_status:
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Metastatic
-      - and:
-        - and:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ROS1
-              variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ALK
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ROS1
+            variant_category: '!Any Variation'

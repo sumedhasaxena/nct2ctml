@@ -214,12 +214,9 @@ treatment_list:
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
-            variant_classification: Missense_Mutation
             protein_change: p.L858R
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
             variant_classification: In_Frame_Del
             exon: 19
-
-

@@ -135,10 +135,7 @@ treatment_list:
           disease_status:
           - Locally Advanced
           - Metastatic
-          - Refractory
           oncotree_primary_diagnosis: _SOLID_
-      - and:
-        - or:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: Any Variation
+      - genomic:
+          hugo_symbol: EGFR
+          variant_category: Any Variation

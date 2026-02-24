@@ -9,9 +9,9 @@ drug_list:
   drug:
   - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Pemetrexed'
-  - drug_name: 'Drug: Rilvegostomig'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Rilvegostomig'
+  - drug_name: 'Drug: Pemetrexed'
 long_title: A Phase III, Randomized, Double-blind, Multicenter, Global Study of Rilvegostomig
   or Pembrolizumab in Combination With Platinum-based Chemotherapy for the First-line
   Treatment of Patients With Metastatic Non-squamous Non-small Cell Lung Cancer Whose
@@ -151,15 +151,14 @@ treatment_list:
           pdl1_status: High
           disease_status:
           - Metastatic
-          - Advanced
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:
             hugo_symbol: EGFR
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ALK
-            variant_category: '!Structural Variation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ROS1
-            variant_category: '!Structural Variation'
+            variant_category: '!Any Variation'

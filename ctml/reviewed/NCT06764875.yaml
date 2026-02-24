@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Trastuzumab deruxtecan'
-  - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: 5-fluorouracil'
   - drug_name: 'Drug: Trastuzumab'
-  - drug_name: 'Drug: Oxaliplatin'
-  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Rilvegostomig'
+  - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Drug: Trastuzumab deruxtecan'
+  - drug_name: 'Drug: Oxaliplatin'
+  - drug_name: 'Drug: 5-fluorouracil'
+  - drug_name: 'Drug: Pembrolizumab'
 long_title: "A Randomized, Phase \u2162 Study of Rilvegostomig in Combination With\
   \ Fluoropyrimidine and Trastuzumab Deruxtecan Versus Trastuzumab, Chemotherapy,\
   \ and Pembrolizumab for the First Line Treatment of HER2-positive Gastric Cancer\
@@ -205,15 +205,10 @@ treatment_list:
           her2_status: Positive
           pdl1_status: High
           disease_status:
-          - Untreated
+          - Unresectable
           - Locally Advanced
           - Metastatic
-          - Unresectable
           oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Copy Number Variation
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Mutation

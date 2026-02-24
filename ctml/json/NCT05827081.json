@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Goserelin"
-            },
-            {
-                "drug_name": "Drug: Ansastrozole"
-            },
-            {
-                "drug_name": "Drug: Leuprolide"
+                "drug_name": "Drug: Letrozole"
             },
             {
                 "drug_name": "Drug: Exemestane"
             },
             {
-                "drug_name": "Drug: Letrozole"
+                "drug_name": "Drug: Goserelin"
+            },
+            {
+                "drug_name": "Drug: Leuprolide"
             },
             {
                 "drug_name": "Drug: Ribociclib"
+            },
+            {
+                "drug_name": "Drug: Ansastrozole"
             }
         ]
     },
@@ -163,38 +163,43 @@
                     {
                         "and": [
                             {
-                                "or": [
+                                "and": [
                                     {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                        }
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                                }
+                                            }
+                                        ]
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Juvenile Secretory Carcinoma of the Breast"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                            "age_numerical": ">=18",
+                                            "her2_status": "Negative",
+                                            "er_status": "Positive",
+                                            "pr_status": "Positive",
+                                            "disease_status": [
+                                                "Early Stage"
+                                            ]
                                         }
                                     }
                                 ]
                             },
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "her2_status": "Negative",
-                                    "er_status": "Positive",
-                                    "pr_status": "Positive",
-                                    "disease_status": [
-                                        "Early Stage"
-                                    ]
+                                "genomic": {
+                                    "hugo_symbol": "ERBB2",
+                                    "variant_category": "!Any Variation"
                                 }
                             }
                         ]

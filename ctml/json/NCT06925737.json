@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Docetaxel"
-            },
-            {
                 "drug_name": "Drug: Prednisone"
             },
             {
                 "drug_name": "Drug: Ifinatamab deruxtecan"
+            },
+            {
+                "drug_name": "Drug: Docetaxel"
             }
         ]
     },
@@ -133,17 +133,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
                                             "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Basal Cell Carcinoma of Prostate"
+                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
                                         }
                                     },
                                     {
@@ -153,7 +148,12 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
+                                            "oncotree_primary_diagnosis": "Basal Cell Carcinoma of Prostate"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
                                         }
                                     }
                                 ]
@@ -162,6 +162,9 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "gender": "Male",
+                                    "her2_status": "Negative",
+                                    "er_status": "Negative",
+                                    "pr_status": "Negative",
                                     "disease_status": [
                                         "Metastatic"
                                     ]

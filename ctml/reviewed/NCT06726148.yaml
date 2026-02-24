@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: ECI830'
-  - drug_name: 'Drug: fulvestrant'
   - drug_name: 'Drug: ribociclib'
+  - drug_name: 'Drug: fulvestrant'
 long_title: An Open-label, Multi-center, Phase I/II Study of ECI830 as a Single Agent
   and in Combination With Ribociclib and Endocrine Therapy in Patients With Advanced
   Hormone Receptor Positive, HER2-negative Breast Cancer and Advanced Solid Tumors
@@ -194,13 +194,10 @@ treatment_list:
           her2_status: Negative
           er_status: Positive
           disease_status:
-          - Locally Advanced
           - Metastatic
+          - Advanced
           - Unresectable
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: CCNE1
-            variant_category: Copy Number Variation
-        exclusion_criteria: None of the provided genes are mentioned in the exclusion
-          criteria.
+      - genomic:
+          hugo_symbol: CCNE1
+          variant_category: Copy Number Variation

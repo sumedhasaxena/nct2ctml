@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: STX-721 (3 dose levels)'
-  - drug_name: 'Drug: STX-721 (Escalated)'
   - drug_name: 'Drug: STX-721 (RP2D)'
+  - drug_name: 'Drug: STX-721 (Escalated)'
 long_title: First-In-Human Study of STX-721 in Participants With Locally Advanced
   or Metastatic Non-Small Cell Lung Cancer Harboring EGFR Exon 20 Insertion Mutations
 last_updated: '2025-08-06'
@@ -117,22 +117,31 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Positive
-          disease_status:
-          - Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - or:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: Mutation
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            age_numerical: '>=18'
+            her2_status: Positive
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+      - and:
+        - or:          
           - genomic:
               hugo_symbol: ERBB2
               variant_category: Mutation
-        - and:
+              variant_classification: In_Frame_Ins
+              exon: 20
+        - and:         
           - genomic:
               hugo_symbol: EGFR
               variant_category: '!Mutation'
+              protein_change: p.T790M
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: '!Mutation'
+              protein_change: p.C797S

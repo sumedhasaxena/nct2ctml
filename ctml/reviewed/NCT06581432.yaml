@@ -125,11 +125,10 @@ treatment_list:
         - or:
           - genomic:
               hugo_symbol: ERBB2
-              variant_category: Any Variation
-        - and:
-          - genomic:
-              hugo_symbol: ERBB2
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ERBB2
-              variant_category: '!Any Variation'
+              variant_category: Copy Number Variation
+          - and:
+            - genomic:
+                hugo_symbol: ERBB2
+                variant_category: Mutation
+            - clinical:
+                oncotree_primary_diagnosis: '!Non-Small Cell Lung Cancer'     

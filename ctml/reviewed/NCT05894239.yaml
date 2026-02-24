@@ -8,10 +8,10 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Inavolisib'
-  - drug_name: 'Drug: Phesgo'
   - drug_name: 'Drug: Optional Endocrine Therapy of Investigator''s Choice'
-  - drug_name: 'Drug: Taxane-based Chemotherapy'
+  - drug_name: 'Drug: Phesgo'
   - drug_name: 'Drug: Placebo'
+  - drug_name: 'Drug: Taxane-based Chemotherapy'
 long_title: A Phase III, Multicenter, Randomized, Double-Blind, Placebo-Controlled
   Study Evaluating the Efficacy and Safety of Inavolisib in Combination With Phesgo
   Versus Placebo in Combination With Phesgo As Maintenance Therapy After First Line
@@ -166,10 +166,12 @@ treatment_list:
             disease_status:
             - Metastatic
             - Locally Advanced
-      - and:
+            - Recurrent
+            - Refractory
+      - or:
         - genomic:
             hugo_symbol: ERBB2
-            variant_category: Mutation
+            variant_category: Copy Number Variation
         - genomic:
             hugo_symbol: PIK3CA
             variant_category: Mutation

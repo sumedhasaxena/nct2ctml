@@ -9,19 +9,19 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: Cisplatin"
             },
             {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Drug: Pembrolizumab"
             },
             {
                 "drug_name": "Drug: Divarasib"
             },
             {
-                "drug_name": "Drug: Cisplatin"
+                "drug_name": "Drug: Pemetrexed"
             },
             {
-                "drug_name": "Drug: Pemetrexed"
+                "drug_name": "Drug: Carboplatin"
             }
         ]
     },
@@ -179,12 +179,12 @@
                                         "or": [
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
                                                 }
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                                 }
                                             }
                                         ]
@@ -201,14 +201,11 @@
                                 ]
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "KRAS",
+                                    "variant_category": "Mutation",
+                                    "protein_change": "p.G12C"
+                                }
                             }
                         ]
                     }

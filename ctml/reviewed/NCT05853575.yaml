@@ -93,11 +93,18 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Metastatic
-          oncotree_primary_diagnosis: _SOLID_
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: _LIQUID_
+          - clinical:
+              oncotree_primary_diagnosis: _SOLID_
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Advanced
+            - Metastatic
       - genomic:
           hugo_symbol: KRAS
           variant_category: Mutation
+          protein_change: p.G12C

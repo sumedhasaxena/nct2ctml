@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Doxorubicin'
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Tebentafusp'
   - drug_name: 'Drug: DCSZ11'
-  - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Doxorubicin'
 long_title: A Phase 1, Multicenter, Open-Label, Dose Escalation and Expansion Study
   to Assess Safety, Tolerability, Pharmacokinetics, Pharmacodynamics of DCSZ11 as
   a Monotherapy and in Combination in Patients With Advanced or Metastatic Solid Tumors
@@ -349,25 +349,33 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Advanced
+          - Metastatic
           - Unresectable
           - Recurrent
           - Refractory
-          - Metastatic
-          - Locally Advanced
           oncotree_primary_diagnosis: _SOLID_
       - and:
         - genomic:
             hugo_symbol: EGFR
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: BRAF
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ROS1
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
-            hugo_symbol: NTRK
-            variant_category: '!Mutation'
+            hugo_symbol: NRTK
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ALK
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ALK
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ROS1
+            variant_category: '!Any Variation'

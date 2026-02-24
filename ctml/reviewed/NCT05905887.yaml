@@ -137,6 +137,7 @@ treatment_list:
           disease_status:
           - Metastatic
           - Advanced
+          - Refractory
           oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
       - or:
         - genomic:

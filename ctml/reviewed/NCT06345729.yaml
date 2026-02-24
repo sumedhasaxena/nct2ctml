@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: MK-1084'
   - drug_name: 'Other: Placebo'
   - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Drug: MK-1084'
 long_title: "A Phase 3, Randomized, Double-blind, Multicenter Study of MK-1084 in\
   \ Combination With Pembrolizumab Compared With Pembrolizumab Plus Placebo as Firstline\
   \ Treatment of Participants With KRAS G12C-Mutant, Locally Advanced or Metastatic\

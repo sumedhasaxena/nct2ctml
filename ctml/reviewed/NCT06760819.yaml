@@ -130,10 +130,9 @@ treatment_list:
           her2_status: Positive
           disease_status:
           - Locally Advanced
-          - Unresectable
           - Metastatic
+          - Unresectable
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Mutation

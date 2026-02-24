@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: S095024'
   - drug_name: 'Drug: S095018 Recommended Dose Expansion (RDE)'
-  - drug_name: 'Drug: S095029 RDE'
   - drug_name: 'Drug: S095024 RDE'
   - drug_name: 'Drug: S095029'
-  - drug_name: 'Drug: Cemiplimab'
-  - drug_name: 'Drug: S095024'
   - drug_name: 'Drug: S095018'
+  - drug_name: 'Drug: S095029 RDE'
+  - drug_name: 'Drug: Cemiplimab'
 long_title: A Phase 1b/2, Multicenter, Open-label Platform Study of Select Immunotherapy
   Combinations in Adult Participants With Previously Untreated Advanced Non-small
   Cell Lung Cancer (NSCLC) With High PD-L1 Expression
@@ -206,10 +206,10 @@ treatment_list:
       - and:
         - genomic:
             hugo_symbol: EGFR
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ALK
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ROS1
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'

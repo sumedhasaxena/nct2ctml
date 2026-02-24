@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Zanidatamab'
-  - drug_name: 'Drug: Durvalumab'
   - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Durvalumab'
   - drug_name: 'Drug: Pembrolizumab'
 long_title: An Open-label Randomized Trial of the Efficacy and Safety of Zanidatamab
   With Standard-of-care Therapy Against Standard-of-care Therapy Alone for Advanced
@@ -155,16 +155,20 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
+          - clinical:
+              oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
+                Duct
         - clinical:
-            oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
-              Duct
-        - clinical:
-            oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Positive
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          - Advanced
+            age_numerical: '>=18'
+            her2_status: Positive
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+            - Unresectable
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Copy Number Variation

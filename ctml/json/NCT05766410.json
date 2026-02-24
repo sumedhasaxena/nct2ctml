@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Ribociclib"
+                "drug_name": "Drug: Abemaciclib"
             },
             {
                 "drug_name": "Drug: Palbociclib"
             },
             {
-                "drug_name": "Drug: Abemaciclib"
+                "drug_name": "Drug: Letrozole"
             },
             {
-                "drug_name": "Drug: Letrozole"
+                "drug_name": "Drug: Ribociclib"
             }
         ]
     },
@@ -165,17 +165,12 @@
                                         "or": [
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
                                                 }
                                             },
                                             {
@@ -191,7 +186,9 @@
                                             "gender": "Female",
                                             "her2_status": "Negative",
                                             "er_status": "Positive",
+                                            "pr_status": "Positive",
                                             "disease_status": [
+                                                "Localized",
                                                 "Locally Advanced"
                                             ]
                                         }
@@ -199,18 +196,10 @@
                                 ]
                             },
                             {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "ERBB2",
-                                                    "variant_category": "!Mutation"
-                                                }
-                                            }
-                                        ]
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "ERBB2",
+                                    "variant_category": "!Any Variation"
+                                }
                             }
                         ]
                     }

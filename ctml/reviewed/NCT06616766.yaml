@@ -132,8 +132,17 @@ treatment_list:
           oncotree_primary_diagnosis: _SOLID_
       - or:
         - genomic:
-            hugo_symbol: ERBB2
+            hugo_symbol: EGFR
             variant_category: Mutation
         - genomic:
             hugo_symbol: EGFR
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: ERBB2
             variant_category: Mutation
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Any Variation

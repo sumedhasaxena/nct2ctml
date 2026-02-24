@@ -158,5 +158,8 @@ treatment_list:
           oncotree_primary_diagnosis: _SOLID_
       - or:
         - genomic:
-            hugo_symbol: BRCA
+            hugo_symbol: BRCA1
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: BRCA2
             variant_category: Mutation

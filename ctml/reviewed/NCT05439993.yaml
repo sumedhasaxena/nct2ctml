@@ -161,6 +161,9 @@ treatment_list:
         - genomic:
             hugo_symbol: MET
             variant_category: Copy Number Variation
+            cnv_call: High Amplification
         - genomic:
             hugo_symbol: MET
-            variant_category: Structural Variation
+            variant_category: Mutation
+            variant_classification: Splice_Site
+            exon: 14

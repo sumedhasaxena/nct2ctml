@@ -164,12 +164,29 @@ treatment_list:
       - and:
         - or:
           - clinical:
+              oncotree_primary_diagnosis: _LIQUID_
+          - clinical:
               oncotree_primary_diagnosis: _SOLID_
         - clinical:
             age_numerical: '>=19'
             disease_status:
-            - Advanced
-      - or:
-        - genomic:
-            hugo_symbol: BRAF
-            variant_category: Mutation
+            - Metastatic
+      - and:
+        - or:
+          - genomic:
+              hugo_symbol: BRAF
+              variant_category: Mutation
+              protein_change: p.V600E
+          - genomic:
+              hugo_symbol: BRAF
+              variant_category: Any Variation
+        - and:
+          - genomic:
+              hugo_symbol: HRAS
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: '!Any Variation'

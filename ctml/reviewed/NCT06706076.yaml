@@ -122,10 +122,14 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-      - or:
+      - and:
+        - or:
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Mutation
         - genomic:
-            hugo_symbol: EGFR
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+            hugo_symbol: MET
+            variant_category: '!Copy Number Variation'

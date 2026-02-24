@@ -187,16 +187,19 @@ treatment_list:
           oncotree_primary_diagnosis: _SOLID_
       - and:
         - or:
+          - and:
+            - genomic:
+                hugo_symbol: MET
+                variant_category: Mutation
+                variant_classification: Splice_Site
+                exon: 14
+            - clinical:
+                oncotree_primary_diagnosis: '!Non-Small Cell Lung Cancer'
           - genomic:
-              hugo_symbol: MET
-              variant_category: Mutation
+                hugo_symbol: MET
+                variant_category: 'Copy Number Variation'
           - genomic:
-              hugo_symbol: MET
-              variant_category: Copy Number Variation
-        - and:
-          - genomic:
-              hugo_symbol: MET
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: MET
-              variant_category: '!Copy Number Variation'
+                hugo_symbol: MET
+                variant_category: 'Mutation'
+
+          

@@ -12,16 +12,16 @@
                 "drug_name": "Drug: Inavolisib"
             },
             {
-                "drug_name": "Drug: Phesgo"
-            },
-            {
                 "drug_name": "Drug: Optional Endocrine Therapy of Investigator's Choice"
             },
             {
-                "drug_name": "Drug: Taxane-based Chemotherapy"
+                "drug_name": "Drug: Phesgo"
             },
             {
                 "drug_name": "Drug: Placebo"
+            },
+            {
+                "drug_name": "Drug: Taxane-based Chemotherapy"
             }
         ]
     },
@@ -209,18 +209,20 @@
                                             "her2_status": "Positive",
                                             "disease_status": [
                                                 "Metastatic",
-                                                "Locally Advanced"
+                                                "Locally Advanced",
+                                                "Recurrent",
+                                                "Refractory"
                                             ]
                                         }
                                     }
                                 ]
                             },
                             {
-                                "and": [
+                                "or": [
                                     {
                                         "genomic": {
                                             "hugo_symbol": "ERBB2",
-                                            "variant_category": "Mutation"
+                                            "variant_category": "Copy Number Variation"
                                         }
                                     },
                                     {

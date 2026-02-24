@@ -131,7 +131,8 @@
                                     "age_numerical": ">=20",
                                     "disease_status": [
                                         "Metastatic",
-                                        "Advanced"
+                                        "Advanced",
+                                        "Refractory"
                                     ],
                                     "oncotree_primary_diagnosis": "Gastrointestinal Stromal Tumor"
                                 }

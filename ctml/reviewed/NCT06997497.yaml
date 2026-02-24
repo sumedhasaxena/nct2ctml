@@ -8,11 +8,11 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: MK-1084'
-  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Oxaliplatin'
   - drug_name: 'Biological: Cetuximab'
-  - drug_name: 'Drug: 5-Fluorouracil'
+  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Leucovorin/levofolinate calcium'
+  - drug_name: 'Drug: 5-Fluorouracil'
 long_title: A Phase 3, Randomized, Open-label, Multicenter Clinical Study to Evaluate
   the Safety and Efficacy of MK-1084, Cetuximab, and mFOLFOX6 Versus mFOLFOX6 With
   or Without Bevacizumab as First-line Treatment of Participants With KRAS G12C-mutant,
@@ -173,14 +173,18 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
         - clinical:
-            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          - Untreated
+            age_numerical: '>=18'
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+      - genomic:
+          hugo_symbol: KRAS
+          variant_category: Mutation
+          protein_change: p.G12C

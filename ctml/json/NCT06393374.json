@@ -162,16 +162,37 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "her2_status": "Negative",
-                            "er_status": "Negative",
-                            "pr_status": "Negative",
-                            "disease_status": [
-                                "Early Stage"
-                            ],
-                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                        }
+                        "and": [
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "her2_status": "Negative",
+                                    "er_status": "Negative",
+                                    "pr_status": "Negative",
+                                    "disease_status": [
+                                        "Localized",
+                                        "Early Stage"
+                                    ],
+                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                }
+                            },
+                            {
+                                "and": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "BRCA1",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "BRCA2",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }

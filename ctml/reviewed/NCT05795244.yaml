@@ -191,20 +191,22 @@ treatment_list:
       - clinical:
           age_numerical: '>=20'
           gender: Female
+          mmr_status: MMR-Deficient
+          ms_status: MSI-H
           disease_status:
           - Localized
-          - Early Stage
+          - Locally Advanced
           oncotree_primary_diagnosis: Endometrial Carcinoma
       - or:
         - genomic:
             hugo_symbol: MLH1
-            variant_category: Mutation
+            variant_category: Any Variation
         - genomic:
             hugo_symbol: PMS2
-            variant_category: Mutation
+            variant_category: Any Variation
         - genomic:
             hugo_symbol: MSH2
-            variant_category: Mutation
+            variant_category: Any Variation
         - genomic:
             hugo_symbol: MSH6
-            variant_category: Mutation
+            variant_category: Any Variation

@@ -7,15 +7,15 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Exemestane'
+  - drug_name: 'Drug: Dexamethasone/Dexamethasone acetate'
+  - drug_name: 'Drug: Megestrol acetate/Medroxyprogesterone acetate'
+  - drug_name: 'Drug: Rescue Medications'
   - drug_name: 'Drug: Tamoxifen'
   - drug_name: 'Drug: Letrozole'
-  - drug_name: 'Drug: Rescue Medications'
-  - drug_name: 'Drug: Dexamethasone/Dexamethasone acetate'
+  - drug_name: 'Drug: Exemestane'
   - drug_name: 'Drug: Fludrocortisone/ Fludrocortisone acetate'
   - drug_name: 'Drug: MK-5684'
   - drug_name: 'Drug: Fulvestrant'
-  - drug_name: 'Drug: Megestrol acetate/Medroxyprogesterone acetate'
 long_title: A Multicenter, Open-label, Phase 2 Basket Study of MK-5684 in Participants
   With Selected Solid Tumors (OMAHA-015)
 last_updated: '2025-11-14'
@@ -219,15 +219,19 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        her2_status: Negative
-        er_status: Positive
-        pr_status: Positive
-        disease_status:
-        - Unresectable
-        - Metastatic
-        - Advanced
-        - Recurrent
-        - Refractory
-        oncotree_primary_diagnosis: _SOLID_
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          her2_status: Negative
+          er_status: Positive
+          pr_status: Positive
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          - Recurrent
+          - Advanced
+          - Unresectable
+          oncotree_primary_diagnosis: _SOLID_
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: '!Any Variation'

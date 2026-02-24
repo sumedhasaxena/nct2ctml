@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Volrustomig'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Ramucirumab'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Volrustomig'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Pemetrexed'
 long_title: A Phase II, Open-label Study to Evaluate the Safety, Tolerability, Pharmacokinetics,
   Immunogenicity, and Antitumor Activity of Volrustomig Priming Regimens in Combination
   With Other Anticancer Agents in Participants With Solid Tumors (eVOLVE-01)
@@ -150,9 +150,13 @@ treatment_list:
         level_internal_id: 4
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Metastatic
-        - Locally Advanced
-        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic
+          - Advanced
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - genomic:
+          hugo_symbol: EGFR
+          variant_category: '!Mutation'

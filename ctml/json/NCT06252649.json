@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: FOLFIRI Regimen"
-            },
-            {
-                "drug_name": "Drug: Bevacizumab-awwb"
-            },
-            {
                 "drug_name": "Drug: Panitumumab"
             },
             {
                 "drug_name": "Drug: Sotorasib"
+            },
+            {
+                "drug_name": "Drug: FOLFIRI Regimen"
+            },
+            {
+                "drug_name": "Drug: Bevacizumab-awwb"
             }
         ]
     },
@@ -146,23 +146,42 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
-                                }
-                            },
-                            {
-                                "or": [
+                                "and": [
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation"
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Appendiceal Adenocarcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Metastatic"
+                                            ]
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "genomic": {
+                                    "hugo_symbol": "KRAS",
+                                    "variant_category": "Mutation",
+                                    "protein_change": "p.G12C"
+                                }
                             }
                         ]
                     }

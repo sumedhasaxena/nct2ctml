@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Ramucirumab'
   - drug_name: 'Biological: TRK-950'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Ramucirumab'
 long_title: A Randomized, Multicenter, Open-Label, Phase 2 Study of TRK-950 When Used
   in Combination With Ramucirumab and Paclitaxel in Patients With Gastric Cancer
 last_updated: '2025-08-03'
@@ -199,14 +199,11 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=18'
-          her2_status: Negative
+          her2_status: '!Positive'
           disease_status:
           - Metastatic
           - Locally Advanced
-          - Unresectable
           oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-      - and:
-        - and:
-          - genomic:
-              hugo_symbol: ERBB2
-              variant_category: '!Mutation'
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: '!Any Variation'

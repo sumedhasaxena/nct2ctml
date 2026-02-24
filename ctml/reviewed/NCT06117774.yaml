@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Tarlatamab'
   - drug_name: 'Drug: Placebo'
+  - drug_name: 'Drug: Tarlatamab'
 long_title: A Phase 3, Randomized, Double-blind, Placebo-controlled, Multicenter Study
   of Tarlatamab Therapy in Subjects With Limited-Stage Small-Cell Lung Cancer (LS-SCLC)
   Who Have Not Progressed Following Concurrent Chemoradiation Therapy
@@ -162,12 +162,16 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Early Stage
+            age_numerical: '>=18'
+            disease_status:
+            - Localized
+      - genomic:
+          hugo_symbol: EGFR
+          variant_category: '!Any Variation'

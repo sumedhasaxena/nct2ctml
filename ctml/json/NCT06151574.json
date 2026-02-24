@@ -12,16 +12,16 @@
                 "drug_name": "Drug: carboplatin"
             },
             {
-                "drug_name": "Drug: pemetrexed"
-            },
-            {
-                "drug_name": "Drug: cisplatin"
+                "drug_name": "Drug: pembrolizumab"
             },
             {
                 "drug_name": "Drug: zongertinib"
             },
             {
-                "drug_name": "Drug: pembrolizumab"
+                "drug_name": "Drug: pemetrexed"
+            },
+            {
+                "drug_name": "Drug: cisplatin"
             }
         ]
     },
@@ -184,22 +184,17 @@
                                             "disease_status": [
                                                 "Advanced",
                                                 "Metastatic",
-                                                "Unresectable",
-                                                "Locally Advanced"
+                                                "Unresectable"
                                             ]
                                         }
                                     }
                                 ]
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "Mutation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "ERBB2",
+                                    "variant_category": "Mutation"
+                                }
                             }
                         ]
                     }

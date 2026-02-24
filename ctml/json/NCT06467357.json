@@ -9,10 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Diagnostic Test: Ventana PD-L1 SP263 assay"
+                "drug_name": "Drug: Gemcitabine"
             },
             {
-                "drug_name": "Drug: Rilvegostomig"
+                "drug_name": "Drug: Trastuzumab deruxtecan"
+            },
+            {
+                "drug_name": "Diagnostic Test: Agilent HercepTest\u2122 mAb pharmDx"
+            },
+            {
+                "drug_name": "Diagnostic Test: Ventana PD-L1 SP263 assay"
             },
             {
                 "drug_name": "Drug: Durvalumab"
@@ -21,13 +27,7 @@
                 "drug_name": "Drug: Cisplatin"
             },
             {
-                "drug_name": "Drug: Gemcitabine"
-            },
-            {
-                "drug_name": "Diagnostic Test: Agilent HercepTest\u2122 mAb pharmDx"
-            },
-            {
-                "drug_name": "Drug: Trastuzumab deruxtecan"
+                "drug_name": "Drug: Rilvegostomig"
             }
         ]
     },
@@ -227,12 +227,12 @@
                                         "or": [
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
+                                                    "oncotree_primary_diagnosis": "Intracholecystic Papillary Neoplasm"
                                                 }
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Intracholecystic Papillary Neoplasm"
+                                                    "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
                                                 }
                                             }
                                         ]
@@ -244,22 +244,17 @@
                                             "disease_status": [
                                                 "Unresectable",
                                                 "Locally Advanced",
-                                                "Metastatic",
-                                                "Untreated"
+                                                "Metastatic"
                                             ]
                                         }
                                     }
                                 ]
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "Any Variation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "ERBB2",
+                                    "variant_category": "Any Variation"
+                                }
                             }
                         ]
                     }

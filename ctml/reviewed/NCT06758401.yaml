@@ -182,31 +182,44 @@ treatment_list:
           - clinical:
               oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
           - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+          - clinical:
               oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
             age_numerical: '>=18'
+            her2_status: Negative
+            er_status: Negative
+            pr_status: Negative
             pdl1_status: High
             disease_status:
+            - Locally Advanced
             - Metastatic
+            - Unresectable
       - and:
         - genomic:
             hugo_symbol: EGFR
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ALK
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ROS1
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
-            hugo_symbol: NTRK
-            variant_category: '!Mutation'
+            hugo_symbol: NTRK1
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: NTRK2
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: NTRK3
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: BRAF
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: RET
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: MET
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'

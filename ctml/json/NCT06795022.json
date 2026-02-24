@@ -140,33 +140,16 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Advanced",
-                                        "Recurrent",
-                                        "Metastatic",
-                                        "Unresectable"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Advanced",
+                                "Recurrent",
+                                "Metastatic",
+                                "Unresectable"
+                            ],
+                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                        }
                     }
                 ]
             }

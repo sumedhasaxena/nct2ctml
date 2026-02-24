@@ -8,9 +8,9 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Toripalimab'
-  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: 5 Fluorouracil'
   - drug_name: 'Drug: CHS-114'
+  - drug_name: 'Drug: Cisplatin'
 long_title: A Phase 1B, Multicenter, Open-Label Study of the Safety and Efficacy of
   CHS-114 in Combination With Toripalimab With or Without Other Treatments in Participants
   With Advanced or Metastatic Solid Tumors
@@ -166,6 +166,38 @@ treatment_list:
         level_description: 'Drug: Toripalimab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Adenocarcinoma of the Gastroesophageal Junction
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+              - Locally Advanced
+              - Metastatic
+              - Unresectable
+        - and:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: MLH1
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: MSH2
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: MSH6
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: PMS2
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: EPCAM
+              variant_category: '!Any Variation'
     - arm_code: 'Cohort A - Arm A2: CHS-114 Dose B + Toripalimab'
       arm_internal_id: 1
       arm_description: Participants will be treated with dose B of CHS-114 administered
@@ -180,6 +212,38 @@ treatment_list:
         level_description: 'Drug: Toripalimab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Adenocarcinoma of the Gastroesophageal Junction
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+              - Locally Advanced
+              - Metastatic
+              - Unresectable
+        - and:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: MLH1
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: MSH2
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: MSH6
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: PMS2
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: EPCAM
+              variant_category: '!Any Variation'
     - arm_code: 'Cohort B - Arm B1: CHS-114 Dose A + Toripalimab'
       arm_internal_id: 2
       arm_description: Participants will be treated with dose A of CHS-114 administered
@@ -194,6 +258,15 @@ treatment_list:
         level_description: 'Drug: Toripalimab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+            disease_status:
+              - Locally Advanced
+              - Metastatic
+              - Unresectable
     - arm_code: 'Cohort B - Arm B2: CHS-114 Dose B + Toripalimab'
       arm_internal_id: 3
       arm_description: Participants will be treated with dose B of CHS-114 administered
@@ -208,6 +281,15 @@ treatment_list:
         level_description: 'Drug: Toripalimab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+            disease_status:
+              - Locally Advanced
+              - Metastatic
+              - Unresectable
     - arm_code: 'Cohort C - Arm C: CHS-114 Dose B + Toripalimab + 5 fluorouracil (5
         FU) + Cisplatin'
       arm_internal_id: 4
@@ -231,6 +313,22 @@ treatment_list:
         level_description: 'Drug: Cisplatin'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+            disease_status:
+              - Locally Advanced
+              - Metastatic
+              - Unresectable
+        - and:
+          - genomic:
+              hugo_symbol: DYPD
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: TYMS
+              variant_category: '!Any Variation'
     - arm_code: 'Experimental: Cohort D - Arm D1 (Liver Mets): CHS-114 + Toripalimab'
       arm_internal_id: 5
       arm_description: Participants will be treated with CHS-114 administered as an
@@ -245,6 +343,16 @@ treatment_list:
         level_description: 'Drug: Toripalimab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+            disease_status:
+              - Locally Advanced
+              - Metastatic
+              - Advanced
+              - Unresectable
     - arm_code: 'Experimental: Cohort D - Arm D2 (Non-Liver Mets): CHS-114 + Toripalimab'
       arm_internal_id: 6
       arm_description: Participants will be treated with CHS-114 administered as an
@@ -259,24 +367,20 @@ treatment_list:
         level_description: 'Drug: Toripalimab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+            disease_status:
+              - Locally Advanced
+              - Metastatic
+              - Advanced
+              - Unresectable
     match:
     - and:
       - clinical:
           age_numerical: '>=18'
           her2_status: Negative
-          disease_status:
-          - Unresectable
-          - Locally Advanced
-          - Metastatic
-          - Advanced
-          oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: RAS
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: BRAF
-            variant_category: Mutation
+          mmr_status: MMR-Proficient
+          ms_status: MSS

@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Experimental treatment arm'
   - drug_name: 'Drug: Control treatment arm'
+  - drug_name: 'Drug: Experimental treatment arm'
 long_title: The Exploratory Randomized Phase II Study of Trastuzumab Deruxtecan Versus
   Endocrine Therapy of Physician's Choice in Low-HER2 Expressing Hormone Receptor-positive
   Advanced Breast Cancer Patients
@@ -250,8 +250,9 @@ treatment_list:
         er_status: Positive
         pr_status: Positive
         disease_status:
-        - Recurrent
-        - Metastatic
-        - Unresectable
         - Advanced
+        - Metastatic
+        - Recurrent
+        - Refractory
+        - Unresectable
         oncotree_primary_diagnosis: Invasive Breast Carcinoma

@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Gemcitabine'
   - drug_name: 'Drug: Mitomycin C'
+  - drug_name: 'Drug: Gemcitabine'
   - drug_name: 'Drug: TAR-210'
 long_title: "A Phase 3, Randomized, Open-label, Multicenter Study Evaluating the Efficacy\
   \ and Safety of TAR-210 Erdafitinib Intravesical Delivery System Versus Investigator's\
@@ -137,35 +137,24 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          - Unresectable
-          oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Urothelial Papilloma
+          - clinical:
+              oncotree_primary_diagnosis: Inverted Urothelial Papilloma
+          - clinical:
+              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Localized
       - or:
         - genomic:
-            hugo_symbol: FGFR1
+            hugo_symbol: FGFR
             variant_category: Mutation
         - genomic:
-            hugo_symbol: FGFR1
-            variant_category: Structural Variation
-        - genomic:
-            hugo_symbol: FGFR2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FGFR2
-            variant_category: Structural Variation
-        - genomic:
-            hugo_symbol: FGFR3
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FGFR3
-            variant_category: Structural Variation
-        - genomic:
-            hugo_symbol: FGFR4
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FGFR4
+            hugo_symbol: FGFR
             variant_category: Structural Variation

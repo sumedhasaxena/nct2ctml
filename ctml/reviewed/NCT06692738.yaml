@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Nab-paclitaxel'
   - drug_name: 'Drug: Rilvegostomig'
-  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Carboplatin'
 long_title: A Phase III, Randomized, Double-blind, Multicenter, Global Study of Rilvegostomig
   or Pembrolizumab in Combination With Platinum-based Chemotherapy for the First-line
   Treatment of Patients With Metastatic Squamous Non-small Cell Lung Cancer Whose
@@ -142,9 +142,11 @@ treatment_list:
     - and:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
             oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
         - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
       - clinical:
           age_numerical: '>=18'
           pdl1_status: High

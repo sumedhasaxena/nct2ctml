@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Budigalimab'
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Telisotuzumab Adizutecan'
-  - drug_name: 'Drug: Budigalimab'
   - drug_name: 'Drug: Pemetrexed'
-  - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Telisotuzumab Adizutecan'
 long_title: An Open-label Multi-Cohort Phase 1b/2 Study to Evaluate the Safety, Efficacy,
   and Optimal Dose of Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint
   Inhibitor in Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for
@@ -181,10 +181,13 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Locally Advanced
-        - Metastatic
-        - Advanced
-        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - genomic:
+          hugo_symbol: EGFR
+          variant_category: '!Mutation'

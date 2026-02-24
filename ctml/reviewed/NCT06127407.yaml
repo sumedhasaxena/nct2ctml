@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Ivosidenib 500mg'
+  - drug_name: 'Drug: Placebo'
 long_title: "A Phase 3, Multicenter, Double-blind, Randomized, Placebo-controlled\
   \ Study of Ivosidenib in Participants \u226518 Years of Age With Locally Advanced\
   \ or Metastatic Conventional Chondrosarcoma With an IDH1 Mutation, Untreated or\
@@ -163,8 +163,8 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           - Recurrent
+          - Unresectable
           oncotree_primary_diagnosis: Chondrosarcoma
-      - or:
-        - genomic:
-            hugo_symbol: IDH1
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: IDH1
+          variant_category: Mutation

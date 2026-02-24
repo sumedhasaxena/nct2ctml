@@ -148,9 +148,16 @@ treatment_list:
           her2_status: Positive
           disease_status:
           - Advanced
-          - Metastatic
           oncotree_primary_diagnosis: Ovarian Epithelial Tumor
       - and:
-        - genomic:
-            hugo_symbol: BRCA
-            variant_category: '!Mutation'
+        - or:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Copy Number Variation     
+        - and:
+          - genomic:
+              hugo_symbol: BRCA1
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: BRCA2
+              variant_category: '!Any Variation'

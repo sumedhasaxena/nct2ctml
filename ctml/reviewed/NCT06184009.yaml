@@ -117,7 +117,6 @@ treatment_list:
           disease_status:
           - Untreated
           oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - or:
-        - genomic:
-            hugo_symbol: KMT2A
-            variant_category: Structural Variation
+      - genomic:
+          hugo_symbol: KMT2A
+          variant_category: Structural Variation

@@ -235,49 +235,22 @@ treatment_list:
           - Metastatic
           - Unresectable
           oncotree_primary_diagnosis: Invasive Breast Carcinoma
-      - or:
+      - and:
         - genomic:
             hugo_symbol: BRCA1
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: BRCA2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ATM
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: ATR
-            variant_category: Mutation
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: BRIP1
-            variant_category: Mutation
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: PALB2
-            variant_category: Mutation
+            variant_category: '!Any Variation'
         - genomic:
-            hugo_symbol: CHEK1
-            variant_category: Mutation
+            hugo_symbol: BRCA2
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ATR
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: CHEK2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FANCA
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FANCC
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FANCD2
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FANCE
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FANCF
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FANCG
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: RAD51
-            variant_category: Mutation
+            variant_category: '!Any Variation'

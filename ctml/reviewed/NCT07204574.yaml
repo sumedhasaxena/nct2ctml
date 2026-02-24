@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: FOLFOX (Oxaliplatin/Leucovorin/5-Fluorouracil)'
   - drug_name: 'Drug: FOLFIRI (Fluorouracil (5-FU), leucovorin, irinotecan)'
+  - drug_name: 'Drug: Cetuximab (Erbitux)'
   - drug_name: 'Drug: HCB101'
   - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Drug: Cetuximab (Erbitux)'
-  - drug_name: 'Drug: FOLFOX (Oxaliplatin/Leucovorin/5-Fluorouracil)'
 long_title: The Phase 1b/IIa, Open-label, Dose Escalation and Dose Expansion to Evaluate
   Safety, Tolerability, and Preliminary Efficacy of the Combination of HCB101, Cetuximab/Bevacizumab,
   and FOLFOX/FOLFIRI in Advanced or Metastatic Colorectal Cancer
@@ -254,18 +254,21 @@ treatment_list:
               oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
           - clinical:
               oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Locally Advanced
             - Metastatic
       - and:
-        - and:
-          - genomic:
-              hugo_symbol: BRAF
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: RAS
-              variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: HRAS
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: NRAS
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: BRAF
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: '!Mutation'

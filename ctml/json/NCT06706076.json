@@ -135,17 +135,27 @@
                                 }
                             },
                             {
-                                "or": [
+                                "and": [
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation"
-                                        }
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ERBB2",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            }
+                                        ]
                                     },
                                     {
                                         "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "Mutation"
+                                            "hugo_symbol": "MET",
+                                            "variant_category": "!Copy Number Variation"
                                         }
                                     }
                                 ]

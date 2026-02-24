@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: RMC-6291'
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: RMC-9805'
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: RMC-6236'
   - drug_name: 'Drug: Pemetrexed'
-  - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: RMC-6291'
+  - drug_name: 'Drug: RMC-9805'
 long_title: A Platform Study of RAS(ON) Inhibitors in Patients With RAS-Mutated Non-Small
   Cell Lung Cancer (NSCLC)
 last_updated: '2025-11-06'
@@ -194,3 +194,25 @@ treatment_list:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
+            protein_change: p.G12C
+        - genomic:
+            hugo_symbol: HRAS
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: NRAS
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: HRAS
+            variant_category: Mutation
+            protein_change: p.G12D
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12D
+        - genomic:
+            hugo_symbol: NRAS
+            variant_category: Mutation
+            protein_change: p.G12D

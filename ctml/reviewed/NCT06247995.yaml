@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: [68Ga]Ga-NeoB'
   - drug_name: 'Drug: [177Lu]Lu-NeoB'
+  - drug_name: 'Drug: [68Ga]Ga-NeoB'
 long_title: A Phase I/II, Open-label, Multi-center Trial of [177Lu]Lu-NeoB in Combination
   With Capecitabine in Adult Patients With Gastrin Releasing Peptide Receptor Positive,
   Estrogen Receptor-positive, Human Epidermal Growth Factor Receptor-2 Negative Metastatic
@@ -362,19 +362,18 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
-          - clinical:
-              oncotree_primary_diagnosis: Invasive Breast Carcinoma
-        - clinical:
-            age_numerical: '>=18'
-            her2_status: Negative
-            er_status: Positive
-            disease_status:
-            - Metastatic
       - or:
-        - genomic:
-            hugo_symbol: CDK4
-            variant_category: Mutation
+        - clinical:
+            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Inflammatory Breast Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+      - clinical:
+          age_numerical: '>=18'
+          her2_status: Negative
+          er_status: Positive
+          disease_status:
+          - Metastatic

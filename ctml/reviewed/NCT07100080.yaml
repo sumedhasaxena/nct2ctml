@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Iza-bren'
-  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Iza-bren'
+  - drug_name: 'Drug: Cisplatin'
 long_title: 'IZABRIGHT-Lung01: A Randomized, Open-label, Phase 2/3 Study of Izalontamab
   Brengitecan (BMS-986507) Versus Platinum-based Chemotherapy in Patients With EGFR-mutated
   Non-small Cell Lung Cancer and Disease Progression on EGFR Tyrosine Kinase Inhibitor
@@ -135,13 +135,25 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Metastatic
+            - Advanced
       - or:
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
+            protein_change: p.L858R
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: Mutation
+            exon: 19

@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Zanidatamab'
   - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Vinorelbine'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Zanidatamab'
   - drug_name: 'Drug: Trastuzumab'
   - drug_name: 'Drug: Eribulin'
-  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Vinorelbine'
 long_title: A Phase 3, Randomized, Open-label, Multicenter, Controlled Study to Evaluate
   the Efficacy and Safety of Zanidatamab in Combination With Physician's Choice Chemotherapy
   Compared to Trastuzumab in Combination With Physician's Choice Chemotherapy for
@@ -213,9 +213,7 @@ treatment_list:
             age_numerical: '>=18'
             her2_status: Positive
             disease_status:
-            - Unresectable
             - Metastatic
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Copy Number Variation

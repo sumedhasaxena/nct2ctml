@@ -122,10 +122,14 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Refractory
-        - Recurrent
-        - Metastatic
-        oncotree_primary_diagnosis: _SOLID_
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Refractory
+          - Recurrent
+          - Metastatic
+          oncotree_primary_diagnosis: _SOLID_
+      - genomic:
+          hugo_symbol: MTAP
+          variant_category: Copy Number Variation

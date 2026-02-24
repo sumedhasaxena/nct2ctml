@@ -252,26 +252,31 @@ treatment_list:
       - and:
         - or:
           - clinical:
+              oncotree_primary_diagnosis: Inflammatory Breast Cancer
+          - clinical:
               oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
                 the Esophagus/Stomach
           - clinical:
-              oncotree_primary_diagnosis: Metaplastic Breast Cancer
-          - clinical:
               oncotree_primary_diagnosis: Invasive Breast Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+              oncotree_primary_diagnosis: Metaplastic Breast Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Breast Sarcoma
           - clinical:
               oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Inflammatory Breast Cancer
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
         - clinical:
             age_numerical: '>=18'
-            her2_status: Positive
+            pdl1_status: High
             disease_status:
             - Locally Advanced
             - Metastatic
             - Unresectable
       - or:
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Any Variation
         - genomic:
             hugo_symbol: BRCA1
             variant_category: Mutation

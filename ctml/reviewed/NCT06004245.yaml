@@ -158,12 +158,12 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           mmr_status: MMR-Deficient
+          ms_status: MSI-H
           disease_status:
           - Advanced
           - Metastatic
-          - Unresectable
+          - Refractory
           oncotree_primary_diagnosis: _SOLID_
-      - and:
-        - genomic:
-            hugo_symbol: WRN
-            variant_category: '!Mutation'
+      - genomic:
+          hugo_symbol: WRN
+          variant_category: '!Any Variation'

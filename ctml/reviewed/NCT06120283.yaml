@@ -8,9 +8,9 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Elacestrant'
-  - drug_name: 'Drug: BGB-43395'
   - drug_name: 'Drug: Fulvestrant'
   - drug_name: 'Drug: Letrozole'
+  - drug_name: 'Drug: BGB-43395'
 long_title: A Phase 1a/1b Study Investigating the Safety, Tolerability, Pharmacokinetics,
   Pharmacodynamics, and Preliminary Antitumor Activity of the CDK4 Inhibitor BGB-43395,
   Alone or as Part of Combination Therapies in Patients With Metastatic HR+/HER2-
@@ -152,13 +152,13 @@ treatment_list:
           age_numerical: '>=18'
           her2_status: Negative
           er_status: Positive
+          pr_status: Positive
           disease_status:
           - Advanced
           - Metastatic
-          - Unresectable
           - Refractory
+          - Unresectable
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: CDK4
-            variant_category: Any Variation
+      - genomic:
+          hugo_symbol: CDK4
+          variant_category: Any Variation

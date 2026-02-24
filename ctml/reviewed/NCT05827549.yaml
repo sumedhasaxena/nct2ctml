@@ -7,16 +7,16 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Maintenance(12 Weeks/Cycle)'
-  - drug_name: 'Drug: Reinduction(4weeks)'
-  - drug_name: 'Drug: Blinatumomab 1st(High Risk Group)_4 Weeks'
-  - drug_name: 'Procedure: Stem Cell Transplantation'
-  - drug_name: 'Drug: Intensification course'
   - drug_name: 'Drug: Consolidation 2nd(3weeks)'
-  - drug_name: 'Drug: Blinatumomab 2nd (High Risk Group)_4 Weeks'
-  - drug_name: 'Drug: Blinatumomab-Salvage 1st (Very High Risk Group)_4 Weeks'
+  - drug_name: 'Drug: Maintenance(12 Weeks/Cycle)'
   - drug_name: 'Drug: Cosolodation 1st(3weeks)'
+  - drug_name: 'Procedure: Stem Cell Transplantation'
   - drug_name: 'Drug: Blinatumomab-Salvage 2nd (Very High Risk Group)_4 Weeks'
+  - drug_name: 'Drug: Blinatumomab 1st(High Risk Group)_4 Weeks'
+  - drug_name: 'Drug: Blinatumomab-Salvage 1st (Very High Risk Group)_4 Weeks'
+  - drug_name: 'Drug: Blinatumomab 2nd (High Risk Group)_4 Weeks'
+  - drug_name: 'Drug: Intensification course'
+  - drug_name: 'Drug: Reinduction(4weeks)'
 long_title: Evaluation of Treatment Efficacy According to Risk Group in Relapsed Childhood
   Acute Lymphoblastic Leukemia
 last_updated: '2025-06-06'
@@ -233,5 +233,8 @@ treatment_list:
           oncotree_primary_diagnosis: Lymphoid Neoplasm
       - and:
         - genomic:
+            hugo_symbol: ABL1
+            variant_category: '!Structural Variation'
+        - genomic:
             hugo_symbol: BCR
-            variant_category: '!Mutation'
+            variant_category: '!Structural Variation'

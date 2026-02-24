@@ -150,14 +150,30 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "disease_status": [
-                                "Advanced",
-                                "Metastatic"
-                            ],
-                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                        }
+                        "and": [
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Advanced",
+                                        "Metastatic",
+                                        "Refractory"
+                                    ],
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
+                            },
+                            {
+                                "and": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "!Mutation",
+                                            "protein_change": "p.T790M"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }

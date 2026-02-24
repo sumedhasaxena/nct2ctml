@@ -176,18 +176,18 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: _SOLID_
-          - clinical:
               oncotree_primary_diagnosis: _LIQUID_
+          - clinical:
+              oncotree_primary_diagnosis: _SOLID_
         - clinical:
             age_numerical: '>=19'
             disease_status:
             - Metastatic
-            - Unresectable
+            - Refractory
       - or:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
         - genomic:
             hugo_symbol: PTEN
-            variant_category: Copy Number Variation
+            variant_category: Any Variation

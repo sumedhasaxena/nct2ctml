@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Tarlatamab"
+                "drug_name": "Drug: Placebo"
             },
             {
-                "drug_name": "Drug: Placebo"
+                "drug_name": "Drug: Tarlatamab"
             }
         ]
     },
@@ -155,25 +155,35 @@
                     {
                         "and": [
                             {
-                                "or": [
+                                "and": [
                                     {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lung Neuroendocrine Tumor"
-                                        }
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Lung Neuroendocrine Tumor"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
+                                                }
+                                            }
+                                        ]
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Localized"
+                                            ]
                                         }
                                     }
                                 ]
                             },
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Early Stage"
-                                    ]
+                                "genomic": {
+                                    "hugo_symbol": "EGFR",
+                                    "variant_category": "!Any Variation"
                                 }
                             }
                         ]

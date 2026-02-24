@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-04-05",
     "study_start_date": "2024-04-29",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -154,7 +154,8 @@
                                     "age_numerical": ">=18",
                                     "disease_status": [
                                         "Metastatic",
-                                        "Recurrent"
+                                        "Recurrent",
+                                        "Unresectable"
                                     ],
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }
@@ -164,7 +165,16 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation"
+                                            "variant_category": "Mutation",
+                                            "variant_classification": "In_Frame_Del",
+                                            "exon": 19
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.L858R"
                                         }
                                     }
                                 ]

@@ -172,16 +172,14 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           - Advanced
-          - Unresectable
           oncotree_primary_diagnosis: _SOLID_
-      - and:
-        - or:
-          - genomic:
-              hugo_symbol: FGFR3
-              variant_category: Mutation
-          - genomic:
-              hugo_symbol: FGFR4
-              variant_category: Mutation
-          - genomic:
-              hugo_symbol: FGF19
-              variant_category: Copy Number Variation
+      - or:
+        - genomic:
+            hugo_symbol: FGFR3
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: FGFR4
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: FGF19
+            variant_category: Copy Number Variation

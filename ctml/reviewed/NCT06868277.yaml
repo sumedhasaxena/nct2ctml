@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Rilvegostomig'
   - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Biological: Rilvegostomig'
 long_title: A Phase III, Randomized, Double-blind, Multicenter, Global Study of Rilvegostomig
   or Pembrolizumab Monotherapy for the First-line Treatment of Patients With PD-L1-high
   Metastatic Non-small Cell Lung Cancer (ARTEMIDE-Lung04)
@@ -125,7 +125,6 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
-          - Advanced
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:

@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Atirmociclib'
   - drug_name: 'Drug: Fulvestrant'
   - drug_name: 'Drug: Trastuzumab'
-  - drug_name: 'Drug: Tucatinib'
   - drug_name: 'Drug: Ribociclib'
+  - drug_name: 'Drug: Atirmociclib'
   - drug_name: 'Drug: OKI-219'
+  - drug_name: 'Drug: Tucatinib'
 long_title: "PIKture-01: First-in-Human Study of the PI3K\u03B1H1047R Mutant-Selective\
   \ Inhibitor OKI-219 as Monotherapy in Participants With Advanced Solid Tumors and\
   \ as Part of Combination Therapy in Participants With Advanced Breast Cancer"
@@ -281,19 +281,30 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - clinical:
-          age_numerical: '>=18'
-          er_status: Positive
-          disease_status:
-          - Advanced
-          - Locally Advanced
-          - Metastatic
-          - Unresectable
-          oncotree_primary_diagnosis: _SOLID_
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: _LIQUID_
+          - clinical:
+              oncotree_primary_diagnosis: _SOLID_
+        - clinical:
+            age_numerical: '>=18'
+            her2_status: Positive
+            er_status: Positive
+            disease_status:
+            - Advanced
+            - Locally Advanced
+            - Metastatic
+            - Unresectable
       - and:
         - genomic:
-            hugo_symbol: KRAS
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: PTEN
-            variant_category: '!Mutation'
+            hugo_symbol: PIK3CA
+            variant_category: Mutation
+            protein_change: p.H1047R
+        - and:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: PTEN
+              variant_category: '!Mutation'

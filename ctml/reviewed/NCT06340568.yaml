@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: BNT323/DB-1303'
-  - drug_name: 'Drug: Doxorubicin'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Doxorubicin'
 long_title: A Phase III, Randomized, Multi-site, Open-label Trial of BNT323/DB-1303
   Versus Investigator's Choice of Chemotherapy in Previously Treated Patients With
   HER2- Expressing Recurrent Endometrial Cancer
@@ -150,7 +150,6 @@ treatment_list:
           disease_status:
           - Recurrent
           oncotree_primary_diagnosis: Endometrial Carcinoma
-      - or:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Any Variation

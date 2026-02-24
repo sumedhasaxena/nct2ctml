@@ -161,6 +161,29 @@ treatment_list:
         level_description: 'Drug: M9140'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:              
+              oncotree_primary_diagnosis: Stomach Adenocarcinoma
+          - clinical:              
+              oncotree_primary_diagnosis: Adenocarcinoma of the Gastroesophageal Junction
+          - and:
+            - genomic:
+                hugo_symbol: EGFR
+                variant_category: Mutation
+                variant_classification: Splice_Site
+                exon: 14
+            - clinical:
+                oncotree_primary_diagnosis: '!Non-Small Cell Lung Cancer'
+        - clinical:
+            age_numerical: '>=18'
+            ms_status: MSI-H
+            disease_status:
+              - Advanced
+              - Metastatic
+              - Locally Advanced
+            her2_status: Negative    
     - arm_code: 'Substudy GC: M9140 Monotherapy - Part B CEACAM5 Low'
       arm_internal_id: 1
       arm_description: 'Substudy GC: M9140 Monotherapy - Part B CEACAM5 Low'
@@ -170,6 +193,21 @@ treatment_list:
         level_description: 'Drug: M9140'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:              
+              oncotree_primary_diagnosis: Stomach Adenocarcinoma
+          - clinical:              
+              oncotree_primary_diagnosis: Adenocarcinoma of the Gastroesophageal Junction
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+              - Advanced
+              - Metastatic
+              - Locally Advanced
+            her2_status: Negative
+            ms_status: MSI-H    
     - arm_code: 'Substudy NSCLC: M9140 Monotherapy - Part A CEACAM5 High EGFR Wt'
       arm_internal_id: 2
       arm_description: 'Substudy NSCLC: M9140 Monotherapy - Part A CEACAM5 High EGFR
@@ -180,6 +218,44 @@ treatment_list:
         level_description: 'Drug: M9140'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - and:
+          - not:
+              - genomic:
+                  hugo_symbol: EGFR
+                  variant_category: Mutation
+          - or:
+              - genomic:
+                  hugo_symbol: ALK
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: ROS1
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: BRAF
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: MET
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: RET
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: KRAS
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: NTRK1
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: NTRK2
+                  variant_category: Any Variation
+              - genomic:
+                  hugo_symbol: NTRK3
+                  variant_category: Any Variation    
     - arm_code: 'Substudy NSCLC: M9140 Monotherapy - Part B CEACAM5 High EGFR mut'
       arm_internal_id: 3
       arm_description: 'Substudy NSCLC: M9140 Monotherapy - Part B CEACAM5 High EGFR
@@ -190,6 +266,18 @@ treatment_list:
         level_description: 'Drug: M9140'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            pdl1_status: High
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+            disease_status:
+              - Advanced
+              - Metastatic
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: Mutation    
     - arm_code: 'Substudy PDAC: M9140 Monotherapy - Part A CEACAM5 High'
       arm_internal_id: 4
       arm_description: 'Substudy PDAC: M9140 Monotherapy - Part A CEACAM5 High'
@@ -199,18 +287,12 @@ treatment_list:
         level_description: 'Drug: M9140'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Negative
-          pdl1_status: High
-          disease_status:
-          - Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: _SOLID_
+      match:
       - and:
-        - or:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: Mutation
+        - clinical:
+            age_numerical: '>=18'
+            pdl1_status: High
+            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+            disease_status:
+              - Advanced
+              - Metastatic

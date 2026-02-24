@@ -203,26 +203,18 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
-                the Esophagus/Stomach
+              oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Mucosal Melanoma of the Esophagus
-          - clinical:
-              oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
-          - clinical:
               oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Smooth Muscle Neoplasm, NOS
         - clinical:
             age_numerical: '>=18'
+            her2_status: '!Positive'
             disease_status:
             - Metastatic
             - Locally Advanced
-      - and:
-        - {}
-        - or:
-          - genomic:
-              hugo_symbol: ERBB2
-              variant_category: '!Mutation'
+            - Unresectable
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: '!Any Variation'

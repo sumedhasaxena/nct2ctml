@@ -134,58 +134,39 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Sialoblastoma
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
           - clinical:
-              oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
-          - clinical:
               oncotree_primary_diagnosis: Ovarian Epithelial Tumor
           - clinical:
-              oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+              oncotree_primary_diagnosis: Sialoblastoma
           - clinical:
-              oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
+              oncotree_primary_diagnosis: Metaplastic Breast Cancer
           - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              oncotree_primary_diagnosis: Ovarian Cancer, Other
-          - clinical:
-              oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Salivary Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Pancreatoblastoma
+              oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
           - clinical:
               oncotree_primary_diagnosis: Invasive Breast Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
-          - clinical:
               oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
-                the Esophagus/Stomach
-          - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
           - clinical:
               oncotree_primary_diagnosis: Endometrial Carcinoma
           - clinical:
+              oncotree_primary_diagnosis: Salivary Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+          - clinical:
               oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
         - clinical:
             age_numerical: '>=18'
             her2_status: Positive
@@ -193,26 +174,18 @@ treatment_list:
             - Locally Advanced
             - Unresectable
             - Metastatic
+            - Advanced
+            - Refractory
       - and:
         - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Mutation
-        - and:
-          - genomic:
-              hugo_symbol: KRAS
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: NRAS
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: BRAF
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: '!Mutation'
-          - genomic:
-              hugo_symbol: ROS1
-              variant_category: '!Structural Variation'
+            hugo_symbol: BRAF
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ALK
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ROS1
+            variant_category: '!Any Variation'

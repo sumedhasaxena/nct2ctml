@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Mervometostat (PF-06821497)'
   - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: Mervometostat (PF-06821497)'
 long_title: A PHASE I DOSE ESCALATION AND EXPANDED COHORT STUDY OF PF 06821497 (MEVROMETOSTAT)
   IN THE TREATMENT OF ADULT PATIENTS WITH RELAPSED/REFRACTORY SMALL CELL LUNG CANCER
   (SCLC), CASTRATION RESISTANT PROSTATE CANCER (CRPC) AND FOLLICULAR LYMPHOMA (FL)
@@ -242,15 +242,14 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Lymphoid Neoplasm
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
         - clinical:
             oncotree_primary_diagnosis: Prostate Adenocarcinoma
         - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
-          - Refractory

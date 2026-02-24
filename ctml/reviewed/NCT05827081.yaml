@@ -8,11 +8,11 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Letrozole'
+  - drug_name: 'Drug: Exemestane'
+  - drug_name: 'Drug: Goserelin'
   - drug_name: 'Drug: Leuprolide'
   - drug_name: 'Drug: Ribociclib'
-  - drug_name: 'Drug: Exemestane'
   - drug_name: 'Drug: Ansastrozole'
-  - drug_name: 'Drug: Goserelin'
 long_title: A Phase IIIb Study to Characterize the Efficacy and Safety of Adjuvant
   Ribociclib Plus Endocrine Therapy in a Close-to-clinical Practice Patient Population
   With HR+ HER2- Early Breast Cancer (Adjuvant WIDER)
@@ -149,9 +149,11 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
-          - clinical:
               oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
         - clinical:
             age_numerical: '>=18'
             her2_status: Negative
@@ -159,7 +161,6 @@ treatment_list:
             pr_status: Positive
             disease_status:
             - Early Stage
-      - and:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: '!Mutation'
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: '!Any Variation'

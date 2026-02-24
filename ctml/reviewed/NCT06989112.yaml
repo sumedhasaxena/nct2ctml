@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Docetaxel'
-  - drug_name: 'Drug: Trastuzumab deruxtecan'
   - drug_name: 'Drug: Rilvegostomig'
-  - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Docetaxel'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Trastuzumab deruxtecan'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Pembrolizumab'
 long_title: 'DESTINY-Endometrial01: An Open-Label, Sponsor-Blinded, Randomized, Controlled,
   Multicenter, Phase III Study of Trastuzumab Deruxtecan (T-DXd) Plus Rilvegostomig
   or Pembrolizumab vs Chemotherapy Plus Pembrolizumab as First-Line Therapy of HER2-Expressing
@@ -198,11 +198,16 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        gender: Female
-        her2_status: Positive
-        disease_status:
-        - Advanced
-        - Recurrent
-        oncotree_primary_diagnosis: Endometrial Carcinoma
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          gender: Female
+          her2_status: Positive
+          mmr_status: MMR-Proficient
+          disease_status:
+          - Advanced
+          - Recurrent
+          oncotree_primary_diagnosis: Endometrial Carcinoma
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Any Variation

@@ -3,18 +3,18 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2024-08-21'
 study_start_date: '2024-10-15'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Datopotamab Deruxtecan'
   - drug_name: 'Drug: Vinorelbine'
   - drug_name: 'Drug: UFT'
-  - drug_name: 'Drug: Etoposide'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Rilvegostomig'
-  - drug_name: 'Drug: Datopotamab Deruxtecan'
   - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Rilvegostomig'
+  - drug_name: 'Drug: Etoposide'
+  - drug_name: 'Drug: Cisplatin'
 long_title: A Phase III, Randomised, Open-label, Global Study of Adjuvant Datopotamab
   Deruxtecan (Dato-DXd) in Combination With Rilvegostomig or Rilvegostomig Monotherapy
   Versus Standard of Care, Following Complete Tumour Resection, in Participants With
@@ -154,12 +154,12 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Early Stage
+          - Localized
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:
             hugo_symbol: EGFR
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: ALK
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'

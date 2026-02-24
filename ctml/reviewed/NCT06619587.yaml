@@ -93,7 +93,7 @@ treatment_list:
           - Advanced
           - Metastatic
           oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: KRAS
+          variant_category: Mutation
+          protein_change: p.G12D

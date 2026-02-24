@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: pembrolizumab'
+  - drug_name: 'Drug: gemcitabine'
+  - drug_name: 'Drug: cisplatin'
   - drug_name: 'Drug: carboplatin'
   - drug_name: 'Drug: disitamab vedotin'
-  - drug_name: 'Drug: cisplatin'
-  - drug_name: 'Drug: gemcitabine'
-  - drug_name: 'Drug: pembrolizumab'
 long_title: An Open-label, Randomized, Controlled Phase 3 Study of Disitamab Vedotin
   in Combination With Pembrolizumab Versus Chemotherapy in Subjects With Previously
   Untreated Locally Advanced or Metastatic Urothelial Carcinoma That Expresses HER2
@@ -146,22 +146,15 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-          - clinical:
               oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
         - clinical:
             age_numerical: '>=18'
             her2_status: Positive
             disease_status:
             - Locally Advanced
             - Metastatic
-            - Recurrent
-      - and:
-        - or:
-          - genomic:
-              hugo_symbol: ERBB2
-              variant_category: Any Variation
-        - and:
-          - genomic:
-              hugo_symbol: ERBB2
-              variant_category: '!Any Variation'
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: Any Variation

@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Trastuzumab Deruxtecan'
-  - drug_name: 'Drug: pembrolizumab'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Chemotherapy'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: pembrolizumab'
+  - drug_name: 'Drug: Trastuzumab Deruxtecan'
 long_title: A Phase 3, Multicenter, Randomized, Open-label Trial of Trastuzumab Deruxtecan
   in Combination With Pembrolizumab Versus Platinum-based Chemotherapy in Combination
   With Pembrolizumab, as First-line Therapy in Participants With Locally Advanced
@@ -150,17 +150,15 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-          - clinical:
               oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
         - clinical:
             age_numerical: '>=18'
             her2_status: Negative
             disease_status:
             - Locally Advanced
             - Metastatic
-            - Unresectable
-      - and:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: '!Mutation'
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: '!Mutation'

@@ -12,19 +12,19 @@
                 "drug_name": "Drug: Pembrolizumab"
             },
             {
-                "drug_name": "Drug: Carboplatin"
-            },
-            {
-                "drug_name": "Drug: Adagrasib"
-            },
-            {
                 "drug_name": "Drug: Cisplatin"
+            },
+            {
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: Pemetrexed"
             },
             {
                 "drug_name": "Drug: Placebo"
+            },
+            {
+                "drug_name": "Drug: Adagrasib"
             }
         ]
     },
@@ -191,23 +191,17 @@
                                     "age_numerical": ">=18",
                                     "disease_status": [
                                         "Locally Advanced",
-                                        "Metastatic",
-                                        "Advanced",
-                                        "Untreated"
+                                        "Metastatic"
                                     ],
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.G12C"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "KRAS",
+                                    "variant_category": "Mutation",
+                                    "protein_change": "p.G12C"
+                                }
                             }
                         ]
                     }

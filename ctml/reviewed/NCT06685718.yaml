@@ -126,13 +126,11 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
               oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:
             age_numerical: '>=18'
             disease_status:
@@ -142,3 +140,7 @@ treatment_list:
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: Mutation
+            protein_change: p.C797S

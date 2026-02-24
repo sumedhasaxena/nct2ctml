@@ -154,13 +154,9 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
           - clinical:
               oncotree_primary_diagnosis: Invasive Breast Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
           - clinical:
               oncotree_primary_diagnosis: Inflammatory Breast Cancer
         - clinical:
@@ -169,8 +165,7 @@ treatment_list:
             her2_status: Negative
             er_status: Positive
             disease_status:
-            - Advanced
-      - or:
-        - genomic:
-            hugo_symbol: PIK3CA
-            variant_category: Mutation
+            - Locally Advanced
+      - genomic:
+          hugo_symbol: PIK3CA
+          variant_category: Mutation

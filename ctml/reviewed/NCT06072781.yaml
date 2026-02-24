@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Defactinib'
-  - drug_name: 'Drug: Letrozole'
-  - drug_name: 'Drug: Anastrozole'
   - drug_name: 'Drug: avutometinib'
-  - drug_name: 'Drug: Pegylated liposomal doxorubicin'
+  - drug_name: 'Drug: Anastrozole'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Letrozole'
+  - drug_name: 'Drug: Defactinib'
+  - drug_name: 'Drug: Pegylated liposomal doxorubicin'
 long_title: A Phase 3, Randomized, Open-Label Study of Combination Therapy With Avutometinib
   Plus Defactinib Versus Investigator's Choice of Treatment in Patients With Recurrent
   Low-Grade Serous Ovarian Cancer (LGSOC) (RAMP 301)
@@ -164,10 +164,9 @@ treatment_list:
           age_numerical: '>=18'
           gender: Female
           disease_status:
-          - Recurrent
           - Metastatic
+          - Recurrent
           oncotree_primary_diagnosis: Ovarian Epithelial Tumor
-      - or:
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
+      - genomic:
+          hugo_symbol: KRAS
+          variant_category: Mutation

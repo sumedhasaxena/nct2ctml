@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Docetaxel'
   - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Biological: Sacituzumab Tirumotecan'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Docetaxel'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Biological: Sacituzumab Tirumotecan'
 long_title: A Phase 3 Randomized, Open-label, Multicenter Study to Compare the Efficacy
   and Safety of Sacituzumab Tirumotecan (Sac-TMT, MK-2870) in Combination With Pembrolizumab
   Versus Pembrolizumab Alone as First-line Maintenance Treatment in Participants With
@@ -241,16 +241,21 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           gender: Female
+          mmr_status: MMR-Proficient
           disease_status:
           - Advanced
           - Recurrent
-          - Locally Advanced
-          - Metastatic
           oncotree_primary_diagnosis: Endometrial Carcinoma
       - and:
         - genomic:
             hugo_symbol: MLH1
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
         - genomic:
             hugo_symbol: MSH2
-            variant_category: '!Mutation'
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: MSH6
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: PMS2
+            variant_category: '!Any Variation'

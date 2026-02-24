@@ -12,10 +12,10 @@
                 "drug_name": "Drug: Chemotherapy"
             },
             {
-                "drug_name": "Drug: Quizartinib"
+                "drug_name": "Drug: Placebo"
             },
             {
-                "drug_name": "Drug: Placebo"
+                "drug_name": "Drug: Quizartinib"
             }
         ]
     },
@@ -172,27 +172,16 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Untreated",
-                                        "Early Stage"
+                                        "Untreated"
                                     ],
                                     "oncotree_primary_diagnosis": "Myeloid Neoplasm"
                                 }
                             },
                             {
-                                "and": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "BCR-ABL",
-                                            "variant_category": "!Structural Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "FLT3",
-                                            "variant_category": "!Mutation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "FLT3",
+                                    "variant_category": "!Structural Variation"
+                                }
                             }
                         ]
                     }

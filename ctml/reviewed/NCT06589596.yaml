@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Standard of Care Therapy'
-  - drug_name: 'Drug: BG-89894'
   - drug_name: 'Drug: BGB-58067'
+  - drug_name: 'Drug: BG-89894'
+  - drug_name: 'Drug: Standard of Care Therapy'
 long_title: A Phase 1a/b Study Investigating the Safety, Tolerability, Pharmacokinetics,
   Pharmacodynamics, and Preliminary Antitumor Activity of PRMT5 Inhibitor BGB-58067
   Alone and in Combination With Anticancer Agents in Patients With Advanced Solid
@@ -159,11 +159,14 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Advanced
-        - Metastatic
-        - Unresectable
-        - Recurrent
-        oncotree_primary_diagnosis: _SOLID_
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic
+          - Advanced
+          - Unresectable
+          oncotree_primary_diagnosis: _SOLID_
+      - genomic:
+          hugo_symbol: MTAP
+          variant_category: Copy Number Variation

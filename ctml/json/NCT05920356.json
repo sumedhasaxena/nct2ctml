@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Sotorasib"
+                "drug_name": "Drug: Pembrolizumab"
             },
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: Sotorasib"
             }
         ]
     },
@@ -36,7 +36,7 @@
     },
     "phase": "PHASE3",
     "principal_investigator": "NA, Victor LEE, Wendy CHAN",
-    "principal_investigator_institution": "Amgen, HKU",
+    "principal_investigator_institution": "Amgen, HKU, HKU",
     "program_area_list": {
         "program_area": [
             {
@@ -126,45 +126,25 @@
                     {
                         "and": [
                             {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "pdl1_status": "Low",
-                                            "disease_status": [
-                                                "Metastatic",
-                                                "Advanced"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "pdl1_status": "Low",
+                                    "disease_status": [
+                                        "Metastatic",
+                                        "Locally Advanced"
+                                    ],
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
                             },
                             {
                                 "and": [
                                     {
-                                        "or": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "KRAS",
-                                                    "variant_category": "Mutation"
-                                                }
-                                            }
-                                        ]
-                                   }
+                                        "genomic": {
+                                            "hugo_symbol": "KRAS",
+                                            "variant_category": "Mutation",
+                                            "protein_change": "p.G12C"
+                                        }
+                                    }
                                 ]
                             }
                         ]

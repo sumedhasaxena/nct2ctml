@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: DB-1311/BNT324'
   - drug_name: 'Drug: BNT327'
   - drug_name: 'Drug: DB-1305/BNT325'
+  - drug_name: 'Drug: DB-1311/BNT324'
 long_title: A Phase II, Multicenter, Open-Label Trial of DB-1311 in Combination With
   BNT327 or DB-1305 in Participants With Advanced/Metastatic Solid Tumors
 last_updated: '2025-09-04'
@@ -212,11 +212,12 @@ treatment_list:
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Recurrent
           - Metastatic
           - Unresectable
-          - Refractory
           - Locally Advanced
+          - Recurrent
+          - Refractory
+          - Advanced
           oncotree_primary_diagnosis: _SOLID_
       - and:
         - genomic:
