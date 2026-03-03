@@ -40,7 +40,7 @@ def map_nct_to_ctml(trial_data: dict, genes:list, gene_synonym_mapping: Dict[str
     trial_schema = map_ctml_general_fields(trial_schema, trial_data)   
 
     trial_schema = map_prior_treatment_requirements(trial_schema, trial_data)
-
+    
     clinical_ctml = map_ctml_match_clinical_criteria(trial_data)
 
     inclusion_text, exclusion_text = split_inclusion_exclusion_criteria(trial_data)
@@ -190,17 +190,83 @@ def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[
             synonym_to_symbol=gene_synonym_mapping,
         )
         gene_symbols = tcg.extract_official_gene_symbols()
-        #genomic_critera = ai.get_genomic_criteria(nct_id, gene_symbols, eligibilityCriteria)
 
+        # Pass 1: Initial extraction of genomic criteria
         inlcusion_genomic_criteria = ai.get_inclusion_genomic_criteria(nct_id, gene_symbols, inclusion_text)
         exclusion_genomic_criteria = ai.get_exclusion_genomic_criteria(nct_id, gene_symbols, exclusion_text)
         print(f'inlcusion_genomic_criteria: {inlcusion_genomic_criteria}')
         print(f'exclusion_genomic_criteria: {exclusion_genomic_criteria}')
+
+        # Pass 2: Enrichment for detailed mutation/CNV information
+        inlcusion_genomic_criteria = _enrich_genomic_criteria(
+            nct_id, inlcusion_genomic_criteria, inclusion_text
+        )
+        print(f'inclusion_genomic_criteria after enrichment: {inlcusion_genomic_criteria}')
+        exclusion_genomic_criteria = _enrich_genomic_criteria(
+            nct_id, exclusion_genomic_criteria, exclusion_text
+        )
+        print(f'exclusion_genomic_criteria after enrichment: {exclusion_genomic_criteria}')
+
         genomic_ctml = mcm.convert_to_ctml_genomic_schema(inlcusion_genomic_criteria, exclusion_genomic_criteria)
         logger.debug(f"genomic criteria as CTML: {genomic_ctml}")
         return genomic_ctml
     else:
         return {}
+
+
+def _enrich_genomic_criteria(nct_id: str, genomic_criteria: list, criteria_text: str) -> list:
+    """
+    Perform second-pass enrichment on genomic criteria to extract additional details.
+    
+    This function checks if the criteria text contains keywords suggesting mutation
+    or CNV details, and if matching criteria exist, calls the appropriate enrichment
+    functions to add variant_classification, exon, or cnv_call fields.
+    
+    Args:
+        nct_id: The clinical trial identifier for logging.
+        genomic_criteria: List of genomic criteria from initial extraction.
+        Example: [{'genomic': {'hugo_symbol': 'EGFR', 'variant_category': 'Mutation', 'protein_change': 'p.E19del'}}, {'genomic': {'hugo_symbol': 'EGFR', 'variant_category': 'Mutation', 'protein_change': 'p.L858R'}}]
+        criteria_text: The eligibility criteria text to analyze.
+        
+    Returns:
+        The genomic_criteria list with enriched fields merged in.
+    """
+    if not genomic_criteria or not criteria_text:
+        return genomic_criteria
+    
+    # Separate criteria by variant_category
+    mutation_criteria = []
+    cnv_criteria = []
+    
+    for criterion in genomic_criteria:
+        genomic = criterion.get("genomic", {})
+        variant_category = genomic.get("variant_category", "")
+        
+        # Handle both positive and negated categories
+        category_base = variant_category.lstrip("!")
+        
+        if category_base == "Mutation":
+            mutation_criteria.append(criterion)
+        elif category_base == "Copy Number Variation":
+            cnv_criteria.append(criterion)
+    
+    # Enrich mutations if criteria text contains mutation detail keywords
+    if mutation_criteria and ai.has_mutation_details(criteria_text):
+        logger.info(f"NCTID: {nct_id} | Detected mutation details in criteria, enriching {len(mutation_criteria)} mutation(s)")
+        enriched_mutations = ai.enrich_mutation_details(nct_id, mutation_criteria, criteria_text)
+        if enriched_mutations:
+            # Merge into the mutation_criteria list; these are references into genomic_criteria
+            ai.merge_enriched_criteria(mutation_criteria, enriched_mutations, enrichment_type="mutation")
+    
+    # Enrich CNVs if criteria text contains CNV detail keywords
+    if cnv_criteria and ai.has_cnv_details(criteria_text):
+        logger.info(f"NCTID: {nct_id} | Detected CNV details in criteria, enriching {len(cnv_criteria)} CNV(s)")
+        enriched_cnvs = ai.enrich_cnv_details(nct_id, cnv_criteria, criteria_text)
+        if enriched_cnvs:
+            # Merge into the cnv_criteria list; these are references into genomic_criteria
+            ai.merge_enriched_criteria(cnv_criteria, enriched_cnvs, enrichment_type="cnv")
+    
+    return genomic_criteria
 
 def map_age_numerical(trial_data: dict) -> str:
     minimum_age = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','minimumAge'])
