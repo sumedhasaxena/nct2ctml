@@ -68,7 +68,7 @@
     "prior_treatment_requirements": [
         "Inclusion criteria:",
         "All Patients (unless otherwise noted):",
-        "* \u2265 18 years of age",
+        "* ≥ 18 years of age",
         "* ECOG PS is 0 to 1",
         "* Adequate organ function as outlined by the study",
         "* Received prior standard therapy appropriate for tumor type and stage",
@@ -151,6 +151,33 @@
                                 "level_internal_id": 5,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Locally Advanced",
+                                                "Metastatic"
+                                            ],
+                                            "oncotree_primary_diagnosis": "_SOLID_"
+                                        }
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "KRAS",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.G12C"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -188,6 +215,44 @@
                                 "level_description": "Drug: Pemetrexed",
                                 "level_internal_id": 4,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Locally Advanced",
+                                                "Metastatic"
+                                            ],
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "KRAS",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NRAS",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "HRAS",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -233,6 +298,47 @@
                                 "level_internal_id": 5,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Locally Advanced",
+                                                "Metastatic"
+                                            ],
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "KRAS",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.G12D"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NRAS",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.G12D"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "HRAS",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.G12D"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -247,69 +353,44 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ]
-                    }
-                ],
-                "match": [
-                    {
-                        "and": [
+                        ],
+                        "match": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "_SOLID_"
-                                }
-                            },
-                            {
-                                "or": [
+                                "and": [
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.G12C"
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Locally Advanced",
+                                                "Metastatic"
+                                            ],
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                         }
                                     },
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "HRAS",
-                                            "variant_category": "Mutation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "NRAS",
-                                            "variant_category": "Mutation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "HRAS",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.G12D"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.G12D"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "NRAS",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.G12D"
-                                        }
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "KRAS",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.G12D"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NRAS",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.G12D"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "HRAS",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.G12D"
+                                                }
+                                            }
+                                        ]
                                     }
                                 ]
                             }

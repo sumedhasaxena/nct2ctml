@@ -117,6 +117,19 @@ treatment_list:
         level_description: 'Drug: Pemetrexed'
         level_internal_id: 5
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+            oncotree_primary_diagnosis: _SOLID_
+        - or:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: Mutation
+              protein_change: p.G12C
     - arm_code: 'Subprotocol B: RAS-mutated NSCLC'
       arm_internal_id: 1
       arm_description: RMC-6236 (QD) and Pembrolizumab (Q3W) with or without Chemotherapy
@@ -143,6 +156,24 @@ treatment_list:
         level_description: 'Drug: Pemetrexed'
         level_internal_id: 4
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - or:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: HRAS
+              variant_category: Mutation      
     - arm_code: 'Subprotocol C: RAS G12D-mutated NSCLC'
       arm_internal_id: 2
       arm_description: RMC-9805 (QD or BID), RMC-6236 (QD), and Pembrolizumab (Q3W)
@@ -173,6 +204,27 @@ treatment_list:
         level_description: 'Drug: RMC-9805'
         level_internal_id: 5
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - or:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: Mutation
+              protein_change: p.G12D
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: Mutation
+              protein_change: p.G12D
+          - genomic:
+              hugo_symbol: HRAS
+              variant_category: Mutation
+              protein_change: p.G12D
     - arm_code: 'Subprotocol D: RAS G12D-mutated NSCLC'
       arm_internal_id: 3
       arm_description: RMC-9805 (QD)
@@ -182,37 +234,24 @@ treatment_list:
         level_description: 'Drug: RMC-9805'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          oncotree_primary_diagnosis: _SOLID_
-      - or:
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
-            protein_change: p.G12C
-        - genomic:
-            hugo_symbol: HRAS
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: NRAS
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: HRAS
-            variant_category: Mutation
-            protein_change: p.G12D
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
-            protein_change: p.G12D
-        - genomic:
-            hugo_symbol: NRAS
-            variant_category: Mutation
-            protein_change: p.G12D
+      match:
+      - and:
+        - clinical:
+            age_numerical: '>=18'
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - or:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: Mutation
+              protein_change: p.G12D
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: Mutation
+              protein_change: p.G12D
+          - genomic:
+              hugo_symbol: HRAS
+              variant_category: Mutation
+              protein_change: p.G12D
