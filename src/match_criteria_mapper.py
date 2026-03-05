@@ -1,6 +1,58 @@
 import config
 import utils.aho_corasick as ac
 import src.trial_data_helper as tdh
+from utils.genomic_patterns import _ACCEPTABLE_PROTEIN_CHANGE_PATTERNS
+
+
+def _clean_protein_change_fields(genomic_criteria: list) -> list:
+    """
+    Clean up protein_change-related fields on genomic criteria in place.
+
+    - Remove protein_change fields that do not match any acceptable pattern.
+    - If protein_change ends with X/x (e.g. p.G719X), move it to wildcard_protein_change.
+    """
+    if not genomic_criteria:
+        return genomic_criteria
+
+    for alteration in genomic_criteria:
+        genomic = alteration.get("genomic")
+        if not isinstance(genomic, dict):
+            continue
+
+        protein_change = genomic.get("protein_change")
+        if not protein_change:
+            continue
+
+        protein_change_str = str(protein_change).strip()
+
+        # Handle wildcard protein changes, e.g. p.G719X
+        if protein_change_str.upper().endswith("X"):
+            genomic.pop("protein_change", None)
+            genomic["wildcard_protein_change"] = protein_change_str
+            continue
+
+        # Remove incorrect protein_change values that do not match acceptable patterns
+        if not any(pattern.match(protein_change_str) for pattern in _ACCEPTABLE_PROTEIN_CHANGE_PATTERNS):
+            genomic.pop("protein_change", None)
+
+    return genomic_criteria
+
+
+def _postprocess_genomic_criteria(genomic_criteria: list) -> list:
+    """
+    Post-process genomic criteria:
+
+    - Normalize HUGO symbols.
+    - Clean protein_change / wildcard_protein_change fields.
+    """
+    if not genomic_criteria:
+        return genomic_criteria
+
+    # Normalize HUGO symbols as part of post-processing
+    genomic_criteria = tdh.update_hugo_symbol(genomic_criteria)
+    genomic_criteria = _clean_protein_change_fields(genomic_criteria)
+
+    return genomic_criteria
 
 def get_keywords_from_conditions(conditions_list):
     all_keywords = set()
@@ -52,8 +104,8 @@ def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_g
     print(tdh.get_all_keys(inclusion_genomic_criteria))
     print(tdh.get_all_keys(exclusion_genomic_criteria))
     if inclusion_genomic_criteria and all(key in tdh.get_all_keys(inclusion_genomic_criteria) for key in ["hugo_symbol", "variant_category"]):
-        #post processing
-        inclusion_genomic_criteria = tdh.update_hugo_symbol(inclusion_genomic_criteria)
+        # post processing
+        inclusion_genomic_criteria = _postprocess_genomic_criteria(inclusion_genomic_criteria)
         for alteration in inclusion_genomic_criteria:
             variant_category = alteration["genomic"]["variant_category"]
             # if variant_category begins with !, add alteration to exclusions, without removing !
@@ -65,8 +117,8 @@ def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_g
                     inclusions.append(alteration)
     
     if exclusion_genomic_criteria and all(key in tdh.get_all_keys(exclusion_genomic_criteria) for key in ["hugo_symbol", "variant_category"]):
-        #post processing
-        exclusion_genomic_criteria = tdh.update_hugo_symbol(exclusion_genomic_criteria)
+        # post processing
+        exclusion_genomic_criteria = _postprocess_genomic_criteria(exclusion_genomic_criteria)
         for alteration in exclusion_genomic_criteria:
             if alteration not in exclusions:
                 exclusions.append(alteration)
