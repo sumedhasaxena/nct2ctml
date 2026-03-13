@@ -5,9 +5,10 @@ of data from clinicaltrials.gov
 import sys
 import os
 import csv
+import json
 from typing import Dict, List
 
-sys.path.append(os.path.abspath('../'))
+sys.path.append(os.path.abspath("../"))
 
 import src.trial_config as config
 import requests
@@ -18,6 +19,7 @@ import src.trial_data_helper as tdh
 import utils.oncotree as onct
 import src.trial_criteria_to_genes as ctg
 import src.match_criteria_mapper as mcm
+from src.match_criteria_mapper import ArmCriteriaBlocks
 from loguru import logger
 
 
@@ -40,7 +42,10 @@ def map_nct_to_ctml(trial_data: dict, genes:list, gene_synonym_mapping: Dict[str
     trial_schema = map_ctml_general_fields(trial_schema, trial_data)   
 
     trial_schema = map_prior_treatment_requirements(trial_schema, trial_data)
-    
+
+    arm_result = get_arm_criteria_blocks_for_trial(trial_data, trial_schema)
+    logger.debug(f"arm_result JSON: {json.dumps(arm_result, indent=2, sort_keys=True)}")
+
     clinical_ctml = map_ctml_match_clinical_criteria(trial_data)
 
     inclusion_text, exclusion_text = split_inclusion_exclusion_criteria(trial_data)
@@ -52,6 +57,129 @@ def map_nct_to_ctml(trial_data: dict, genes:list, gene_synonym_mapping: Dict[str
     logger.debug(f"CTML: After mapping clinical and genomic match criteria | {trial_schema}")
 
     return trial_schema
+
+
+def get_arm_criteria_blocks_for_trial(
+    trial_data: dict,
+    trial_schema: dict,
+) -> ArmCriteriaBlocks:
+    """
+    Helper to run the arm-level LLM mapper and normalization.
+
+    This does NOT modify trial_schema; it just returns the normalized
+    ArmCriteriaBlocks structure so callers can inspect or plug it into
+    downstream mapping code.
+    """
+    nct_id = trial_data["protocolSection"]["identificationModule"]["nctId"]
+    arm_groups = trial_data["protocolSection"]["armsInterventionsModule"]["armGroups"]
+    inclusion_text, exclusion_text = split_inclusion_exclusion_criteria(trial_data)
+
+    arm_mapping = ai.get_arm_criteria_mapping(
+        nct_id=nct_id,
+        arm_groups=arm_groups,
+        inclusion_criteria=inclusion_text,
+        exclusion_criteria=exclusion_text,
+    )
+
+    return build_arm_criteria_blocks(arm_mapping=arm_mapping, trial_schema=trial_schema)
+
+
+def build_arm_criteria_blocks(
+    arm_mapping: dict,
+    trial_schema: dict,
+) -> ArmCriteriaBlocks:
+    """
+    Normalize the LLM arm-mapper JSON into ArmCriteriaBlocks keyed by CTML arms.
+
+    Args:
+        arm_mapping:
+            The JSON-like dict returned by ai.get_arm_criteria_mapping, with shape:
+            {
+              "global": {
+                "inclusion_text": "...",
+                "exclusion_text": "..."
+              },
+              "arms": [
+                {
+                  "arm_label": "<label from armGroups[i].label>",
+                  "inclusion_text": "...",       # may be empty
+                  "exclusion_text": "..."        # may be empty
+                },
+                ...
+              ]
+            }
+        trial_schema:
+            The partially populated CTML trial schema. We use the
+            treatment_list.step[0].arm entries to determine CTML arm keys.
+
+    Returns:
+        ArmCriteriaBlocks:
+        {
+          "global": {
+            "inclusion_text": str,
+            "exclusion_text": str,
+          },
+          "<ctml_arm_key>": {
+            "inclusion_text": str,
+            "exclusion_text": str,
+          },
+          ...
+        }
+        where <ctml_arm_key> is the CTML arm_code for each arm.
+    """
+    arm_mapping = arm_mapping or {}
+
+    # Initialize the global block, defaulting to empty strings when missing.
+    global_block = arm_mapping.get("global") or {}
+    global_inclusion = global_block.get("inclusion_text") or ""
+    global_exclusion = global_block.get("exclusion_text") or ""
+
+    arm_criteria_blocks: ArmCriteriaBlocks = {
+        "global": {
+            "inclusion_text": global_inclusion,
+            "exclusion_text": global_exclusion,
+        }
+    }
+
+    # Build a lookup from arm_label -> per-arm text produced by the LLM.
+    per_arm_list = arm_mapping.get("arms") or []
+    label_to_text: Dict[str, Dict[str, str]] = {}
+    for arm_entry in per_arm_list:
+        if not isinstance(arm_entry, dict):
+            continue
+        arm_label = arm_entry.get("arm_label")
+        if not isinstance(arm_label, str) or not arm_label:
+            continue
+
+        label_to_text[arm_label] = {
+            "inclusion_text": arm_entry.get("inclusion_text") or "",
+            "exclusion_text": arm_entry.get("exclusion_text") or "",
+        }
+
+    # Traverse CTML arms and attach any per-arm snippets using arm_code as key.
+    ctml_arms = (
+        trial_schema.get("treatment_list", {})
+        .get("step", [{}])[0]
+        .get("arm", [])
+    )
+
+    for ctml_arm in ctml_arms:
+        if not isinstance(ctml_arm, dict):
+            continue
+
+        ctml_arm_code = ctml_arm.get("arm_code")
+        if not isinstance(ctml_arm_code, str) or not ctml_arm_code:
+            # If arm_code is missing or malformed, skip attaching per-arm text.
+            continue
+
+        per_arm_text = label_to_text.get(ctml_arm_code, {"inclusion_text": "", "exclusion_text": ""})
+
+        arm_criteria_blocks[ctml_arm_code] = {
+            "inclusion_text": per_arm_text.get("inclusion_text", ""),
+            "exclusion_text": per_arm_text.get("exclusion_text", ""),
+        }
+
+    return arm_criteria_blocks
 
 def map_ctml_general_fields(trial_schema, trial_data) -> dict:
 
