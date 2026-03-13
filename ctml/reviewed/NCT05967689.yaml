@@ -324,7 +324,7 @@ treatment_list:
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
-            protein_change: p.G719X
+            wildcard_protein_change: p.G719
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation

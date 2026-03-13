@@ -369,7 +369,7 @@ treatment_list:
           - genomic:
               hugo_symbol: EGFR
               variant_category: '!Mutation'
-              wildcard_protein_change: p.C797X
+              wildcard_protein_change: p.C797
           - genomic:
               hugo_symbol: EGFR
               variant_category: '!Mutation'
