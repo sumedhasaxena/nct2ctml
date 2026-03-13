@@ -21,6 +21,20 @@ class ArmCriteriaText(TypedDict, total=False):
     inclusion_text: str
     exclusion_text: str
 
+    def get_combined_eligibility_text(self) -> str:
+        """
+        Combine inclusion and exclusion text into a single eligibility criteria string.
+
+        The combined text is in the format:
+        "Inclusion Criteria: {inclusion_text}\nExclusion Criteria: {exclusion_text}"
+        """
+        combined_text = ""
+        if self.get("inclusion_text"):
+            combined_text += f"Inclusion Criteria: {self['inclusion_text']}\n"
+        if self.get("exclusion_text"):
+            combined_text += f"Exclusion Criteria: {self['exclusion_text']}"
+        return combined_text.strip()
+
 
 ArmCriteriaBlocks = Dict[str, ArmCriteriaText]
 """

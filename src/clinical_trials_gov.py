@@ -19,7 +19,7 @@ import src.trial_data_helper as tdh
 import utils.oncotree as onct
 import src.trial_criteria_to_genes as ctg
 import src.match_criteria_mapper as mcm
-from src.match_criteria_mapper import ArmCriteriaBlocks
+from src.match_criteria_mapper import ArmCriteriaBlocks, ArmCriteriaText
 from loguru import logger
 
 
@@ -262,41 +262,34 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
 
 def map_ctml_match_clinical_criteria(trial_data: dict):
     clinical_critera = {}
-    oncotree_diagnoses_list = map_oncotree_primary_diagnosis(trial_data)
+
+    nct_id = get_nct_id(trial_data)
+    eligibilityCriteria = get_full_eligibility_criteria(trial_data)
+    keywords = get_keywords(trial_data)
+
+    oncotree_diagnoses_list = map_global_diagnosis_to_oncotree_term(trial_data)
     clinical_critera['oncotree_primary_diagnosis'] = oncotree_diagnoses_list
     
+    #global
     age_numerical_str = map_age_numerical(trial_data)
     if age_numerical_str:
         clinical_critera['age_numerical'] = age_numerical_str
     
+    #global
     gender_str = map_gender(trial_data)
     if gender_str:
         clinical_critera['gender'] = gender_str
 
-    her2_er_pr_dict = map_her2_er_pr_status(trial_data)
-    filtered_her2_er_pr_dict = {k:v for k,v in her2_er_pr_dict.items() if v.lower() in ["positive", "negative","!positive","!negative"]}
-    clinical_critera.update(filtered_her2_er_pr_dict)
+    her2_er_pr_dict = map_her2_er_pr_status(nct_id, eligibilityCriteria, keywords)    
+    clinical_critera.update(her2_er_pr_dict)
     
-    pdl1_status_dict = map_pdl1_status(trial_data)
-    filtered_pdl1_status_dict = {k:v for k,v in pdl1_status_dict.items() if v.lower() in ["high", "low"]}
-    clinical_critera.update(filtered_pdl1_status_dict)
+    pdl1_status_dict = map_pdl1_status(nct_id, eligibilityCriteria, keywords)
+    clinical_critera.update(pdl1_status_dict)
 
-    mmr_ms_status_dict = map_mmr_ms_status(trial_data)
-    filtered_mmr_ms_status_dict = {}    
-    
-    if 'mmr_status' in mmr_ms_status_dict:
-        mmr_value = mmr_ms_status_dict['mmr_status']
-        if mmr_value in ['MMR-Proficient', 'MMR-Deficient','!MMR-Proficient', '!MMR-Deficient']:
-            filtered_mmr_ms_status_dict['mmr_status'] = mmr_value
-        
-    if 'ms_status' in mmr_ms_status_dict:
-        ms_value = mmr_ms_status_dict['ms_status']
-        if ms_value in ['MSI-H', 'MSI-L', 'MSS', '!MSI-H', '!MSI-L']:
-            filtered_mmr_ms_status_dict['ms_status'] = ms_value
-    
+    filtered_mmr_ms_status_dict = map_mmr_ms_status(nct_id, eligibilityCriteria, keywords)
     clinical_critera.update(filtered_mmr_ms_status_dict)
     
-    disease_status_dict = map_disease_status(trial_data)
+    disease_status_dict = map_disease_status(nct_id, eligibilityCriteria, keywords)
     if disease_status_dict and len(disease_status_dict.get('disease_status', {})) > 0:
         clinical_critera.update(disease_status_dict)
 
@@ -308,8 +301,8 @@ def map_ctml_match_clinical_criteria(trial_data: dict):
     return clinical_ctml
 
 def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[str, List[str]], inclusion_text: str, exclusion_text: str):
-    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+    nct_id = get_nct_id(trial_data)
+    eligibilityCriteria = get_full_eligibility_criteria(trial_data)
     contains_gene_info = mcm.check_if_eligibility_criteria_contains_gene_info(gene_synonym_mapping, eligibilityCriteria) #check if eligibility criteria contains any gene before asking AI
 
     if contains_gene_info: 
@@ -405,32 +398,43 @@ def map_age_numerical(trial_data: dict) -> str:
             return min_age
     return ""
 
-def map_her2_er_pr_status(trial_data: dict):
-    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+def map_her2_er_pr_status(nct_id: str, eligibilityCriteria: str, keywords:list):    
     result = ai.get_her2_er_pr_status(nct_id, eligibilityCriteria, keywords)
-    return result
+    filtered_her2_er_pr_dict = {k:v for k,v in result.items() if v.lower() in ["positive", "negative","!positive","!negative"]}
+    return filtered_her2_er_pr_dict
 
-def map_pdl1_status(trial_data: dict):
-    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+def get_keywords(trial_data):
+    return tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+
+def get_nct_id(trial_data):
+    return trial_data['protocolSection']['identificationModule']['nctId']
+
+def get_full_eligibility_criteria(trial_data):
+    return tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
+
+def map_pdl1_status(nct_id: str, eligibilityCriteria: str, keywords:list):
     contains_pdl1_info = mcm.check_if_eligibility_criteria_contains_pdl1_info(keywords, eligibilityCriteria)
     if contains_pdl1_info:
-        result = ai.get_pdl1_status(nct_id, eligibilityCriteria, keywords)
-        return result
+        result = ai.get_pdl1_status(nct_id, eligibilityCriteria, keywords)        
+        filtered_pdl1_status_dict = {k:v for k,v in result.items() if v.lower() in ["high", "low"]}
+        return filtered_pdl1_status_dict
     return {}
 
-def map_mmr_ms_status(trial_data: dict):
-    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+def map_mmr_ms_status(nct_id: str, eligibilityCriteria: str, keywords:list):
+    filtered_mmr_ms_status_dict = {}
     contains_mmr_info = mcm.check_if_eligibility_criteria_contains_mmr_info(keywords, eligibilityCriteria)
     if contains_mmr_info:
-        result = ai.get_mmr_status(nct_id, eligibilityCriteria, keywords)
-        return result
-    return {}
+        mmr_ms_status_dict = ai.get_mmr_status(nct_id, eligibilityCriteria, keywords)
+        if 'mmr_status' in mmr_ms_status_dict:
+            mmr_value = mmr_ms_status_dict['mmr_status']
+            if mmr_value in ['MMR-Proficient', 'MMR-Deficient','!MMR-Proficient', '!MMR-Deficient']:
+                filtered_mmr_ms_status_dict['mmr_status'] = mmr_value
+            
+        if 'ms_status' in mmr_ms_status_dict:
+            ms_value = mmr_ms_status_dict['ms_status']
+            if ms_value in ['MSI-H', 'MSI-L', 'MSS', '!MSI-H', '!MSI-L']:
+                filtered_mmr_ms_status_dict['ms_status'] = ms_value
+    return filtered_mmr_ms_status_dict
 
 def map_gender(trial_data: dict):
     nct_gender = tdh.safe_get(trial_data, ['protocolSection', 'eligibilityModule', 'sex'])
@@ -440,15 +444,28 @@ def map_gender(trial_data: dict):
     result = gender_mapping.get(nct_gender.lower(), {})
     return result
 
-def map_disease_status(trial_data: dict):
-    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
-    eligibilityCriteria = tdh.safe_get(trial_data, ['protocolSection','eligibilityModule','eligibilityCriteria'])
-    keywords = tdh.safe_get(trial_data, ['protocolSection','conditionsModule','keywords'])
+def map_disease_status(nct_id: str, eligibilityCriteria: str, keywords: list):
     result = ai.get_disease_status(nct_id, eligibilityCriteria, keywords)
     return result
 
-def map_oncotree_primary_diagnosis(trial_data: dict) -> list:
-    nct_id = trial_data['protocolSection']['identificationModule']['nctId']
+def map_arm_level_diagnosis_to_oncotree_term(nct_id: str, arm_criteria_text: ArmCriteriaText) -> dict:
+    level_1_diagnosis, l1_l2_mapping = onct.get_l1_l2_oncotree_data()
+    arm_eligibility_criteria = arm_criteria_text.get_combined_eligibility_text()
+    level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_extra_info(nct_id, arm_eligibility_criteria, level_1_diagnosis)
+    all_level_oncotree_values = set()
+    all_possible_diagnoses = set()
+    for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
+        if item == "" or item.lower() == "other":
+            continue
+        l2_oncotree_values = l1_l2_mapping[item]
+        all_level_oncotree_values.update(l2_oncotree_values)
+    logger.debug(f"NCTID: {nct_id} | Diagnoses = {level1_oncotree_values_dict["oncotree_diagnoses"]}. Child values = {l2_oncotree_values}")
+    oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_extra_info(nct_id, all_level_oncotree_values, arm_eligibility_criteria)
+    if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
+        all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])   
+
+def map_global_diagnosis_to_oncotree_term(trial_data: dict) -> list:
+    nct_id = get_nct_id(trial_data)
     conditions_list = tdh.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
         
     all_possible_diagnoses = set()
@@ -485,7 +502,7 @@ def map_oncotree_primary_diagnosis(trial_data: dict) -> list:
                 logger.info(f"NCTID: {nct_id} | No oncotree diagnosis was found from original conditions, trying from keywords and title")
                 # if the could not dianose from conditions, try getting diagnosis from keywords and title
                 extra_info = []
-                keywords = tdh.safe_get(trial_data, ['protocolSection', 'conditionsModule','keywords'])
+                keywords = get_keywords(trial_data)
                 if keywords:
                     extra_info.extend(keywords)
                 long_title = tdh.safe_get(trial_data, ['protocolSection', 'identificationModule','officialTitle'])
@@ -527,7 +544,7 @@ def map_prior_treatment_requirements(trial_schema, trial_data) -> dict:
     trial_data: dict
         Dictionary containing the response from https://clinicaltrials.gov/ API for a particular trial
     """
-    eligibility_criteria = trial_data['protocolSection']['eligibilityModule']['eligibilityCriteria']
+    eligibility_criteria = get_full_eligibility_criteria(trial_data)
     
     lines = eligibility_criteria.split('\n')
     begin_exclude = False
@@ -549,7 +566,7 @@ def split_inclusion_exclusion_criteria(trial_data: dict) -> tuple[str, str]:
     """
     Splits the eligibility criteria into inclusion and exclusion parts
     """
-    eligibility_criteria = trial_data['protocolSection']['eligibilityModule']['eligibilityCriteria']
+    eligibility_criteria = get_full_eligibility_criteria(trial_data)
     inclusion_criteria, exclusion_criteria = tdh.split_with_find(eligibility_criteria, ["exclusion criteria", "exclusion"])    
     return inclusion_criteria, exclusion_criteria
 
