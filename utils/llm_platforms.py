@@ -6,6 +6,7 @@ import json
 from abc import ABC, abstractmethod
 from typing import Dict, Any, Optional
 from loguru import logger
+import re
 
 
 class LLMPlatform(ABC):
@@ -78,7 +79,7 @@ class SGLangPlatform(LLMPlatform):
     def parse_response(self, ai_response: Dict[str, Any]) -> Dict[str, Any]:
         """Parse SGLang response."""
         response_dict = {}
-        try:
+        try: # todo: simplify it with a find_tag() function or extract_tag()
             if type(ai_response) is dict and 'choices' in ai_response.keys() and type(ai_response['choices']) is list:
                 answer = ai_response['choices'][0]
                 ai_response_content = self._safe_get(answer, ['message', 'content'])
@@ -96,9 +97,9 @@ class SGLangPlatform(LLMPlatform):
                         else:
                             response_string = ai_response_content
                     
-                    response_dict = json.loads(response_string)
+                    response_dict = json.loads(self._sanitize_json_string(response_string), strict=False)
         except json.JSONDecodeError as ex:
-            logger.error(f"Unexpected response format: {ex=}, {type(ex)=}")
+            logger.error(f"Unexpected response format: {ex=} | response_string = {response_string}, {type(ex)=}")
         return response_dict
     
     def _safe_get(self, dict_data, keys):
@@ -106,6 +107,11 @@ class SGLangPlatform(LLMPlatform):
         for key in keys:
             dict_data = dict_data.get(key, {})
         return dict_data
+
+    def _sanitize_json_string(self, response_string: str) -> str:
+    # Replace backslash-escapes that JSON doesn’t understand (e.g. "\<") with the bare char
+    # Valid escapes per JSON spec: " \ / b f n r t u
+        return re.sub(r'\\([^"\\/bfnrtu])', r'\1', response_string)
 
 
 class VLLMPlatform(SGLangPlatform):
