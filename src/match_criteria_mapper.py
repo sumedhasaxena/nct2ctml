@@ -1,7 +1,54 @@
+from typing import Dict, TypedDict
+
 import config
 import utils.aho_corasick as ac
 import src.trial_data_helper as tdh
 from utils.genomic_patterns import _ACCEPTABLE_PROTEIN_CHANGE_PATTERNS
+
+
+class ArmCriteriaText(TypedDict, total=False):
+    """
+    Textual eligibility snippets for a single CTML arm.
+
+    Each arm (and the special global block) can contribute:
+    - inclusion_text: text that specifies inclusion criteria for this arm only.
+    - exclusion_text: text that specifies exclusion criteria for this arm only.
+
+    Callers SHOULD store empty strings when there is no arm-specific text, so
+    downstream code can safely concatenate strings without additional None checks.
+    """
+
+    inclusion_text: str
+    exclusion_text: str
+
+
+ArmCriteriaBlocks = Dict[str, ArmCriteriaText]
+"""
+Normalized arm-level eligibility criteria, keyed by CTML arm identifier.
+
+Keys:
+- \"global\": criteria that apply to all arms in the trial.
+- \"<arm_key>\": one entry per CTML arm, where arm_key is a stable identifier
+  that can be mapped back to the CTML arm definition (for example, an internal
+  arm ID or the CTML arm_code).
+
+Example shape:
+
+    arm_criteria_blocks: ArmCriteriaBlocks = {
+        \"global\": {
+            \"inclusion_text\": \"... applies to all arms ...\",
+            \"exclusion_text\": \"... applies to all arms ...\",
+        },
+        \"ARM_A\": {
+            \"inclusion_text\": \"... only for arm A ...\",
+            \"exclusion_text\": \"\",
+        },
+        \"ARM_B\": {
+            \"inclusion_text\": \"\",
+            \"exclusion_text\": \"... only for arm B ...\",
+        },
+    }
+"""
 
 
 def _clean_protein_change_fields(genomic_criteria: list) -> list:
@@ -9,7 +56,7 @@ def _clean_protein_change_fields(genomic_criteria: list) -> list:
     Clean up protein_change-related fields on genomic criteria in place.
 
     - Remove protein_change fields that do not match any acceptable pattern.
-    - If protein_change ends with X/x (e.g. p.G719X), move it to wildcard_protein_change.
+    - If protein_change ends with X/x (e.g. p.G719X), move it to .
     """
     if not genomic_criteria:
         return genomic_criteria
@@ -28,7 +75,7 @@ def _clean_protein_change_fields(genomic_criteria: list) -> list:
         # Handle wildcard protein changes, e.g. p.G719X
         if protein_change_str.upper().endswith("X"):
             genomic.pop("protein_change", None)
-            genomic["wildcard_protein_change"] = protein_change_str
+            genomic[""] = protein_change_str.strip("X")
             continue
 
         # Remove incorrect protein_change values that do not match acceptable patterns
@@ -43,7 +90,7 @@ def _postprocess_genomic_criteria(genomic_criteria: list) -> list:
     Post-process genomic criteria:
 
     - Normalize HUGO symbols.
-    - Clean protein_change / wildcard_protein_change fields.
+    - Clean protein_change /  fields.
     """
     if not genomic_criteria:
         return genomic_criteria
