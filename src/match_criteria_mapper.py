@@ -126,37 +126,43 @@ def get_keywords_from_conditions(conditions_list):
 
 def convert_to_ctml_clinical_schema(clinical_critera) -> dict:    
     # Extract the diagnosis list
-    diagnoses = clinical_critera.pop("oncotree_primary_diagnosis")
-
-    if diagnoses and len(diagnoses) > 1: #incase of multiple diagnoses, put the result under 'or' operator
-        
-        result = {"and":[]}
-        diagnosis_result = {"or": []}
-        for diagnosis in diagnoses:
-            diagnosis_ctml = {
-                "clinical": {                    
-                    "oncotree_primary_diagnosis": diagnosis
+    if "oncotree_primary_diagnosis" in clinical_critera and clinical_critera["oncotree_primary_diagnosis"]:
+        diagnoses = clinical_critera.pop("oncotree_primary_diagnosis")
+        if diagnoses and len(diagnoses) > 1: #incase of multiple diagnoses, put the result under 'or' operator
+            
+            result = {"and":[]}
+            diagnosis_result = {"or": []}
+            for diagnosis in diagnoses:
+                diagnosis_ctml = {
+                    "clinical": {                    
+                        "oncotree_primary_diagnosis": diagnosis
+                    }
                 }
-            }
-            diagnosis_result["or"].append(diagnosis_ctml)        
-        
-        other_clinical_ctml = {
-                "clinical": {
-                    **clinical_critera
+                diagnosis_result["or"].append(diagnosis_ctml)        
+            
+            other_clinical_ctml = {
+                    "clinical": {
+                        **clinical_critera
+                    }
                 }
-            }
-        result["and"].append(diagnosis_result)
-        result["and"].append(other_clinical_ctml)
-        return result
-    else:         
+            result["and"].append(diagnosis_result)
+            result["and"].append(other_clinical_ctml)
+            return result
+        else:         
+            clinical_ctml = {
+                    "clinical": {
+                        **clinical_critera,  # Add all other keys
+                        "oncotree_primary_diagnosis": diagnoses[0]  # Add the only diagnosis
+                    }
+                }
+            result = clinical_ctml
+            return result
+    else:
         clinical_ctml = {
-                "clinical": {
-                    **clinical_critera,  # Add all other keys
-                    "oncotree_primary_diagnosis": diagnoses[0]  # Add the only diagnosis
-                }
-            }
-        result = clinical_ctml
-        return result
+            "clinical": clinical_critera
+        }
+        return clinical_ctml
+
 
 # Checks that the genomic crietria returned by AI model is not empty and has "hugo_symbol", "variant_category" keys
 def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_genomic_criteria: list) -> dict: 
