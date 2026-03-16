@@ -391,7 +391,7 @@ def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[
         gene_symbols = tcg.extract_official_gene_symbols()
 
         inlcusion_genomic_criteria = []
-        exclusion_genomic_criteria
+        exclusion_genomic_criteria = []
 
         # Pass 1: Initial extraction of genomic criteria
         if inclusion_text:
