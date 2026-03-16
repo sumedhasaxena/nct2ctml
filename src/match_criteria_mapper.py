@@ -1,5 +1,7 @@
 from typing import Dict, TypedDict
 
+from loguru import logger
+
 import config
 import utils.aho_corasick as ac
 import src.trial_data_helper as tdh
@@ -220,17 +222,22 @@ def convert_to_ctml_genomic_schema(inclusion_genomic_criteria: list, exclusion_g
     elif exclusion_genomic_criteria_ctml:
         return exclusion_genomic_criteria_ctml
     return {}
-    
-
 
 def combine_clinical_and_genomic_ctml(clinical_ctml, genomic_ctml):
-    if genomic_ctml and len(genomic_ctml) > 0:
+    if clinical_ctml and len(clinical_ctml) > 0  \
+        and genomic_ctml and len(genomic_ctml) > 0:
         match_result = {"and": []} 
         match_result["and"].append(clinical_ctml)
         match_result["and"].append(genomic_ctml)
+        logger.debug(f"combined clinical and genomic CTML: {match_result}")
+        return match_result
+    elif clinical_ctml and len(clinical_ctml) > 0 :
+        match_result = clinical_ctml
+        logger.debug(f"using only clinical CTML: {match_result}")
         return match_result
     else:
-        match_result = clinical_ctml
+        match_result = genomic_ctml
+        logger.debug(f"using only genomic CTML: {match_result}")
         return match_result
 
 def check_if_eligibility_criteria_contains_gene_info(genes:list, eligibility):
