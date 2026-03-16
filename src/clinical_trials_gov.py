@@ -77,6 +77,7 @@ def map_nct_to_clinical_and_genomic_criteria(trial_data: dict,
     mapped_global_clinical_critera = {}
 
     # get global diagnosis from outside of arm definitions
+    logger.info(f"NCTID: {nct_id} | Mapping global diagnosis to oncotree terms")
     oncotree_diagnoses_list = map_global_diagnosis_to_oncotree_term(trial_data)
     mapped_global_clinical_critera['oncotree_primary_diagnosis'] = oncotree_diagnoses_list
 
@@ -91,23 +92,27 @@ def map_nct_to_clinical_and_genomic_criteria(trial_data: dict,
         mapped_global_clinical_critera['gender'] = gender_str
     
     #global
+    logger.info(f"NCTID: {nct_id} | Mapping disease status")
     disease_status_dict = map_disease_status(nct_id, global_nct_criteria, keywords)
     if disease_status_dict and len(disease_status_dict.get('disease_status', {})) > 0:
         mapped_global_clinical_critera.update(disease_status_dict)
 
+    logger.info(f"NCTID: {nct_id} | Mapping global HER2/ER/PR status")
     her2_er_pr_dict = map_her2_er_pr_status(nct_id, global_nct_criteria, keywords)    
     mapped_global_clinical_critera.update(her2_er_pr_dict)
     
+    logger.info(f"NCTID: {nct_id} | Mapping global PDL1 status")
     pdl1_status_dict = map_pdl1_status(nct_id, global_nct_criteria, keywords)
     mapped_global_clinical_critera.update(pdl1_status_dict)
 
+    logger.info(f"NCTID: {nct_id} | Mapping global MMR/MS status")
     filtered_mmr_ms_status_dict = map_mmr_ms_status(nct_id, global_nct_criteria, keywords)
     mapped_global_clinical_critera.update(filtered_mmr_ms_status_dict)
 
     logger.debug(f"global clinical criteria: {mapped_global_clinical_critera}")
     global_clinical_ctml = mcm.convert_to_ctml_clinical_schema(mapped_global_clinical_critera)
 
-    global_genomic_ctml = {}
+    logger.info(f"NCTID: {nct_id} | Mapping global genomic criteria")
     global_genomic_ctml = map_ctml_match_genomic_criteria(trial_data, gene_synonym_mapping, global_inclusion_text, global_exclusion_text)
     trial_level_match_result = mcm.combine_clinical_and_genomic_ctml(global_clinical_ctml, global_genomic_ctml)
     match_list = trial_schema['treatment_list']['step'][0]['match']
@@ -124,19 +129,26 @@ def map_nct_to_clinical_and_genomic_criteria(trial_data: dict,
             arm_exclusion_text = arm_criteria.get("exclusion_text", "")
             mapped_arm_clinical_critera = {}
             
+            logger.info(f"NCTID: {nct_id} | Mapping arm level diagnosis to oncotree terms for arm {level_code}")
+            oncotree_diagnoses_list = map_arm_level_diagnosis_to_oncotree_term(nct_id, arm_eligibility_criteria)
+            mapped_arm_clinical_critera['oncotree_primary_diagnosis'] = oncotree_diagnoses_list
+
             her2_er_pr_dict = map_her2_er_pr_status(nct_id, arm_eligibility_criteria, keywords)    
             mapped_arm_clinical_critera.update(her2_er_pr_dict)
             
+            logger.info(f"NCTID: {nct_id} | Mapping arm level PDL1 status for arm {level_code}")
             pdl1_status_dict = map_pdl1_status(nct_id, arm_eligibility_criteria, keywords)
             mapped_arm_clinical_critera.update(pdl1_status_dict)
 
+            logger.info(f"NCTID: {nct_id} | Mapping arm level MMR/MS status for arm {level_code}")
             filtered_mmr_ms_status_dict = map_mmr_ms_status(nct_id, arm_eligibility_criteria, keywords)
             mapped_arm_clinical_critera.update(filtered_mmr_ms_status_dict)
 
             logger.debug(f"arm level clinical criteria: {mapped_arm_clinical_critera}")
             arm_clinical_ctml = mcm.convert_to_ctml_clinical_schema(mapped_arm_clinical_critera)
-            logger.debug(f"arm level clinical criteria as CTML: {arm_clinical_ctml}")           
+            logger.debug(f"arm level clinical criteria as CTML: {arm_clinical_ctml}")
 
+            logger.info(f"NCTID: {nct_id} | Mapping arm level genomic criteria for arm {level_code}")
             arm_genomic_ctml = map_ctml_match_genomic_criteria(trial_data, gene_synonym_mapping, arm_inclusion_text, arm_exclusion_text)
             arm_level_match_result = mcm.combine_clinical_and_genomic_ctml(arm_clinical_ctml, arm_genomic_ctml)        
             for arm in trial_schema['treatment_list']['step'][0]['arm']:
@@ -368,7 +380,7 @@ def map_ctml_general_fields(trial_schema, trial_data) -> dict:
 
 def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[str, List[str]], inclusion_text: str, exclusion_text: str):
     nct_id = get_nct_id(trial_data)
-    eligibilityCriteria = get_full_nct_eligibility_criteria(trial_data)
+    eligibilityCriteria = inclusion_text + "\n" + exclusion_text
     contains_gene_info = mcm.check_if_eligibility_criteria_contains_gene_info(gene_synonym_mapping, eligibilityCriteria) #check if eligibility criteria contains any gene before asking AI
 
     if contains_gene_info: 
@@ -378,28 +390,32 @@ def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[
         )
         gene_symbols = tcg.extract_official_gene_symbols()
 
-        # Pass 1: Initial extraction of genomic criteria
-        inlcusion_genomic_criteria = ai.get_inclusion_genomic_criteria(nct_id, gene_symbols, inclusion_text)
-        exclusion_genomic_criteria = ai.get_exclusion_genomic_criteria(nct_id, gene_symbols, exclusion_text)
-        print(f'inlcusion_genomic_criteria: {inlcusion_genomic_criteria}')
-        print(f'exclusion_genomic_criteria: {exclusion_genomic_criteria}')
+        inlcusion_genomic_criteria = []
+        exclusion_genomic_criteria
 
-        # Pass 2: Enrichment for detailed mutation/CNV information
-        inlcusion_genomic_criteria = _enrich_genomic_criteria(
-            nct_id, inlcusion_genomic_criteria, inclusion_text
-        )
-        print(f'inclusion_genomic_criteria after enrichment: {inlcusion_genomic_criteria}')
-        exclusion_genomic_criteria = _enrich_genomic_criteria(
-            nct_id, exclusion_genomic_criteria, exclusion_text
-        )
-        print(f'exclusion_genomic_criteria after enrichment: {exclusion_genomic_criteria}')
+        # Pass 1: Initial extraction of genomic criteria
+        if inclusion_text:
+            inlcusion_genomic_criteria = ai.get_inclusion_genomic_criteria(nct_id, gene_symbols, inclusion_text)
+            print(f'inlcusion_genomic_criteria: {inlcusion_genomic_criteria}')
+            # Pass 2: Enrichment for detailed mutation/CNV information
+            inlcusion_genomic_criteria = _enrich_genomic_criteria(
+                nct_id, inlcusion_genomic_criteria, inclusion_text
+            )            
+            print(f'inclusion_genomic_criteria after enrichment: {inlcusion_genomic_criteria}')
+
+        if exclusion_text:
+            exclusion_genomic_criteria = ai.get_exclusion_genomic_criteria(nct_id, gene_symbols, exclusion_text)            
+            print(f'exclusion_genomic_criteria: {exclusion_genomic_criteria}')            
+            exclusion_genomic_criteria = _enrich_genomic_criteria(
+                nct_id, exclusion_genomic_criteria, exclusion_text
+            )
+            print(f'exclusion_genomic_criteria after enrichment: {exclusion_genomic_criteria}')
 
         genomic_ctml = mcm.convert_to_ctml_genomic_schema(inlcusion_genomic_criteria, exclusion_genomic_criteria)
         logger.debug(f"genomic criteria as CTML: {genomic_ctml}")
         return genomic_ctml
     else:
         return {}
-
 
 def _enrich_genomic_criteria(nct_id: str, genomic_criteria: list, criteria_text: str) -> list:
     """
@@ -514,7 +530,7 @@ def map_disease_status(nct_id: str, eligibilityCriteria: str, keywords: list):
     result = ai.get_disease_status(nct_id, eligibilityCriteria, keywords)
     return result
 
-def map_arm_level_diagnosis_to_oncotree_term(nct_id: str, arm_eligibility_criteria: str) -> dict:
+def map_arm_level_diagnosis_to_oncotree_term(nct_id: str, arm_eligibility_criteria: str) -> list:
     level_1_diagnosis, l1_l2_mapping = onct.get_l1_l2_oncotree_data()
     level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_extra_info(nct_id, arm_eligibility_criteria, level_1_diagnosis)
     all_level_oncotree_values = set()
@@ -528,6 +544,7 @@ def map_arm_level_diagnosis_to_oncotree_term(nct_id: str, arm_eligibility_criter
     oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_extra_info(nct_id, all_level_oncotree_values, arm_eligibility_criteria)
     if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
         all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])   
+    return list(all_possible_diagnoses)
 
 def map_global_diagnosis_to_oncotree_term(trial_data: dict) -> list:
     nct_id = get_nct_id(trial_data)
