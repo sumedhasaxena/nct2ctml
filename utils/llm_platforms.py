@@ -61,19 +61,31 @@ class SGLangPlatform(LLMPlatform):
     
     def get_request_body(self, prompt: str, json_schema: Optional[Dict] = None) -> Dict[str, Any]:
         """Generate SGLang request body."""
-        req_body = {
+        req_body: Dict[str, Any] = {
             "model": self.model,
             "messages": [
                 {"role": "system", "content": "You are a biomedical researcher."},
                 {"role": "user", "content": prompt}
             ],
-            "temperature": 0.5,
-            "max_tokens": 8192,
             "response_format": {
                 "type": "json_object"
             },
             "stream": False
         }
+
+        model_lower = (self.model or "").lower()
+        if "deepseek" in model_lower and "r1" in model_lower:
+            # DeepSeek-R1
+            req_body["temperature"] = 0.5
+            req_body["max_tokens"] = 8192
+        else:
+            # Qwen defaults
+            req_body["temperature"] = 0.6
+            req_body["top_p"] = 0.95
+            req_body["top_k"] = 20
+            req_body["max_tokens"] = 32768
+            req_body["chat_template_kwargs"] = {"enable_thinking": False}
+
         return req_body
     
     def parse_response(self, ai_response: Dict[str, Any]) -> Dict[str, Any]:
@@ -97,9 +109,13 @@ class SGLangPlatform(LLMPlatform):
                         else:
                             response_string = ai_response_content
                     
-                    response_dict = json.loads(self._sanitize_json_string(response_string), strict=False)
+                    sanitized_res = self._sanitize_json_string(response_string)
+                    
+                    response_dict = json.loads(sanitized_res, strict=False)
+                    if isinstance(response_dict, dict) and "error" in response_dict:
+                        response_dict.pop("error", None)
         except json.JSONDecodeError as ex:
-            logger.error(f"Unexpected response format: {ex=} | response_string = {response_string}, {type(ex)=}")
+            logger.error(f"Unexpected response format: {ex=} | response_string = {sanitized_res}, {type(ex)=}")
         return response_dict
     
     def _safe_get(self, dict_data, keys):
@@ -111,7 +127,8 @@ class SGLangPlatform(LLMPlatform):
     def _sanitize_json_string(self, response_string: str) -> str:
     # Replace backslash-escapes that JSON doesn’t understand (e.g. "\<") with the bare char
     # Valid escapes per JSON spec: " \ / b f n r t u
-        return re.sub(r'\\([^"\\/bfnrtu])', r'\1', response_string)
+        return re.sub(r'\\(?![\\"\/bfnrtu])', '', response_string.replace('\\\\', '\\'))
+        #return re.sub(r'\\([^"\\/bfnrtu])', r'\1', response_string)
 
 
 class VLLMPlatform(SGLangPlatform):
