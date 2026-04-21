@@ -72,7 +72,7 @@ def _clean_protein_change_fields(genomic_criteria: list) -> list:
     Clean up protein_change-related fields on genomic criteria in place.
 
     - Remove protein_change fields that do not match any acceptable pattern.
-    - If protein_change ends with X/x (e.g. p.G719X), move it to .
+    - If protein_change ends with X/x (e.g. p.G719X), move it to wildcard_protein_change.
     """
     if not genomic_criteria:
         return genomic_criteria
@@ -91,7 +91,7 @@ def _clean_protein_change_fields(genomic_criteria: list) -> list:
         # Handle wildcard protein changes, e.g. p.G719X
         if protein_change_str.upper().endswith("X"):
             genomic.pop("protein_change", None)
-            genomic[""] = protein_change_str.strip("X")
+            genomic["wildcard_protein_change"] = protein_change_str.strip("X")
             continue
 
         # Remove incorrect protein_change values that do not match acceptable patterns
@@ -126,44 +126,42 @@ def get_keywords_from_conditions(conditions_list):
                 all_keywords.add(cond_keyword)
     return all_keywords
 
-def convert_to_ctml_clinical_schema(clinical_critera) -> dict:    
+def convert_to_ctml_clinical_schema(clinical_critera) -> dict:
+    clinical_critera = dict(clinical_critera or {})
+
     # Extract the diagnosis list
     if "oncotree_primary_diagnosis" in clinical_critera and clinical_critera["oncotree_primary_diagnosis"]:
         diagnoses = clinical_critera.pop("oncotree_primary_diagnosis")
-        if diagnoses and len(diagnoses) > 1: #incase of multiple diagnoses, put the result under 'or' operator
-            
-            result = {"and":[]}
+        if not isinstance(diagnoses, list):
+            diagnoses = [diagnoses]
+
+        if len(diagnoses) > 1:  # incase of multiple diagnoses, put the result under 'or' operator
             diagnosis_result = {"or": []}
             for diagnosis in diagnoses:
-                diagnosis_ctml = {
-                    "clinical": {                    
-                        "oncotree_primary_diagnosis": diagnosis
-                    }
-                }
-                diagnosis_result["or"].append(diagnosis_ctml)        
-            
-            other_clinical_ctml = {
-                    "clinical": {
-                        **clinical_critera
-                    }
-                }
-            result["and"].append(diagnosis_result)
-            result["and"].append(other_clinical_ctml)
-            return result
-        else:         
-            clinical_ctml = {
-                    "clinical": {
-                        **clinical_critera,  # Add all other keys
-                        "oncotree_primary_diagnosis": diagnoses[0]  # Add the only diagnosis
-                    }
-                }
-            result = clinical_ctml
-            return result
-    else:
+                diagnosis_ctml = {"clinical": {"oncotree_primary_diagnosis": diagnosis}}
+                diagnosis_result["or"].append(diagnosis_ctml)
+
+            # Only use an 'and' operator if there are other clinical criteria besides diagnoses
+            other_clinical_criteria = {
+                k: v
+                for k, v in clinical_critera.items()
+                if v is not None and v != "" and v != [] and v != {}
+            }
+            if other_clinical_criteria:
+                return {"and": [diagnosis_result, {"clinical": {**other_clinical_criteria}}]}
+            return diagnosis_result
+
         clinical_ctml = {
-            "clinical": clinical_critera
+            "clinical": {
+                **clinical_critera,  # Add all other keys
+                "oncotree_primary_diagnosis": diagnoses[0],  # Add the only diagnosis
+            }
         }
         return clinical_ctml
+
+    if not clinical_critera:
+        return {}
+    return {"clinical": clinical_critera}
 
 
 # Checks that the genomic crietria returned by AI model is not empty and has "hugo_symbol", "variant_category" keys
