@@ -298,8 +298,7 @@ def send_ai_request(id, prompt, json_schema=None):
     endpoint_url = _llm_platform.get_endpoint_url()
     print(endpoint_url)
 
-    response = requests.post(endpoint_url, data=req_body_json, headers={"Content-Type":"application/json"})
-    print(response)
+    response = requests.post(endpoint_url, data=req_body_json, headers={"Content-Type":"application/json"})    
     response.raise_for_status()
 
     print(response.status_code)
@@ -504,8 +503,7 @@ def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
     3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
     5. If the criteria mentions only protein expression (e.g., "negative PD-L1 expression", "nPKCδ expression") without explicitly mentioning the corresponding gene name, DO NOT infer or add a gene to the output.
-    6. Output ONLY a JSON array. No wrapper objects, no extra keys.
-
+    6. Output should be a list of dictionaries with each genetic alteration under a separate "genomic" key, as in the provided example. No wrapper objects, no extra keys or explanation.
     
     *CRITICAL RULE:** If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely.**
     Only include genetic states that are direct reasons for inclusion (e.g., "patients *with* a BRAF V600E mutation are included").
@@ -569,8 +567,8 @@ def get_exclusion_genomic_criteria_prompt(genes, exclusion_criteria):
     3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.  
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
     5. If the criteria mentions only protein expression (e.g., "negative PD-L1 expression", "nPKCδ expression") without explicitly mentioning the corresponding gene name, DO NOT infer or add a gene to the output.
-    6. Output ONLY a JSON array. No wrapper objects, no extra keys.
-    
+    6. Output should be a list of dictionaries with each genetic alteration under a separate "genomic" key, as in the provided example. No wrapper objects, no extra keys or explanation.
+
     *CRITICAL RULES:**1. If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely. 2. Output must follow the JSON structure as the example below.**
     Only include genetic states that are direct reasons for exclusion (e.g., "patients *with* a BRAF V600E mutation are excluded").
 
