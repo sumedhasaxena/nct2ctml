@@ -71,8 +71,6 @@ def map_nct_to_clinical_and_genomic_criteria(trial_data: dict,
 
     mapped_global_clinical_critera = {}
 
-    logger.info(f"NCTID: {nct_id} | Mapping global genomic criteria")
-
     logger.info(f"NCTID: {nct_id} | Mapping global diagnosis to oncotree terms")
     oncotree_diagnoses_list = map_global_diagnosis_to_oncotree_term(trial_data)
     mapped_global_clinical_critera['oncotree_primary_diagnosis'] = oncotree_diagnoses_list
@@ -159,7 +157,8 @@ def _map_arm_level_matches(
         oncotree_diagnoses_list = map_arm_level_diagnosis_to_oncotree_term(
             nct_id, arm_eligibility_criteria
         )
-        mapped_arm_clinical_critera["oncotree_primary_diagnosis"] = oncotree_diagnoses_list
+        if oncotree_diagnoses_list and len(oncotree_diagnoses_list) > 0:
+            mapped_arm_clinical_critera["oncotree_primary_diagnosis"] = oncotree_diagnoses_list
         mapped_arm_clinical_critera.update(
             _map_biomarker_statuses(
                 nct_id=nct_id,
@@ -180,9 +179,10 @@ def _map_arm_level_matches(
         arm_level_match_result = mcm.combine_clinical_and_genomic_ctml(
             arm_clinical_ctml, arm_genomic_ctml
         )
-        for arm in trial_schema["treatment_list"]["step"][0]["arm"]:
-            if arm["arm_code"] == level_code:
-                arm["match"] = arm_level_match_result
+        if arm_level_match_result:
+            for arm in trial_schema["treatment_list"]["step"][0]["arm"]:
+                if arm["arm_code"] == level_code:
+                    arm["match"] = arm_level_match_result
 
 def get_arm_criteria_blocks_for_trial(
     trial_data: dict,
@@ -388,6 +388,7 @@ def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[
         if inclusion_text:
             inlcusion_genomic_criteria = ai.get_inclusion_genomic_criteria(nct_id, gene_symbols, inclusion_text)
             print(f'inlcusion_genomic_criteria: {inlcusion_genomic_criteria}')
+            inlcusion_genomic_criteria = _normalize_genomic_criteria(inlcusion_genomic_criteria)
             # Pass 2: Enrichment for detailed mutation/CNV information
             inlcusion_genomic_criteria = _enrich_genomic_criteria(
                 nct_id, inlcusion_genomic_criteria, inclusion_text
@@ -396,7 +397,8 @@ def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[
 
         if exclusion_text:
             exclusion_genomic_criteria = ai.get_exclusion_genomic_criteria(nct_id, gene_symbols, exclusion_text)            
-            print(f'exclusion_genomic_criteria: {exclusion_genomic_criteria}')            
+            print(f'exclusion_genomic_criteria: {exclusion_genomic_criteria}')
+            exclusion_genomic_criteria = _normalize_genomic_criteria(exclusion_genomic_criteria)
             exclusion_genomic_criteria = _enrich_genomic_criteria(
                 nct_id, exclusion_genomic_criteria, exclusion_text
             )
@@ -407,6 +409,45 @@ def map_ctml_match_genomic_criteria(trial_data: dict, gene_synonym_mapping:Dict[
         return genomic_ctml
     else:
         return {}
+
+def _normalize_genomic_criteria(genomic_criteria):
+    """
+    Normalize possible model output shapes into:
+      [{'genomic': {...}}, ...]
+
+    Supported inputs include:
+      - {'genomic': {...}}
+      - {'genomic': [{...}, {...}]}
+      - [{'genomic': {...}}, ...]
+      - [{'hugo_symbol': 'EGFR', 'variant_category': 'Mutation'}, ...]
+    """
+    if not genomic_criteria:
+        return genomic_criteria
+
+    if isinstance(genomic_criteria, dict):
+        if isinstance(genomic_criteria.get("genomic"), list):
+            genomic_criteria = [{"genomic": g} for g in genomic_criteria["genomic"] if isinstance(g, dict)]
+        else:
+            genomic_criteria = [genomic_criteria]
+
+    normalized_criteria = []
+    for criterion in genomic_criteria:
+        # Handle list items that are already gene-level dicts
+        if isinstance(criterion, dict) and "genomic" not in criterion and (
+            "hugo_symbol" in criterion or "variant_category" in criterion
+        ):
+            normalized_criteria.append({"genomic": criterion})
+            continue
+
+        if isinstance(criterion, dict) and isinstance(criterion.get("genomic"), list):
+            for g in criterion["genomic"]:
+                if isinstance(g, dict):
+                    normalized_criteria.append({"genomic": g})
+            continue
+
+        normalized_criteria.append(criterion)
+
+    return normalized_criteria
 
 def _enrich_genomic_criteria(nct_id: str, genomic_criteria: list, criteria_text: str) -> list:
     """
@@ -427,17 +468,32 @@ def _enrich_genomic_criteria(nct_id: str, genomic_criteria: list, criteria_text:
     """
     if not genomic_criteria or not criteria_text:
         return genomic_criteria
+
+    # Caller should normalize output; warn if not in canonical shape.
+    # Expected: [{'genomic': {...}}, ...]
+    is_canonical = isinstance(genomic_criteria, list) and all(
+        isinstance(c, dict) and isinstance(c.get("genomic"), dict) for c in genomic_criteria
+    )
+    if not is_canonical:
+        try:
+            sample = repr(genomic_criteria)
+        except Exception:
+            sample = "<unrepr-able>"
+        sample = sample[:500] + ("..." if len(sample) > 500 else "")
+        logger.warning(
+            f"NCTID: {nct_id} | Unexpected genomic_criteria shape passed to _enrich_genomic_criteria; "
+            f"expected list of {{'genomic': dict}}. Got type={type(genomic_criteria).__name__}. Sample={sample}"
+        )
     
     # Separate criteria by variant_category
     mutation_criteria = []
     cnv_criteria = []
-    
-    if type(genomic_criteria) is dict: #hack: as Qwen may not enclose 1 item in a list like deepseek
-        genomic_criteria = [genomic_criteria]
 
     for criterion in genomic_criteria:
+        if not isinstance(criterion, dict):
+            continue
         genomic = criterion.get("genomic", {})
-        if genomic:
+        if isinstance(genomic, dict) and genomic:
             variant_category = genomic.get("variant_category", "")
             
             # Handle both positive and negated categories
