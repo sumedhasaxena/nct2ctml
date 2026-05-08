@@ -80,6 +80,14 @@ Examples:
         help='Map a specific NCT ID to CTML format'
     )
     
+    map_parser.add_argument(
+        '--test_mode',
+        nargs='?',
+        default=False,
+        metavar='TEST_MODE',
+        help='Enable test mode for mapping (e.g., map a small subset of trials for testing purposes). Use --test_mode or --test_mode true/false.'
+    )
+    
     # Add cutoff days option for map --all
     map_parser.add_argument(
         '--cutoff-days', 
@@ -90,8 +98,7 @@ Examples:
 
     args = parser.parse_args()
 
-    nct_files_path = 'cache/nct'
-    ctml_files_path = "cache/ctml/"
+    nct_files_path = 'cache/nct'    
 
     if args.command == 'pull':
         if args.all:
@@ -100,6 +107,10 @@ Examples:
             pull_nct(args.nct_id)
 
     elif args.command == 'map':
+        if args.test_mode:
+            ctml_files_path = "cache/ctml_test/"
+        else:
+            ctml_files_path = "cache/ctml/"
         if args.all:
             map_all(nct_files_path, ctml_files_path, args)
         else:

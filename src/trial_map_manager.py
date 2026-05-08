@@ -191,6 +191,7 @@ class TrialMapManager:
     
     def map_all_trials(self, nct_files_path: str, ctml_files_path: str, cutoff_days: int = None) -> Dict[str, int]:
         """Map all NCT files to CTML format with local trial info integration"""
+        logger.info("Using ctml_files_path: {}".format(ctml_files_path))
         cutoff_date = self._get_cutoff_date(cutoff_days)
         genes = self.get_gene_list()
 
@@ -290,6 +291,7 @@ class TrialMapManager:
     
     def map_single_trial(self, nct_id: str, nct_files_path: str, ctml_files_path: str) -> bool:
         """Map a specific NCT ID to CTML format with local trial info integration"""
+        logger.info("Using ctml_files_path: {}".format(ctml_files_path))
         try:
             logger.info(f"Mapping NCT ID: {nct_id}")   
             logger.info("-----------------------")                 
