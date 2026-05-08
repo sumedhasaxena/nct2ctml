@@ -175,7 +175,8 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "PTEN",
-                                            "variant_category": "Any Variation"
+                                            "variant_category": "Copy Number Variation",
+                                            "cnv_call": "Homozygous Deletion"
                                         }
                                     }
                                 ]

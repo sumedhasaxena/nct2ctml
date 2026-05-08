@@ -49,14 +49,14 @@
     "protocol_type": "INTERVENTIONAL",
     "prior_treatment_requirements": [
         "Inclusion Criteria:",
-        "* Males or females aged 18 years or older (\u226518 years).",
+        "* Males or females aged 18 years or older (≥18 years).",
         "* Participants with pathologically confirmed advanced solid tumor (who have failed or are intolerant to standard of care).",
         "* PROC cohort",
         "1. Histologically documented, advanced (metastatic and/or unresectable) high-grade serous/endometrioid ovarian, primary peritoneal, or fallopian tube cancer.",
         "2. Must have received or are intolerant to 1 but no more than 3 lines of prior systemic therapy.",
         "3. Platinum-resistant disease, defined as progression or relapse within 6 months after the completion of platinum-based therapy.",
         "4. Must have had prior bevacizumab if the participant was considered a candidate for this regimen and the regimen is locally available.",
-        "5. Participants with known Folate receptor-\u03b1 (FR-\u03b1) expressing tumors must have received mirvetuximab soravtasine if the participants was considered a candidate for this regimen and the regimen is locally available.",
+        "5. Participants with known Folate receptor-α (FR-α) expressing tumors must have received mirvetuximab soravtasine if the participants was considered a candidate for this regimen and the regimen is locally available.",
         "6. Participants with known Breast cancer susceptibility gene (BRCA) mutated tumors should have received a Poly adenosine diphosphate-ribose polymerase (PARP) inhibitor if the participant was considered a candidate for this regimen and the regimen is locally available.",
         "* Endometrial cancer cohort",
         "1. Histologically documented, advanced (metastatic and/or unresectable) or recurrent endometrial cancer.",
@@ -139,42 +139,45 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ]
-                    }
-                ],
-                "match": [
-                    {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Advanced",
-                                        "Metastatic",
-                                        "Unresectable",
-                                        "Recurrent",
-                                        "Refractory"
-                                    ],
-                                    "oncotree_primary_diagnosis": "_SOLID_"
-                                }
-                            },
+                        ],
+                        "match": [
                             {
                                 "or": [
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "BRCA1",
-                                            "variant_category": "Mutation"
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Ovarian Cancer, Other"
                                         }
                                     },
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "BRCA2",
-                                            "variant_category": "Mutation"
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Peritoneal Serous Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Endometrial Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
                                         }
                                     }
                                 ]
                             }
                         ]
+                    }
+                ],
+                "match": [
+                    {
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Advanced",
+                                "Refractory"
+                            ],
+                            "oncotree_primary_diagnosis": "_SOLID_"
+                        }
                     }
                 ]
             }

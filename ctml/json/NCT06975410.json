@@ -53,7 +53,7 @@
         "* ECOG performance status 0 or 1",
         "* Estimated life expectancy of at least 3 months",
         "* A woman must not be breastfeeding",
-        "* Have at least one measurable lesion, not previously irradiated and not chosen for biopsy during the study screening period, that can be accurately measured at baseline \u226510 mm in the longest diameter (except lymph nodes which must have a short axis of \u226515 mm) with computerized tomography (CT) or magnetic resonance imaging (MRI), are suitable for accurate repeated measurements.",
+        "* Have at least one measurable lesion, not previously irradiated and not chosen for biopsy during the study screening period, that can be accurately measured at baseline ≥10 mm in the longest diameter (except lymph nodes which must have a short axis of ≥15 mm) with computerized tomography (CT) or magnetic resonance imaging (MRI), are suitable for accurate repeated measurements.",
         "\\[Dose Escalation Only\\] Locally advanced or metastatic EGFR overexpressing solid tumor\\* that is refractory or intolerable on all available standard therapy and that is considered uncurable by local therapy",
         "\\* One of the following pathologically confirmed EGFR overexpressing (IHC3+ or IHC2+) tumors.",
         "* Head and neck squamous cell carcinoma (HNSCC)",
@@ -123,29 +123,66 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Squamous Cell Carcinoma of the Vulva/Vagina"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Cervical Squamous Cell Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "Copy Number Variation",
+                                            "cnv_call": "High Amplification"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "_SOLID_"
-                                }
-                            },
-                            {
-                                "genomic": {
-                                    "hugo_symbol": "EGFR",
-                                    "variant_category": "Any Variation"
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Metastatic",
+                                "Recurrent"
+                            ],
+                            "oncotree_primary_diagnosis": "_SOLID_"
+                        }
                     }
                 ]
             }
