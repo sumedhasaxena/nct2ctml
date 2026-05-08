@@ -193,13 +193,17 @@ class OllamaPlatform(LLMPlatform):
                     }
                 ],
                 "stream": False,
+                "think": False,
                 "options": {
-                    "think": True,
+                    #"think": True,
                     "temperature": 0,
                     "seed": 42,
                     "top_k": 1
                 }
             }
+
+        if self.model and "qwen3.6" in self.model.lower():  
+            req_body["chat_template_kwargs"] = {"enable_thinking": False}
 
         if json_schema is not None:
             req_body["format"] = json_schema
