@@ -83,6 +83,7 @@ Examples:
     map_parser.add_argument(
         '--test_mode',
         nargs='?',
+        const=True,
         default=False,
         metavar='TEST_MODE',
         help='Enable test mode for mapping (e.g., map a small subset of trials for testing purposes). Use --test_mode or --test_mode true/false.'
@@ -107,8 +108,13 @@ Examples:
             pull_nct(args.nct_id)
 
     elif args.command == 'map':
-        if args.test_mode:
-            ctml_files_path = "cache/ctml_test/"
+        # Handle test_mode: convert string to bool if needed
+        test_mode = args.test_mode
+        if isinstance(test_mode, str):
+            test_mode = test_mode.lower() in ('true', '1', 'yes')
+        
+        if test_mode:
+            ctml_files_path = "cache/ctml_test/20260428/gemma4_31B"
         else:
             ctml_files_path = "cache/ctml/"
         if args.all:
