@@ -5,11 +5,17 @@ This document outlines the rules for manual creation of CTML documents that adhe
 The CTML trial documents are YAML files containing trial information.
 
 #### Reference Schema
-The schema for a trial document is located at [matchminer_schema](http://https://github.com/sumedhasaxena/matchminer-api/blob/5b97c71e3f9f7b29c77a84ddbc5ad6b02e8e124b/matchminer/data_model.py "matchminer_schema").
-Please refer to following fields in the link above:
-- parent_schema
-- yaml_genomic_schema
-- yaml_clinical_schema
+The schema for a trial document — including all **allowed values** for match fields — is defined in the MatchMiner API:
+
+[matchminer/data_model.py](https://github.com/sumedhasaxena/matchminer-api/blob/master/matchminer/data_model.py)
+
+Please refer to these schema objects in that file:
+- `parent_schema` — top-level trial document
+- `yaml_clinical_schema` — clinical match criteria
+- `yaml_genomic_schema` — genomic match criteria
+- `yaml_match_schema` — `and` / `or` match structure
+
+For how NCT data maps into CTML, see [nct_to_ctml_mapping_guide.md](nct_to_ctml_mapping_guide.md).
 
 ------------
 
@@ -37,13 +43,11 @@ The CTML directory on root level contains the trial CTML files. The sub-director
 ------------
 #### Rules for assigning values to various CTML fields
 
-1. Oncotree diagnosis - *todo*
-2. Genes list- *todo*
-3. General fields- *todo*
-4. protocol_id and protocol_number- *todo*
-5. Defining match criteria- *todo*
-   a. Clinical criteria- *todo*
-   b. Genomic Criteria- *todo*
+1. Oncotree diagnosis — see [nct_to_ctml_mapping_guide.md § Diagnosis](nct_to_ctml_mapping_guide.md#diagnosis-oncotree); uses [OncoTree `oncotree_2021_11_02`](https://oncotree.mskcc.org/?version=oncotree_2021_11_02&field=NAME) (`ref/oncotree_file.txt`); allowed diagnosis strings are OncoTree names (not enumerated in `data_model.py`)
+2. Genes / genomic criteria — see mapping guide § Genomic match; allowed values in `yaml_genomic_schema`
+3. General fields — see mapping guide § Part 1; trial-level fields in `parent_schema`
+4. `protocol_id` and `protocol_no` — leave empty/`0` in CTML; MatchMiner assigns unique auto-incremented values on database insert (see [mapping guide § protocol_id and protocol_no](nct_to_ctml_mapping_guide.md#protocol_id-and-protocol_no-intentionally-empty)). Use `protocol_ids` for local IDs from `local_trial_info.csv`.
+5. Match criteria — allowed values in `yaml_clinical_schema` and `yaml_genomic_schema`; structure in `yaml_match_schema`
 
 ------------
 
