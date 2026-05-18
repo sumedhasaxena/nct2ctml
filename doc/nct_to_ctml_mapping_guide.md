@@ -255,7 +255,7 @@ Each entry lives under `clinical:`. **Allowed values** are defined in [`yaml_cli
 | `oncotree_primary_diagnosis` | Yes | OncoTree name or `_SOLID_` / `_LIQUID_`; not an enum in `data_model.py` — see [Diagnosis (OncoTree)](#diagnosis-oncotree) |
 | `age_numerical` | Yes | From NCT minimum age when unit is years (e.g. `>=18`) |
 | `gender` | Yes | From NCT sex; only maps `Male` / `Female` (other NCT sex values omitted) |
-| `disease_status` | Yes | AI from global eligibility + keywords |
+| `disease_status` | Yes | AI from global eligibility + keywords - Currently this field is not involved in matching the criteria to patients
 | `her2_status`, `er_status`, `pr_status` | Yes | AI; values not in schema `allowed` or `Unknown` are dropped by the converter |
 | `pdl1_status` | Sometimes | AI only if PD-L1 keywords appear in text/keywords |
 | `mmr_status`, `ms_status` | Sometimes | AI only if MMR/MSI keywords appear |
