@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Nivolumab'
+  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Volrustomig'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Ipilimumab'
+  - drug_name: 'Drug: Volrustomig'
+  - drug_name: 'Drug: Nivolumab'
 long_title: A Phase III, Randomized, Open-Label, Multicenter, Global Study of Volrustomig
   (MEDI5752) in Combination With Carboplatin Plus Pemetrexed Versus Platinum Plus
   Pemetrexed or Nivolumab Plus Ipilimumab in Participants With Unresectable Pleural
@@ -132,7 +132,6 @@ treatment_list:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Advanced
         - Unresectable
-        - Untreated
+        - Advanced
         oncotree_primary_diagnosis: Pleural Mesothelioma

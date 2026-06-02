@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: AZD9793 Subcutaneous (SC) monotherapy)"
+                "drug_name": "Drug: AZD9793 Intravenous (IV) monotherapy"
             },
             {
-                "drug_name": "Drug: AZD9793 Intravenous (IV) monotherapy"
+                "drug_name": "Drug: AZD9793 Subcutaneous (SC) monotherapy)"
             }
         ]
     },
@@ -143,9 +143,9 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
+                                "Metastatic",
                                 "Advanced",
                                 "Recurrent",
-                                "Metastatic",
                                 "Unresectable"
                             ],
                             "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"

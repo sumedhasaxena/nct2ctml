@@ -119,14 +119,9 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          gender: Male
-          disease_status:
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        gender: Male
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Prostate Adenocarcinoma

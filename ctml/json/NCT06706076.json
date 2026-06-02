@@ -126,11 +126,11 @@
                             {
                                 "clinical": {
                                     "age_numerical": ">=18",
-                                    "her2_status": "Positive",
                                     "disease_status": [
                                         "Locally Advanced",
                                         "Metastatic"
                                     ],
+                                    "her2_status": "Positive",
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }
                             },
@@ -141,13 +141,37 @@
                                             {
                                                 "genomic": {
                                                     "hugo_symbol": "EGFR",
-                                                    "variant_category": "Mutation"
+                                                    "variant_category": "Mutation",
+                                                    "variant_classification": "In_Frame_Ins",
+                                                    "exon": 20
                                                 }
                                             },
                                             {
                                                 "genomic": {
                                                     "hugo_symbol": "ERBB2",
-                                                    "variant_category": "Mutation"
+                                                    "variant_category": "Mutation",
+                                                    "exon": 18
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ERBB2",
+                                                    "variant_category": "Mutation",
+                                                    "exon": 19
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ERBB2",
+                                                    "variant_category": "Mutation",
+                                                    "exon": 20
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ERBB2",
+                                                    "variant_category": "Mutation",
+                                                    "exon": 21
                                                 }
                                             }
                                         ]
@@ -155,7 +179,8 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "MET",
-                                            "variant_category": "!Copy Number Variation"
+                                            "variant_category": "!Copy Number Variation",
+                                            "cnv_call": "High Amplification"
                                         }
                                     }
                                 ]

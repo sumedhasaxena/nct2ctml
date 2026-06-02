@@ -103,6 +103,13 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                }
+                            }
                         ]
                     },
                     {
@@ -122,6 +129,13 @@
                                 "level_description": "Drug: Prednisone",
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                }
                             }
                         ]
                     }
@@ -143,7 +157,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
                                         }
                                     },
                                     {
@@ -153,7 +167,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
                                         }
                                     }
                                 ]
@@ -162,11 +176,9 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "gender": "Male",
-                                    "her2_status": "Negative",
-                                    "er_status": "Negative",
-                                    "pr_status": "Negative",
                                     "disease_status": [
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Refractory"
                                     ]
                                 }
                             }

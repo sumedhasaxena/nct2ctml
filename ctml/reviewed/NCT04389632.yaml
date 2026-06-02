@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: carboplatin'
-  - drug_name: 'Drug: cisplatin'
   - drug_name: 'Drug: pembrolizumab'
+  - drug_name: 'Drug: cisplatin'
+  - drug_name: 'Drug: carboplatin'
   - drug_name: 'Drug: sigvotatug vedotin'
 long_title: A Phase 1 Study of Sigvotatug Vedotin in Advanced Solid Tumors
 last_updated: '2025-11-14'
@@ -155,6 +155,18 @@ treatment_list:
         level_description: 'Drug: sigvotatug vedotin'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Negative
+        - or:
+          - genomic:
+              hugo_symbol: NTRK1
+              variant_category: Structural Variation
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: Mutation
+              protein_change: p.G12C
     - arm_code: 'Part B: Dose expansion'
       arm_internal_id: 1
       arm_description: sigvotatug vedotin monotherapy
@@ -164,6 +176,15 @@ treatment_list:
         level_description: 'Drug: sigvotatug vedotin'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            her2_status: Negative
     - arm_code: 'Part C: sigvotatug vedotin combination therapy in NSCLC, HNSCC, ESCC'
       arm_internal_id: 2
       arm_description: sigvotatug vedotin + pembrolizumab +/- (carboplatin or cisplatin)
@@ -185,6 +206,9 @@ treatment_list:
         level_description: 'Drug: carboplatin'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - clinical:
+          her2_status: Negative
     - arm_code: 'Part D: sigvotatug vedotin combination therapy in 1L NSCLC'
       arm_internal_id: 3
       arm_description: sigvotatug vedotin + pembrolizumab +/- (carboplatin)
@@ -202,6 +226,31 @@ treatment_list:
         level_description: 'Drug: carboplatin'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Breast Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Prostate Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - clinical:
+            her2_status: Negative
     - arm_code: 'Part D: sigvotatug vedotin combination therapy in 1L HNSCC'
       arm_internal_id: 4
       arm_description: sigvotatug vedotin + pembrolizumab +/- (carboplatin or cisplatin)
@@ -223,74 +272,74 @@ treatment_list:
         level_description: 'Drug: carboplatin'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Negative
+        - genomic:
+            hugo_symbol: PDCD1LG2
+            variant_category: '!Any Variation'
     match:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Small Cell Carcinoma of the Cervix
-        - clinical:
-            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Cervical Leiomyosarcoma
-        - clinical:
-            oncotree_primary_diagnosis: Cervical Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Cancer, Other
-        - clinical:
-            oncotree_primary_diagnosis: Cervical Rhabdomyosarcoma
+            oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
               the Esophagus/Stomach
         - clinical:
-            oncotree_primary_diagnosis: Cervical Adenocarcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Glassy Cell Carcinoma of the Cervix
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Cutaneous Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Cervical Adenoid Cystic Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Mixed Cervical Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Nasopharyngeal Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Sex Cord Stromal Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Cervical Adenosquamous Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Cervical Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Germ Cell Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Cervical Adenoid Basal Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
+            oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Breast Neoplasm, NOS
         - clinical:
+            oncotree_primary_diagnosis: Sex Cord Stromal Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Cervical Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Cutaneous Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatoblastoma
+        - clinical:
             oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
-            oncotree_primary_diagnosis: Villoglandular Adenocarcinoma of the Cervix
+            oncotree_primary_diagnosis: Bladder Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Urinary Bladder
+        - clinical:
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Cervical Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Urothelial Papilloma
+        - clinical:
+            oncotree_primary_diagnosis: Small Cell Bladder Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Inverted Urothelial Papilloma
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Cancer, Other
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Germ Cell Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Smooth Muscle Neoplasm, NOS
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Inflammatory Myofibroblastic Bladder Tumor
         - clinical:
             oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Cervical Neuroendocrine Tumor
+            oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
       - clinical:
           age_numerical: '>=18'
-          her2_status: Negative
           disease_status:
           - Metastatic
           - Unresectable
-          - Recurrent
-          - Refractory
-          - Locally Advanced
+          her2_status: Negative

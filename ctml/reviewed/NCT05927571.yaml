@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Tocilizumab'
-  - drug_name: 'Drug: Cevostamab'
   - drug_name: 'Drug: Elranatamab'
+  - drug_name: 'Drug: Cevostamab'
 long_title: An Open-Label, Multicenter, Phase Ib Trial Evaluating the Safety, Pharmacokinetics,
   and Activity of the Combination of Cevostamab and Elranatamab in Patients With Relapsed
   or Refractory Multiple Myeloma
@@ -110,6 +110,9 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Dose Expansion Cohort (Combined Therapy)
       arm_internal_id: 1
       arm_description: Participants will receive cevostamab, IV, in combination with
@@ -132,6 +135,9 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Dose Expansion Cohort (Monotherapy)
       arm_internal_id: 2
       arm_description: Participants will receive elranatamab SC, with step-up dosing
@@ -147,5 +153,6 @@ treatment_list:
     - clinical:
         age_numerical: '>=18'
         disease_status:
+        - Recurrent
         - Refractory
         oncotree_primary_diagnosis: Lymphoid Neoplasm

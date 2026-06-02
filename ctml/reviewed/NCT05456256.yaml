@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: LP-300'
+  - drug_name: 'Drug: Pemetrexed'
 long_title: Phase II Trial of LP-300 in Combination With Carboplatin and Pemetrexed
   in Never Smoker Patients With Relapsed Advanced Primary Adenocarcinoma of the Lung
   After Treatment With Tyrosine Kinase Inhibitors (The HARMONIC Study)
@@ -235,27 +235,33 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
           - clinical:
               oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
             age_numerical: '>=18'
             disease_status:
-            - Advanced
             - Locally Advanced
             - Metastatic
+            - Unresectable
       - or:
         - genomic:
             hugo_symbol: MET
-            variant_category: Structural Variation
+            variant_category: Mutation
+            variant_classification: Splice_Site
+            exon: 14
         - genomic:
             hugo_symbol: ALK
-            variant_category: Any Variation
+            variant_category: Structural Variation
         - genomic:
             hugo_symbol: EGFR
             variant_category: Any Variation
         - genomic:
-            hugo_symbol: NTRK
+            hugo_symbol: NTRK1
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: NTRK2
+            variant_category: Structural Variation
+        - genomic:
+            hugo_symbol: NTRK3
             variant_category: Structural Variation

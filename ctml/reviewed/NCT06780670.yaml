@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Investigators choice of SoC'
   - drug_name: 'Drug: AAA817'
+  - drug_name: 'Drug: Investigators choice of SoC'
 long_title: 'PSMAcTION: A Phase II/III, Open-label, International, Multicenter, Randomized
   Study of AAA817 Versus Standard of Care in the Treatment of Adult Participants With
   PSMA Positive Metastatic Castration-resistant Prostate Cancer Who Progressed on

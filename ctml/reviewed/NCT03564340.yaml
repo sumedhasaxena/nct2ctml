@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Ubamatamab'
-  - drug_name: 'Drug: Tocilizumab'
   - drug_name: 'Drug: Cemiplimab'
   - drug_name: 'Drug: Sarilumab'
+  - drug_name: 'Drug: Ubamatamab'
+  - drug_name: 'Drug: Tocilizumab'
 long_title: "A Phase 1/2 Study of REGN4018 (Ubamatamab), a MUC16\xD7CD3 Bispecific\
   \ Antibody, Administered Alone or in Combination With Cemiplimab in Patients With\
   \ Recurrent Ovarian Cancer or Other Recurrent MUC16+ Cancers"
@@ -122,6 +122,9 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Ovarian Epithelial Tumor
     - arm_code: Combination Therapy
       arm_internal_id: 1
       arm_description: REGN4018 and cemiplimab administration
@@ -139,17 +142,16 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
-        - clinical:
             oncotree_primary_diagnosis: Ovarian Cancer, Other
         - clinical:
             oncotree_primary_diagnosis: Endometrial Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Peritoneal Serous Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
       - clinical:
           age_numerical: '>=18'
           gender: Female
           disease_status:
           - Advanced
           - Recurrent
-          - Refractory

@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Hydrocortisone"
-            },
-            {
                 "drug_name": "Drug: Abiraterone acetate"
-            },
-            {
-                "drug_name": "Drug: Fludrocortisone acetate"
-            },
-            {
-                "drug_name": "Drug: Prednisone"
             },
             {
                 "drug_name": "Drug: Dexamethasone"
             },
             {
+                "drug_name": "Drug: Fludrocortisone acetate"
+            },
+            {
                 "drug_name": "Drug: Opevesostat"
+            },
+            {
+                "drug_name": "Drug: Hydrocortisone"
+            },
+            {
+                "drug_name": "Drug: Prednisone"
             },
             {
                 "drug_name": "Drug: Enzalutamide"
@@ -177,7 +177,36 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "or": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Basal Cell Carcinoma of Prostate"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                    }
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Abiraterone Acetate or Enzalutamide",
@@ -208,29 +237,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "disease_status": [
-                                        "Metastatic"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "disease_status": [
+                                "Metastatic",
+                                "Advanced",
+                                "Refractory"
+                            ],
+                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                        }
                     }
                 ]
             }

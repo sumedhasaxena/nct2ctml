@@ -9,19 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Carboplatin"
-            },
-            {
-                "drug_name": "Drug: Gemcitabine"
-            },
-            {
-                "drug_name": "Biological: Pembrolizumab"
+                "drug_name": "Biological: Sacituzumab tirumotecan"
             },
             {
                 "drug_name": "Drug: Paclitaxel"
             },
             {
-                "drug_name": "Drug: Pemetrexed"
+                "drug_name": "Drug: Gemcitabine"
             },
             {
                 "drug_name": "Drug: Cisplatin"
@@ -30,7 +24,13 @@
                 "drug_name": "Drug: Rescue medication"
             },
             {
-                "drug_name": "Biological: Sacituzumab tirumotecan"
+                "drug_name": "Biological: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Carboplatin"
+            },
+            {
+                "drug_name": "Drug: Pemetrexed"
             }
         ]
     },
@@ -207,51 +207,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "disease_status": [
-                                                "Localized",
-                                                "Locally Advanced"
-                                            ]
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "and": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "!Any Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ALK",
-                                            "variant_category": "!Any Variation"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Localized",
+                                "Early Stage"
+                            ],
+                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

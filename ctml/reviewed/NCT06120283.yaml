@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Elacestrant'
   - drug_name: 'Drug: Fulvestrant'
+  - drug_name: 'Drug: Elacestrant'
   - drug_name: 'Drug: Letrozole'
   - drug_name: 'Drug: BGB-43395'
 long_title: A Phase 1a/1b Study Investigating the Safety, Tolerability, Pharmacokinetics,
@@ -127,6 +127,24 @@ treatment_list:
         level_description: 'Drug: Elacestrant'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - and:
+          - or:
+            - clinical:
+                oncotree_primary_diagnosis: Endometrial Carcinoma
+            - clinical:
+                oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            - clinical:
+                oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+            - clinical:
+                oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+          - clinical:
+              er_status: Positive
+              pr_status: Positive
+          - genomic:
+              hugo_symbol: CDK4
+              variant_category: Mutation
     - arm_code: Dose Expansion
       arm_internal_id: 1
       arm_description: 'Phase 1b: The recommended dose for expansion (RFDE) for BGB-43395
@@ -146,19 +164,18 @@ treatment_list:
         level_description: 'Drug: Letrozole'
         level_internal_id: 2
         level_suspended: N
-    match:
-    - and:
+      match:
       - clinical:
-          age_numerical: '>=18'
           her2_status: Negative
           er_status: Positive
           pr_status: Positive
-          disease_status:
-          - Advanced
-          - Metastatic
-          - Refractory
-          - Unresectable
-          oncotree_primary_diagnosis: _SOLID_
-      - genomic:
-          hugo_symbol: CDK4
-          variant_category: Any Variation
+          oncotree_primary_diagnosis: Invasive Breast Carcinoma
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        - Advanced
+        her2_status: Negative
+        er_status: Positive
+        oncotree_primary_diagnosis: _SOLID_

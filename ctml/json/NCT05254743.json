@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Pirtobrutinib"
+                "drug_name": "Drug: Ibrutinib"
             },
             {
-                "drug_name": "Drug: Ibrutinib"
+                "drug_name": "Drug: Pirtobrutinib"
             }
         ]
     },
@@ -119,6 +119,13 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
+                            }
                         ]
                     },
                     {
@@ -147,28 +154,36 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "TP53",
+                                            "variant_category": "Copy Number Variation"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Refractory"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            },
-                            {
-                                "genomic": {
-                                    "hugo_symbol": "TP53",
-                                    "variant_category": "Copy Number Variation"
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Refractory",
+                                "Advanced"
+                            ],
+                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                        }
                     }
                 ]
             }

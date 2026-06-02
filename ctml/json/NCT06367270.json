@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2024-04-16",
     "study_start_date": "2023-09-01",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -107,6 +107,27 @@
                                 "level_description": "Drug: Pressured Intraperitoneal Aerosol Chemotherapy",
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }

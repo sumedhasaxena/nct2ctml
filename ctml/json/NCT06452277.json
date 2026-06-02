@@ -9,9 +9,6 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Pemetrexed"
-            },
-            {
                 "drug_name": "Drug: Carboplatin"
             },
             {
@@ -22,6 +19,9 @@
             },
             {
                 "drug_name": "Drug: Cisplatin"
+            },
+            {
+                "drug_name": "Drug: Pemetrexed"
             }
         ]
     },
@@ -116,6 +116,33 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "her2_status": "Positive"
+                                        }
+                                    },
+                                    {
+                                        "and": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ERBB2",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ERBB2",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -148,47 +175,28 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
+                            }
                         ]
                     }
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "her2_status": "Positive",
-                                            "disease_status": [
-                                                "Locally Advanced",
-                                                "Metastatic"
-                                            ]
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "genomic": {
-                                    "hugo_symbol": "ERBB2",
-                                    "variant_category": "Mutation"
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Locally Advanced",
+                                "Metastatic"
+                            ],
+                            "her2_status": "Positive",
+                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

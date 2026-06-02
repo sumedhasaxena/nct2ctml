@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Elacestrant"
+                "drug_name": "Drug: Fulvestrant"
             },
             {
-                "drug_name": "Drug: Fulvestrant"
+                "drug_name": "Drug: Elacestrant"
             },
             {
                 "drug_name": "Drug: Letrozole"
@@ -132,6 +132,52 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "and": [
+                                            {
+                                                "or": [
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Endometrial Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "er_status": "Positive",
+                                                    "pr_status": "Positive"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "CDK4",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -158,34 +204,31 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Negative",
+                                    "er_status": "Positive",
+                                    "pr_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                }
+                            }
                         ]
                     }
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "her2_status": "Negative",
-                                    "er_status": "Positive",
-                                    "pr_status": "Positive",
-                                    "disease_status": [
-                                        "Advanced",
-                                        "Metastatic",
-                                        "Refractory",
-                                        "Unresectable"
-                                    ],
-                                    "oncotree_primary_diagnosis": "_SOLID_"
-                                }
-                            },
-                            {
-                                "genomic": {
-                                    "hugo_symbol": "CDK4",
-                                    "variant_category": "Any Variation"
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Metastatic",
+                                "Advanced"
+                            ],
+                            "her2_status": "Negative",
+                            "er_status": "Positive",
+                            "oncotree_primary_diagnosis": "_SOLID_"
+                        }
                     }
                 ]
             }

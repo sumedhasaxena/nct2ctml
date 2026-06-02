@@ -9,7 +9,7 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Cisplatin"
+                "drug_name": "Drug: Volrustomig"
             },
             {
                 "drug_name": "Drug: T-DXd"
@@ -18,13 +18,13 @@
                 "drug_name": "Biological: Durvalumab"
             },
             {
-                "drug_name": "Drug: Pemetrexed"
+                "drug_name": "Drug: Cisplatin"
             },
             {
                 "drug_name": "Drug: Carboplatin"
             },
             {
-                "drug_name": "Drug: Volrustomig"
+                "drug_name": "Drug: Pemetrexed"
             },
             {
                 "drug_name": "Drug: Rilvegostomig"
@@ -143,6 +143,66 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "and": [
+                                            {
+                                                "or": [
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "her2_status": "Positive"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "and": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ERBB2",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -169,6 +229,26 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "her2_status": "Positive"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -194,6 +274,13 @@
                                 "level_description": "Drug: Pemetrexed",
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive"
+                                }
                             }
                         ]
                     },
@@ -229,6 +316,14 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
+                            }
                         ]
                     },
                     {
@@ -255,6 +350,52 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "her2_status": "Positive",
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    },
+                                    {
+                                        "and": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ROS1",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "KRAS",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ALK",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "RET",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -274,6 +415,14 @@
                                 "level_description": "Drug: Rilvegostomig",
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
                             }
                         ]
                     },
@@ -301,6 +450,14 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
+                            }
                         ]
                     },
                     {
@@ -320,6 +477,14 @@
                                 "level_description": "Drug: Volrustomig",
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
                             }
                         ]
                     },
@@ -341,6 +506,14 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
+                            }
                         ]
                     }
                 ],
@@ -350,30 +523,20 @@
                             {
                                 "clinical": {
                                     "age_numerical": ">=18",
-                                    "her2_status": "Positive",
                                     "disease_status": [
                                         "Locally Advanced",
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Unresectable"
                                     ],
+                                    "her2_status": "Positive",
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }
                             },
                             {
-                                "and": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "Copy Number Variation",
-                                            "cnv_call": "High Amplification"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "!Mutation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "ERBB2",
+                                    "variant_category": "Copy Number Variation"
+                                }
                             }
                         ]
                     }

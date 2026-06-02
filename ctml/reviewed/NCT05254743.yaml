@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pirtobrutinib'
   - drug_name: 'Drug: Ibrutinib'
+  - drug_name: 'Drug: Pirtobrutinib'
 long_title: A Phase 3 Open-Label, Randomized Study of Pirtobrutinib (LOXO-305) Versus
   Ibrutinib in Patients With Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma
   (BRUIN-CLL-314)
@@ -120,6 +120,9 @@ treatment_list:
         level_description: 'Drug: Pirtobrutinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Ibrutinib
       arm_internal_id: 1
       arm_description: Participants will receive ibrutinib orally.
@@ -138,13 +141,17 @@ treatment_list:
         level_description: 'Drug: Pirtobrutinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - genomic:
+            hugo_symbol: TP53
+            variant_category: Copy Number Variation
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Refractory
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - genomic:
-          hugo_symbol: TP53
-          variant_category: Copy Number Variation
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Refractory
+        - Advanced
+        oncotree_primary_diagnosis: Lymphoid Neoplasm

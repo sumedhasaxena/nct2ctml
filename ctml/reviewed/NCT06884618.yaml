@@ -118,23 +118,19 @@ treatment_list:
     match:
     - and:
       - clinical:
-         age_numerical: '>=18'
-         disease_status:
-         - Untreated
-         - Locally Advanced
-         - Recurrent
-         - Metastatic
-         oncotree_primary_diagnosis: _SOLID_
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Recurrent
+          - Metastatic
+          oncotree_primary_diagnosis: _SOLID_
       - or:
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation
         - genomic:
-            hugo_symbol: NRAS
-            variant_category: Mutation
-        - genomic:
             hugo_symbol: HRAS
             variant_category: Mutation
-
-
-
+        - genomic:
+            hugo_symbol: NRAS
+            variant_category: Mutation

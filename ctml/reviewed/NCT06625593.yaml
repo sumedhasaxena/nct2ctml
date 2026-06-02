@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Anticancer Agents'
   - drug_name: 'Drug: BG-C137'
+  - drug_name: 'Drug: Anticancer Agents'
 long_title: A Phase 1a/b, Open-label, Multicenter Study to Investigate the Safety,
   Tolerability, Pharmacokinetics, Pharmacodynamics, and Preliminary Antitumor Activity
   of BG-C137, an Antibody-Drug Conjugate Targeting FGFR2b, in Patients With Advanced
@@ -121,6 +121,50 @@ treatment_list:
         level_description: 'Drug: Anticancer Agents'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Inflammatory Myofibroblastic Bladder Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Urachal Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Small Cell Bladder Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Small Intestinal Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Anal Gland Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Small Bowel Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Urethral Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
+        - clinical:
+            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Urinary Bladder
     - arm_code: 'Phase 1b: Dose Expansion'
       arm_internal_id: 2
       arm_description: Recommended Dose(s) of BG-C137 as determined from Ph1a will
@@ -131,6 +175,14 @@ treatment_list:
         level_description: 'Drug: BG-C137'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
     match:
     - and:
       - clinical:

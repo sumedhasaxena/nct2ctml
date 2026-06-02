@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Pembrolizumab'
-  - drug_name: 'Drug: Divarasib'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Divarasib'
+  - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Cisplatin'
 long_title: A Phase III, Randomized, Open-Label Study Evaluating the Efficacy and
   Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin
   or Cisplatin in Patients With Previously Untreated, KRAS G12C-Mutated, Advanced
@@ -151,19 +151,18 @@ treatment_list:
         level_description: 'Drug: Cisplatin'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Advanced
-            - Metastatic
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - genomic:
           hugo_symbol: KRAS
           variant_category: Mutation

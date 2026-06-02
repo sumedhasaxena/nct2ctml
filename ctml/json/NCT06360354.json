@@ -12,6 +12,9 @@
                 "drug_name": "Drug: Gemcitabine"
             },
             {
+                "drug_name": "Drug: Nab-paclitaxel"
+            },
+            {
                 "drug_name": "Drug: Modified FOLFIRINOX"
             },
             {
@@ -19,9 +22,6 @@
             },
             {
                 "drug_name": "Drug: AMG 193"
-            },
-            {
-                "drug_name": "Drug: Nab-paclitaxel"
             }
         ]
     },
@@ -142,6 +142,13 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "her2_status": "Positive"
+                                }
+                            }
                         ]
                     },
                     {
@@ -182,6 +189,39 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NRAS",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "KRAS",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "HRAS",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -214,22 +254,7 @@
                                         "or": [
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Pancreatoblastoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Intracholecystic Papillary Neoplasm"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Cystic Tumor of the Pancreas"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
                                                 }
                                             },
                                             {
@@ -239,17 +264,12 @@
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
+                                                    "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
                                                 }
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Tumor"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Solid Pseudopapillary Neoplasm of the Pancreas"
+                                                    "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
                                                 }
                                             },
                                             {
@@ -266,6 +286,26 @@
                                                 "clinical": {
                                                     "oncotree_primary_diagnosis": "Acinar Cell Carcinoma of the Pancreas"
                                                 }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Tumor"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Intracholecystic Papillary Neoplasm"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Pancreatoblastoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Gastrointestinal Neuroendocrine Tumors"
+                                                }
                                             }
                                         ]
                                     },
@@ -275,39 +315,18 @@
                                             "disease_status": [
                                                 "Metastatic",
                                                 "Locally Advanced",
-                                                "Advanced"
+                                                "Unresectable"
                                             ]
                                         }
                                     }
                                 ]
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "MTAP",
-                                            "variant_category": "Copy Number Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "HRAS",
-                                            "variant_category": "Mutation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "NRAS",
-                                            "variant_category": "Mutation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "KRAS",
-                                            "variant_category": "Mutation"
-                                        }
-                                    }
-                                ]
+                                "genomic": {
+                                    "hugo_symbol": "MTAP",
+                                    "variant_category": "Copy Number Variation",
+                                    "cnv_call": "Homozygous Deletion"
+                                }
                             }
                         ]
                     }

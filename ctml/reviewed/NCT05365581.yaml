@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: ASP2138'
-  - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Oxaliplatin'
-  - drug_name: 'Drug: Irinotecan'
-  - drug_name: 'Drug: Fluorouracil'
-  - drug_name: 'Drug: Leucovorin'
   - drug_name: 'Drug: Ramucirumab'
+  - drug_name: 'Drug: Oxaliplatin'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: ASP2138'
+  - drug_name: 'Drug: Irinotecan'
+  - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Drug: Leucovorin'
+  - drug_name: 'Drug: Fluorouracil'
   - drug_name: 'Drug: Pembrolizumab'
 long_title: A Phase 1/1b Study of ASP2138 as Monotherapy and in Combination With Pembrolizumab
   and mFOLFOX6 or Ramucirumab and Paclitaxel in Participants With Metastatic or Locally
@@ -668,14 +668,13 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-        - clinical:
             oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
       - clinical:
           age_numerical: '>=18'
-          her2_status: Negative
-          pdl1_status: High
           disease_status:
-          - Locally Advanced
+          - Advanced
           - Metastatic
-          - Unresectable
+          - Recurrent
+          - Refractory

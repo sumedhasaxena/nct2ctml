@@ -110,6 +110,9 @@ treatment_list:
         level_description: 'Drug: Petosemtamab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: Investigator's Choice
       arm_internal_id: 1
       arm_description: Investigator's Choice
@@ -119,11 +122,13 @@ treatment_list:
         level_description: 'Drug: Investigator''s Choice'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Nasopharyngeal Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
         - Locally Advanced
-        - Untreated
         oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma

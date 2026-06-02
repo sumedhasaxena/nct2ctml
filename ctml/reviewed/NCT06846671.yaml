@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Idelalisib'
-  - drug_name: 'Drug: Bendamustine'
   - drug_name: 'Drug: BGB-16673'
+  - drug_name: 'Drug: Idelalisib'
   - drug_name: 'Drug: Venetoclax'
+  - drug_name: 'Drug: Bendamustine'
   - drug_name: 'Drug: Rituximab'
 long_title: A Phase 3, Open-Label, Randomized Study of BGB-16673 Compared to Investigator's
   Choice (Idelalisib Plus Rituximab or Bendamustine Plus Rituximab or Venetoclax Plus
@@ -120,4 +120,8 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=18'
+        disease_status:
+        - Advanced
+        - Recurrent
+        - Refractory
         oncotree_primary_diagnosis: Lymphoid Neoplasm

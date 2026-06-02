@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: BMS-986504'
-  - drug_name: 'Drug: Nab-paclitaxel'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Other: Placebo'
-  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Nab-paclitaxel'
+  - drug_name: 'Drug: BMS-986504'
+  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Carboplatin'
 long_title: A Randomized Phase 2/3 Study of BMS-986504 in Combination With Pembrolizumab
   and Chemotherapy Versus Placebo Plus Pembrolizumab and Chemotherapy in First-line
   Metastatic Non-small Cell Lung Cancer Participants With Homozygous MTAP Deletion
@@ -286,9 +286,14 @@ treatment_list:
         level_internal_id: 6
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Metastatic
-        - Recurrent
-        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic
+          - Recurrent
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - genomic:
+          hugo_symbol: MTAP
+          variant_category: Copy Number Variation
+          cnv_call: Homozygous Deletion

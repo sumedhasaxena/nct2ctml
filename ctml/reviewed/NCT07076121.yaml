@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Gemcitabine'
-  - drug_name: 'Drug: Nab-paclitaxel'
   - drug_name: 'Drug: BMS-986504'
+  - drug_name: 'Drug: Placebo'
+  - drug_name: 'Drug: Nab-paclitaxel'
 long_title: A Randomized, Phase 2/3 Study Comparing BMS-986504 in Combination With
   Nab-paclitaxel and Gemcitabine Versus Placebo in Combination With Nab-paclitaxel
   and Gemcitabine in Participants With Untreated Metastatic Pancreatic Ductal Adenocarcinoma
@@ -190,7 +190,9 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
+          - Untreated
           oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
       - genomic:
           hugo_symbol: MTAP
           variant_category: Copy Number Variation
+          cnv_call: Homozygous Deletion

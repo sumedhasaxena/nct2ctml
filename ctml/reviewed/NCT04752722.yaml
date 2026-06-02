@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: EG-70 (phase 1)'
   - drug_name: 'Drug: EG-70 (phase 2)'
+  - drug_name: 'Drug: EG-70 (phase 1)'
 long_title: "A Phase 1/2 Study of EG-70 as an Intravesical Administration to Patients\
   \ With BCG Unresponsive Non-Muscle Invasive Bladder Cancer (NMIBC) and High-Risk\
   \ NMIBC Patients Who Are BCG Na\xEFve or Received Incomplete BCG Treatment"
@@ -154,14 +154,13 @@ treatment_list:
         level_description: 'Drug: EG-70 (phase 2)'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+      match:
       - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Metastatic
+          oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Refractory
+        - Recurrent
+        oncotree_primary_diagnosis: Bladder Urothelial Carcinoma

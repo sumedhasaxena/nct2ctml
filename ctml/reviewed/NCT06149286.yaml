@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Lenalidomide'
   - drug_name: 'Drug: Odronextamab'
   - drug_name: 'Drug: Rituximab'
+  - drug_name: 'Drug: Lenalidomide'
 long_title: A Phase 3, Open Label, Randomized Study to Compare the Efficacy and Safety
   of Odronextamab (REGN1979), an Anti-CD20 x Anti-CD3 Bispecific Antibody, in Combination
   With Lenalidomide Versus Rituximab in Combination With Lenalidomide Therapy in Relapsed/Refractory

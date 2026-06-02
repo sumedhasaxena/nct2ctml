@@ -148,6 +148,9 @@ treatment_list:
         level_description: 'Drug: Blinatumomab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Dose Expansion Phase: Blinatumomab SC1'
       arm_internal_id: 1
       arm_description: Up to 4 cohorts of adult participants with R/R B-ALL will be
@@ -160,6 +163,13 @@ treatment_list:
         level_description: 'Drug: Blinatumomab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - genomic:
+            hugo_symbol: BCR
+            variant_category: Any Variation
     - arm_code: 'Ph-IIC: Clinical PK Evaluation of SC Blinatumomab Formulations'
       arm_internal_id: 2
       arm_description: 1 cohort of adult participants will be enrolled into the Ph-IIC
@@ -172,6 +182,9 @@ treatment_list:
         level_description: 'Drug: Blinatumomab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Ph-IIR: Efficacy of SC Blinatumomab in Participants with R/R B-ALL'
       arm_internal_id: 3
       arm_description: The efficacy of SC blinatumomab (in the SC2 formulation) will
@@ -182,6 +195,9 @@ treatment_list:
         level_description: 'Drug: Blinatumomab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Ph-IIM: Efficacy of SC Blinatumomab in Participants with MRD+ B-ALL'
       arm_internal_id: 4
       arm_description: The efficacy of SC blinatumomab (in the SC2 formulation) will
@@ -192,6 +208,9 @@ treatment_list:
         level_description: 'Drug: Blinatumomab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - and:
       - clinical:
@@ -200,10 +219,3 @@ treatment_list:
           - Recurrent
           - Refractory
           oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - or:
-        - genomic:
-            hugo_symbol: ABL1
-            variant_category: Structural Variation
-        - genomic:
-            hugo_symbol: BCR
-            variant_category: Structural Variation

@@ -124,9 +124,16 @@ treatment_list:
         level_description: 'Biological: Patritumab Deruxtecan'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Rhabdomyosarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatoblastoma
     match:
     - clinical:
         disease_status:
-        - Advanced
-        - Metastatic
+        - Untreated
+        - Localized
+        - Locally Advanced
         oncotree_primary_diagnosis: _SOLID_

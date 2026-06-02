@@ -8,11 +8,11 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Biological: Zilovertamab vedotin'
-  - drug_name: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
-  - drug_name: 'Drug: Oxaliplatin'
-  - drug_name: 'Drug: Bendamustine'
   - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
+  - drug_name: 'Drug: Bendamustine'
   - drug_name: 'Biological: Rituximab'
+  - drug_name: 'Drug: Oxaliplatin'
 long_title: A Phase 2/3 Multicenter, Open-label, Randomized, Active-Control Study
   of Zilovertamab Vedotin (MK-2140) in Combination With Standard of Care in Participants
   With Relapsed or Refractory Diffuse Large B-Cell Lymphoma (waveLINE-003)
@@ -155,6 +155,9 @@ treatment_list:
         level_description: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
         level_internal_id: 4
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: ZV + R-GemOx (Part 2)
       arm_internal_id: 1
       arm_description: Using the recommended Phase 2 dose (RP2D) dose of ZV plus R-GemOx
@@ -183,6 +186,9 @@ treatment_list:
         level_description: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
         level_internal_id: 4
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: R-GemOx (active control for Part 2)
       arm_internal_id: 2
       arm_description: Participants will receive R-GemOx given intravenously on Day
@@ -226,6 +232,9 @@ treatment_list:
         level_description: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Bendamustine Rituximab (BR)
       arm_internal_id: 4
       arm_description: Participants will receive Rituximab 375 mg/m\^2, given intravenously
@@ -242,6 +251,9 @@ treatment_list:
         level_description: 'Drug: Bendamustine'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: ZV + BR (Part 1)
       arm_internal_id: 5
       arm_description: Participants in this arm will receive doses of ZV (from 1.5
@@ -266,10 +278,13 @@ treatment_list:
         level_description: 'Drug: Granulocyte Colony-Stimulating Factor (G-CSF)'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Recurrent
-        - Refractory
+        - Advanced
+        - Metastatic
         oncotree_primary_diagnosis: Lymphoid Neoplasm

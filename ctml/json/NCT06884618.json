@@ -128,7 +128,6 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Untreated",
                                         "Locally Advanced",
                                         "Recurrent",
                                         "Metastatic"
@@ -146,13 +145,13 @@
                                     },
                                     {
                                         "genomic": {
-                                            "hugo_symbol": "NRAS",
+                                            "hugo_symbol": "HRAS",
                                             "variant_category": "Mutation"
                                         }
                                     },
                                     {
                                         "genomic": {
-                                            "hugo_symbol": "HRAS",
+                                            "hugo_symbol": "NRAS",
                                             "variant_category": "Mutation"
                                         }
                                     }

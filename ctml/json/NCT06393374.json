@@ -137,6 +137,62 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Bladder Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Bladder Squamous Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Urinary Bladder"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -166,13 +222,12 @@
                             {
                                 "clinical": {
                                     "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Early Stage"
+                                    ],
                                     "her2_status": "Negative",
                                     "er_status": "Negative",
                                     "pr_status": "Negative",
-                                    "disease_status": [
-                                        "Localized",
-                                        "Early Stage"
-                                    ],
                                     "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
                                 }
                             },
@@ -181,13 +236,13 @@
                                     {
                                         "genomic": {
                                             "hugo_symbol": "BRCA1",
-                                            "variant_category": "!Any Variation"
+                                            "variant_category": "!Mutation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "BRCA2",
-                                            "variant_category": "!Any Variation"
+                                            "variant_category": "!Mutation"
                                         }
                                     }
                                 ]

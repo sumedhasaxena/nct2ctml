@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Autogene cevumeran'
   - drug_name: 'Drug: Atezolizumab'
   - drug_name: 'Drug: mFOLFIRINOX'
-  - drug_name: 'Drug: Autogene cevumeran'
 long_title: A Phase II, Open-Label, Multicenter, Randomized Study of the Efficacy
   and Safety of Adjuvant Autogene Cevumeran Plus Atezolizumab and mFOLFIRINOX Versus
   mFOLFIRINOX Alone in Patients With Resected Pancreatic Ductal Adenocarcinoma
@@ -119,6 +119,16 @@ treatment_list:
         level_description: 'Drug: mFOLFIRINOX'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
     - arm_code: 'Arm 2: mFOLFIRINOX'
       arm_internal_id: 1
       arm_description: Participants will receive mFOLFIRINOX.
@@ -129,8 +139,13 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Localized
-        oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Localized
+          - Locally Advanced
+          oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+      - genomic:
+          hugo_symbol: DPYD
+          variant_category: '!Mutation'

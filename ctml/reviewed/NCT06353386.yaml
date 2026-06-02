@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Fludrocortisone acetate'
+  - drug_name: 'Drug: Olaparib'
   - drug_name: 'Drug: Dexamethasone'
   - drug_name: 'Drug: Docetaxel'
-  - drug_name: 'Drug: Olaparib'
-  - drug_name: 'Drug: Opevesostat'
-  - drug_name: 'Drug: Cabazitaxel'
   - drug_name: 'Drug: Prednisone'
-  - drug_name: 'Drug: Fludrocortisone acetate'
+  - drug_name: 'Drug: Cabazitaxel'
+  - drug_name: 'Drug: Opevesostat'
 long_title: 'MK-5684-01A Substudy: A Phase 1/2 Umbrella Substudy of MK-5684-U01 Master
   Protocol to Evaluate the Safety and Efficacy of MK-5684-based Treatment Combinations
   or MK-5684 Alone in Participants With Metastatic Castration-resistant Prostate Cancer
@@ -243,8 +243,16 @@ treatment_list:
         level_internal_id: 4
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Metastatic
-        oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic
+          - Refractory

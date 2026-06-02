@@ -9,12 +9,6 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Olaparib"
-            },
-            {
-                "drug_name": "Drug: Lenvatinib"
-            },
-            {
                 "drug_name": "Drug: MK-4280"
             },
             {
@@ -25,6 +19,12 @@
             },
             {
                 "drug_name": "Drug: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Lenvatinib"
+            },
+            {
+                "drug_name": "Drug: Olaparib"
             }
         ]
     },
@@ -271,6 +271,17 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -363,9 +374,9 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
-                                "Early Stage"
+                                "Advanced"
                             ],
-                            "oncotree_primary_diagnosis": "_SOLID_"
+                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                         }
                     }
                 ]

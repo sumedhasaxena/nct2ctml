@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: FOLFIRI Regimen"
+            },
+            {
                 "drug_name": "Drug: Panitumumab"
             },
             {
                 "drug_name": "Drug: Sotorasib"
-            },
-            {
-                "drug_name": "Drug: FOLFIRI Regimen"
             },
             {
                 "drug_name": "Drug: Bevacizumab-awwb"
@@ -151,17 +151,12 @@
                                         "or": [
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Appendiceal Adenocarcinoma"
+                                                    "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
                                                 }
                                             },
                                             {
                                                 "clinical": {
                                                     "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
                                                 }
                                             }
                                         ]

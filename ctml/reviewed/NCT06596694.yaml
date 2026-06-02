@@ -97,89 +97,26 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Anal Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Fibrolamellar Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Small Intestinal Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
-        - clinical:
-            oncotree_primary_diagnosis: Anal Gland Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Malignant Nonepithelial Tumor of the Liver
-        - clinical:
-            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Malignant Rhabdoid Tumor of the Liver
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Smooth Muscle Neoplasm, NOS
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatoblastoma
-        - clinical:
-            oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
-              Duct
-        - clinical:
-            oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
-              the Esophagus/Stomach
-        - clinical:
-            oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
-        - clinical:
-            oncotree_primary_diagnosis: Low-grade Appendiceal Mucinous Neoplasm
-        - clinical:
-            oncotree_primary_diagnosis: Hepatoblastoma
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Liver Angiosarcoma
-        - clinical:
-            oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Mucosal Melanoma of the Esophagus
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
-        - clinical:
-            oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Ampullary Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Tubular Adenoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Adenoma
-        - clinical:
-            oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
-              Cholangiocarcinoma
+            oncotree_primary_diagnosis: Small Bowel Cancer
         - clinical:
             oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
         - clinical:
-            oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
+            oncotree_primary_diagnosis: Tubular Adenoma of the Colon
         - clinical:
-            oncotree_primary_diagnosis: Small Bowel Cancer
+            oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
         - clinical:
-            oncotree_primary_diagnosis: Undifferentiated Embryonal Sarcoma of the
-              Liver
+            oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
+        - clinical:
+            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+        - clinical:
+            oncotree_primary_diagnosis: Small Intestinal Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Anal Gland Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Low-grade Appendiceal Mucinous Neoplasm
+        - clinical:
+            oncotree_primary_diagnosis: Anal Squamous Cell Carcinoma
       - clinical:
           age_numerical: '>=18'
-          disease_status:
-          - Unresectable
-          - Metastatic
-          - Advanced
-          - Locally Advanced

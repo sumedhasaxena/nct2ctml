@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Other: Placebo'
-  - drug_name: 'Biological: Intismeran autogene'
   - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Biological: Intismeran autogene'
+  - drug_name: 'Other: Placebo'
 long_title: A Phase 3, Randomized, Double-blind, Placebo- and Active-Comparator-Controlled
   Clinical Study of Adjuvant V940 (mRNA-4157) Plus Pembrolizumab Versus Adjuvant Placebo
   Plus Pembrolizumab in Participants With Resected Stage II, IIIA, IIIB (N2) Non-small

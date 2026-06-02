@@ -167,26 +167,16 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Miscellaneous Brain Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Encapsulated Glioma
+          - clinical:
+              oncotree_primary_diagnosis: Diffuse Glioma
         - clinical:
-            oncotree_primary_diagnosis: Embryonal Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Diffuse Glioma
-        - clinical:
-            oncotree_primary_diagnosis: Meningothelial Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Encapsulated Glioma
-        - clinical:
-            oncotree_primary_diagnosis: Primary CNS Melanocytic Tumors
-        - clinical:
-            oncotree_primary_diagnosis: Germ Cell Tumor, Brain
-        - clinical:
-            oncotree_primary_diagnosis: Ependymomal Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Pineal Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Choroid Plexus Tumor
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Not Metastatic
+            age_numerical: '>=18'
+            disease_status:
+            - Localized
+            - Locally Advanced

@@ -7,16 +7,16 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Other: Survey Administration'
-  - drug_name: 'Procedure: Echocardiography Test'
-  - drug_name: 'Procedure: Biospecimen Collection'
-  - drug_name: 'Drug: Trastuzumab/Hyaluronidase-oysk'
   - drug_name: 'Radiation: High-Dose-Rate Vaginal Cuff Brachytherapy'
-  - drug_name: 'Procedure: Computed Tomography'
-  - drug_name: 'Procedure: Multigated Acquisition Scan'
-  - drug_name: 'Drug: Hyaluronidase-zzxf/Pertuzumab/Trastuzumab'
   - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Other: Survey Administration'
+  - drug_name: 'Drug: Hyaluronidase-zzxf/Pertuzumab/Trastuzumab'
+  - drug_name: 'Procedure: Echocardiography Test'
+  - drug_name: 'Drug: Trastuzumab/Hyaluronidase-oysk'
+  - drug_name: 'Procedure: Multigated Acquisition Scan'
+  - drug_name: 'Procedure: Computed Tomography'
+  - drug_name: 'Procedure: Biospecimen Collection'
 long_title: A Phase II/III Study of Paclitaxel/Carboplatin Alone or Combined With
   Either Trastuzumab and Hyaluronidase-oysk (HERCEPTIN HYLECTA) or Pertuzumab, Trastuzumab,
   and Hyaluronidase-zzxf (PHESGO) in HER2 Positive, Stage I-IV Endometrial Serous
@@ -346,20 +346,18 @@ treatment_list:
     match:
     - and:
       - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Uterine Sarcoma/Mesenchymal
-          - clinical:
-              oncotree_primary_diagnosis: Endometrial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Endometrial Carcinoma
         - clinical:
             age_numerical: '>=18'
             gender: Female
-            her2_status: Positive
-            mmr_status: MMR-Proficient
             disease_status:
             - Localized
             - Locally Advanced
             - Metastatic
+            - Early Stage
+            her2_status: Positive
+            mmr_status: '!MMR-Deficient'
       - genomic:
           hugo_symbol: ERBB2
-          variant_category: Copy Number Variation
+          variant_category: Amplification

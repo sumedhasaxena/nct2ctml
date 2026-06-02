@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Rituximab'
   - drug_name: 'Drug: Acalabrutinib'
+  - drug_name: 'Biological: Rituximab'
 long_title: A Prospective, Open-Label, Single-Arm, Phase II Study of Acalabrutinib
   and Rituximab in Untreated Elderly and/or Frail Patients With Diffuse Large B-Cell
   Lymphoma (ACRUE)
@@ -121,7 +121,5 @@ treatment_list:
         age_numerical: '>=65'
         disease_status:
         - Untreated
-        - Localized
-        - Locally Advanced
-        - Metastatic
+        - Advanced
         oncotree_primary_diagnosis: Lymphoid Neoplasm

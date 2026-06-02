@@ -81,6 +81,9 @@ treatment_list:
         level_description: 'Drug: Ifinatamab deruxtecan'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: Docetaxel
       arm_internal_id: 1
       arm_description: Participants receive docetaxel 75 mg//m\^2 q3w and prednisone
@@ -95,6 +98,9 @@ treatment_list:
         level_description: 'Drug: Prednisone'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     match:
     - and:
       - or:
@@ -103,16 +109,14 @@ treatment_list:
         - clinical:
             oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+            oncotree_primary_diagnosis: Prostate Adenocarcinoma
         - clinical:
             oncotree_primary_diagnosis: Basal Cell Carcinoma of Prostate
         - clinical:
-            oncotree_primary_diagnosis: Prostate Adenocarcinoma
+            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
       - clinical:
           age_numerical: '>=18'
           gender: Male
-          her2_status: Negative
-          er_status: Negative
-          pr_status: Negative
           disease_status:
           - Metastatic
+          - Refractory

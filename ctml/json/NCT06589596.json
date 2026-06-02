@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: BGB-58067"
+                "drug_name": "Drug: BG-89894"
             },
             {
-                "drug_name": "Drug: BG-89894"
+                "drug_name": "Drug: BGB-58067"
             },
             {
                 "drug_name": "Drug: Standard of Care Therapy"
@@ -193,8 +193,9 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Metastatic",
                                         "Advanced",
+                                        "Metastatic",
+                                        "Recurrent",
                                         "Unresectable"
                                     ],
                                     "oncotree_primary_diagnosis": "_SOLID_"
@@ -203,7 +204,8 @@
                             {
                                 "genomic": {
                                     "hugo_symbol": "MTAP",
-                                    "variant_category": "Copy Number Variation"
+                                    "variant_category": "Copy Number Variation",
+                                    "cnv_call": "Homozygous Deletion"
                                 }
                             }
                         ]

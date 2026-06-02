@@ -119,6 +119,13 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
+                            }
                         ]
                     },
                     {
@@ -139,32 +146,34 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Mantle Cell Lymphoma (MCL)"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Chronic Lymphocytic Leukemia (CLL)"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lymphoid Atypical"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18"
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Advanced"
+                            ],
+                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                        }
                     }
                 ]
             }

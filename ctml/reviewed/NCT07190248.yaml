@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: MK-1084'
-  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Biological: Pembrolizumab (+) Berahyaluronidase alfa'
+  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: MK-1084'
 long_title: A Phase 3, Randomized, Open-label, Multicenter Clinical Study to Evaluate
   the Safety and Efficacy of MK-1084 in Combination With Subcutaneous Pembrolizumab
   and Berahyaluronidase Alfa (MK-3475A) Versus MK-3475A in Combination With Pemetrexed/Platinum
@@ -150,4 +150,5 @@ treatment_list:
         disease_status:
         - Locally Advanced
         - Metastatic
+        - Unresectable
         oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

@@ -105,6 +105,32 @@ treatment_list:
         level_description: 'Combination Product: TAR-210'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Urinary Bladder
+        - clinical:
+            oncotree_primary_diagnosis: Mucosal Melanoma of the Urethra
+        - clinical:
+            oncotree_primary_diagnosis: Urothelial Papilloma
+        - clinical:
+            oncotree_primary_diagnosis: Inverted Urothelial Papilloma
+        - clinical:
+            oncotree_primary_diagnosis: Urachal Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Inflammatory Myofibroblastic Bladder Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Small Cell Bladder Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Urethral Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
     - arm_code: 'Group B: MMC or Gemcitabine'
       arm_internal_id: 1
       arm_description: Participants in Group B will receive intravesical mitomycin
@@ -121,23 +147,17 @@ treatment_list:
         level_description: 'Drug: MMC'
         level_internal_id: 1
         level_suspended: N
-    match:
-    - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Urothelial Papilloma
-          - clinical:
-              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Localized
-            - Recurrent
+      match:
       - or:
-        - genomic:
-            hugo_symbol: FGFR
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: FGFR
-            variant_category: Structural Variation
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Recurrent
+        oncotree_primary_diagnosis: Bladder Urothelial Carcinoma

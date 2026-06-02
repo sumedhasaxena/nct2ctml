@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Tiragolumab and Atezolizumab'
-  - drug_name: 'Drug: Tiragolumab'
-  - drug_name: 'Drug: Ipatasertib'
-  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Entrectinib'
+  - drug_name: 'Drug: Ipatasertib'
+  - drug_name: 'Drug: Tiragolumab'
+  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Atezolizumab'
+  - drug_name: 'Drug: Tiragolumab and Atezolizumab'
   - drug_name: 'Drug: Inavolisib'
 long_title: An Open-Label, Multicenter Extension Study in Patients Previously Enrolled
   in a Genentech and/or F. Hoffmann-La Roche Ltd Sponsored Study
@@ -157,5 +157,3 @@ treatment_list:
             oncotree_primary_diagnosis: _SOLID_
         - clinical:
             oncotree_primary_diagnosis: _LIQUID_
-      - clinical:
-          age_numerical: '>=18'

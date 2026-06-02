@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Tocilizumab'
   - drug_name: 'Drug: Dexamethasone'
+  - drug_name: 'Drug: Iberdomide'
   - drug_name: 'Drug: Cevostamab'
   - drug_name: 'Drug: Lenalidomide'
-  - drug_name: 'Drug: Iberdomide'
+  - drug_name: 'Drug: Tocilizumab'
 long_title: A Platform Study Evaluating the Safety and Efficacy of Multiple Treatments
   in Patients With Multiple Myeloma
 last_updated: '2025-11-14'
@@ -203,6 +203,9 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Substudy 4: Dose Escalation and Expansion'
       arm_internal_id: 1
       arm_description: 'In the pre-phase, participants will receive 2 step-up doses
@@ -234,7 +237,13 @@ treatment_list:
         level_description: 'Drug: Dexamethasone'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         age_numerical: '>=18'
+        disease_status:
+        - Refractory
+        - Recurrent
         oncotree_primary_diagnosis: Lymphoid Neoplasm

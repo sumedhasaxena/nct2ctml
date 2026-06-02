@@ -12,10 +12,10 @@
                 "drug_name": "Drug: Telisotuzumab Adizutecan"
             },
             {
-                "drug_name": "Drug: Standard of Care"
+                "drug_name": "Drug: Osimertinib (Osi)"
             },
             {
-                "drug_name": "Drug: Osimertinib (Osi)"
+                "drug_name": "Drug: Standard of Care"
             }
         ]
     },
@@ -223,31 +223,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Locally Advanced",
+                                "Metastatic"
+                            ],
+                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

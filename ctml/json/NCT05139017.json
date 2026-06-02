@@ -12,19 +12,19 @@
                 "drug_name": "Biological: Zilovertamab vedotin"
             },
             {
-                "drug_name": "Drug: Oxaliplatin"
-            },
-            {
-                "drug_name": "Biological: Rituximab"
+                "drug_name": "Drug: Gemcitabine"
             },
             {
                 "drug_name": "Drug: Granulocyte Colony-Stimulating Factor (G-CSF)"
             },
             {
-                "drug_name": "Drug: Gemcitabine"
+                "drug_name": "Drug: Bendamustine"
             },
             {
-                "drug_name": "Drug: Bendamustine"
+                "drug_name": "Biological: Rituximab"
+            },
+            {
+                "drug_name": "Drug: Oxaliplatin"
             }
         ]
     },
@@ -159,6 +159,13 @@
                                 "level_internal_id": 4,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
+                            }
                         ]
                     },
                     {
@@ -196,6 +203,13 @@
                                 "level_description": "Drug: Granulocyte Colony-Stimulating Factor (G-CSF)",
                                 "level_internal_id": 4,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
                             }
                         ]
                     },
@@ -255,6 +269,13 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
+                            }
                         ]
                     },
                     {
@@ -274,6 +295,13 @@
                                 "level_description": "Drug: Bendamustine",
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
                             }
                         ]
                     },
@@ -307,6 +335,13 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
+                            }
                         ]
                     }
                 ],
@@ -315,8 +350,8 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
-                                "Recurrent",
-                                "Refractory"
+                                "Advanced",
+                                "Metastatic"
                             ],
                             "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
                         }

@@ -3,13 +3,13 @@ age: Adults
 cancer_center_accrual_goal_upper: 0
 curated_on: '2022-10-14'
 study_start_date: '2023-01-23'
-study_completion_date: ''
+study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Other: Placebo'
   - drug_name: 'Drug: Dordaviprone (ONC201)'
   - drug_name: 'Drug: Dordaviprone (ONC201) + Placebo'
+  - drug_name: 'Other: Placebo'
 long_title: 'ONC201 for the Treatment of Newly Diagnosed H3 K27M-mutant Diffuse Glioma
   Following Completion of Radiotherapy: A Randomized, Double-Blind, Placebo-Controlled,
   Multicenter Study'
@@ -169,11 +169,20 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Encapsulated Glioma
+          - clinical:
+              oncotree_primary_diagnosis: Miscellaneous Neuroepithelial Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Diffuse Glioma
         - clinical:
-            oncotree_primary_diagnosis: Encapsulated Glioma
-        - clinical:
-            oncotree_primary_diagnosis: Diffuse Glioma
-      - clinical:
-          disease_status:
-          - Untreated
+            disease_status:
+            - Localized
+            - Early Stage
+      - genomic:
+          hugo_symbol: H3
+          variant_category: Mutation
+          protein_change: p.K27M
+          variant_classification: Missense_Mutation

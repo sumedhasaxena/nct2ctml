@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Abiraterone'
   - drug_name: 'Drug: JSB462'
   - drug_name: 'Drug: Enzalutamide'
-  - drug_name: 'Drug: Abiraterone'
 long_title: A Phase II, Randomized, Open-label, Multi-center Study of JSB462 (Luxdegalutamide)
   in Combination With Abiraterone in Adult Male Patients With Metastatic Hormone-sensitive
   Prostate Cancer (mHSPC)

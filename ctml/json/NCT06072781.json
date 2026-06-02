@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: Paclitaxel"
+            },
+            {
                 "drug_name": "Drug: avutometinib"
             },
             {
                 "drug_name": "Drug: Anastrozole"
             },
             {
-                "drug_name": "Drug: Paclitaxel"
-            },
-            {
                 "drug_name": "Drug: Letrozole"
             },
             {
-                "drug_name": "Drug: Defactinib"
+                "drug_name": "Drug: Pegylated liposomal doxorubicin"
             },
             {
-                "drug_name": "Drug: Pegylated liposomal doxorubicin"
+                "drug_name": "Drug: Defactinib"
             }
         ]
     },
@@ -171,6 +171,22 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Ovarian Cancer, Other"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
@@ -178,15 +194,32 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "gender": "Female",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Recurrent"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
-                                }
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Ovarian Cancer, Other"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "gender": "Female",
+                                            "disease_status": [
+                                                "Metastatic",
+                                                "Recurrent"
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "genomic": {

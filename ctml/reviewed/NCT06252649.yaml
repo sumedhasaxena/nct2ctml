@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: FOLFIRI Regimen'
   - drug_name: 'Drug: Panitumumab'
   - drug_name: 'Drug: Sotorasib'
-  - drug_name: 'Drug: FOLFIRI Regimen'
   - drug_name: 'Drug: Bevacizumab-awwb'
 long_title: "Phase 3 Multicenter, Randomized, Open-label, Active-controlled Study\
   \ of Sotorasib, Panitumumab and FOLFIRI Versus FOLFIRI With or Without Bevacizumab-awwb\
@@ -109,11 +109,9 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
+              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
           - clinical:
               oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
         - clinical:
             age_numerical: '>=18'
             disease_status:

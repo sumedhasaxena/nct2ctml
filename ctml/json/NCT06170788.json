@@ -163,36 +163,31 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "pdl1_status": "High",
-                                    "disease_status": [
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
-                            },
-                            {
-                                "and": [
+                                "or": [
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "!Any Variation"
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                         }
                                     },
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "ALK",
-                                            "variant_category": "!Any Variation"
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
                                         }
                                     },
                                     {
-                                        "genomic": {
-                                            "hugo_symbol": "ROS1",
-                                            "variant_category": "!Any Variation"
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Metastatic"
+                                    ]
+                                }
                             }
                         ]
                     }

@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Domvanalimab"
+                "drug_name": "Other: Placebo"
             },
             {
                 "drug_name": "Drug: Durvalumab"
             },
             {
-                "drug_name": "Other: Placebo"
+                "drug_name": "Drug: Domvanalimab"
             }
         ]
     },
@@ -151,28 +151,50 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "pdl1_status": "High",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Unresectable"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Locally Advanced",
+                                                "Unresectable"
+                                            ],
+                                            "pdl1_status": "High"
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "and": [
                                     {
                                         "genomic": {
                                             "hugo_symbol": "EGFR",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     },
                                     {
                                         "genomic": {
                                             "hugo_symbol": "ALK",
-                                            "variant_category": "!Mutation"
+                                            "variant_category": "!Any Variation"
                                         }
                                     }
                                 ]

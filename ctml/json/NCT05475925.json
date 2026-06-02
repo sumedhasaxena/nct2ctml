@@ -4,7 +4,7 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2022-07-27",
     "study_start_date": "2022-07-13",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
@@ -207,6 +207,17 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
@@ -214,25 +225,10 @@
                     {
                         "and": [
                             {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Sarcoma, NOS"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Metastatic",
-                                        "Advanced"
+                                        "Refractory"
                                     ]
                                 }
                             }

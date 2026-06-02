@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: ECI830'
   - drug_name: 'Drug: ribociclib'
   - drug_name: 'Drug: fulvestrant'
+  - drug_name: 'Drug: ECI830'
 long_title: An Open-label, Multi-center, Phase I/II Study of ECI830 as a Single Agent
   and in Combination With Ribociclib and Endocrine Therapy in Patients With Advanced
   Hormone Receptor Positive, HER2-negative Breast Cancer and Advanced Solid Tumors
@@ -109,6 +109,21 @@ treatment_list:
         level_description: 'Drug: ECI830'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - and:
+          - or:
+            - clinical:
+                oncotree_primary_diagnosis: Breast Neoplasm, NOS
+            - clinical:
+                oncotree_primary_diagnosis: Invasive Breast Carcinoma
+          - clinical:
+              her2_status: Negative
+              er_status: Positive
+              pr_status: Positive
+        - genomic:
+            hugo_symbol: CCNE1
+            variant_category: Copy Number Variation
     - arm_code: Dose Escalation Combination ECI830 + ribociclib + fulvestrant (Arm
         B)
       arm_internal_id: 1
@@ -127,6 +142,17 @@ treatment_list:
         level_description: 'Drug: fulvestrant'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Negative
+            er_status: Positive
+            pr_status: Positive
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - genomic:
+            hugo_symbol: CCNE1
+            variant_category: Copy Number Variation
+            cnv_call: High Amplification
     - arm_code: Ribociclib in combination with fulvestrant (Arm C)
       arm_internal_id: 2
       arm_description: Phase II
@@ -140,6 +166,19 @@ treatment_list:
         level_description: 'Drug: fulvestrant'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Negative
+            er_status: Positive
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - and:
+          - genomic:
+              hugo_symbol: ESR1
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Copy Number Variation'
     - arm_code: ECI830 in combination with fulvestrant (Arm D)
       arm_internal_id: 3
       arm_description: Phase II
@@ -153,6 +192,16 @@ treatment_list:
         level_description: 'Drug: fulvestrant'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - clinical:
+            her2_status: Negative
+            er_status: Positive
     - arm_code: ECI830 in combination with ribociclib and fulvestrant (Arm E)
       arm_internal_id: 4
       arm_description: Phase II
@@ -170,6 +219,12 @@ treatment_list:
         level_description: 'Drug: fulvestrant'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          her2_status: Negative
+          er_status: Positive
+          pr_status: Positive
+          oncotree_primary_diagnosis: Invasive Breast Carcinoma
     - arm_code: ECI830 in combination with ribociclib and fulvestrant (Arm F)
       arm_internal_id: 5
       arm_description: Phase II
@@ -187,17 +242,17 @@ treatment_list:
         level_description: 'Drug: fulvestrant'
         level_internal_id: 2
         level_suspended: N
-    match:
-    - and:
+      match:
       - clinical:
-          age_numerical: '>=18'
           her2_status: Negative
           er_status: Positive
-          disease_status:
-          - Metastatic
-          - Advanced
-          - Unresectable
-          oncotree_primary_diagnosis: _SOLID_
-      - genomic:
-          hugo_symbol: CCNE1
-          variant_category: Copy Number Variation
+          pr_status: Positive
+          oncotree_primary_diagnosis: Invasive Breast Carcinoma
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        - Advanced
+        er_status: Positive
+        oncotree_primary_diagnosis: _SOLID_

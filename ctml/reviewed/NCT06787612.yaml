@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cemiplimab'
   - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Drug: Ubamatamab'
-  - drug_name: 'Drug: Sarilumab'
   - drug_name: 'Drug: Fianlimab'
+  - drug_name: 'Drug: Sarilumab'
+  - drug_name: 'Drug: Cemiplimab'
   - drug_name: 'Drug: PLD'
+  - drug_name: 'Drug: Ubamatamab'
 long_title: "Multi-arm Phase 2 Study of Ubamatamab (REGN4018; MUC16\xD7CD3 Bispecific\
   \ Antibody) With or Without Additional Agents in Platinum-Resistant Ovarian Cancer"
 last_updated: '2025-11-21'
@@ -182,16 +182,16 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Sex Cord Stromal Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+            oncotree_primary_diagnosis: Ovarian Germ Cell Tumor
         - clinical:
             oncotree_primary_diagnosis: Ovarian Cancer, Other
         - clinical:
-            oncotree_primary_diagnosis: Ovarian Germ Cell Tumor
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Sex Cord Stromal Tumor
       - clinical:
           age_numerical: '>=18'
           gender: Female
           disease_status:
           - Advanced
-          - Untreated
+          - Refractory

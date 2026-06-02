@@ -120,14 +120,17 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
+                Cholangiocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Fibrolamellar Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Hepatocellular Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
-              Cholangiocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Unresectable
-          - Metastatic
+            age_numerical: '>=18'
+            disease_status:
+            - Unresectable
+            - Advanced

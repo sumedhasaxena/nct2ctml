@@ -9,19 +9,19 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Inavolisib"
-            },
-            {
-                "drug_name": "Drug: Optional Endocrine Therapy of Investigator's Choice"
+                "drug_name": "Drug: Placebo"
             },
             {
                 "drug_name": "Drug: Phesgo"
             },
             {
-                "drug_name": "Drug: Placebo"
+                "drug_name": "Drug: Optional Endocrine Therapy of Investigator's Choice"
             },
             {
                 "drug_name": "Drug: Taxane-based Chemotherapy"
+            },
+            {
+                "drug_name": "Drug: Inavolisib"
             }
         ]
     },
@@ -188,34 +188,17 @@
                     {
                         "and": [
                             {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "her2_status": "Positive",
-                                            "disease_status": [
-                                                "Metastatic",
-                                                "Locally Advanced",
-                                                "Recurrent",
-                                                "Refractory"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Metastatic",
+                                        "Locally Advanced",
+                                        "Recurrent",
+                                        "Refractory"
+                                    ],
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                }
                             },
                             {
                                 "or": [

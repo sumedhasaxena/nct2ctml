@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Lenvatinib'
   - drug_name: 'Drug: Rilvegostomig'
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Volrustomig'
+  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Drug: Lenvatinib'
 long_title: A Phase II, Open-Label, Multi-Drug, Multi-Center, Master Protocol to Evaluate
   the Efficacy and Safety of Novel Immunomodulators as Monotherapy and in Combination
   With Anticancer Agents in Participants With Advanced Hepatobiliary Cancer (GEMINI-Hepatobiliary)
@@ -90,6 +90,9 @@ treatment_list:
         level_description: 'Drug: Volrustomig'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Hepatocellular Carcinoma
     - arm_code: Cohort 1B
       arm_internal_id: 1
       arm_description: Volrustomig combination with bevacizumab
@@ -103,6 +106,9 @@ treatment_list:
         level_description: 'Drug: Bevacizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Hepatocellular Carcinoma
     - arm_code: Cohort 1C
       arm_internal_id: 2
       arm_description: Volrustomig combination with lenvatinib
@@ -116,6 +122,20 @@ treatment_list:
         level_description: 'Drug: Lenvatinib'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma
+        - and:
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: ALK
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: ROS1
+              variant_category: '!Any Variation'
     - arm_code: Cohort 2A
       arm_internal_id: 3
       arm_description: Rilvegostomig combination with Gemcitabine and Cisplatin
@@ -167,6 +187,9 @@ treatment_list:
         level_description: 'Drug: Rilvegostomig'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Hepatocellular Carcinoma
     - arm_code: Cohort 1E
       arm_internal_id: 6
       arm_description: Rilvegostomig combination with bevacizumab
@@ -180,23 +203,23 @@ treatment_list:
         level_description: 'Drug: Rilvegostomig'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Hepatocellular Carcinoma
     match:
     - and:
       - or:
         - clinical:
             oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
         - clinical:
-            oncotree_primary_diagnosis: Fibrolamellar Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
-              Cholangiocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma
-        - clinical:
             oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
               Duct
+        - clinical:
+            oncotree_primary_diagnosis: Fibrolamellar Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Locally Advanced
           - Metastatic
+          - Advanced

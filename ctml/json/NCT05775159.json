@@ -4,12 +4,18 @@
     "cancer_center_accrual_goal_upper": 0,
     "curated_on": "2023-03-20",
     "study_start_date": "2023-04-24",
-    "study_completion_date": "",
+    "study_completion_date": null,
     "data_table4": "Interventional",
     "drug_list": {
         "drug": [
             {
                 "drug_name": "Drug: Rilvegostomig"
+            },
+            {
+                "drug_name": "Drug: Volrustomig"
+            },
+            {
+                "drug_name": "Drug: Bevacizumab"
             },
             {
                 "drug_name": "Drug: Gemcitabine"
@@ -19,12 +25,6 @@
             },
             {
                 "drug_name": "Drug: Lenvatinib"
-            },
-            {
-                "drug_name": "Drug: Bevacizumab"
-            },
-            {
-                "drug_name": "Drug: Volrustomig"
             }
         ]
     },
@@ -121,6 +121,13 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                                }
+                            }
                         ]
                     },
                     {
@@ -141,6 +148,13 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                                }
+                            }
                         ]
                     },
                     {
@@ -160,6 +174,39 @@
                                 "level_description": "Drug: Lenvatinib",
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "and": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ALK",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ROS1",
+                                                    "variant_category": "!Any Variation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -239,6 +286,13 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                                }
+                            }
                         ]
                     },
                     {
@@ -259,6 +313,13 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                                }
+                            }
                         ]
                     }
                 ],
@@ -269,22 +330,22 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
                                             "oncotree_primary_diagnosis": "Intracholecystic Papillary Neoplasm"
                                         }
                                     },
                                     {
                                         "clinical": {
+                                            "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
                                             "oncotree_primary_diagnosis": "Fibrolamellar Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                                         }
                                     }
                                 ]
@@ -293,8 +354,8 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Advanced"
                                     ]
                                 }
                             }

@@ -9,19 +9,19 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Capecitabine"
-            },
-            {
                 "drug_name": "Biological: Patritumab deruxtecan"
             },
             {
                 "drug_name": "Biological: Trastuzumab deruxtecan"
             },
             {
-                "drug_name": "Drug: Nab-paclitaxel"
+                "drug_name": "Drug: Liposomal doxorubicin"
             },
             {
-                "drug_name": "Drug: Liposomal doxorubicin"
+                "drug_name": "Drug: Capecitabine"
+            },
+            {
+                "drug_name": "Drug: Nab-paclitaxel"
             },
             {
                 "drug_name": "Drug: Paclitaxel"
@@ -131,6 +131,22 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -176,42 +192,91 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "her2_status": "Negative",
-                                    "er_status": "Positive",
-                                    "pr_status": "Positive",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic",
-                                        "Recurrent"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
-                                }
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Fibroepithelial Neoplasms"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Sarcoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Metaplastic Breast Cancer"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Adenomyoepithelioma of the Breast"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Juvenile Secretory Carcinoma of the Breast"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Inflammatory Breast Cancer"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Locally Advanced",
+                                                "Metastatic",
+                                                "Recurrent",
+                                                "Advanced",
+                                                "Unresectable"
+                                            ],
+                                            "her2_status": "Negative",
+                                            "er_status": "Positive",
+                                            "pr_status": "Positive"
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "and": [
                                     {
                                         "genomic": {
-                                            "hugo_symbol": "ERBB3",
-                                            "variant_category": "Any Variation"
+                                            "hugo_symbol": "BRCA1",
+                                            "variant_category": "!Mutation"
                                         }
                                     },
                                     {
-                                        "and": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "BRCA1",
-                                                    "variant_category": "!Any Variation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "BRCA2",
-                                                    "variant_category": "!Any Variation"
-                                                }
-                                            }
-                                        ]
+                                        "genomic": {
+                                            "hugo_symbol": "BRCA2",
+                                            "variant_category": "!Mutation"
+                                        }
                                     }
                                 ]
                             }

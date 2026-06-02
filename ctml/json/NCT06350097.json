@@ -129,6 +129,38 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.E746_A750del",
+                                                    "variant_classification": "In_Frame_Del",
+                                                    "exon": 19
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.L858R",
+                                                    "variant_classification": "Missense_Mutation"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -148,38 +180,15 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Recurrent",
-                                        "Unresectable"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
-                            },
-                            {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "variant_classification": "In_Frame_Del",
-                                            "exon": 19
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.L858R"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Locally Advanced",
+                                "Metastatic",
+                                "Recurrent"
+                            ],
+                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

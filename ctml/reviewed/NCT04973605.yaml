@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pomalidomide'
   - drug_name: 'Drug: Dexamethasone'
+  - drug_name: 'Drug: Carfilzomib'
+  - drug_name: 'Drug: Pomalidomide'
   - drug_name: 'Drug: Sonrotoclax'
   - drug_name: 'Drug: Daratumumab'
-  - drug_name: 'Drug: Carfilzomib'
 long_title: A Phase 1b/2 Dose-Escalation and Cohort-Expansion Study to Determine the
   Safety and Efficacy of BGB-11417as Monotherapy, in Combination With Dexamethasone,
   Dexamethasone/Carfilzomib, Dexamethasone/Daratumumab, and Dexamethasone/Pomalidomide
@@ -169,6 +169,9 @@ treatment_list:
         level_description: 'Drug: Pomalidomide'
         level_internal_id: 4
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Myeloid Neoplasm
     - arm_code: Part 2 Cohort Expansion
       arm_internal_id: 1
       arm_description: There will be up to 7 expansion cohorts to further evaluate
@@ -189,15 +192,13 @@ treatment_list:
         level_description: 'Drug: Carfilzomib'
         level_internal_id: 2
         level_suspended: N
-    match:
-    - and:
+      match:
       - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Recurrent
-          - Refractory
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - or:
-        - genomic:
-            hugo_symbol: IGH
-            variant_category: Structural Variation
+          oncotree_primary_diagnosis: Myeloid Neoplasm
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Recurrent
+        - Refractory
+        oncotree_primary_diagnosis: Myeloid Neoplasm

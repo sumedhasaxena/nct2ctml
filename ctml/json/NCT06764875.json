@@ -12,25 +12,25 @@
                 "drug_name": "Drug: Trastuzumab"
             },
             {
-                "drug_name": "Drug: Cisplatin"
-            },
-            {
-                "drug_name": "Drug: Rilvegostomig"
-            },
-            {
                 "drug_name": "Drug: Capecitabine"
             },
             {
                 "drug_name": "Drug: Trastuzumab deruxtecan"
             },
             {
+                "drug_name": "Drug: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Cisplatin"
+            },
+            {
+                "drug_name": "Drug: Rilvegostomig"
+            },
+            {
                 "drug_name": "Drug: Oxaliplatin"
             },
             {
                 "drug_name": "Drug: 5-fluorouracil"
-            },
-            {
-                "drug_name": "Drug: Pembrolizumab"
             }
         ]
     },
@@ -252,22 +252,38 @@
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "her2_status": "Positive",
-                                    "pdl1_status": "High",
-                                    "disease_status": [
-                                        "Unresectable",
-                                        "Locally Advanced",
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
-                                }
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Unresectable",
+                                                "Locally Advanced",
+                                                "Metastatic",
+                                                "Advanced"
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "genomic": {
                                     "hugo_symbol": "ERBB2",
-                                    "variant_category": "Mutation"
+                                    "variant_category": "Copy Number Variation"
                                 }
                             }
                         ]

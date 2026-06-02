@@ -100,6 +100,13 @@ treatment_list:
         level_description: 'Drug: Pirtobrutinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - genomic:
+            hugo_symbol: TP53
+            variant_category: Copy Number Variation
     - arm_code: Pirtobrutinib Dose 2-Part 1
       arm_internal_id: 1
       arm_description: Pirtobrutinib administered orally.
@@ -109,6 +116,13 @@ treatment_list:
         level_description: 'Drug: Pirtobrutinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - genomic:
+            hugo_symbol: TP53
+            variant_category: Copy Number Variation
     - arm_code: Pirtobrutinib Dose 3-Part 1
       arm_internal_id: 2
       arm_description: Pirtobrutinib administered orally.
@@ -118,6 +132,14 @@ treatment_list:
         level_description: 'Drug: Pirtobrutinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - and:
+          - genomic:
+              hugo_symbol: TP53
+              variant_category: Copy Number Variation
     - arm_code: Pirtobrutinib Standard Dose-Part 2
       arm_internal_id: 3
       arm_description: Pirtobrutinib administered orally.
@@ -127,14 +149,17 @@ treatment_list:
         level_description: 'Drug: Pirtobrutinib'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Untreated
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - or:
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
         - genomic:
-            hugo_symbol: BTK
-            variant_category: Mutation
+            hugo_symbol: TP53
+            variant_category: Copy Number Variation
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Recurrent
+        - Refractory
+        oncotree_primary_diagnosis: Lymphoid Neoplasm

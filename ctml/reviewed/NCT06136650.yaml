@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Hydrocortisone'
-  - drug_name: 'Drug: Abiraterone acetate'
   - drug_name: 'Drug: Prednisone acetate'
   - drug_name: 'Drug: Opevesostat'
-  - drug_name: 'Drug: Fludrocortisone acetate'
   - drug_name: 'Drug: Dexamethasone'
+  - drug_name: 'Drug: Fludrocortisone acetate'
+  - drug_name: 'Drug: Hydrocortisone'
+  - drug_name: 'Drug: Abiraterone acetate'
   - drug_name: 'Drug: Enzalutamide'
 long_title: 'MK-5684-004: A Phase 3, Randomized, Open-label Study of Opevesostat Versus
   Alternative Abiraterone Acetate or Enzalutamide in Participants With Metastatic
@@ -220,15 +220,15 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Basal Cell Carcinoma of Prostate
         - clinical:
             oncotree_primary_diagnosis: Prostate Adenocarcinoma
         - clinical:
-            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
+            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
       - clinical:
           age_numerical: '>=18'
           disease_status:

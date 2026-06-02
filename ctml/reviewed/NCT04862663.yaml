@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Abemaciclib'
-  - drug_name: 'Drug: Fulvestrant'
-  - drug_name: 'Drug: Ribociclib'
   - drug_name: 'Drug: Palbociclib'
+  - drug_name: 'Drug: Abemaciclib'
+  - drug_name: 'Drug: Ribociclib'
   - drug_name: 'Drug: Capivasertib'
+  - drug_name: 'Drug: Fulvestrant'
 long_title: A Phase Ib/III, Open-label, Randomised Study of Capivasertib Plus CDK4/6
   Inhibitors and Fulvestrant Versus CDK4/6 Inhibitors and Fulvestrant in Hormone Receptor-Positive
   and Human Epidermal Growth Factor Receptor 2-Negative Locally Advanced, Unresectable
@@ -177,6 +177,11 @@ treatment_list:
         level_description: 'Drug: Capivasertib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            er_status: Positive
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
     - arm_code: Fulvestrant and Investigator's choice of CDK4/6i (palbociclib or ribociclib)
       arm_internal_id: 4
       arm_description: Fulvestrant and investigator's choice of CDK4/6i (palbociclib
@@ -187,12 +192,17 @@ treatment_list:
         level_description: 'Drug: Fulvestrant'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            er_status: Positive
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
+        disease_status:
+        - Locally Advanced
+        - Metastatic
         her2_status: Negative
         er_status: Positive
-        disease_status:
-        - Metastatic
-        - Locally Advanced
         oncotree_primary_diagnosis: Invasive Breast Carcinoma

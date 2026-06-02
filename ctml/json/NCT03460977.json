@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Enzalutamide"
+                "drug_name": "Drug: Mervometostat (PF-06821497)"
             },
             {
-                "drug_name": "Drug: Mervometostat (PF-06821497)"
+                "drug_name": "Drug: Enzalutamide"
             }
         ]
     },
@@ -273,12 +273,7 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lung Neuroendocrine Tumor"
+                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
                                         }
                                     },
                                     {
@@ -288,7 +283,12 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lung Neuroendocrine Tumor"
                                         }
                                     }
                                 ]
@@ -297,7 +297,9 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Refractory",
+                                        "Advanced"
                                     ]
                                 }
                             }

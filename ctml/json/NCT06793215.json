@@ -9,19 +9,19 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Cisplatin"
-            },
-            {
-                "drug_name": "Drug: Pembrolizumab"
-            },
-            {
-                "drug_name": "Drug: Divarasib"
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: Pemetrexed"
             },
             {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Drug: Divarasib"
+            },
+            {
+                "drug_name": "Drug: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Cisplatin"
             }
         ]
     },
@@ -167,6 +167,17 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
@@ -174,31 +185,14 @@
                     {
                         "and": [
                             {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "disease_status": [
-                                                "Advanced",
-                                                "Metastatic"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Advanced",
+                                        "Metastatic"
+                                    ],
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                }
                             },
                             {
                                 "genomic": {

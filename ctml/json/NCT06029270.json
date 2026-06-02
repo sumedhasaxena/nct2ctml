@@ -9,7 +9,7 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Procedure: Bone Scan"
             },
             {
                 "drug_name": "Drug: Cisplatin"
@@ -18,25 +18,25 @@
                 "drug_name": "Biological: Relatlimab"
             },
             {
-                "drug_name": "Procedure: Computed Tomography"
-            },
-            {
-                "drug_name": "Procedure: Positron Emission Tomography"
-            },
-            {
-                "drug_name": "Procedure: Magnetic Resonance Imaging"
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: Gemcitabine"
             },
             {
-                "drug_name": "Procedure: Biospecimen Collection"
-            },
-            {
-                "drug_name": "Procedure: Bone Scan"
-            },
-            {
                 "drug_name": "Biological: Nivolumab"
+            },
+            {
+                "drug_name": "Procedure: Magnetic Resonance Imaging"
+            },
+            {
+                "drug_name": "Procedure: Positron Emission Tomography"
+            },
+            {
+                "drug_name": "Procedure: Computed Tomography"
+            },
+            {
+                "drug_name": "Procedure: Biospecimen Collection"
             }
         ]
     },
@@ -150,7 +150,7 @@
     "staff_list": {
         "protocol_staff": []
     },
-    "status": "open to accrual",
+    "status": "closed",
     "summary": "This phase II trial tests the addition of BMS-986016 (relatlimab) to the usual immunotherapy after initial treatment for nasopharyngeal cancer that has come back after a period of improvement (recurrent) or that has spread from where it first started (primary site) to other places in the body (metastatic). Relatlimab is a monoclonal antibody that may interfere with the ability of tumor cells to grow and spread. The usual approach of treatment is initial treatment with chemotherapy such as the combination of cisplatin (or carboplatin) and gemcitabine, along with immunotherapy such as nivolumab. After the initial treatment is finished, patients may continue to receive additional immunotherapy. Carboplatin is in a class of medications known as platinum-containing compounds. It works in a way similar to the anticancer drug cisplatin, but may be better tolerated than cisplatin. Carboplatin works by killing, stopping or slowing the growth of tumor cells. Immunotherapy with monoclonal antibodies, such as nivolumab, may help the body's immune system attack the cancer, and may interfere with the ability of tumor cells to grow and spread. Gemcitabine is a chemotherapy drug that blocks the cells from making deoxyribonucleic acid (DNA) and may kill cancer cells. Giving BMS-986016 in addition to the usual immunotherapy after initial treatment may extend the time without the tumor cells growing or spreading longer than the usual approach in patients with recurrent or metastatic nasopharyngeal cancer.",
     "treatment_list": {
         "step": [
@@ -289,6 +289,13 @@
                                 "level_internal_id": 6,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Nasopharyngeal Carcinoma"
+                                }
+                            }
                         ]
                     }
                 ],
@@ -298,7 +305,9 @@
                             "age_numerical": ">=18",
                             "disease_status": [
                                 "Recurrent",
-                                "Metastatic"
+                                "Metastatic",
+                                "Unresectable",
+                                "Advanced"
                             ],
                             "oncotree_primary_diagnosis": "Nasopharyngeal Carcinoma"
                         }

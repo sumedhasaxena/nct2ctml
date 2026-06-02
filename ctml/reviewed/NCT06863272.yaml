@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: MK-5684'
+  - drug_name: 'Drug: Ifinatamab Deruxtecan'
   - drug_name: 'Drug: Abiraterone'
   - drug_name: 'Drug: Enzalutamide'
   - drug_name: 'Drug: Docetaxel'
-  - drug_name: 'Drug: Ifinatamab Deruxtecan'
-  - drug_name: 'Drug: MK-5684'
 long_title: 'MK-2400-01A Substudy: A Phase 1/2, Open-label Umbrella Substudy of MK-2400-U01
   Master Protocol to Evaluate the Safety and Efficacy of Ifinatamab Deruxtecan-based
   Treatment Combinations or Ifinatamab Deruxtecan Alone in Participants With Metastatic
@@ -172,5 +172,6 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
+        - Advanced
         - Refractory
         oncotree_primary_diagnosis: Prostate Adenocarcinoma

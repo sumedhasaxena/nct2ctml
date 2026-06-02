@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Gemcitabine"
-            },
-            {
-                "drug_name": "Drug: Trastuzumab deruxtecan"
-            },
-            {
                 "drug_name": "Diagnostic Test: Agilent HercepTest\u2122 mAb pharmDx"
+            },
+            {
+                "drug_name": "Drug: Cisplatin"
+            },
+            {
+                "drug_name": "Drug: Rilvegostomig"
             },
             {
                 "drug_name": "Diagnostic Test: Ventana PD-L1 SP263 assay"
@@ -24,10 +24,10 @@
                 "drug_name": "Drug: Durvalumab"
             },
             {
-                "drug_name": "Drug: Cisplatin"
+                "drug_name": "Drug: Gemcitabine"
             },
             {
-                "drug_name": "Drug: Rilvegostomig"
+                "drug_name": "Drug: Trastuzumab deruxtecan"
             }
         ]
     },
@@ -222,33 +222,16 @@
                     {
                         "and": [
                             {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Intracholecystic Papillary Neoplasm"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "her2_status": "Positive",
-                                            "disease_status": [
-                                                "Unresectable",
-                                                "Locally Advanced",
-                                                "Metastatic"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Unresectable",
+                                        "Locally Advanced",
+                                        "Metastatic"
+                                    ],
+                                    "her2_status": "Positive",
+                                    "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
+                                }
                             },
                             {
                                 "genomic": {

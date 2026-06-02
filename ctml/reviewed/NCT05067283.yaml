@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Drug: leucovorin'
-  - drug_name: 'Drug: 5-fluorouracil'
-  - drug_name: 'Drug: carboplatin'
-  - drug_name: 'Drug: pemetrexed'
   - drug_name: 'Drug: MK-1084'
-  - drug_name: 'Drug: oxaliplatin'
+  - drug_name: 'Drug: pemetrexed'
   - drug_name: 'Biological: cetuximab'
+  - drug_name: 'Drug: carboplatin'
+  - drug_name: 'Drug: leucovorin'
+  - drug_name: 'Drug: oxaliplatin'
+  - drug_name: 'Drug: 5-fluorouracil'
+  - drug_name: 'Biological: Pembrolizumab'
 long_title: A Phase 1, Open-label, Multicenter Study to Assess Safety, Tolerability,
   PK, and Efficacy of MK-1084 as Monotherapy and as Part of Various Combination Therapies
   in Participants With KRAS G12C Mutant Advanced Solid Tumors
@@ -142,6 +142,11 @@ treatment_list:
         level_description: 'Drug: MK-1084'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - genomic:
+          hugo_symbol: KRAS
+          variant_category: Mutation
+          protein_change: p.G12C
     - arm_code: Arm 2
       arm_internal_id: 1
       arm_description: Participants will receive MK-1084 daily oral escalating dose
@@ -159,6 +164,15 @@ treatment_list:
         level_description: 'Biological: Pembrolizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            pdl1_status: Low
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12C
     - arm_code: Arm 3
       arm_internal_id: 2
       arm_description: Participants will receive alternate formulation of MK-1084
@@ -170,6 +184,14 @@ treatment_list:
         level_description: 'Drug: MK-1084'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12C
     - arm_code: Arm 4
       arm_internal_id: 3
       arm_description: Participants will receive MK-1084 daily oral dose plus an intravenous
@@ -194,6 +216,14 @@ treatment_list:
         level_description: 'Drug: pemetrexed'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12C
     - arm_code: Arm 5
       arm_internal_id: 4
       arm_description: Participants will receive MK-1084 daily oral dose plus an intravenous
@@ -208,6 +238,14 @@ treatment_list:
         level_description: 'Biological: cetuximab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12C
     - arm_code: Arm 6
       arm_internal_id: 5
       arm_description: Participants will receive MK-1084 daily oral dose. Additionally,
@@ -236,19 +274,18 @@ treatment_list:
         level_description: 'Drug: 5-fluorouracil'
         level_internal_id: 4
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12C
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          pdl1_status: High
-          disease_status:
-          - Untreated
-          - Locally Advanced
-          - Metastatic
-          - Advanced
-          - Unresectable
-          oncotree_primary_diagnosis: _SOLID_
-      - genomic:
-          hugo_symbol: KRAS
-          variant_category: Mutation
-          protein_change: p.G12C
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        - Advanced
+        oncotree_primary_diagnosis: _SOLID_

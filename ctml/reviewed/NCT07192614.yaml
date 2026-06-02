@@ -204,10 +204,24 @@ treatment_list:
         level_description: 'Drug: AZD6621'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Cancer
     match:
-    - clinical:
-        age_numerical: '>=18'
-        gender: Male
-        disease_status:
-        - Metastatic
-        oncotree_primary_diagnosis: Prostate Adenocarcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Basal Cell Carcinoma of Prostate
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+      - clinical:
+          age_numerical: '>=18'
+          gender: Male
+          disease_status:
+          - Metastatic

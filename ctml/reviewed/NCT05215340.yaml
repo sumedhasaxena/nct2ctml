@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Datopotamab Deruxtecan'
+  - drug_name: 'Drug: Pembrolizumab'
 long_title: "A Randomized, Open-label, Phase 3 Trial of Dato-DXd Plus Pembrolizumab\
   \ vs Pembrolizumab Alone in Treatment-na\xEFve Subjects With Advanced or Metastatic\
   \ PD-L1 High (TPS \u226550%) Non-small Cell Lung Cancer Without Actionable Genomic\
@@ -203,34 +203,32 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=18'
-          pdl1_status: High
           disease_status:
-          - Locally Advanced
           - Metastatic
+          - Advanced
+          - Recurrent
+          - Unresectable
+          pdl1_status: High
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
-        - and:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: ROS1
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: NTRK
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: BRAF
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: RET
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: MET
-              variant_category: '!Any Variation'
+            hugo_symbol: EGFR
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ALK
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: ROS1
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: NTRK
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: BRAF
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: RET
+            variant_category: '!Any Variation'
+        - genomic:
+            hugo_symbol: MET
+            variant_category: '!Any Variation'

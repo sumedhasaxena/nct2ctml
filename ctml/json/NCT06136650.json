@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Hydrocortisone"
-            },
-            {
-                "drug_name": "Drug: Abiraterone acetate"
-            },
-            {
                 "drug_name": "Drug: Prednisone acetate"
             },
             {
                 "drug_name": "Drug: Opevesostat"
             },
             {
+                "drug_name": "Drug: Dexamethasone"
+            },
+            {
                 "drug_name": "Drug: Fludrocortisone acetate"
             },
             {
-                "drug_name": "Drug: Dexamethasone"
+                "drug_name": "Drug: Hydrocortisone"
+            },
+            {
+                "drug_name": "Drug: Abiraterone acetate"
             },
             {
                 "drug_name": "Drug: Enzalutamide"
@@ -206,7 +206,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
                                         }
                                     },
                                     {
@@ -221,12 +226,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
                                         }
                                     }
                                 ]

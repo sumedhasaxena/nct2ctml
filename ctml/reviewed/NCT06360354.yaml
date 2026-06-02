@@ -8,10 +8,10 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Nab-paclitaxel'
   - drug_name: 'Drug: Modified FOLFIRINOX'
   - drug_name: 'Drug: RMC-6236'
   - drug_name: 'Drug: AMG 193'
-  - drug_name: 'Drug: Nab-paclitaxel'
 long_title: A Phase 1b Study Evaluating the Safety, Tolerability, Pharmacokinetics,
   and Efficacy of AMG 193 in Combination With Other Therapies in Subjects With Advanced
   Gastrointestinal, Biliary Tract, or Pancreatic Cancers With Homozygous MTAP-deletion
@@ -127,6 +127,9 @@ treatment_list:
         level_description: 'Drug: Nab-paclitaxel'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          her2_status: Positive
     - arm_code: 'Subprotocol B: PDAC Arm B'
       arm_internal_id: 1
       arm_description: 'Part 1: Participants with MTAP-deleted PDAC will receive doses
@@ -160,6 +163,20 @@ treatment_list:
         level_description: 'Drug: RMC-6236'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+        - or:
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: HRAS
+              variant_category: Mutation
     - arm_code: 'Subprotocol C: Dose Expansion'
       arm_internal_id: 3
       arm_description: 'Part 2: Participants with MTAP-deleted PDAC will receive oral
@@ -179,44 +196,34 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Pancreatoblastoma
-          - clinical:
-              oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
-          - clinical:
               oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
-          - clinical:
-              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
           - clinical:
               oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
           - clinical:
-              oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
-                Duct
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
-          - clinical:
-              oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
           - clinical:
               oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
           - clinical:
               oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatoblastoma
+          - clinical:
+              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Metastatic
             - Locally Advanced
-            - Advanced
-      - or:
-        - genomic:
-            hugo_symbol: MTAP
-            variant_category: Copy Number Variation    
-        - genomic:
-            hugo_symbol: HRAS
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: NRAS
-            variant_category: Mutation
-        - genomic:
-            hugo_symbol: KRAS
-            variant_category: Mutation
+            - Unresectable
+      - genomic:
+          hugo_symbol: MTAP
+          variant_category: Copy Number Variation
+          cnv_call: Homozygous Deletion
