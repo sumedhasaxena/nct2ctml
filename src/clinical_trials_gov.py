@@ -72,7 +72,7 @@ def map_nct_to_clinical_and_genomic_criteria(trial_data: dict,
     mapped_global_clinical_critera = {}
 
     logger.info(f"NCTID: {nct_id} | Mapping global diagnosis to oncotree terms")
-    oncotree_diagnoses_list = map_global_diagnosis_to_oncotree_term(trial_data)
+    oncotree_diagnoses_list = map_global_diagnosis_to_oncotree_term(trial_data, global_nct_criteria)
     mapped_global_clinical_critera['oncotree_primary_diagnosis'] = oncotree_diagnoses_list
 
     age_numerical_str = map_age_numerical(trial_data)
@@ -154,7 +154,7 @@ def _map_arm_level_matches(
         logger.info(
             f"NCTID: {nct_id} | Mapping arm level diagnosis to oncotree terms for arm {level_code}"
         )
-        oncotree_diagnoses_list = map_arm_level_diagnosis_to_oncotree_term(
+        oncotree_diagnoses_list = map_eligibility_criteria_to_oncotree_term(
             nct_id, arm_eligibility_criteria
         )
         if oncotree_diagnoses_list and len(oncotree_diagnoses_list) > 0:
@@ -581,89 +581,94 @@ def map_disease_status(nct_id: str, eligibilityCriteria: str, keywords: list):
     result = ai.get_disease_status(nct_id, eligibilityCriteria, keywords)
     return result
 
-def map_arm_level_diagnosis_to_oncotree_term(nct_id: str, arm_eligibility_criteria: str) -> list:
-    level_1_diagnosis, l1_l2_mapping = onct.get_l1_l2_oncotree_data()
-    level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_extra_info(nct_id, arm_eligibility_criteria, level_1_diagnosis)
+def map_eligibility_criteria_to_oncotree_term(nct_id: str, eligibility_criteria: str) -> list:
+    level_1_diagnosis, l1_to_all_mapping = onct.get_all_oncotree_data()
+    level1_oncotree_values_dict = ai.get_oncotree_diagnoses_from_trial_info(nct_id, eligibility_criteria, level_1_diagnosis)
     all_level_oncotree_values = set()
     all_possible_diagnoses = set()
     for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
         if item == "" or item.lower() == "other":
             continue
-        l2_oncotree_values = l1_l2_mapping[item]
-        all_level_oncotree_values.update(l2_oncotree_values)
+        child_oncotree_values = l1_to_all_mapping[item]
+        all_level_oncotree_values.update(child_oncotree_values)
     logger.debug(f"NCTID: {nct_id} | Diagnoses = {level1_oncotree_values_dict["oncotree_diagnoses"]}. Child values = {all_level_oncotree_values}")
-    oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_extra_info(nct_id, all_level_oncotree_values, arm_eligibility_criteria)
+    oncotree_diagnoses_result = ai.get_oncotree_diagnoses_from_trial_info(nct_id, eligibility_criteria, all_level_oncotree_values)
     if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
         all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])   
     return list(all_possible_diagnoses)
 
-def map_global_diagnosis_to_oncotree_term(trial_data: dict) -> list:
+def _map_global_diagnosis_from_conditions_and_extra_info(trial_data: dict) -> set:
     nct_id = get_nct_id(trial_data)
-    conditions_list = tdh.safe_get(trial_data, ['protocolSection', 'conditionsModule','conditions'])
-        
+    conditions_list = tdh.safe_get(trial_data, ['protocolSection', 'conditionsModule', 'conditions'])
     all_possible_diagnoses = set()
 
     if tdh.all_tumours(conditions_list):
         all_possible_diagnoses.add("_SOLID_")
         all_possible_diagnoses.add("_LIQUID_")
-    else:        
-        if tdh.all_solid_tumours(conditions_list):
-            all_possible_diagnoses.add("_SOLID_")
-        else:
-            level_1_diagnosis, l1_l2_mapping = onct.get_l1_l2_oncotree_data()
-            # stage 1 - no need to Extract Keywords
-            logger.debug(f"NCTID: {nct_id} | Stage 1 - Original Conditions:{conditions_list}")
-            # stage 2 - Map original conditions to Level 1 oncotree diagnoses
-            level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_conditions(nct_id, conditions_list, level_1_diagnosis)
-            logger.debug(f"NCTID: {nct_id} | Stage 2 - Mapped original conditions to Level 1:{level1_oncotree_values_dict}") 
+    elif tdh.all_solid_tumours(conditions_list):
+        all_possible_diagnoses.add("_SOLID_")
+    else:
+        level_1_diagnosis, l1_to_all_mapping = onct.get_all_oncotree_data()
+        logger.debug(f"NCTID: {nct_id} | Stage 1 - Original Conditions:{conditions_list}")
+        level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_conditions(nct_id, conditions_list, level_1_diagnosis)
+        logger.debug(f"NCTID: {nct_id} | Stage 2 - Mapped original conditions to Level 1:{level1_oncotree_values_dict}")
 
-            for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
-                if item['oncotree_value'] == "" or item['oncotree_value'].lower() == "other":
-                    logger.debug(f"NCTID: {nct_id} | Skipping condition {item['cancer_condition']} as no oncotree diagnosis was returned")
-                    continue
-                # stage 3: Get the child values for Level 1 oncotree diagnoses
-                l2_oncotree_values = l1_l2_mapping[item['oncotree_value']]
-                nct_condition = item['cancer_condition']
-                logger.debug(f"NCTID: {nct_id} | Stage 3 - Condition = {nct_condition}. Child values = {l2_oncotree_values}")
-                if len(l2_oncotree_values) > 0:
-                    # stage 4: Pass the child values to AI and the conditions to map to a child value --> pass only level 2 values
-                    oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_condition(nct_id, l2_oncotree_values, nct_condition)
-                    if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
-                        all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses']) 
-
-            if len(all_possible_diagnoses) == 0:
-                logger.info(f"NCTID: {nct_id} | No oncotree diagnosis was found from original conditions, trying from keywords and title")
-                # if the could not dianose from conditions, try getting diagnosis from keywords and title
-                extra_info = []
-                keywords = get_nct_keywords(trial_data)
-                if keywords:
-                    extra_info.extend(keywords)
-                long_title = tdh.safe_get(trial_data, ['protocolSection', 'identificationModule','officialTitle'])
-                brief_title = tdh.safe_get(trial_data, ['protocolSection', 'identificationModule','briefTitle'])
-                extra_info.append(long_title)
-                extra_info.append(brief_title)
-
-                all_level_oncotree_values = set()
-
-                # stage 3: Get the child values for Level 1 oncotree diagnoses
-                level1_oncotree_values_dict = ai.get_level1_diagnosis_from_original_extra_info(nct_id, extra_info, level_1_diagnosis)
-                for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
-                    if item == "" or item.lower() == "other":
-                        continue
-                    l2_oncotree_values = l1_l2_mapping[item]
-                    all_level_oncotree_values.update(l2_oncotree_values)
-                logger.debug(f"NCTID: {nct_id} | Stage 3 - Diagnoses = {level1_oncotree_values_dict["oncotree_diagnoses"]}. Child values = {l2_oncotree_values}")
-                # stage 4: Pass the child values to AI and the conditions to map to a child value --> pass only level 2 values
-                oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_extra_info(nct_id, all_level_oncotree_values, extra_info)
+        for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
+            if item['oncotree_value'] == "" or item['oncotree_value'].lower() == "other":
+                logger.debug(f"NCTID: {nct_id} | Skipping condition {item['cancer_condition']} as no oncotree diagnosis was returned")
+                continue
+            child_oncotree_values = l1_to_all_mapping[item['oncotree_value']]
+            nct_condition = item['cancer_condition']
+            logger.debug(f"NCTID: {nct_id} | Stage 3 - Condition = {nct_condition}. Child values = {child_oncotree_values}")
+            if len(child_oncotree_values) > 0:
+                oncotree_diagnoses_result = ai.get_child_level_diagnoses_from_condition(nct_id, child_oncotree_values, nct_condition)
                 if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
-                    all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])                
-    
+                    all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])
+
+        if len(all_possible_diagnoses) == 0:
+            logger.info(f"NCTID: {nct_id} | No oncotree diagnosis was found from original conditions, trying from keywords and title")
+            extra_info = []
+            keywords = get_nct_keywords(trial_data)
+            if keywords:
+                extra_info.extend(keywords)
+            long_title = tdh.safe_get(trial_data, ['protocolSection', 'identificationModule', 'officialTitle'])
+            brief_title = tdh.safe_get(trial_data, ['protocolSection', 'identificationModule', 'briefTitle'])
+            extra_info.append(long_title)
+            extra_info.append(brief_title)
+
+            all_level_oncotree_values = set()
+            level1_oncotree_values_dict = ai.get_oncotree_diagnoses_from_trial_info(nct_id, extra_info, level_1_diagnosis)
+            for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
+                if item == "" or item.lower() == "other":
+                    continue
+                child_oncotree_values = l1_to_all_mapping[item]
+                all_level_oncotree_values.update(child_oncotree_values)
+            logger.debug(f"NCTID: {nct_id} | Stage 3 - Diagnoses = {level1_oncotree_values_dict["oncotree_diagnoses"]}. Child values = {all_level_oncotree_values}")
+            oncotree_diagnoses_result = ai.get_oncotree_diagnoses_from_trial_info(nct_id, extra_info, all_level_oncotree_values)
+            if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
+                all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])
+
+    return all_possible_diagnoses
+
+def map_global_diagnosis_to_oncotree_term(trial_data: dict, global_eligibility_criteria: str = "") -> list:
+    nct_id = get_nct_id(trial_data)
+    all_possible_diagnoses = set()
+
+    if global_eligibility_criteria and global_eligibility_criteria.strip():
+        logger.info(f"NCTID: {nct_id} | Mapping global diagnosis from eligibility criteria")
+        all_possible_diagnoses.update(
+            map_eligibility_criteria_to_oncotree_term(nct_id, global_eligibility_criteria)
+        )
+
+    if len(all_possible_diagnoses) == 0:
+        logger.info(f"NCTID: {nct_id} | No oncotree diagnosis from eligibility criteria, falling back to conditions and extra info")
+        all_possible_diagnoses.update(_map_global_diagnosis_from_conditions_and_extra_info(trial_data))
+
     logger.debug(f"NCTID: {nct_id} | Stage 4 Oncotree_diagnoses : {all_possible_diagnoses}")
-        
+
     if len(all_possible_diagnoses) == 0:
         raise Exception(f"NCTID: {nct_id} | No oncotree diagnosis was found")
     return list(all_possible_diagnoses)
-
 
 def map_prior_treatment_requirements(trial_schema, trial_data) -> dict:
     """

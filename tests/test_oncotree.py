@@ -27,8 +27,10 @@ class TestOncotree(unittest.TestCase):
 
     def test_get_all_oncotree_data(self):
         level_1_list, mapping_l1_all = get_all_oncotree_data()
-        self.assertIn("Breast", level_1_list)
+        self.assertIn("Breast", level_1_list)        
         self.assertGreater(len(mapping_l1_all["Breast"]), 0)
+
+        self.assertIn("APL with PML-RARA", mapping_l1_all["Myeloid"])
 
     def test_get_l1_l2_oncotree_data(self):
         level_1_list, mapping_l1_l2 = get_l1_l2_oncotree_data()
