@@ -34,17 +34,26 @@ CUDA_VISIBLE_DEVICES=0,1 python -m sglang.launch_server \
 
 - Server side settings:
 - Note: `ollama service` is already running on `gpu02.sbms.hku.hk`, so there is no need to run `ollama run {model}` manually.
-- Use API calls directly; the service will use the model set via `LLM_AI_MODEL` if already downloaded, or load it automatically on first request.
+- Ollama does not auto-pull models. If the requested model is not already downloaded locally, API requests will fail with a 404 `model not found` error.
+- Step 1: pull the model first so it is available in the local cache:
+
+```bash
+ollama pull hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M
+```
+
+- Step 2: send the API request directly once the model is pulled:
+
+```bash
+curl http://localhost:11434/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"model": "hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M", "messages": [{"role": "user", "content": "Hello"}], "stream": false}'
+```
+
 - Check downloaded models with:
   - `curl http://gpu02.sbms.hku.hk:11434/api/tags`
 
-```bash
-# List downloaded/available models (tags):
-curl http://localhost:11434/api/tags
-
-# After sending request for a specific 'LLM_AI_MODEL', check if it was loaded:
-ollama ps
-```
+- After sending request for a specific `LLM_AI_MODEL`, check if it was loaded:
+  - `ollama ps`
 
 ## 3. `sglang` server (DeepSeek R1 (quantized))
 
