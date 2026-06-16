@@ -182,7 +182,7 @@ def _map_arm_level_matches(
         if arm_level_match_result:
             for arm in trial_schema["treatment_list"]["step"][0]["arm"]:
                 if arm["arm_code"] == level_code:
-                    arm["match"] = arm_level_match_result
+                    arm.setdefault("match", []).append(arm_level_match_result)
 
 def get_arm_criteria_blocks_for_trial(
     trial_data: dict,
@@ -584,14 +584,23 @@ def map_disease_status(nct_id: str, eligibilityCriteria: str, keywords: list):
 def map_eligibility_criteria_to_oncotree_term(nct_id: str, eligibility_criteria: str) -> list:
     level_1_diagnosis, l1_to_all_mapping = onct.get_all_oncotree_data()
     level1_oncotree_values_dict = ai.get_oncotree_diagnoses_from_trial_info(nct_id, eligibility_criteria, level_1_diagnosis)
+    level1_diagnoses = level1_oncotree_values_dict.get("oncotree_diagnoses", [])
+    if not level1_diagnoses:
+        logger.debug(f"NCTID: {nct_id} | No level 1 diagnoses from eligibility criteria, skipping child-level mapping")
+        return []
+
     all_level_oncotree_values = set()
     all_possible_diagnoses = set()
-    for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
+    for item in level1_diagnoses:
         if item == "" or item.lower() == "other":
             continue
         child_oncotree_values = l1_to_all_mapping[item]
         all_level_oncotree_values.update(child_oncotree_values)
-    logger.debug(f"NCTID: {nct_id} | Diagnoses = {level1_oncotree_values_dict["oncotree_diagnoses"]}. Child values = {all_level_oncotree_values}")
+    logger.debug(f"NCTID: {nct_id} | Diagnoses = {level1_diagnoses}. Child values = {all_level_oncotree_values}")
+    if not all_level_oncotree_values:
+        logger.debug(f"NCTID: {nct_id} | No child oncotree values to map, skipping child-level diagnosis request")
+        return []
+
     oncotree_diagnoses_result = ai.get_oncotree_diagnoses_from_trial_info(nct_id, eligibility_criteria, all_level_oncotree_values)
     if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
         all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])   
@@ -638,15 +647,20 @@ def _map_global_diagnosis_from_conditions_and_extra_info(trial_data: dict) -> se
 
             all_level_oncotree_values = set()
             level1_oncotree_values_dict = ai.get_oncotree_diagnoses_from_trial_info(nct_id, extra_info, level_1_diagnosis)
-            for item in level1_oncotree_values_dict["oncotree_diagnoses"]:
-                if item == "" or item.lower() == "other":
-                    continue
-                child_oncotree_values = l1_to_all_mapping[item]
-                all_level_oncotree_values.update(child_oncotree_values)
-            logger.debug(f"NCTID: {nct_id} | Stage 3 - Diagnoses = {level1_oncotree_values_dict["oncotree_diagnoses"]}. Child values = {all_level_oncotree_values}")
-            oncotree_diagnoses_result = ai.get_oncotree_diagnoses_from_trial_info(nct_id, extra_info, all_level_oncotree_values)
-            if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
-                all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])
+            level1_diagnoses = level1_oncotree_values_dict.get("oncotree_diagnoses", [])
+            if not level1_diagnoses:
+                logger.debug(f"NCTID: {nct_id} | No level 1 diagnoses from keywords/title, skipping child-level mapping")
+            else:
+                for item in level1_diagnoses:
+                    if item == "" or item.lower() == "other":
+                        continue
+                    child_oncotree_values = l1_to_all_mapping[item]
+                    all_level_oncotree_values.update(child_oncotree_values)
+                logger.debug(f"NCTID: {nct_id} | Stage 3 - Diagnoses = {level1_diagnoses}. Child values = {all_level_oncotree_values}")
+                if all_level_oncotree_values:
+                    oncotree_diagnoses_result = ai.get_oncotree_diagnoses_from_trial_info(nct_id, extra_info, all_level_oncotree_values)
+                    if oncotree_diagnoses_result and 'oncotree_diagnoses' in oncotree_diagnoses_result.keys():
+                        all_possible_diagnoses.update(oncotree_diagnoses_result['oncotree_diagnoses'])
 
     return all_possible_diagnoses
 
