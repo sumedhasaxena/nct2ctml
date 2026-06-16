@@ -307,9 +307,16 @@ def get_ai_prompt_level1_for_original_conditions(original_conditions_list, level
     return cleandoc(prompt)
 
 def get_ai_prompt_oncotree_diagnoses_from_trial_info(trial_info, oncotree_values):
-    prompt = f"""Task: From the TrialInfo, extract the closest OncotreeValues corresponding to the medical conditions the trial is recruiting for.
+    prompt = f"""Task: From the TrialInfo, extract OncotreeValues that correspond to medical conditions explicitly mentioned in the text.
+        Rules:
+        - Only include a diagnosis if the condition or cancer type is explicitly stated in TrialInfo.
+        - Do not infer diagnoses from drug names, treatment regimens, parent studies, or other indirect clues.
+        - If no condition or cancer type is explicitly mentioned, return an empty list.
+        - Choose only from the provided OncotreeValues.
+
         TrialInfo: {trial_info}
         OncotreeValues: {oncotree_values}
+
         Output in JSON format:
         {{
         "oncotree_diagnoses": []
