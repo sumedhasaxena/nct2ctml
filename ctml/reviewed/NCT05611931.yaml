@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Selinexor'
   - drug_name: 'Drug: Matching Placebo for selinexor'
+  - drug_name: 'Drug: Selinexor'
 long_title: A Phase 3, Randomized, Placebo-Controlled, Double-Blind, Multicenter Trial
   of Selinexor in Maintenance Therapy After Systemic Therapy for Patients With p53
   Wild-Type, Advanced or Recurrent Endometrial Carcinoma
@@ -98,6 +98,9 @@ treatment_list:
         level_description: 'Drug: Selinexor'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Myeloid Neoplasm
     - arm_code: Placebo
       arm_internal_id: 1
       arm_description: Participants will receive matching placebo for selinexor oral
@@ -109,9 +112,19 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Advanced
-        - Recurrent
-        oncotree_primary_diagnosis: Endometrial Carcinoma
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Advanced
+          - Recurrent
+          mmr_status: MMR-Proficient
+          ms_status: '!MSI-H'
+          oncotree_primary_diagnosis: Endometrial Carcinoma
+      - and:
+        - genomic:
+            hugo_symbol: TP53
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: TP53
+            variant_category: '!Any Variation'

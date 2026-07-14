@@ -132,33 +132,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Recurrent",
-                                        "Refractory"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            },
-                            {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "TP53",
-                                            "variant_category": "Mutation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": null,
-                                        "hugo_symbol": "TP53",
-                                        "variant_category": "Copy Number Variation"
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Localized",
+                                "Early Stage"
+                            ],
+                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                        }
                     }
                 ]
             }

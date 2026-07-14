@@ -118,7 +118,12 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                            }
+                        }
                     },
                     {
                         "arm_code": "Control treatment arm: Conservative management",
@@ -141,9 +146,7 @@
                             "age_numerical": ">=19",
                             "disease_status": [
                                 "Locally Advanced",
-                                "Metastatic",
-                                "Advanced",
-                                "Unresectable"
+                                "Metastatic"
                             ],
                             "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
                         }

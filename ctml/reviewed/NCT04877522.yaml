@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Nilotinib'
-  - drug_name: 'Drug: Asciminib single agent'
-  - drug_name: 'Drug: Bosutinib'
-  - drug_name: 'Drug: Imatinib'
   - drug_name: 'Drug: Asciminib single agent pediatric formulation'
+  - drug_name: 'Drug: Nilotinib'
   - drug_name: 'Drug: Dasatinib'
+  - drug_name: 'Drug: Bosutinib'
+  - drug_name: 'Drug: Asciminib single agent'
+  - drug_name: 'Drug: Imatinib'
 long_title: An Open Label, Multi-center Asciminib Roll-over Study to Assess Long-term
   Safety in Patients Who Have Completed a Novartis Sponsored Asciminib Study and Are
   Judged by the Investigator to Benefit From Continued Treatment
@@ -117,6 +117,24 @@ treatment_list:
         level_description: 'Drug: Asciminib single agent'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatoblastoma
+        - clinical:
+            oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
     - arm_code: Asciminib in combination with imatinib group
       arm_internal_id: 3
       arm_description: Participants with CML from Novartis sponsored asciminib studies
@@ -190,6 +208,26 @@ treatment_list:
         level_description: 'Drug: Asciminib single agent'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatoblastoma
+        - clinical:
+            oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
     - arm_code: Asciminib single agent formulation for Pediatric
       arm_internal_id: 10
       arm_description: Participants with CML, from Novartis sponsored asciminib studies,
@@ -204,6 +242,7 @@ treatment_list:
     - clinical:
         age_numerical: '>=7'
         disease_status:
-        - Early Stage
         - Advanced
+        - Recurrent
+        - Refractory
         oncotree_primary_diagnosis: Myeloid Neoplasm

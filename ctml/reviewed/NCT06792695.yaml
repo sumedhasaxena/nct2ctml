@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Volrustomig'
   - drug_name: 'Drug: FOLFIRI (Fluorouracil (5-FU), leucovorin, irinotecan)'
   - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Drug: Volrustomig'
 long_title: A Phase II, Open-label, Multicenter, Master Protocol to Evaluate the Safety
   and Efficacy of Novel Study Interventions and Combinations in Participants With
   Colorectal Cancer (CANTOR)
@@ -128,4 +128,6 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
+        mmr_status: MMR-Proficient
+        ms_status: MSS
         oncotree_primary_diagnosis: Colorectal Adenocarcinoma

@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Trifluridine/Tipiracil /Experimental'
-  - drug_name: 'Drug: Ramucirumab /Experimental'
   - drug_name: 'Drug: nal-IRI /Experimental'
+  - drug_name: 'Drug: Ramucirumab /Experimental'
 long_title: "A Phase Ib/II Study of Ramucirumab (Cyramza\xAE), Nal-IRI (ONIVYDE\xAE\
   ) and Trifluridine/Tipiracil (Lonsurf\xAE) in Second Line Metastatic Gastric Cancer\
   \ (COOL Study)."
@@ -154,8 +154,8 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=20'
-        her2_status: Positive
         disease_status:
         - Metastatic
         - Recurrent
+        her2_status: Positive
         oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma

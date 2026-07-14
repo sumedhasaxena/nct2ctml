@@ -222,8 +222,6 @@ treatment_list:
             - Advanced
             - Unresectable
             her2_status: Negative
-            er_status: Positive
-            pr_status: Positive
       - and:
         - genomic:
             hugo_symbol: BRCA1

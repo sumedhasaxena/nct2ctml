@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Tocilizumab'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Glofitamab'
-  - drug_name: 'Drug: Ifosfamide'
   - drug_name: 'Drug: Obinutuzumab'
-  - drug_name: 'Drug: Rituximab'
   - drug_name: 'Drug: Etoposide'
+  - drug_name: 'Drug: Rituximab'
+  - drug_name: 'Drug: Ifosfamide'
+  - drug_name: 'Drug: Tocilizumab'
+  - drug_name: 'Drug: Glofitamab'
+  - drug_name: 'Drug: Carboplatin'
 long_title: A Phase I/II, Open-Label, Single-Arm, Two-Part Trial to Evaluate Safety,
   Tolerability, Pharmacokinetics, and Anti-Tumor Activity of Glofitamab in Monotherapy
   and in Combination With Chemoimmunotherapy in Pediatric and Young Adult Participants
@@ -164,6 +164,9 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 6
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Arm B
       arm_internal_id: 1
       arm_description: Participants will receive glofitamab monotherapy for up to
@@ -182,9 +185,14 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         disease_status:
+        - Recurrent
         - Refractory
-        - Relapsed
+        - Metastatic
+        - Advanced
         oncotree_primary_diagnosis: Lymphoid Neoplasm

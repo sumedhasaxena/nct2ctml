@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Divarasib'
+  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Carboplatin'
 long_title: A Phase Ib/II, Open-Label, Multicenter Study Evaluating the Safety, Activity,
   and Pharmacokinetics of Divarasib in Combination With Other Anti-Cancer Therapies
   in Patients With Previously Untreated Advanced Or Metastatic Non-Small Cell Lung
@@ -147,19 +147,13 @@ treatment_list:
         level_description: 'Drug: Pemetrexed'
         level_internal_id: 4
         level_suspended: N
-    match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      match:
       - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          - Advanced
-          - Untreated
+          oncotree_primary_diagnosis: Non-Small Cell Lung Carcinoma
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Locally Advanced
+        - Metastatic
+        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

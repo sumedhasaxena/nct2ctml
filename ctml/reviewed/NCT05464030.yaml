@@ -160,10 +160,16 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Locally Advanced
-        - Metastatic
-        - Refractory
-        oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          - Refractory
+          ms_status: MSI-H

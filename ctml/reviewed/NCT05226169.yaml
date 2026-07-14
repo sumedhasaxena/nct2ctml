@@ -119,6 +119,9 @@ treatment_list:
         level_description: 'Drug: Ferinject'
         level_internal_id: 0
         level_suspended: N
+      match:
+        clinical:
+          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
     - arm_code: 'Control treatment arm: Conservative management'
       arm_internal_id: 1
       arm_description: 'Conservative management
@@ -142,6 +145,4 @@ treatment_list:
         disease_status:
         - Locally Advanced
         - Metastatic
-        - Advanced
-        - Unresectable
         oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma

@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Other: Placebo"
+                "drug_name": "Biological: Volrustomig"
             },
             {
-                "drug_name": "Biological: Volrustomig"
+                "drug_name": "Other: Placebo"
             }
         ]
     },

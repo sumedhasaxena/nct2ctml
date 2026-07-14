@@ -9,13 +9,7 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Pembrolizumab"
-            },
-            {
-                "drug_name": "Biological: Sacituzumab Tirumotecan"
-            },
-            {
-                "drug_name": "Drug: Cisplatin"
+                "drug_name": "Drug: Rescue Medications"
             },
             {
                 "drug_name": "Drug: Carboplatin"
@@ -24,7 +18,13 @@
                 "drug_name": "Biological: Bevacizumab"
             },
             {
-                "drug_name": "Drug: Rescue Medications"
+                "drug_name": "Biological: Sacituzumab Tirumotecan"
+            },
+            {
+                "drug_name": "Drug: Cisplatin"
+            },
+            {
+                "drug_name": "Biological: Pembrolizumab"
             },
             {
                 "drug_name": "Drug: Paclitaxel"
@@ -253,17 +253,12 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Cervical Adenocarcinoma In Situ"
+                                            "oncotree_primary_diagnosis": "Cervical Squamous Cell Carcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
                                             "oncotree_primary_diagnosis": "Cervical Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Cervical Squamous Cell Carcinoma"
                                         }
                                     }
                                 ]
@@ -272,11 +267,10 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "gender": "Female",
-                                    "pdl1_status": "High",
                                     "disease_status": [
-                                        "Recurrent",
                                         "Metastatic"
-                                    ]
+                                    ],
+                                    "pdl1_status": "High"
                                 }
                             }
                         ]

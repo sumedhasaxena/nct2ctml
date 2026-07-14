@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Venetoclax'
-  - drug_name: 'Drug: Acalabrutinib'
   - drug_name: 'Drug: Obinutuzumab'
+  - drug_name: 'Drug: Acalabrutinib'
+  - drug_name: 'Drug: Venetoclax'
 long_title: A Prospective, Open-Label, Phase IIb/III Study to Evaluate the Risk of
   TLS and Optimization of the Initiation of Venetoclax in Combination With Obinutuzumab
   or Acalabrutinib With Different Ramp- Up Periods in Previously Untreated Subjects
@@ -112,6 +112,9 @@ treatment_list:
         level_description: 'Drug: Obinutuzumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Arm B: Venetoclax + Acalabrutinib'
       arm_internal_id: 1
       arm_description: Participants will receive venetoclax in combination with acalabrutinib,
@@ -126,6 +129,9 @@ treatment_list:
         level_description: 'Drug: Acalabrutinib'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Arm C: Venetoclax + Acalabrutinib'
       arm_internal_id: 2
       arm_description: Participants will receive venetoclax in combination with acalabrutinib,
@@ -140,6 +146,9 @@ treatment_list:
         level_description: 'Drug: Acalabrutinib'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Arm D: Venetoclax + Acalabrutinib'
       arm_internal_id: 3
       arm_description: Participants will receive venetoclax in combination with acalabrutinib,
@@ -154,6 +163,14 @@ treatment_list:
         level_description: 'Drug: Acalabrutinib'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Acute Myeloid Leukemia (AML)
+        - clinical:
+            oncotree_primary_diagnosis: Mantle Cell Lymphoma (MCL)
+        - clinical:
+            oncotree_primary_diagnosis: Chronic Lymphocytic Leukemia (CLL)
     match:
     - clinical:
         age_numerical: '>=18'

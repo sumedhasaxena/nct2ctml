@@ -149,12 +149,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach"
+                                            "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
+                                            "oncotree_primary_diagnosis": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach"
                                         }
                                     }
                                 ]
@@ -163,7 +163,8 @@
                                 "clinical": {
                                     "age_numerical": ">=19",
                                     "disease_status": [
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Unresectable"
                                     ]
                                 }
                             }

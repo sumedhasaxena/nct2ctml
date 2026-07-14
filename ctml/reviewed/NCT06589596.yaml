@@ -165,8 +165,8 @@ treatment_list:
           disease_status:
           - Advanced
           - Metastatic
-          - Recurrent
           - Unresectable
+          - Recurrent
           oncotree_primary_diagnosis: _SOLID_
       - genomic:
           hugo_symbol: MTAP

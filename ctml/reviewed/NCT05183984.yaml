@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Niraparib'
-  - drug_name: 'Drug: Bevacizumab-Awwb'
   - drug_name: 'Drug: Chemotherapy'
+  - drug_name: 'Drug: Bevacizumab-Awwb'
+  - drug_name: 'Drug: Niraparib'
 long_title: Randomized Study of Paclitaxel-carboplatin Followed by Niraparib Compared
   to Paclitaxel-carboplatin-bevacizumab Followed by Niraparib+bevacizumab in Patients
   with Advanced Ovarian Cancer, Following a Front-line Complete Surgery
@@ -224,15 +224,21 @@ treatment_list:
         level_description: 'Drug: Niraparib'
         level_internal_id: 2
         level_suspended: N
+      match:
+        clinical:
+          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
     match:
     - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Cancer, Other
       - clinical:
           age_numerical: '>=18'
           gender: Female
           disease_status:
           - Advanced
+          oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+      - or:
+        - genomic:
+            hugo_symbol: BRCA1
+            variant_category: Mutation
+        - genomic:
+            hugo_symbol: BRCA2
+            variant_category: Mutation

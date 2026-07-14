@@ -129,13 +129,11 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
-                                }
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
                             }
-                        ]
+                        }
                     },
                     {
                         "arm_code": "Combination Therapy",

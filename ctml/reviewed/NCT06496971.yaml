@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Microbubble'
   - drug_name: 'Device: Low-Intensity Focused Ultrasound'
   - drug_name: 'Drug: Bevacizumab'
+  - drug_name: 'Drug: Microbubble'
 long_title: "A Prospective, Randomized, Standard of Care Controlled, Parallel, Open-Label,\
   \ Multicenter Pivotal Study to Evaluate the Efficacy and Safety of Avastin\xAE in\
   \ Combination With NaviFUS System Compared With Avastin\xAE Alone for the Treatment\
@@ -217,6 +217,20 @@ treatment_list:
         level_description: 'Device: Low-Intensity Focused Ultrasound'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Encapsulated Glioma
+        - clinical:
+            oncotree_primary_diagnosis: Pineal Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Choroid Plexus Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Diffuse Glioma
+        - clinical:
+            oncotree_primary_diagnosis: Ependymomal Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Embryonal Tumor
     match:
     - clinical:
         age_numerical: '>=18'

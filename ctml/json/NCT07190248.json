@@ -9,7 +9,7 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Pembrolizumab (+) Berahyaluronidase alfa"
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: Cisplatin"
@@ -18,7 +18,7 @@
                 "drug_name": "Drug: Pemetrexed"
             },
             {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Biological: Pembrolizumab (+) Berahyaluronidase alfa"
             },
             {
                 "drug_name": "Drug: MK-1084"
@@ -165,8 +165,7 @@
                             "age_numerical": ">=18",
                             "disease_status": [
                                 "Locally Advanced",
-                                "Metastatic",
-                                "Unresectable"
+                                "Metastatic"
                             ],
                             "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                         }

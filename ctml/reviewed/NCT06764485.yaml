@@ -8,10 +8,10 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Abiraterone'
-  - drug_name: 'Drug: Enzalutamide'
   - drug_name: 'Drug: Docetaxel'
-  - drug_name: 'Drug: BMS-986365'
   - drug_name: 'Drug: Predinsone/Prednisolone'
+  - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: BMS-986365'
 long_title: A Phase 3, Two-part, Randomized, Open-label, Adaptive Study Comparing
   BMS-986365 Versus Investigator's Choice of Therapy Comprising Either Docetaxel or
   Second Androgen Receptor Pathway Inhibitor (ARPI), in Participants With Metastatic
@@ -167,14 +167,10 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          gender: Male
-          disease_status:
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        gender: Male
+        disease_status:
+        - Metastatic
+        - Refractory
+        oncotree_primary_diagnosis: Prostate Adenocarcinoma

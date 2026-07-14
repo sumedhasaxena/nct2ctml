@@ -9,25 +9,25 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Fludrocortisone acetate"
+                "drug_name": "Drug: Cabazitaxel"
             },
             {
-                "drug_name": "Drug: Olaparib"
+                "drug_name": "Drug: Opevesostat"
             },
             {
                 "drug_name": "Drug: Dexamethasone"
             },
             {
-                "drug_name": "Drug: Docetaxel"
+                "drug_name": "Drug: Olaparib"
             },
             {
                 "drug_name": "Drug: Prednisone"
             },
             {
-                "drug_name": "Drug: Cabazitaxel"
+                "drug_name": "Drug: Docetaxel"
             },
             {
-                "drug_name": "Drug: Opevesostat"
+                "drug_name": "Drug: Fludrocortisone acetate"
             }
         ]
     },
@@ -269,17 +269,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
+                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
                                             "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
                                         }
                                     }
                                 ]
@@ -289,6 +284,7 @@
                                     "age_numerical": ">=18",
                                     "disease_status": [
                                         "Metastatic",
+                                        "Advanced",
                                         "Refractory"
                                     ]
                                 }

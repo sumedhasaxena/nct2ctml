@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Placebo'
-  - drug_name: 'Drug: CDK4/6i'
   - drug_name: 'Drug: Inavolisib'
+  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Letrozole'
+  - drug_name: 'Drug: CDK4/6i'
 long_title: A Phase III, Multicenter, Randomized, Double-Blind, Placebo-Controlled
   Study Evaluating the Efficacy and Safety of Inavolisib Plus a CDK4/6 Inhibitor and
   Letrozole Versus Placebo Plus a CDK4/6 Inhibitor and Letrozole in Patients With
@@ -140,19 +140,23 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
         - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Breast Neoplasm, NOS
-        - clinical:
-            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Negative
-          er_status: Positive
-          pr_status: Positive
-          disease_status:
-          - Recurrent
+            age_numerical: '>=18'
+            disease_status:
+            - Localized
+            - Locally Advanced
+            - Metastatic
+            - Advanced
+            - Recurrent
+            her2_status: Negative
+            er_status: Positive
+            pr_status: Positive
+      - genomic:
+          hugo_symbol: ERBB2
+          variant_category: '!Any Variation'

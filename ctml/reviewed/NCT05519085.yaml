@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Bortezomib'
   - drug_name: 'Drug: mezigdomide'
   - drug_name: 'Drug: Pomalidomide'
   - drug_name: 'Drug: Dexamethasone'
-  - drug_name: 'Drug: Bortezomib'
 long_title: 'A Phase 3, Two-Stage, Randomized, Multicenter, Open-Label Study Comparing
   Mezigdomide (CC-92480), Bortezomib and Dexamethasone (MEZIVd) Versus Pomalidomide,
   Bortezomib and Dexamethasone (PVd) in Subjects With Relapsed or Refractory Multiple
@@ -106,6 +106,9 @@ treatment_list:
         level_description: 'Drug: Dexamethasone'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: PVd (pomalidomide, bortezomib and dexamethasone)
       arm_internal_id: 1
       arm_description: PVd (pomalidomide, bortezomib and dexamethasone)
@@ -123,7 +126,12 @@ treatment_list:
         level_description: 'Drug: Dexamethasone'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         age_numerical: '>=18'
+        disease_status:
+        - Recurrent
         oncotree_primary_diagnosis: Myeloid Neoplasm

@@ -136,4 +136,5 @@ treatment_list:
         - Untreated
         - Localized
         - Locally Advanced
+        her2_status: Positive
         oncotree_primary_diagnosis: _SOLID_

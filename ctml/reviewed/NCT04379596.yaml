@@ -7,16 +7,16 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Biological: Volrustomig'
-  - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Oxaliplatin'
   - drug_name: 'Drug: Trastuzumab deruxtecan'
-  - drug_name: 'Biological: Durvalumab'
-  - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Biological: Rilvegostomig'
   - drug_name: 'Biological: Trastuzumab'
+  - drug_name: 'Biological: Rilvegostomig'
   - drug_name: 'Drug: Fluorouracil (5-FU)'
+  - drug_name: 'Biological: Volrustomig'
+  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Biological: Durvalumab'
+  - drug_name: 'Drug: Oxaliplatin'
 long_title: A Phase 1b/2 Multicenter, Open-label, Dose-escalation and Dose-expansion
   Study to Evaluate the Safety, Tolerability, Pharmacokinetics, Immunogenicity, and
   Antitumor Activity of Trastuzumab Deruxtecan (T-DXd) Monotherapy and Combinations
@@ -123,6 +123,14 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Any Variation
     - arm_code: Arm 1B
       arm_internal_id: 1
       arm_description: T-DXd and capecitabine
@@ -136,6 +144,14 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
     - arm_code: Arm 1C
       arm_internal_id: 2
       arm_description: T-DXd and durvalumab
@@ -149,6 +165,14 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
     - arm_code: Arm 1D(b)
       arm_internal_id: 3
       arm_description: T-DXd, capecitabine, and oxaliplatin
@@ -166,6 +190,14 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
     - arm_code: Arm 1E(a)
       arm_internal_id: 4
       arm_description: T-DXd, 5-FU, and durvalumab
@@ -183,6 +215,14 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
     - arm_code: Arm 1E(b)
       arm_internal_id: 5
       arm_description: T-DXd, capecitabine, and durvalumab
@@ -200,6 +240,14 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
     - arm_code: Arm 2A
       arm_internal_id: 6
       arm_description: Trastuzumab, 5-FU or capecitabine, and cisplatin or oxaliplatin
@@ -225,6 +273,14 @@ treatment_list:
         level_description: 'Drug: Cisplatin'
         level_internal_id: 4
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
     - arm_code: Arm 2B
       arm_internal_id: 7
       arm_description: T-DXd monotherapy
@@ -234,6 +290,10 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          her2_status: Positive
+          oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
     - arm_code: Arm 2C
       arm_internal_id: 8
       arm_description: T-DXd, 5-FU or capecitabine
@@ -251,6 +311,14 @@ treatment_list:
         level_description: 'Drug: Trastuzumab deruxtecan'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: '!Negative'
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Any Variation
     - arm_code: Arm 2D
       arm_internal_id: 9
       arm_description: T-DXd, pembrolizumab and 5-FU or capecitabine
@@ -272,6 +340,14 @@ treatment_list:
         level_description: 'Biological: Pembrolizumab'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: '!Negative'
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Any Variation
     - arm_code: Arm 2E
       arm_internal_id: 10
       arm_description: T-DXd and pembrolizumab
@@ -285,6 +361,18 @@ treatment_list:
         level_description: 'Biological: Pembrolizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - and:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Any Variation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
     - arm_code: Arm 2F
       arm_internal_id: 11
       arm_description: T-DXd, pembrolizumab and 5-FU or capecitabine
@@ -306,6 +394,18 @@ treatment_list:
         level_description: 'Biological: Pembrolizumab'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: '!Negative'
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - and:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Any Variation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
     - arm_code: Arm 3A
       arm_internal_id: 12
       arm_description: T-DXd, Volrustomig and 5-FU or capecitabine
@@ -327,6 +427,18 @@ treatment_list:
         level_description: 'Biological: Volrustomig'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - and:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Any Variation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
     - arm_code: Arm 3B
       arm_internal_id: 13
       arm_description: T-DXd, Volrustomig and 5-FU or capecitabine
@@ -348,6 +460,14 @@ treatment_list:
         level_description: 'Biological: Volrustomig'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: '!Negative'
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Any Variation
     - arm_code: Arm 4A
       arm_internal_id: 14
       arm_description: T-DXd, Rilvegostomig and 5-FU or capecitabine
@@ -369,6 +489,18 @@ treatment_list:
         level_description: 'Biological: Rilvegostomig'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - and:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Mutation'
     - arm_code: Arm 4B
       arm_internal_id: 15
       arm_description: T-DXd, Rilvegostomig and 5-FU or capecitabine
@@ -390,6 +522,14 @@ treatment_list:
         level_description: 'Biological: Rilvegostomig'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
     - arm_code: Part 5 Main Cohort
       arm_internal_id: 16
       arm_description: T-DXd, Volrustomig and 5-FU or capecitabine
@@ -411,6 +551,14 @@ treatment_list:
         level_description: 'Biological: Volrustomig'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            her2_status: Negative
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: '!Any Variation'
     - arm_code: Part 5 Cohort 2
       arm_internal_id: 17
       arm_description: T-DXd, Volrustomig and 5-FU or capecitabine
@@ -432,18 +580,19 @@ treatment_list:
         level_description: 'Biological: Volrustomig'
         level_internal_id: 3
         level_suspended: N
-    match:
-    - and:
-      - or:
+      match:
+      - and:
         - clinical:
-            oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
-              the Esophagus/Stomach
-        - clinical:
+            her2_status: Negative
             oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Positive
-          disease_status:
-          - Locally Advanced
-          - Unresectable
-          - Metastatic
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: '!Any Variation'
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        - Advanced
+        her2_status: Positive
+        oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma

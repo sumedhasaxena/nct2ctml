@@ -101,11 +101,7 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": null,
-                        "-clinical": {
-                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
-                        }
+                        ]
                     },
                     {
                         "arm_code": "Standard of Care (SOC)",
@@ -129,12 +125,17 @@
                                 "or": [
                                     {
                                         "clinical": {
+                                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
                                             "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                            "oncotree_primary_diagnosis": "Tubular Adenoma of the Colon"
                                         }
                                     }
                                 ]
@@ -143,7 +144,8 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Early Stage"
+                                        "Localized",
+                                        "Metastatic"
                                     ]
                                 }
                             }

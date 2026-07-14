@@ -109,27 +109,25 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
-                                        }
+                        "match": {
+                            "or": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
                                     }
-                                ]
-                            }
-                        ]
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ],
                 "match": [

@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Trastuzumab Deruxtecan (T-DXd)'
-  - drug_name: 'Drug: FLOT Chemotherapy'
   - drug_name: 'Drug: 5-Fluorouracil (5-FU)'
   - drug_name: 'Drug: AZD0901'
   - drug_name: 'Drug: Rilvegostomig'
+  - drug_name: 'Drug: FLOT Chemotherapy'
+  - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Drug: Trastuzumab Deruxtecan (T-DXd)'
 long_title: A Master Protocol of an Open-Label, Multi-Drug, Multi-Center, Phase II
   Platform Study to Evaluate the Safety, Tolerability, Pharmacokinetics, and Preliminary
   Anti-tumor Activity of Novel Agents or Combinations as Perioperative Treatment in
@@ -110,6 +110,24 @@ treatment_list:
         level_description: 'Drug: 5-Fluorouracil (5-FU)'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: CLDN18
+                variant_category: Any Variation
+            - genomic:
+                hugo_symbol: ERBB2
+                variant_category: Any Variation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
     - arm_code: 'Sub-study 2: T-DXd plus rilvegostomig and 5-FU or capecitabine'
       arm_internal_id: 1
       arm_description: Participants will receive T-DXd plus rilvegostomig and 5-FU
@@ -134,6 +152,29 @@ treatment_list:
         level_description: 'Drug: 5-Fluorouracil (5-FU)'
         level_internal_id: 3
         level_suspended: N
+      match:
+      - and:
+        - and:
+          - or:
+            - clinical:
+                oncotree_primary_diagnosis: Breast Carcinoma
+            - clinical:
+                oncotree_primary_diagnosis: Gastric Adenocarcinoma
+            - clinical:
+                oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              her2_status: Positive
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: CLDN18
+                variant_category: Any Variation
+            - genomic:
+                hugo_symbol: ERBB2
+                variant_category: Any Variation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Any Variation'
     - arm_code: 'Sub-study 3: Rilvegostomig plus FLOT chemotherapy'
       arm_internal_id: 2
       arm_description: Participants will receive Rilvegostomig plus FLOT chemotherapy
@@ -151,14 +192,10 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Negative
-          disease_status:
-          - Locally Advanced
-          oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-      - and:
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: Any Variation
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Untreated
+        - Localized
+        - Locally Advanced
+        oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma

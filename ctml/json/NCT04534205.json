@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: BNT113"
+                "drug_name": "Biological: Pembrolizumab"
             },
             {
-                "drug_name": "Biological: Pembrolizumab"
+                "drug_name": "Biological: BNT113"
             }
         ]
     },
@@ -156,57 +156,15 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Head and Neck Mucosal Melanoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Sialoblastoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Head and Neck Carcinoma, Other"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Parathyroid Cancer"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Salivary Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Nasopharyngeal Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Recurrent",
-                                        "Metastatic",
-                                        "Unresectable"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Recurrent",
+                                "Metastatic"
+                            ],
+                            "pdl1_status": "High",
+                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                        }
                     }
                 ]
             }

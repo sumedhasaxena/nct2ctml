@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Darolutamide'
-  - drug_name: 'Drug: Tulmimetostat'
   - drug_name: 'Drug: Abiraterone'
+  - drug_name: 'Drug: Tulmimetostat'
+  - drug_name: 'Drug: Darolutamide'
 long_title: 'TulmiSTAR-02: A Two-part Phase I Dose Escalation Study of Tulmimetostat
   (DZR123) in Combination With Darolutamide or Abiraterone Followed by Open-label,
   Randomized, Phase II Dose Expansion Study to Assess the Safety and Efficacy of Tulmimetostat
@@ -130,6 +130,9 @@ treatment_list:
         level_description: 'Drug: Darolutamide'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Phase I: Group B (part 2)'
       arm_internal_id: 1
       arm_description: Tulmimetostat PO QD escalating doses + Abiraterone 1000 mg
@@ -144,6 +147,9 @@ treatment_list:
         level_description: 'Drug: Abiraterone'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Phase II: Arm 1'
       arm_internal_id: 2
       arm_description: Tulmimetostat dose 1 PO + Darolutamide 600 mg PO BID
@@ -157,6 +163,9 @@ treatment_list:
         level_description: 'Drug: Darolutamide'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Phase II: Arm 2'
       arm_internal_id: 3
       arm_description: Tulmimetostat dose 2 PO + Darolutamide 600 mg PO BID
@@ -170,6 +179,9 @@ treatment_list:
         level_description: 'Drug: Darolutamide'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Phase II: Arm 3'
       arm_internal_id: 4
       arm_description: Darolutamide 600 mg PO BID
@@ -179,10 +191,14 @@ treatment_list:
         level_description: 'Drug: Darolutamide'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         gender: Male
         disease_status:
         - Metastatic
+        - Recurrent
         oncotree_primary_diagnosis: Prostate Adenocarcinoma

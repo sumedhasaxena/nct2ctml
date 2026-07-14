@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: AAA817'
   - drug_name: 'Drug: Investigators choice of SoC'
+  - drug_name: 'Drug: AAA817'
 long_title: 'PSMAcTION: A Phase II/III, Open-label, International, Multicenter, Randomized
   Study of AAA817 Versus Standard of Care in the Treatment of Adult Participants With
   PSMA Positive Metastatic Castration-resistant Prostate Cancer Who Progressed on
@@ -133,9 +133,21 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        gender: Male
-        disease_status:
-        - Metastatic
-        oncotree_primary_diagnosis: Prostate Adenocarcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Basal Cell Carcinoma of Prostate
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+      - clinical:
+          age_numerical: '>=18'
+          gender: Male
+          disease_status:
+          - Metastatic
+          - Refractory

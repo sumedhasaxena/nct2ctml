@@ -106,6 +106,9 @@ treatment_list:
         level_description: 'Drug: BG-C137'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: 'Phase 1a: Combination Therapy Dose Confirmation and Safety Expansion'
       arm_internal_id: 1
       arm_description: Sequential cohorts will be evaluated to confirm the safety
@@ -124,47 +127,21 @@ treatment_list:
       match:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Inflammatory Myofibroblastic Bladder Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Urachal Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Small Cell Bladder Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Adenocarcinoma
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
         - clinical:
             oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
         - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:
-            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+            oncotree_primary_diagnosis: Pulmonary Lymphangiomyomatosis
         - clinical:
-            oncotree_primary_diagnosis: Small Intestinal Carcinoma
+            oncotree_primary_diagnosis: Pleuropulmonary Blastoma
+        - clinical:
+            oncotree_primary_diagnosis: Inflammatory Myofibroblastic Lung Tumor
         - clinical:
             oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Anal Gland Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Small Bowel Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Urethral Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
-        - clinical:
-            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Urinary Bladder
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: 'Phase 1b: Dose Expansion'
       arm_internal_id: 2
       arm_description: Recommended Dose(s) of BG-C137 as determined from Ph1a will
@@ -178,11 +155,21 @@ treatment_list:
       match:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
         - clinical:
-            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+            oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
         - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Pulmonary Lymphangiomyomatosis
+        - clinical:
+            oncotree_primary_diagnosis: Pleuropulmonary Blastoma
+        - clinical:
+            oncotree_primary_diagnosis: Inflammatory Myofibroblastic Lung Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
     - and:
       - clinical:
@@ -194,3 +181,4 @@ treatment_list:
       - genomic:
           hugo_symbol: FGFR2
           variant_category: Copy Number Variation
+          cnv_call: High Amplification

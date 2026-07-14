@@ -205,7 +205,7 @@ treatment_list:
         level_suspended: N
       match:
       - clinical:
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
+          oncotree_primary_diagnosis: Myeloid Neoplasm
     - arm_code: 'Substudy 4: Dose Escalation and Expansion'
       arm_internal_id: 1
       arm_description: 'In the pre-phase, participants will receive 2 step-up doses
@@ -246,4 +246,4 @@ treatment_list:
         disease_status:
         - Refractory
         - Recurrent
-        oncotree_primary_diagnosis: Lymphoid Neoplasm
+        oncotree_primary_diagnosis: Myeloid Neoplasm

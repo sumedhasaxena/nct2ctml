@@ -158,4 +158,5 @@ treatment_list:
         disease_status:
         - Locally Advanced
         - Metastatic
+        - Recurrent
         oncotree_primary_diagnosis: Renal Cell Carcinoma

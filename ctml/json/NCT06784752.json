@@ -135,7 +135,26 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "or": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Carcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Tumor"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Gastrointestinal Neuroendocrine Tumors"
+                                    }
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Octreotide LAR",
@@ -159,12 +178,12 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Tumor"
+                                            "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Carcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Carcinoma"
+                                            "oncotree_primary_diagnosis": "Pancreatic Neuroendocrine Tumor"
                                         }
                                     }
                                 ]
@@ -175,8 +194,7 @@
                                     "disease_status": [
                                         "Metastatic",
                                         "Locally Advanced",
-                                        "Unresectable",
-                                        "Advanced"
+                                        "Unresectable"
                                     ]
                                 }
                             }

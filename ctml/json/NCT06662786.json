@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Irinotecan Hydrochloride"
-            },
-            {
-                "drug_name": "Drug: 5-fluorouracil"
-            },
-            {
-                "drug_name": "Drug: Oxaliplatin"
-            },
-            {
-                "drug_name": "Biological: Amivantamab"
+                "drug_name": "Biological: Cetuximab"
             },
             {
                 "drug_name": "Drug: Leucovorin calcium/Levoleucovorin"
             },
             {
-                "drug_name": "Biological: Cetuximab"
+                "drug_name": "Biological: Amivantamab"
+            },
+            {
+                "drug_name": "Drug: Oxaliplatin"
+            },
+            {
+                "drug_name": "Drug: Irinotecan Hydrochloride"
+            },
+            {
+                "drug_name": "Drug: 5-fluorouracil"
             }
         ]
     },
@@ -183,38 +183,77 @@
                     {
                         "and": [
                             {
-                                "or": [
+                                "and": [
                                     {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
-                                        }
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Tubular Adenoma of the Colon"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Anorectal Mucosal Melanoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Anal Squamous Cell Carcinoma"
+                                                }
+                                            }
+                                        ]
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Appendiceal Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Tubular Adenoma of the Colon"
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Unresectable",
+                                                "Metastatic"
+                                            ],
+                                            "her2_status": "Negative",
+                                            "mmr_status": "MMR-Proficient",
+                                            "ms_status": "MSI-L"
                                         }
                                     }
                                 ]
                             },
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "her2_status": "Positive",
-                                    "disease_status": [
-                                        "Unresectable",
-                                        "Metastatic"
-                                    ]
-                                }
+                                "and": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "BRAF",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "KRAS",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "NRAS",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "ERBB2",
+                                            "variant_category": "!Any Variation"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }

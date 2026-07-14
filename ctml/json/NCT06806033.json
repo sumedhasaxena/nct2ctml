@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Glofitamab"
+                "drug_name": "Drug: Oxaliplatin"
             },
             {
                 "drug_name": "Drug: Gemcitabine"
             },
             {
-                "drug_name": "Drug: Oxaliplatin"
+                "drug_name": "Drug: Glofitamab"
             },
             {
                 "drug_name": "Drug: Obinutuzumab"
@@ -154,45 +154,49 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "and": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                    }
+                                },
+                                {
+                                    "and": [
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "MYC",
+                                                "variant_category": "!Structural Variation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "BCL2",
+                                                "variant_category": "!Structural Variation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "BCL6",
+                                                "variant_category": "!Structural Variation"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     }
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Recurrent",
-                                        "Refractory"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            },
-                            {
-                                "and": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "MYC",
-                                            "variant_category": "!Structural Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "BCL2",
-                                            "variant_category": "!Structural Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "BCL6",
-                                            "variant_category": "!Structural Variation"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Advanced"
+                            ],
+                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                        }
                     }
                 ]
             }

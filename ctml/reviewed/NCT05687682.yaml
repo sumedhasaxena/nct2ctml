@@ -284,6 +284,6 @@ treatment_list:
         disease_status:
         - Locally Advanced
         - Metastatic
+        - Unresectable
         - Refractory
-        - Recurrent
         oncotree_primary_diagnosis: _SOLID_

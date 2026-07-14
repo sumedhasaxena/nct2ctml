@@ -116,9 +116,6 @@ treatment_list:
         level_description: 'Drug: Nemtabrutinib'
         level_internal_id: 0
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Ibrutinib/Acalabrutinib
       arm_internal_id: 1
       arm_description: Participants will receive investigator's choice of ibrutinib
@@ -134,12 +131,6 @@ treatment_list:
         level_description: 'Drug: Acalabrutinib'
         level_internal_id: 1
         level_suspended: N
-      match:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Mantle Cell Lymphoma (MCL)
-        - clinical:
-            oncotree_primary_diagnosis: Chronic Lymphocytic Leukemia (CLL)
     match:
     - clinical:
         age_numerical: '>=18'

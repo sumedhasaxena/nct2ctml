@@ -89,4 +89,8 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=18'
+        disease_status:
+        - Recurrent
+        - Refractory
+        - Advanced
         oncotree_primary_diagnosis: Lymphoid Neoplasm

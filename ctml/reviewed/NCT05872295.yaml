@@ -167,6 +167,15 @@ treatment_list:
         level_description: 'Drug: IKS014'
         level_internal_id: 0
         level_suspended: N
+      match:
+        and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
+            cnv_call: High Amplification
     - arm_code: 'Dose Expansion: HER2 Low Breast Cancer Participants'
       arm_internal_id: 2
       arm_description: Each patient will receive IKS014 at the recommended dose defined
@@ -179,6 +188,10 @@ treatment_list:
         level_description: 'Drug: IKS014'
         level_internal_id: 0
         level_suspended: N
+      match:
+        clinical:
+          her2_status: Positive
+          oncotree_primary_diagnosis: Invasive Breast Carcinoma
     - arm_code: 'Dose Expansion: HER2+ Gastric Cancer or Gastro-esophageal Junction
         Participants'
       arm_internal_id: 3
@@ -192,6 +205,15 @@ treatment_list:
         level_description: 'Drug: IKS014'
         level_internal_id: 0
         level_suspended: N
+      match:
+        and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: Copy Number Variation
+            cnv_call: High Amplification
     - arm_code: 'Dose Expansion: HER2 Low Gastric Cancer or Gastro-esophageal Junction
         Participants'
       arm_internal_id: 4
@@ -205,6 +227,14 @@ treatment_list:
         level_description: 'Drug: IKS014'
         level_internal_id: 0
         level_suspended: N
+      match:
+        and:
+        - clinical:
+            her2_status: Positive
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - genomic:
+            hugo_symbol: ERBB2
+            variant_category: '!Any Variation'
     - arm_code: 'Dose Expansion: HER2 Solid Tumor Cancer Participants'
       arm_internal_id: 5
       arm_description: Each patient will receive IKS014 at the recommended dose defined
@@ -217,25 +247,52 @@ treatment_list:
         level_description: 'Drug: IKS014'
         level_internal_id: 0
         level_suspended: N
+      match:
+        and:
+        - and:
+          - or:
+            - clinical:
+                oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
+            - clinical:
+                oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+            - clinical:
+                oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+            - clinical:
+                oncotree_primary_diagnosis: Breast Neoplasm, NOS
+            - clinical:
+                oncotree_primary_diagnosis: Breast Sarcoma
+            - clinical:
+                oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
+            - clinical:
+                oncotree_primary_diagnosis: Metaplastic Breast Cancer
+            - clinical:
+                oncotree_primary_diagnosis: Inflammatory Breast Cancer
+            - clinical:
+                oncotree_primary_diagnosis: Invasive Breast Carcinoma
+          - clinical:
+              her2_status: Positive
+        - or:
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Any Variation
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: Mutation
     match:
     - and:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
-          - clinical:
               oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
           - clinical:
-              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
-                the Esophagus/Stomach
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
         - clinical:
             age_numerical: '>=18'
-            her2_status: Positive
             disease_status:
-            - Metastatic
             - Advanced
+            her2_status: Positive
       - genomic:
           hugo_symbol: ERBB2
           variant_category: Copy Number Variation

@@ -118,17 +118,21 @@ treatment_list:
         level_description: 'Drug: gemcitabine'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
     match:
     - and:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+        - clinical:
             oncotree_primary_diagnosis: Bladder Adenocarcinoma
         - clinical:
-            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-        - clinical:
             oncotree_primary_diagnosis: Small Cell Bladder Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
       - clinical:
           age_numerical: '>=20'
           disease_status:
-          - Refractory
-          - Unresectable
+          - Early Stage

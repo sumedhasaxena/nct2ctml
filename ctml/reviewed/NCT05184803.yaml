@@ -210,11 +210,12 @@ treatment_list:
     - and:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+        - clinical:
             oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
               the Esophagus/Stomach
-        - clinical:
-            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
       - clinical:
           age_numerical: '>=19'
           disease_status:
           - Metastatic
+          - Unresectable

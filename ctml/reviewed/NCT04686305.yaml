@@ -146,7 +146,7 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
       match:
-      - and:
+        and:
         - and:
           - or:
             - clinical:
@@ -186,10 +186,183 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
       match:
-      - and:
+        and:
         - or:
           - clinical:
+              oncotree_primary_diagnosis: Fibrosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Osteosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Dermatofibrosarcoma Protuberans
+          - clinical:
+              oncotree_primary_diagnosis: Myopericytoma
+          - clinical:
+              oncotree_primary_diagnosis: Medullary Thyroid Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Sarcoma, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Urethral Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Angiosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Hemangioma
+          - clinical:
+              oncotree_primary_diagnosis: Desmoplastic Small-Round-Cell Tumor
+          - clinical:
               oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Encapsulated Glioma
+          - clinical:
+              oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Small Cell Bladder Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Prostate Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Hepatocellular Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Poorly Differentiated Thyroid Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Epithelioid Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Melanoma
+          - clinical:
+              oncotree_primary_diagnosis: Clear Cell Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Diffuse Glioma
+          - clinical:
+              oncotree_primary_diagnosis: Desmoid/Aggressive Fibromatosis
+          - clinical:
+              oncotree_primary_diagnosis: Inverted Urothelial Papilloma
+          - clinical:
+              oncotree_primary_diagnosis: Inflammatory Myofibroblastic Lung Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Ependymomal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Ewing Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Malignant Glomus Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Mucosal Melanoma of the Vulva/Vagina
+          - clinical:
+              oncotree_primary_diagnosis: Glomangiosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Pseudomyogenic Hemangioendothelioma
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Adamantinoma
+          - clinical:
+              oncotree_primary_diagnosis: Extramammary Paget Disease
+          - clinical:
+              oncotree_primary_diagnosis: Urothelial Papilloma
+          - clinical:
+              oncotree_primary_diagnosis: Liver Angiosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Meningothelial Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Infantile Fibrosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Chordoma
+          - clinical:
+              oncotree_primary_diagnosis: Chondrosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Low-Grade Fibromyxoid Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Germ Cell Tumor, Brain
+          - clinical:
+              oncotree_primary_diagnosis: Gestational Trophoblastic Disease
+          - clinical:
+              oncotree_primary_diagnosis: Miscellaneous Neuroepithelial Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Undifferentiated Pleomorphic Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Endometrial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Malignant Rhabdoid Tumor of the Liver
+          - clinical:
+              oncotree_primary_diagnosis: Cervical Squamous Cell Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Renal Cell Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Cervical Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Synovial Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Hepatoblastoma
+          - clinical:
+              oncotree_primary_diagnosis: Leiomyosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Germ Cell Tumor of the Vulva
+          - clinical:
+              oncotree_primary_diagnosis: Perivascular Epithelioid Cell Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Alveolar Soft Part Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Myxofibrosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Liposarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Renal Neuroendocrine Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Malignant Nonepithelial Tumor of the Liver
+          - clinical:
+              oncotree_primary_diagnosis: Anaplastic Thyroid Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Wilms' Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Pulmonary Lymphangiomyomatosis
+          - clinical:
+              oncotree_primary_diagnosis: Epithelioid Hemangioendothelioma
+          - clinical:
+              oncotree_primary_diagnosis: Undifferentiated Embryonal Sarcoma of the
+                Liver
+          - clinical:
+              oncotree_primary_diagnosis: Vaginal Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Mucosal Melanoma of the Urethra
+          - clinical:
+              oncotree_primary_diagnosis: Rhabdomyosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Primary CNS Melanocytic Tumors
+          - clinical:
+              oncotree_primary_diagnosis: Well-Differentiated Thyroid Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Inflammatory Myofibroblastic Bladder Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Parathyroid Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Miscellaneous Brain Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Malignant Fibrous Histiocytoma
+          - clinical:
+              oncotree_primary_diagnosis: Paraganglioma
+          - clinical:
+              oncotree_primary_diagnosis: Choroid Plexus Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Pleuropulmonary Blastoma
+          - clinical:
+              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
+          - clinical:
+              oncotree_primary_diagnosis: Pineal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Round Cell Sarcoma, NOS
         - clinical:
             her2_status: Positive
     - arm_code: 'Arm 1C: T-DXd, Durvalumab and Pemetrexed'
@@ -210,7 +383,7 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           her2_status: Positive
     - arm_code: 'Arm 1D: T-DXd'
       arm_internal_id: 3
@@ -237,7 +410,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           her2_status: Positive
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: 'Arm 3B: T-DXd, Volrustomig and Carboplatin'
@@ -261,7 +434,7 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
       match:
-      - and:
+        and:
         - clinical:
             her2_status: Positive
             oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
@@ -298,7 +471,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           her2_status: Positive
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: Arm 4B T-DXd and Rilvegostomig with Carboplatin
@@ -322,7 +495,7 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           her2_status: Positive
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: 'Arm 5A: T-DXd and Volrustomig'
@@ -342,7 +515,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           her2_status: Positive
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: 'Arm 5B: T-DXd and Volrustomig'
@@ -362,7 +535,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           her2_status: Positive
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:

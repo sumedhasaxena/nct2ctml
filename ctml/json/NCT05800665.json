@@ -118,67 +118,16 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Basal Cell Carcinoma of Prostate"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "gender": "Male",
-                                            "disease_status": [
-                                                "Metastatic",
-                                                "Advanced"
-                                            ]
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "BRCA1",
-                                            "variant_category": "Mutation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "BRCA2",
-                                            "variant_category": "Mutation"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "gender": "Male",
+                            "disease_status": [
+                                "Metastatic",
+                                "Refractory",
+                                "Recurrent"
+                            ],
+                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                        }
                     }
                 ]
             }

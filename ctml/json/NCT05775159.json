@@ -122,13 +122,11 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                }
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                             }
-                        ]
+                        }
                     },
                     {
                         "arm_code": "Cohort 1B",
@@ -149,13 +147,11 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                }
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                             }
-                        ]
+                        }
                     },
                     {
                         "arm_code": "Cohort 1C",
@@ -176,39 +172,37 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "and": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "and": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "EGFR",
-                                                    "variant_category": "!Any Variation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "ALK",
-                                                    "variant_category": "!Any Variation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "ROS1",
-                                                    "variant_category": "!Any Variation"
-                                                }
-                                            }
-                                        ]
+                        "match": {
+                            "and": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                                     }
-                                ]
-                            }
-                        ]
+                                },
+                                {
+                                    "and": [
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "!Any Variation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "ALK",
+                                                "variant_category": "!Any Variation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "ROS1",
+                                                "variant_category": "!Any Variation"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Cohort 2A",
@@ -287,13 +281,11 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                }
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                             }
-                        ]
+                        }
                     },
                     {
                         "arm_code": "Cohort 1E",
@@ -314,13 +306,11 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                }
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                             }
-                        ]
+                        }
                     }
                 ],
                 "match": [

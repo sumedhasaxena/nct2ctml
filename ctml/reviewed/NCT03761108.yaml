@@ -137,6 +137,9 @@ treatment_list:
         level_description: 'Drug: Linvoseltamab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Linvoseltamab - Phase 2 - Cohort 1
       arm_internal_id: 1
       arm_description: Low Dose of linvoseltamab IV monotherapy.
@@ -146,6 +149,13 @@ treatment_list:
         level_description: 'Drug: Linvoseltamab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - genomic:
+            hugo_symbol: TNFRSF17
+            variant_category: Mutation
     - arm_code: Linvoseltamab - Phase 2 - Cohort 2
       arm_internal_id: 2
       arm_description: High Dose of linvoseltamab IV monotherapy.
@@ -155,6 +165,13 @@ treatment_list:
         level_description: 'Drug: Linvoseltamab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - genomic:
+            hugo_symbol: TNFRSF17
+            variant_category: '!Any Variation'
     - arm_code: Linvoseltamab - Phase 2 - Cohort 3
       arm_internal_id: 3
       arm_description: 'Anti-interleukin (IL)-6 receptor (R) prophylactic therapy
@@ -168,10 +185,16 @@ treatment_list:
         level_description: 'Drug: Linvoseltamab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Neoplasm
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Relapsed
+        - Recurrent
         - Refractory
-        oncotree_primary_diagnosis: Lymphoid Neoplasm
+        oncotree_primary_diagnosis: Myeloid Neoplasm

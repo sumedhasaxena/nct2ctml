@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Levoleucovorin'
   - drug_name: 'Drug: Oxaliplatin'
   - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Drug: 5-Fluorouracil (5-FU)'
   - drug_name: 'Drug: Leucovorin'
+  - drug_name: 'Drug: 5-Fluorouracil (5-FU)'
+  - drug_name: 'Drug: Levoleucovorin'
   - drug_name: 'Biological: I-DXd'
 long_title: 'A Phase 1/2 Open-Label, Umbrella Platform Design Study of Investigational
   Agents in Combination With Pembrolizumab (MK-3475) With or Without Chemotherapy

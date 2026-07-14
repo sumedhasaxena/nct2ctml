@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Carfilzomib'
+  - drug_name: 'Drug: Elranatamab'
+  - drug_name: 'Drug: Dexamethasone'
   - drug_name: 'Drug: Bortezomib'
   - drug_name: 'Drug: Pomalidomide'
-  - drug_name: 'Drug: Dexamethasone'
-  - drug_name: 'Drug: Elranatamab'
   - drug_name: 'Drug: Elotuzumab'
-  - drug_name: 'Drug: Carfilzomib'
 long_title: A PHASE 3, OPEN-LABEL STUDY OF ELRANATAMAB MONOTHERAPY VERSUS ELOTUZUMAB,
   POMALIDOMIDE, DEXAMETHASONE (EPd) OR POMALIDOMIDE, BORTEZOMIB, DEXAMETHASONE (PVd)
   OR CARFILZOMIB, DEXAMETHASONE (Kd) IN PARTICIPANTS WITH RELAPSED/REFRACTORY MULTIPLE
@@ -145,9 +145,6 @@ treatment_list:
         level_description: 'Drug: Elranatamab'
         level_internal_id: 0
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Investigator's Choice
       arm_internal_id: 1
       arm_description: Participants will receive either Elotuzumab, Pomalidomide and

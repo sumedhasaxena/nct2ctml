@@ -149,24 +149,22 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "and": [
-                                    {
-                                        "clinical": {
-                                            "her2_status": "Positive",
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "ERBB2",
-                                            "variant_category": "Copy Number Variation"
-                                        }
+                        "match": {
+                            "and": [
+                                {
+                                    "clinical": {
+                                        "her2_status": "Positive",
+                                        "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
                                     }
-                                ]
-                            }
-                        ]
+                                },
+                                {
+                                    "genomic": {
+                                        "hugo_symbol": "ERBB2",
+                                        "variant_category": "Copy Number Variation"
+                                    }
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Standard-of-care Therapy Arm",

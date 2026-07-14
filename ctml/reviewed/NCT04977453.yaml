@@ -8,10 +8,10 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Lenvatinib'
+  - drug_name: "Drug: Pembrolizumab (KEYTRUDA\xAE)"
   - drug_name: 'Radiation: Local Radiotherapy'
   - drug_name: 'Drug: GI-101A'
   - drug_name: 'Drug: GI-101'
-  - drug_name: "Drug: Pembrolizumab (KEYTRUDA\xAE)"
 long_title: A Phase 1/2, Open-label, Dose-escalation, and Expansion Study to Evaluate
   Safety, Tolerability, Pharmacokinetics, and Therapeutic Activity of GI-101 as a
   Single Agent and in Combination With Pembrolizumab, Lenvatinib or Local Radiotherapy
@@ -189,4 +189,6 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=18'
+        disease_status:
+        - Metastatic
         oncotree_primary_diagnosis: _SOLID_

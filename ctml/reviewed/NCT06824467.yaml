@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: H2 receptor antagonist'
+  - drug_name: 'Drug: H1 receptor antagonist'
   - drug_name: 'Biological: Sacituzumab tirumotecan'
   - drug_name: 'Biological: Bevacizumab'
-  - drug_name: 'Drug: H1 receptor antagonist'
-  - drug_name: 'Drug: H2 receptor antagonist'
   - drug_name: 'Drug: Dexamethasone (or equivalent)'
   - drug_name: 'Drug: Acetaminophen (or equivalent)'
   - drug_name: 'Drug: Steroid mouthwash (dexamethasone or equivalent)'
@@ -195,17 +195,12 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Sex Cord Stromal Tumor
+            oncotree_primary_diagnosis: Peritoneal Serous Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Ovarian Cancer, Other
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Germ Cell Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Peritoneal Serous Carcinoma
       - clinical:
           age_numerical: '>=18'
           gender: Female
           disease_status:
-          - Recurrent
+          - Advanced
+          - Metastatic

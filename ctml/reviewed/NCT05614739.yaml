@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: enfortumab vedotin'
   - drug_name: 'Drug: LOXO-435'
-  - drug_name: 'Drug: Pembrolizumab'
 long_title: 'FORAGER-1: A Phase 1, Open-Label, Multicenter Study of LOXO-435 (LY3866288)
   in Locally Advanced or Metastatic Solid Tumors Including Urothelial Cancer With
   FGFR3 Alterations'
@@ -119,6 +119,16 @@ treatment_list:
         level_description: 'Drug: LOXO-435'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+        - genomic:
+            hugo_symbol: FGFR3
+            variant_category: Any Variation
     - arm_code: 'Phase 1a: Cohort A2 LOXO-435 Monotherapy Dose Optimization'
       arm_internal_id: 1
       arm_description: LOXO-435 administered orally
@@ -128,6 +138,13 @@ treatment_list:
         level_description: 'Drug: LOXO-435'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+        - genomic:
+            hugo_symbol: FGFR3
+            variant_category: Any Variation
     - arm_code: 'Phase 1b: Cohort B1, B2, B4, and C1 LOXO-435 Monotherapy Dose Expansion'
       arm_internal_id: 2
       arm_description: LOXO-435 administered orally
@@ -137,6 +154,13 @@ treatment_list:
         level_description: 'Drug: LOXO-435'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+        - genomic:
+            hugo_symbol: FGFR3
+            variant_category: Any Variation
     - arm_code: 'Phase 1b: Cohort B3 LOXO-435 Plus Pembrolizumab'
       arm_internal_id: 3
       arm_description: LOXO-435 administered orally in combination with pembrolizumab
@@ -151,6 +175,16 @@ treatment_list:
         level_description: 'Drug: Pembrolizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+        - genomic:
+            hugo_symbol: FGFR3
+            variant_category: Any Variation
     - arm_code: 'Phase 1b: Cohort B5 LOXO-435 Plus Pembrolizumab Plus Enfortumab Vedotin'
       arm_internal_id: 4
       arm_description: LOXO-435 administered orally in combination with pembrolizumab
@@ -169,29 +203,52 @@ treatment_list:
         level_description: 'Drug: enfortumab vedotin'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+        - genomic:
+            hugo_symbol: FGFR3
+            variant_category: Any Variation
     match:
     - and:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+              oncotree_primary_diagnosis: Urothelial Papilloma
           - clinical:
-              oncotree_primary_diagnosis: Bladder Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+              oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Small Cell Bladder Cancer
           - clinical:
+              oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Bladder Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Urinary Bladder
+          - clinical:
+              oncotree_primary_diagnosis: Urachal Carcinoma
+          - clinical:
               oncotree_primary_diagnosis: Inverted Urothelial Papilloma
           - clinical:
-              oncotree_primary_diagnosis: Urothelial Papilloma
-          - clinical:
               oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Inflammatory Myofibroblastic Bladder Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
         - clinical:
             age_numerical: '>=18'
             disease_status:
+            - Localized
             - Locally Advanced
             - Metastatic
+            - Recurrent
+            - Refractory
+            - Unresectable
+            - Early Stage
       - genomic:
           hugo_symbol: FGFR3
           variant_category: Any Variation

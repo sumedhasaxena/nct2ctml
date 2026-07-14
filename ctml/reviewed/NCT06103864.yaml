@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Durvalumab'
   - drug_name: 'Drug: Dato-DXd'
+  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Nab-paclitaxel'
-  - drug_name: 'Drug: Gemcitabine'
-  - drug_name: 'Drug: Pembrolizumab'
-  - drug_name: 'Drug: Paclitaxel'
 long_title: A Phase III, Open-label, Randomised Study of Datopotamab Deruxtecan (Dato-DXd)
   With or Without Durvalumab Compared With Investigator's Choice of Chemotherapy (Paclitaxel,
   Nab-paclitaxel or Gemcitabine + Carboplatin) in Combination With Pembrolizumab in
@@ -164,6 +164,29 @@ treatment_list:
         level_description: 'Drug: Pembrolizumab'
         level_internal_id: 4
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Breast Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Metaplastic Breast Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
+          - clinical:
+              oncotree_primary_diagnosis: Inflammatory Breast Cancer
+        - clinical:
+            her2_status: Negative
+            er_status: Negative
+            pr_status: Negative
     - arm_code: Dato-DXd
       arm_internal_id: 2
       arm_description: 'Arm 3: Dato-DXd'
@@ -177,17 +200,20 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
-        - clinical:
             oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
         - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+        - clinical:
             oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Breast Neoplasm, NOS
       - clinical:
           age_numerical: '>=18'
+          disease_status:
+          - Metastatic
+          - Recurrent
+          - Unresectable
           her2_status: Negative
           er_status: Negative
           pr_status: Negative
           pdl1_status: High
-          disease_status:
-          - Recurrent
-          - Metastatic

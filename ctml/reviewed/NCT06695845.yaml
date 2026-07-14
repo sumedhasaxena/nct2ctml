@@ -134,58 +134,69 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+              oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
           - clinical:
               oncotree_primary_diagnosis: Ovarian Epithelial Tumor
           - clinical:
-              oncotree_primary_diagnosis: Sialoblastoma
-          - clinical:
-              oncotree_primary_diagnosis: Metaplastic Breast Cancer
-          - clinical:
-              oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Invasive Breast Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
           - clinical:
               oncotree_primary_diagnosis: Colorectal Adenocarcinoma
           - clinical:
+              oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Inflammatory Breast Cancer
+          - clinical:
               oncotree_primary_diagnosis: Endometrial Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Salivary Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+              oncotree_primary_diagnosis: Ovarian Cancer, Other
           - clinical:
               oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
-          - clinical:
               oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
           - clinical:
-              oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
+              oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Sialoblastoma
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Head and Neck Carcinoma, Other
+          - clinical:
+              oncotree_primary_diagnosis: Salivary Carcinoma
         - clinical:
             age_numerical: '>=18'
-            her2_status: Positive
             disease_status:
             - Locally Advanced
-            - Unresectable
             - Metastatic
-            - Advanced
             - Refractory
+            - Unresectable
+            her2_status: Positive
       - and:
         - genomic:
-            hugo_symbol: BRAF
-            variant_category: '!Any Variation'
-        - genomic:
-            hugo_symbol: ALK
-            variant_category: '!Any Variation'
-        - genomic:
-            hugo_symbol: EGFR
-            variant_category: '!Any Variation'
-        - genomic:
-            hugo_symbol: ROS1
-            variant_category: '!Any Variation'
+            hugo_symbol: ERBB2
+            variant_category: Any Variation
+        - and:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: BRAF
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: ALK
+              variant_category: '!Structural Variation'
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: ROS1
+              variant_category: '!Structural Variation'

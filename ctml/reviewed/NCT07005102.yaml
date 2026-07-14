@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Telisotuzumab Adizutecan'
   - drug_name: 'Drug: Osimertinib (Osi)'
+  - drug_name: 'Drug: Telisotuzumab Adizutecan'
   - drug_name: 'Drug: Standard of Care'
 long_title: A Phase 2/3 Randomized Study to Evaluate the Safety, Efficacy, and Optimal
   Dose of Telisotuzumab Adizutecan in Combination With Osimertinib as First-Line Treatment
@@ -211,7 +211,4 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=18'
-        disease_status:
-        - Locally Advanced
-        - Metastatic
         oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

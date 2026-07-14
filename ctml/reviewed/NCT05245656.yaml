@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: RB'
   - drug_name: 'Drug: RB/RBAC alternating'
+  - drug_name: 'Drug: RB'
 long_title: A Randomized Phase II Trial Comparing Rituximab/Bendamustine(RB) Alternating
   With Rituximab/Bendamustine/Cytarabine(RBAC) With RB as Induction Therapy in Elderly
   Patients With Newly Diagnosed and Transplant-ineligible Mantle Cell Lymphoma
@@ -151,4 +151,4 @@ treatment_list:
         age_numerical: '>=60'
         disease_status:
         - Untreated
-        oncotree_primary_diagnosis: Mantle Cell Lymphoma
+        oncotree_primary_diagnosis: Lymphoid Neoplasm

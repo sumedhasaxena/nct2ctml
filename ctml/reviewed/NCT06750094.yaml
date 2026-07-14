@@ -164,6 +164,10 @@ treatment_list:
       - or:
         - clinical:
             oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
     - and:
       - and:

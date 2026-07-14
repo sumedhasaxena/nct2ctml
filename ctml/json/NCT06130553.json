@@ -130,18 +130,29 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Refractory",
                                         "Recurrent",
+                                        "Refractory",
                                         "Metastatic"
                                     ],
                                     "oncotree_primary_diagnosis": "_SOLID_"
                                 }
                             },
                             {
-                                "genomic": {
-                                    "hugo_symbol": "MTAP",
-                                    "variant_category": "Copy Number Variation"
-                                }
+                                "or": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "MTAP",
+                                            "variant_category": "Copy Number Variation",
+                                            "cnv_call": "Homozygous Deletion"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "MTAP",
+                                            "variant_category": "Any Variation"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }

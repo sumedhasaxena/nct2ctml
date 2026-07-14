@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cabozantinib'
   - drug_name: 'Drug: Zimberelimab'
+  - drug_name: 'Drug: Cabozantinib'
   - drug_name: 'Drug: casdatifan'
 long_title: A Phase 1, Open-label, Dose Escalation and Dose Expansion Study, to Investigate
   the Safety, Tolerability, and Pharmacokinetic Profile of AB521 Monotherapy and Combination
@@ -218,6 +218,8 @@ treatment_list:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Advanced
         - Metastatic
+        - Advanced
+        - Recurrent
+        - Refractory
         oncotree_primary_diagnosis: _SOLID_

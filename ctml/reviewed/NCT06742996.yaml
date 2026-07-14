@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Zanubrutinib'
   - drug_name: 'Drug: Sonrotoclax'
+  - drug_name: 'Drug: Placebo'
 long_title: A Phase 3 Randomized Double-Blind Multicenter Study of Sonrotoclax Plus
   Zanubrutinib Versus Placebo Plus Zanubrutinib in Patients With Relapsed/Refractory
   Mantle Cell Lymphoma

@@ -197,22 +197,142 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-      - and:
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        and:
         - or:
-          - genomic:
-              hugo_symbol: ROS1
-              variant_category: Structural Variation
-          - genomic:
-              hugo_symbol: NTRK1
-              variant_category: Structural Variation
-          - genomic:
-              hugo_symbol: NTRK2
-              variant_category: Structural Variation
-          - genomic:
-              hugo_symbol: NTRK3
-              variant_category: Structural Variation
+          - clinical:
+              oncotree_primary_diagnosis: Myopericytoma
+          - clinical:
+              oncotree_primary_diagnosis: Encapsulated Glioma
+          - clinical:
+              oncotree_primary_diagnosis: Alveolar Soft Part Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Desmoplastic Small-Round-Cell Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Fibrosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Low-Grade Fibromyxoid Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Undifferentiated Pleomorphic Sarcoma/Malignant
+                Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Angiosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Round Cell Sarcoma, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Radiation-Associated Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Aggressive Angiomyxoma
+          - clinical:
+              oncotree_primary_diagnosis: Clear Cell Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Diffuse Glioma
+          - clinical:
+              oncotree_primary_diagnosis: Dendritic Cell Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Epithelioid Hemangioendothelioma
+          - clinical:
+              oncotree_primary_diagnosis: Meningothelial Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Paraganglioma
+          - clinical:
+              oncotree_primary_diagnosis: Sarcoma, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Miscellaneous Brain Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Glomangiosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Leiomyoma
+          - clinical:
+              oncotree_primary_diagnosis: Synovial Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Pineal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Hemangioma
+          - clinical:
+              oncotree_primary_diagnosis: Epithelioid Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Myofibromatosis
+          - clinical:
+              oncotree_primary_diagnosis: Liposarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Perivascular Epithelioid Cell Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Inflammatory Myofibroblastic Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Embryonal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Intimal Sarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Malignant Glomus Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Soft Tissue Myoepithelial Carcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Myofibroma
+          - clinical:
+              oncotree_primary_diagnosis: Miscellaneous Neuroepithelial Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Tenosynovial Giant Cell Tumor Diffuse Type
+          - clinical:
+              oncotree_primary_diagnosis: Sellar Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Choroid Plexus Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Pseudomyogenic Hemangioendothelioma
+          - clinical:
+              oncotree_primary_diagnosis: Rhabdomyosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Leiomyosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Primary CNS Melanocytic Tumors
+          - clinical:
+              oncotree_primary_diagnosis: Angiomatoid Fibrous Histiocytoma
+          - clinical:
+              oncotree_primary_diagnosis: Atypical Lipomatous Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Desmoid/Aggressive Fibromatosis
+          - clinical:
+              oncotree_primary_diagnosis: Ependymomal Tumor
+          - clinical:
+              oncotree_primary_diagnosis: Germ Cell Tumor, Brain
+          - clinical:
+              oncotree_primary_diagnosis: Solitary Fibrous Tumor/Hemangiopericytoma
+          - clinical:
+              oncotree_primary_diagnosis: Infantile Fibrosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Myxoma
+          - clinical:
+              oncotree_primary_diagnosis: Ewing Sarcoma of Soft Tissue
+          - clinical:
+              oncotree_primary_diagnosis: Myxofibrosarcoma
+          - clinical:
+              oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
+        - and:
+          - or:
+            - genomic:
+                hugo_symbol: ROS1
+                variant_category: Structural Variation
+            - genomic:
+                hugo_symbol: NTRK1
+                variant_category: Structural Variation
+            - genomic:
+                hugo_symbol: NTRK2
+                variant_category: Structural Variation
+            - genomic:
+                hugo_symbol: NTRK3
+                variant_category: Structural Variation
+          - and:
+            - genomic:
+                hugo_symbol: ROS1
+                variant_category: '!Any Variation'
+            - genomic:
+                hugo_symbol: NTRK1
+                variant_category: '!Any Variation'
+            - genomic:
+                hugo_symbol: NTRK2
+                variant_category: '!Any Variation'
+            - genomic:
+                hugo_symbol: NTRK3
+                variant_category: '!Any Variation'
     match:
     - and:
       - clinical:

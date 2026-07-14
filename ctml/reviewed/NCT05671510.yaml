@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Docetaxel'
   - drug_name: 'Drug: Gotistobart'
+  - drug_name: 'Drug: Docetaxel'
 long_title: Phase 3, Two-stage, Randomized Study of ONC-392 Versus Docetaxel in Metastatic
   Non-Small Cell Lung Cancers That Progressed on PD-1/PD-L1 Inhibitors
 last_updated: '2025-06-29'
@@ -127,9 +127,10 @@ treatment_list:
     - and:
       - clinical:
           age_numerical: '>=18'
-          her2_status: '!Positive'
           disease_status:
           - Metastatic
+          - Refractory
+          her2_status: '!Positive'
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:

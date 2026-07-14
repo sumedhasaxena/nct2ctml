@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Gemcitabine-nab-paclitaxel'
-  - drug_name: 'Drug: JPI-547'
   - drug_name: 'Drug: modified FOLFIRINOX'
+  - drug_name: 'Drug: JPI-547'
 long_title: An Open-label, Dose-finding, Phase Ib Study to Assess the Safety, Tolerability
   of JPI-547, a Dual Inhibitor of PARP/Tankyrase, in Combination With Modified FOLFIRINOX
   (mFOLFIRINOX) or Gemcitabine-nab-paclitaxel (GemAbraxne) in Patients With Locally
@@ -149,14 +149,9 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
-      - clinical:
-          age_numerical: '>=19'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
+    - clinical:
+        age_numerical: '>=19'
+        disease_status:
+        - Locally Advanced
+        - Metastatic
+        oncotree_primary_diagnosis: Pancreatic Adenocarcinoma

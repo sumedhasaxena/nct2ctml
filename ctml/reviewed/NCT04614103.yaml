@@ -108,6 +108,16 @@ treatment_list:
         level_description: 'Biological: LN-145'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Melanoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
     - arm_code: Cohort 2
       arm_internal_id: 1
       arm_description: "Patients whose tumors expressed PD-L1 TPS \u22651% prior to\
@@ -128,6 +138,18 @@ treatment_list:
         level_description: 'Biological: LN-145'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Small Cell Bladder Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
     - arm_code: Cohort 4
       arm_internal_id: 3
       arm_description: Patients, regardless of tumor PD-L1 expression status prior
@@ -143,6 +165,12 @@ treatment_list:
         level_description: 'Biological: LN-145'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
     - arm_code: Retreatment Cohort
       arm_internal_id: 4
       arm_description: Patients who were previously treated with LN-145 in Cohort
@@ -160,7 +188,7 @@ treatment_list:
           disease_status:
           - Metastatic
           - Recurrent
-          - Advanced
+          - Refractory
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - genomic:

@@ -7,16 +7,16 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Procedure: Bone Scan'
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Biological: Relatlimab'
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Gemcitabine'
-  - drug_name: 'Biological: Nivolumab'
-  - drug_name: 'Procedure: Magnetic Resonance Imaging'
-  - drug_name: 'Procedure: Positron Emission Tomography'
-  - drug_name: 'Procedure: Computed Tomography'
   - drug_name: 'Procedure: Biospecimen Collection'
+  - drug_name: 'Procedure: Magnetic Resonance Imaging'
+  - drug_name: 'Biological: Nivolumab'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Cisplatin'
+  - drug_name: 'Procedure: Positron Emission Tomography'
+  - drug_name: 'Biological: Relatlimab'
+  - drug_name: 'Procedure: Computed Tomography'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Procedure: Bone Scan'
 long_title: A Randomized Phase II Study of Nivolumab Versus Nivolumab and BMS-986016
   (Relatlimab) as Maintenance Treatment After First-Line Treatment With Platinum-Gemcitabine-Nivolumab
   for Patients With Epstein-Barr Virus-Associated Recurrent/Metastatic Nasopharyngeal
@@ -212,7 +212,7 @@ sponsor_list:
     sponsor_roles: sponsor
 staff_list:
   protocol_staff: []
-status: closed
+status: open to accrual
 summary: This phase II trial tests the addition of BMS-986016 (relatlimab) to the
   usual immunotherapy after initial treatment for nasopharyngeal cancer that has come
   back after a period of improvement (recurrent) or that has spread from where it
@@ -337,15 +337,11 @@ treatment_list:
         level_description: 'Biological: Nivolumab'
         level_internal_id: 6
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Nasopharyngeal Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
         - Recurrent
         - Metastatic
-        - Unresectable
-        - Advanced
+        - Locally Advanced
         oncotree_primary_diagnosis: Nasopharyngeal Carcinoma

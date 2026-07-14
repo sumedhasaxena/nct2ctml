@@ -107,30 +107,22 @@ treatment_list:
             oncotree_primary_diagnosis: Renal Cell Carcinoma
         - genomic:
             hugo_symbol: VHL
-            variant_category: Any Variation
+            variant_category: Mutation
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
-          - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
-          - clinical:
-              oncotree_primary_diagnosis: Renal Cell Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Pheochromocytoma
-        - clinical:
-            age_numerical: '>=12'
-            disease_status:
-            - Advanced
-            - Metastatic
       - or:
-        - genomic:
-            hugo_symbol: VHL
-            variant_category: Any Variation
-        - genomic:
-            hugo_symbol: EPAS1
-            variant_category: Any Variation
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Pheochromocytoma
+        - clinical:
+            oncotree_primary_diagnosis: Renal Cell Carcinoma
+      - clinical:
+          age_numerical: '>=12'
+          disease_status:
+          - Metastatic
+          - Recurrent

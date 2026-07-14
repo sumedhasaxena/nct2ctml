@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: leucovorin'
-  - drug_name: 'Drug: fluorouracil'
-  - drug_name: 'Drug: cetuximab'
-  - drug_name: 'Drug: bevacizumab'
-  - drug_name: 'Drug: tucatinib'
   - drug_name: 'Drug: oxaliplatin'
   - drug_name: 'Drug: trastuzumab'
   - drug_name: 'Drug: levoleucovorin'
+  - drug_name: 'Drug: cetuximab'
+  - drug_name: 'Drug: leucovorin'
+  - drug_name: 'Drug: fluorouracil'
+  - drug_name: 'Drug: bevacizumab'
+  - drug_name: 'Drug: tucatinib'
 long_title: An Open-label Randomized Phase 3 Study of Tucatinib in Combination With
   Trastuzumab and mFOLFOX6 Versus mFOLFOX6 Given With or Without Either Cetuximab
   or Bevacizumab as First-line Treatment for Subjects With HER2+ Metastatic Colorectal
@@ -181,32 +181,28 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Low-grade Appendiceal Mucinous Neoplasm
-          - clinical:
               oncotree_primary_diagnosis: Tubular Adenoma of the Colon
           - clinical:
               oncotree_primary_diagnosis: Colorectal Adenocarcinoma
           - clinical:
               oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
         - clinical:
             age_numerical: '>=18'
-            her2_status: Positive
             disease_status:
             - Locally Advanced
             - Metastatic
+            her2_status: Positive
       - and:
         - genomic:
             hugo_symbol: ERBB2
-            variant_category: Copy Number Variation
+            variant_category: Any Variation
         - and:
           - genomic:
               hugo_symbol: HRAS
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'
           - genomic:
               hugo_symbol: NRAS
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'
           - genomic:
               hugo_symbol: KRAS
-              variant_category: '!Mutation'
+              variant_category: '!Any Variation'

@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Pembrolizumab"
+                "drug_name": "Biological: Rilvegostomig"
             },
             {
-                "drug_name": "Biological: Rilvegostomig"
+                "drug_name": "Biological: Pembrolizumab"
             }
         ]
     },
@@ -112,7 +112,36 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "or": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Melanoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                    }
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Arm B",
@@ -126,7 +155,31 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "or": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Small Cell Bladder Cancer"
+                                    }
+                                },
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Melanoma"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ],
                 "match": [
@@ -136,7 +189,8 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Advanced"
                                     ],
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }

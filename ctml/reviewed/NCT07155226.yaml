@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: AZD3632'
   - drug_name: 'Drug: Posaconazole'
+  - drug_name: 'Drug: AZD3632'
 long_title: A Modular Phase I/II, Open-label, Multi-Centre Study to Evaluate the Safety,
   Tolerability, Pharmacokinetics, Pharmacodynamics, and Preliminary Efficacy of AZD3632
   Monotherapy or in Combination With Anticancer Agents in Participants With Advanced
@@ -126,6 +126,17 @@ treatment_list:
         level_description: 'Drug: AZD3632'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Neoplasm
+        - or:
+          - genomic:
+              hugo_symbol: KMT2A
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: NPM1
+              variant_category: Mutation
     - arm_code: 'Module 1: AZD3632 dose 2'
       arm_internal_id: 1
       arm_description: Participants will receive AZD3632 (dose 2) through the treatment
@@ -136,6 +147,17 @@ treatment_list:
         level_description: 'Drug: AZD3632'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Neoplasm
+        - or:
+          - genomic:
+              hugo_symbol: KMT2A
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: NPM1
+              variant_category: Mutation
     - arm_code: 'Module 1: AZD3632 dose 3'
       arm_internal_id: 2
       arm_description: Participants will receive AZD3632 (dose 3) through the treatment
@@ -146,6 +168,20 @@ treatment_list:
         level_description: 'Drug: AZD3632'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Lymphoid Neoplasm
+          - clinical:
+              oncotree_primary_diagnosis: Myeloid Neoplasm
+        - or:
+          - genomic:
+              hugo_symbol: KMT2A
+              variant_category: Mutation
+          - genomic:
+              hugo_symbol: NPM1
+              variant_category: Mutation
     - arm_code: 'Module 1: AZD3632 dose 4'
       arm_internal_id: 3
       arm_description: Participants will receive AZD3632 (dose 4) through the treatment
@@ -156,6 +192,17 @@ treatment_list:
         level_description: 'Drug: AZD3632'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Neoplasm
+        - or:
+          - genomic:
+              hugo_symbol: KMT2A
+              variant_category: Structural Variation
+          - genomic:
+              hugo_symbol: NPM1
+              variant_category: Mutation
     - arm_code: 'Module 1: AZD3632 dose 5'
       arm_internal_id: 4
       arm_description: Participants will receive AZD3632 (dose 5) through the treatment
@@ -166,6 +213,18 @@ treatment_list:
         level_description: 'Drug: AZD3632'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Neoplasm
+        - or:
+          - genomic:
+              hugo_symbol: KMT2A
+              variant_category: Mutation
+              protein_change: p.R882C
+          - genomic:
+              hugo_symbol: NPM1
+              variant_category: Mutation
     - arm_code: 'Module 1: AZD3632 dose 6'
       arm_internal_id: 5
       arm_description: Participants will receive AZD3632 (dose 6) through the treatment
@@ -176,6 +235,17 @@ treatment_list:
         level_description: 'Drug: AZD3632'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Neoplasm
+        - or:
+          - genomic:
+              hugo_symbol: KMT2A
+              variant_category: Structural Variation
+          - genomic:
+              hugo_symbol: NPM1
+              variant_category: Mutation
     - arm_code: 'Module 2: AZD3632 + posaconazole'
       arm_internal_id: 6
       arm_description: Participants will receive AZD3632 alone, then will receive
@@ -190,27 +260,22 @@ treatment_list:
         level_description: 'Drug: Posaconazole'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Myeloid Neoplasm
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Lymphoid Neoplasm
-          - clinical:
-              oncotree_primary_diagnosis: Myeloid Neoplasm
-          - clinical:
-              oncotree_primary_diagnosis: Myeloid Atypical
-        - clinical:
-            age_numerical: '>=16'
-            disease_status:
-            - Recurrent
-            - Refractory
       - or:
-        - genomic:
-            hugo_symbol: KMT2A
-            variant_category: Any Variation
-            protein_change: p.R246
-        - genomic:
-            hugo_symbol: NPM1
-            variant_category: Any Variation
-            protein_change: p.M126
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Atypical
+        - clinical:
+            oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Atypical
+        - clinical:
+            oncotree_primary_diagnosis: Myeloid Neoplasm
+      - clinical:
+          age_numerical: '>=16'
+          disease_status:
+          - Early Stage
+          - Advanced

@@ -159,6 +159,11 @@
                                                 "clinical": {
                                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                                 }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                                }
                                             }
                                         ]
                                     },
@@ -172,6 +177,13 @@
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "genomic": {
+                                    "hugo_symbol": "KRAS",
+                                    "variant_category": "Mutation",
+                                    "protein_change": "p.G12C"
+                                }
                             }
                         ]
                     }

@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Glofitamab'
   - drug_name: 'Drug: Rituximab'
   - drug_name: 'Drug: Bendamustine'
   - drug_name: 'Drug: Lenalidomide'
-  - drug_name: 'Drug: Obinutuzumab'
   - drug_name: 'Drug: Tocilizumab'
+  - drug_name: 'Drug: Glofitamab'
+  - drug_name: 'Drug: Obinutuzumab'
 long_title: A Phase III, Open-Label, Multicenter Randomized Study Evaluating Glofitamab
   as a Single Agent Versus Investigator's Choice in Patients With Relapsed/Refractory
   Mantle Cell Lymphoma
@@ -143,6 +143,9 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: BR or R-Len
       arm_internal_id: 1
       arm_description: Participants will receive bendamustine + rituximab for up to
@@ -167,21 +170,9 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Recurrent
-          - Refractory
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - and:
-        - or:
-          - genomic:
-              hugo_symbol: BCL11A
-              variant_category: Structural Variation
-          - genomic:
-              hugo_symbol: IGH
-              variant_category: Structural Variation
-        - genomic:
-            hugo_symbol: PML
-            variant_category: '!Any Variation'
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Recurrent
+        - Refractory
+        oncotree_primary_diagnosis: Lymphoid Neoplasm

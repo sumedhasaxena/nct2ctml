@@ -195,8 +195,8 @@
                                     "disease_status": [
                                         "Advanced",
                                         "Metastatic",
-                                        "Recurrent",
-                                        "Unresectable"
+                                        "Unresectable",
+                                        "Recurrent"
                                     ],
                                     "oncotree_primary_diagnosis": "_SOLID_"
                                 }

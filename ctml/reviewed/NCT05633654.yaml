@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Capecitabine'
   - drug_name: 'Drug: Sacituzumab govitecan-hziy (SG)'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Capecitabine'
 long_title: A Randomized, Open-label, Phase 3 Study of Adjuvant Sacituzumab Govitecan
   and Pembrolizumab Versus Treatment of Physician's Choice in Patients With Triple
   Negative Breast Cancer Who Have Residual Invasive Disease After Surgery and Neoadjuvant
@@ -146,15 +146,18 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Inflammatory Breast Cancer
-        - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
       - clinical:
           age_numerical: '>=18'
+          disease_status:
+          - Localized
           her2_status: Negative
           er_status: Negative
           pr_status: Negative
-          disease_status:
-          - Localized
+          oncotree_primary_diagnosis: Invasive Breast Carcinoma
+      - and:
+        - genomic:
+            hugo_symbol: BRCA1
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: BRCA2
+            variant_category: '!Mutation'

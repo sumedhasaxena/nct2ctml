@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Docetaxel"
+                "drug_name": "Drug: Gotistobart"
             },
             {
-                "drug_name": "Drug: Gotistobart"
+                "drug_name": "Drug: Docetaxel"
             }
         ]
     },
@@ -148,10 +148,11 @@
                             {
                                 "clinical": {
                                     "age_numerical": ">=18",
-                                    "her2_status": "!Positive",
                                     "disease_status": [
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Refractory"
                                     ],
+                                    "her2_status": "!Positive",
                                     "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }
                             },

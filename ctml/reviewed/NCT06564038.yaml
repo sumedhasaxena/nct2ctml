@@ -124,7 +124,7 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-      -clinical:
+      - clinical:
           oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: 'Substudy 1 (RR CLL/SLL): Cohort 1B (AZD0486 + Acalabrutinib)'
       arm_internal_id: 1
@@ -141,7 +141,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      -and:
+      - and:
         - clinical:
             oncotree_primary_diagnosis: Lymphoid Neoplasm
         - genomic:

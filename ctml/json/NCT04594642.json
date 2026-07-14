@@ -113,13 +113,11 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
                             }
-                        ]
+                        }
                     }
                 ],
                 "match": [

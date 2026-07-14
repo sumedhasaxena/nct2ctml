@@ -124,7 +124,7 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:

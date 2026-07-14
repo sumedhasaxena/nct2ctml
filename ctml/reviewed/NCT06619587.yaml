@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Phase I Arm B'
   - drug_name: 'Drug: Phase I Arm A'
+  - drug_name: 'Drug: Phase I Arm B'
 long_title: A Phase I/II Dose-Escalation and Expansion Study Evaluating the Safety,
   Pharmacokinetics, and Activity of GDC-7035 as a Single Agent and in Combination
   With Other Anti-Cancer Therapies in Patients With Advanced Solid Tumors With a KRAS

@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Cabozantinib"
+                "drug_name": "Drug: Belzutifan"
             },
             {
                 "drug_name": "Drug: Zanzalintinib"
             },
             {
-                "drug_name": "Drug: Belzutifan"
+                "drug_name": "Drug: Cabozantinib"
             }
         ]
     },
@@ -141,8 +141,8 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
-                                "Unresectable",
                                 "Advanced",
+                                "Unresectable",
                                 "Recurrent"
                             ],
                             "oncotree_primary_diagnosis": "Renal Cell Carcinoma"

@@ -120,22 +120,49 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                            }
+                        }
                     }
                 ],
                 "match": [
                     {
                         "and": [
                             {
-                                "clinical": {
-                                    "age_numerical": ">=20",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Advanced",
-                                        "Refractory"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Gastrointestinal Stromal Tumor"
-                                }
+                                "and": [
+                                    {
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Gastrointestinal Stromal Tumor"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Sarcoma, NOS"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Leiomyosarcoma"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "clinical": {
+                                            "age_numerical": ">=20",
+                                            "disease_status": [
+                                                "Metastatic",
+                                                "Advanced",
+                                                "Refractory"
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "or": [

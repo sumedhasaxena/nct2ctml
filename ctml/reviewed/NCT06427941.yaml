@@ -114,10 +114,13 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Locally Advanced
-        - Metastatic
-        - Advanced
-        oncotree_primary_diagnosis: _SOLID_
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: _SOLID_
+      - genomic:
+          hugo_symbol: GPC3
+          variant_category: Any Variation

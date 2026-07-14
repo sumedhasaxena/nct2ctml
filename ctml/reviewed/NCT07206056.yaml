@@ -7,15 +7,15 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: JSB462 Dose 1 QD'
+  - drug_name: 'Drug: Tulmimetostat DL3 QD'
   - drug_name: 'Drug: Tulmimetostat Doses 1 or 2 QD'
   - drug_name: 'Drug: Tulmimetostat DL1 QD'
-  - drug_name: 'Drug: Tulmimetostat DL3 QD'
   - drug_name: 'Drug: JSB462 QD'
   - drug_name: 'Drug: Tulmimetostat DL2 QD'
-  - drug_name: 'Drug: JSB462 Dose 1 QD'
-  - drug_name: 'Drug: Standard of Care (SoC)'
-  - drug_name: 'Drug: JSB462 Dose 2 QD'
   - drug_name: 'Drug: Tulmimetostat RP2D QD'
+  - drug_name: 'Drug: JSB462 Dose 2 QD'
+  - drug_name: 'Drug: Standard of Care (SoC)'
 long_title: 'TulmiSTAR-01: A Two-part, Phase I Dose Escalation and Expansion Followed
   by a Randomized, Open-label Multicenter, Phase II Study to Assess the Safety and
   Efficacy of the Combination of Tulmimetostat (DZR123) and JSB462 (Luxdegalutamide)
@@ -127,6 +127,9 @@ treatment_list:
         level_description: 'Drug: JSB462 Dose 1 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 1a: Cohort DL1B'
       arm_internal_id: 1
       arm_description: Tulmimetostat DL1 QD + JSB462 Dose 2 QD
@@ -140,6 +143,16 @@ treatment_list:
         level_description: 'Drug: JSB462 Dose 2 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Small Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Squamous Cell Carcinoma
     - arm_code: 'Part 1a: Cohort DL2A'
       arm_internal_id: 2
       arm_description: Tulmimetostat DL2 QD + JSB462 Dose 1 QD
@@ -153,6 +166,9 @@ treatment_list:
         level_description: 'Drug: JSB462 Dose 1 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 1a: Cohort DL2B'
       arm_internal_id: 3
       arm_description: Tulmimetostat DL2 QD + JSB462 Dose 2 QD
@@ -166,6 +182,9 @@ treatment_list:
         level_description: 'Drug: JSB462 Dose 2 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 1a: Cohort DL3A'
       arm_internal_id: 4
       arm_description: Tulmimetostat DL3 QD + JSB462 Dose 1 QD
@@ -179,6 +198,9 @@ treatment_list:
         level_description: 'Drug: JSB462 Dose 1 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 1a: Cohort DL3B'
       arm_internal_id: 5
       arm_description: Tulmimetostat DL3 QD + JSB462 Dose 2 QD
@@ -192,6 +214,9 @@ treatment_list:
         level_description: 'Drug: JSB462 Dose 2 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 1b : Arm A'
       arm_internal_id: 6
       arm_description: Tulmimetostat Dose 1 QD + JSB462 QD
@@ -205,6 +230,9 @@ treatment_list:
         level_description: 'Drug: JSB462 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 1b: Arm B'
       arm_internal_id: 7
       arm_description: Tulmimetostat Dose 2 QD + JSB462 QD
@@ -218,6 +246,9 @@ treatment_list:
         level_description: 'Drug: JSB462 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 2: Arm 1'
       arm_internal_id: 8
       arm_description: Tulmimetostat RP2D QD + JSB462 QD
@@ -231,6 +262,9 @@ treatment_list:
         level_description: 'Drug: JSB462 QD'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 2: Arm 2'
       arm_internal_id: 9
       arm_description: Standard of Care at the discretion of the investigator
@@ -240,14 +274,13 @@ treatment_list:
         level_description: 'Drug: Standard of Care (SoC)'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
+      match:
       - clinical:
-          age_numerical: '>=18'
-          gender: Male
-          disease_status:
-          - Metastatic
           oncotree_primary_diagnosis: Prostate Adenocarcinoma
-      - genomic:
-          hugo_symbol: AR
-          variant_category: '!Any Variation'
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        gender: Male
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Prostate Adenocarcinoma

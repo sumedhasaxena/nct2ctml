@@ -8,12 +8,12 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Pomalidomide'
-  - drug_name: 'Drug: Elotuzumab'
-  - drug_name: 'Drug: Dexamethasone'
-  - drug_name: 'Drug: Etentamig'
   - drug_name: 'Drug: Carfilzomib'
   - drug_name: 'Drug: Bortezomib'
+  - drug_name: 'Drug: Etentamig'
+  - drug_name: 'Drug: Dexamethasone'
   - drug_name: 'Drug: Selinexor'
+  - drug_name: 'Drug: Elotuzumab'
 long_title: A Phase 3, Multicenter, Randomized, Open Label Study of Etentamig Compared
   With Standard Available Therapies in Subjects With Relapsed or Refractory Multiple
   Myeloma (3L+ RRMM Monotherapy Study)
@@ -148,6 +148,9 @@ treatment_list:
         level_description: 'Drug: Dexamethasone'
         level_internal_id: 5
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Myeloid Neoplasm
     - arm_code: Etentamig
       arm_internal_id: 1
       arm_description: Participants will receive etentamig as a monotherapy.
@@ -157,6 +160,9 @@ treatment_list:
         level_description: 'Drug: Etentamig'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         age_numerical: '>=18'

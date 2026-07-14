@@ -205,8 +205,19 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-      - clinical:
-          oncotree_primary_diagnosis: Prostate Cancer
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Melanoma
+        - clinical:
+            oncotree_primary_diagnosis: Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Breast Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Prostate Cancer
     match:
     - and:
       - or:

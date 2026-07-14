@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Prophylaxis C'
   - drug_name: 'Drug: Talquetamab'
   - drug_name: 'Drug: Prophylaxis B'
   - drug_name: 'Drug: Prophylaxis A'
-  - drug_name: 'Drug: Prophylaxis C'
 long_title: A Phase 2, Open-label, Randomized Study to Evaluate Prophylactic Interventions
   on Talquetamab-related Oral Toxicity
 last_updated: '2025-11-07'
@@ -177,4 +177,6 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=18'
-        oncotree_primary_diagnosis: Lymphoid Neoplasm
+        disease_status:
+        - Refractory
+        oncotree_primary_diagnosis: Myeloid Neoplasm

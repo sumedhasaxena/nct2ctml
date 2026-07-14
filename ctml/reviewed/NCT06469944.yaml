@@ -9,10 +9,10 @@ drug_list:
   drug:
   - drug_name: 'Biological: Pembrolizumab'
   - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Leucovorin'
-  - drug_name: 'Drug: Levoleucovorin'
   - drug_name: 'Biological: Sacituzumab Tirumotecan (sac-TMT)'
+  - drug_name: 'Drug: Levoleucovorin'
   - drug_name: 'Drug: 5-FU'
+  - drug_name: 'Drug: Leucovorin'
 long_title: 'A Phase 1/2 Open-Label, Umbrella Platform Design Study of MK-2870 With
   Pembrolizumab (MK-3475) and Chemotherapy in Participants With 1L Locally Advanced
   Unresectable/Metastatic Gastroesophageal Adenocarcinoma (Gastric Adenocarcinoma,
@@ -222,29 +222,17 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
-          - clinical:
-              oncotree_primary_diagnosis: Mucosal Melanoma of the Esophagus
-          - clinical:
-              oncotree_primary_diagnosis: Smooth Muscle Neoplasm, NOS
-          - clinical:
-              oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
-                the Esophagus/Stomach
+      - or:
         - clinical:
-            age_numerical: '>=18'
-            her2_status: '!Positive'
-            disease_status:
-            - Untreated
-            - Locally Advanced
-            - Metastatic
-            - Unresectable
-      - genomic:
-          hugo_symbol: ERBB2
-          variant_category: '!Any Variation'
+            oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Untreated
+          - Locally Advanced
+          - Unresectable
+          - Metastatic

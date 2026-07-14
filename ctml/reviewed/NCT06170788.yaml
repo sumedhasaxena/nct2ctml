@@ -182,3 +182,4 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
+          pdl1_status: High

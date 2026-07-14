@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Niraparib"
+                "drug_name": "Drug: Chemotherapy"
             },
             {
                 "drug_name": "Drug: Bevacizumab-Awwb"
             },
             {
-                "drug_name": "Drug: Chemotherapy"
+                "drug_name": "Drug: Niraparib"
             }
         ]
     },
@@ -180,34 +180,42 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
+                            }
+                        }
                     }
                 ],
                 "match": [
                     {
                         "and": [
                             {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Ovarian Cancer, Other"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "gender": "Female",
                                     "disease_status": [
                                         "Advanced"
-                                    ]
+                                    ],
+                                    "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
                                 }
+                            },
+                            {
+                                "or": [
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "BRCA1",
+                                            "variant_category": "Mutation"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "BRCA2",
+                                            "variant_category": "Mutation"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }

@@ -7,14 +7,14 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Dexamethasone (or equivalent)'
-  - drug_name: 'Drug: Steroid Mouthwash (dexamethasone or equivalent)'
-  - drug_name: 'Biological: Sacituzumab tirumotecan'
   - drug_name: 'Drug: H2 Receptor Antagonist'
-  - drug_name: 'Drug: H1 Receptor Antagonist'
   - drug_name: 'Drug: Acetaminophen (or equivalent)'
   - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Steroid Mouthwash (dexamethasone or equivalent)'
   - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Biological: Sacituzumab tirumotecan'
+  - drug_name: 'Drug: Dexamethasone (or equivalent)'
+  - drug_name: 'Drug: H1 Receptor Antagonist'
 long_title: A Randomized, Open-label, Phase 3 Study of MK-2870 vs. Platinum Doublets
   in Participants With EGFR-mutated, Advanced Nonsquamous Non-small Cell Lung Cancer
   (NSCLC) Who Have Progressed on Prior EGFR Tyrosine Kinase Inhibitors
@@ -144,12 +144,6 @@ treatment_list:
         level_description: 'Drug: Steroid Mouthwash (dexamethasone or equivalent)'
         level_internal_id: 5
         level_suspended: N
-      match:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Lymphoid Neoplasm
-        - clinical:
-            oncotree_primary_diagnosis: Lymphoid Atypical
     - arm_code: Pemetrexed Plus Carboplatin
       arm_internal_id: 1
       arm_description: Participants receive, via IV infusion, 500 mg/m2 pemetrexed
@@ -167,17 +161,10 @@ treatment_list:
         level_description: 'Drug: Carboplatin'
         level_internal_id: 1
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Advanced
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Advanced
+        - Metastatic
+        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

@@ -268,6 +268,22 @@ treatment_list:
         level_description: 'Drug: Lenvatinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Hurthle Cell Thyroid Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Well-Differentiated Thyroid Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Anaplastic Thyroid Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Renal Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Medullary Thyroid Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Poorly Differentiated Thyroid Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Clear Cell Sarcoma of Kidney
     - arm_code: Lenvatinib 24 mg
       arm_internal_id: 6
       arm_description: Participants with body weight (BW)\>60 kg receive Lenvatinib
@@ -280,6 +296,9 @@ treatment_list:
         level_description: 'Drug: Lenvatinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Renal Cell Carcinoma
     - arm_code: Lenvatinib 12 mg
       arm_internal_id: 7
       arm_description: Participants with body weight (BW)\>60 kg receive Lenvatinib
@@ -292,6 +311,12 @@ treatment_list:
         level_description: 'Drug: Lenvatinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Renal Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: Lenvatinib 8 mg
       arm_internal_id: 8
       arm_description: Participants with body weight (BW)\<60 kg receive Lenvatinib
@@ -308,6 +333,8 @@ treatment_list:
       - or:
         - clinical:
             oncotree_primary_diagnosis: Hepatocellular Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Renal Cell Carcinoma
     - arm_code: Lenvatinib 2mg
       arm_internal_id: 9
       arm_description: Participants with body weight (BW)\<60 kg receive Lenvatinib
@@ -320,6 +347,12 @@ treatment_list:
         level_description: 'Drug: Lenvatinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Renal Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: Olaparib 300mg
       arm_internal_id: 10
       arm_description: Participants receive Olaparib 300 mg orally twice daily (BID)
@@ -378,4 +411,4 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Advanced
-        oncotree_primary_diagnosis: Hepatocellular Carcinoma
+        oncotree_primary_diagnosis: _SOLID_

@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Azirkitug'
   - drug_name: 'Drug: Budigalimab'
   - drug_name: 'Drug: Bevacizumab'
+  - drug_name: 'Drug: Azirkitug'
 long_title: A Global First-in-Human Study in NSCLC, HNSCC and Solid Tumors With Azirkitug
   (ABBV-514) as a Single Agent and in Combination With Budigalimab or Bevacizumab
 last_updated: '2025-10-28'
@@ -305,50 +305,36 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Adenosquamous Carcinoma of the Pancreas
+            oncotree_primary_diagnosis: Metaplastic Breast Cancer
         - clinical:
-            oncotree_primary_diagnosis: Solid Pseudopapillary Neoplasm of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Acinar Cell Carcinoma of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Pancreatoblastoma
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
         - clinical:
             oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors of
               the Esophagus/Stomach
         - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
         - clinical:
             oncotree_primary_diagnosis: Ovarian Epithelial Tumor
         - clinical:
-            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
         - clinical:
             oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Metaplastic Breast Cancer
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
-            oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
         - clinical:
             oncotree_primary_diagnosis: Inflammatory Breast Cancer
         - clinical:
-            oncotree_primary_diagnosis: Cystic Tumor of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
-        - clinical:
-            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Advanced
           - Metastatic
-          - Recurrent
-          - Unresectable
+          - Refractory
+          pdl1_status: High
+          mmr_status: MMR-Proficient
+          ms_status: MSS

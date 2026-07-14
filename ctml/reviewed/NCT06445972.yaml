@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Biological: Sacituzumab Tirumotecan'
-  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Drug: Rescue Medications'
+  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Biological: Ramucirumab'
 long_title: 'A Phase 1/2 Open-Label, Umbrella Platform Design Study to Evaluate the
   Safety and Efficacy of MK-2870 Plus Paclitaxel as the Second-Line Treatment of Participants
@@ -198,23 +198,28 @@ treatment_list:
         level_description: 'Drug: Rescue Medications'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Urothelial Carcinoma
     match:
     - and:
       - and:
         - or:
           - clinical:
+              oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+          - clinical:
               oncotree_primary_diagnosis: Esophageal Poorly Differentiated Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
+              oncotree_primary_diagnosis: Mucosal Melanoma of the Esophagus
           - clinical:
-              oncotree_primary_diagnosis: Esophagogastric Adenocarcinoma
+              oncotree_primary_diagnosis: Esophageal Squamous Cell Carcinoma
         - clinical:
             age_numerical: '>=18'
-            her2_status: '!Positive'
             disease_status:
             - Metastatic
             - Locally Advanced
             - Unresectable
+            her2_status: '!Positive'
       - genomic:
           hugo_symbol: ERBB2
           variant_category: '!Any Variation'

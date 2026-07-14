@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Telisotuzumab Adizutecan"
+                "drug_name": "Drug: Osimertinib (Osi)"
             },
             {
-                "drug_name": "Drug: Osimertinib (Osi)"
+                "drug_name": "Drug: Telisotuzumab Adizutecan"
             },
             {
                 "drug_name": "Drug: Standard of Care"
@@ -225,10 +225,6 @@
                     {
                         "clinical": {
                             "age_numerical": ">=18",
-                            "disease_status": [
-                                "Locally Advanced",
-                                "Metastatic"
-                            ],
                             "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                         }
                     }

@@ -154,28 +154,68 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Radiation-Associated Sarcoma
-        - clinical:
             oncotree_primary_diagnosis: Desmoid/Aggressive Fibromatosis
         - clinical:
-            oncotree_primary_diagnosis: Angiosarcoma
+            oncotree_primary_diagnosis: Epithelioid Sarcoma
         - clinical:
-            oncotree_primary_diagnosis: Ewing Sarcoma of Soft Tissue
+            oncotree_primary_diagnosis: Clear Cell Sarcoma
         - clinical:
-            oncotree_primary_diagnosis: Myxofibrosarcoma
-        - clinical:
-            oncotree_primary_diagnosis: Rhabdomyosarcoma
-        - clinical:
-            oncotree_primary_diagnosis: Synovial Sarcoma
+            oncotree_primary_diagnosis: Infantile Fibrosarcoma
         - clinical:
             oncotree_primary_diagnosis: Fibrosarcoma
         - clinical:
+            oncotree_primary_diagnosis: Intimal Sarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Angiomatoid Fibrous Histiocytoma
+        - clinical:
+            oncotree_primary_diagnosis: Epithelioid Hemangioendothelioma
+        - clinical:
+            oncotree_primary_diagnosis: Malignant Glomus Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Myxofibrosarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Pseudomyogenic Hemangioendothelioma
+        - clinical:
+            oncotree_primary_diagnosis: Solitary Fibrous Tumor/Hemangiopericytoma
+        - clinical:
+            oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Round Cell Sarcoma, NOS
+        - clinical:
+            oncotree_primary_diagnosis: Desmoplastic Small-Round-Cell Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Radiation-Associated Sarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Sarcoma, NOS
+        - clinical:
+            oncotree_primary_diagnosis: Dendritic Cell Sarcoma
+        - clinical:
             oncotree_primary_diagnosis: Liposarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Leiomyosarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Low-Grade Fibromyxoid Sarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Alveolar Soft Part Sarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Aggressive Angiomyxoma
         - clinical:
             oncotree_primary_diagnosis: Undifferentiated Pleomorphic Sarcoma/Malignant
               Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma
         - clinical:
-            oncotree_primary_diagnosis: Leiomyosarcoma
+            oncotree_primary_diagnosis: Perivascular Epithelioid Cell Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Synovial Sarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Soft Tissue Myoepithelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Ewing Sarcoma of Soft Tissue
+        - clinical:
+            oncotree_primary_diagnosis: Angiosarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Rhabdomyosarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Glomangiosarcoma
       - clinical:
           age_numerical: '>=18'
           disease_status:

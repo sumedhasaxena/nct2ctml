@@ -124,6 +124,37 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                        }
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "Mutation",
+                                                    "protein_change": "p.L858R",
+                                                    "variant_classification": "Missense_Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "Mutation",
+                                                    "variant_classification": "In_Frame_Del",
+                                                    "exon": 19
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -138,53 +169,32 @@
                     {
                         "and": [
                             {
-                                "and": [
+                                "or": [
                                     {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Lung Neuroendocrine Tumor"
-                                                }
-                                            }
-                                        ]
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lung Adenocarcinoma In Situ"
+                                        }
                                     },
                                     {
                                         "clinical": {
-                                            "age_numerical": ">=30",
-                                            "disease_status": [
-                                                "Early Stage"
-                                            ]
+                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                         }
                                     }
                                 ]
                             },
                             {
-                                "or": [
-                                    {
-                                        "genomic": null,
-                                        "hugo_symbol": "EGFR",
-                                        "variant_category": "Mutation",
-                                        "variant_classification": "In_Frame_Del",
-                                        "exon": 19
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.L858R"
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "age_numerical": ">=30",
+                                    "disease_status": [
+                                        "Localized",
+                                        "Early Stage"
+                                    ]
+                                }
                             }
                         ]
                     }

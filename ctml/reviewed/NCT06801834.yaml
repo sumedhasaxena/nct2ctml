@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Sacituzumab Govitecan (SG)'
   - drug_name: 'Drug: Topotecan'
   - drug_name: 'Drug: Amrubicin (Japan only)'
-  - drug_name: 'Drug: Sacituzumab Govitecan (SG)'
 long_title: A Global, Multicenter, Randomized, Open-label, Phase 3 Study of Sacituzumab
   Govitecan Versus Standard of Care (SOC) in Participants With Previously Treated
   Extensive Stage Small Cell Lung Cancer (ES-SCLC)
@@ -129,3 +129,5 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
+          - Advanced
+          - Refractory

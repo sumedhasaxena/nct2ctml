@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Mosunetuzumab'
   - drug_name: 'Drug: Venetoclax'
   - drug_name: 'Drug: Tocilizumab'
-  - drug_name: 'Drug: Mosunetuzumab'
 long_title: A Phase IB Open-Label, Multicenter Study Evaluating the Safety, Efficacy,
   and Pharmacokinetics of Mosunetuzumab and a Combined Regimen of Mosunetuzumab and
   Venetoclax in Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia
@@ -184,6 +184,12 @@ treatment_list:
         level_description: 'Drug: Tocilizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Mantle Cell Lymphoma (MCL)
+        - clinical:
+            oncotree_primary_diagnosis: Chronic Lymphocytic Leukemia (CLL)
     - arm_code: Arm C (non-US participants only)
       arm_internal_id: 2
       arm_description: Participants with R/R CLL who have failed two prior lines of
@@ -207,4 +213,6 @@ treatment_list:
     match:
     - clinical:
         age_numerical: '>=18'
+        disease_status:
+        - Refractory
         oncotree_primary_diagnosis: Lymphoid Neoplasm

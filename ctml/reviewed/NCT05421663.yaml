@@ -118,15 +118,13 @@ treatment_list:
         level_description: 'Biological: JNJ-90014496'
         level_internal_id: 0
         level_suspended: N
-    match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Lymphoid Neoplasm
-        - clinical:
-            oncotree_primary_diagnosis: Lymphoid Atypical
+      match:
       - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Recurrent
-          - Refractory
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Advanced
+        - Metastatic
+        oncotree_primary_diagnosis: Lymphoid Neoplasm

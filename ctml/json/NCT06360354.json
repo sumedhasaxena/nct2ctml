@@ -143,13 +143,11 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "her2_status": "Positive"
-                                }
+                        "match": {
+                            "clinical": {
+                                "her2_status": "Positive"
                             }
-                        ]
+                        }
                     },
                     {
                         "arm_code": "Subprotocol B: PDAC Arm B",
@@ -190,39 +188,37 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": [
-                            {
-                                "and": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "or": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "NRAS",
-                                                    "variant_category": "Mutation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "KRAS",
-                                                    "variant_category": "Mutation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "HRAS",
-                                                    "variant_category": "Mutation"
-                                                }
-                                            }
-                                        ]
+                        "match": {
+                            "and": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
                                     }
-                                ]
-                            }
-                        ]
+                                },
+                                {
+                                    "or": [
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "NRAS",
+                                                "variant_category": "Mutation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "KRAS",
+                                                "variant_category": "Mutation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "HRAS",
+                                                "variant_category": "Mutation"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Subprotocol C: Dose Expansion",
@@ -254,7 +250,27 @@
                                         "or": [
                                             {
                                                 "clinical": {
+                                                    "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Cystic Tumor of the Pancreas"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Low-grade Appendiceal Mucinous Neoplasm"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Anorectal Mucosal Melanoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Intraductal Papillary Neoplasm of the Bile Duct"
                                                 }
                                             },
                                             {
@@ -264,7 +280,17 @@
                                             },
                                             {
                                                 "clinical": {
+                                                    "oncotree_primary_diagnosis": "Solid Pseudopapillary Neoplasm of the Pancreas"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Small Bowel Cancer"
                                                 }
                                             },
                                             {
@@ -284,7 +310,32 @@
                                             },
                                             {
                                                 "clinical": {
+                                                    "oncotree_primary_diagnosis": "Anal Gland Adenocarcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Anal Squamous Cell Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
                                                     "oncotree_primary_diagnosis": "Acinar Cell Carcinoma of the Pancreas"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Appendiceal Adenocarcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Small Intestinal Carcinoma"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Tubular Adenoma of the Colon"
                                                 }
                                             },
                                             {

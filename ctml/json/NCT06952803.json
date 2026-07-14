@@ -12,10 +12,10 @@
                 "drug_name": "Drug: Abiraterone + Prednisolone/Prednisone"
             },
             {
-                "drug_name": "Drug: Placebo"
+                "drug_name": "Drug: Androgen Deprivation Therapy (ADT)"
             },
             {
-                "drug_name": "Drug: Androgen Deprivation Therapy (ADT)"
+                "drug_name": "Drug: Placebo"
             },
             {
                 "drug_name": "Drug: Saruparib"
@@ -211,48 +211,16 @@
                     {
                         "and": [
                             {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Basal Cell Carcinoma of Prostate"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "age_numerical": ">=18",
-                                            "gender": "Male",
-                                            "disease_status": [
-                                                "Localized",
-                                                "Locally Advanced",
-                                                "Recurrent"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "gender": "Male",
+                                    "disease_status": [
+                                        "Localized",
+                                        "Locally Advanced",
+                                        "Recurrent"
+                                    ],
+                                    "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                }
                             },
                             {
                                 "or": [

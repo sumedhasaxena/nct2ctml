@@ -159,7 +159,12 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Medullary Thyroid Cancer"
+                            }
+                        }
                     }
                 ],
                 "match": [

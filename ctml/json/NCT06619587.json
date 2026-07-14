@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Phase I Arm B"
+                "drug_name": "Drug: Phase I Arm A"
             },
             {
-                "drug_name": "Drug: Phase I Arm A"
+                "drug_name": "Drug: Phase I Arm B"
             }
         ]
     },

@@ -12,28 +12,28 @@
                 "drug_name": "Drug: Letrozole"
             },
             {
-                "drug_name": "Drug: Camizestrant"
-            },
-            {
-                "drug_name": "Drug: Ribociclib"
-            },
-            {
-                "drug_name": "Drug: Abemaciclib"
+                "drug_name": "Drug: Exemestane"
             },
             {
                 "drug_name": "Drug: Anastrozole"
             },
             {
-                "drug_name": "Drug: Palbociclib"
+                "drug_name": "Drug: Saruparib (AZD5305)"
             },
             {
                 "drug_name": "Drug: Fulvestrant"
             },
             {
-                "drug_name": "Drug: Saruparib (AZD5305)"
+                "drug_name": "Drug: Ribociclib"
             },
             {
-                "drug_name": "Drug: Exemestane"
+                "drug_name": "Drug: Camizestrant"
+            },
+            {
+                "drug_name": "Drug: Palbociclib"
+            },
+            {
+                "drug_name": "Drug: Abemaciclib"
             }
         ]
     },
@@ -246,7 +246,6 @@
                             {
                                 "clinical": {
                                     "age_numerical": ">=18",
-                                    "her2_status": "Negative",
                                     "disease_status": [
                                         "Advanced",
                                         "Metastatic"

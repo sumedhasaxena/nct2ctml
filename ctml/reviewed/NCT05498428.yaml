@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Low Molecular Weight Heparin (LMWH)'
-  - drug_name: 'Drug: Direct Oral Anticoagulant (DOAC)'
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Amivantamab'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Lazertinib'
+  - drug_name: 'Drug: Amivantamab'
+  - drug_name: 'Drug: Low Molecular Weight Heparin (LMWH)'
+  - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Drug: Direct Oral Anticoagulant (DOAC)'
 long_title: A Phase 2, Open-Label, Parallel Cohort Study of Subcutaneous Amivantamab
   in Multiple Regimens in Patients With Advanced or Metastatic Solid Tumors Including
   EGFR-mutated Non-Small Cell Lung Cancer
@@ -290,6 +290,9 @@ treatment_list:
         level_description: 'Drug: Lazertinib'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: 'Cohort 5(Exon19del/Exon21 L858R NSCLC, 1L, Previously Untreated):
         Amivantamab (Q4W) + Lazertinib'
       arm_internal_id: 5
@@ -372,6 +375,9 @@ treatment_list:
         level_description: 'Drug: Pemetrexed'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
     - and:
       - clinical:
@@ -379,21 +385,26 @@ treatment_list:
           disease_status:
           - Locally Advanced
           - Metastatic
-          - Unresectable
+          - Refractory
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - and:
         - or:
           - genomic:
               hugo_symbol: EGFR
               variant_category: Mutation
+              variant_classification: In_Frame_Del
+              exon: 19
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: Mutation
               protein_change: p.L858R
+              variant_classification: Missense_Mutation
+              exon: 21
           - genomic:
               hugo_symbol: EGFR
               variant_category: Mutation
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: Mutation
+              variant_classification: In_Frame_Ins
+              exon: 20
         - genomic:
             hugo_symbol: F5
             variant_category: '!Mutation'
-            protein_change: p.R506Q

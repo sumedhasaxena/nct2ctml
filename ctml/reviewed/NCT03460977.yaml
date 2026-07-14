@@ -238,6 +238,28 @@ treatment_list:
         level_description: 'Drug: Enzalutamide'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Adenoma
+        - clinical:
+            oncotree_primary_diagnosis: Undifferentiated Embryonal Sarcoma of the
+              Liver
+        - clinical:
+            oncotree_primary_diagnosis: Malignant Rhabdoid Tumor of the Liver
+        - clinical:
+            oncotree_primary_diagnosis: Fibrolamellar Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Malignant Nonepithelial Tumor of the Liver
+        - clinical:
+            oncotree_primary_diagnosis: Liver Angiosarcoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
+              Cholangiocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatoblastoma
     match:
     - and:
       - or:

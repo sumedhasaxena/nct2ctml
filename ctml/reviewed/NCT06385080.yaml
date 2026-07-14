@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Biological: Amivantamab'
-  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Biological: Amivantamab'
+  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Carboplatin'
 long_title: A Phase 1b/2, Open-label Study of Amivantamab Monotherapy and Amivantamab
   in Addition to Other Therapeutic Agents in Participants With Head and Neck Squamous
   Cell Carcinoma
@@ -132,6 +132,9 @@ treatment_list:
         level_description: 'Biological: Amivantamab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: 'Cohort 2: Amivantamab + Pembrolizumab (Dose Expansion Including Safety
         Run-in)'
       arm_internal_id: 1
@@ -150,6 +153,9 @@ treatment_list:
         level_description: 'Biological: Pembrolizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: 'Cohort 3A (Dose Confirmation): Amivantamab + Paclitaxel'
       arm_internal_id: 2
       arm_description: Participants will receive subcutaneous injection of amivantamab
@@ -170,6 +176,9 @@ treatment_list:
         level_description: 'Drug: Paclitaxel'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: 'Cohort 3B (Dose Expansion): Amivantamab + Paclitaxel'
       arm_internal_id: 3
       arm_description: Participants will receive subcutaneous injection of amivantamab
@@ -186,6 +195,9 @@ treatment_list:
         level_description: 'Drug: Paclitaxel'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: 'Cohort 4: Amivantamab Monotherapy'
       arm_internal_id: 4
       arm_description: Participants will receive subcutaneous injection of amivantamab
@@ -198,6 +210,9 @@ treatment_list:
         level_description: 'Biological: Amivantamab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: 'Cohort 5: Pembrolizumab + Amivantamab + Carboplatin (Dose Expansion)'
       arm_internal_id: 5
       arm_description: Participants will receive subcutaneous injection of amivantamab
@@ -221,6 +236,9 @@ treatment_list:
         level_description: 'Drug: Carboplatin'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: 'Cohort 6: Amivantamab + Pembrolizumab'
       arm_internal_id: 6
       arm_description: Participants will receive subcutaneous injection of amivantamab
@@ -242,11 +260,12 @@ treatment_list:
         level_description: 'Biological: Pembrolizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Recurrent
         - Metastatic
-        - Locally Advanced
         oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma

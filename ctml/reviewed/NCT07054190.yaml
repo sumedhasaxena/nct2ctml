@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Ribociclib'
   - drug_name: 'Drug: Inavolisib'
+  - drug_name: 'Drug: Ribociclib'
   - drug_name: 'Drug: Letrozole'
 long_title: A Phase II, Open-Label, Multicenter Study Evaluating the Safety and Efficacy
   of Neoadjuvant Treatment With Inavolisib Combinations in Patients With Untreated,
@@ -154,18 +154,27 @@ treatment_list:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+              oncotree_primary_diagnosis: Metaplastic Breast Cancer
           - clinical:
-              oncotree_primary_diagnosis: Invasive Breast Carcinoma
+              oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
           - clinical:
               oncotree_primary_diagnosis: Inflammatory Breast Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Breast Neoplasm, NOS
+          - clinical:
+              oncotree_primary_diagnosis: Juvenile Secretory Carcinoma of the Breast
+          - clinical:
+              oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+          - clinical:
+              oncotree_primary_diagnosis: Invasive Breast Carcinoma
         - clinical:
             age_numerical: '>=18'
             gender: Female
+            disease_status:
+            - Localized
+            - Locally Advanced
             her2_status: Negative
             er_status: Positive
-            disease_status:
-            - Locally Advanced
       - genomic:
           hugo_symbol: PIK3CA
           variant_category: Mutation

@@ -153,6 +153,21 @@ treatment_list:
         level_description: 'Drug: Osimertinib 80 MG'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - and:
+        - clinical:
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - or:
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: Mutation
+              protein_change: p.L858R
+              variant_classification: Missense_Mutation
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: Mutation
+              variant_classification: In_Frame_Del
+              exon: 19
     - arm_code: Observation
       arm_internal_id: 1
       arm_description: Observation
@@ -160,25 +175,15 @@ treatment_list:
       dose_level: []
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
-        - clinical:
-            age_numerical: '>=30'
-            disease_status:
-            - Early Stage
       - or:
-        - genomic:
-          hugo_symbol: EGFR
-          variant_category: Mutation
-          variant_classification: 'In_Frame_Del'
-          exon: 19
-        - genomic:
-            hugo_symbol: EGFR
-            variant_category: Mutation
-            protein_change: p.L858R
+        - clinical:
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - clinical:
+          age_numerical: '>=30'
+          disease_status:
+          - Localized
+          - Early Stage

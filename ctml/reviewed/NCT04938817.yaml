@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: lenvatinib'
-  - drug_name: 'Biological: coformulation favezelimab/pembrolizumab'
   - drug_name: 'Biological: MK-4830'
-  - drug_name: 'Biological: coformulation pembrolizumab/quavonlimab'
   - drug_name: 'Biological: R-DXd'
+  - drug_name: 'Biological: coformulation favezelimab/pembrolizumab'
+  - drug_name: 'Biological: coformulation pembrolizumab/quavonlimab'
+  - drug_name: 'Drug: lenvatinib'
 long_title: A Phase 1b/2 Study to Evaluate the Efficacy and Safety of Investigational
   Agents as Monotherapy or in Combination With Pembrolizumab for the Treatment of
   Participants With PD-1/L1-refractory Extensive-Stage Small Cell Lung Cancer in Need
@@ -291,6 +291,9 @@ treatment_list:
         level_description: 'Biological: R-DXd'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Sarcoma, NOS
     match:
     - and:
       - or:
@@ -302,3 +305,4 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
+          - Refractory

@@ -171,7 +171,7 @@ treatment_list:
         level_suspended: N
       match:
       - clinical:
-          oncotree_primary_diagnosis: Myeloid Neoplasm
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     - arm_code: Part 2 Cohort Expansion
       arm_internal_id: 1
       arm_description: There will be up to 7 expansion cohorts to further evaluate
@@ -194,11 +194,11 @@ treatment_list:
         level_suspended: N
       match:
       - clinical:
-          oncotree_primary_diagnosis: Myeloid Neoplasm
+          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
         - Recurrent
         - Refractory
-        oncotree_primary_diagnosis: Myeloid Neoplasm
+        oncotree_primary_diagnosis: Lymphoid Neoplasm

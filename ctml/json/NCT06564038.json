@@ -147,10 +147,13 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": null,
-                        "-clinical": {
-                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                        }
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                }
+                            }
+                        ]
                     },
                     {
                         "arm_code": "Substudy 1 (RR CLL/SLL): Cohort 1B (AZD0486 + Acalabrutinib)",
@@ -171,18 +174,21 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": null,
-                        "-and": [
+                        "match": [
                             {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            },
-                            {
-                                "genomic": {
-                                    "hugo_symbol": "BTK",
-                                    "variant_category": "Mutation"
-                                }
+                                "and": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                                        }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "BTK",
+                                            "variant_category": "Mutation"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     },

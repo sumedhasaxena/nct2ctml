@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Relacorilant 150 mg once daily (QD)'
-  - drug_name: 'Drug: Nab-paclitaxel 80 mg/m^2'
   - drug_name: 'Drug: Bevacizumab 10 mg/kg'
+  - drug_name: 'Drug: Nab-paclitaxel 80 mg/m^2'
 long_title: An Open-label, Global, Multi-Arm Study to Evaluate the Efficacy and Safety
   of Relacorilant in Combination With Different Treatment Regimens in Patients With
   Gynecological Cancers (BELLA)
@@ -142,6 +142,12 @@ treatment_list:
         level_description: 'Drug: Bevacizumab 10 mg/kg'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Peritoneal Serous Carcinoma
     - arm_code: 'Arm B: Relacorilant in Combination with Nab-Paclitaxel and Bevacizumab'
       arm_internal_id: 1
       arm_description: In Arm B, patients with platinum-sensitive ovarian cancer who
@@ -161,6 +167,12 @@ treatment_list:
         level_description: 'Drug: Bevacizumab 10 mg/kg'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Peritoneal Serous Carcinoma
     - arm_code: 'Arm C: Relacorilant in Combination with Nab-Paclitaxel'
       arm_internal_id: 2
       arm_description: In Arm C, patients with previously-treated advanced, recurrent,
@@ -176,21 +188,25 @@ treatment_list:
         level_description: 'Drug: Nab-paclitaxel 80 mg/m^2'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Endometrial Carcinoma
     match:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Peritoneal Mesothelioma
-        - clinical:
             oncotree_primary_diagnosis: Ovarian Cancer, Other
         - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
             oncotree_primary_diagnosis: Endometrial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Peritoneal Mesothelioma
         - clinical:
             oncotree_primary_diagnosis: Peritoneal Serous Carcinoma
       - clinical:
           age_numerical: '>=18'
           gender: Female
           disease_status:
+          - Advanced
           - Refractory
-          - Recurrent
-          - Metastatic

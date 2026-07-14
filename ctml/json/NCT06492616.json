@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Tamoxifen"
-            },
-            {
-                "drug_name": "Drug: Elacestrant"
+                "drug_name": "Drug: Exemestane"
             },
             {
                 "drug_name": "Drug: Letrozole"
             },
             {
-                "drug_name": "Drug: Exemestane"
+                "drug_name": "Drug: Elacestrant"
+            },
+            {
+                "drug_name": "Drug: Tamoxifen"
             },
             {
                 "drug_name": "Drug: Anastrozole"
@@ -110,52 +110,6 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
-                            {
-                                "and": [
-                                    {
-                                        "or": [
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Sarcoma"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Metaplastic Breast Cancer"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "clinical": {
-                                            "her2_status": "Negative",
-                                            "er_status": "Positive"
-                                        }
-                                    }
-                                ]
-                            }
                         ]
                     },
                     {
@@ -188,8 +142,12 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
+                        ]
+                    }
+                ],
+                "match": [
+                    {
+                        "and": [
                             {
                                 "and": [
                                     {
@@ -201,57 +159,29 @@
                                             },
                                             {
                                                 "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
-                                                }
-                                            },
-                                            {
-                                                "clinical": {
-                                                    "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
+                                                    "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
                                                 }
                                             }
                                         ]
                                     },
                                     {
                                         "clinical": {
+                                            "age_numerical": ">=18",
+                                            "disease_status": [
+                                                "Localized",
+                                                "Locally Advanced",
+                                                "Early Stage"
+                                            ],
                                             "her2_status": "Negative",
                                             "er_status": "Positive"
                                         }
                                     }
                                 ]
-                            }
-                        ]
-                    }
-                ],
-                "match": [
-                    {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
-                                        }
-                                    }
-                                ]
                             },
                             {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Early Stage"
-                                    ],
-                                    "her2_status": "Negative",
-                                    "er_status": "Positive"
+                                "genomic": {
+                                    "hugo_symbol": "ERBB2",
+                                    "variant_category": "!Any Variation"
                                 }
                             }
                         ]

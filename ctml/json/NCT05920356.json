@@ -144,6 +144,13 @@
                                             "variant_category": "Mutation",
                                             "protein_change": "p.G12C"
                                         }
+                                    },
+                                    {
+                                        "genomic": {
+                                            "hugo_symbol": "KRAS",
+                                            "variant_category": "!Mutation",
+                                            "protein_change": "p.G12C"
+                                        }
                                     }
                                 ]
                             }

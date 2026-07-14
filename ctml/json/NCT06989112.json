@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Rilvegostomig"
-            },
-            {
                 "drug_name": "Drug: Docetaxel"
             },
             {
                 "drug_name": "Drug: Carboplatin"
             },
             {
-                "drug_name": "Drug: Trastuzumab deruxtecan"
+                "drug_name": "Drug: Pembrolizumab"
             },
             {
                 "drug_name": "Drug: Paclitaxel"
             },
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: Rilvegostomig"
+            },
+            {
+                "drug_name": "Drug: Trastuzumab deruxtecan"
             }
         ]
     },
@@ -203,19 +203,19 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "gender": "Female",
-                                    "her2_status": "Positive",
-                                    "mmr_status": "MMR-Proficient",
                                     "disease_status": [
                                         "Advanced",
                                         "Recurrent"
                                     ],
+                                    "her2_status": "Positive",
+                                    "mmr_status": "MMR-Proficient",
                                     "oncotree_primary_diagnosis": "Endometrial Carcinoma"
                                 }
                             },
                             {
                                 "genomic": {
                                     "hugo_symbol": "ERBB2",
-                                    "variant_category": "Any Variation"
+                                    "variant_category": "Copy Number Variation"
                                 }
                             }
                         ]

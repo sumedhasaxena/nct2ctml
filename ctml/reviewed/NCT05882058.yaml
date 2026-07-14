@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: BI 764532, dose 2'
   - drug_name: 'Drug: BI 764532, dose 1'
+  - drug_name: 'Drug: BI 764532, dose 2'
 long_title: "DAREON\u2122-5: An Open-label, Multi-center Phase II Dose Selection Trial\
   \ of Intravenous BI 764532, a DLL3-targeting T Cell Engager, in Patients With Relapsed/Refractory\
   \ Extensive-stage Small Cell Lung Cancer and in Patients With Other Relapsed/Refractory\
@@ -163,6 +163,12 @@ treatment_list:
         level_description: 'Drug: BI 764532, dose 1'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
     - arm_code: 'Part 1: Dose group 2'
       arm_internal_id: 1
       arm_description: 'Part 1: Dose group 2'
@@ -172,6 +178,12 @@ treatment_list:
         level_description: 'Drug: BI 764532, dose 2'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
     - arm_code: 'Part 2: Expansion cohort'
       arm_internal_id: 2
       arm_description: 'Part 2: Expansion cohort'
@@ -181,14 +193,17 @@ treatment_list:
         level_description: 'Drug: BI 764532, dose 1'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
     match:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
-        - clinical:
             oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Recurrent
+          - Metastatic

@@ -112,9 +112,6 @@ treatment_list:
         level_description: 'Drug: Telisotuzumab Adizutecan'
         level_internal_id: 0
         level_suspended: N
-      match:
-      -clinical:
-          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
     - arm_code: Standard of Care (SOC)
       arm_internal_id: 1
       arm_description: Participants will receive SOC, during the approximately 51
@@ -129,10 +126,13 @@ treatment_list:
     - and:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
             oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
         - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+            oncotree_primary_diagnosis: Tubular Adenoma of the Colon
       - clinical:
           age_numerical: '>=18'
           disease_status:
-          - Early Stage
+          - Localized
+          - Metastatic

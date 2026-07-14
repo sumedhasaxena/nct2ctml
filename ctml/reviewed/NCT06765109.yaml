@@ -101,15 +101,22 @@ treatment_list:
         level_description: 'Drug: Alectinib'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
     - and:
-      - or:
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+          - clinical:
+              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:
-            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
+            age_numerical: '>=18'
+            disease_status:
+            - Locally Advanced
+            - Metastatic
+      - genomic:
+          hugo_symbol: ALK
+          variant_category: Structural Variation

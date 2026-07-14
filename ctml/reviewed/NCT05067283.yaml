@@ -143,10 +143,16 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-      - genomic:
-          hugo_symbol: KRAS
-          variant_category: Mutation
-          protein_change: p.G12C
+      - and:
+        - or:
+          - clinical:
+              oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+          - clinical:
+              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - genomic:
+            hugo_symbol: KRAS
+            variant_category: Mutation
+            protein_change: p.G12C
     - arm_code: Arm 2
       arm_internal_id: 1
       arm_description: Participants will receive MK-1084 daily oral escalating dose
@@ -219,7 +225,7 @@ treatment_list:
       match:
       - and:
         - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - genomic:
             hugo_symbol: KRAS
             variant_category: Mutation

@@ -8,8 +8,8 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Atezolizumab'
-  - drug_name: 'Drug: RO7502175'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: RO7502175'
 long_title: A Phase Ia/Ib, Open Label, Multicenter, Dose-escalation Study to Evaluate
   the Safety, Pharmacokinetics, and Activity of RO7502175 as a Single Agent and in
   Combination With Checkpoint Inhibitor in Patients With Locally Advanced or Metastatic
@@ -153,6 +153,6 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Locally Advanced
-        - Metastatic
         - Recurrent
+        - Metastatic
         oncotree_primary_diagnosis: _SOLID_

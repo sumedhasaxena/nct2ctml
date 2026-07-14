@@ -166,7 +166,21 @@ treatment_list:
         level_suspended: N
       match:
       - and:
-        - clinical:
+        - and:
+          - or:
+            - clinical:
+                oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+            - clinical:
+                oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
+            - clinical:
+                oncotree_primary_diagnosis: Adenomyoepithelioma of the Breast
+            - clinical:
+                oncotree_primary_diagnosis: Breast Sarcoma
+            - clinical:
+                oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            - clinical:
+                oncotree_primary_diagnosis: Metaplastic Breast Cancer
+          - clinical:
               her2_status: Positive
         - and:
           - genomic:

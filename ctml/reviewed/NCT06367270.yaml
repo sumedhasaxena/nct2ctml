@@ -112,7 +112,7 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-      - or:
+        or:
         - clinical:
             oncotree_primary_diagnosis: Colorectal Adenocarcinoma
         - clinical:

@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Docetaxel'
   - drug_name: 'Drug: Pumitamig'
+  - drug_name: 'Drug: Docetaxel'
 long_title: A Phase II, Multisite, Open-label, Single Arm Trial of BNT327 in Combination
   With Docetaxel in Second-line Stage IV Non-small Cell Lung Cancer (NSCLC) Following
   Chemoimmunotherapy
@@ -160,4 +160,5 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
+        - Refractory
         oncotree_primary_diagnosis: Non-Small Cell Lung Cancer

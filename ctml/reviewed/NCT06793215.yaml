@@ -155,6 +155,14 @@ treatment_list:
       - or:
         - clinical:
             oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Cancer, Other
     match:
     - and:
       - clinical:

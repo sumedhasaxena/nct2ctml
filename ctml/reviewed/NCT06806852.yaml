@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Cetuximab'
   - drug_name: 'Drug: BI 770371'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Cetuximab'
 long_title: A Phase Ib Open Label Randomised Clinical Trial to Evaluate Safety and
   Efficacy of BI 770371 in Combination With Pembrolizumab With or Without Cetuximab
   Compared With Pembrolizumab Monotherapy for the First-line Treatment of Patients
@@ -135,6 +135,14 @@ treatment_list:
         level_description: 'Drug: Pembrolizumab'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Melanoma
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
     - arm_code: Pembrolizumab + BI 770371
       arm_internal_id: 1
       arm_description: Pembrolizumab + BI 770371
@@ -165,11 +173,16 @@ treatment_list:
         level_description: 'Drug: Cetuximab'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
         - Recurrent
-        - Locally Advanced
         oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma

@@ -7,16 +7,16 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Inavolisib'
   - drug_name: 'Drug: Tiragolumab'
-  - drug_name: 'Drug: Divarasib'
-  - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Drug: FOLFOX'
   - drug_name: 'Drug: FOLFIRI'
   - drug_name: 'Drug: Atezolizumab'
-  - drug_name: 'Drug: Inavolisib'
-  - drug_name: 'Drug: SY-5609'
-  - drug_name: "Diagnostic Test: FoundationOne\xAELiquid CDx"
+  - drug_name: 'Drug: Divarasib'
+  - drug_name: 'Drug: FOLFOX'
   - drug_name: 'Drug: Cetuximab'
+  - drug_name: "Diagnostic Test: FoundationOne\xAELiquid CDx"
+  - drug_name: 'Drug: Bevacizumab'
+  - drug_name: 'Drug: SY-5609'
 long_title: A Phase I/Ib Global, Multicenter, Open-label Umbrella Study Evaluating
   the Safety and Efficacy of Targeted Therapies in Subpopulations of Patients With
   Metastatic Colorectal Cancer (INTRINSIC)
@@ -358,8 +358,13 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Metastatic
-        oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic

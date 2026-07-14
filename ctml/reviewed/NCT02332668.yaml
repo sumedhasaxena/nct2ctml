@@ -215,7 +215,10 @@ treatment_list:
     match:
     - clinical:
         disease_status:
-        - Locally Advanced
-        - Metastatic
+        - Advanced
+        - Recurrent
         - Refractory
+        pdl1_status: High
+        mmr_status: MMR-Deficient
+        ms_status: MSI-H
         oncotree_primary_diagnosis: _SOLID_

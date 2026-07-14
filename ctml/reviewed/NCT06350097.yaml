@@ -161,7 +161,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - and:
+        and:
         - clinical:
             oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - or:

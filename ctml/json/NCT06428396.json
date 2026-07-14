@@ -9,6 +9,9 @@
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: Exemestane"
+            },
+            {
                 "drug_name": "Drug: Everolimus"
             },
             {
@@ -16,9 +19,6 @@
             },
             {
                 "drug_name": "Drug: Belzutifan"
-            },
-            {
-                "drug_name": "Drug: Exemestane"
             }
         ]
     },
@@ -153,7 +153,12 @@
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "clinical": {
+                                "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                            }
+                        }
                     }
                 ],
                 "match": [
@@ -162,12 +167,13 @@
                             {
                                 "clinical": {
                                     "age_numerical": ">=18",
-                                    "her2_status": "Negative",
-                                    "er_status": "Positive",
                                     "disease_status": [
                                         "Locally Advanced",
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Refractory"
                                     ],
+                                    "her2_status": "Negative",
+                                    "er_status": "Positive",
                                     "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
                                 }
                             },

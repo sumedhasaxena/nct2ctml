@@ -271,12 +271,36 @@ treatment_list:
         level_description: 'Drug: SGN1'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Sarcoma, NOS
+        - clinical:
+            oncotree_primary_diagnosis: Cervical Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hepatocellular Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Ovarian Cancer, Other
+        - clinical:
+            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Cervical Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Melanoma
+        - clinical:
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Unresectable
+        - Localized
+        - Locally Advanced
         - Metastatic
         - Advanced
-        - Refractory
+        - Recurrent
+        - Unresectable
         oncotree_primary_diagnosis: _SOLID_

@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Pumitamig'
-  - drug_name: 'Drug: Pemetrexed'
   - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Pemetrexed'
 long_title: A Phase II/III, Multisite, Randomized Master Protocol for a Global Trial
   of BNT327 in Combination With Chemotherapy and Other Investigational Agents in First-line
   Non-small Cell Lung Cancer
@@ -241,8 +241,17 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Metastatic
-        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+    - and:
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+      - and:
+        - genomic:
+            hugo_symbol: EGFR
+            variant_category: '!Mutation'
+        - genomic:
+            hugo_symbol: ALK
+            variant_category: '!Structural Variation'

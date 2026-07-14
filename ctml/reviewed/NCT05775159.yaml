@@ -91,7 +91,7 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           oncotree_primary_diagnosis: Hepatocellular Carcinoma
     - arm_code: Cohort 1B
       arm_internal_id: 1
@@ -107,7 +107,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           oncotree_primary_diagnosis: Hepatocellular Carcinoma
     - arm_code: Cohort 1C
       arm_internal_id: 2
@@ -123,7 +123,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - and:
+        and:
         - clinical:
             oncotree_primary_diagnosis: Hepatocellular Carcinoma
         - and:
@@ -188,7 +188,7 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           oncotree_primary_diagnosis: Hepatocellular Carcinoma
     - arm_code: Cohort 1E
       arm_internal_id: 6
@@ -204,7 +204,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-      - clinical:
+        clinical:
           oncotree_primary_diagnosis: Hepatocellular Carcinoma
     match:
     - and:

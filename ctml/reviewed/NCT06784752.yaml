@@ -139,6 +139,14 @@ treatment_list:
         level_description: 'Drug: Octreotide LAR'
         level_internal_id: 1
         level_suspended: N
+      match:
+        or:
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
+        - clinical:
+            oncotree_primary_diagnosis: Gastrointestinal Neuroendocrine Tumors
     - arm_code: Octreotide LAR
       arm_internal_id: 1
       arm_description: Participants in this arm will receive Octreotide LAR only.
@@ -152,13 +160,12 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
-        - clinical:
             oncotree_primary_diagnosis: Pancreatic Neuroendocrine Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
       - clinical:
           age_numerical: '>=12'
           disease_status:
           - Metastatic
           - Locally Advanced
           - Unresectable
-          - Advanced

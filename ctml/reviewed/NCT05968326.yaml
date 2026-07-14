@@ -122,9 +122,21 @@ treatment_list:
       match:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Adenocarcinoma
+        - clinical:
             oncotree_primary_diagnosis: Pancreatic Neuroendocrine Tumor
         - clinical:
+            oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+        - clinical:
             oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
         - clinical:
             oncotree_primary_diagnosis: Undifferentiated Carcinoma of the Pancreas
         - clinical:

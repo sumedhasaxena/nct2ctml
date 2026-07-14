@@ -9,31 +9,31 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Ramucirumab"
-            },
-            {
-                "drug_name": "Drug: Oxaliplatin"
-            },
-            {
-                "drug_name": "Drug: Paclitaxel"
-            },
-            {
-                "drug_name": "Drug: ASP2138"
-            },
-            {
-                "drug_name": "Drug: Irinotecan"
+                "drug_name": "Drug: Fluorouracil"
             },
             {
                 "drug_name": "Drug: Capecitabine"
             },
             {
+                "drug_name": "Drug: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Irinotecan"
+            },
+            {
+                "drug_name": "Drug: Oxaliplatin"
+            },
+            {
+                "drug_name": "Drug: ASP2138"
+            },
+            {
                 "drug_name": "Drug: Leucovorin"
             },
             {
-                "drug_name": "Drug: Fluorouracil"
+                "drug_name": "Drug: Paclitaxel"
             },
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: Ramucirumab"
             }
         ]
     },
@@ -521,10 +521,8 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Advanced",
                                         "Metastatic",
-                                        "Recurrent",
-                                        "Refractory"
+                                        "Advanced"
                                     ]
                                 }
                             }

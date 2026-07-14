@@ -12,16 +12,16 @@
                 "drug_name": "Biological: Pembrolizumab"
             },
             {
-                "drug_name": "Drug: Paclitaxel"
+                "drug_name": "Biological: Sacituzumab Tirumotecan"
             },
             {
-                "drug_name": "Drug: Docetaxel"
+                "drug_name": "Drug: Paclitaxel"
             },
             {
                 "drug_name": "Drug: Carboplatin"
             },
             {
-                "drug_name": "Biological: Sacituzumab Tirumotecan"
+                "drug_name": "Drug: Docetaxel"
             }
         ]
     },
@@ -243,48 +243,18 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "gender": "Female",
-                                    "mmr_status": "MMR-Proficient",
-                                    "disease_status": [
-                                        "Advanced",
-                                        "Recurrent"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Endometrial Carcinoma"
-                                }
-                            },
-                            {
-                                "and": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "MLH1",
-                                            "variant_category": "!Any Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "MSH2",
-                                            "variant_category": "!Any Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "MSH6",
-                                            "variant_category": "!Any Variation"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "PMS2",
-                                            "variant_category": "!Any Variation"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "gender": "Female",
+                            "disease_status": [
+                                "Advanced",
+                                "Recurrent",
+                                "Locally Advanced",
+                                "Metastatic"
+                            ],
+                            "mmr_status": "MMR-Proficient",
+                            "oncotree_primary_diagnosis": "Endometrial Carcinoma"
+                        }
                     }
                 ]
             }

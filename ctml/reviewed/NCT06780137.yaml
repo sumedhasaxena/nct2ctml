@@ -149,6 +149,8 @@ treatment_list:
       match:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
             oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:
             oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
@@ -174,6 +176,8 @@ treatment_list:
         - clinical:
             oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
         - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        - clinical:
             oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
         - clinical:
             oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
@@ -188,6 +192,9 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
             oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
     - arm_code: 'Part 1 Arm 3b: Gocatamig and I-DXd'
@@ -207,6 +214,8 @@ treatment_list:
         level_suspended: N
       match:
       - or:
+        - clinical:
+            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
             oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
         - clinical:

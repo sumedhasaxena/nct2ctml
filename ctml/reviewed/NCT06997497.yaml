@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: 5-Fluorouracil'
-  - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Biological: Cetuximab'
   - drug_name: 'Drug: Oxaliplatin'
+  - drug_name: 'Drug: 5-Fluorouracil'
+  - drug_name: 'Biological: Cetuximab'
+  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Leucovorin/levofolinate calcium'
   - drug_name: 'Drug: MK-1084'
 long_title: A Phase 3, Randomized, Open-label, Multicenter Clinical Study to Evaluate
@@ -172,35 +172,16 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
       match:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - and:
-          - genomic:
-              hugo_symbol: EGFR
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: ALK
-              variant_category: '!Any Variation'
-          - genomic:
-              hugo_symbol: ROS1
-              variant_category: '!Any Variation'
+      - clinical:
+          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Locally Advanced
-            - Metastatic
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
       - and:
         - genomic:
             hugo_symbol: KRAS

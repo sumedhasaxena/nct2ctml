@@ -106,27 +106,29 @@ treatment_list:
         level_description: 'Drug: Temozolomide capsule'
         level_internal_id: 0
         level_suspended: N
+      match:
+        and:
+        - clinical:
+            oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
+        - and:
+          - genomic:
+              hugo_symbol: KIT
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: PDGFRA
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: NTRK1
+              variant_category: '!Structural Variation'
+          - genomic:
+              hugo_symbol: NTRK2
+              variant_category: '!Structural Variation'
+          - genomic:
+              hugo_symbol: NTRK3
+              variant_category: '!Structural Variation'
     match:
-    - and:
-      - clinical:
-          age_numerical: '>=20'
-          disease_status:
-          - Metastatic
-          - Advanced
-          oncotree_primary_diagnosis: Gastrointestinal Stromal Tumor
-      - and:
-        - genomic:
-            hugo_symbol: KIT
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: PDGFRA
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: KIT
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: PDGFRA
-            variant_category: '!Mutation'
-        - genomic:
-            hugo_symbol: NTRK1
-            variant_category: '!Structural Variation'
+    - clinical:
+        age_numerical: '>=20'
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Small Bowel Cancer

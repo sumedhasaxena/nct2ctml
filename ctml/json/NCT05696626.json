@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Lasofoxifene in combination with abemaciclib"
+                "drug_name": "Drug: Fulvestrant in combination with abemaciclib"
             },
             {
-                "drug_name": "Drug: Fulvestrant in combination with abemaciclib"
+                "drug_name": "Drug: Lasofoxifene in combination with abemaciclib"
             }
         ]
     },
@@ -154,13 +154,13 @@
                             {
                                 "clinical": {
                                     "age_numerical": ">=18",
-                                    "her2_status": "Negative",
-                                    "er_status": "Positive",
                                     "disease_status": [
                                         "Locally Advanced",
                                         "Metastatic",
                                         "Advanced"
                                     ],
+                                    "her2_status": "Negative",
+                                    "er_status": "Positive",
                                     "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
                                 }
                             },
@@ -173,20 +173,10 @@
                                         }
                                     },
                                     {
-                                        "and": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "ERBB2",
-                                                    "variant_category": "!Any Variation"
-                                                }
-                                            },
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "RB1",
-                                                    "variant_category": "!Any Variation"
-                                                }
-                                            }
-                                        ]
+                                        "genomic": {
+                                            "hugo_symbol": "RB1",
+                                            "variant_category": "!Any Variation"
+                                        }
                                     }
                                 ]
                             }

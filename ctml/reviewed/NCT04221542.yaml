@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Abiraterone'
-  - drug_name: 'Drug: Enzalutamide'
   - drug_name: 'Drug: AMG 509'
+  - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: Abiraterone'
 long_title: A Phase 1 Study Evaluating the Safety, Tolerability, Pharmacokinetics,
   and Efficacy of AMG 509 in Subjects With Metastatic Castration-Resistant Prostate
   Cancer
@@ -225,6 +225,9 @@ treatment_list:
         level_description: 'Drug: AMG 509'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 2: AMG 509 Subcutaneous (SC) Monotherapy'
       arm_internal_id: 1
       arm_description: 'Part 2 will explore the safety, tolerability, and PK of AMG
@@ -241,6 +244,9 @@ treatment_list:
         level_description: 'Drug: AMG 509'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 3: AMG 509 IV Monotherapy in Earlier Lines of Treatment'
       arm_internal_id: 2
       arm_description: Part 3 will explore AMG 509 in participants with mCRPC who
@@ -255,6 +261,9 @@ treatment_list:
         level_description: 'Drug: AMG 509'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 4: AMG 509 IV Combination Therapy'
       arm_internal_id: 3
       arm_description: 'Part 4 will explore the safety, tolerability, and PK of AMG
@@ -279,6 +288,9 @@ treatment_list:
         level_description: 'Drug: Enzalutamide'
         level_internal_id: 2
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 5: AMG 509 IV Monotherapy in Outpatient Setting'
       arm_internal_id: 4
       arm_description: 'Part 5 will evaluate the safety and tolerability of AMG 509
@@ -295,6 +307,9 @@ treatment_list:
         level_description: 'Drug: AMG 509'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 6: AMG 509 IV as Monotherapy and Combination Therapy With Abiraterone
         Acetate'
       arm_internal_id: 5
@@ -315,6 +330,9 @@ treatment_list:
         level_description: 'Drug: Abiraterone'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
     - arm_code: 'Part 7 (China only): AMG 509 IV as Monotherapy or in Combination
         With Abiraterone Acetate'
       arm_internal_id: 6
@@ -339,15 +357,13 @@ treatment_list:
         level_description: 'Drug: Abiraterone'
         level_internal_id: 1
         level_suspended: N
-    match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Prostate Neuroendocrine Carcinoma
+      match:
       - clinical:
-          age_numerical: '>=18'
-          gender: Male
-          disease_status:
-          - Metastatic
+          oncotree_primary_diagnosis: Prostate Adenocarcinoma
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        gender: Male
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Prostate Adenocarcinoma

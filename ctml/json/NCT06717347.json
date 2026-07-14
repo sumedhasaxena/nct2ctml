@@ -9,31 +9,31 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Doxorubicin"
-            },
-            {
-                "drug_name": "Biological: Zilovertamab vedotin"
-            },
-            {
-                "drug_name": "Biological: Rituximab Biosimilar"
-            },
-            {
-                "drug_name": "Drug: Vincristine"
+                "drug_name": "Biological: Rituximab"
             },
             {
                 "drug_name": "Drug: Cyclophosphamide"
             },
             {
-                "drug_name": "Drug: Prednisolone"
+                "drug_name": "Biological: Rituximab Biosimilar"
             },
             {
                 "drug_name": "Drug: Prednisone"
             },
             {
-                "drug_name": "Biological: Rituximab"
+                "drug_name": "Drug: Vincristine"
+            },
+            {
+                "drug_name": "Drug: Prednisolone"
             },
             {
                 "drug_name": "Drug: Rescue medication"
+            },
+            {
+                "drug_name": "Drug: Doxorubicin"
+            },
+            {
+                "drug_name": "Biological: Zilovertamab vedotin"
             }
         ]
     },

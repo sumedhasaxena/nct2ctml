@@ -9,7 +9,7 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Drug: Osimertinib"
             },
             {
                 "drug_name": "Drug: Cisplatin"
@@ -18,10 +18,10 @@
                 "drug_name": "Drug: Pemetrexed"
             },
             {
-                "drug_name": "Drug: Dato-DXd"
+                "drug_name": "Drug: Carboplatin"
             },
             {
-                "drug_name": "Drug: Osimertinib"
+                "drug_name": "Drug: Dato-DXd"
             }
         ]
     },
@@ -125,7 +125,74 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "and": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                    }
+                                },
+                                {
+                                    "or": [
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.E746_A750del",
+                                                "variant_classification": "In_Frame_Del",
+                                                "exon": 19
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.L858R",
+                                                "variant_classification": "Missense_Mutation",
+                                                "exon": 20
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "variant_classification": "Missense_Mutation",
+                                                "exon": 19,
+                                                "wildcard_protein_change": "p.G719"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.S768I",
+                                                "variant_classification": "Missense_Mutation",
+                                                "exon": 19
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.L861Q",
+                                                "variant_classification": "Missense_Mutation",
+                                                "exon": 20
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.T790M",
+                                                "variant_classification": "Missense_Mutation",
+                                                "exon": 20
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Group 2: Dato-DXd Monotherapy",
@@ -139,7 +206,60 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ]
+                        ],
+                        "match": {
+                            "and": [
+                                {
+                                    "clinical": {
+                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                    }
+                                },
+                                {
+                                    "or": [
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "variant_classification": "In_Frame_Del",
+                                                "exon": 19
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.L858R",
+                                                "variant_classification": "Missense_Mutation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "variant_classification": "Missense_Mutation",
+                                                "wildcard_protein_change": "G719"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.S768I",
+                                                "variant_classification": "Missense_Mutation"
+                                            }
+                                        },
+                                        {
+                                            "genomic": {
+                                                "hugo_symbol": "EGFR",
+                                                "variant_category": "Mutation",
+                                                "protein_change": "p.L861Q",
+                                                "variant_classification": "Missense_Mutation"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     },
                     {
                         "arm_code": "Group 3: Platinum-based Doublet Chemotherapy",
@@ -170,65 +290,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic"
-                                    ],
-                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                }
-                            },
-                            {
-                                "or": [
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "variant_classification": "In_Frame_Del",
-                                            "exon": 19
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.L858R"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "wildcard_protein_change": "p.G719"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.S768I"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.L861Q"
-                                        }
-                                    },
-                                    {
-                                        "genomic": {
-                                            "hugo_symbol": "EGFR",
-                                            "variant_category": "Mutation",
-                                            "protein_change": "p.T790M"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Locally Advanced",
+                                "Metastatic"
+                            ],
+                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

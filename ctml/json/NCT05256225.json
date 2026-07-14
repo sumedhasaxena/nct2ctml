@@ -332,9 +332,18 @@
                             {
                                 "and": [
                                     {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Endometrial Carcinoma"
-                                        }
+                                        "or": [
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Uterine Sarcoma/Mesenchymal"
+                                                }
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "oncotree_primary_diagnosis": "Endometrial Carcinoma"
+                                                }
+                                            }
+                                        ]
                                     },
                                     {
                                         "clinical": {
@@ -355,7 +364,7 @@
                             {
                                 "genomic": {
                                     "hugo_symbol": "ERBB2",
-                                    "variant_category": "Amplification"
+                                    "variant_category": "Any Variation"
                                 }
                             }
                         ]

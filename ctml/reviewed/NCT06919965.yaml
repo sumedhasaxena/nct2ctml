@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Mitomycin C'
   - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Mitomycin C'
   - drug_name: 'Drug: TAR-210'
 long_title: "A Phase 3, Randomized, Open-label, Multicenter Study Evaluating the Efficacy\
   \ and Safety of TAR-210 Erdafitinib Intravesical Delivery System Versus Investigator's\
@@ -119,6 +119,18 @@ treatment_list:
         level_description: 'Drug: TAR-210'
         level_internal_id: 0
         level_suspended: N
+      match:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Urachal Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
     - arm_code: 'Group B: Mitomycin C (MMC) or Gemcitabine'
       arm_internal_id: 1
       arm_description: Participants in Group B will receive intravesical mitomycin
@@ -142,11 +154,7 @@ treatment_list:
           - clinical:
               oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
           - clinical:
-              oncotree_primary_diagnosis: Urothelial Papilloma
-          - clinical:
               oncotree_primary_diagnosis: Inverted Urothelial Papilloma
-          - clinical:
-              oncotree_primary_diagnosis: Upper Tract Urothelial Carcinoma
         - clinical:
             age_numerical: '>=18'
             disease_status:
