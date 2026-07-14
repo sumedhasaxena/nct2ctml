@@ -483,7 +483,9 @@ def get_inclusion_genomic_criteria_prompt(genes, inclusion_criteria):
     3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
     5. If the criteria mentions only protein expression (e.g., "negative PD-L1 expression", "nPKCδ expression") without explicitly mentioning the corresponding gene name, DO NOT infer or add a gene to the output.
-    6. Output should be a list of dictionaries with each genetic alteration under a separate "genomic" key, as in the provided example. No wrapper objects, no extra keys or explanation.
+    6. Do not infer or add genes from disease names, cancer types, histologies, syndromes, or other conditions. Only include genes that are explicitly mentioned in the criteria text itself.
+    7. Do not use known disease-to-gene associations to guess a gene when the gene name is not written in the criteria. For example, do not infer BRCA1/2 from "breast cancer", KRAS/BRAF from "colorectal cancer", or EGFR from "glioblastoma" unless the gene name is explicitly present.
+    8. Output should be a list of dictionaries with each genetic alteration under a separate "genomic" key, as in the provided example. No wrapper objects, no extra keys or explanation.
     
     *CRITICAL RULE:** If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely.**
     Only include genetic states that are direct reasons for inclusion (e.g., "patients *with* a BRAF V600E mutation are included").
@@ -547,7 +549,9 @@ def get_exclusion_genomic_criteria_prompt(genes, exclusion_criteria):
     3. In EligibilityCriteria, the term "mutant" means "Any Variation", with some exceptions, such as in the context of mutations (meaning "Mutation") in EGFR and HER2 in response to targeted therapy.  
     4. Include any genes that may not be present in the provided GeneList if they are clearly indicated in the criteria.
     5. If the criteria mentions only protein expression (e.g., "negative PD-L1 expression", "nPKCδ expression") without explicitly mentioning the corresponding gene name, DO NOT infer or add a gene to the output.
-    6. Output should be a list of dictionaries with each genetic alteration under a separate "genomic" key, as in the provided example. No wrapper objects, no extra keys or explanation.
+    6. Do not infer or add genes from disease names, cancer types, histologies, syndromes, or other conditions. Only include genes that are explicitly mentioned in the criteria text itself.
+    7. Do not use known disease-to-gene associations to guess a gene when the gene name is not written in the criteria. For example, do not infer BRCA1/2 from "breast cancer", KRAS/BRAF from "colorectal cancer", or EGFR from "glioblastoma" unless the gene name is explicitly present.
+    8. Output should be a list of dictionaries with each genetic alteration under a separate "genomic" key, as in the provided example. No wrapper objects, no extra keys or explanation.
 
     *CRITICAL RULES:**1. If the `EligibilityCriteria` only mentions a gene or variant **in the context of a patient *receiving treatment* for it** (e.g., "Have received prior treatment with any KRAS G12C", "currently on EGFR TKI therapy"), you must **EXCLUDE that gene/variant from the output entirely. 2. Output must follow the JSON structure as the example below.**
     Only include genetic states that are direct reasons for exclusion (e.g., "patients *with* a BRAF V600E mutation are excluded").
