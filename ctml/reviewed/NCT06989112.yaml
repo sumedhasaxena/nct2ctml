@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Trastuzumab deruxtecan'
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Docetaxel'
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Pembrolizumab'
-  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Drug: Rilvegostomig'
-  - drug_name: 'Drug: Trastuzumab deruxtecan'
+  - drug_name: 'Drug: Paclitaxel'
 long_title: 'DESTINY-Endometrial01: An Open-Label, Sponsor-Blinded, Randomized, Controlled,
   Multicenter, Phase III Study of Trastuzumab Deruxtecan (T-DXd) Plus Rilvegostomig
   or Pembrolizumab vs Chemotherapy Plus Pembrolizumab as First-Line Therapy of HER2-Expressing
@@ -151,6 +151,10 @@ treatment_list:
         level_description: 'Drug: Rilvegostomig'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          her2_status: Positive
+          oncotree_primary_diagnosis: Endometrial Carcinoma
     - arm_code: 'Arm B: T-DXd + Pembrolizumab'
       arm_internal_id: 1
       arm_description: T-DXd IV Q3W plus pembrolizumab IV Q3W. Treatment will continue
@@ -167,6 +171,10 @@ treatment_list:
         level_description: 'Drug: Pembrolizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          her2_status: Positive
+          oncotree_primary_diagnosis: Endometrial Carcinoma
     - arm_code: 'Arm C: Carboplatin + Paclitaxel + Pembrolizumab'
       arm_internal_id: 2
       arm_description: Carboplatin, paclitaxel and pembrolizumab administered Q3W
@@ -197,17 +205,16 @@ treatment_list:
         level_description: 'Drug: Docetaxel'
         level_internal_id: 3
         level_suspended: N
-    match:
-    - and:
+      match:
       - clinical:
-          age_numerical: '>=18'
-          gender: Female
-          disease_status:
-          - Advanced
-          - Recurrent
           her2_status: Positive
-          mmr_status: MMR-Proficient
-          oncotree_primary_diagnosis: Endometrial Carcinoma
-      - genomic:
-          hugo_symbol: ERBB2
-          variant_category: Copy Number Variation
+    match:
+    - clinical:
+        age_numerical: '>=18'
+        gender: Female
+        disease_status:
+        - Advanced
+        - Metastatic
+        her2_status: Positive
+        mmr_status: MMR-Proficient
+        oncotree_primary_diagnosis: Endometrial Carcinoma

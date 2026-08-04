@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Cetuximab'
-  - drug_name: 'Drug: Leucovorin calcium/Levoleucovorin'
-  - drug_name: 'Drug: Irinotecan'
   - drug_name: 'Biological: Amivantamab'
-  - drug_name: 'Biological: Bevacizumab'
+  - drug_name: 'Drug: Leucovorin calcium/Levoleucovorin'
   - drug_name: 'Drug: 5-fluorouracil'
+  - drug_name: 'Biological: Cetuximab'
+  - drug_name: 'Biological: Bevacizumab'
+  - drug_name: 'Drug: Irinotecan'
 long_title: A Randomized, Open-label Phase 3 Study of Amivantamab + FOLFIRI Versus
   Cetuximab/Bevacizumab + FOLFIRI in Participants With KRAS/NRAS and BRAF Wild-type
   Recurrent, Unresectable or Metastatic Colorectal Cancer Who Have Received Prior
@@ -124,14 +124,6 @@ treatment_list:
         level_description: 'Drug: Irinotecan'
         level_internal_id: 3
         level_suspended: N
-      match:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: 'Arm B: Cetuximab or Bevacizumab + FOLFIRI'
       arm_internal_id: 1
       arm_description: Participants will receive either cetuximab or bevacizumab along
@@ -160,31 +152,22 @@ treatment_list:
         level_description: 'Drug: Irinotecan'
         level_internal_id: 4
         level_suspended: N
-      match:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Ovarian Epithelial Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
     - and:
       - and:
         - or:
           - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+              oncotree_primary_diagnosis: Colon Adenocarcinoma
           - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+              oncotree_primary_diagnosis: Rectal Adenocarcinoma
         - clinical:
             age_numerical: '>=18'
             disease_status:
             - Recurrent
             - Unresectable
             - Metastatic
+            - Advanced
             her2_status: '!Positive'
-            mmr_status: MMR-Deficient
-            ms_status: MSI-H
       - and:
         - genomic:
             hugo_symbol: KRAS

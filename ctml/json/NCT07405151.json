@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Rescue Medication"
+                "drug_name": "Biological: I-DXd"
             },
             {
-                "drug_name": "Biological: I-DXd"
+                "drug_name": "Drug: Rescue Medication"
             }
         ]
     },
@@ -122,6 +122,7 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
+                                "Unresectable",
                                 "Locally Advanced",
                                 "Metastatic"
                             ],

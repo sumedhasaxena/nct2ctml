@@ -9,28 +9,28 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Lenalidomide"
+                "drug_name": "Drug: Bendamustine"
+            },
+            {
+                "drug_name": "Drug: Cyclophosphamide"
             },
             {
                 "drug_name": "Drug: Doxorubicin"
             },
             {
+                "drug_name": "Drug: Lenalidomide"
+            },
+            {
                 "drug_name": "Drug: Obinutuzumab"
+            },
+            {
+                "drug_name": "Drug: Vincristine"
             },
             {
                 "drug_name": "Drug: Prednisone"
             },
             {
                 "drug_name": "Drug: Rituximab"
-            },
-            {
-                "drug_name": "Drug: Cyclophosphamide"
-            },
-            {
-                "drug_name": "Drug: Bendamustine"
-            },
-            {
-                "drug_name": "Drug: Vincristine"
             },
             {
                 "drug_name": "Drug: Epcoritamab"
@@ -208,13 +208,6 @@
                                 "level_internal_id": 5,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            }
                         ]
                     },
                     {
@@ -247,13 +240,6 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            }
                         ]
                     },
                     {
@@ -274,13 +260,6 @@
                                 "level_internal_id": 1,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            }
                         ]
                     }
                 ],
@@ -289,10 +268,10 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
-                                "Advanced",
-                                "Locally Advanced"
+                                "Locally Advanced",
+                                "Metastatic"
                             ],
-                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                            "oncotree_primary_diagnosis": "Follicular Lymphoma"
                         }
                     }
                 ]

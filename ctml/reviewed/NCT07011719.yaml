@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Cabozantinib'
   - drug_name: 'Drug: Casdatifan'
-  - drug_name: 'Drug: Placebo'
 long_title: A Randomized, Double-Blind, Active-Control, Multicenter Phase 3 Trial
   of Casdatifan and Cabozantinib Versus Placebo and Cabozantinib in Patients With
   Advanced Clear Cell Renal Cell Carcinoma
@@ -112,4 +112,4 @@ treatment_list:
         - Locally Advanced
         - Metastatic
         - Advanced
-        oncotree_primary_diagnosis: Renal Cell Carcinoma
+        oncotree_primary_diagnosis: Renal Clear Cell Carcinoma

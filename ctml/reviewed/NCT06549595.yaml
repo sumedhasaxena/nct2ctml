@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: R-CVP'
+  - drug_name: 'Drug: BR'
   - drug_name: 'Drug: AZD0486'
   - drug_name: 'Drug: R-CHOP'
-  - drug_name: 'Drug: BR'
-  - drug_name: 'Drug: R-CVP'
 long_title: A Phase III, Multicentre, Randomised, Open-label Study to Compare the
   Efficacy and Safety of AZD0486 Plus Rituximab Versus Chemotherapy Plus Rituximab
   in Previously Untreated Participants With Follicular Lymphoma (SOUNDTRACK-F1)
@@ -123,4 +123,4 @@ treatment_list:
         disease_status:
         - Untreated
         - Advanced
-        oncotree_primary_diagnosis: Lymphoid Neoplasm
+        oncotree_primary_diagnosis: Follicular Lymphoma

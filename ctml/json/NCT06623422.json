@@ -9,13 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Pembrolizumab"
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: Pemetrexed"
-            },
-            {
-                "drug_name": "Drug: Cisplatin"
             },
             {
                 "drug_name": "Drug: Gemcitabine"
@@ -24,13 +21,16 @@
                 "drug_name": "Other: Placebo"
             },
             {
-                "drug_name": "Drug: Paclitaxel"
-            },
-            {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Biological: Pembrolizumab"
             },
             {
                 "drug_name": "Biological: Intismeran autogene"
+            },
+            {
+                "drug_name": "Drug: Cisplatin"
+            },
+            {
+                "drug_name": "Drug: Paclitaxel"
             }
         ]
     },
@@ -232,15 +232,10 @@
                             {
                                 "and": [
                                     {
-                                        "or": [
-                                            {
-                                                "genomic": {
-                                                    "hugo_symbol": "EGFR",
-                                                    "variant_category": "Mutation",
-                                                    "exon": 19
-                                                }
-                                            }
-                                        ]
+                                        "genomic": {
+                                            "hugo_symbol": "EGFR",
+                                            "variant_category": "!Mutation"
+                                        }
                                     },
                                     {
                                         "genomic": {

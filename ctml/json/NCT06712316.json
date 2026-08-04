@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Pumitamig"
-            },
-            {
-                "drug_name": "Drug: Pembrolizumab"
-            },
-            {
                 "drug_name": "Drug: Paclitaxel"
             },
             {
+                "drug_name": "Drug: Pumitamig"
+            },
+            {
                 "drug_name": "Drug: Carboplatin"
+            },
+            {
+                "drug_name": "Drug: Pembrolizumab"
             },
             {
                 "drug_name": "Drug: Pemetrexed"

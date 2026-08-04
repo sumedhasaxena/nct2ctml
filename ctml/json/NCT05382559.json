@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Docetaxel"
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: ASP3082"
             },
             {
-                "drug_name": "Drug: Irinotecan"
-            },
-            {
-                "drug_name": "Drug: Cisplatin"
+                "drug_name": "Drug: Oxaplatin"
             },
             {
                 "drug_name": "Drug: Nanoparticle albumin-bound-paclitaxel"
             },
             {
-                "drug_name": "Drug: Pemetrexed"
+                "drug_name": "Drug: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Cetuximab"
             },
             {
                 "drug_name": "Drug: Gemcitabine"
@@ -33,19 +33,19 @@
                 "drug_name": "Drug: Leucovorin"
             },
             {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Drug: Docetaxel"
             },
             {
-                "drug_name": "Drug: Oxaplatin"
+                "drug_name": "Drug: Cisplatin"
             },
             {
-                "drug_name": "Drug: Pembrolizumab"
+                "drug_name": "Drug: Irinotecan"
             },
             {
                 "drug_name": "Drug: Fluorouracil"
             },
             {
-                "drug_name": "Drug: Cetuximab"
+                "drug_name": "Drug: Pemetrexed"
             }
         ]
     },
@@ -267,6 +267,13 @@
                                 "level_internal_id": 4,
                                 "level_suspended": "N"
                             }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
+                                }
+                            }
                         ]
                     },
                     {
@@ -292,6 +299,13 @@
                                 "level_description": "Drug: Gemcitabine",
                                 "level_internal_id": 2,
                                 "level_suspended": "N"
+                            }
+                        ],
+                        "match": [
+                            {
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Pancreatic Adenocarcinoma"
+                                }
                             }
                         ]
                     },
@@ -382,7 +396,8 @@
                                     "age_numerical": ">=18",
                                     "disease_status": [
                                         "Locally Advanced",
-                                        "Metastatic"
+                                        "Metastatic",
+                                        "Refractory"
                                     ],
                                     "oncotree_primary_diagnosis": "_SOLID_"
                                 }

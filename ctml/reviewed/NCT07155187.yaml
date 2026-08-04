@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Telisotuzumab Adizutecan'
   - drug_name: 'Drug: Standard of Care'
+  - drug_name: 'Drug: Telisotuzumab Adizutecan'
 long_title: Phase 2/3 Open Label Randomized Study of Telisotuzumab Adizutecan Compared
   to Standard of Care in Subjects With Locally Advanced or Metastatic EGFR-Mutated
   Non-Squamous Non-Small Cell Lung Cancer After Progression on a Third-Generation
@@ -147,27 +147,20 @@ treatment_list:
         level_suspended: N
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Sarcomatoid Carcinoma of the Lung
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Locally Advanced
-            - Metastatic
-            - Refractory
-            - Recurrent
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - or:
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
+            variant_classification: In_Frame_Del
             exon: 19
         - genomic:
             hugo_symbol: EGFR
             variant_category: Mutation
             protein_change: p.L858R
+            variant_classification: Missense_Mutation

@@ -177,6 +177,5 @@ treatment_list:
         gender: Female
         disease_status:
         - Advanced
-        - Platinum Resistant
         - Recurrent
         oncotree_primary_diagnosis: Ovarian Epithelial Tumor

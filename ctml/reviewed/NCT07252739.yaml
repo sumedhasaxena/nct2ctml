@@ -7,11 +7,11 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Pemetrexed'
+  - drug_name: 'Biological: Pembrolizumab'
   - drug_name: 'Drug: MK-1084'
   - drug_name: 'Biological: Cetuximab'
-  - drug_name: 'Drug: Carboplatin'
 long_title: 'KEYMAKER-U01 Substudy 01J: A Randomized Phase 2 Umbrella Study With Rolling
   Arms of Investigational Agents for First-line Treatment of Participants With Advanced
   or Metastatic Nonsquamous Non-small Cell Lung Cancer (NSCLC) With KRAS G12C Mutations'
@@ -177,7 +177,7 @@ treatment_list:
           disease_status:
           - Advanced
           - Metastatic
-          oncotree_primary_diagnosis: _SOLID_
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - genomic:
           hugo_symbol: KRAS
           variant_category: Mutation

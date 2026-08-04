@@ -7,13 +7,13 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Fluorouracil (5-FU)'
   - drug_name: 'Drug: Supportive care measures'
-  - drug_name: 'Drug: Cisplatin'
-  - drug_name: 'Biological: Sacituzumab tirumotecan'
   - drug_name: 'Drug: Leucovorin (LV) or levoleucovorin'
   - drug_name: 'Drug: Rescue medication'
+  - drug_name: 'Drug: Cisplatin'
   - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Drug: Fluorouracil (5-FU)'
+  - drug_name: 'Biological: Sacituzumab tirumotecan'
 long_title: A Phase 1/2 Study to Evaluate the Safety and Efficacy of MK-2870 Monotherapy
   or in Combination With Other Anticancer Agents in Gastrointestinal Cancers
 last_updated: '2025-09-30'
@@ -160,16 +160,18 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
-              Duct
-        - clinical:
-            oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
-        - clinical:
             oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
+        - clinical:
+            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
         - clinical:
             oncotree_primary_diagnosis: Pancreatic Adenocarcinoma
         - clinical:
             oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Intraductal Papillary Neoplasm of the Bile
+              Duct
+        - clinical:
+            oncotree_primary_diagnosis: Intracholecystic Papillary Neoplasm
       - clinical:
           age_numerical: '>=18'
           disease_status:

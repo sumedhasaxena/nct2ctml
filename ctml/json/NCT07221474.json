@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Other: Placebo"
-            },
-            {
                 "drug_name": "Drug: Carboplatin"
-            },
-            {
-                "drug_name": "Drug: Paclitaxel"
-            },
-            {
-                "drug_name": "Biological: Pembrolizumab"
             },
             {
                 "drug_name": "Biological: V940"
             },
             {
                 "drug_name": "Drug: Nab-paclitaxel"
+            },
+            {
+                "drug_name": "Biological: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Paclitaxel"
+            },
+            {
+                "drug_name": "Other: Placebo"
             }
         ]
     },
@@ -205,7 +205,7 @@
                             "disease_status": [
                                 "Metastatic"
                             ],
-                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                            "oncotree_primary_diagnosis": "Lung Squamous Cell Carcinoma"
                         }
                     }
                 ]

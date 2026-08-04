@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Pembrolizumab"
+                "drug_name": "Biological: Intismeran autogene"
             },
             {
-                "drug_name": "Biological: Intismeran autogene"
+                "drug_name": "Biological: Pembrolizumab"
             },
             {
                 "drug_name": "Other: Placebo"
@@ -148,35 +148,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Sarcomatoid Carcinoma of the Lung"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Localized"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Localized",
+                                "Locally Advanced"
+                            ],
+                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

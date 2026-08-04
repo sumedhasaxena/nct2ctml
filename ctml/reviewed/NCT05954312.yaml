@@ -163,7 +163,7 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
       match:
-        and:
+      - and:
         - and:
           - or:
             - clinical:
@@ -205,7 +205,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-        and:
+      - and:
         - and:
           - or:
             - clinical:
@@ -241,7 +241,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-        and:
+      - and:
         - and:
           - or:
             - clinical:
@@ -280,7 +280,7 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
       match:
-        and:
+      - and:
         - and:
           - or:
             - clinical:
@@ -313,10 +313,8 @@ treatment_list:
         - genomic:
             hugo_symbol: KEAP1
             variant_category: '!Mutation'
-            protein_change: null
             variant_classification: Nonsense_Mutation
         - genomic:
             hugo_symbol: KEAP1
             variant_category: '!Mutation'
-            protein_change: null
             variant_classification: Frame_Shift_Del

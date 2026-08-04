@@ -108,8 +108,7 @@
                                     "disease_status": [
                                         "Locally Advanced",
                                         "Metastatic",
-                                        "Advanced",
-                                        "Refractory"
+                                        "Advanced"
                                     ],
                                     "oncotree_primary_diagnosis": "_SOLID_"
                                 }
@@ -117,7 +116,8 @@
                             {
                                 "genomic": {
                                     "hugo_symbol": "MET",
-                                    "variant_category": "Copy Number Variation"
+                                    "variant_category": "Copy Number Variation",
+                                    "cnv_call": "High Amplification"
                                 }
                             }
                         ]

@@ -9,6 +9,9 @@
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: Pumitamig"
+            },
+            {
                 "drug_name": "Drug: Ipilimumab"
             },
             {
@@ -16,9 +19,6 @@
             },
             {
                 "drug_name": "Drug: Atezolizumab"
-            },
-            {
-                "drug_name": "Drug: Pumitamig"
             }
         ]
     },

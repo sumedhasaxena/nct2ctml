@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Other: Placebo'
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Biological: Pembrolizumab'
   - drug_name: 'Biological: V940'
   - drug_name: 'Drug: Nab-paclitaxel'
+  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Other: Placebo'
 long_title: A Phase 2, Randomized, Double-Blind, Placebo-Controlled Study of V940
   in Combination With Pembrolizumab and Chemotherapy as First-Line Treatment for Participants
   With Metastatic Squamous NSCLC (INTerpath-013)
@@ -208,4 +208,4 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
-        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        oncotree_primary_diagnosis: Lung Squamous Cell Carcinoma

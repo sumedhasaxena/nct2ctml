@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: IV durvalumab"
+                "drug_name": "Drug: Tremelimumab"
             },
             {
                 "drug_name": "Drug: SC durvalumab + rHu"
             },
             {
-                "drug_name": "Drug: Tremelimumab"
+                "drug_name": "Drug: IV durvalumab"
             }
         ]
     },
@@ -154,7 +154,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
+                                            "oncotree_primary_diagnosis": "Small Cell Lung Cancer"
                                         }
                                     }
                                 ]
@@ -196,12 +196,7 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lung Neuroendocrine Tumor"
+                                            "oncotree_primary_diagnosis": "Small Cell Lung Cancer"
                                         }
                                     }
                                 ]
@@ -235,18 +230,9 @@
                         ],
                         "match": [
                             {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma"
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
+                                }
                             }
                         ]
                     }
@@ -256,7 +242,8 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
-                                "Unresectable"
+                                "Unresectable",
+                                "Localized"
                             ],
                             "oncotree_primary_diagnosis": "_SOLID_"
                         }

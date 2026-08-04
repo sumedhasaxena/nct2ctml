@@ -240,6 +240,7 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
+          - Advanced
           oncotree_primary_diagnosis: _SOLID_
       - genomic:
           hugo_symbol: MTAP

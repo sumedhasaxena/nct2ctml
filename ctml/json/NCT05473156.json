@@ -202,7 +202,6 @@
                                         "Advanced",
                                         "Metastatic",
                                         "Unresectable",
-                                        "Relapsed",
                                         "Refractory"
                                     ],
                                     "oncotree_primary_diagnosis": "_SOLID_"

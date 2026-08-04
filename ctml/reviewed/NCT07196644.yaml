@@ -112,8 +112,8 @@ treatment_list:
           - Locally Advanced
           - Metastatic
           - Advanced
-          - Refractory
           oncotree_primary_diagnosis: _SOLID_
       - genomic:
           hugo_symbol: MET
           variant_category: Copy Number Variation
+          cnv_call: High Amplification

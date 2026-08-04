@@ -109,8 +109,8 @@ treatment_list:
           age_numerical: '>=18'
           disease_status:
           - Advanced
-          - Unresectable
           - Metastatic
+          - Unresectable
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - genomic:
           hugo_symbol: MET

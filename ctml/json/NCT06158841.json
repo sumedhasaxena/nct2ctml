@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Pomalidomide"
+                "drug_name": "Drug: Carfilzomib"
             },
             {
-                "drug_name": "Drug: Carfilzomib"
+                "drug_name": "Drug: Dexamethasone"
             },
             {
                 "drug_name": "Drug: Bortezomib"
@@ -21,13 +21,13 @@
                 "drug_name": "Drug: Etentamig"
             },
             {
-                "drug_name": "Drug: Dexamethasone"
-            },
-            {
                 "drug_name": "Drug: Selinexor"
             },
             {
                 "drug_name": "Drug: Elotuzumab"
+            },
+            {
+                "drug_name": "Drug: Pomalidomide"
             }
         ]
     },
@@ -149,13 +149,6 @@
                                 "level_internal_id": 5,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Myeloid Neoplasm"
-                                }
-                            }
                         ]
                     },
                     {
@@ -170,13 +163,6 @@
                                 "level_internal_id": 0,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
-                            {
-                                "clinical": {
-                                    "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                }
-                            }
                         ]
                     }
                 ],
@@ -188,7 +174,7 @@
                                 "Recurrent",
                                 "Refractory"
                             ],
-                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                            "oncotree_primary_diagnosis": "Plasma Cell Myeloma"
                         }
                     }
                 ]

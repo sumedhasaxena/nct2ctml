@@ -8,9 +8,9 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Sonrotoclax'
-  - drug_name: 'Drug: Rituximab'
   - drug_name: 'Drug: Venetoclax'
   - drug_name: 'Drug: Obinutuzumab'
+  - drug_name: 'Drug: Rituximab'
 long_title: A Phase 3 Randomized, Open-Label, Multicenter Study of Sonrotoclax Plus
   Anti-CD20 Antibody Therapies Versus Venetoclax Plus Rituximab in Patients With Relapsed/Refractory
   Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma
@@ -139,13 +139,10 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Lymphoid Benign
-        - clinical:
-            oncotree_primary_diagnosis: Lymphoid Neoplasm
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Recurrent
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Recurrent
+        - Refractory
+        oncotree_primary_diagnosis: Chronic Lymphocytic Leukemia/Small Lymphocytic
+          Lymphoma

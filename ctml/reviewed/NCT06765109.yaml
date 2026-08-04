@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Alectinib'
   - drug_name: 'Drug: Neladalkib (NVL-655)'
+  - drug_name: 'Drug: Alectinib'
 long_title: A Phase 3 Study of the Selective Anaplastic Lymphoma Kinase (ALK) Inhibitor
   NVL-655 Compared to Alectinib in First-Line Treatment of Patients With ALK-Positive
   Advanced Non-Small Cell Lung Cancer (ALKAZAR)
@@ -106,17 +106,12 @@ treatment_list:
           oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
-          - clinical:
-              oncotree_primary_diagnosis: Lung Adenocarcinoma In Situ
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Locally Advanced
-            - Metastatic
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Locally Advanced
+          - Metastatic
+          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
       - genomic:
           hugo_symbol: ALK
           variant_category: Structural Variation

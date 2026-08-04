@@ -113,35 +113,37 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": {
-                            "or": [
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Melanoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                                        }
                                     }
-                                },
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                    }
-                                },
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Melanoma"
-                                    }
-                                },
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                    }
-                                },
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
-                                    }
-                                }
-                            ]
-                        }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "arm_code": "Arm B",
@@ -156,30 +158,32 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": {
-                            "or": [
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                        "match": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Small Cell Bladder Cancer"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Melanoma"
+                                        }
                                     }
-                                },
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
-                                    }
-                                },
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Small Cell Bladder Cancer"
-                                    }
-                                },
-                                {
-                                    "clinical": {
-                                        "oncotree_primary_diagnosis": "Melanoma"
-                                    }
-                                }
-                            ]
-                        }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "match": [

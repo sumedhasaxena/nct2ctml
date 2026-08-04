@@ -114,37 +114,7 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Small Bowel Cancer"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Appendiceal Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Tubular Adenoma of the Colon"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Gastrointestinal Neuroendocrine Tumors"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Anorectal Mucosal Melanoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Medullary Carcinoma of the Colon"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Small Intestinal Carcinoma"
+                                            "oncotree_primary_diagnosis": "Hepatocellular Carcinoma"
                                         }
                                     },
                                     {
@@ -154,24 +124,75 @@
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Anal Gland Adenocarcinoma"
+                                            "oncotree_primary_diagnosis": "Esophageal Adenocarcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Low-grade Appendiceal Mucinous Neoplasm"
+                                            "oncotree_primary_diagnosis": "Gastric Remnant Adenocarcinoma"
                                         }
                                     },
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Anal Squamous Cell Carcinoma"
+                                            "oncotree_primary_diagnosis": "Cholangiocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Undifferentiated Stomach Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Adenosquamous Carcinoma of the Stomach"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Stomach Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Diffuse Type Stomach Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Esophagogastric Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Intrahepatic Cholangiocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Mucinous Stomach Adenocarcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Adenocarcinoma of the Gastroesophageal Junction"
                                         }
                                     }
                                 ]
                             },
                             {
                                 "clinical": {
-                                    "age_numerical": ">=18"
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Unresectable",
+                                        "Metastatic",
+                                        "Advanced",
+                                        "Locally Advanced"
+                                    ]
                                 }
                             }
                         ]

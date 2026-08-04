@@ -142,14 +142,36 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "disease_status": [
-                                "Unresectable",
-                                "Advanced"
-                            ],
-                            "oncotree_primary_diagnosis": "Renal Cell Carcinoma"
-                        }
+                        "and": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Renal Clear Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Renal Clear Cell Carcinoma with Sarcomatoid Features"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Renal Cell Carcinoma"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Advanced",
+                                        "Metastatic"
+                                    ]
+                                }
+                            }
+                        ]
                     }
                 ]
             }

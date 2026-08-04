@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: JNJ-90301900 (NBTXR3)'
   - drug_name: 'Drug: Cetuximab'
   - drug_name: 'Radiation: Radiation Therapy'
+  - drug_name: 'Drug: JNJ-90301900 (NBTXR3)'
 long_title: A Phase 3 Study of NBTXR3 Activated by Investigator's Choice of Radiotherapy
   Alone or Radiotherapy in Combination With Cetuximab for Platinum-based Chemotherapy-Ineligible
   Elderly Patients With LA-HNSCC
@@ -121,10 +121,17 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=60'
-        disease_status:
-        - Locally Advanced
-        - Advanced
-        - Recurrent
-        oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Oropharynx Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Oral Cavity Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Larynx Squamous Cell Carcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Hypopharynx Squamous Cell Carcinoma
+      - clinical:
+          age_numerical: '>=60'
+          disease_status:
+          - Locally Advanced

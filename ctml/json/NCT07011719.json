@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: Placebo"
+            },
+            {
                 "drug_name": "Drug: Cabozantinib"
             },
             {
                 "drug_name": "Drug: Casdatifan"
-            },
-            {
-                "drug_name": "Drug: Placebo"
             }
         ]
     },
@@ -144,7 +144,7 @@
                                 "Metastatic",
                                 "Advanced"
                             ],
-                            "oncotree_primary_diagnosis": "Renal Cell Carcinoma"
+                            "oncotree_primary_diagnosis": "Renal Clear Cell Carcinoma"
                         }
                     }
                 ]

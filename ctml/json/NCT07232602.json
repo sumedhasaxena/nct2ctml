@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Pembrolizumab"
-            },
-            {
-                "drug_name": "Drug: MK-3120"
-            },
-            {
                 "drug_name": "Drug: Rescue Medication"
             },
             {
                 "drug_name": "Drug: EV"
+            },
+            {
+                "drug_name": "Biological: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: MK-3120"
             }
         ]
     },
@@ -143,46 +143,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Bladder Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Plasmacytoid/Signet Ring Cell Bladder Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Bladder Squamous Cell Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Small Cell Bladder Cancer"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Locally Advanced",
+                                "Metastatic"
+                            ],
+                            "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                        }
                     }
                 ]
             }

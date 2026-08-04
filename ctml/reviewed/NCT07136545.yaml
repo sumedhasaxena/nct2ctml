@@ -202,10 +202,18 @@ treatment_list:
         level_description: 'Drug: Pembrolizumab'
         level_internal_id: 1
         level_suspended: N
+      match:
+      - clinical:
+          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
-        - Recurrent
+        - Localized
+        - Locally Advanced
         - Metastatic
+        - Advanced
+        - Recurrent
+        - Refractory
+        - Unresectable
         oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma

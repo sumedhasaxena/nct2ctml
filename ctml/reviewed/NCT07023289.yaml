@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Standard of Care'
   - drug_name: 'Drug: Telisotuzumab Adizutecan'
+  - drug_name: 'Drug: Standard of Care'
 long_title: A Phase 2, Randomized, Open-Label Study Comparing Telisotuzumab Adizutecan
   (ABBV-400) Monotherapy to the Current Standard of Care in Subjects With Post Adjuvant
   ctDNA Positive Colorectal Cancer and No Radiographic Evidence of Disease (NED)
@@ -126,13 +126,13 @@ treatment_list:
     - and:
       - or:
         - clinical:
+            oncotree_primary_diagnosis: Colon Adenocarcinoma
+        - clinical:
             oncotree_primary_diagnosis: Colorectal Adenocarcinoma
         - clinical:
-            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Tubular Adenoma of the Colon
+            oncotree_primary_diagnosis: Rectal Adenocarcinoma
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Localized
-          - Metastatic
+          - Early Stage

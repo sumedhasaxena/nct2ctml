@@ -122,30 +122,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Upper Tract Urothelial Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Localized"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Localized",
+                                "Recurrent"
+                            ],
+                            "oncotree_primary_diagnosis": "Bladder Urothelial Carcinoma"
+                        }
                     }
                 ]
             }

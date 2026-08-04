@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Sacituzumab Govitecan (SG)"
-            },
-            {
                 "drug_name": "Drug: Topotecan"
             },
             {
                 "drug_name": "Drug: Amrubicin (Japan only)"
+            },
+            {
+                "drug_name": "Drug: Sacituzumab Govitecan (SG)"
             }
         ]
     },
@@ -128,32 +128,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lung Neuroendocrine Tumor"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Combined Small Cell Lung Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Metastatic",
-                                        "Advanced",
-                                        "Refractory"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Metastatic",
+                                "Refractory"
+                            ],
+                            "oncotree_primary_diagnosis": "Small Cell Lung Cancer"
+                        }
                     }
                 ]
             }

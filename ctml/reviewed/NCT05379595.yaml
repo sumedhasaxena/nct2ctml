@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Oxaliplatin'
-  - drug_name: 'Biological: Leucovorin'
   - drug_name: 'Biological: Amivantamab'
-  - drug_name: 'Biological: Amivantamab IV'
+  - drug_name: 'Biological: Oxaliplatin'
   - drug_name: 'Biological: Irinotecan'
   - drug_name: 'Biological: Fluorouracil'
+  - drug_name: 'Biological: Leucovorin'
+  - drug_name: 'Biological: Amivantamab IV'
 long_title: A Phase 1b/2, Open-Label Study of Amivantamab Monotherapy and in Addition
   to Standard-of-Care Chemotherapy in Participants With Advanced or Metastatic Colorectal
   Cancer
@@ -136,12 +136,6 @@ treatment_list:
         level_description: 'Biological: Amivantamab IV'
         level_internal_id: 0
         level_suspended: N
-      match:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
     - arm_code: 'Cohorts Ph1b-D and D: Amivantamab+5-Fluorouracil, Leucovorin, and
         Oxaliplatin (mFOLFOX6)'
       arm_internal_id: 1
@@ -174,13 +168,26 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
       match:
-      - or:
+      - and:
         - clinical:
-            oncotree_primary_diagnosis: Tubular Adenoma of the Colon
-        - clinical:
-            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
+            her2_status: '!Positive'
+        - and:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: BRAF
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: '!Any Variation'
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Copy Number Variation'
+              cnv_call: High Amplification
     - arm_code: 'Cohorts Ph1b-E and E: Amivantamab+5-Fluorouracil, Leucovorin, and
         Irinotecan (FOLFIRI)'
       arm_internal_id: 2
@@ -208,8 +215,27 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
       match:
-      - clinical:
-          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+      - and:
+        - clinical:
+            her2_status: '!Positive'
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - and:
+          - genomic:
+              hugo_symbol: KRAS
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: NRAS
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: BRAF
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: EGFR
+              variant_category: '!Mutation'
+          - genomic:
+              hugo_symbol: ERBB2
+              variant_category: '!Copy Number Variation'
+              cnv_call: High Amplification
     - arm_code: 'Cohort F: Amivantamab + mFOLFOX6'
       arm_internal_id: 3
       arm_description: "Participant who are treatment-na\xEFve for right-sided unresectable\
@@ -235,21 +261,9 @@ treatment_list:
         level_suspended: N
       match:
       - and:
-        - and:
-          - or:
-            - clinical:
-                oncotree_primary_diagnosis: Tubular Adenoma of the Colon
-            - clinical:
-                oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-            - clinical:
-                oncotree_primary_diagnosis: Appendiceal Adenocarcinoma
-            - clinical:
-                oncotree_primary_diagnosis: Anorectal Mucosal Melanoma
-            - clinical:
-                oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              her2_status: '!Positive'
-              ms_status: '!MSI-H'
+        - clinical:
+            her2_status: '!Positive'
+            ms_status: '!MSI-H'
         - and:
           - genomic:
               hugo_symbol: KRAS
@@ -260,7 +274,6 @@ treatment_list:
           - genomic:
               hugo_symbol: BRAF
               variant_category: '!Mutation'
-              protein_change: p.V600E
           - genomic:
               hugo_symbol: PTEN
               variant_category: '!Mutation'
@@ -282,35 +295,23 @@ treatment_list:
               cnv_call: High Amplification
     match:
     - and:
-      - and:
-        - or:
-          - clinical:
-              oncotree_primary_diagnosis: Medullary Carcinoma of the Colon
-          - clinical:
-              oncotree_primary_diagnosis: Colorectal Adenocarcinoma
-        - clinical:
-            age_numerical: '>=18'
-            disease_status:
-            - Unresectable
-            - Metastatic
-            her2_status: Negative
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Unresectable
+          - Metastatic
+          her2_status: Negative
+          oncotree_primary_diagnosis: Colorectal Adenocarcinoma
       - and:
         - genomic:
             hugo_symbol: KRAS
-            variant_category: '!Any Variation'
+            variant_category: '!Mutation'
         - genomic:
             hugo_symbol: NRAS
-            variant_category: '!Any Variation'
+            variant_category: '!Mutation'
         - genomic:
             hugo_symbol: BRAF
-            variant_category: '!Any Variation'
+            variant_category: '!Mutation'
         - genomic:
             hugo_symbol: ERBB2
             variant_category: '!Copy Number Variation'
-        - genomic:
-            hugo_symbol: EGFR
-            variant_category: '!Any Variation'
-        - genomic:
-            hugo_symbol: ERBB2
-            variant_category: '!Copy Number Variation'
-            cnv_call: High Amplification

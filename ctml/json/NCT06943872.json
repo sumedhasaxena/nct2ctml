@@ -12,13 +12,13 @@
                 "drug_name": "Drug: Sonrotoclax"
             },
             {
-                "drug_name": "Drug: Rituximab"
-            },
-            {
                 "drug_name": "Drug: Venetoclax"
             },
             {
                 "drug_name": "Drug: Obinutuzumab"
+            },
+            {
+                "drug_name": "Drug: Rituximab"
             }
         ]
     },
@@ -181,30 +181,14 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lymphoid Benign"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Recurrent"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Recurrent",
+                                "Refractory"
+                            ],
+                            "oncotree_primary_diagnosis": "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma"
+                        }
                     }
                 ]
             }

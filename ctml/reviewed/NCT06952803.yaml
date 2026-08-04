@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Abiraterone + Prednisolone/Prednisone'
   - drug_name: 'Drug: Androgen Deprivation Therapy (ADT)'
-  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Saruparib'
+  - drug_name: 'Drug: Abiraterone + Prednisolone/Prednisone'
+  - drug_name: 'Drug: Placebo'
 long_title: A Randomised, Double-blind, Placebo-controlled, Phase III Study of Adjuvant
   Saruparib (AZD5305) in Patients With BRCAm Localised High-Risk Prostate Cancer Receiving
   Radiotherapy With Androgen Deprivation Therapy (EvoPAR-Prostate02).

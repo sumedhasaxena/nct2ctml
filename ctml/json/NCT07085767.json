@@ -9,19 +9,19 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Ribociclib"
-            },
-            {
-                "drug_name": "Drug: Palazestrant matching-placebo"
-            },
-            {
                 "drug_name": "Drug: Letrozole"
+            },
+            {
+                "drug_name": "Drug: Palazestrant"
+            },
+            {
+                "drug_name": "Drug: Ribociclib"
             },
             {
                 "drug_name": "Drug: Letrozole-matching placebo"
             },
             {
-                "drug_name": "Drug: Palazestrant"
+                "drug_name": "Drug: Palazestrant matching-placebo"
             }
         ]
     },
@@ -158,35 +158,18 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Neoplasm, NOS"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "disease_status": [
-                                        "Locally Advanced",
-                                        "Metastatic",
-                                        "Advanced",
-                                        "Recurrent"
-                                    ],
-                                    "her2_status": "Negative",
-                                    "er_status": "Positive"
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "disease_status": [
+                                "Locally Advanced",
+                                "Metastatic",
+                                "Advanced",
+                                "Recurrent"
+                            ],
+                            "her2_status": "!Positive",
+                            "er_status": "Positive",
+                            "oncotree_primary_diagnosis": "Breast Invasive Cancer, NOS"
+                        }
                     }
                 ]
             }

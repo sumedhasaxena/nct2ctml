@@ -109,13 +109,42 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "disease_status": [
-                                "Locally Advanced"
-                            ],
-                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
-                        }
+                        "and": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Larynx Squamous Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Hypopharynx Squamous Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Oropharynx Squamous Cell Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Oral Cavity Squamous Cell Carcinoma"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18"
+                                }
+                            }
+                        ]
                     }
                 ]
             }

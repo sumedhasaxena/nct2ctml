@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Pumitamig'
   - drug_name: 'Drug: Ipilimumab'
   - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Atezolizumab'
-  - drug_name: 'Drug: Pumitamig'
 long_title: 'ROSETTA HCC-206: An Open-Label, Multi-Center, Randomized Phase 1/2 Study
   of Pumitamig Alone or In Combination With Ipilimumab in Participants With First-Line
   Advanced or Unresectable Hepatocellular Carcinoma (HCC)'

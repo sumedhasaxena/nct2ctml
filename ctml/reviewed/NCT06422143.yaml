@@ -8,9 +8,9 @@ data_table4: Interventional
 drug_list:
   drug:
   - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Paclitaxel'
-  - drug_name: 'Biological: Pembrolizumab'
   - drug_name: 'Drug: Nab-paclitaxel'
+  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: Paclitaxel'
   - drug_name: 'Biological: sac-TMT'
 long_title: Phase 3 Study of Pembrolizumab in Combination With Carboplatin/Taxane
   (Paclitaxel or Nab-paclitaxel) Followed by Pembrolizumab With or Without Maintenance
@@ -209,4 +209,4 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
-        oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+        oncotree_primary_diagnosis: Lung Squamous Cell Carcinoma

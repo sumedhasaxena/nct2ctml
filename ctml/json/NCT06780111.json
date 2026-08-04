@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Oxaliplatin"
-            },
-            {
-                "drug_name": "Biological: Pembrolizumab"
-            },
-            {
                 "drug_name": "Drug: Leucovorin"
             },
             {
                 "drug_name": "Drug: 5-Fluorouracil (5-FU)"
             },
             {
+                "drug_name": "Biological: Pembrolizumab"
+            },
+            {
                 "drug_name": "Drug: Levoleucovorin"
             },
             {
                 "drug_name": "Biological: I-DXd"
+            },
+            {
+                "drug_name": "Drug: Oxaliplatin"
             }
         ]
     },

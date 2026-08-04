@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Docetaxel'
-  - drug_name: 'Drug: Nadofaragene Firadenovec'
-  - drug_name: 'Drug: Gemcitabine'
   - drug_name: 'Drug: Pembrolizumab'
+  - drug_name: 'Drug: Gemcitabine'
+  - drug_name: 'Drug: Nadofaragene Firadenovec'
+  - drug_name: 'Drug: Docetaxel'
 long_title: A Phase 3, Randomised, Multi-center, Open Label Trial to Evaluate the
   Safety and Efficacy of Intravesical Nadofaragene Firadenovec Alone or in Combination
   With Chemotherapy or Immunotherapy in Participants With High-grade Bacillus Calmette-Guerin

@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: IV durvalumab'
-  - drug_name: 'Drug: SC durvalumab + rHu'
   - drug_name: 'Drug: Tremelimumab'
+  - drug_name: 'Drug: SC durvalumab + rHu'
+  - drug_name: 'Drug: IV durvalumab'
 long_title: A Phase I, Multicentre, Dose Escalation and Dose Expansion Study to Investigate
   the Pharmacokinetics and Safety of Subcutaneous Durvalumab in Adult Participants
   With Solid Tumours
@@ -124,7 +124,7 @@ treatment_list:
         - clinical:
             oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
+            oncotree_primary_diagnosis: Small Cell Lung Cancer
     - arm_code: 'Part 1: SC Durvalumab DL2'
       arm_internal_id: 1
       arm_description: Participants will receive DL2 of SC durvalumab + rHu followed
@@ -148,9 +148,7 @@ treatment_list:
         - clinical:
             oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
         - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
+            oncotree_primary_diagnosis: Small Cell Lung Cancer
     - arm_code: 'Part 2: Expansion Cohort, SC Durvalumab Dose Level X'
       arm_internal_id: 2
       arm_description: Participants will receive dose level X (determined from data
@@ -171,15 +169,12 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
       match:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Hepatocellular Carcinoma plus Intrahepatic
-              Cholangiocarcinoma
+      - clinical:
+          oncotree_primary_diagnosis: Hepatocellular Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
         - Unresectable
+        - Localized
         oncotree_primary_diagnosis: _SOLID_

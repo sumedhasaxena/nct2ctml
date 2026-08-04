@@ -151,8 +151,8 @@
                                 "clinical": {
                                     "age_numerical": ">=18",
                                     "disease_status": [
-                                        "Metastatic",
-                                        "Advanced"
+                                        "Advanced",
+                                        "Metastatic"
                                     ],
                                     "oncotree_primary_diagnosis": "Colorectal Adenocarcinoma"
                                 }

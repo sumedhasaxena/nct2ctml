@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Biological: Pembrolizumab'
-  - drug_name: 'Drug: MK-3120'
   - drug_name: 'Drug: Rescue Medication'
   - drug_name: 'Drug: EV'
+  - drug_name: 'Biological: Pembrolizumab'
+  - drug_name: 'Drug: MK-3120'
 long_title: 'A Phase 1/2 Open-Label Rolling-Arm Umbrella Platform Study of Investigational
   Agents in Combination With Enfortumab Vedotin Plus Pembrolizumab as First-Line Treatment
   in Participants With Locally Advanced or Metastatic Urothelial Carcinoma: KEYMAKER-U04-Substudy
@@ -137,20 +137,9 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Adenocarcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Plasmacytoid/Signet Ring Cell Bladder Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Urothelial Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Bladder Squamous Cell Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Small Cell Bladder Cancer
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Locally Advanced
+        - Metastatic
+        oncotree_primary_diagnosis: Bladder Urothelial Carcinoma

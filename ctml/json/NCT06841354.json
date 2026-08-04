@@ -9,22 +9,22 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Gemcitabine"
-            },
-            {
-                "drug_name": "Drug: Paclitaxel"
-            },
-            {
-                "drug_name": "Biological: Pembrolizumab"
-            },
-            {
-                "drug_name": "Drug: Rescue Medication"
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: Nab-paclitaxel"
             },
             {
-                "drug_name": "Drug: Carboplatin"
+                "drug_name": "Drug: Gemcitabine"
+            },
+            {
+                "drug_name": "Biological: Pembrolizumab"
+            },
+            {
+                "drug_name": "Drug: Paclitaxel"
+            },
+            {
+                "drug_name": "Drug: Rescue Medication"
             },
             {
                 "drug_name": "Biological: Sacituzumab tirumotecan"
@@ -168,28 +168,9 @@
                         ],
                         "match": [
                             {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Inflammatory Breast Cancer"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Ovarian Epithelial Tumor"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Ovarian Cancer, Other"
-                                        }
-                                    }
-                                ]
+                                "clinical": {
+                                    "her2_status": "Negative"
+                                }
                             }
                         ]
                     },
@@ -223,47 +204,6 @@
                                 "level_internal_id": 3,
                                 "level_suspended": "N"
                             }
-                        ],
-                        "match": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Lobular Carcinoma In Situ"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Fibroepithelial Neoplasms"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Metaplastic Breast Cancer"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Adenomyoepithelioma of the Breast"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Sarcoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Breast Ductal Carcinoma In Situ"
-                                        }
-                                    }
-                                ]
-                            }
                         ]
                     }
                 ],
@@ -274,7 +214,27 @@
                                 "or": [
                                     {
                                         "clinical": {
-                                            "oncotree_primary_diagnosis": "Invasive Breast Carcinoma"
+                                            "oncotree_primary_diagnosis": "Breast Invasive Ductal Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Mixed Type Metaplastic Breast Cancer"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Epithelial Type Metaplastic Breast Cancer"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Breast Mixed Ductal and Lobular Carcinoma"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Inflammatory Breast Cancer"
                                         }
                                     },
                                     {
@@ -291,7 +251,7 @@
                                         "Recurrent",
                                         "Unresectable",
                                         "Metastatic",
-                                        "Early Stage"
+                                        "Advanced"
                                     ],
                                     "her2_status": "Negative",
                                     "er_status": "Negative",

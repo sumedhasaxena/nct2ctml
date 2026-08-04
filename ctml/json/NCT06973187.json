@@ -9,10 +9,10 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: BGB-16673"
+                "drug_name": "Drug: Pirtobrutinib"
             },
             {
-                "drug_name": "Drug: Pirtobrutinib"
+                "drug_name": "Drug: BGB-16673"
             }
         ]
     },
@@ -124,9 +124,10 @@
                             "age_numerical": ">=18",
                             "disease_status": [
                                 "Recurrent",
-                                "Refractory"
+                                "Refractory",
+                                "Advanced"
                             ],
-                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                            "oncotree_primary_diagnosis": "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma"
                         }
                     }
                 ]

@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: etoposide'
   - drug_name: 'Drug: atezolizumab'
   - drug_name: 'Drug: carboplatin'
   - drug_name: 'Drug: obrixtamig'
+  - drug_name: 'Drug: etoposide'
 long_title: "DAREON \xAE -Lung-1: A Phase III Multi-center, Open-label, Randomised\
   \ Trial of Intravenous Obrixtamig in Combination With Atezolizumab, Carboplatin,\
   \ and Etoposide vs. Atezolizumab, Carboplatin, and Etoposide as First-line Treatment\
@@ -163,13 +163,9 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-        - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        - Advanced
+        oncotree_primary_diagnosis: Small Cell Lung Cancer

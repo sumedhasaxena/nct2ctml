@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Docetaxel'
-  - drug_name: 'Drug: Inavolisib'
-  - drug_name: 'Drug: Abiraterone'
   - drug_name: 'Drug: Enzalutamide'
+  - drug_name: 'Drug: Abiraterone'
+  - drug_name: 'Drug: Inavolisib'
+  - drug_name: 'Drug: Docetaxel'
   - drug_name: "Diagnostic Test: FoundationOne\xAE CDx (F1CDx) Assay"
 long_title: A Phase II, Randomized, Multicenter, Open-Label Study Evaluating the Efficacy
   and Safety of the Combination of Inavolisib Plus Enzalutamide Versus Physician's
@@ -151,6 +151,4 @@ treatment_list:
         gender: Male
         disease_status:
         - Metastatic
-        - Advanced
-        - Refractory
         oncotree_primary_diagnosis: Prostate Adenocarcinoma

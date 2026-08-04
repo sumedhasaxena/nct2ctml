@@ -77,13 +77,7 @@ treatment_list:
         level_description: 'Drug: Elranatamab'
         level_internal_id: 0
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Lymphoid Neoplasm
     match:
     - clinical:
         age_numerical: '>=18'
-        disease_status:
-        - Advanced
-        - Recurrent
-        oncotree_primary_diagnosis: Lymphoid Neoplasm
+        oncotree_primary_diagnosis: Plasma Cell Myeloma

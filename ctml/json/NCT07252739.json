@@ -9,19 +9,19 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Biological: Pembrolizumab"
+                "drug_name": "Drug: Carboplatin"
             },
             {
                 "drug_name": "Drug: Pemetrexed"
+            },
+            {
+                "drug_name": "Biological: Pembrolizumab"
             },
             {
                 "drug_name": "Drug: MK-1084"
             },
             {
                 "drug_name": "Biological: Cetuximab"
-            },
-            {
-                "drug_name": "Drug: Carboplatin"
             }
         ]
     },
@@ -197,7 +197,7 @@
                                         "Advanced",
                                         "Metastatic"
                                     ],
-                                    "oncotree_primary_diagnosis": "_SOLID_"
+                                    "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                                 }
                             },
                             {

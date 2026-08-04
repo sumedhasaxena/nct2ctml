@@ -232,7 +232,6 @@ treatment_list:
           - Advanced
           - Metastatic
           - Unresectable
-          - Relapsed
           - Refractory
           oncotree_primary_diagnosis: _SOLID_
       - and:

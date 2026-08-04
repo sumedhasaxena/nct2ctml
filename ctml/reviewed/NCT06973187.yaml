@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: BGB-16673'
   - drug_name: 'Drug: Pirtobrutinib'
+  - drug_name: 'Drug: BGB-16673'
 long_title: A Phase 3, Open-Label, Randomized Study to Evaluate the Safety and Efficacy
   of BGB-16673 Compared to Pirtobrutinib in Patients With Relapsed/Refractory Chronic
   Lymphocytic Leukemia or Small Lymphocytic Lymphoma
@@ -104,4 +104,6 @@ treatment_list:
         disease_status:
         - Recurrent
         - Refractory
-        oncotree_primary_diagnosis: Lymphoid Neoplasm
+        - Advanced
+        oncotree_primary_diagnosis: Chronic Lymphocytic Leukemia/Small Lymphocytic
+          Lymphoma

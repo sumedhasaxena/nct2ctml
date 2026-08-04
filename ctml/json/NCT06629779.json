@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
+                "drug_name": "Drug: PF-06821497"
+            },
+            {
                 "drug_name": "Drug: Placebo"
             },
             {
                 "drug_name": "Drug: Enzalutamide"
-            },
-            {
-                "drug_name": "Drug: PF-06821497"
             }
         ]
     },
@@ -144,7 +144,8 @@
                             "age_numerical": ">=18",
                             "gender": "Male",
                             "disease_status": [
-                                "Metastatic"
+                                "Metastatic",
+                                "Refractory"
                             ],
                             "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
                         }

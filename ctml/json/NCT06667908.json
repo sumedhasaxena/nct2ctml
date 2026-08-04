@@ -15,13 +15,13 @@
                 "drug_name": "Drug: Concurrent Chemo/Radiation Therapy (cCRT): Paclitaxel"
             },
             {
-                "drug_name": "Drug: Concurrent Chemo/Radiation Therapy (cCRT): Carboplatin"
+                "drug_name": "Radiation: Concurrent Chemo/Radiation Therapy (cCRT)"
             },
             {
                 "drug_name": "Drug: JNJ-90301900"
             },
             {
-                "drug_name": "Radiation: Concurrent Chemo/Radiation Therapy (cCRT)"
+                "drug_name": "Drug: Concurrent Chemo/Radiation Therapy (cCRT): Carboplatin"
             }
         ]
     },
@@ -213,8 +213,7 @@
                         "clinical": {
                             "age_numerical": ">=18",
                             "disease_status": [
-                                "Locally Advanced",
-                                "Unresectable"
+                                "Locally Advanced"
                             ],
                             "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
                         }

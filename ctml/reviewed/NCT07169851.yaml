@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: LY3537021'
-  - drug_name: 'Drug: Background Chemotherapy'
+  - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Standard of Care Antiemetic Therapies'
+  - drug_name: 'Drug: Background Chemotherapy'
 long_title: A Phase 2, Double-blind, Placebo-Controlled Study to Evaluate LY3537021
   for the Treatment of Chemotherapy-Induced Nausea and Vomiting in Adult Participants
   With Malignant Disease

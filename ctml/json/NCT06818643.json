@@ -132,8 +132,8 @@
                             "age_numerical": ">=18",
                             "disease_status": [
                                 "Advanced",
-                                "Unresectable",
-                                "Metastatic"
+                                "Metastatic",
+                                "Unresectable"
                             ],
                             "oncotree_primary_diagnosis": "_SOLID_"
                         }

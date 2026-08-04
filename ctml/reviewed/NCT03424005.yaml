@@ -7,25 +7,25 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: SGN-LIV1A'
-  - drug_name: 'Drug: Abemaciclib'
-  - drug_name: 'Drug: Chemotherapy (Gemcitabine + Carboplatin or Eribulin)'
   - drug_name: 'Drug: Ribociclib (dose #1)'
-  - drug_name: 'Drug: Trastuzumab Deruxtecan'
-  - drug_name: 'Drug: Inavolisib (dose #1)'
-  - drug_name: 'Drug: Ribociclib (dose #2)'
-  - drug_name: 'Drug: Inavolisib'
-  - drug_name: 'Drug: Bevacizumab'
-  - drug_name: 'Drug: Letrozole'
-  - drug_name: 'Drug: Tocilizumab'
-  - drug_name: 'Drug: Capecitabine'
-  - drug_name: 'Drug: Atezolizumab'
-  - drug_name: 'Drug: Sacituzumab Govitecan'
-  - drug_name: 'Drug: Selicrelumab'
   - drug_name: 'Drug: Nab-Paclitaxel'
-  - drug_name: 'Drug: Inavolisib (dose #2)'
+  - drug_name: 'Drug: Ribociclib (dose #2)'
+  - drug_name: 'Drug: Letrozole'
+  - drug_name: 'Drug: Sacituzumab Govitecan'
+  - drug_name: 'Drug: Abemaciclib'
+  - drug_name: 'Drug: SGN-LIV1A'
   - drug_name: 'Drug: Ipatasertib'
+  - drug_name: 'Drug: Atezolizumab'
+  - drug_name: 'Drug: Chemotherapy (Gemcitabine + Carboplatin or Eribulin)'
+  - drug_name: 'Drug: Inavolisib (dose #1)'
+  - drug_name: 'Drug: Tocilizumab'
   - drug_name: 'Drug: Fulvestrant'
+  - drug_name: 'Drug: Bevacizumab'
+  - drug_name: 'Drug: Inavolisib (dose #2)'
+  - drug_name: 'Drug: Trastuzumab Deruxtecan'
+  - drug_name: 'Drug: Capecitabine'
+  - drug_name: 'Drug: Inavolisib'
+  - drug_name: 'Drug: Selicrelumab'
 long_title: A Phase Ib/II, Open-Label, Multicenter, Randomized Umbrella Study Evaluating
   The Efficacy And Safety Of Multiple Treatment Combinations In Patients With Metastatic
   Breast Cancer (Morpheus-panBC)
@@ -462,14 +462,13 @@ treatment_list:
     - and:
       - or:
         - clinical:
-            oncotree_primary_diagnosis: Inflammatory Breast Cancer
+            oncotree_primary_diagnosis: Invasive Breast Carcinoma, NOS
         - clinical:
-            oncotree_primary_diagnosis: Metaplastic Breast Cancer
+            oncotree_primary_diagnosis: Breast Invasive Lobular Carcinoma
         - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
+            oncotree_primary_diagnosis: Breast Invasive Ductal Carcinoma
       - clinical:
           age_numerical: '>=18'
           disease_status:
           - Metastatic
-          - Locally Advanced
-          - Untreated
+          - Unresectable

@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Panitumumab'
-  - drug_name: 'Drug: Telisotuzumab Adizutecan'
-  - drug_name: 'Drug: Oxaliplatin'
-  - drug_name: 'Drug: Leucovorin'
+  - drug_name: 'Drug: Bevacizumab'
   - drug_name: 'Drug: Fluorouracil'
+  - drug_name: 'Drug: Telisotuzumab Adizutecan'
+  - drug_name: 'Drug: Leucovorin'
+  - drug_name: 'Drug: Oxaliplatin'
 long_title: A Phase 2, Open-Label, Randomized, Master Protocol Study to Evaluate Safety
   and Efficacy of Multiple Treatment Combinations With Telisotuzumab Adizutecan in
   Subjects With Metastatic Colorectal Cancer
@@ -298,8 +298,16 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Metastatic
-        oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Colorectal Adenocarcinoma
+        - clinical:
+            oncotree_primary_diagnosis: Signet Ring Cell Adenocarcinoma of the Colon
+              and Rectum
+        - clinical:
+            oncotree_primary_diagnosis: Mucinous Adenocarcinoma of the Colon and Rectum
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Metastatic

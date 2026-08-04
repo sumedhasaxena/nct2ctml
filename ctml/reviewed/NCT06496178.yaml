@@ -7,8 +7,8 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Investigator''s Choice'
   - drug_name: 'Drug: Petosemtamab'
+  - drug_name: 'Drug: Investigator''s Choice'
 long_title: A Phase 3 Open-label, Randomized Controlled Study to Evaluate the Efficacy
   and Safety of Petosemtamab Compared With Investigator's Choice Monotherapy Treatment
   in Previously Treated Patients With Incurable, Metastatic/Recurrent Head and Neck
@@ -110,9 +110,6 @@ treatment_list:
         level_description: 'Drug: Petosemtamab'
         level_internal_id: 0
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma
     - arm_code: Investigator's Choice
       arm_internal_id: 1
       arm_description: Investigator's Choice
@@ -122,13 +119,11 @@ treatment_list:
         level_description: 'Drug: Investigator''s Choice'
         level_internal_id: 0
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Nasopharyngeal Carcinoma
     match:
     - clinical:
         age_numerical: '>=18'
         disease_status:
         - Metastatic
         - Locally Advanced
+        - Refractory
         oncotree_primary_diagnosis: Head and Neck Squamous Cell Carcinoma

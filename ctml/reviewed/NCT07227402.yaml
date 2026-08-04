@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Belzutifan'
-  - drug_name: 'Drug: Zanzalintinib'
   - drug_name: 'Drug: Cabozantinib'
+  - drug_name: 'Drug: Zanzalintinib'
+  - drug_name: 'Drug: Belzutifan'
 long_title: A Phase 3, Randomized, Open-label Study of Belzutifan + Zanzalintinib
   Versus Cabozantinib in Participants With Advanced RCC Who Experienced Disease Recurrence
   During or After Prior Adjuvant Anti-PD-1/L1 Therapy (LITESPARK-033)
@@ -130,10 +130,16 @@ treatment_list:
         level_internal_id: 0
         level_suspended: N
     match:
-    - clinical:
-        age_numerical: '>=18'
-        disease_status:
-        - Advanced
-        - Unresectable
-        - Recurrent
-        oncotree_primary_diagnosis: Renal Cell Carcinoma
+    - and:
+      - or:
+        - clinical:
+            oncotree_primary_diagnosis: Renal Clear Cell Carcinoma with Sarcomatoid
+              Features
+        - clinical:
+            oncotree_primary_diagnosis: Renal Clear Cell Carcinoma
+      - clinical:
+          age_numerical: '>=18'
+          disease_status:
+          - Advanced
+          - Unresectable
+          - Recurrent

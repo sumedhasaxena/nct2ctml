@@ -7,12 +7,12 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Abemaciclib'
-  - drug_name: 'Drug: Exemestane'
   - drug_name: 'Drug: Letrozole'
+  - drug_name: 'Drug: Exemestane'
+  - drug_name: 'Drug: Camizestrant'
   - drug_name: 'Drug: Anastrozole'
   - drug_name: 'Drug: Tamoxifen'
-  - drug_name: 'Drug: Camizestrant'
+  - drug_name: 'Drug: Abemaciclib'
 long_title: 'CAMBRIA-2: A Phase III, Open-Label, Randomised Study to Assess the Efficacy
   and Safety of Camizestrant (AZD9833, a Next Generation, Oral Selective Estrogen
   Receptor Degrader) vs Standard Endocrine Therapy (Aromatase Inhibitor or Tamoxifen)
@@ -142,17 +142,11 @@ treatment_list:
         level_internal_id: 1
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Breast Lobular Carcinoma In Situ
-        - clinical:
-            oncotree_primary_diagnosis: Breast Ductal Carcinoma In Situ
-      - clinical:
-          age_numerical: '>=18'
-          her2_status: Negative
-          er_status: Positive
-          disease_status:
-          - Early Stage
-          - Locally Advanced
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Localized
+        - Early Stage
+        her2_status: Negative
+        er_status: Positive
+        oncotree_primary_diagnosis: Breast Neoplasm, NOS

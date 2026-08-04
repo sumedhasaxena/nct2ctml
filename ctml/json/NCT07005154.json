@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Prednisone"
-            },
-            {
-                "drug_name": "Drug: Prednisolone"
+                "drug_name": "Drug: ASP5541"
             },
             {
                 "drug_name": "Drug: abiraterone acetate"
             },
             {
-                "drug_name": "Drug: ASP5541"
+                "drug_name": "Drug: Prednisolone"
+            },
+            {
+                "drug_name": "Drug: Prednisone"
             }
         ]
     },
@@ -307,47 +307,15 @@
                 ],
                 "match": [
                     {
-                        "and": [
-                            {
-                                "or": [
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Basal Cell Carcinoma of Prostate"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Small Cell Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Squamous Cell Carcinoma"
-                                        }
-                                    },
-                                    {
-                                        "clinical": {
-                                            "oncotree_primary_diagnosis": "Prostate Neuroendocrine Carcinoma"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "clinical": {
-                                    "age_numerical": ">=18",
-                                    "gender": "Male",
-                                    "disease_status": [
-                                        "Advanced",
-                                        "Metastatic"
-                                    ]
-                                }
-                            }
-                        ]
+                        "clinical": {
+                            "age_numerical": ">=18",
+                            "gender": "Male",
+                            "disease_status": [
+                                "Metastatic",
+                                "Recurrent"
+                            ],
+                            "oncotree_primary_diagnosis": "Prostate Adenocarcinoma"
+                        }
                     }
                 ]
             }

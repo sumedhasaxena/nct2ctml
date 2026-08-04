@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Durvalumab'
-  - drug_name: 'Drug: Tarlatamab'
-  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Etoposide'
+  - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Tarlatamab'
+  - drug_name: 'Drug: Durvalumab'
 long_title: A Phase 3, Open Label, Multicenter, Randomized Study of First Line Tarlatamab
   in Combination With Durvalumab, Carboplatin and Etoposide Versus Durvalumab, Carboplatin
   and Etoposide in Untreated Extensive Stage Small-Cell Lung Cancer (DeLLphi-312)
@@ -111,9 +111,6 @@ treatment_list:
         level_description: 'Drug: Etoposide'
         level_internal_id: 3
         level_suspended: N
-      match:
-      - clinical:
-          oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
     - arm_code: Durvalumab + Carboplatin + Etoposide
       arm_internal_id: 1
       arm_description: Participants will receive durvalumab, carboplatin and etoposide
@@ -133,15 +130,8 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Metastatic
-          - Locally Advanced
-          - Unresectable
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Small Cell Lung Cancer

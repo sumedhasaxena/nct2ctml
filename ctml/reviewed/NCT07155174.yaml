@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Carboplatin'
-  - drug_name: 'Drug: Atezolizumab'
   - drug_name: 'Drug: ABBV-706'
+  - drug_name: 'Drug: Atezolizumab'
+  - drug_name: 'Drug: Carboplatin'
   - drug_name: 'Drug: Etoposide'
   - drug_name: 'Drug: Lurbinectedin'
 long_title: A Phase 2 Randomized, Open Label, Multicenter Study to Evaluate the Optimal
@@ -207,13 +207,8 @@ treatment_list:
         level_internal_id: 3
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Lung Neuroendocrine Tumor
-        - clinical:
-            oncotree_primary_diagnosis: Combined Small Cell Lung Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Metastatic
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Metastatic
+        oncotree_primary_diagnosis: Small Cell Lung Cancer

@@ -178,68 +178,70 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": {
-                            "and": [
-                                {
-                                    "and": [
-                                        {
-                                            "or": [
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "and": [
+                                            {
+                                                "or": [
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                        }
                                                     }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
-                                                    }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "her2_status": "Positive",
+                                                    "mmr_status": "MMR-Deficient",
+                                                    "ms_status": "MSI-H"
                                                 }
-                                            ]
-                                        },
-                                        {
-                                            "clinical": {
-                                                "her2_status": "Positive",
-                                                "mmr_status": "MMR-Deficient",
-                                                "ms_status": "MSI-H"
                                             }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "or": [
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "NFE2L2",
-                                                "variant_category": "Mutation"
+                                        ]
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NFE2L2",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "CUL3",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "EGFR",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "ALK",
+                                                    "variant_category": "Mutation"
+                                                }
                                             }
-                                        },
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "CUL3",
-                                                "variant_category": "Mutation"
-                                            }
-                                        },
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "EGFR",
-                                                "variant_category": "Mutation"
-                                            }
-                                        },
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "ALK",
-                                                "variant_category": "Mutation"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "arm_code": "Part 2 (Dose Expansion): VVD-130037 and Docetaxel Combination Therapy",
@@ -260,56 +262,58 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": {
-                            "and": [
-                                {
-                                    "and": [
-                                        {
-                                            "or": [
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "and": [
+                                            {
+                                                "or": [
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                        }
                                                     }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
-                                                    }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "her2_status": "Positive",
+                                                    "mmr_status": "MMR-Deficient",
+                                                    "ms_status": "MSI-H"
                                                 }
-                                            ]
-                                        },
-                                        {
-                                            "clinical": {
-                                                "her2_status": "Positive",
-                                                "mmr_status": "MMR-Deficient",
-                                                "ms_status": "MSI-H"
                                             }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "or": [
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "NFE2L2",
-                                                "variant_category": "Mutation"
+                                        ]
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NFE2L2",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "CUL3",
+                                                    "variant_category": "Mutation"
+                                                }
                                             }
-                                        },
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "CUL3",
-                                                "variant_category": "Mutation"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "arm_code": "Part 2 (Dose Expansion): VVD-130037 and Paclitaxel Combination Therapy",
@@ -330,57 +334,59 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": {
-                            "and": [
-                                {
-                                    "and": [
-                                        {
-                                            "or": [
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "and": [
+                                            {
+                                                "or": [
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                        }
                                                     }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
-                                                    }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "her2_status": "Positive",
+                                                    "pdl1_status": "High",
+                                                    "mmr_status": "MMR-Deficient",
+                                                    "ms_status": "MSI-H"
                                                 }
-                                            ]
-                                        },
-                                        {
-                                            "clinical": {
-                                                "her2_status": "Positive",
-                                                "pdl1_status": "High",
-                                                "mmr_status": "MMR-Deficient",
-                                                "ms_status": "MSI-H"
                                             }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "or": [
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "NFE2L2",
-                                                "variant_category": "Mutation"
+                                        ]
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NFE2L2",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "CUL3",
+                                                    "variant_category": "Mutation"
+                                                }
                                             }
-                                        },
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "CUL3",
-                                                "variant_category": "Mutation"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "arm_code": "Experimental: Part 2 (Dose Expansion): VVD-130037 and Pembrolizumab Combination Therapy",
@@ -401,56 +407,58 @@
                                 "level_suspended": "N"
                             }
                         ],
-                        "match": {
-                            "and": [
-                                {
-                                    "and": [
-                                        {
-                                            "or": [
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                        "match": [
+                            {
+                                "and": [
+                                    {
+                                        "and": [
+                                            {
+                                                "or": [
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Head and Neck Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
+                                                        }
+                                                    },
+                                                    {
+                                                        "clinical": {
+                                                            "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
+                                                        }
                                                     }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Esophageal Squamous Cell Carcinoma"
-                                                    }
-                                                },
-                                                {
-                                                    "clinical": {
-                                                        "oncotree_primary_diagnosis": "Non-Small Cell Lung Cancer"
-                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "clinical": {
+                                                    "her2_status": "Positive",
+                                                    "mmr_status": "MMR-Deficient",
+                                                    "ms_status": "MSI-H"
                                                 }
-                                            ]
-                                        },
-                                        {
-                                            "clinical": {
-                                                "her2_status": "Positive",
-                                                "mmr_status": "MMR-Deficient",
-                                                "ms_status": "MSI-H"
                                             }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "or": [
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "NFE2L2",
-                                                "variant_category": "Mutation"
+                                        ]
+                                    },
+                                    {
+                                        "or": [
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "NFE2L2",
+                                                    "variant_category": "Mutation"
+                                                }
+                                            },
+                                            {
+                                                "genomic": {
+                                                    "hugo_symbol": "CUL3",
+                                                    "variant_category": "Mutation"
+                                                }
                                             }
-                                        },
-                                        {
-                                            "genomic": {
-                                                "hugo_symbol": "CUL3",
-                                                "variant_category": "Mutation"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "match": [
@@ -473,7 +481,6 @@
                                         "genomic": {
                                             "hugo_symbol": "KEAP1",
                                             "variant_category": "!Mutation",
-                                            "protein_change": null,
                                             "variant_classification": "Nonsense_Mutation"
                                         }
                                     },
@@ -481,7 +488,6 @@
                                         "genomic": {
                                             "hugo_symbol": "KEAP1",
                                             "variant_category": "!Mutation",
-                                            "protein_change": null,
                                             "variant_classification": "Frame_Shift_Del"
                                         }
                                     }

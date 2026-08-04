@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Placebo"
-            },
-            {
                 "drug_name": "Drug: LY3537021"
             },
             {
-                "drug_name": "Drug: Background Chemotherapy"
+                "drug_name": "Drug: Placebo"
             },
             {
                 "drug_name": "Drug: Standard of Care Antiemetic Therapies"
+            },
+            {
+                "drug_name": "Drug: Background Chemotherapy"
             }
         ]
     },

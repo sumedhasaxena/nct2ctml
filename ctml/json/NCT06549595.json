@@ -9,16 +9,16 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: AZD0486"
-            },
-            {
-                "drug_name": "Drug: R-CHOP"
+                "drug_name": "Drug: R-CVP"
             },
             {
                 "drug_name": "Drug: BR"
             },
             {
-                "drug_name": "Drug: R-CVP"
+                "drug_name": "Drug: AZD0486"
+            },
+            {
+                "drug_name": "Drug: R-CHOP"
             }
         ]
     },
@@ -164,7 +164,7 @@
                                 "Untreated",
                                 "Advanced"
                             ],
-                            "oncotree_primary_diagnosis": "Lymphoid Neoplasm"
+                            "oncotree_primary_diagnosis": "Follicular Lymphoma"
                         }
                     }
                 ]

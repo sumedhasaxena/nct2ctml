@@ -9,13 +9,13 @@
     "drug_list": {
         "drug": [
             {
-                "drug_name": "Drug: Belzutifan"
+                "drug_name": "Drug: Cabozantinib"
             },
             {
                 "drug_name": "Drug: Zanzalintinib"
             },
             {
-                "drug_name": "Drug: Cabozantinib"
+                "drug_name": "Drug: Belzutifan"
             }
         ]
     },
@@ -138,15 +138,32 @@
                 ],
                 "match": [
                     {
-                        "clinical": {
-                            "age_numerical": ">=18",
-                            "disease_status": [
-                                "Advanced",
-                                "Unresectable",
-                                "Recurrent"
-                            ],
-                            "oncotree_primary_diagnosis": "Renal Cell Carcinoma"
-                        }
+                        "and": [
+                            {
+                                "or": [
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Renal Clear Cell Carcinoma with Sarcomatoid Features"
+                                        }
+                                    },
+                                    {
+                                        "clinical": {
+                                            "oncotree_primary_diagnosis": "Renal Clear Cell Carcinoma"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "clinical": {
+                                    "age_numerical": ">=18",
+                                    "disease_status": [
+                                        "Advanced",
+                                        "Unresectable",
+                                        "Recurrent"
+                                    ]
+                                }
+                            }
+                        ]
                     }
                 ]
             }

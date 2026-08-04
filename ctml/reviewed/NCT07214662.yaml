@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: Giredestrant'
   - drug_name: 'Drug: Omeprazole'
   - drug_name: 'Drug: GDC-0587'
-  - drug_name: 'Drug: Giredestrant'
 long_title: A Phase Ia/Ib Dose-Escalation and Expansion Study Evaluating the Safety,
   Pharmacokinetics, and Activity of GDC-0587 as a Monotherapy and in Combination With
   Giredestrant in Patients With Locally Advanced Or Metastatic ER-Positive, HER2-Negative
@@ -152,17 +152,11 @@ treatment_list:
         level_internal_id: 2
         level_suspended: N
     match:
-    - and:
-      - or:
-        - clinical:
-            oncotree_primary_diagnosis: Breast Neoplasm, NOS
-        - clinical:
-            oncotree_primary_diagnosis: Invasive Breast Carcinoma
-      - clinical:
-          age_numerical: '>=18'
-          disease_status:
-          - Locally Advanced
-          - Metastatic
-          - Refractory
-          her2_status: Negative
-          er_status: Positive
+    - clinical:
+        age_numerical: '>=18'
+        disease_status:
+        - Locally Advanced
+        - Metastatic
+        her2_status: Negative
+        er_status: Positive
+        oncotree_primary_diagnosis: Invasive Breast Carcinoma

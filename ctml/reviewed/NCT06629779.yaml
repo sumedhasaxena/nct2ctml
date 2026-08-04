@@ -7,9 +7,9 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
+  - drug_name: 'Drug: PF-06821497'
   - drug_name: 'Drug: Placebo'
   - drug_name: 'Drug: Enzalutamide'
-  - drug_name: 'Drug: PF-06821497'
 long_title: A PHASE 3, RANDOMIZED, DOUBLE BLIND, PLACEBO CONTROLLED STUDY OF PF-06821497
   (MEVROMETOSTAT) WITH ENZALUTAMIDE IN METASTATIC CASTRATION RESISTANT PROSTATE CANCER
   (MEVPRO-2)
@@ -124,4 +124,5 @@ treatment_list:
         gender: Male
         disease_status:
         - Metastatic
+        - Refractory
         oncotree_primary_diagnosis: Prostate Adenocarcinoma

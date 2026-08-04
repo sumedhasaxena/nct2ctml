@@ -7,10 +7,10 @@ study_completion_date: null
 data_table4: Interventional
 drug_list:
   drug:
-  - drug_name: 'Drug: Pumitamig'
-  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Paclitaxel'
+  - drug_name: 'Drug: Pumitamig'
   - drug_name: 'Drug: Carboplatin'
+  - drug_name: 'Drug: Pembrolizumab'
   - drug_name: 'Drug: Pemetrexed'
 long_title: A Phase II/III, Multisite, Randomized Master Protocol for a Global Trial
   of BNT327 in Combination With Chemotherapy and Other Investigational Agents in First-line

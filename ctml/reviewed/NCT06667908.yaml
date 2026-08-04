@@ -9,9 +9,9 @@ drug_list:
   drug:
   - drug_name: 'Biological: Durvalumab'
   - drug_name: 'Drug: Concurrent Chemo/Radiation Therapy (cCRT): Paclitaxel'
-  - drug_name: 'Drug: Concurrent Chemo/Radiation Therapy (cCRT): Carboplatin'
-  - drug_name: 'Drug: JNJ-90301900'
   - drug_name: 'Radiation: Concurrent Chemo/Radiation Therapy (cCRT)'
+  - drug_name: 'Drug: JNJ-90301900'
+  - drug_name: 'Drug: Concurrent Chemo/Radiation Therapy (cCRT): Carboplatin'
 long_title: A Phase 2, Randomized, Open-Label, Active-Controlled Study of JNJ-90301900
   in Combination With Chemoradiation Followed by Durvalumab in Locally Advanced and
   Unresectable Stage III NSCLC
@@ -177,5 +177,4 @@ treatment_list:
         age_numerical: '>=18'
         disease_status:
         - Locally Advanced
-        - Unresectable
         oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
