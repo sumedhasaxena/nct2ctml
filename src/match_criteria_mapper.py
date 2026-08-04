@@ -71,6 +71,7 @@ def _clean_protein_change_fields(genomic_criteria: list) -> list:
     """
     Clean up protein_change-related fields on genomic criteria in place.
 
+    - Drop protein_change when null/empty (do not emit `protein_change: null` in YAML).
     - Remove protein_change fields that do not match any acceptable pattern.
     - If protein_change ends with X/x (e.g. p.G719X), move it to wildcard_protein_change.
     """
@@ -82,8 +83,13 @@ def _clean_protein_change_fields(genomic_criteria: list) -> list:
         if not isinstance(genomic, dict):
             continue
 
+        if "protein_change" not in genomic:
+            continue
+
         protein_change = genomic.get("protein_change")
-        if not protein_change:
+        # Remove null/empty so YAML never serializes `protein_change: null`
+        if protein_change is None or str(protein_change).strip() == "" or str(protein_change).strip().lower() == "null":
+            genomic.pop("protein_change", None)
             continue
 
         protein_change_str = str(protein_change).strip()

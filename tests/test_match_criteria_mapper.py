@@ -9,7 +9,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 from match_criteria_mapper import (
     convert_to_ctml_genomic_schema,
     convert_to_ctml_clinical_schema,
-    combine_clinical_and_genomic_ctml
+    combine_clinical_and_genomic_ctml,
+    _clean_protein_change_fields,
 )
 
 
@@ -386,6 +387,35 @@ class TestCombineClinicalAndGenomicCtml(unittest.TestCase):
         result = combine_clinical_and_genomic_ctml(clinical_ctml, {})
         
         self.assertEqual(result, clinical_ctml)
+
+
+class TestCleanProteinChangeFields(unittest.TestCase):
+    """Tests for genomic protein_change post-processing"""
+
+    def test_removes_null_protein_change(self):
+        criteria = [
+            {
+                "genomic": {
+                    "hugo_symbol": "KEAP1",
+                    "variant_category": "!Mutation",
+                    "protein_change": None,
+                    "variant_classification": "Nonsense_Mutation",
+                }
+            }
+        ]
+        result = _clean_protein_change_fields(criteria)
+        self.assertNotIn("protein_change", result[0]["genomic"])
+        self.assertEqual(result[0]["genomic"]["variant_classification"], "Nonsense_Mutation")
+
+    def test_removes_string_null_protein_change(self):
+        criteria = [{"genomic": {"hugo_symbol": "EGFR", "variant_category": "Mutation", "protein_change": "null"}}]
+        result = _clean_protein_change_fields(criteria)
+        self.assertNotIn("protein_change", result[0]["genomic"])
+
+    def test_keeps_valid_protein_change(self):
+        criteria = [{"genomic": {"hugo_symbol": "KRAS", "variant_category": "Mutation", "protein_change": "p.G12C"}}]
+        result = _clean_protein_change_fields(criteria)
+        self.assertEqual(result[0]["genomic"]["protein_change"], "p.G12C")
 
 
 if __name__ == '__main__':
