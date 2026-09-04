@@ -80,7 +80,7 @@ class SGLangPlatform(LLMPlatform):
             req_body["max_tokens"] = 8192
         else:
             # Qwen defaults
-            req_body["temperature"] = 0.6
+            req_body["temperature"] = 0.5
             req_body["top_p"] = 0.95
             req_body["top_k"] = 20
             req_body["max_tokens"] = 32768
@@ -172,6 +172,7 @@ class OllamaPlatform(LLMPlatform):
             "prompt": prompt,
             "system": "You are a biomedical researcher specializing in cancer genomics and clinical trials.",
             "stream": False,
+            "keep_alive": -1,
             "options": {
                 "think": True,
                 "temperature": 0,
@@ -194,6 +195,7 @@ class OllamaPlatform(LLMPlatform):
                 ],
                 "stream": False,
                 "think": False,
+                "keep_alive": "15m",
                 "options": {
                     #"think": True,
                     "temperature": 0,

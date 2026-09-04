@@ -93,13 +93,51 @@ trial_genomic_json_schema = {
                         "hugo_symbol": {"type": "string"},
                         "variant_category": {
                             "type": "string",
-                            "enum": ["Mutation", "Copy Number Variation", "Structural Variation", "Any Variation", "!Mutation", "!Copy Number Variation", "!Structural Variation"],
+                            "enum": [
+                                "Mutation",
+                                "Copy Number Variation",
+                                "Structural Variation",
+                                "Any Variation",
+                                "!Mutation",
+                                "!Copy Number Variation",
+                                "!Structural Variation"
+                            ],
                             "description": "Variant category with '!' prefix for exclusions"
                         },
-                        "protein_change": {"type": "string","description": "Only for 'Mutation' variant_category. Format: Starting with 'p.', e.g., p.R177H, p.L858R, p.N435Kfs*4"},
-                        "cnv_call": {
+                        "protein_change": {
                             "type": "string",
-                            "enum": ["High level amplification", "Homozygous deletion", "Gain", "Heterozygous deletion"],
+                            "description": "Only for 'Mutation' variant_category. Format: Starting with 'p.', e.g., p.R177H, p.L858R, p.N435Kfs*4"
+                        },
+                        "variant_classification": {
+                            "type": ["string", "null"],
+                            "enum": [
+                                "In_Frame_Del",
+                                "In_Frame_Ins",
+                                "Splice_Site",
+                                "Missense_Mutation",
+                                "Nonsense_Mutation",
+                                "Frame_Shift_Del",
+                                "Frame_Shift_Ins",
+                                None
+                            ],
+                            "description": "Detailed mutation classification when variant_category = 'Mutation'"
+                        },
+                        "exon": {
+                            "type": ["integer", "null"],
+                            "description": "Exon number when specified for mutations (e.g., 19, 20, 14)"
+                        },
+                        "cnv_call": {
+                            "type": ["string", "null"],
+                            "enum": [
+                                "High Amplification",
+                                "Low Amplification",
+                                "High level amplification",
+                                "Homozygous Deletion",
+                                "Heterozygous Deletion",
+                                "Gain",
+                                "Loss",
+                                None
+                            ],
                             "description": "To be used only if variant_category = 'Copy Number Variation'"
                         }
                     },
@@ -124,7 +162,9 @@ trial_genomic_json_schema = {
                                     "hugo_symbol": {"type": "string"},
                                     "variant_category": {"type": "string"},
                                     "protein_change": {"type": "string"},
-                                    "cnv_call": {"type": "string"}
+                                    "variant_classification": {"type": ["string", "null"]},
+                                    "exon": {"type": ["integer", "null"]},
+                                    "cnv_call": {"type": ["string", "null"]}
                                 },
                                 "required": ["hugo_symbol", "variant_category"],
                                 "additionalProperties": False
@@ -153,7 +193,9 @@ trial_genomic_json_schema = {
                                     "hugo_symbol": {"type": "string"},
                                     "variant_category": {"type": "string"},
                                     "protein_change": {"type": "string"},
-                                    "cnv_call": {"type": "string"}
+                                    "variant_classification": {"type": ["string", "null"]},
+                                    "exon": {"type": ["integer", "null"]},
+                                    "cnv_call": {"type": ["string", "null"]}
                                 },
                                 "required": ["hugo_symbol", "variant_category"],
                                 "additionalProperties": False
