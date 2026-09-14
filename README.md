@@ -124,16 +124,21 @@ personalized cancer medicine. Briefings in Bioinformatics.
 ```bibtex
 @article{saxena2025nct2ctml,
   title   = {AI-assisted patient matching for personalized cancer medicine},
-  author  = {Sumedha Saxena, Edmond S K Ma, Aya El Helali, David J H Shih},
+  author  = {Saxena, Sumedha and Ma, Edmond S K and El Helali, Aya and Shih, David J H},
   journal = {Briefings in Bioinformatics},
   volume  = {26},
-  number  = {Supplement\_1},
+  number  = {Supplement_1},
   pages   = {i12--i14},
   year    = {2025},
   doi     = {10.1093/bib/bbaf631.013},
   url     = {https://academic.oup.com/bib/article/26/Supplement_1/i12/8378037}
 }
 ```
+
+## License
+This project's source code is licensed under the Apache License 2.0.
+See [LICENSE](LICENSE).
+
 
 ## Resources
 - [ClinicalTrials.gov API](https://clinicaltrials.gov/data-api/api#extapi)
