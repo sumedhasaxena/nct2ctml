@@ -133,8 +133,7 @@ personalized cancer medicine. Briefings in Bioinformatics.
   doi     = {10.1093/bib/bbaf631.013},
   url     = {https://academic.oup.com/bib/article/26/Supplement_1/i12/8378037}
 }
-
----
+```
 
 ## Resources
 - [ClinicalTrials.gov API](https://clinicaltrials.gov/data-api/api#extapi)
