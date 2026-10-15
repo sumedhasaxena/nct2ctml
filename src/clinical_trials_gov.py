@@ -84,7 +84,7 @@ def map_nct_to_clinical_and_genomic_criteria(trial_data: dict,
         mapped_global_clinical_critera['gender'] = gender_str
     
     logger.info(f"NCTID: {nct_id} | Mapping disease status")
-    disease_status_dict = map_disease_status(nct_id, global_nct_criteria, keywords)
+    disease_status_dict = map_disease_status(nct_id, global_nct_criteria, keywords) # does not participate in matching trial to patients. Shows up in matchminer-ui only
     if disease_status_dict and len(disease_status_dict.get('disease_status', {})) > 0:
         mapped_global_clinical_critera.update(disease_status_dict)
 

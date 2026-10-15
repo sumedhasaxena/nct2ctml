@@ -86,7 +86,8 @@ Examples:
         const=True,
         default=False,
         metavar='TEST_MODE',
-        help='Enable test mode for mapping (e.g., map a small subset of trials for testing purposes). Use --test_mode or --test_mode true/false.'
+        help='Enable test mode for mapping (e.g., map a small subset of trials for testing/benchmarking purposes).' \
+        'Use --test_mode or --test_mode true/false.'
     )
     
     # Add cutoff days option for map --all
@@ -114,7 +115,7 @@ Examples:
             test_mode = test_mode.lower() in ('true', '1', 'yes')
         
         if test_mode:
-            ctml_files_path = "cache/ctml_test/20260428/gemma4_31B"
+            ctml_files_path = "cache/ctml_test/20260705/"
         else:
             ctml_files_path = "cache/ctml/"
         if args.all:

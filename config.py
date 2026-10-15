@@ -14,7 +14,7 @@ LLM_AI_MODEL = "neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16"
 # gemma library
 #LLM_AI_MODEL = "hf.co/unsloth/gemma-4-31B-it-GGUF:UD-Q4_K_XL"
 #LLM_AI_MODEL = "cyankiwi/gemma-4-31B-it-AWQ-4bit"
-#LLM_AI_MODEL = "gemma4:31b" # from official ollama library instead of hugging face
+# LLM_AI_MODEL = "gemma4:31b" # from official ollama library instead of hugging face
 #LLM_AI_MODEL = "gemma4:26b" # from official ollama library instead of hugging face
 #LLM_AI_MODEL = "hf.co/unsloth/medgemma-27b-text-it-GGUF:Q4_K_M"
 #LLM_AI_MODEL = "hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M"
@@ -31,7 +31,6 @@ LLM_AI_MODEL = "neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16"
 #LLM_AI_MODEL = "hf.co/lmstudio-community/GLM-Z1-32B-0414-GGUF:Q4_K_M"
 
 # moonshotai library
-#LLM_AI_MODEL = "moonshotai/Moonlight-16B-A3B-Instruct"
 #LLM_AI_MODEL = "hf.co/mmnga/Moonlight-16B-A3B-Instruct-gguf:Q8_0"
 
 # minimax library

@@ -74,6 +74,12 @@ python main.py [-h] {pull,map} ...
   ```bash
   python main.py map --nct_id NCT_ID
   ```
+- Map in test mode (writes CTML output to a separate directory instead of `cache/ctml`):
+  ```bash
+  python main.py map --all --test_mode
+  python main.py map --nct_id NCT_ID --test_mode
+  ```
+  `--test_mode` is optional and defaults to off. Pass it alone, or as `--test_mode true` / `--test_mode false`. When it is on, output goes to the test directory set in `main.py` (`ctml_files_path`, currently `cache/ctml_test/20260705/`). Change that path in `main.py` to send test output wherever you want.
 
 ### Configuration
 
