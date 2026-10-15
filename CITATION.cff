@@ -6,11 +6,7 @@ repository-code: https://github.com/sumedhasaxena/nct2ctml
 license: Apache-2.0
 authors:
   - family-names: Saxena
-    given-names: Sumedha
-  - family-names: Ma
-    given-names: Edmond S K
-  - family-names: El Helali
-    given-names: Aya
+    given-names: Sumedha  
   - family-names: Shih
     given-names: David J H
 preferred-citation:

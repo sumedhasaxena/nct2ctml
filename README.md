@@ -130,10 +130,10 @@ personalized cancer medicine. Briefings in Bioinformatics.
 ```bibtex
 @article{saxena2025nct2ctml,
   title   = {AI-assisted patient matching for personalized cancer medicine},
-  author  = {Sumedha Saxena, Edmond S K Ma, Aya El Helali, David J H Shih},
+  author  = {Saxena, Sumedha and Ma, Edmond S K and El Helali, Aya and Shih, David J H},
   journal = {Briefings in Bioinformatics},
   volume  = {26},
-  number  = {Supplement\_1},
+  number  = {Supplement_1},
   pages   = {i12--i14},
   year    = {2025},
   doi     = {10.1093/bib/bbaf631.013},
@@ -141,9 +141,14 @@ personalized cancer medicine. Briefings in Bioinformatics.
 }
 ```
 
+## License
+This project's source code is licensed under the Apache License 2.0.
+See [LICENSE](LICENSE).
+
+
 ## Resources
 - [ClinicalTrials.gov API](https://clinicaltrials.gov/data-api/api#extapi)
 - [MatchMiner CTML](https://matchminer.gitbook.io/matchminer/deployment/ctml-and-trial-curation)
-- [Oncotree (oncotree_2021_11_02)](https://oncotree.mskcc.org/?version=oncotree_2021_11_02&field=NAME)
+- [Oncotree (oncotree_2025_10_03)](https://oncotree.mskcc.org/?version=oncotree_2025_10_03&field=NAME)
 - [COSMIC Cancer Gene Census](https://cancer.sanger.ac.uk/census)
 - [Manual CTML Curation Guide](doc/trial_creation_guide.md)

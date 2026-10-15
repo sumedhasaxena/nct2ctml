@@ -191,8 +191,8 @@ Permitted field names and values are in [`yaml_genomic_schema`](https://github.c
 
 | Item | Value |
 |------|--------|
-| **Version** | `oncotree_2021_11_02` |
-| **Browser (by name)** | [OncoTree — oncotree_2021_11_02](https://oncotree.mskcc.org/?version=oncotree_2021_11_02&field=NAME) |
+| **Version** | `oncotree_2025_10_03` |
+| **Browser (by name)** | [OncoTree — oncotree_2025_10_03](https://oncotree.mskcc.org/?version=oncotree_2025_10_03&field=NAME) |
 | **Local hierarchy file** | `ref/oncotree_file.txt` (configured as `ONCOTREE_TXT_FILE_PATH` in `config.py`) |
 
 When verifying a diagnosis in CTML, look up the exact **NAME** in that OncoTree release. The converter only proposes values that exist in `ref/oncotree_file.txt` (Level 1 categories and their descendant names used in the mapping steps below).
